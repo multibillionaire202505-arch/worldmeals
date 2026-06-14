@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "World Meals — Every dish. Every country.",
   "scripts": {
-    "build": "echo 'Building World Meals...'",
-    "start": "echo 'Starting World Meals...'"
+    "build": "echo \"Static site ready\"",
+    "start": "echo \"Static site ready\""
   }
 }
