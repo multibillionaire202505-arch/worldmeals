@@ -178,9 +178,9 @@ textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #E5E5E
     <div class="filter-group"><label>Diet</label><select id="dietFilter" onchange="filterMeals()"><option value="all">All diets</option><option value="dairy-free">Dairy-free</option><option value="gluten-free">Gluten-free</option><option value="vegan">Vegan</option><option value="gluten-free-option">GF option</option><option value="vegan-option">Vegan option</option></select></div>
   </div>
   <div class="sliders">
-    <div class="slider-group"><label>Cal: <b id="calVal">1000</b></label><input type="range" min="200" max="1000" step="50" value="1000" oninput="document.getElementById('calVal').textContent=this.value;filterMeals()"></div>
-    <div class="slider-group"><label>Budget: <b id="budgetVal">$40</b></label><input type="range" min="1" max="40" step="1" value="40" oninput="document.getElementById('budgetVal').textContent='$'+this.value;filterMeals()"></div>
-    <div class="slider-group"><label>Spice: <b id="spiceVal">Any</b></label><input type="range" min="1" max="5" step="1" value="5" oninput="updateSpiceLabel(this.value);filterMeals()"></div>
+    <div class="slider-group"><label>Cal: <b id="calVal">1000</b></label><input id="calSlider" type="range" min="200" max="1000" step="50" value="1000" oninput="document.getElementById('calVal').textContent=this.value;filterMeals()"></div>
+    <div class="slider-group"><label>Budget: <b id="budgetVal">$40</b></label><input id="budgetSlider" type="range" min="1" max="40" step="1" value="40" oninput="document.getElementById('budgetVal').textContent='$'+this.value;filterMeals()"></div>
+    <div class="slider-group"><label>Spice: <b id="spiceVal">Any</b></label><input id="spiceSlider" type="range" min="1" max="5" step="1" value="5" oninput="updateSpiceLabel(this.value);filterMeals()"></div>
   </div>
   <div class="results-count" id="resultsCount">24 dishes</div>
   <div class="grid" id="mealsGrid"></div>
@@ -345,9 +345,9 @@ function filterMeals(){
   const q=document.getElementById("searchInput").value.toLowerCase();
   const region=document.getElementById("regionFilter").value;
   const diet=document.getElementById("dietFilter").value;
-  const maxCal=parseInt(document.querySelector("#sec-browse input[type=range]:nth-child(1)").value||1000);
-  const maxBudget=parseInt(document.querySelector("#sec-browse input[type=range]:nth-child(2)").value||40);
-  const maxSpice=parseInt(document.querySelector("#sec-browse input[type=range]:nth-child(3)").value||5);
+  const maxCal=parseInt(document.getElementById("calSlider").value||1000);
+  const maxBudget=parseInt(document.getElementById("budgetSlider").value||40);
+  const maxSpice=parseInt(document.getElementById("spiceSlider").value||5);
   const filtered=MEALS.filter(m=>{
     const matchQ=!q||m.name.toLowerCase().includes(q)||m.country.toLowerCase().includes(q);
     const matchR=region==="All regions"||m.region===region;
