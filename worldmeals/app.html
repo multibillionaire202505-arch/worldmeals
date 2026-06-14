@@ -344,12 +344,12 @@ function updateSpiceLabel(v){
 }
 
 function filterMeals(){
-  const q=document.getElementById("searchInput").value.toLowerCase();
-  const region=document.getElementById("regionFilter").value;
-  const diet=document.getElementById("dietFilter").value;
-  const maxCal=parseInt(document.getElementById("calSlider").value||1000);
-  const maxBudget=parseInt(document.getElementById("budgetSlider").value||40);
-  const maxSpice=parseInt(document.getElementById("spiceSlider").value||5);
+  const q=(document.getElementById("searchInput")||{value:""}).value.toLowerCase();
+  const region=(document.getElementById("regionFilter")||{value:"All regions"}).value;
+  const diet=(document.getElementById("dietFilter")||{value:"all"}).value;
+  const maxCal=parseInt((document.getElementById("calSlider")||{value:1000}).value)||1000;
+  const maxBudget=parseInt((document.getElementById("budgetSlider")||{value:40}).value)||40;
+  const maxSpice=parseInt((document.getElementById("spiceSlider")||{value:5}).value)||5;
   const filtered=MEALS.filter(m=>{
     const matchQ=!q||m.name.toLowerCase().includes(q)||m.country.toLowerCase().includes(q);
     const matchR=region==="All regions"||m.region===region;
