@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Meals — Browse Dishes</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:#FAFAF8;color:#1a1a18}
+nav{background:#1a1a18;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50}
+.nav-logo{font-size:15px;font-weight:700;color:#fff;display:flex;align-items:center;gap:8px;text-decoration:none}
+.nav-back{font-size:12px;color:#aaa;text-decoration:none}
+.wrap{padding:14px 14px 80px}
+input,select{font-family:'Inter',system-ui,sans-serif}
+.search{width:100%;padding:10px 14px;border-radius:10px;border:1px solid #E5E5E0;font-size:14px;background:#fff;margin-bottom:10px;outline:none}
+.filters{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.filter-group label{font-size:10px;color:#888;display:block;margin-bottom:3px}
+.filter-group select{width:100%;padding:7px 8px;border-radius:8px;border:1px solid #E5E5E0;font-size:12px;background:#fff}
+.sliders{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:10px}
+.slider-group label{font-size:10px;color:#888;display:block;margin-bottom:3px}
+.slider-group input{width:100%}
+.results-count{font-size:11px;color:#888;margin-bottom:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.card{background:#fff;border-radius:14px;border:1px solid #EBEBEB;overflow:hidden;cursor:pointer;position:relative;transition:transform 0.1s,box-shadow 0.1s}
+.card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,0.08)}
+.card-emoji{background:#F5F5F0;font-size:40px;display:flex;align-items:center;justify-content:center;height:76px}
+.fav-btn{position:absolute;top:6px;right:6px;background:rgba(255,255,255,0.9);border:none;border-radius:50%;width:26px;height:26px;cursor:pointer;font-size:13px;display:flex;align-items:center;justify-content:center}
+.cooked-badge{position:absolute;top:6px;left:6px;background:#1a1a18;color:#fff;border-radius:20px;font-size:9px;padding:2px 6px}
+.card-body{padding:8px 10px}
+.card-name{font-size:12px;font-weight:600;margin-bottom:2px}
+.card-country{font-size:10px;color:#888;margin-bottom:6px}
+.card-tags{display:flex;flex-wrap:wrap;gap:3px}
+.tag{font-size:9px;padding:2px 6px;border-radius:6px}
+.tag-cal{background:#FEF3C7;color:#92400E}
+.tag-budget{background:#DCFCE7;color:#166534}
+.tag-spice{background:#F5F5F0;color:#555;display:flex;align-items:center;gap:2px}
+.spice-dot{width:5px;height:5px;border-radius:50%;display:inline-block}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #EBEBEB;display:flex;z-index:40}
+.nav-btn{flex:1;padding:10px 0 8px;border:none;background:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;font-family:'Inter',system-ui,sans-serif}
+.nav-btn span:first-child{font-size:18px}
+.nav-btn span:last-child{font-size:9px;color:#aaa}
+.nav-btn.active span:last-child{color:#1a1a18;font-weight:600}
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:100;align-items:flex-end;justify-content:center}
+.modal-bg.open{display:flex}
+.modal{background:#fff;border-radius:20px 20px 0 0;width:100%;max-width:480px;max-height:90vh;overflow-y:auto}
+.modal-emoji{background:#F5F5F0;font-size:60px;display:flex;align-items:center;justify-content:center;height:110px;position:relative}
+.modal-close{position:absolute;top:12px;right:12px;background:rgba(0,0,0,0.1);border:none;border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:14px}
+.modal-fav{position:absolute;top:12px;left:12px;background:rgba(255,255,255,0.9);border:none;border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:16px}
+.modal-body{padding:14px 16px 32px}
+.modal-name{font-size:21px;font-weight:700;margin-bottom:2px}
+.modal-meta{font-size:12px;color:#888;margin-bottom:10px}
+.stats-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px}
+.stat{background:#F5F5F0;border-radius:10px;padding:8px;text-align:center}
+.stat-val{font-size:14px;font-weight:600}
+.stat-lbl{font-size:10px;color:#888}
+.spice-row{display:flex;align-items:center;gap:8px;background:#F9F9F7;border-radius:10px;padding:8px 12px;margin-bottom:12px}
+.spice-dots{display:flex;gap:3px}
+.modal-desc{font-size:13px;color:#555;line-height:1.6;margin-bottom:14px}
+.ingr-title{font-size:10px;font-weight:600;color:#888;letter-spacing:0.05em;margin-bottom:8px}
+.ingr-list{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px}
+.ingr-pill{font-size:11px;background:#F5F5F0;border-radius:20px;padding:3px 9px}
+.swap-title{font-size:10px;font-weight:600;color:#888;letter-spacing:0.05em;margin-bottom:8px}
+.swap-btns{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:10px}
+.swap-btn{font-size:11px;padding:5px 11px;border-radius:20px;border:1px solid #E5E5E0;background:#fff;color:#555;cursor:pointer}
+.swap-btn.active-spice{border:2px solid #92400E;background:#FEF3C7;color:#92400E;font-weight:600}
+.swap-btn.active-dairy{border:2px solid #1E40AF;background:#EFF6FF;color:#1E40AF;font-weight:600}
+.swap-btn.active-vegan{border:2px solid #166534;background:#F0FDF4;color:#166534;font-weight:600}
+.swap-btn.active-gluten{border:2px solid #7E22CE;background:#FDF4FF;color:#7E22CE;font-weight:600}
+.swap-panel{background:#F9F9F7;border-radius:12px;padding:12px;margin-bottom:16px}
+.swap-item{margin-bottom:10px}
+.swap-item:last-child{margin-bottom:0}
+.swap-chips{display:flex;align-items:center;gap:6px;margin-bottom:3px;flex-wrap:wrap}
+.chip-from{font-size:11px;background:#FFE4E4;color:#991B1B;padding:2px 7px;border-radius:6px;text-decoration:line-through}
+.chip-to{font-size:11px;background:#DCFCE7;color:#166534;padding:2px 7px;border-radius:6px;font-weight:500}
+.swap-note{font-size:11px;color:#666}
+.action-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.btn-cook{padding:11px;border-radius:12px;border:none;font-size:13px;font-weight:600;cursor:pointer}
+.btn-cook.cooked{background:#DCFCE7;color:#166534}
+.btn-cook.not-cooked{background:#1a1a18;color:#fff}
+.btn-plan{padding:11px;border-radius:12px;border:1px solid #E5E5E0;background:#fff;color:#1a1a18;font-size:13px;font-weight:600;cursor:pointer}
+.empty{text-align:center;padding:3rem 0;color:#aaa}
+.toast{position:fixed;top:60px;left:50%;transform:translateX(-50%);background:#1a1a18;color:#fff;padding:10px 18px;border-radius:30px;font-size:13px;font-weight:500;z-index:200;white-space:nowrap;display:none}
+.toast.show{display:block}
+.section-hidden{display:none}
+.section-active{display:block}
+/* PLANNER */
+.planner-wrap{padding:14px 14px 80px}
+.planner-title{font-size:17px;font-weight:700;margin-bottom:4px}
+.planner-sub{font-size:12px;color:#888;margin-bottom:14px}
+.budget-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.budget-box{border-radius:12px;padding:10px 12px;text-align:center}
+.budget-box.cal{background:#FEF3C7}
+.budget-box.money{background:#DCFCE7}
+.budget-val{font-size:18px;font-weight:700}
+.budget-lbl{font-size:11px}
+.day-row{background:#fff;border-radius:14px;border:1px solid #EBEBEB;padding:12px 14px;margin-bottom:8px;display:flex;align-items:center;gap:12px}
+.day-label{font-weight:700;font-size:13px;min-width:32px;color:#888}
+.day-meal{flex:1}
+.day-meal-name{font-size:13px;font-weight:600}
+.day-meal-info{font-size:11px;color:#888}
+.day-empty{flex:1;font-size:12px;color:#ccc}
+.day-clear{background:none;border:none;color:#ccc;cursor:pointer;font-size:16px}
+.day-add{font-size:12px;padding:6px 12px;border-radius:20px;border:1px solid #E5E5E0;background:#fff;cursor:pointer;color:#555}
+/* TOUR */
+.tour-wrap{padding:14px 14px 80px}
+.tour-hero{background:#1a1a18;border-radius:16px;padding:16px;margin-bottom:16px;color:#fff}
+.tour-num{font-size:28px;font-weight:700}
+.tour-bar-bg{height:6px;background:#333;border-radius:3px;overflow:hidden;margin:8px 0}
+.tour-bar-fill{height:100%;border-radius:3px;transition:width 0.4s}
+.tour-msg{font-size:11px;color:#666;margin-top:4px}
+.country-row{background:#fff;border-radius:12px;border:1px solid #EBEBEB;padding:12px 14px;display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.country-row.done{border-color:#BBF7D0}
+.country-info{flex:1}
+.country-name{font-size:13px;font-weight:600}
+.country-sub{font-size:11px;color:#888}
+.country-badge-done{background:#DCFCE7;color:#166534;border-radius:20px;font-size:11px;padding:3px 10px;font-weight:600}
+.country-explore{background:#F5F5F0;color:#555;border:none;border-radius:20px;font-size:11px;padding:3px 10px;cursor:pointer}
+/* CHEF */
+.chef-wrap{padding:14px 14px 80px}
+.chef-hero{background:#1a1a18;border-radius:16px;padding:18px;margin-bottom:16px;color:#fff}
+.chef-title{font-size:16px;font-weight:700;margin-bottom:3px}
+.chef-sub{font-size:12px;color:#aaa;line-height:1.5}
+textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #E5E5E0;font-size:14px;min-height:90px;resize:none;background:#fff;outline:none;font-family:'Inter',system-ui,sans-serif;margin-bottom:10px}
+.chef-btn{width:100%;padding:12px;border-radius:12px;border:none;background:#1a1a18;color:#fff;font-size:14px;font-weight:600;cursor:pointer;margin-bottom:16px;font-family:'Inter',system-ui,sans-serif}
+.chef-btn:disabled{background:#ccc;cursor:not-allowed}
+.chef-result{background:#fff;border-radius:16px;border:1px solid #EBEBEB;overflow:hidden}
+.chef-result-emoji{background:#F5F5F0;font-size:56px;display:flex;align-items:center;justify-content:center;height:100px}
+.chef-result-body{padding:14px}
+.chef-result-name{font-size:20px;font-weight:700;margin-bottom:2px}
+.chef-result-meta{font-size:12px;color:#888;margin-bottom:10px}
+.chef-result-desc{font-size:13px;color:#555;line-height:1.6;margin-bottom:12px}
+.missing-box{background:#FEF3C7;border-radius:10px;padding:10px 12px;margin-bottom:12px}
+.missing-title{font-size:10px;font-weight:600;color:#92400E;margin-bottom:3px}
+.missing-text{font-size:12px;color:#92400E}
+.steps-title{font-size:11px;font-weight:600;color:#888;letter-spacing:0.05em;margin-bottom:8px}
+.step-row{display:flex;gap:10px;margin-bottom:8px;align-items:flex-start}
+.step-num{width:20px;height:20px;border-radius:50%;background:#1a1a18;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step-text{font-size:12px;color:#444;line-height:1.5;padding-top:2px}
+.tip-box{background:#F0FDF4;border-radius:10px;padding:10px 12px;margin-top:8px}
+.tip-title{font-size:10px;font-weight:600;color:#166534;margin-bottom:2px}
+.tip-text{font-size:12px;color:#166534}
+/* SAVED */
+.saved-wrap{padding:14px 14px 80px}
+.saved-empty{text-align:center;padding:3rem 1rem;color:#aaa}
+.saved-empty-icon{font-size:40px;margin-bottom:12px}
+.saved-empty-text{font-size:14px;margin-bottom:6px;color:#888}
+.saved-empty-sub{font-size:12px}
+.browse-btn{margin-top:16px;padding:10px 20px;border-radius:20px;background:#1a1a18;color:#fff;border:none;font-size:13px;cursor:pointer}
+/* PICKER MODAL */
+.picker-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:150;align-items:flex-end;justify-content:center}
+.picker-bg.open{display:flex}
+.picker{background:#fff;border-radius:20px 20px 0 0;width:100%;max-width:480px;max-height:70vh;overflow-y:auto;padding:16px}
+.picker-title{font-size:15px;font-weight:700;margin-bottom:12px}
+.picker-item{display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;cursor:pointer;margin-bottom:4px;background:#F9F9F7}
+.picker-item-emoji{font-size:24px}
+.picker-item-info{flex:1}
+.picker-item-name{font-size:13px;font-weight:600}
+.picker-item-sub{font-size:11px;color:#888}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-back">← worldmeals.app</a>
+  <a href="index.html" class="nav-logo">🌍 World Meals</a>
+  <div id="favCount" style="background:#EF4444;color:#fff;border-radius:20px;font-size:11px;padding:2px 8px;font-weight:600;display:none">❤️ 0</div>
+</nav>
+
+<div class="toast" id="toast"></div>
+
+<!-- BROWSE SECTION -->
+<div id="sec-browse" class="section-active">
+<div class="wrap">
+  <input class="search" id="searchInput" placeholder="Search dish or country…" oninput="filterMeals()">
+  <div class="filters">
+    <div class="filter-group"><label>Region</label><select id="regionFilter" onchange="filterMeals()"><option>All regions</option><option>Asia</option><option>Europe</option><option>Americas</option><option>Africa</option><option>Middle East</option></select></div>
+    <div class="filter-group"><label>Diet</label><select id="dietFilter" onchange="filterMeals()"><option value="all">All diets</option><option value="dairy-free">Dairy-free</option><option value="gluten-free">Gluten-free</option><option value="vegan">Vegan</option><option value="gluten-free-option">GF option</option><option value="vegan-option">Vegan option</option></select></div>
+  </div>
+  <div class="sliders">
+    <div class="slider-group"><label>Cal: <b id="calVal">1000</b></label><input type="range" min="200" max="1000" step="50" value="1000" oninput="document.getElementById('calVal').textContent=this.value;filterMeals()"></div>
+    <div class="slider-group"><label>Budget: <b id="budgetVal">$40</b></label><input type="range" min="1" max="40" step="1" value="40" oninput="document.getElementById('budgetVal').textContent='$'+this.value;filterMeals()"></div>
+    <div class="slider-group"><label>Spice: <b id="spiceVal">Any</b></label><input type="range" min="1" max="5" step="1" value="5" oninput="updateSpiceLabel(this.value);filterMeals()"></div>
+  </div>
+  <div class="results-count" id="resultsCount">24 dishes</div>
+  <div class="grid" id="mealsGrid"></div>
+</div>
+</div>
+
+<!-- PLANNER SECTION -->
+<div id="sec-planner" class="section-hidden">
+<div class="planner-wrap">
+  <div class="planner-title">📅 Weekly Meal Planner</div>
+  <div class="planner-sub">Plan your world food journey for the week</div>
+  <div class="budget-row">
+    <div class="budget-box cal"><div class="budget-val" id="weekCal">0</div><div class="budget-lbl" style="color:#92400E">total kcal</div></div>
+    <div class="budget-box money"><div class="budget-val" id="weekBudget">$0</div><div class="budget-lbl" style="color:#166534">total budget</div></div>
+  </div>
+  <div id="plannerDays"></div>
+</div>
+</div>
+
+<!-- TOUR SECTION -->
+<div id="sec-tour" class="section-hidden">
+<div class="tour-wrap">
+  <div class="planner-title">🏆 World Tour Challenge</div>
+  <div class="planner-sub">Cook a dish from every country. Conquer the culinary world.</div>
+  <div class="tour-hero">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <div><div class="tour-num" id="tourNum">0<span style="font-size:14px;font-weight:400;color:#888">/16</span></div><div style="font-size:12px;color:#888">countries conquered</div></div>
+      <div style="font-size:32px;font-weight:700" id="tourPct">0%</div>
+    </div>
+    <div class="tour-bar-bg"><div class="tour-bar-fill" id="tourBar" style="width:0%;background:#3B82F6"></div></div>
+    <div class="tour-msg" id="tourMsg">Cook your first dish to start your world tour! 🌍</div>
+  </div>
+  <div id="tourList"></div>
+</div>
+</div>
+
+<!-- CHEF SECTION -->
+<div id="sec-chef" class="section-hidden">
+<div class="chef-wrap">
+  <div class="chef-hero">
+    <div style="font-size:22px;margin-bottom:6px">🍳</div>
+    <div class="chef-title">AI Fridge Chef</div>
+    <div class="chef-sub">Tell me what's in your fridge and I'll find you an authentic world dish to cook right now.</div>
+  </div>
+  <textarea id="fridgeInput" placeholder="e.g. chicken, coconut milk, lemongrass, rice, garlic, lime…"></textarea>
+  <button class="chef-btn" id="chefBtn" onclick="runChef()">✨ Find me a world dish</button>
+  <div id="chefResult"></div>
+</div>
+</div>
+
+<!-- SAVED SECTION -->
+<div id="sec-saved" class="section-hidden">
+<div class="saved-wrap">
+  <div class="planner-title">❤️ Saved Dishes</div>
+  <div class="planner-sub">Your personal world cookbook</div>
+  <div id="savedGrid"></div>
+</div>
+</div>
+
+<!-- DISH MODAL -->
+<div class="modal-bg" id="modalBg" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="modal-emoji" id="mEmoji">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <button class="modal-fav" id="mFavBtn" onclick="toggleFavModal()">🤍</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-name" id="mName"></div>
+      <div class="modal-meta" id="mMeta"></div>
+      <div class="stats-row" id="mStats"></div>
+      <div class="spice-row" id="mSpice"></div>
+      <div class="modal-desc" id="mDesc"></div>
+      <div class="ingr-title">INGREDIENTS</div>
+      <div class="ingr-list" id="mIngr"></div>
+      <div class="swap-title">🔄 SMART SUBSTITUTIONS</div>
+      <div class="swap-btns" id="mSwapBtns"></div>
+      <div class="swap-panel" id="mSwapPanel" style="display:none"></div>
+      <div class="action-row">
+        <button class="btn-cook" id="mCookBtn" onclick="markCookedModal()"></button>
+        <button class="btn-plan" onclick="openPlannerPicker()">📅 Add to plan</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PLANNER PICKER -->
+<div class="picker-bg" id="pickerBg" onclick="if(event.target===this)closePicker()">
+  <div class="picker">
+    <div class="picker-title" id="pickerTitle">Choose a dish</div>
+    <div id="pickerList"></div>
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <button class="nav-btn active" id="nav-browse" onclick="showSection('browse')"><span>🍽</span><span>Browse</span></button>
+  <button class="nav-btn" id="nav-planner" onclick="showSection('planner')"><span>📅</span><span>Planner</span></button>
+  <button class="nav-btn" id="nav-tour" onclick="showSection('tour')"><span>🏆</span><span>Tour</span></button>
+  <button class="nav-btn" id="nav-chef" onclick="showSection('chef')"><span>🍳</span><span>Chef</span></button>
+  <button class="nav-btn" id="nav-saved" onclick="showSection('saved')"><span>❤️</span><span>Saved</span></button>
+</div>
+
+<script>
+const MEALS=[
+  {id:1,name:"Butter Chicken",country:"India",region:"Asia",emoji:"🍗",cal:580,budget:8,time:"50 min",spice:3,tags:["dairy","gluten-free-option"],desc:"Tender chicken in a velvety tomato-cream sauce infused with warming spices. One of India's most beloved exports worldwide.",ingredients:["Chicken","Tomatoes","Butter","Heavy cream","Garam masala","Ginger","Garlic"],swaps:{spice:[{from:"Chili powder",to:"Sweet paprika",note:"Same rich color, zero heat"}],dairy:[{from:"Heavy cream",to:"Coconut cream",note:"Adds subtle sweetness"},{from:"Butter",to:"Coconut oil",note:"Keeps richness without dairy"}],vegan:[{from:"Chicken",to:"Chickpeas + cauliflower",note:"Roast before adding to sauce"}]}},
+  {id:2,name:"Sushi",country:"Japan",region:"Asia",emoji:"🍣",cal:320,budget:18,time:"30 min",spice:1,tags:["dairy-free","gluten-free-option"],desc:"Vinegared rice paired with fresh fish and vegetables. A Japanese staple celebrated worldwide for its clean, precise flavors.",ingredients:["Sushi rice","Salmon","Tuna","Nori","Soy sauce","Wasabi","Rice vinegar"],swaps:{spice:[{from:"Wasabi",to:"Cucumber slices",note:"Cool crunch, zero heat"}],gluten:[{from:"Soy sauce",to:"Tamari",note:"Identical flavor, fully GF"}],vegan:[{from:"Salmon/Tuna",to:"Mango + avocado",note:"Tropical fruit sushi"}]}},
+  {id:3,name:"Pad Thai",country:"Thailand",region:"Asia",emoji:"🍜",cal:490,budget:9,time:"20 min",spice:2,tags:["dairy-free","gluten-free-option"],desc:"Stir-fried rice noodles with shrimp, tofu, egg in tangy tamarind sauce. Thailand's most iconic street dish.",ingredients:["Rice noodles","Shrimp","Tofu","Eggs","Tamarind paste","Fish sauce","Peanuts"],swaps:{spice:[{from:"Chili flakes",to:"Skip or mild paprika",note:"Full tamarind flavor, no heat"}],vegan:[{from:"Shrimp",to:"Extra firm tofu",note:"Pan-fry until golden first"}]}},
+  {id:4,name:"Pasta Carbonara",country:"Italy",region:"Europe",emoji:"🍝",cal:650,budget:8,time:"20 min",spice:1,tags:["dairy"],desc:"Creamy egg and pecorino sauce with guanciale and black pepper. No cream needed — ever.",ingredients:["Spaghetti","Eggs","Pecorino romano","Guanciale","Black pepper"],swaps:{dairy:[{from:"Pecorino",to:"Nutritional yeast",note:"Cheesy umami without dairy"}],gluten:[{from:"Spaghetti",to:"Rice spaghetti",note:"Cook al dente"}],vegan:[{from:"Eggs",to:"Silken tofu blended",note:"Creates creamy coating"},{from:"Guanciale",to:"Smoked mushrooms",note:"Pan-fry until crisp"}]}},
+  {id:5,name:"Tacos al Pastor",country:"Mexico",region:"Americas",emoji:"🌮",cal:420,budget:5,time:"40 min",spice:3,tags:["dairy-free","gluten-free"],desc:"Marinated pork in corn tortillas with pineapple and cilantro. Street food perfection.",ingredients:["Pork shoulder","Corn tortillas","Pineapple","Achiote paste","Chili peppers","Cilantro"],swaps:{spice:[{from:"Chili peppers",to:"Mild ancho chili",note:"Smoky flavor, minimal heat"}],vegan:[{from:"Pork",to:"King oyster mushrooms",note:"Marinate same way, grill until charred"}]}},
+  {id:6,name:"Bibimbap",country:"South Korea",region:"Asia",emoji:"🥗",cal:480,budget:9,time:"35 min",spice:2,tags:["dairy-free","vegan-option"],desc:"Rice bowl with seasoned vegetables, fried egg, and spicy gochujang. Mix before eating.",ingredients:["Steamed rice","Spinach","Carrots","Mushrooms","Fried egg","Gochujang","Sesame oil"],swaps:{spice:[{from:"Gochujang",to:"Miso + honey",note:"Umami sweetness, zero heat"}],vegan:[{from:"Fried egg",to:"Marinated tofu",note:"Season with soy and sesame"}]}},
+  {id:7,name:"Falafel",country:"Lebanon",region:"Middle East",emoji:"🧆",cal:330,budget:5,time:"25 min",spice:1,tags:["dairy-free","vegan","gluten-free-option"],desc:"Crispy fried chickpea balls with cumin and coriander. Served in pita with tahini.",ingredients:["Chickpeas","Parsley","Cumin","Coriander","Garlic","Tahini","Lemon"],swaps:{gluten:[{from:"Pita bread",to:"Lettuce wraps",note:"Fresh and crunchy"}]}},
+  {id:8,name:"Ceviche",country:"Peru",region:"Americas",emoji:"🦐",cal:220,budget:14,time:"25 min",spice:2,tags:["dairy-free","gluten-free"],desc:"Fresh fish cured in lime juice with red onion and chili. Light and refreshing.",ingredients:["White fish","Lime juice","Red onion","Ají amarillo","Cilantro","Corn"],swaps:{spice:[{from:"Ají amarillo",to:"Yellow bell pepper",note:"Same color, no heat"}],vegan:[{from:"White fish",to:"Hearts of palm",note:"Absorbs lime cure beautifully"}]}},
+  {id:9,name:"Moussaka",country:"Greece",region:"Europe",emoji:"🫕",cal:680,budget:11,time:"1.5 hrs",spice:1,tags:["dairy"],desc:"Layered eggplant and spiced lamb with creamy béchamel baked until golden.",ingredients:["Eggplant","Ground lamb","Tomatoes","Béchamel sauce","Cinnamon","Allspice"],swaps:{dairy:[{from:"Béchamel",to:"Oat milk béchamel",note:"Just as creamy"}],vegan:[{from:"Ground lamb",to:"Green lentils",note:"Season identically"}]}},
+  {id:10,name:"Pho Bo",country:"Vietnam",region:"Asia",emoji:"🍲",cal:380,budget:7,time:"4 hrs",spice:1,tags:["dairy-free","gluten-free-option"],desc:"Clear beef bone broth over rice noodles with fresh herbs and lime.",ingredients:["Beef bones","Rice noodles","Star anise","Cinnamon","Ginger","Basil","Bean sprouts"],swaps:{vegan:[{from:"Beef bones",to:"Mushroom + ginger broth",note:"Roast shiitake for deep umami"},{from:"Fish sauce",to:"Soy sauce + nori",note:"Adds ocean depth"}]}},
+  {id:11,name:"Jollof Rice",country:"Nigeria",region:"Africa",emoji:"🍚",cal:450,budget:5,time:"45 min",spice:2,tags:["dairy-free","gluten-free","vegan"],desc:"One-pot West African rice in tomato and pepper sauce. The centerpiece of any celebration.",ingredients:["Long grain rice","Tomatoes","Red bell pepper","Scotch bonnet","Onion","Chicken stock"],swaps:{spice:[{from:"Scotch bonnet",to:"Red bell pepper only",note:"All color, no fire"}],vegan:[{from:"Chicken stock",to:"Vegetable stock",note:"Add smoked paprika for depth"}]}},
+  {id:12,name:"Tagine",country:"Morocco",region:"Africa",emoji:"🍖",cal:610,budget:13,time:"2 hrs",spice:2,tags:["dairy-free","gluten-free"],desc:"Slow-cooked lamb with preserved lemon and olives in aromatic spices.",ingredients:["Lamb shoulder","Preserved lemon","Green olives","Cumin","Turmeric","Saffron","Honey"],swaps:{spice:[{from:"Cumin + ginger",to:"Turmeric + cinnamon",note:"Warm and fragrant, minimal heat"}],vegan:[{from:"Lamb",to:"Chickpeas + root vegetables",note:"Squash absorbs spice beautifully"}]}},
+  {id:13,name:"Peking Duck",country:"China",region:"Asia",emoji:"🦆",cal:890,budget:35,time:"2 days",spice:1,tags:["dairy-free"],desc:"Imperial roast duck with crispy lacquered skin in thin pancakes with hoisin.",ingredients:["Whole duck","Maltose","Soy sauce","Five spice","Thin pancakes","Scallion","Hoisin sauce"],swaps:{gluten:[{from:"Thin pancakes",to:"Rice paper wrappers",note:"Soak 10 seconds"}],vegan:[{from:"Duck",to:"Whole roasted celeriac",note:"Glaze identically"}]}},
+  {id:14,name:"Bratwurst",country:"Germany",region:"Europe",emoji:"🌭",cal:540,budget:6,time:"20 min",spice:1,tags:["dairy-free","gluten-free-option"],desc:"Juicy pork and veal sausage grilled with mustard and sauerkraut.",ingredients:["Pork + veal sausage","Bun","Mustard","Sauerkraut","Caraway seeds"],swaps:{gluten:[{from:"Crusty bun",to:"GF bun or lettuce wrap",note:"Toast the GF bun well"}],vegan:[{from:"Bratwurst",to:"Beyond sausage",note:"Grill on high heat"}]}},
+  {id:15,name:"Empanadas",country:"Argentina",region:"Americas",emoji:"🥟",cal:390,budget:5,time:"1 hr",spice:1,tags:["dairy-free-option"],desc:"Flaky pastry pockets stuffed with spiced ground beef, olives, and egg.",ingredients:["Flour dough","Ground beef","Green olives","Hard-boiled egg","Cumin","Paprika"],swaps:{gluten:[{from:"Wheat dough",to:"Cassava flour dough",note:"Roll slightly thicker"}],vegan:[{from:"Ground beef",to:"Black beans + corn",note:"Season same way"}]}},
+  {id:16,name:"Shawarma",country:"Lebanon",region:"Middle East",emoji:"🥙",cal:560,budget:8,time:"1 hr",spice:2,tags:["dairy-free-option","gluten-free-option"],desc:"Marinated meat on a rotating spit, wrapped in flatbread with garlic sauce.",ingredients:["Lamb or chicken","Flatbread","Garlic sauce","Turmeric","Cinnamon","Pickles"],swaps:{spice:[{from:"Cayenne",to:"Extra cumin + coriander",note:"Earthy and fragrant, no heat"}],dairy:[{from:"Garlic sauce",to:"Hummus or tahini",note:"Equally rich and dairy-free"}]}},
+  {id:17,name:"Kimchi Jjigae",country:"South Korea",region:"Asia",emoji:"🥘",cal:350,budget:6,time:"30 min",spice:4,tags:["dairy-free","gluten-free-option"],desc:"Fiery kimchi stew with pork belly and silken tofu. Deeply savory Korean comfort food.",ingredients:["Kimchi","Pork belly","Silken tofu","Gochugaru","Garlic","Sesame oil"],swaps:{spice:[{from:"Gochugaru",to:"Mild kimchi, no extra chili",note:"All tang, no fire"},{from:"Regular kimchi",to:"White kimchi",note:"Zero chili, full flavor"}],vegan:[{from:"Pork belly",to:"Mushrooms + firm tofu",note:"Use extra sesame oil"}]}},
+  {id:18,name:"Fish & Chips",country:"United Kingdom",region:"Europe",emoji:"🐟",cal:900,budget:10,time:"30 min",spice:1,tags:["dairy-free-option"],desc:"Beer-battered cod fried golden with thick-cut chips and mushy peas.",ingredients:["Cod fillet","Flour","Beer","Potatoes","Mushy peas","Malt vinegar"],swaps:{gluten:[{from:"Wheat flour + beer batter",to:"Rice flour + sparkling water",note:"Actually crispier"}],vegan:[{from:"Cod",to:"Banana blossom",note:"Pull apart like fish, batter the same way"}]}},
+  {id:19,name:"Gazpacho",country:"Spain",region:"Europe",emoji:"🍅",cal:160,budget:4,time:"15 min",spice:1,tags:["dairy-free","vegan","gluten-free"],desc:"Chilled blended raw tomato soup. Andalusia's answer to summer heat.",ingredients:["Ripe tomatoes","Cucumber","Red bell pepper","Garlic","Olive oil","Sherry vinegar"],swaps:{gluten:[{from:"Stale bread",to:"Omit or GF bread",note:"Blend an extra tomato for body"}]}},
+  {id:20,name:"Injera & Doro Wat",country:"Ethiopia",region:"Africa",emoji:"🫓",cal:620,budget:10,time:"2 hrs",spice:3,tags:["dairy-free","vegan-option"],desc:"Tangy sourdough flatbread with slow-cooked spicy chicken stew. Eaten communally by hand.",ingredients:["Teff flour","Chicken legs","Berbere spice","Onion","Niter kibbeh","Hard-boiled eggs"],swaps:{spice:[{from:"Berbere blend",to:"Turmeric + coriander",note:"All earthiness, fraction of the heat"}],vegan:[{from:"Chicken",to:"Lentils (misir wat)",note:"Ethiopia's lentil stew — naturally vegan"}]}},
+  {id:21,name:"Margherita Pizza",country:"Italy",region:"Europe",emoji:"🍕",cal:700,budget:7,time:"25 min",spice:1,tags:["vegan-option"],desc:"Thin Neapolitan crust with San Marzano tomatoes, buffalo mozzarella, and fresh basil.",ingredients:["00 flour","San Marzano tomatoes","Buffalo mozzarella","Fresh basil","Olive oil"],swaps:{dairy:[{from:"Buffalo mozzarella",to:"Cashew mozzarella",note:"Soak cashews overnight"}],gluten:[{from:"00 flour dough",to:"Cauliflower crust",note:"Press very dry before baking"}]}},
+  {id:22,name:"Croissant",country:"France",region:"Europe",emoji:"🥐",cal:310,budget:4,time:"3 hrs",spice:1,tags:["vegan-option"],desc:"Buttery, flaky pastry with hundreds of paper-thin layers. Best eaten warm.",ingredients:["Bread flour","European butter","Milk","Yeast","Sugar","Eggs"],swaps:{dairy:[{from:"European butter",to:"Vegan block butter 80%+ fat",note:"Flora Plant or Naturli work best"},{from:"Milk",to:"Full-fat oat milk",note:"Best for lamination"}]}},
+  {id:23,name:"Boeuf Bourguignon",country:"France",region:"Europe",emoji:"🥩",cal:720,budget:20,time:"3 hrs",spice:1,tags:["dairy","gluten-free-option"],desc:"Slow-braised beef in Burgundy wine with pearl onions, mushrooms, and lardons.",ingredients:["Beef chuck","Red Burgundy wine","Pearl onions","Mushrooms","Lardons","Carrots","Thyme"],swaps:{gluten:[{from:"Flour (thickening)",to:"Cornstarch slurry at end",note:"1 tbsp cornstarch in cold water"}],vegan:[{from:"Beef",to:"Portobello mushrooms + lentils",note:"Same wine and technique"}]}},
+  {id:24,name:"Ramen",country:"Japan",region:"Asia",emoji:"🍜",cal:550,budget:12,time:"45 min",spice:1,tags:["dairy-free"],desc:"Rich miso broth loaded with pork belly, soft-boiled egg, and bamboo shoots.",ingredients:["Ramen noodles","Pork belly","Miso paste","Soy sauce","Soft-boiled egg","Nori","Bamboo shoots"],swaps:{gluten:[{from:"Ramen noodles",to:"Rice ramen noodles",note:"Available in Asian grocery stores"}],vegan:[{from:"Pork belly",to:"Braised king oyster mushrooms",note:"Braise in soy + mirin until tender"},{from:"Soft-boiled egg",to:"Marinated tofu cubes",note:"Soy + mirin overnight"}]}}
+];
+
+const DAYS=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+const SPICE_LABELS=["","Mild 🟢","Low 🟡","Medium 🟠","Hot 🔴","Fiery 🌶️"];
+const SPICE_COLORS=["","#22C55E","#EAB308","#F97316","#EF4444","#9B1C1C"];
+const SWAP_LABELS={spice:"🌶 Reduce spice",dairy:"🥛 Dairy-free",vegan:"🌱 Make vegan",gluten:"🌾 Gluten-free"};
+
+let favorites=JSON.parse(localStorage.getItem("wm_favs")||"[]");
+let cooked=JSON.parse(localStorage.getItem("wm_cooked")||"[]");
+let weekPlan=JSON.parse(localStorage.getItem("wm_week")||"{}");
+let currentMeal=null;
+let activeSwap=null;
+let pickerDay=null;
+
+function save(){
+  localStorage.setItem("wm_favs",JSON.stringify(favorites));
+  localStorage.setItem("wm_cooked",JSON.stringify(cooked));
+  localStorage.setItem("wm_week",JSON.stringify(weekPlan));
+}
+
+function showToast(msg){
+  const t=document.getElementById("toast");
+  t.textContent=msg;
+  t.classList.add("show");
+  setTimeout(()=>t.classList.remove("show"),2200);
+}
+
+function spiceColor(s){return SPICE_COLORS[s]||"#ccc"}
+
+function updateSpiceLabel(v){
+  document.getElementById("spiceVal").textContent=SPICE_LABELS[parseInt(v)];
+}
+
+function filterMeals(){
+  const q=document.getElementById("searchInput").value.toLowerCase();
+  const region=document.getElementById("regionFilter").value;
+  const diet=document.getElementById("dietFilter").value;
+  const maxCal=parseInt(document.querySelector("#sec-browse input[type=range]:nth-child(1)").value||1000);
+  const maxBudget=parseInt(document.querySelector("#sec-browse input[type=range]:nth-child(2)").value||40);
+  const maxSpice=parseInt(document.querySelector("#sec-browse input[type=range]:nth-child(3)").value||5);
+  const filtered=MEALS.filter(m=>{
+    const matchQ=!q||m.name.toLowerCase().includes(q)||m.country.toLowerCase().includes(q);
+    const matchR=region==="All regions"||m.region===region;
+    const matchD=diet==="all"||m.tags.includes(diet);
+    return matchQ&&matchR&&matchD&&m.cal<=maxCal&&m.budget<=maxBudget&&m.spice<=maxSpice;
+  });
+  document.getElementById("resultsCount").textContent=filtered.length+" dishes";
+  renderGrid(filtered);
+}
+
+function renderGrid(meals){
+  const grid=document.getElementById("mealsGrid");
+  if(!meals.length){grid.innerHTML='<div class="empty">No dishes match. Try relaxing your filters.</div>';return;}
+  grid.innerHTML=meals.map(m=>`
+    <div class="card" onclick="openModal(${m.id})">
+      <div class="card-emoji">${m.emoji}</div>
+      <button class="fav-btn" onclick="event.stopPropagation();toggleFav(${m.id})">${favorites.includes(m.id)?"❤️":"🤍"}</button>
+      ${cooked.includes(m.id)?'<div class="cooked-badge">✓ Cooked</div>':""}
+      <div class="card-body">
+        <div class="card-name">${m.name}</div>
+        <div class="card-country">📍 ${m.country}</div>
+        <div class="card-tags">
+          <span class="tag tag-cal">${m.cal} kcal</span>
+          <span class="tag tag-budget">$${m.budget}</span>
+          <span class="tag tag-spice"><span class="spice-dot" style="background:${spiceColor(m.spice)}"></span>${SPICE_LABELS[m.spice]}</span>
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+function toggleFav(id){
+  if(favorites.includes(id)){favorites=favorites.filter(x=>x!==id);showToast("💔 Removed from favourites");}
+  else{favorites.push(id);showToast("❤️ "+MEALS.find(m=>m.id===id).name+" saved!");}
+  save();updateFavCount();filterMeals();renderSaved();
+  if(currentMeal&&currentMeal.id===id){document.getElementById("mFavBtn").textContent=favorites.includes(id)?"❤️":"🤍";}
+}
+
+function updateFavCount(){
+  const el=document.getElementById("favCount");
+  if(favorites.length>0){el.style.display="block";el.textContent="❤️ "+favorites.length;}
+  else el.style.display="none";
+}
+
+function openModal(id){
+  const m=MEALS.find(x=>x.id===id);
+  currentMeal=m;activeSwap=null;
+  document.getElementById("mEmoji").childNodes[0].textContent=m.emoji;
+  document.getElementById("mFavBtn").textContent=favorites.includes(m.id)?"❤️":"🤍";
+  document.getElementById("mName").textContent=m.name;
+  document.getElementById("mMeta").textContent="📍 "+m.country+" · "+m.region;
+  document.getElementById("mStats").innerHTML=[["🔥",m.cal,"kcal"],["💰","$"+m.budget,"per serving"],["⏱",m.time,"cook time"]].map(([ic,v,l])=>`<div class="stat"><div style="font-size:12px">${ic}</div><div class="stat-val">${v}</div><div class="stat-lbl">${l}</div></div>`).join("");
+  document.getElementById("mSpice").innerHTML=`<div style="font-size:11px;color:#888">Spice:</div><div class="spice-dots">${[1,2,3,4,5].map(i=>`<div style="width:8px;height:8px;border-radius:50%;background:${i<=m.spice?spiceColor(m.spice):"#E5E5E0"}"></div>`).join("")}</div><div style="font-size:12px;font-weight:500">${SPICE_LABELS[m.spice]}</div>`;
+  document.getElementById("mDesc").textContent=m.desc;
+  document.getElementById("mIngr").innerHTML=m.ingredients.map(i=>`<span class="ingr-pill">${i}</span>`).join("");
+  const swapKeys=m.swaps?Object.keys(m.swaps):[];
+  document.getElementById("mSwapBtns").innerHTML=swapKeys.map(k=>`<button class="swap-btn" onclick="toggleSwap('${k}')">${SWAP_LABELS[k]||k}</button>`).join("");
+  document.getElementById("mSwapPanel").style.display="none";
+  updateCookBtn();
+  document.getElementById("modalBg").classList.add("open");
+}
+
+function toggleSwap(key){
+  if(activeSwap===key){activeSwap=null;document.getElementById("mSwapPanel").style.display="none";document.querySelectorAll(".swap-btn").forEach(b=>b.className="swap-btn");return;}
+  activeSwap=key;
+  document.querySelectorAll(".swap-btn").forEach(b=>b.className="swap-btn");
+  event.target.className="swap-btn active-"+key;
+  const swaps=currentMeal.swaps[key];
+  document.getElementById("mSwapPanel").innerHTML=swaps.map(s=>`<div class="swap-item"><div class="swap-chips"><span class="chip-from">${s.from}</span><span>→</span><span class="chip-to">${s.to}</span></div><div class="swap-note">💡 ${s.note}</div></div>`).join("");
+  document.getElementById("mSwapPanel").style.display="block";
+}
+
+function updateCookBtn(){
+  const btn=document.getElementById("mCookBtn");
+  if(cooked.includes(currentMeal.id)){btn.className="btn-cook cooked";btn.textContent="✓ Cooked!";}
+  else{btn.className="btn-cook not-cooked";btn.textContent="Mark as cooked 🍽";}
+}
+
+function markCookedModal(){
+  if(!cooked.includes(currentMeal.id)){
+    cooked.push(currentMeal.id);save();
+    showToast("🍽 "+currentMeal.name+" cooked! "+cooked.length+" total");
+    updateCookBtn();filterMeals();renderTour();
+  }
+}
+
+function closeModal(){document.getElementById("modalBg").classList.remove("open");currentMeal=null;activeSwap=null;}
+
+function toggleFavModal(){if(currentMeal)toggleFav(currentMeal.id);}
+
+function openPlannerPicker(){
+  closeModal();
+  pickerDay=null;
+  showSection("planner");
+}
+
+function showSection(name){
+  ["browse","planner","tour","chef","saved"].forEach(s=>{
+    document.getElementById("sec-"+s).className=s===name?"section-active":"section-hidden";
+    const btn=document.getElementById("nav-"+s);
+    if(btn){btn.className=s===name?"nav-btn active":"nav-btn";}
+  });
+  if(name==="planner")renderPlanner();
+  if(name==="tour")renderTour();
+  if(name==="saved")renderSaved();
+}
+
+function renderPlanner(){
+  const weekCal=Object.values(weekPlan).reduce((s,id)=>{const m=MEALS.find(x=>x.id===id);return s+(m?.cal||0);},0);
+  const weekBudget=Object.values(weekPlan).reduce((s,id)=>{const m=MEALS.find(x=>x.id===id);return s+(m?.budget||0);},0);
+  document.getElementById("weekCal").textContent=weekCal.toLocaleString();
+  document.getElementById("weekBudget").textContent="$"+weekBudget;
+  document.getElementById("plannerDays").innerHTML=DAYS.map(day=>{
+    const mealId=weekPlan[day];const meal=mealId?MEALS.find(m=>m.id===mealId):null;
+    return `<div class="day-row">
+      <div class="day-label">${day}</div>
+      ${meal?`<span style="font-size:22px">${meal.emoji}</span><div class="day-meal"><div class="day-meal-name">${meal.name}</div><div class="day-meal-info">📍 ${meal.country} · ${meal.cal} kcal · $${meal.budget}</div></div><button class="day-clear" onclick="clearDay('${day}')">✕</button>`
+      :`<div class="day-empty">No meal planned</div><button class="day-add" onclick="openDayPicker('${day}')">+ Add dish</button>`}
+    </div>`;
+  }).join("");
+}
+
+function clearDay(day){delete weekPlan[day];save();renderPlanner();}
+
+function openDayPicker(day){
+  pickerDay=day;
+  document.getElementById("pickerTitle").textContent="Choose a dish for "+day;
+  document.getElementById("pickerList").innerHTML=MEALS.map(m=>`
+    <div class="picker-item" onclick="assignDay('${day}',${m.id})">
+      <span class="picker-item-emoji">${m.emoji}</span>
+      <div class="picker-item-info"><div class="picker-item-name">${m.name}</div><div class="picker-item-sub">📍 ${m.country} · ${m.cal} kcal · $${m.budget}</div></div>
+    </div>
+  `).join("");
+  document.getElementById("pickerBg").classList.add("open");
+}
+
+function assignDay(day,id){
+  weekPlan[day]=id;save();closePicker();renderPlanner();
+  const m=MEALS.find(x=>x.id===id);
+  showToast("📅 "+m.name+" added to "+day);
+}
+
+function closePicker(){document.getElementById("pickerBg").classList.remove("open");}
+
+function renderTour(){
+  const ALL_COUNTRIES=[...new Set(MEALS.map(m=>m.country))];
+  const cookedCountries=[...new Set(cooked.map(id=>MEALS.find(m=>m.id===id)?.country).filter(Boolean))];
+  const pct=Math.round((cookedCountries.length/ALL_COUNTRIES.length)*100);
+  document.getElementById("tourNum").innerHTML=cookedCountries.length+'<span style="font-size:14px;font-weight:400;color:#888">/'+ALL_COUNTRIES.length+'</span>';
+  document.getElementById("tourPct").textContent=pct+"%";
+  document.getElementById("tourBar").style.width=pct+"%";
+  document.getElementById("tourBar").style.background=pct>=100?"#FFD700":pct>=50?"#22C55E":"#3B82F6";
+  document.getElementById("tourMsg").textContent=pct===0?"Cook your first dish to start your world tour! 🌍":pct>=100?"🎉 WORLD TOUR COMPLETE! You are a global chef legend!":pct>=50?"Over halfway! The culinary world is yours 🌟":"Keep exploring new cuisines! 🗺";
+  document.getElementById("tourList").innerHTML=ALL_COUNTRIES.map(country=>{
+    const dishes=MEALS.filter(m=>m.country===country);
+    const done=cookedCountries.includes(country);
+    return `<div class="country-row${done?" done":""}">
+      <span style="font-size:24px">${dishes[0]?.emoji}</span>
+      <div class="country-info"><div class="country-name">${country}</div><div class="country-sub">${dishes.length} dish${dishes.length>1?"es":""}</div></div>
+      ${done?'<div class="country-badge-done">✓ Done</div>':`<button class="country-explore" onclick="showSection('browse')">Explore →</button>`}
+    </div>`;
+  }).join("");
+}
+
+function renderSaved(){
+  const favMeals=MEALS.filter(m=>favorites.includes(m.id));
+  const grid=document.getElementById("savedGrid");
+  if(!favMeals.length){
+    grid.innerHTML=`<div class="saved-empty"><div class="saved-empty-icon">🤍</div><div class="saved-empty-text">No saved dishes yet</div><div class="saved-empty-sub">Tap the heart on any dish to save it here</div><button class="browse-btn" onclick="showSection('browse')">Browse dishes →</button></div>`;
+    return;
+  }
+  grid.innerHTML='<div class="grid">'+favMeals.map(m=>`
+    <div class="card" onclick="openModal(${m.id})">
+      <div class="card-emoji">${m.emoji}</div>
+      <button class="fav-btn" onclick="event.stopPropagation();toggleFav(${m.id})">❤️</button>
+      <div class="card-body">
+        <div class="card-name">${m.name}</div>
+        <div class="card-country">📍 ${m.country}</div>
+        <div class="card-tags"><span class="tag tag-cal">${m.cal} kcal</span><span class="tag tag-budget">$${m.budget}</span></div>
+      </div>
+    </div>
+  `).join("")+'</div>';
+}
+
+async function runChef(){
+  const input=document.getElementById("fridgeInput").value.trim();
+  if(!input)return;
+  const btn=document.getElementById("chefBtn");
+  btn.disabled=true;btn.textContent="Searching the world's kitchens…";
+  document.getElementById("chefResult").innerHTML="";
+  try{
+    const res=await fetch("https://api.anthropic.com/v1/messages",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({model:"claude-sonnet-4-6",max_tokens:1000,messages:[{role:"user",content:`You are a world cuisine chef. Ingredients: ${input}. Suggest ONE authentic world dish. Respond ONLY with valid JSON no markdown:\n{"name":"","country":"","emoji":"","calories":0,"cookTime":"","spiceLevel":1,"description":"","missingIngredients":[],"steps":[],"tip":""}`}]})});
+    const data=await res.json();
+    const text=data.content.find(b=>b.type==="text")?.text||"";
+    const r=JSON.parse(text.replace(/```json|```/g,"").trim());
+    document.getElementById("chefResult").innerHTML=`
+      <div class="chef-result">
+        <div class="chef-result-emoji">${r.emoji}</div>
+        <div class="chef-result-body">
+          <div class="chef-result-name">${r.name}</div>
+          <div class="chef-result-meta">📍 ${r.country} · ⏱ ${r.cookTime} · 🔥 ${r.calories} kcal</div>
+          <div class="chef-result-desc">${r.description}</div>
+          ${r.missingIngredients?.length?`<div class="missing-box"><div class="missing-title">YOU'LL ALSO NEED</div><div class="missing-text">${r.missingIngredients.join(", ")}</div></div>`:""}
+          <div class="steps-title">STEPS</div>
+          ${r.steps?.map((s,i)=>`<div class="step-row"><div class="step-num">${i+1}</div><div class="step-text">${s}</div></div>`).join("")}
+          ${r.tip?`<div class="tip-box"><div class="tip-title">💡 CHEF'S TIP</div><div class="tip-text">${r.tip}</div></div>`:""}
+        </div>
+      </div>`;
+  }catch(e){document.getElementById("chefResult").innerHTML='<div style="padding:12px;background:#FEE2E2;border-radius:10px;color:#991B1B;font-size:13px">Couldn\'t find a dish — try again!</div>';}
+  btn.disabled=false;btn.textContent="✨ Find me a world dish";
+}
+
+// INIT
+filterMeals();
+updateFavCount();
+</script>
+</body>
+</html>
