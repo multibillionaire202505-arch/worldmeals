@@ -225,6 +225,7 @@ textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #E5E5E
 <div class="overlay" id="dishOverlay" onclick="if(event.target===this)closeModal()">
   <div class="modal">
     <div class="modal-top" id="modalEmoji">
+      <span id="modalEmojiText" style="font-size:64px"></span>
       <button class="btn-close" onclick="closeModal()">✕</button>
       <button class="btn-fav" id="modalFavBtn" onclick="toggleFavModal()">🤍</button>
     </div>
@@ -378,7 +379,7 @@ function updateFavCount(){
 function openModal(id){
   const m=MEALS.find(x=>x.id===id);
   currentMeal=m;activeSwap=null;
-  document.getElementById("modalEmoji").childNodes[2].textContent=m.emoji;
+  document.getElementById("modalEmojiText").textContent=m.emoji;
   document.getElementById("modalFavBtn").textContent=favs.includes(m.id)?"❤️":"🤍";
   document.getElementById("modalName").textContent=m.name;
   document.getElementById("modalMeta").textContent="📍 "+m.country+" · "+m.region;
