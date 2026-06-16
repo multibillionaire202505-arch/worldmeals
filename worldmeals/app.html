@@ -453,10 +453,13 @@ async function getRecipe(){
   try{
     const r=await fetch("/api/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({model:"claude-sonnet-4-6",max_tokens:1000,messages:[{role:"user",content:"Give me a full step-by-step recipe for "+currentMeal.name+" from "+currentMeal.country+". Respond ONLY with valid JSON, no markdown: {\"steps\":[\"step 1\",\"step 2\",\"step 3\",\"step 4\",\"step 5\"],\"tip\":\"one chef tip\"}"}]})});
     const d=await r.json();
-    const text=d.content.find(b=>b.type==="text")?.text||"";
+    if(!r.ok){throw new Error(d.error||JSON.stringify(d));}
+    console.log("Anthropic response:",d);
+    const text=d.content?.find(x=>x.type==="text")?.text||"";
+    if(!text){throw new Error("No text returned from Anthropic");}
     const data=JSON.parse(text.replace(/```json|```/g,"").trim());
     res.innerHTML='<div style="background:#F9F9F7;border-radius:12px;padding:12px;margin-top:4px"><div style="font-size:10px;font-weight:600;color:#888;letter-spacing:0.05em;margin-bottom:8px">RECIPE STEPS</div>'+data.steps.map((s,i)=>`<div class="step-row"><div class="step-num">${i+1}</div><div class="step-text">${s}</div></div>`).join("")+(data.tip?`<div class="tip-box"><div style="font-size:10px;font-weight:600;color:#166534;margin-bottom:2px">💡 CHEF TIP</div><div style="font-size:12px;color:#166534">${data.tip}</div></div>`:"")+`</div>`;
-  }catch(e){res.innerHTML='<div style="padding:10px;background:#FEE2E2;border-radius:10px;color:#991B1B;font-size:12px">Could not generate recipe. Try again!</div>';}
+  }catch(e){console.error(e);res.innerHTML='<div style="padding:10px;background:#FEE2E2;border-radius:10px;color:#991B1B;font-size:12px">'+e.message+'</div>';}
   btn.disabled=false;btn.textContent="📖 Get full recipe";
 }
 
