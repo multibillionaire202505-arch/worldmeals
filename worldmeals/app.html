@@ -243,8 +243,7 @@ textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #E5E5E
         <button class="btn-cook" id="modalCookBtn" onclick="markCooked()"></button>
         <button class="btn-plan" onclick="goPlanner()">📅 Add to plan</button>
       </div>
-      <button class="btn-recipe" id="recipeBtn" onclick="getRecipe()">📖 Get full recipe</button>
-      <div class="recipe-result" id="recipeResult"></div>
+      <button class="btn-recipe" id="recipeBtn" onclick="searchRecipe()">📖 Search full recipe →</button>
     </div>
   </div>
 </div>
@@ -437,6 +436,12 @@ function toggleFavModal(){if(currentMeal)toggleFav(currentMeal.id);}
 
 function goPlanner(){closeModal();showPage("planner");}
 
+function searchRecipe(){
+  if(!currentMeal)return;
+  const q=encodeURIComponent(currentMeal.name+" "+currentMeal.country+" recipe");
+  window.open("https://www.google.com/search?q="+q,"_blank");
+}
+
 async function getRecipe(){
   if(!currentMeal)return;
   const btn=document.getElementById("recipeBtn");
@@ -444,7 +449,7 @@ async function getRecipe(){
   btn.disabled=true;btn.textContent="Generating recipe…";
   res.innerHTML="";
   try{
-    const r=await fetch("https://api.anthropic.com/v1/messages",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({model:"claude-sonnet-4-6",max_tokens:1000,messages:[{role:"user",content:"Give me a full step-by-step recipe for "+currentMeal.name+" from "+currentMeal.country+". Respond ONLY with valid JSON, no markdown: {\"steps\":[\"step 1\",\"step 2\",\"step 3\",\"step 4\",\"step 5\"],\"tip\":\"one chef tip\"}"}]})});
+    const r=await fetch("/api/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({model:"claude-sonnet-4-6",max_tokens:1000,messages:[{role:"user",content:"Give me a full step-by-step recipe for "+currentMeal.name+" from "+currentMeal.country+". Respond ONLY with valid JSON, no markdown: {\"steps\":[\"step 1\",\"step 2\",\"step 3\",\"step 4\",\"step 5\"],\"tip\":\"one chef tip\"}"}]})});
     const d=await r.json();
     const text=d.content.find(b=>b.type==="text")?.text||"";
     const data=JSON.parse(text.replace(/```json|```/g,"").trim());
@@ -524,7 +529,7 @@ async function runChef(){
   btn.disabled=true;btn.textContent="Searching the world's kitchens…";
   document.getElementById("chefResult").innerHTML="";
   try{
-    const res=await fetch("https://api.anthropic.com/v1/messages",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({model:"claude-sonnet-4-6",max_tokens:1000,messages:[{role:"user",content:"You are a world cuisine chef. Ingredients: "+input+". Suggest ONE authentic world dish. Respond ONLY with valid JSON no markdown: {\"name\":\"\",\"country\":\"\",\"emoji\":\"\",\"calories\":0,\"cookTime\":\"\",\"description\":\"\",\"missingIngredients\":[],\"steps\":[],\"tip\":\"\"}"}]})});
+    const res=await fetch("/api/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({model:"claude-sonnet-4-6",max_tokens:1000,messages:[{role:"user",content:"You are a world cuisine chef. Ingredients: "+input+". Suggest ONE authentic world dish. Respond ONLY with valid JSON no markdown: {\"name\":\"\",\"country\":\"\",\"emoji\":\"\",\"calories\":0,\"cookTime\":\"\",\"description\":\"\",\"missingIngredients\":[],\"steps\":[],\"tip\":\"\"}"}]})});
     const data=await res.json();
     const text=data.content.find(b=>b.type==="text")?.text||"";
     const r=JSON.parse(text.replace(/```json|```/g,"").trim());
