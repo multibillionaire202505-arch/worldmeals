@@ -307,6 +307,34 @@ let currentMeal=null;
 let activeSwap=null;
 let pickerDay=null;
 
+// Generate or retrieve anonymous user ID
+function getAnonId(){
+  let id=localStorage.getItem("wm_anon_id");
+  if(!id){id="anon_"+Math.random().toString(36).substr(2,9)+"_"+Date.now();localStorage.setItem("wm_anon_id",id);}
+  return id;
+}
+
+async function saveFavToDB(mealId, isAdding){
+  try{
+    if(isAdding){
+      await fetch("/api/saves",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({anonymous_id:getAnonId(),meal_id:mealId})});
+    } else {
+      await fetch("/api/saves?anonymous_id=eq."+getAnonId()+"&meal_id=eq."+mealId,{method:"DELETE"});
+    }
+  }catch(e){console.log("DB save failed, using localStorage only");}
+}
+
+async function loadFavsFromDB(){
+  try{
+    const res=await fetch("/api/saves?anonymous_id=eq."+getAnonId());
+    const data=await res.json();
+    if(Array.isArray(data)&&data.length>0){
+      favs=data.map(r=>r.meal_id);
+      localStorage.setItem("wm_favs",JSON.stringify(favs));
+    }
+  }catch(e){console.log("DB load failed, using localStorage");}
+}
+
 function save(){
   localStorage.setItem("wm_favs",JSON.stringify(favs));
   localStorage.setItem("wm_cooked",JSON.stringify(cooked));
@@ -365,9 +393,10 @@ function renderGrid(){
 }
 
 function toggleFav(id){
+  const isAdding=!favs.includes(id);
   if(favs.includes(id)){favs=favs.filter(x=>x!==id);toast("💔 Removed");}
   else{favs.push(id);toast("❤️ "+MEALS.find(m=>m.id===id).name+" saved!");}
-  save();updateFavCount();renderGrid();
+  save();saveFavToDB(id,isAdding);updateFavCount();renderGrid();
   if(document.getElementById("page-saved").classList.contains("active"))renderSaved();
   if(currentMeal&&currentMeal.id===id)document.getElementById("modalFavBtn").textContent=favs.includes(id)?"❤️":"🤍";
 }
@@ -546,6 +575,7 @@ async function runChef(){
 // INIT — render dishes immediately
 renderGrid();
 updateFavCount();
+loadFavsFromDB().then(()=>{renderGrid();updateFavCount();});
 </script>
 </body>
 </html>
