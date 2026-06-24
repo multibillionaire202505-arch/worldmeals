@@ -7,15 +7,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',system-ui,sans-serif;background:#FAFAF8;color:#1a1a18;overflow-x:hidden}
-nav{background:#1a1a18;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50}
+body{font-family:'Inter',system-ui,sans-serif;background:linear-gradient(180deg,#FFFDF7 0%,#FAFAF8 42%,#F4F1EA 100%);color:#1a1a18;overflow-x:hidden}
+nav{background:rgba(26,26,24,.94);backdrop-filter:blur(16px);padding:14px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;box-shadow:0 10px 30px rgba(0,0,0,.18)}
 .logo{font-size:15px;font-weight:700;color:#fff;display:flex;align-items:center;gap:8px;text-decoration:none}
 .back{font-size:12px;color:#888;text-decoration:none}
 .fav-count{background:#EF4444;color:#fff;border-radius:20px;font-size:11px;padding:2px 8px;font-weight:600;display:none}
-.page{display:none;padding:14px 14px 80px}
+.page{display:none;padding:16px 14px 86px;max-width:1120px;margin:0 auto}
 .page.active{display:block}
 /* FILTERS */
-.search{width:100%;padding:10px 14px;border-radius:10px;border:1px solid #E5E5E0;font-size:14px;background:#fff;margin-bottom:10px;outline:none;font-family:'Inter',system-ui,sans-serif}
+.search{width:100%;padding:14px 16px;border-radius:18px;border:1px solid #E5E0D5;font-size:14px;background:#fff;margin-bottom:12px;outline:none;font-family:'Inter',system-ui,sans-serif;box-shadow:0 8px 22px rgba(42,31,17,.05)}
 .filter-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
 .filter-group label{font-size:10px;color:#888;display:block;margin-bottom:3px}
 .filter-group select{width:100%;padding:7px 8px;border-radius:8px;border:1px solid #E5E5E0;font-size:12px;background:#fff;font-family:'Inter',system-ui,sans-serif}
@@ -24,16 +24,20 @@ nav{background:#1a1a18;padding:12px 16px;display:flex;align-items:center;justify
 .slider-group input[type=range]{width:100%}
 .count{font-size:11px;color:#888;margin-bottom:10px}
 /* GRID */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:10px}
-.card{background:#fff;border-radius:14px;border:1px solid #EBEBEB;overflow:hidden;cursor:pointer;position:relative}
-.card-img{background:#F5F5F0;font-size:42px;display:flex;align-items:center;justify-content:center;height:80px}
-.fav-btn{position:absolute;top:6px;right:6px;background:rgba(255,255,255,0.9);border:none;border-radius:50%;width:26px;height:26px;cursor:pointer;font-size:13px;display:flex;align-items:center;justify-content:center}
-.cooked-badge{position:absolute;top:6px;left:6px;background:#1a1a18;color:#fff;border-radius:20px;font-size:9px;padding:2px 6px}
-.card-body{padding:8px 10px}
-.card-name{font-size:12px;font-weight:600;margin-bottom:2px}
-.card-country{font-size:10px;color:#888;margin-bottom:6px}
-.tags{display:flex;flex-wrap:wrap;gap:3px}
-.tag{font-size:9px;padding:2px 6px;border-radius:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px}
+.card{background:#fff;border-radius:24px;border:1px solid rgba(229,224,213,.9);overflow:hidden;cursor:pointer;position:relative;box-shadow:0 16px 42px rgba(42,31,17,.10);transition:transform .25s ease,box-shadow .25s ease}
+.card:hover{transform:translateY(-5px);box-shadow:0 24px 60px rgba(42,31,17,.16)}
+.card-img{background:#EDE7DC;height:156px;overflow:hidden;position:relative}
+.card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease;filter:saturate(1.06) contrast(1.02)}
+.card:hover .card-img img{transform:scale(1.06)}
+.card-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.34) 100%)}
+.fav-btn{position:absolute;top:10px;right:10px;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.7);border-radius:50%;width:34px;height:34px;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px rgba(0,0,0,.12);z-index:2}
+.cooked-badge{position:absolute;top:10px;left:10px;background:rgba(26,26,24,.88);color:#fff;border-radius:20px;font-size:10px;padding:4px 9px;z-index:2}
+.card-body{padding:13px 14px 15px}
+.card-name{font-size:15px;font-weight:800;margin-bottom:3px;letter-spacing:-.02em}
+.card-country{font-size:11px;color:#7A746B;margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:10px;padding:4px 8px;border-radius:999px;font-weight:700}
 .t-cal{background:#FEF3C7;color:#92400E}
 .t-bud{background:#DCFCE7;color:#166534}
 .t-sp{background:#F5F5F0;color:#555;display:flex;align-items:center;gap:2px}
@@ -42,12 +46,14 @@ nav{background:#1a1a18;padding:12px 16px;display:flex;align-items:center;justify
 /* MODAL */
 .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:100;align-items:flex-end;justify-content:center}
 .overlay.open{display:flex}
-.modal{background:#fff;border-radius:20px 20px 0 0;width:100%;max-width:480px;max-height:90vh;overflow-y:auto}
-.modal-top{background:#F5F5F0;font-size:64px;display:flex;align-items:center;justify-content:center;height:110px;position:relative}
-.btn-close{position:absolute;top:12px;right:12px;background:rgba(0,0,0,0.1);border:none;border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:14px}
-.btn-fav{position:absolute;top:12px;left:12px;background:rgba(255,255,255,0.9);border:none;border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:16px}
-.modal-body{padding:14px 16px 32px}
-.modal-name{font-size:21px;font-weight:700;margin-bottom:2px}
+.modal{background:#fff;border-radius:26px 26px 0 0;width:100%;max-width:560px;max-height:92vh;overflow-y:auto;box-shadow:0 -18px 60px rgba(0,0,0,.28)}
+.modal-top{background:#EDE7DC;height:260px;position:relative;overflow:hidden}
+.modal-top img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.06) contrast(1.03)}
+.modal-top::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.16) 0%,rgba(0,0,0,0) 45%,rgba(0,0,0,.40) 100%)}
+.btn-close{position:absolute;top:14px;right:14px;background:rgba(255,255,255,0.92);border:1px solid rgba(255,255,255,.7);border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:15px;z-index:2;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.btn-fav{position:absolute;top:14px;left:14px;background:rgba(255,255,255,0.92);border:1px solid rgba(255,255,255,.7);border-radius:50%;width:36px;height:36px;cursor:pointer;font-size:17px;z-index:2;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.modal-body{padding:18px 18px 34px}
+.modal-name{font-size:25px;font-weight:800;margin-bottom:3px;letter-spacing:-.03em}
 .modal-meta{font-size:12px;color:#888;margin-bottom:10px}
 .stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px}
 .stat{background:#F5F5F0;border-radius:10px;padding:8px;text-align:center}
@@ -112,12 +118,12 @@ nav{background:#1a1a18;padding:12px 16px;display:flex;align-items:center;justify
 .badge-done{background:#DCFCE7;color:#166534;border-radius:20px;font-size:11px;padding:3px 10px;font-weight:600}
 .btn-explore{background:#F5F5F0;color:#555;border:none;border-radius:20px;font-size:11px;padding:3px 10px;cursor:pointer;font-family:'Inter',system-ui,sans-serif}
 /* CHEF */
-.chef-hero{background:#1a1a18;border-radius:16px;padding:18px;margin-bottom:16px;color:#fff}
+.chef-hero{background:linear-gradient(135deg,rgba(26,26,24,.92),rgba(68,48,26,.86)),url('https://source.unsplash.com/1200x700/?chef,kitchen,cooking');background-size:cover;background-position:center;border-radius:24px;padding:24px;margin-bottom:16px;color:#fff;box-shadow:0 18px 42px rgba(42,31,17,.20);overflow:hidden}
 textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #E5E5E0;font-size:14px;min-height:90px;resize:none;background:#fff;outline:none;font-family:'Inter',system-ui,sans-serif;margin-bottom:10px}
 .btn-chef{width:100%;padding:12px;border-radius:12px;border:none;background:#1a1a18;color:#fff;font-size:14px;font-weight:600;cursor:pointer;margin-bottom:16px;font-family:'Inter',system-ui,sans-serif}
 .btn-chef:disabled{background:#ccc;cursor:not-allowed}
 .chef-card{background:#fff;border-radius:16px;border:1px solid #EBEBEB;overflow:hidden}
-.chef-emoji{background:#F5F5F0;font-size:56px;display:flex;align-items:center;justify-content:center;height:100px}
+.chef-emoji{background:#EDE7DC;height:180px;overflow:hidden}.chef-emoji img{width:100%;height:100%;object-fit:cover;display:block}
 .chef-body{padding:14px}
 .missing-box{background:#FEF3C7;border-radius:10px;padding:10px 12px;margin-bottom:12px}
 /* SAVED */
@@ -131,6 +137,13 @@ textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #E5E5E
 /* TOAST */
 .toast{position:fixed;top:60px;left:50%;transform:translateX(-50%);background:#1a1a18;color:#fff;padding:10px 18px;border-radius:30px;font-size:13px;font-weight:500;z-index:200;white-space:nowrap;opacity:0;transition:opacity 0.2s;pointer-events:none}
 .toast.show{opacity:1}
+
+@media (max-width:520px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .card-img{height:132px}
+  .card-name{font-size:13px}
+  .modal-top{height:230px}
+}
 </style>
 </head>
 <body>
@@ -224,8 +237,8 @@ textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #E5E5E
 <!-- DISH MODAL -->
 <div class="overlay" id="dishOverlay" onclick="if(event.target===this)closeModal()">
   <div class="modal">
-    <div class="modal-top" id="modalEmoji">
-      <span id="modalEmojiText" style="font-size:64px"></span>
+    <div class="modal-top" id="modalHero">
+      <img id="modalImage" src="" alt="">
       <button class="btn-close" onclick="closeModal()">✕</button>
       <button class="btn-fav" id="modalFavBtn" onclick="toggleFavModal()">🤍</button>
     </div>
@@ -269,30 +282,30 @@ textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #E5E5E
 
 <script>
 const MEALS=[
-  {id:1,name:"Butter Chicken",country:"India",region:"Asia",emoji:"🍗",cal:580,budget:8,time:"50 min",spice:3,tags:["dairy","gluten-free-option"],desc:"Tender chicken in a velvety tomato-cream sauce infused with warming spices.",ingredients:["Chicken","Tomatoes","Butter","Heavy cream","Garam masala","Ginger","Garlic"],swaps:{spice:[{from:"Chili powder",to:"Sweet paprika",note:"Same rich color, zero heat"}],dairy:[{from:"Heavy cream",to:"Coconut cream",note:"Adds subtle sweetness"},{from:"Butter",to:"Coconut oil",note:"Keeps richness without dairy"}],vegan:[{from:"Chicken",to:"Chickpeas + cauliflower",note:"Roast before adding to sauce"}]}},
-  {id:2,name:"Sushi",country:"Japan",region:"Asia",emoji:"🍣",cal:320,budget:18,time:"30 min",spice:1,tags:["dairy-free","gluten-free-option"],desc:"Vinegared rice paired with fresh fish and vegetables. Clean, precise Japanese flavors.",ingredients:["Sushi rice","Salmon","Tuna","Nori","Soy sauce","Wasabi","Rice vinegar"],swaps:{spice:[{from:"Wasabi",to:"Cucumber slices",note:"Cool crunch, zero heat"}],gluten:[{from:"Soy sauce",to:"Tamari",note:"Identical flavor, fully GF"}],vegan:[{from:"Salmon/Tuna",to:"Mango + avocado",note:"Tropical fruit sushi"}]}},
-  {id:3,name:"Pad Thai",country:"Thailand",region:"Asia",emoji:"🍜",cal:490,budget:9,time:"20 min",spice:2,tags:["dairy-free","gluten-free-option"],desc:"Stir-fried rice noodles with shrimp, tofu, egg in tangy tamarind sauce.",ingredients:["Rice noodles","Shrimp","Tofu","Eggs","Tamarind paste","Fish sauce","Peanuts"],swaps:{spice:[{from:"Chili flakes",to:"Skip or mild paprika",note:"Full tamarind flavor, no heat"}],vegan:[{from:"Shrimp",to:"Extra firm tofu",note:"Pan-fry until golden first"}]}},
-  {id:4,name:"Pasta Carbonara",country:"Italy",region:"Europe",emoji:"🍝",cal:650,budget:8,time:"20 min",spice:1,tags:["dairy"],desc:"Creamy egg and pecorino sauce with guanciale and black pepper. No cream needed.",ingredients:["Spaghetti","Eggs","Pecorino romano","Guanciale","Black pepper"],swaps:{dairy:[{from:"Pecorino",to:"Nutritional yeast",note:"Cheesy umami without dairy"}],gluten:[{from:"Spaghetti",to:"Rice spaghetti",note:"Cook al dente"}],vegan:[{from:"Eggs",to:"Silken tofu blended",note:"Creates creamy coating"},{from:"Guanciale",to:"Smoked mushrooms",note:"Pan-fry until crisp"}]}},
-  {id:5,name:"Tacos al Pastor",country:"Mexico",region:"Americas",emoji:"🌮",cal:420,budget:5,time:"40 min",spice:3,tags:["dairy-free","gluten-free"],desc:"Marinated pork in corn tortillas with pineapple and cilantro. Street food perfection.",ingredients:["Pork shoulder","Corn tortillas","Pineapple","Achiote paste","Chili peppers","Cilantro"],swaps:{spice:[{from:"Chili peppers",to:"Mild ancho chili",note:"Smoky flavor, minimal heat"}],vegan:[{from:"Pork",to:"King oyster mushrooms",note:"Marinate same way, grill until charred"}]}},
-  {id:6,name:"Bibimbap",country:"South Korea",region:"Asia",emoji:"🥗",cal:480,budget:9,time:"35 min",spice:2,tags:["dairy-free","vegan-option"],desc:"Rice bowl with seasoned vegetables, fried egg, and spicy gochujang. Mix before eating.",ingredients:["Steamed rice","Spinach","Carrots","Mushrooms","Fried egg","Gochujang","Sesame oil"],swaps:{spice:[{from:"Gochujang",to:"Miso + honey",note:"Umami sweetness, zero heat"}],vegan:[{from:"Fried egg",to:"Marinated tofu",note:"Season with soy and sesame"}]}},
-  {id:7,name:"Falafel",country:"Lebanon",region:"Middle East",emoji:"🧆",cal:330,budget:5,time:"25 min",spice:1,tags:["dairy-free","vegan","gluten-free-option"],desc:"Crispy fried chickpea balls with cumin and coriander. Served in pita with tahini.",ingredients:["Chickpeas","Parsley","Cumin","Coriander","Garlic","Tahini","Lemon"],swaps:{gluten:[{from:"Pita bread",to:"Lettuce wraps",note:"Fresh and crunchy"}]}},
-  {id:8,name:"Ceviche",country:"Peru",region:"Americas",emoji:"🦐",cal:220,budget:14,time:"25 min",spice:2,tags:["dairy-free","gluten-free"],desc:"Fresh fish cured in lime juice with red onion and chili. Light and refreshing.",ingredients:["White fish","Lime juice","Red onion","Ají amarillo","Cilantro","Corn"],swaps:{spice:[{from:"Ají amarillo",to:"Yellow bell pepper",note:"Same color, no heat"}],vegan:[{from:"White fish",to:"Hearts of palm",note:"Absorbs lime cure beautifully"}]}},
-  {id:9,name:"Moussaka",country:"Greece",region:"Europe",emoji:"🫕",cal:680,budget:11,time:"1.5 hrs",spice:1,tags:["dairy"],desc:"Layered eggplant and spiced lamb with creamy béchamel baked until golden.",ingredients:["Eggplant","Ground lamb","Tomatoes","Béchamel sauce","Cinnamon","Allspice"],swaps:{dairy:[{from:"Béchamel",to:"Oat milk béchamel",note:"Just as creamy"}],vegan:[{from:"Ground lamb",to:"Green lentils",note:"Season identically"}]}},
-  {id:10,name:"Pho Bo",country:"Vietnam",region:"Asia",emoji:"🍲",cal:380,budget:7,time:"4 hrs",spice:1,tags:["dairy-free","gluten-free-option"],desc:"Clear beef bone broth over rice noodles with fresh herbs and lime.",ingredients:["Beef bones","Rice noodles","Star anise","Cinnamon","Ginger","Basil","Bean sprouts"],swaps:{vegan:[{from:"Beef bones",to:"Mushroom + ginger broth",note:"Roast shiitake for deep umami"},{from:"Fish sauce",to:"Soy sauce + nori",note:"Adds ocean depth"}]}},
-  {id:11,name:"Jollof Rice",country:"Nigeria",region:"Africa",emoji:"🍚",cal:450,budget:5,time:"45 min",spice:2,tags:["dairy-free","gluten-free","vegan"],desc:"One-pot West African rice in tomato and pepper sauce. The centerpiece of any celebration.",ingredients:["Long grain rice","Tomatoes","Red bell pepper","Scotch bonnet","Onion","Chicken stock"],swaps:{spice:[{from:"Scotch bonnet",to:"Red bell pepper only",note:"All color, no fire"}],vegan:[{from:"Chicken stock",to:"Vegetable stock",note:"Add smoked paprika for depth"}]}},
-  {id:12,name:"Tagine",country:"Morocco",region:"Africa",emoji:"🍖",cal:610,budget:13,time:"2 hrs",spice:2,tags:["dairy-free","gluten-free"],desc:"Slow-cooked lamb with preserved lemon and olives in aromatic spices.",ingredients:["Lamb shoulder","Preserved lemon","Green olives","Cumin","Turmeric","Saffron","Honey"],swaps:{spice:[{from:"Cumin + ginger",to:"Turmeric + cinnamon",note:"Warm and fragrant, minimal heat"}],vegan:[{from:"Lamb",to:"Chickpeas + root vegetables",note:"Squash absorbs spice beautifully"}]}},
-  {id:13,name:"Peking Duck",country:"China",region:"Asia",emoji:"🦆",cal:890,budget:35,time:"2 days",spice:1,tags:["dairy-free"],desc:"Imperial roast duck with crispy lacquered skin in thin pancakes with hoisin.",ingredients:["Whole duck","Maltose","Soy sauce","Five spice","Thin pancakes","Scallion","Hoisin sauce"],swaps:{gluten:[{from:"Thin pancakes",to:"Rice paper wrappers",note:"Soak 10 seconds"}],vegan:[{from:"Duck",to:"Whole roasted celeriac",note:"Glaze identically"}]}},
-  {id:14,name:"Bratwurst",country:"Germany",region:"Europe",emoji:"🌭",cal:540,budget:6,time:"20 min",spice:1,tags:["dairy-free","gluten-free-option"],desc:"Juicy pork and veal sausage grilled with mustard and sauerkraut.",ingredients:["Pork + veal sausage","Bun","Mustard","Sauerkraut","Caraway seeds"],swaps:{gluten:[{from:"Crusty bun",to:"GF bun or lettuce wrap",note:"Toast the GF bun well"}],vegan:[{from:"Bratwurst",to:"Beyond sausage",note:"Grill on high heat"}]}},
-  {id:15,name:"Empanadas",country:"Argentina",region:"Americas",emoji:"🥟",cal:390,budget:5,time:"1 hr",spice:1,tags:["dairy-free-option"],desc:"Flaky pastry pockets stuffed with spiced ground beef, olives, and egg.",ingredients:["Flour dough","Ground beef","Green olives","Hard-boiled egg","Cumin","Paprika"],swaps:{gluten:[{from:"Wheat dough",to:"Cassava flour dough",note:"Roll slightly thicker"}],vegan:[{from:"Ground beef",to:"Black beans + corn",note:"Season same way"}]}},
-  {id:16,name:"Shawarma",country:"Lebanon",region:"Middle East",emoji:"🥙",cal:560,budget:8,time:"1 hr",spice:2,tags:["dairy-free-option","gluten-free-option"],desc:"Marinated meat on a rotating spit, wrapped in flatbread with garlic sauce.",ingredients:["Lamb or chicken","Flatbread","Garlic sauce","Turmeric","Cinnamon","Pickles"],swaps:{spice:[{from:"Cayenne",to:"Extra cumin + coriander",note:"Earthy and fragrant, no heat"}],dairy:[{from:"Garlic sauce",to:"Hummus or tahini",note:"Equally rich and dairy-free"}]}},
-  {id:17,name:"Kimchi Jjigae",country:"South Korea",region:"Asia",emoji:"🥘",cal:350,budget:6,time:"30 min",spice:4,tags:["dairy-free","gluten-free-option"],desc:"Fiery kimchi stew with pork belly and silken tofu. Deeply savory Korean comfort food.",ingredients:["Kimchi","Pork belly","Silken tofu","Gochugaru","Garlic","Sesame oil"],swaps:{spice:[{from:"Gochugaru",to:"Mild kimchi, no extra chili",note:"All tang, no fire"},{from:"Regular kimchi",to:"White kimchi",note:"Zero chili, full flavor"}],vegan:[{from:"Pork belly",to:"Mushrooms + firm tofu",note:"Use extra sesame oil"}]}},
-  {id:18,name:"Fish & Chips",country:"United Kingdom",region:"Europe",emoji:"🐟",cal:900,budget:10,time:"30 min",spice:1,tags:["dairy-free-option"],desc:"Beer-battered cod fried golden with thick-cut chips and mushy peas.",ingredients:["Cod fillet","Flour","Beer","Potatoes","Mushy peas","Malt vinegar"],swaps:{gluten:[{from:"Wheat flour + beer batter",to:"Rice flour + sparkling water",note:"Actually crispier"}],vegan:[{from:"Cod",to:"Banana blossom",note:"Pull apart like fish, batter the same way"}]}},
-  {id:19,name:"Gazpacho",country:"Spain",region:"Europe",emoji:"🍅",cal:160,budget:4,time:"15 min",spice:1,tags:["dairy-free","vegan","gluten-free"],desc:"Chilled blended raw tomato soup. Andalusia's answer to summer heat.",ingredients:["Ripe tomatoes","Cucumber","Red bell pepper","Garlic","Olive oil","Sherry vinegar"],swaps:{gluten:[{from:"Stale bread",to:"Omit or GF bread",note:"Blend an extra tomato for body"}]}},
-  {id:20,name:"Injera & Doro Wat",country:"Ethiopia",region:"Africa",emoji:"🫓",cal:620,budget:10,time:"2 hrs",spice:3,tags:["dairy-free","vegan-option"],desc:"Tangy sourdough flatbread with slow-cooked spicy chicken stew. Eaten communally by hand.",ingredients:["Teff flour","Chicken legs","Berbere spice","Onion","Niter kibbeh","Hard-boiled eggs"],swaps:{spice:[{from:"Berbere blend",to:"Turmeric + coriander",note:"All earthiness, fraction of the heat"}],vegan:[{from:"Chicken",to:"Lentils (misir wat)",note:"Naturally vegan and iconic"}]}},
-  {id:21,name:"Margherita Pizza",country:"Italy",region:"Europe",emoji:"🍕",cal:700,budget:7,time:"25 min",spice:1,tags:["vegan-option"],desc:"Thin Neapolitan crust with San Marzano tomatoes, buffalo mozzarella, and fresh basil.",ingredients:["00 flour","San Marzano tomatoes","Buffalo mozzarella","Fresh basil","Olive oil"],swaps:{dairy:[{from:"Buffalo mozzarella",to:"Cashew mozzarella",note:"Soak cashews overnight"}],gluten:[{from:"00 flour dough",to:"Cauliflower crust",note:"Press very dry before baking"}]}},
-  {id:22,name:"Croissant",country:"France",region:"Europe",emoji:"🥐",cal:310,budget:4,time:"3 hrs",spice:1,tags:["vegan-option"],desc:"Buttery, flaky pastry with hundreds of paper-thin layers. Best eaten warm.",ingredients:["Bread flour","European butter","Milk","Yeast","Sugar","Eggs"],swaps:{dairy:[{from:"European butter",to:"Vegan block butter 80%+ fat",note:"Flora Plant or Naturli work best"},{from:"Milk",to:"Full-fat oat milk",note:"Best for lamination"}]}},
-  {id:23,name:"Boeuf Bourguignon",country:"France",region:"Europe",emoji:"🥩",cal:720,budget:20,time:"3 hrs",spice:1,tags:["dairy","gluten-free-option"],desc:"Slow-braised beef in Burgundy wine with pearl onions, mushrooms, and lardons.",ingredients:["Beef chuck","Red Burgundy wine","Pearl onions","Mushrooms","Lardons","Carrots","Thyme"],swaps:{gluten:[{from:"Flour (thickening)",to:"Cornstarch slurry at end",note:"1 tbsp cornstarch in cold water"}],vegan:[{from:"Beef",to:"Portobello mushrooms + lentils",note:"Same wine and technique"}]}},
-  {id:24,name:"Ramen",country:"Japan",region:"Asia",emoji:"🍜",cal:550,budget:12,time:"45 min",spice:1,tags:["dairy-free"],desc:"Rich miso broth loaded with pork belly, soft-boiled egg, and bamboo shoots.",ingredients:["Ramen noodles","Pork belly","Miso paste","Soy sauce","Soft-boiled egg","Nori","Bamboo shoots"],swaps:{gluten:[{from:"Ramen noodles",to:"Rice ramen noodles",note:"Available in Asian grocery stores"}],vegan:[{from:"Pork belly",to:"Braised king oyster mushrooms",note:"Braise in soy + mirin until tender"},{from:"Soft-boiled egg",to:"Marinated tofu cubes",note:"Soy + mirin overnight"}]}}
+  {id:1,name:"Butter Chicken",image:"https://source.unsplash.com/900x650/?butter-chicken,indian-food",country:"India",region:"Asia",emoji:"🍗",cal:580,budget:8,time:"50 min",spice:3,tags:["dairy","gluten-free-option"],desc:"Tender chicken in a velvety tomato-cream sauce infused with warming spices.",ingredients:["Chicken","Tomatoes","Butter","Heavy cream","Garam masala","Ginger","Garlic"],swaps:{spice:[{from:"Chili powder",to:"Sweet paprika",note:"Same rich color, zero heat"}],dairy:[{from:"Heavy cream",to:"Coconut cream",note:"Adds subtle sweetness"},{from:"Butter",to:"Coconut oil",note:"Keeps richness without dairy"}],vegan:[{from:"Chicken",to:"Chickpeas + cauliflower",note:"Roast before adding to sauce"}]}},
+  {id:2,name:"Sushi",image:"https://source.unsplash.com/900x650/?sushi,japanese-food",country:"Japan",region:"Asia",emoji:"🍣",cal:320,budget:18,time:"30 min",spice:1,tags:["dairy-free","gluten-free-option"],desc:"Vinegared rice paired with fresh fish and vegetables. Clean, precise Japanese flavors.",ingredients:["Sushi rice","Salmon","Tuna","Nori","Soy sauce","Wasabi","Rice vinegar"],swaps:{spice:[{from:"Wasabi",to:"Cucumber slices",note:"Cool crunch, zero heat"}],gluten:[{from:"Soy sauce",to:"Tamari",note:"Identical flavor, fully GF"}],vegan:[{from:"Salmon/Tuna",to:"Mango + avocado",note:"Tropical fruit sushi"}]}},
+  {id:3,name:"Pad Thai",image:"https://source.unsplash.com/900x650/?pad-thai,thai-food",country:"Thailand",region:"Asia",emoji:"🍜",cal:490,budget:9,time:"20 min",spice:2,tags:["dairy-free","gluten-free-option"],desc:"Stir-fried rice noodles with shrimp, tofu, egg in tangy tamarind sauce.",ingredients:["Rice noodles","Shrimp","Tofu","Eggs","Tamarind paste","Fish sauce","Peanuts"],swaps:{spice:[{from:"Chili flakes",to:"Skip or mild paprika",note:"Full tamarind flavor, no heat"}],vegan:[{from:"Shrimp",to:"Extra firm tofu",note:"Pan-fry until golden first"}]}},
+  {id:4,name:"Pasta Carbonara",image:"https://source.unsplash.com/900x650/?carbonara,pasta",country:"Italy",region:"Europe",emoji:"🍝",cal:650,budget:8,time:"20 min",spice:1,tags:["dairy"],desc:"Creamy egg and pecorino sauce with guanciale and black pepper. No cream needed.",ingredients:["Spaghetti","Eggs","Pecorino romano","Guanciale","Black pepper"],swaps:{dairy:[{from:"Pecorino",to:"Nutritional yeast",note:"Cheesy umami without dairy"}],gluten:[{from:"Spaghetti",to:"Rice spaghetti",note:"Cook al dente"}],vegan:[{from:"Eggs",to:"Silken tofu blended",note:"Creates creamy coating"},{from:"Guanciale",to:"Smoked mushrooms",note:"Pan-fry until crisp"}]}},
+  {id:5,name:"Tacos al Pastor",image:"https://source.unsplash.com/900x650/?tacos-al-pastor,mexican-food",country:"Mexico",region:"Americas",emoji:"🌮",cal:420,budget:5,time:"40 min",spice:3,tags:["dairy-free","gluten-free"],desc:"Marinated pork in corn tortillas with pineapple and cilantro. Street food perfection.",ingredients:["Pork shoulder","Corn tortillas","Pineapple","Achiote paste","Chili peppers","Cilantro"],swaps:{spice:[{from:"Chili peppers",to:"Mild ancho chili",note:"Smoky flavor, minimal heat"}],vegan:[{from:"Pork",to:"King oyster mushrooms",note:"Marinate same way, grill until charred"}]}},
+  {id:6,name:"Bibimbap",image:"https://source.unsplash.com/900x650/?bibimbap,korean-food",country:"South Korea",region:"Asia",emoji:"🥗",cal:480,budget:9,time:"35 min",spice:2,tags:["dairy-free","vegan-option"],desc:"Rice bowl with seasoned vegetables, fried egg, and spicy gochujang. Mix before eating.",ingredients:["Steamed rice","Spinach","Carrots","Mushrooms","Fried egg","Gochujang","Sesame oil"],swaps:{spice:[{from:"Gochujang",to:"Miso + honey",note:"Umami sweetness, zero heat"}],vegan:[{from:"Fried egg",to:"Marinated tofu",note:"Season with soy and sesame"}]}},
+  {id:7,name:"Falafel",image:"https://source.unsplash.com/900x650/?falafel,lebanese-food",country:"Lebanon",region:"Middle East",emoji:"🧆",cal:330,budget:5,time:"25 min",spice:1,tags:["dairy-free","vegan","gluten-free-option"],desc:"Crispy fried chickpea balls with cumin and coriander. Served in pita with tahini.",ingredients:["Chickpeas","Parsley","Cumin","Coriander","Garlic","Tahini","Lemon"],swaps:{gluten:[{from:"Pita bread",to:"Lettuce wraps",note:"Fresh and crunchy"}]}},
+  {id:8,name:"Ceviche",image:"https://source.unsplash.com/900x650/?ceviche,peruvian-food",country:"Peru",region:"Americas",emoji:"🦐",cal:220,budget:14,time:"25 min",spice:2,tags:["dairy-free","gluten-free"],desc:"Fresh fish cured in lime juice with red onion and chili. Light and refreshing.",ingredients:["White fish","Lime juice","Red onion","Ají amarillo","Cilantro","Corn"],swaps:{spice:[{from:"Ají amarillo",to:"Yellow bell pepper",note:"Same color, no heat"}],vegan:[{from:"White fish",to:"Hearts of palm",note:"Absorbs lime cure beautifully"}]}},
+  {id:9,name:"Moussaka",image:"https://source.unsplash.com/900x650/?moussaka,greek-food",country:"Greece",region:"Europe",emoji:"🫕",cal:680,budget:11,time:"1.5 hrs",spice:1,tags:["dairy"],desc:"Layered eggplant and spiced lamb with creamy béchamel baked until golden.",ingredients:["Eggplant","Ground lamb","Tomatoes","Béchamel sauce","Cinnamon","Allspice"],swaps:{dairy:[{from:"Béchamel",to:"Oat milk béchamel",note:"Just as creamy"}],vegan:[{from:"Ground lamb",to:"Green lentils",note:"Season identically"}]}},
+  {id:10,name:"Pho Bo",image:"https://source.unsplash.com/900x650/?pho,vietnamese-food",country:"Vietnam",region:"Asia",emoji:"🍲",cal:380,budget:7,time:"4 hrs",spice:1,tags:["dairy-free","gluten-free-option"],desc:"Clear beef bone broth over rice noodles with fresh herbs and lime.",ingredients:["Beef bones","Rice noodles","Star anise","Cinnamon","Ginger","Basil","Bean sprouts"],swaps:{vegan:[{from:"Beef bones",to:"Mushroom + ginger broth",note:"Roast shiitake for deep umami"},{from:"Fish sauce",to:"Soy sauce + nori",note:"Adds ocean depth"}]}},
+  {id:11,name:"Jollof Rice",image:"https://source.unsplash.com/900x650/?jollof-rice,west-african-food",country:"Nigeria",region:"Africa",emoji:"🍚",cal:450,budget:5,time:"45 min",spice:2,tags:["dairy-free","gluten-free","vegan"],desc:"One-pot West African rice in tomato and pepper sauce. The centerpiece of any celebration.",ingredients:["Long grain rice","Tomatoes","Red bell pepper","Scotch bonnet","Onion","Chicken stock"],swaps:{spice:[{from:"Scotch bonnet",to:"Red bell pepper only",note:"All color, no fire"}],vegan:[{from:"Chicken stock",to:"Vegetable stock",note:"Add smoked paprika for depth"}]}},
+  {id:12,name:"Tagine",image:"https://source.unsplash.com/900x650/?moroccan-tagine",country:"Morocco",region:"Africa",emoji:"🍖",cal:610,budget:13,time:"2 hrs",spice:2,tags:["dairy-free","gluten-free"],desc:"Slow-cooked lamb with preserved lemon and olives in aromatic spices.",ingredients:["Lamb shoulder","Preserved lemon","Green olives","Cumin","Turmeric","Saffron","Honey"],swaps:{spice:[{from:"Cumin + ginger",to:"Turmeric + cinnamon",note:"Warm and fragrant, minimal heat"}],vegan:[{from:"Lamb",to:"Chickpeas + root vegetables",note:"Squash absorbs spice beautifully"}]}},
+  {id:13,name:"Peking Duck",image:"https://source.unsplash.com/900x650/?peking-duck,chinese-food",country:"China",region:"Asia",emoji:"🦆",cal:890,budget:35,time:"2 days",spice:1,tags:["dairy-free"],desc:"Imperial roast duck with crispy lacquered skin in thin pancakes with hoisin.",ingredients:["Whole duck","Maltose","Soy sauce","Five spice","Thin pancakes","Scallion","Hoisin sauce"],swaps:{gluten:[{from:"Thin pancakes",to:"Rice paper wrappers",note:"Soak 10 seconds"}],vegan:[{from:"Duck",to:"Whole roasted celeriac",note:"Glaze identically"}]}},
+  {id:14,name:"Bratwurst",image:"https://source.unsplash.com/900x650/?bratwurst,german-food",country:"Germany",region:"Europe",emoji:"🌭",cal:540,budget:6,time:"20 min",spice:1,tags:["dairy-free","gluten-free-option"],desc:"Juicy pork and veal sausage grilled with mustard and sauerkraut.",ingredients:["Pork + veal sausage","Bun","Mustard","Sauerkraut","Caraway seeds"],swaps:{gluten:[{from:"Crusty bun",to:"GF bun or lettuce wrap",note:"Toast the GF bun well"}],vegan:[{from:"Bratwurst",to:"Beyond sausage",note:"Grill on high heat"}]}},
+  {id:15,name:"Empanadas",image:"https://source.unsplash.com/900x650/?empanadas,argentinian-food",country:"Argentina",region:"Americas",emoji:"🥟",cal:390,budget:5,time:"1 hr",spice:1,tags:["dairy-free-option"],desc:"Flaky pastry pockets stuffed with spiced ground beef, olives, and egg.",ingredients:["Flour dough","Ground beef","Green olives","Hard-boiled egg","Cumin","Paprika"],swaps:{gluten:[{from:"Wheat dough",to:"Cassava flour dough",note:"Roll slightly thicker"}],vegan:[{from:"Ground beef",to:"Black beans + corn",note:"Season same way"}]}},
+  {id:16,name:"Shawarma",image:"https://source.unsplash.com/900x650/?shawarma,lebanese-food",country:"Lebanon",region:"Middle East",emoji:"🥙",cal:560,budget:8,time:"1 hr",spice:2,tags:["dairy-free-option","gluten-free-option"],desc:"Marinated meat on a rotating spit, wrapped in flatbread with garlic sauce.",ingredients:["Lamb or chicken","Flatbread","Garlic sauce","Turmeric","Cinnamon","Pickles"],swaps:{spice:[{from:"Cayenne",to:"Extra cumin + coriander",note:"Earthy and fragrant, no heat"}],dairy:[{from:"Garlic sauce",to:"Hummus or tahini",note:"Equally rich and dairy-free"}]}},
+  {id:17,name:"Kimchi Jjigae",image:"https://source.unsplash.com/900x650/?kimchi-jjigae,korean-stew",country:"South Korea",region:"Asia",emoji:"🥘",cal:350,budget:6,time:"30 min",spice:4,tags:["dairy-free","gluten-free-option"],desc:"Fiery kimchi stew with pork belly and silken tofu. Deeply savory Korean comfort food.",ingredients:["Kimchi","Pork belly","Silken tofu","Gochugaru","Garlic","Sesame oil"],swaps:{spice:[{from:"Gochugaru",to:"Mild kimchi, no extra chili",note:"All tang, no fire"},{from:"Regular kimchi",to:"White kimchi",note:"Zero chili, full flavor"}],vegan:[{from:"Pork belly",to:"Mushrooms + firm tofu",note:"Use extra sesame oil"}]}},
+  {id:18,name:"Fish & Chips",image:"https://source.unsplash.com/900x650/?fish-and-chips",country:"United Kingdom",region:"Europe",emoji:"🐟",cal:900,budget:10,time:"30 min",spice:1,tags:["dairy-free-option"],desc:"Beer-battered cod fried golden with thick-cut chips and mushy peas.",ingredients:["Cod fillet","Flour","Beer","Potatoes","Mushy peas","Malt vinegar"],swaps:{gluten:[{from:"Wheat flour + beer batter",to:"Rice flour + sparkling water",note:"Actually crispier"}],vegan:[{from:"Cod",to:"Banana blossom",note:"Pull apart like fish, batter the same way"}]}},
+  {id:19,name:"Gazpacho",image:"https://source.unsplash.com/900x650/?gazpacho,spanish-food",country:"Spain",region:"Europe",emoji:"🍅",cal:160,budget:4,time:"15 min",spice:1,tags:["dairy-free","vegan","gluten-free"],desc:"Chilled blended raw tomato soup. Andalusia's answer to summer heat.",ingredients:["Ripe tomatoes","Cucumber","Red bell pepper","Garlic","Olive oil","Sherry vinegar"],swaps:{gluten:[{from:"Stale bread",to:"Omit or GF bread",note:"Blend an extra tomato for body"}]}},
+  {id:20,name:"Injera & Doro Wat",image:"https://source.unsplash.com/900x650/?ethiopian-food,doro-wat",country:"Ethiopia",region:"Africa",emoji:"🫓",cal:620,budget:10,time:"2 hrs",spice:3,tags:["dairy-free","vegan-option"],desc:"Tangy sourdough flatbread with slow-cooked spicy chicken stew. Eaten communally by hand.",ingredients:["Teff flour","Chicken legs","Berbere spice","Onion","Niter kibbeh","Hard-boiled eggs"],swaps:{spice:[{from:"Berbere blend",to:"Turmeric + coriander",note:"All earthiness, fraction of the heat"}],vegan:[{from:"Chicken",to:"Lentils (misir wat)",note:"Naturally vegan and iconic"}]}},
+  {id:21,name:"Margherita Pizza",image:"https://source.unsplash.com/900x650/?margherita-pizza",country:"Italy",region:"Europe",emoji:"🍕",cal:700,budget:7,time:"25 min",spice:1,tags:["vegan-option"],desc:"Thin Neapolitan crust with San Marzano tomatoes, buffalo mozzarella, and fresh basil.",ingredients:["00 flour","San Marzano tomatoes","Buffalo mozzarella","Fresh basil","Olive oil"],swaps:{dairy:[{from:"Buffalo mozzarella",to:"Cashew mozzarella",note:"Soak cashews overnight"}],gluten:[{from:"00 flour dough",to:"Cauliflower crust",note:"Press very dry before baking"}]}},
+  {id:22,name:"Croissant",image:"https://source.unsplash.com/900x650/?croissant,french-bakery",country:"France",region:"Europe",emoji:"🥐",cal:310,budget:4,time:"3 hrs",spice:1,tags:["vegan-option"],desc:"Buttery, flaky pastry with hundreds of paper-thin layers. Best eaten warm.",ingredients:["Bread flour","European butter","Milk","Yeast","Sugar","Eggs"],swaps:{dairy:[{from:"European butter",to:"Vegan block butter 80%+ fat",note:"Flora Plant or Naturli work best"},{from:"Milk",to:"Full-fat oat milk",note:"Best for lamination"}]}},
+  {id:23,name:"Boeuf Bourguignon",image:"https://source.unsplash.com/900x650/?beef-bourguignon,french-food",country:"France",region:"Europe",emoji:"🥩",cal:720,budget:20,time:"3 hrs",spice:1,tags:["dairy","gluten-free-option"],desc:"Slow-braised beef in Burgundy wine with pearl onions, mushrooms, and lardons.",ingredients:["Beef chuck","Red Burgundy wine","Pearl onions","Mushrooms","Lardons","Carrots","Thyme"],swaps:{gluten:[{from:"Flour (thickening)",to:"Cornstarch slurry at end",note:"1 tbsp cornstarch in cold water"}],vegan:[{from:"Beef",to:"Portobello mushrooms + lentils",note:"Same wine and technique"}]}},
+  {id:24,name:"Ramen",image:"https://source.unsplash.com/900x650/?ramen,japanese-food",country:"Japan",region:"Asia",emoji:"🍜",cal:550,budget:12,time:"45 min",spice:1,tags:["dairy-free"],desc:"Rich miso broth loaded with pork belly, soft-boiled egg, and bamboo shoots.",ingredients:["Ramen noodles","Pork belly","Miso paste","Soy sauce","Soft-boiled egg","Nori","Bamboo shoots"],swaps:{gluten:[{from:"Ramen noodles",to:"Rice ramen noodles",note:"Available in Asian grocery stores"}],vegan:[{from:"Pork belly",to:"Braised king oyster mushrooms",note:"Braise in soy + mirin until tender"},{from:"Soft-boiled egg",to:"Marinated tofu cubes",note:"Soy + mirin overnight"}]}}
 ];
 
 const DAYS=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
@@ -377,7 +390,7 @@ function renderGrid(){
 
   g.innerHTML=filtered.map(m=>`
     <div class="card" onclick="openModal(${m.id})">
-      <div class="card-img">${m.emoji}</div>
+      <div class="card-img"><img src="${m.image}" alt="${m.name}" loading="lazy" onerror="this.style.display='none';this.parentElement.textContent='${m.emoji}'"></div>
       <button class="fav-btn" onclick="event.stopPropagation();toggleFav(${m.id})">${favs.includes(m.id)?"❤️":"🤍"}</button>
       ${cooked.includes(m.id)?'<div class="cooked-badge">✓ Cooked</div>':""}
       <div class="card-body">
@@ -409,7 +422,8 @@ function updateFavCount(){
 function openModal(id){
   const m=MEALS.find(x=>x.id===id);
   currentMeal=m;activeSwap=null;
-  document.getElementById("modalEmojiText").textContent=m.emoji;
+  document.getElementById("modalImage").src=m.image;
+  document.getElementById("modalImage").alt=m.name;
   document.getElementById("modalFavBtn").textContent=favs.includes(m.id)?"❤️":"🤍";
   document.getElementById("modalName").textContent=m.name;
   document.getElementById("modalMeta").textContent="📍 "+m.country+" · "+m.region;
@@ -509,7 +523,7 @@ function renderPlanner(){
   document.getElementById("weekBud").textContent="$"+wBud;
   document.getElementById("plannerDays").innerHTML=DAYS.map(day=>{
     const m=plan[day]?MEALS.find(x=>x.id===plan[day]):null;
-    return `<div class="day-row"><div class="day-lbl">${day}</div>${m?`<span style="font-size:22px">${m.emoji}</span><div class="day-info"><div class="day-name">${m.name}</div><div class="day-sub">📍 ${m.country} · ${m.cal} kcal · $${m.budget}</div></div><button class="btn-clear" onclick="clearDay('${day}')">✕</button>`:`<div class="day-empty">No meal planned</div><button class="btn-add" onclick="openPicker('${day}')">+ Add dish</button>`}</div>`;
+    return `<div class="day-row"><div class="day-lbl">${day}</div>${m?`<span style="width:46px;height:46px;border-radius:14px;overflow:hidden;display:inline-flex;flex-shrink:0"><img src="${m.image}" alt="${m.name}" style="width:100%;height:100%;object-fit:cover"></span><div class="day-info"><div class="day-name">${m.name}</div><div class="day-sub">📍 ${m.country} · ${m.cal} kcal · $${m.budget}</div></div><button class="btn-clear" onclick="clearDay('${day}')">✕</button>`:`<div class="day-empty">No meal planned</div><button class="btn-add" onclick="openPicker('${day}')">+ Add dish</button>`}</div>`;
   }).join("");
 }
 
@@ -518,7 +532,7 @@ function clearDay(day){delete plan[day];save();renderPlanner();}
 function openPicker(day){
   pickerDay=day;
   document.getElementById("pickerTitle").textContent="Choose a dish for "+day;
-  document.getElementById("pickerList").innerHTML=MEALS.map(m=>`<div class="picker-item" onclick="assignDay('${day}',${m.id})"><span style="font-size:24px">${m.emoji}</span><div><div style="font-size:13px;font-weight:600">${m.name}</div><div style="font-size:11px;color:#888">📍 ${m.country} · ${m.cal} kcal · $${m.budget}</div></div></div>`).join("");
+  document.getElementById("pickerList").innerHTML=MEALS.map(m=>`<div class="picker-item" onclick="assignDay('${day}',${m.id})"><span style="width:48px;height:48px;border-radius:14px;overflow:hidden;display:inline-flex;flex-shrink:0"><img src="${m.image}" alt="${m.name}" style="width:100%;height:100%;object-fit:cover"></span><div><div style="font-size:13px;font-weight:600">${m.name}</div><div style="font-size:11px;color:#888">📍 ${m.country} · ${m.cal} kcal · $${m.budget}</div></div></div>`).join("");
   document.getElementById("pickerOverlay").classList.add("open");
 }
 
@@ -542,7 +556,7 @@ function renderTour(){
   document.getElementById("tourList").innerHTML=countries.map(c=>{
     const dishes=MEALS.filter(m=>m.country===c);
     const isDone=done.includes(c);
-    return `<div class="country-row${isDone?" done":""}"><span style="font-size:24px">${dishes[0].emoji}</span><div style="flex:1"><div style="font-size:13px;font-weight:600;color:${isDone?"#166534":"#1a1a18"}">${c}</div><div style="font-size:11px;color:#888">${dishes.length} dish${dishes.length>1?"es":""}</div></div>${isDone?'<div class="badge-done">✓ Done</div>':`<button class="btn-explore" onclick="showPage('browse')">Explore →</button>`}</div>`;
+    return `<div class="country-row${isDone?" done":""}"><span style="width:46px;height:46px;border-radius:14px;overflow:hidden;display:inline-flex;flex-shrink:0"><img src="${dishes[0].image}" alt="${c}" style="width:100%;height:100%;object-fit:cover"></span><div style="flex:1"><div style="font-size:13px;font-weight:600;color:${isDone?"#166534":"#1a1a18"}">${c}</div><div style="font-size:11px;color:#888">${dishes.length} dish${dishes.length>1?"es":""}</div></div>${isDone?'<div class="badge-done">✓ Done</div>':`<button class="btn-explore" onclick="showPage('browse')">Explore →</button>`}</div>`;
   }).join("");
 }
 
@@ -553,7 +567,7 @@ function renderSaved(){
     el.innerHTML='<div class="saved-empty"><div style="font-size:40px;margin-bottom:12px">🤍</div><div style="font-size:14px;color:#888;margin-bottom:6px">No saved dishes yet</div><div style="font-size:12px">Tap the heart on any dish to save it here</div><button onclick="showPage(\'browse\')" style="margin-top:16px;padding:10px 20px;border-radius:20px;background:#1a1a18;color:#fff;border:none;font-size:13px;cursor:pointer;font-family:Inter,system-ui,sans-serif">Browse dishes →</button></div>';
     return;
   }
-  el.innerHTML='<div class="grid">'+saved.map(m=>`<div class="card" onclick="openModal(${m.id})"><div class="card-img">${m.emoji}</div><button class="fav-btn" onclick="event.stopPropagation();toggleFav(${m.id})">❤️</button><div class="card-body"><div class="card-name">${m.name}</div><div class="card-country">📍 ${m.country}</div><div class="tags"><span class="tag t-cal">${m.cal} kcal</span><span class="tag t-bud">$${m.budget}</span></div></div></div>`).join("")+'</div>';
+  el.innerHTML='<div class="grid">'+saved.map(m=>`<div class="card" onclick="openModal(${m.id})"><div class="card-img"><img src="${m.image}" alt="${m.name}" loading="lazy"></div><button class="fav-btn" onclick="event.stopPropagation();toggleFav(${m.id})">❤️</button><div class="card-body"><div class="card-name">${m.name}</div><div class="card-country">📍 ${m.country}</div><div class="tags"><span class="tag t-cal">${m.cal} kcal</span><span class="tag t-bud">$${m.budget}</span></div></div></div>`).join("")+'</div>';
 }
 
 async function runChef(){
@@ -567,7 +581,7 @@ async function runChef(){
     const data=await res.json();
     const text=data.content.find(b=>b.type==="text")?.text||"";
     const r=JSON.parse(text.replace(/```json|```/g,"").trim());
-    document.getElementById("chefResult").innerHTML=`<div class="chef-card"><div class="chef-emoji">${r.emoji}</div><div class="chef-body"><div style="font-size:20px;font-weight:700;margin-bottom:2px">${r.name}</div><div style="font-size:12px;color:#888;margin-bottom:10px">📍 ${r.country} · ⏱ ${r.cookTime} · 🔥 ${r.calories} kcal</div><div style="font-size:13px;color:#555;line-height:1.6;margin-bottom:12px">${r.description}</div>${r.missingIngredients?.length?`<div class="missing-box"><div style="font-size:10px;font-weight:600;color:#92400E;margin-bottom:3px">YOU'LL ALSO NEED</div><div style="font-size:12px;color:#92400E">${r.missingIngredients.join(", ")}</div></div>`:""}<div style="font-size:10px;font-weight:600;color:#888;letter-spacing:0.05em;margin-bottom:8px">STEPS</div>${r.steps?.map((s,i)=>`<div class="step-row"><div class="step-num">${i+1}</div><div class="step-text">${s}</div></div>`).join("")}${r.tip?`<div class="tip-box"><div style="font-size:10px;font-weight:600;color:#166534;margin-bottom:2px">💡 TIP</div><div style="font-size:12px;color:#166534">${r.tip}</div></div>`:""}</div></div>`;
+    document.getElementById("chefResult").innerHTML=`<div class="chef-card"><div class="chef-emoji"><img src="https://source.unsplash.com/900x650/?${encodeURIComponent(r.name+' '+r.country+' food')}" alt="${r.name}" onerror="this.parentElement.textContent='${r.emoji}'"></div><div class="chef-body"><div style="font-size:20px;font-weight:700;margin-bottom:2px">${r.name}</div><div style="font-size:12px;color:#888;margin-bottom:10px">📍 ${r.country} · ⏱ ${r.cookTime} · 🔥 ${r.calories} kcal</div><div style="font-size:13px;color:#555;line-height:1.6;margin-bottom:12px">${r.description}</div>${r.missingIngredients?.length?`<div class="missing-box"><div style="font-size:10px;font-weight:600;color:#92400E;margin-bottom:3px">YOU'LL ALSO NEED</div><div style="font-size:12px;color:#92400E">${r.missingIngredients.join(", ")}</div></div>`:""}<div style="font-size:10px;font-weight:600;color:#888;letter-spacing:0.05em;margin-bottom:8px">STEPS</div>${r.steps?.map((s,i)=>`<div class="step-row"><div class="step-num">${i+1}</div><div class="step-text">${s}</div></div>`).join("")}${r.tip?`<div class="tip-box"><div style="font-size:10px;font-weight:600;color:#166534;margin-bottom:2px">💡 TIP</div><div style="font-size:12px;color:#166534">${r.tip}</div></div>`:""}</div></div>`;
   }catch(e){document.getElementById("chefResult").innerHTML='<div style="padding:12px;background:#FEE2E2;border-radius:10px;color:#991B1B;font-size:13px">Couldn\'t find a dish — try again!</div>';}
   btn.disabled=false;btn.textContent="✨ Find me a world dish";
 }
