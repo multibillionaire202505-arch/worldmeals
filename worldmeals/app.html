@@ -118,7 +118,27 @@ nav{background:rgba(255,253,248,.88);backdrop-filter:blur(18px);padding:14px 16p
 .week-stats{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px}.week-stat{border-radius:18px;padding:13px;text-align:center;border:1px solid var(--border);box-shadow:0 8px 20px rgba(83,55,29,.06)}.week-stat.cal{background:#FFF4DD}.week-stat.bud{background:#EAF8EF}.week-val{font-size:22px;font-weight:900;color:var(--text)}
 .day-row{background:#fff;border-radius:18px;border:1px solid var(--border);padding:12px 13px;margin-bottom:9px;display:flex;align-items:center;gap:12px;box-shadow:0 6px 16px rgba(83,55,29,.05)}
 .day-lbl{font-weight:900;font-size:13px;min-width:34px;color:var(--accent-dark)}.day-info{flex:1}.day-name{font-size:14px;font-weight:900;color:var(--text)}.day-sub{font-size:12px;color:var(--muted);margin-top:2px}.day-empty{flex:1;font-size:13px;color:var(--muted-2)}.day-thumb{width:42px;height:42px;border-radius:14px;overflow:hidden;background:#F3E8DA;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}.day-thumb img{width:100%;height:100%;object-fit:cover}.btn-clear{background:none;border:none;color:var(--muted-2);cursor:pointer;font-size:17px}.btn-add{font-size:12px;padding:7px 13px;border-radius:999px;border:1px solid var(--border);background:#fff;cursor:pointer;color:var(--accent-dark);font-weight:900;font-family:'Inter',system-ui,sans-serif}
-.grocery-box{background:#fff;border:1px solid var(--border);border-radius:18px;padding:15px;margin-top:13px;box-shadow:var(--shadow)}.grocery-title{font-size:15px;font-weight:900;margin-bottom:10px;color:var(--text)}.grocery-item{font-size:13px;color:#5C5046;padding:7px 0;border-bottom:1px solid var(--border)}
+/* SMART GROCERY */
+.btn-plan-secondary{width:100%;margin-top:8px;padding:12px 13px;border-radius:16px;border:1px solid var(--border);background:#fff;color:var(--accent-dark);font-size:13px;font-weight:900;cursor:pointer;font-family:Inter,system-ui,sans-serif}
+.planner-summary{background:#FFF7E8;border:1px solid #F0D7B5;border-radius:18px;padding:13px 14px;margin-bottom:14px;font-size:13px;color:#6F4B20;line-height:1.5;box-shadow:0 8px 20px rgba(83,55,29,.05)}
+.grocery-box{background:#fff;border:1px solid var(--border);border-radius:24px;padding:16px;margin-top:13px;box-shadow:var(--shadow)}
+.grocery-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px}
+.grocery-title{font-size:18px;font-weight:900;color:var(--text);letter-spacing:-.3px}
+.grocery-sub{font-size:12px;color:var(--muted);line-height:1.5;margin-top:3px}
+.grocery-money{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0}
+.grocery-money-card{background:#FFF7EA;border:1px solid #F0D7B5;border-radius:17px;padding:12px;text-align:center}
+.grocery-money-card.good{background:#EAF8EF;border-color:#CDEDDC}.grocery-money-card.warn{background:#FFF0EA;border-color:#F0CDBD}
+.grocery-money-val{font-size:20px;font-weight:900;color:var(--text)}.grocery-money-lbl{font-size:10px;font-weight:900;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:2px}
+.grocery-progress-wrap{background:#FAF4EC;border:1px solid var(--border);border-radius:18px;padding:12px;margin:12px 0}
+.grocery-progress-top{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:900;color:var(--text);margin-bottom:8px}
+.grocery-progress-bg{height:8px;background:#E9DED0;border-radius:999px;overflow:hidden}.grocery-progress-bar{height:100%;background:linear-gradient(135deg,var(--accent),#E0A15D);border-radius:999px;transition:width .25s ease}
+.grocery-category{border:1px solid var(--border);border-radius:20px;overflow:hidden;margin:11px 0;background:#FFFDF9}
+.grocery-category-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 13px;background:#FAF4EC;border-bottom:1px solid var(--border)}
+.grocery-category-name{font-size:13px;font-weight:900;color:var(--text)}.grocery-category-count{font-size:11px;color:var(--muted);font-weight:800}
+.grocery-item{display:flex;align-items:flex-start;gap:9px;padding:10px 13px;border-bottom:1px solid var(--border);transition:opacity .15s ease,background .15s ease}.grocery-item:last-child{border-bottom:none}.grocery-item.done{opacity:.48;background:#F7F3EE}.grocery-item input{margin-top:2px;accent-color:var(--accent)}
+.grocery-item-main{flex:1}.grocery-item-name{font-size:13px;color:#4E4034;font-weight:800}.grocery-item-used{font-size:11px;color:var(--muted);margin-top:2px;line-height:1.4}.grocery-item-price{font-size:12px;color:var(--accent-dark);font-weight:900;white-space:nowrap}
+.grocery-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:13px}.grocery-action{padding:11px;border-radius:15px;border:1px solid var(--border);background:#fff;color:var(--text);font-size:12px;font-weight:900;cursor:pointer;font-family:Inter,system-ui,sans-serif}.grocery-action.primary{background:var(--text);color:#fff;border-color:var(--text)}
+@media(max-width:420px){.grocery-money{grid-template-columns:1fr}.grocery-actions{grid-template-columns:1fr}.grocery-head{display:block}}
 /* PICKER */
 .picker-overlay{display:none;position:fixed;inset:0;background:rgba(44,31,20,.48);z-index:150;align-items:flex-end;justify-content:center;backdrop-filter:blur(8px)}.picker-overlay.open{display:flex}.picker{background:var(--bg-soft);border-radius:28px 28px 0 0;width:100%;max-width:520px;max-height:72vh;overflow-y:auto;padding:17px;border:1px solid var(--border)}.picker-title{font-size:16px;font-weight:900;margin-bottom:12px;color:var(--text)}.picker-item{display:flex;align-items:center;gap:11px;padding:11px;border-radius:16px;cursor:pointer;margin-bottom:6px;background:#fff;border:1px solid var(--border);transition:transform .15s}.picker-item:hover{transform:translateY(-1px)}
 /* TOUR */
@@ -160,6 +180,35 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 .chef-ai-card{background:#fff;border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);margin-top:14px}
 .chef-ai-head{padding:14px 14px 0}
 .chef-ai-badge{display:inline-flex;background:var(--accent-light);color:var(--accent);font-size:10px;font-weight:800;border-radius:999px;padding:4px 9px;margin-bottom:8px}
+
+
+/* FRIDGE SCAN */
+.scan-hero{background:linear-gradient(135deg,#FFF7ED,#F4E7D2);border:1px solid rgba(232,221,208,.95);border-radius:22px;padding:18px;margin-bottom:14px;box-shadow:var(--shadow)}
+.scan-kicker{font-size:10px;font-weight:900;letter-spacing:.10em;color:#A65F18;text-transform:uppercase;margin-bottom:6px}
+.scan-title{font-size:22px;font-weight:900;color:var(--text);letter-spacing:-.5px;margin-bottom:4px}
+.scan-sub{font-size:13px;color:var(--muted);line-height:1.6}
+.scan-card{background:rgba(255,255,255,.86);border:1px solid rgba(232,221,208,.95);border-radius:20px;padding:14px;margin-bottom:14px;box-shadow:var(--shadow)}
+.scan-upload{border:1.5px dashed #D8BFA2;background:#FFFDF8;border-radius:18px;padding:16px;text-align:center;cursor:pointer;display:block;transition:.18s}
+.scan-upload:hover{transform:translateY(-1px);background:#FFF7ED}
+.scan-upload-icon{font-size:34px;margin-bottom:8px}
+.scan-upload-title{font-size:14px;font-weight:900;color:var(--text);margin-bottom:4px}
+.scan-upload-sub{font-size:12px;color:var(--muted)}
+.scan-preview{display:none;margin-top:12px;border-radius:18px;overflow:hidden;background:#F6EFE5;border:1px solid rgba(232,221,208,.95)}
+.scan-preview img{width:100%;max-height:260px;object-fit:cover;display:block}
+.scan-input-label{font-size:10px;color:#9B6A3B;font-weight:900;text-transform:uppercase;letter-spacing:.09em;margin:14px 0 6px}
+.scan-textarea{width:100%;min-height:88px;border:1px solid rgba(232,221,208,.95);background:#FFFDF8;border-radius:16px;padding:12px;color:var(--text);font-family:Inter,system-ui,sans-serif;font-size:14px;outline:none;resize:vertical}
+.scan-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.scan-btn{border:none;border-radius:14px;padding:12px 10px;font-size:12px;font-weight:900;cursor:pointer;font-family:Inter,system-ui,sans-serif;transition:.18s}
+.scan-btn:hover{transform:translateY(-1px)}
+.scan-btn.primary{background:var(--accent);color:#fff;box-shadow:0 12px 22px rgba(196,122,44,.18)}
+.scan-btn.secondary{background:#FFF7ED;color:#8A4B13;border:1px solid #E8D3B8}
+.scan-result{margin-top:12px}
+.scan-pill-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.scan-pill{background:#FFF7ED;border:1px solid #E8D3B8;color:#8A4B13;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800}
+.scan-summary{background:#FFFFFF;border:1px solid rgba(232,221,208,.95);border-radius:18px;padding:14px;margin-top:12px;box-shadow:var(--shadow)}
+.scan-summary-title{font-size:15px;font-weight:900;color:var(--text);margin-bottom:5px}
+.scan-summary-sub{font-size:12px;color:var(--muted);line-height:1.5}
+@media(max-width:520px){.scan-actions{grid-template-columns:1fr}}
 
 </style>
 </head>
@@ -307,6 +356,45 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
   <div id="chefResult"></div>
 </div>
 
+
+<!-- FRIDGE SCAN -->
+<div class="page" id="page-scan">
+  <div class="scan-hero">
+    <div class="scan-kicker">📷 FRIDGE SCAN</div>
+    <div class="scan-title">Use what you already have</div>
+    <div class="scan-sub">Take or upload a fridge photo, confirm the ingredients, then WorldMeals will find meals and help reduce food waste.</div>
+  </div>
+
+  <div class="scan-card">
+    <label class="scan-upload" for="fridgePhotoInput">
+      <div class="scan-upload-icon">📸</div>
+      <div class="scan-upload-title">Tap to scan your fridge</div>
+      <div class="scan-upload-sub">Use camera or upload a photo</div>
+    </label>
+    <input id="fridgePhotoInput" type="file" accept="image/*" capture="environment" style="display:none" onchange="handleFridgePhoto(event)">
+
+    <div class="scan-preview" id="scanPreview">
+      <img id="scanPreviewImg" alt="Fridge photo preview">
+    </div>
+
+    <div class="scan-input-label">Detected / confirmed ingredients</div>
+    <textarea id="scanIngredients" class="scan-textarea" placeholder="Example: eggs, milk, tomatoes, onions, spinach, rice, chicken..."></textarea>
+
+    <div class="scan-actions">
+      <button class="scan-btn primary" onclick="scanFindMeals()">✨ Find Meals From This</button>
+      <button class="scan-btn secondary" onclick="scanSendToChef()">🤖 Send To Chef AI</button>
+    </div>
+
+    <div class="scan-pill-row">
+      <button class="scan-pill" onclick="addScanExample('eggs, tomatoes, onions, spinach, cheese')">🥚 Breakfast scan</button>
+      <button class="scan-pill" onclick="addScanExample('rice, chicken, onions, tomatoes, peppers, garlic')">🍚 Dinner scan</button>
+      <button class="scan-pill" onclick="addScanExample('beans, rice, corn, avocado, lime, cilantro')">🌱 Budget scan</button>
+    </div>
+
+    <div id="scanResult" class="scan-result"></div>
+  </div>
+</div>
+
 <!-- SAVED -->
 <div class="page" id="page-saved">
   <div class="page-title">❤️ Saved Dishes</div>
@@ -358,6 +446,7 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
   <button class="nav-btn" id="nb-planner" onclick="showPage('planner')"><span class="ic">📅</span><span class="lb">Planner</span></button>
   <button class="nav-btn" id="nb-tour" onclick="showPage('tour')"><span class="ic">🏆</span><span class="lb">Tour</span></button>
   <button class="nav-btn" id="nb-chef" onclick="showPage('chef')"><span class="ic">🍳</span><span class="lb">Chef</span></button>
+  <button class="nav-btn" id="nb-scan" onclick="showPage('scan')"><span class="ic">📷</span><span class="lb">Scan</span></button>
   <button class="nav-btn" id="nb-saved" onclick="showPage('saved')"><span class="ic">❤️</span><span class="lb">Saved</span></button>
 </div>
 
@@ -974,6 +1063,48 @@ async function getRecipe(){
   btn.disabled=false;btn.textContent="📖 Get full recipe";
 }
 
+
+function handleFridgePhoto(event){
+  const file=event.target.files && event.target.files[0];
+  if(!file) return;
+  const reader=new FileReader();
+  reader.onload=()=>{
+    document.getElementById("scanPreviewImg").src=reader.result;
+    document.getElementById("scanPreview").style.display="block";
+    document.getElementById("scanResult").innerHTML=`<div class="scan-summary"><div class="scan-summary-title">Photo added ✅</div><div class="scan-summary-sub">For this first version, confirm what you see in the ingredient box. In the next backend update, this photo can be sent to Vision AI for automatic ingredient detection.</div></div>`;
+  };
+  reader.readAsDataURL(file);
+}
+
+function addScanExample(text){
+  document.getElementById("scanIngredients").value=text;
+  scanFindMeals();
+}
+
+function scanFindMeals(){
+  const input=document.getElementById("scanIngredients").value.trim();
+  if(!input){toast("Add ingredients from your fridge first");return;}
+  const matches=getChefMatches(input);
+  const result=document.getElementById("scanResult");
+  if(!matches.length){
+    result.innerHTML=`<div class="scan-summary"><div class="scan-summary-title">No strong match yet</div><div class="scan-summary-sub">Add common ingredients like rice, eggs, chicken, tomatoes, onion, beans, pasta, garlic, or coconut milk.</div></div>`;
+    return;
+  }
+  result.innerHTML=`<div class="scan-summary"><div class="scan-summary-title">🍽️ ${matches.length} meals found from your fridge</div><div class="scan-summary-sub">Best matches are shown below. Tap a dish to open it.</div></div>`;
+  renderChefMatches(matches,input);
+  const chefHtml=document.getElementById("chefResult").innerHTML;
+  document.getElementById("chefResult").innerHTML="";
+  result.innerHTML += chefHtml;
+}
+
+function scanSendToChef(){
+  const input=document.getElementById("scanIngredients").value.trim();
+  if(!input){toast("Add ingredients from your fridge first");return;}
+  document.getElementById("fridgeInput").value=input;
+  showPage("chef");
+  runChef();
+}
+
 function showPage(name){
   document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
   document.querySelectorAll(".nav-btn").forEach(b=>b.classList.remove("active"));
@@ -1238,25 +1369,160 @@ function clearSmartPlan(){
   toast("Planner reset");
 }
 
-function generateGroceryList(){
-  const plannedMeals = Object.values(plan)
-    .map(id => MEALS.find(m => m.id === id))
-    .filter(Boolean);
 
-  if(!plannedMeals.length){
-    toast("Generate or add meals first");
-    return;
+const GROCERY_COSTS={
+  chicken:7,beef:8,lamb:10,pork:7,turkey:8,fish:9,salmon:11,tuna:10,shrimp:10,cod:9,duck:18,veal:13,sausage:6,
+  rice:3,noodles:3,pasta:3,spaghetti:3,flour:4,bread:3,bun:3,tortillas:3,pita:3,beans:3,lentils:3,chickpeas:3,potatoes:4,
+  tomatoes:3,tomato:3,onion:2,garlic:2,ginger:2,spinach:3,pepper:3,peppers:3,cucumber:2,carrots:2,carrot:2,eggplant:3,zucchini:3,mushrooms:4,mushroom:4,cabbage:3,lettuce:3,lemon:2,lime:2,avocado:4,basil:3,cilantro:2,parsley:2,scallion:2,
+  milk:3,cream:4,butter:4,cheese:4,parmesan:5,pecorino:6,mozzarella:5,yogurt:4,eggs:3,egg:3,
+  oil:5,olive:5,sauce:4,soy:3,vinegar:3,honey:4,sugar:3,stock:3,coconut:4,tahini:5,miso:5,wasabi:4,spices:4,paprika:3,cumin:3,turmeric:3,cinnamon:3,salt:2,peppercorns:3
+};
+
+function normalizeGroceryName(item){
+  return String(item||"").trim().replace(/\s+/g," ");
+}
+
+function groceryKey(item){
+  return normalizeGroceryName(item).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+}
+
+function ingredientCategory(item){
+  const x=String(item||"").toLowerCase();
+  if(/chicken|beef|lamb|pork|turkey|fish|salmon|tuna|shrimp|cod|duck|veal|sausage|bacon|seafood|mussel|prawn|pork belly|ground/.test(x)) return "🥩 Meat & Seafood";
+  if(/milk|cream|butter|cheese|parmesan|pecorino|mozzarella|yogurt|egg|mascarpone|feta|cheddar|ghee/.test(x)) return "🥛 Dairy & Eggs";
+  if(/tomato|onion|garlic|ginger|spinach|pepper|cucumber|carrot|eggplant|zucchini|mushroom|cabbage|lettuce|lemon|lime|avocado|basil|cilantro|parsley|scallion|potato|sweet potato|broccoli|cauliflower|corn|herb|daikon|coconut|mango|pineapple|beet|olive|beansprout|bean sprout/.test(x)) return "🥬 Produce";
+  if(/salt|black pepper|peppercorn|paprika|cumin|turmeric|cinnamon|saffron|spice|masala|chili|chilli|coriander|oregano|thyme|bay|allspice|cardamom|clove|nutmeg|sumac|berbere|gochugaru|five spice|curry powder|star anise|caraway/.test(x)) return "🧂 Herbs & Spices";
+  if(/rice|noodle|pasta|spaghetti|flour|bread|bun|tortilla|pita|beans|lentil|chickpea|stock|oil|vinegar|sauce|soy|tamari|honey|sugar|tahini|miso|nori|dough|wrappers|phyllo|breadcrumbs|peanuts|seeds|nuts|chocolate|wine|beer/.test(x)) return "🌾 Pantry";
+  return "🛒 Other";
+}
+
+function estimateIngredientCost(item){
+  const x=String(item||"").toLowerCase();
+  for(const [key,val] of Object.entries(GROCERY_COSTS)){
+    if(x.includes(key)) return val;
   }
+  return 3;
+}
 
-  const items = [...new Set(plannedMeals.flatMap(m => m.ingredients || []))].sort();
-  const totalBudget = plannedMeals.reduce((s,m)=>s+(m.budget||0),0);
+function getCurrentGroceryData(){
+  const plannedMeals = Object.values(plan).map(id=>MEALS.find(m=>m.id===id)).filter(Boolean);
+  const map = new Map();
+  plannedMeals.forEach(meal=>{
+    (meal.ingredients||[]).forEach(raw=>{
+      const name=normalizeGroceryName(raw);
+      if(!name) return;
+      const key=groceryKey(name);
+      if(!map.has(key)){
+        map.set(key,{key,name,category:ingredientCategory(name),meals:[],cost:estimateIngredientCost(name)});
+      }
+      const entry=map.get(key);
+      if(!entry.meals.includes(meal.name)) entry.meals.push(meal.name);
+    });
+  });
+  return [...map.values()].sort((a,b)=>a.category.localeCompare(b.category)||a.name.localeCompare(b.name));
+}
 
-  document.getElementById("groceryList").innerHTML =
-    `<div class="grocery-box">
-      <div class="grocery-title">🛒 Smart Grocery List</div>
-      <div class="grocery-sub">Combined ingredients for your current weekly plan. Estimated base cost: $${totalBudget} per serving.</div>
-      <div class="grocery-grid">${items.map(i=>`<div class="grocery-item">${i}</div>`).join("")}</div>
+function getGroceryChecked(){
+  try{return JSON.parse(localStorage.getItem("wm_grocery_checked")||"{}");}catch{return {};}
+}
+
+function setGroceryChecked(key,value){
+  const checked=getGroceryChecked();
+  checked[key]=!!value;
+  localStorage.setItem("wm_grocery_checked",JSON.stringify(checked));
+  updateGroceryTotals();
+}
+
+function generateGroceryList(){
+  const plannedMeals = Object.values(plan).map(id=>MEALS.find(m=>m.id===id)).filter(Boolean);
+  if(!plannedMeals.length){ toast("Generate or add meals first"); return; }
+
+  const items=getCurrentGroceryData();
+  const checked=getGroceryChecked();
+  const groups=items.reduce((acc,item)=>{(acc[item.category] ||= []).push(item);return acc;},{});
+  const budget=Number(document.getElementById("weeklyBudget")?.value||0);
+  const people=Number(document.getElementById("peopleCount")?.value||1);
+  const mealCost=plannedMeals.reduce((s,m)=>s+((m.budget||0)*people),0);
+  const estimated=Math.max(mealCost,items.reduce((s,i)=>s+i.cost,0));
+  const remaining=budget?budget-estimated:0;
+
+  document.getElementById("groceryList").innerHTML=`
+    <div class="grocery-box" id="smartGroceryBox" data-estimated="${estimated}" data-budget="${budget}">
+      <div class="grocery-head">
+        <div>
+          <div class="grocery-title">🛒 Smart Grocery</div>
+          <div class="grocery-sub">Organized shopping list for your weekly plan. Check off items as you shop or mark items you already have.</div>
+        </div>
+      </div>
+
+      <div class="grocery-money">
+        <div class="grocery-money-card"><div class="grocery-money-val">$${estimated}</div><div class="grocery-money-lbl">Estimated Grocery</div></div>
+        <div class="grocery-money-card ${budget && remaining>=0?'good':'warn'}"><div class="grocery-money-val">${budget?'$'+remaining:'—'}</div><div class="grocery-money-lbl">${budget?'Budget Remaining':'Add Budget'}</div></div>
+      </div>
+
+      <div class="grocery-progress-wrap">
+        <div class="grocery-progress-top"><span>Shopping Progress</span><span id="groceryProgressText">0 / ${items.length}</span></div>
+        <div class="grocery-progress-bg"><div class="grocery-progress-bar" id="groceryProgressBar" style="width:0%"></div></div>
+      </div>
+
+      ${Object.entries(groups).map(([cat,catItems])=>`
+        <div class="grocery-category">
+          <div class="grocery-category-head"><div class="grocery-category-name">${cat}</div><div class="grocery-category-count">${catItems.length} item${catItems.length>1?'s':''}</div></div>
+          ${catItems.map(item=>`
+            <label class="grocery-item ${checked[item.key]?'done':''}" data-grocery-key="${item.key}">
+              <input type="checkbox" ${checked[item.key]?'checked':''} onchange="setGroceryChecked('${item.key}',this.checked)">
+              <div class="grocery-item-main">
+                <div class="grocery-item-name">${item.name}</div>
+                <div class="grocery-item-used">Used in ${item.meals.slice(0,3).join(', ')}${item.meals.length>3?' +'+(item.meals.length-3)+' more':''}</div>
+              </div>
+              <div class="grocery-item-price">~$${item.cost}</div>
+            </label>`).join('')}
+        </div>`).join('')}
+
+      <div class="grocery-actions">
+        <button class="grocery-action primary" onclick="markAllGrocery(true)">✓ Mark All Purchased</button>
+        <button class="grocery-action" onclick="markAllGrocery(false)">Reset Checks</button>
+        <button class="grocery-action" onclick="copyGroceryList()">📤 Copy List</button>
+        <button class="grocery-action" onclick="generateGroceryList()">🔄 Regenerate</button>
+      </div>
     </div>`;
+
+  updateGroceryTotals();
+  toast("Smart grocery list ready");
+}
+
+function updateGroceryTotals(){
+  const box=document.getElementById("smartGroceryBox");
+  if(!box) return;
+  const boxes=[...box.querySelectorAll('.grocery-item input')];
+  const done=boxes.filter(x=>x.checked).length;
+  const total=boxes.length;
+  const pct=total?Math.round((done/total)*100):0;
+  const txt=document.getElementById("groceryProgressText");
+  const bar=document.getElementById("groceryProgressBar");
+  if(txt) txt.textContent=`${done} / ${total}`;
+  if(bar) bar.style.width=pct+"%";
+  boxes.forEach(cb=>cb.closest('.grocery-item')?.classList.toggle('done',cb.checked));
+}
+
+function markAllGrocery(value){
+  const items=getCurrentGroceryData();
+  const checked=getGroceryChecked();
+  items.forEach(item=>checked[item.key]=!!value);
+  localStorage.setItem("wm_grocery_checked",JSON.stringify(checked));
+  generateGroceryList();
+}
+
+function copyGroceryList(){
+  const items=getCurrentGroceryData();
+  if(!items.length){toast("No grocery list yet");return;}
+  const groups=items.reduce((acc,item)=>{(acc[item.category] ||= []).push(item);return acc;},{});
+  const text=Object.entries(groups).map(([cat,arr])=>`${cat}\n${arr.map(i=>'- '+i.name).join('\n')}`).join('\n\n');
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(text).then(()=>toast("Grocery list copied"));
+  }else{
+    toast("Copy not available on this device");
+  }
 }
 
 // INIT — render dishes immediately
