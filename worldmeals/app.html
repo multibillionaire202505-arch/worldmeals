@@ -65,6 +65,7 @@ nav{background:rgba(255,253,248,.88);backdrop-filter:blur(18px);padding:14px 16p
 .tag{font-size:10px;padding:4px 7px;border-radius:999px;font-weight:800}
 .t-cal{background:#FFF1D6;color:#9A5C0F}
 .t-bud{background:var(--green-soft);color:#1F6B42}
+.t-protein{background:#EEF2FF;color:#3730A3}
 .t-sp{background:#F7F1EA;color:var(--muted);display:flex;align-items:center;gap:3px;border:1px solid var(--border)}
 .dot{width:6px;height:6px;border-radius:50%;display:inline-block}
 .empty{text-align:center;padding:3rem 0;color:var(--muted-2);grid-column:1/-1}
@@ -83,7 +84,7 @@ nav{background:rgba(255,253,248,.88);backdrop-filter:blur(18px);padding:14px 16p
 .modal-body{padding:18px 18px 34px}
 .modal-name{font-size:25px;font-weight:900;margin-bottom:3px;color:var(--text);letter-spacing:-.6px}
 .modal-meta{font-size:13px;color:var(--muted);margin-bottom:14px;font-weight:700}
-.stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin-bottom:14px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:14px}
 .stat{background:#fff;border-radius:16px;padding:11px;text-align:center;border:1px solid var(--border);box-shadow:0 6px 16px rgba(83,55,29,.05)}
 .stat-v{font-size:15px;font-weight:900;color:var(--text)}
 .stat-l{font-size:10px;color:var(--muted);font-weight:700}
@@ -153,7 +154,7 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 /* TOAST */
 .toast{position:fixed;top:70px;left:50%;transform:translateX(-50%);background:var(--text);color:#fff;padding:11px 20px;border-radius:999px;font-size:13px;font-weight:800;z-index:200;white-space:nowrap;opacity:0;transition:opacity .2s;pointer-events:none;box-shadow:0 12px 30px rgba(31,26,20,.28)}.toast.show{opacity:1}
 @media (min-width:720px){.grid{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}.card-img{height:156px}.page{padding-left:22px;padding-right:22px}.modal{border-radius:30px;align-self:center;max-height:88vh}.overlay{align-items:center}.picker{border-radius:30px;align-self:center}.picker-overlay{align-items:center}}
-@media (max-width:390px){.slider-row{grid-template-columns:1fr}.grid{grid-template-columns:repeat(auto-fill,minmax(145px,1fr))}.card-img{height:122px}}
+@media (max-width:390px){.slider-row{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(auto-fill,minmax(145px,1fr))}.card-img{height:122px}}
 
 /* CHEF AI 2.0 */
 .chef-hero-premium{background:linear-gradient(135deg,#FFF7EC,#FFFFFF);border:1px solid var(--border);box-shadow:var(--shadow);color:var(--text)}
@@ -244,6 +245,14 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
         <option value="all">Any time</option><option value="15">15 min or less</option><option value="30">30 min or less</option><option value="45">45 min or less</option><option value="60">1 hour or less</option>
       </select>
     </div>
+    <div class="filter-group"><label>Protein</label>
+      <select id="proteinFilter" onchange="renderGrid()">
+        <option value="all">Any protein</option>
+        <option value="20">20g+ protein</option>
+        <option value="30">30g+ high protein</option>
+        <option value="40">40g+ athlete mode</option>
+      </select>
+    </div>
   </div>
   <div class="slider-row">
     <div class="slider-group">
@@ -300,6 +309,13 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
       <option value="2">Low spice</option>
       <option value="3">Medium spice</option>
       <option value="4">Hot is okay</option>
+    </select>
+
+    <label>Goal</label>
+    <select id="plannerGoal">
+      <option value="balanced">Balanced week</option>
+      <option value="high-protein">High protein</option>
+      <option value="budget">Lowest cost</option>
     </select>
 
     <button class="btn-chef" onclick="generateSmartPlan()">✨ Generate My Weekly Plan</button>
@@ -909,6 +925,23 @@ function populateCountryFilter(){
   el.innerHTML='<option value="all">All countries</option>'+countries.map(c=>`<option value="${c}">${c}</option>`).join("");
 }
 
+function mealProtein(m){
+  if(typeof m.protein === "number") return m.protein;
+  const text = ((m.name||"")+" "+(m.desc||"")+" "+((m.ingredients||[]).join(" "))).toLowerCase();
+  const animal=["chicken","beef","lamb","pork","turkey","fish","salmon","tuna","shrimp","cod","duck","veal","egg","eggs","yogurt","cheese","milk"];
+  const plant=["beans","lentils","chickpeas","tofu","tempeh","peanuts","nuts","seeds","quinoa","edamame","hummus"];
+  let protein = 8;
+  animal.forEach(x=>{ if(text.includes(x)) protein += 8; });
+  plant.forEach(x=>{ if(text.includes(x)) protein += 4; });
+  if(text.includes("rice") || text.includes("noodles") || text.includes("pasta")) protein += 3;
+  if(text.includes("soup") || text.includes("salad") || text.includes("gazpacho")) protein -= 3;
+  if(text.includes("steak") || text.includes("short rib") || text.includes("whole duck")) protein += 8;
+  return Math.max(6, Math.min(58, protein));
+}
+function isHighProtein(m, min=30){
+  return mealProtein(m) >= min;
+}
+
 function updateSpiceLabel(v){document.getElementById("spLbl").textContent=SPICE[parseInt(v)]||"Any";}
 
 function renderGrid(){
@@ -917,16 +950,20 @@ function renderGrid(){
   const diet=document.getElementById("dietFilter").value;
   const country=document.getElementById("countryFilter")?.value||"all";
   const maxTime=document.getElementById("timeFilter")?.value||"all";
+  const proteinMin=document.getElementById("proteinFilter")?.value||"all";
   const cal=parseInt(document.getElementById("calSlider").value);
   const bud=parseInt(document.getElementById("budSlider").value);
   const sp=parseInt(document.getElementById("spSlider").value);
 
   const filtered=MEALS.filter(m=>{
-    if(q&&!m.name.toLowerCase().includes(q)&&!m.country.toLowerCase().includes(q))return false;
+    const searchable=(m.name+" "+m.country+" "+m.region+" "+(m.ingredients||[]).join(" ")).toLowerCase();
+    if(q && q.includes("high protein") && !isHighProtein(m))return false;
+    if(q&&!searchable.includes(q)&&!q.includes("high protein"))return false;
     if(reg!=="All regions"&&m.region!==reg)return false;
     if(diet!=="all"&&!m.tags.includes(diet))return false;
     if(country!=="all"&&m.country!==country)return false;
     if(maxTime!=="all"&&parseMealMinutes(m.time)>Number(maxTime))return false;
+    if(proteinMin!=="all"&&mealProtein(m)<Number(proteinMin))return false;
     if(m.cal>cal||m.budget>bud||m.spice>sp)return false;
     return true;
   });
@@ -949,6 +986,7 @@ function renderGrid(){
         <div class="card-country">📍 ${m.country}</div>
         <div class="tags">
           <span class="tag t-cal">${m.cal} kcal</span>
+          <span class="tag t-protein">💪 ${mealProtein(m)}g</span>
           <span class="tag t-bud">$${m.budget}</span>
           <span class="tag t-sp"><span class="dot" style="background:${sc(m.spice)}"></span>${SPICE[m.spice]}</span>
         </div>
@@ -984,7 +1022,7 @@ function openModal(id){
   document.getElementById("modalFavBtn").textContent=favs.includes(m.id)?"❤️":"🤍";
   document.getElementById("modalName").textContent=m.name;
   document.getElementById("modalMeta").textContent="📍 "+m.country+" · "+m.region;
-  document.getElementById("modalStats").innerHTML=[["🔥",m.cal,"kcal"],["💰","$"+m.budget,"per serving"],["⏱",m.time,"cook time"]].map(([i,v,l])=>`<div class="stat"><div style="font-size:12px">${i}</div><div class="stat-v">${v}</div><div class="stat-l">${l}</div></div>`).join("");
+  document.getElementById("modalStats").innerHTML=[["🔥",m.cal,"kcal"],["💪",mealProtein(m)+"g","protein"],["💰","$"+m.budget,"per serving"],["⏱",m.time,"cook time"]].map(([i,v,l])=>`<div class="stat"><div style="font-size:12px">${i}</div><div class="stat-v">${v}</div><div class="stat-l">${l}</div></div>`).join("");
   document.getElementById("modalSpice").innerHTML=`<div style="font-size:11px;color:#888">Spice:</div><div class="spice-dots">${[1,2,3,4,5].map(i=>`<div style="width:8px;height:8px;border-radius:50%;background:${i<=m.spice?sc(m.spice):"#E5E5E0"}"></div>`).join("")}</div><div style="font-size:12px;font-weight:500">${SPICE[m.spice]}</div>`;
   document.getElementById("modalDesc").textContent=m.desc;
   document.getElementById("modalIngr").innerHTML=m.ingredients.map(i=>`<span class="ingr-pill">${i}</span>`).join("");
@@ -1122,7 +1160,7 @@ function renderPlanner(){
   document.getElementById("weekBud").textContent="$"+wBud;
   document.getElementById("plannerDays").innerHTML=DAYS.map(day=>{
     const m=plan[day]?MEALS.find(x=>x.id===plan[day]):null;
-    return `<div class="day-row"><div class="day-lbl">${day}</div>${m?`${thumbHTML(m)}<div class="day-info"><div class="day-name">${m.name}</div><div class="day-sub">📍 ${m.country} · ${m.cal} kcal · $${m.budget}</div></div><button class="btn-clear" onclick="clearDay('${day}')">✕</button>`:`<div class="day-empty">No meal planned</div><button class="btn-add" onclick="openPicker('${day}')">+ Add dish</button>`}</div>`;
+    return `<div class="day-row"><div class="day-lbl">${day}</div>${m?`${thumbHTML(m)}<div class="day-info"><div class="day-name">${m.name}</div><div class="day-sub">📍 ${m.country} · ${m.cal} kcal · 💪 ${mealProtein(m)}g · $${m.budget}</div></div><button class="btn-clear" onclick="clearDay('${day}')">✕</button>`:`<div class="day-empty">No meal planned</div><button class="btn-add" onclick="openPicker('${day}')">+ Add dish</button>`}</div>`;
   }).join("");
 }
 
@@ -1131,7 +1169,7 @@ function clearDay(day){delete plan[day];save();renderPlanner();}
 function openPicker(day){
   pickerDay=day;
   document.getElementById("pickerTitle").textContent="Choose a dish for "+day;
-  document.getElementById("pickerList").innerHTML=MEALS.map(m=>`<div class="picker-item" onclick="assignDay('${day}',${m.id})">${thumbHTML(m)}<div><div style="font-size:13px;font-weight:800;color:var(--text)">${m.name}</div><div style="font-size:11px;color:var(--muted)">📍 ${m.country} · ${m.cal} kcal · $${m.budget}</div></div></div>`).join("");
+  document.getElementById("pickerList").innerHTML=MEALS.map(m=>`<div class="picker-item" onclick="assignDay('${day}',${m.id})">${thumbHTML(m)}<div><div style="font-size:13px;font-weight:800;color:var(--text)">${m.name}</div><div style="font-size:11px;color:var(--muted)">📍 ${m.country} · ${m.cal} kcal · 💪 ${mealProtein(m)}g · $${m.budget}</div></div></div>`).join("");
   document.getElementById("pickerOverlay").classList.add("open");
 }
 
@@ -1166,7 +1204,7 @@ function renderSaved(){
     el.innerHTML='<div class="saved-empty"><div style="font-size:40px;margin-bottom:12px">🤍</div><div style="font-size:14px;color:#888;margin-bottom:6px">No saved dishes yet</div><div style="font-size:12px">Tap the heart on any dish to save it here</div><button onclick="showPage(\'browse\')" style="margin-top:16px;padding:10px 20px;border-radius:20px;background:var(--text);color:#fff;border:none;font-size:13px;cursor:pointer;font-family:Inter,system-ui,sans-serif">Browse dishes →</button></div>';
     return;
   }
-  el.innerHTML='<div class="grid">'+saved.map(m=>`<div class="card" onclick="openModal(${m.id})"><div class="card-img">${foodImageHTML(m)}</div><button class="fav-btn" onclick="event.stopPropagation();toggleFav(${m.id})">❤️</button><div class="card-body"><div class="card-name">${m.name}</div><div class="card-country">📍 ${m.country}</div><div class="tags"><span class="tag t-cal">${m.cal} kcal</span><span class="tag t-bud">$${m.budget}</span></div></div></div>`).join("")+'</div>';
+  el.innerHTML='<div class="grid">'+saved.map(m=>`<div class="card" onclick="openModal(${m.id})"><div class="card-img">${foodImageHTML(m)}</div><button class="fav-btn" onclick="event.stopPropagation();toggleFav(${m.id})">❤️</button><div class="card-body"><div class="card-name">${m.name}</div><div class="card-country">📍 ${m.country}</div><div class="tags"><span class="tag t-cal">${m.cal} kcal</span><span class="tag t-protein">💪 ${mealProtein(m)}g</span><span class="tag t-bud">$${m.budget}</span></div></div></div>`).join("")+'</div>';
 }
 
 function chefExample(text){
@@ -1220,7 +1258,7 @@ function renderChefMatches(matches,input){
           <div class="chef-match-body">
             <div class="chef-score">✓ ${matched.length} ingredient match${matched.length>1?"es":""}</div>
             <div class="chef-match-name">${meal.name}</div>
-            <div class="chef-match-meta">📍 ${meal.country} · $${meal.budget} · ${meal.time}</div>
+            <div class="chef-match-meta">📍 ${meal.country} · 💪 ${mealProtein(meal)}g · $${meal.budget} · ${meal.time}</div>
             ${missing.length?`<div class="chef-missing">Missing: ${missing.join(", ")}</div>`:`<div class="chef-missing" style="color:#1F6B42;background:#E8F7EF">You likely have everything needed.</div>`}
           </div>
         </div>`).join("")}
@@ -1288,6 +1326,7 @@ function generateSmartPlan(){
   const people = Number(document.getElementById("peopleCount")?.value || 1);
   const diet = document.getElementById("plannerDiet")?.value || "all";
   const maxSpice = Number(document.getElementById("plannerSpice")?.value || 5);
+  const goal = document.getElementById("plannerGoal")?.value || "balanced";
 
   if(!budget || budget < 10){
     toast("Enter a weekly budget first");
@@ -1298,11 +1337,12 @@ function generateSmartPlan(){
   let pool = MEALS.filter(m=>{
     if(diet !== "all" && !(m.tags||[]).includes(diet)) return false;
     if(m.spice > maxSpice) return false;
+    if(goal === "high-protein" && mealProtein(m) < 20) return false;
     return m.budget <= preferredBudgetPerServing;
   });
 
   if(pool.length < 7){
-    pool = MEALS.filter(m=>m.spice <= maxSpice && m.budget <= preferredBudgetPerServing);
+    pool = MEALS.filter(m=>m.spice <= maxSpice && m.budget <= preferredBudgetPerServing && (goal !== "high-protein" || mealProtein(m) >= 20));
   }
 
   if(pool.length < 7){
@@ -1310,6 +1350,8 @@ function generateSmartPlan(){
   }
 
   pool = [...pool].sort((a,b)=>{
+    if(goal === "high-protein") return (mealProtein(b)-mealProtein(a)) || (a.budget-b.budget);
+    if(goal === "budget") return (a.budget-b.budget) || (mealProtein(b)-mealProtein(a));
     if(a.region !== b.region) return a.region.localeCompare(b.region);
     return a.budget - b.budget;
   });
@@ -1353,7 +1395,9 @@ function generateSmartPlan(){
   const summary = document.getElementById("plannerSummary");
   if(summary){
     summary.style.display="block";
-    summary.innerHTML=`✨ Plan created for <b>${people}</b> ${people===1?"person":"people"}. Estimated weekly total: <b>$${total}</b>. Remaining budget: <b>$${remaining}</b>.`;
+    const proteinTotal = selected.reduce((sum,m)=>sum+mealProtein(m),0);
+    const goalLabel = goal === "high-protein" ? "High protein" : goal === "budget" ? "Lowest cost" : "Balanced";
+    summary.innerHTML=`✨ ${goalLabel} plan created for <b>${people}</b> ${people===1?"person":"people"}. Estimated weekly total: <b>$${total}</b>. Remaining budget: <b>$${remaining}</b>. Protein across the week: <b>${proteinTotal}g</b>.`;
   }
   toast("Weekly plan generated!");
 }
