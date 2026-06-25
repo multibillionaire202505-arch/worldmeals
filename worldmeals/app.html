@@ -134,6 +134,33 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 .toast{position:fixed;top:70px;left:50%;transform:translateX(-50%);background:var(--text);color:#fff;padding:11px 20px;border-radius:999px;font-size:13px;font-weight:800;z-index:200;white-space:nowrap;opacity:0;transition:opacity .2s;pointer-events:none;box-shadow:0 12px 30px rgba(31,26,20,.28)}.toast.show{opacity:1}
 @media (min-width:720px){.grid{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}.card-img{height:156px}.page{padding-left:22px;padding-right:22px}.modal{border-radius:30px;align-self:center;max-height:88vh}.overlay{align-items:center}.picker{border-radius:30px;align-self:center}.picker-overlay{align-items:center}}
 @media (max-width:390px){.slider-row{grid-template-columns:1fr}.grid{grid-template-columns:repeat(auto-fill,minmax(145px,1fr))}.card-img{height:122px}}
+
+/* CHEF AI 2.0 */
+.chef-hero-premium{background:linear-gradient(135deg,#FFF7EC,#FFFFFF);border:1px solid var(--border);box-shadow:var(--shadow);color:var(--text)}
+.chef-kicker{font-size:10px;font-weight:800;letter-spacing:.12em;color:var(--accent);margin-bottom:8px}
+.chef-title{font-size:24px;font-weight:800;letter-spacing:-.6px;color:var(--text);margin-bottom:6px}
+.chef-sub{font-size:13px;color:var(--muted);line-height:1.6;max-width:520px}
+.chef-input-card{background:rgba(255,255,255,.92);border:1px solid var(--border);border-radius:22px;padding:16px;margin-bottom:16px;box-shadow:var(--shadow)}
+.chef-input-label{font-size:10px;font-weight:800;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.chef-quick-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:12px}
+.chef-quick-row button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:8px 11px;font-size:11px;font-weight:700;color:var(--text);white-space:nowrap;cursor:pointer;font-family:Inter,system-ui,sans-serif}
+.chef-match-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:12px;margin-top:12px}
+.chef-match-card{background:#fff;border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+.chef-match-card:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(80,48,20,.14)}
+.chef-match-img{height:115px;background:var(--surface);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.chef-match-img img{width:100%;height:100%;object-fit:cover;display:block}
+.chef-match-body{padding:10px 11px}
+.chef-score{display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:800;color:#1F6B42;background:#E8F7EF;border-radius:999px;padding:3px 7px;margin-bottom:6px}
+.chef-match-name{font-size:13px;font-weight:800;color:var(--text);margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chef-match-meta{font-size:10px;color:var(--muted);margin-bottom:8px}
+.chef-missing{font-size:10px;color:#8A5A16;background:#FFF4DB;border-radius:10px;padding:7px;line-height:1.4}
+.chef-summary{background:#fff;border:1px solid var(--border);border-radius:20px;padding:14px;box-shadow:var(--shadow);margin-bottom:12px}
+.chef-summary-title{font-size:15px;font-weight:800;color:var(--text);margin-bottom:4px}
+.chef-summary-sub{font-size:12px;color:var(--muted);line-height:1.5}
+.chef-ai-card{background:#fff;border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);margin-top:14px}
+.chef-ai-head{padding:14px 14px 0}
+.chef-ai-badge{display:inline-flex;background:var(--accent-light);color:var(--accent);font-size:10px;font-weight:800;border-radius:999px;padding:4px 9px;margin-bottom:8px}
+
 </style>
 </head>
 <body>
@@ -260,13 +287,23 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 
 <!-- CHEF -->
 <div class="page" id="page-chef">
-  <div class="chef-hero">
-    <div style="font-size:22px;margin-bottom:6px">🍳</div>
-    <div style="font-size:16px;font-weight:700;color:#fff;margin-bottom:3px">AI Fridge Chef</div>
-    <div style="font-size:12px;color:#aaa;line-height:1.5">Tell me what's in your fridge and I'll find you an authentic world dish to cook right now.</div>
+  <div class="chef-hero chef-hero-premium">
+    <div class="chef-kicker">🤖 WORLDMEALS CHEF AI</div>
+    <div class="chef-title">What can we cook today?</div>
+    <div class="chef-sub">Type ingredients you already have. WorldMeals will match real dishes first, then Chef AI can generate a custom cooking plan.</div>
   </div>
-  <textarea id="fridgeInput" placeholder="e.g. chicken, coconut milk, lemongrass, rice, garlic, lime…"></textarea>
-  <button class="btn-chef" id="chefBtn" onclick="runChef()">✨ Find me a world dish</button>
+
+  <div class="chef-input-card">
+    <div class="chef-input-label">Ingredients on hand</div>
+    <textarea id="fridgeInput" placeholder="Example: chicken, rice, onions, tomatoes, garlic, coconut milk…"></textarea>
+    <div class="chef-quick-row">
+      <button type="button" onclick="chefExample('eggs, tomatoes, onions, spinach, garlic')">🥚 Quick breakfast</button>
+      <button type="button" onclick="chefExample('rice, chicken, tomatoes, onions, peppers')">🍚 Budget dinner</button>
+      <button type="button" onclick="chefExample('beans, rice, avocado, corn, lime')">🌱 Vegan idea</button>
+    </div>
+    <button class="btn-chef" id="chefBtn" onclick="runChef()">✨ Find meals I can cook</button>
+  </div>
+
   <div id="chefResult"></div>
 </div>
 
@@ -1001,20 +1038,117 @@ function renderSaved(){
   el.innerHTML='<div class="grid">'+saved.map(m=>`<div class="card" onclick="openModal(${m.id})"><div class="card-img">${foodImageHTML(m)}</div><button class="fav-btn" onclick="event.stopPropagation();toggleFav(${m.id})">❤️</button><div class="card-body"><div class="card-name">${m.name}</div><div class="card-country">📍 ${m.country}</div><div class="tags"><span class="tag t-cal">${m.cal} kcal</span><span class="tag t-bud">$${m.budget}</span></div></div></div>`).join("")+'</div>';
 }
 
+function chefExample(text){
+  const input=document.getElementById("fridgeInput");
+  if(input){ input.value=text; input.focus(); }
+}
+
+function tokenizeIngredients(text){
+  return String(text||"")
+    .toLowerCase()
+    .replace(/[^a-z0-9, ]+/g," ")
+    .split(/[,\n]| and | with | plus /)
+    .map(x=>x.trim())
+    .filter(x=>x.length>1);
+}
+
+function mealMatchScore(meal, tokens){
+  const hay=(meal.ingredients||[]).join(" ").toLowerCase()+" "+meal.name.toLowerCase()+" "+meal.country.toLowerCase();
+  const matched=[];
+  for(const t of tokens){
+    if(hay.includes(t) || t.split(" ").some(w=>w.length>3 && hay.includes(w))) matched.push(t);
+  }
+  const missing=(meal.ingredients||[]).filter(i=>!tokens.some(t=>i.toLowerCase().includes(t)||t.includes(i.toLowerCase()))).slice(0,4);
+  const score=matched.length*12 - Math.max(0, (meal.ingredients||[]).length-matched.length) + (meal.budget<=8?3:0) + (meal.spice<=2?2:0);
+  return {score,matched:[...new Set(matched)],missing};
+}
+
+function getChefMatches(input){
+  const tokens=tokenizeIngredients(input);
+  return MEALS.map(m=>({meal:m,...mealMatchScore(m,tokens)}))
+    .filter(x=>x.matched.length>0)
+    .sort((a,b)=>b.score-a.score || a.meal.budget-b.meal.budget)
+    .slice(0,9);
+}
+
+function renderChefMatches(matches,input){
+  const result=document.getElementById("chefResult");
+  if(!matches.length){
+    result.innerHTML=`<div class="chef-summary"><div class="chef-summary-title">No strong match yet</div><div class="chef-summary-sub">Try adding more ingredients like rice, chicken, tomatoes, eggs, beans, onions, pasta, or coconut milk.</div></div>`;
+    return;
+  }
+  result.innerHTML=`
+    <div class="chef-summary">
+      <div class="chef-summary-title">🍽️ You can cook ${matches.length} good match${matches.length>1?"es":""}</div>
+      <div class="chef-summary-sub">Best matches based on: <b>${tokenizeIngredients(input).join(", ")}</b>. Tap any dish to open the recipe card.</div>
+    </div>
+    <div class="chef-match-grid">
+      ${matches.map(({meal,matched,missing})=>`
+        <div class="chef-match-card" onclick="openModal(${meal.id})">
+          <div class="chef-match-img">${foodImageHTML(meal)}</div>
+          <div class="chef-match-body">
+            <div class="chef-score">✓ ${matched.length} ingredient match${matched.length>1?"es":""}</div>
+            <div class="chef-match-name">${meal.name}</div>
+            <div class="chef-match-meta">📍 ${meal.country} · $${meal.budget} · ${meal.time}</div>
+            ${missing.length?`<div class="chef-missing">Missing: ${missing.join(", ")}</div>`:`<div class="chef-missing" style="color:#1F6B42;background:#E8F7EF">You likely have everything needed.</div>`}
+          </div>
+        </div>`).join("")}
+    </div>`;
+}
+
 async function runChef(){
   const input=document.getElementById("fridgeInput").value.trim();
-  if(!input)return;
+  if(!input){ toast("Type a few ingredients first"); return; }
+
   const btn=document.getElementById("chefBtn");
-  btn.disabled=true;btn.textContent="Searching the world's kitchens…";
-  document.getElementById("chefResult").innerHTML="";
+  const result=document.getElementById("chefResult");
+  btn.disabled=true;
+  btn.textContent="Finding meals…";
+
+  const matches=getChefMatches(input);
+  renderChefMatches(matches,input);
+
   try{
-    const res=await fetch("/api/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({model:"claude-sonnet-4-6",max_tokens:1000,messages:[{role:"user",content:"You are a world cuisine chef. Ingredients: "+input+". Suggest ONE authentic world dish. Respond ONLY with valid JSON no markdown: {\"name\":\"\",\"country\":\"\",\"emoji\":\"\",\"calories\":0,\"cookTime\":\"\",\"description\":\"\",\"missingIngredients\":[],\"steps\":[],\"tip\":\"\"}"}]})});
+    btn.textContent="Asking Chef AI…";
+    const topNames=matches.slice(0,5).map(x=>x.meal.name+" from "+x.meal.country).join(", ");
+    const res=await fetch("/api/chat",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({
+        model:"claude-sonnet-4-6",
+        max_tokens:1000,
+        messages:[{role:"user",content:"You are WorldMeals Chef AI. User ingredients: "+input+". Existing dish matches: "+topNames+". Recommend the best dish and a practical cooking plan. Respond ONLY with valid JSON no markdown: {\"name\":\"\",\"country\":\"\",\"description\":\"\",\"useWhatYouHave\":[],\"missingIngredients\":[],\"steps\":[],\"budgetTip\":\"\",\"substitutionTip\":\"\"}"}]
+      })
+    });
     const data=await res.json();
-    const text=data.content.find(b=>b.type==="text")?.text||"";
+    if(!res.ok) throw new Error(data.error||"Chef AI unavailable");
+    const text=data.content?.find(b=>b.type==="text")?.text||"";
+    if(!text) throw new Error("No Chef AI text returned");
     const r=JSON.parse(text.replace(/```json|```/g,"").trim());
-    document.getElementById("chefResult").innerHTML=`<div class="chef-card"><div class="chef-emoji">${r.emoji}</div><div class="chef-body"><div style="font-size:20px;font-weight:700;margin-bottom:2px">${r.name}</div><div style="font-size:12px;color:#888;margin-bottom:10px">📍 ${r.country} · ⏱ ${r.cookTime} · 🔥 ${r.calories} kcal</div><div style="font-size:13px;color:#555;line-height:1.6;margin-bottom:12px">${r.description}</div>${r.missingIngredients?.length?`<div class="missing-box"><div style="font-size:10px;font-weight:600;color:#92400E;margin-bottom:3px">YOU'LL ALSO NEED</div><div style="font-size:12px;color:#92400E">${r.missingIngredients.join(", ")}</div></div>`:""}<div style="font-size:10px;font-weight:600;color:#888;letter-spacing:0.05em;margin-bottom:8px">STEPS</div>${r.steps?.map((s,i)=>`<div class="step-row"><div class="step-num">${i+1}</div><div class="step-text">${s}</div></div>`).join("")}${r.tip?`<div class="tip-box"><div style="font-size:10px;font-weight:600;color:#166534;margin-bottom:2px">💡 TIP</div><div style="font-size:12px;color:#166534">${r.tip}</div></div>`:""}</div></div>`;
-  }catch(e){document.getElementById("chefResult").innerHTML='<div style="padding:12px;background:#FEE2E2;border-radius:10px;color:#991B1B;font-size:13px">Couldn\'t find a dish — try again!</div>';}
-  btn.disabled=false;btn.textContent="✨ Find me a world dish";
+
+    result.innerHTML += `
+      <div class="chef-ai-card">
+        <div class="chef-ai-head">
+          <div class="chef-ai-badge">🤖 CHEF AI RECOMMENDATION</div>
+          <div style="font-size:20px;font-weight:800;color:var(--text);margin-bottom:3px">${r.name}</div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:10px">📍 ${r.country}</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:12px">${r.description||""}</div>
+        </div>
+        <div class="chef-body">
+          ${r.useWhatYouHave?.length?`<div class="missing-box" style="background:#E8F7EF;border-color:#CDEDDC"><div style="font-size:10px;font-weight:800;color:#1F6B42;margin-bottom:4px">USE WHAT YOU HAVE</div><div style="font-size:12px;color:#1F6B42">${r.useWhatYouHave.join(", ")}</div></div>`:""}
+          ${r.missingIngredients?.length?`<div class="missing-box"><div style="font-size:10px;font-weight:800;color:#92400E;margin-bottom:4px">YOU MAY NEED</div><div style="font-size:12px;color:#92400E">${r.missingIngredients.join(", ")}</div></div>`:""}
+          <div class="section-label">COOKING PLAN</div>
+          ${(r.steps||[]).map((s,i)=>`<div class="step-row"><div class="step-num">${i+1}</div><div class="step-text">${s}</div></div>`).join("")}
+          ${r.budgetTip?`<div class="tip-box"><div style="font-size:10px;font-weight:800;color:#166534;margin-bottom:2px">💰 BUDGET TIP</div><div style="font-size:12px;color:#166534">${r.budgetTip}</div></div>`:""}
+          ${r.substitutionTip?`<div class="tip-box"><div style="font-size:10px;font-weight:800;color:#166534;margin-bottom:2px">🔄 SUBSTITUTION TIP</div><div style="font-size:12px;color:#166534">${r.substitutionTip}</div></div>`:""}
+        </div>
+      </div>`;
+  }catch(e){
+    console.log("Chef AI fallback:",e.message);
+  }
+
+  btn.disabled=false;
+  btn.textContent="✨ Find meals I can cook";
 }
 
 
