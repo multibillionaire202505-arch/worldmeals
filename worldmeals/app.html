@@ -134,6 +134,20 @@ textarea::placeholder{color:#555}
 /* TOAST */
 .toast{position:fixed;top:70px;left:50%;transform:translateX(-50%);background:#F5F5F0;color:#0F0F0F;padding:10px 20px;border-radius:30px;font-size:13px;font-weight:600;z-index:200;white-space:nowrap;opacity:0;transition:opacity 0.2s;pointer-events:none;box-shadow:0 4px 20px rgba(0,0,0,0.4)}
 .toast.show{opacity:1}
+
+/* SMART PLANNER */
+.planner-box{background:#1A1A1A;border:1px solid #2A2A2A;border-radius:16px;padding:14px;margin-bottom:14px}
+.planner-box label{display:block;font-size:10px;color:#666;text-transform:uppercase;letter-spacing:.08em;margin:10px 0 5px}
+.planner-box input,.planner-box select{width:100%;padding:11px 12px;border-radius:12px;border:1px solid #2A2A2A;background:#242424;color:#F5F5F0;font-family:Inter,system-ui,sans-serif;font-size:14px}
+.btn-plan-secondary{width:100%;padding:11px;border-radius:12px;border:1px solid #2A2A2A;background:#242424;color:#F5F5F0;font-size:13px;font-weight:600;cursor:pointer;font-family:Inter,system-ui,sans-serif;margin-top:8px}
+.planner-summary{background:#1A1200;border:1px solid #E8A020;border-radius:16px;padding:12px 14px;margin-bottom:14px;color:#E8A020;font-size:12px;line-height:1.6}
+.grocery-box{background:#1A1A1A;border:1px solid #2A2A2A;border-radius:16px;padding:14px;margin-top:12px}
+.grocery-title{font-size:14px;font-weight:700;margin-bottom:10px;color:#F5F5F0}
+.grocery-sub{font-size:11px;color:#666;margin-bottom:10px;line-height:1.5}
+.grocery-grid{display:grid;grid-template-columns:1fr;gap:0}
+.grocery-item{font-size:12px;color:#AAA;padding:7px 0;border-bottom:1px solid #2A2A2A}
+.grocery-item:last-child{border-bottom:none}
+
 </style>
 </head>
 <body>
@@ -181,13 +195,58 @@ textarea::placeholder{color:#555}
 
 <!-- PLANNER -->
 <div class="page" id="page-planner">
-  <div class="page-title">📅 Weekly Meal Planner</div>
-  <div class="page-sub">Plan your world food journey for the week</div>
+  <div class="page-title">💰 Smart Weekly Planner</div>
+  <div class="page-sub">Enter your budget and WorldMeals will build your week automatically.</div>
+
+  <div class="planner-box">
+    <label>Weekly Budget</label>
+    <input id="weeklyBudget" type="number" min="10" placeholder="Example: 60">
+
+    <label>People</label>
+    <select id="peopleCount">
+      <option value="1">1 person</option>
+      <option value="2">2 people</option>
+      <option value="3">3 people</option>
+      <option value="4">Family / 4 people</option>
+      <option value="5">5 people</option>
+      <option value="6">6 people</option>
+    </select>
+
+    <label>Diet</label>
+    <select id="plannerDiet">
+      <option value="all">No preference</option>
+      <option value="vegan">Vegan</option>
+      <option value="dairy-free">Dairy-free</option>
+      <option value="gluten-free">Gluten-free</option>
+      <option value="vegan-option">Vegan option</option>
+      <option value="gluten-free-option">Gluten-free option</option>
+      <option value="dairy-free-option">Dairy-free option</option>
+    </select>
+
+    <label>Maximum Spice</label>
+    <select id="plannerSpice">
+      <option value="5">Any spice level</option>
+      <option value="1">Mild only</option>
+      <option value="2">Low spice</option>
+      <option value="3">Medium spice</option>
+      <option value="4">Hot is okay</option>
+    </select>
+
+    <button class="btn-chef" onclick="generateSmartPlan()">✨ Generate My Weekly Plan</button>
+    <button class="btn-plan-secondary" onclick="clearSmartPlan()">Reset Plan</button>
+  </div>
+
+  <div class="planner-summary" id="plannerSummary" style="display:none"></div>
+
   <div class="week-stats">
     <div class="week-stat cal"><div class="week-val" id="weekCal">0</div><div style="font-size:11px;color:#92400E">total kcal</div></div>
-    <div class="week-stat bud"><div class="week-val" id="weekBud">$0</div><div style="font-size:11px;color:#166534">total budget</div></div>
+    <div class="week-stat bud"><div class="week-val" id="weekBud">$0</div><div style="font-size:11px;color:#166534">estimated total</div></div>
   </div>
+
   <div id="plannerDays"></div>
+
+  <button class="btn-recipe" style="margin-top:12px" onclick="generateGroceryList()">🛒 Generate Grocery List</button>
+  <div id="groceryList"></div>
 </div>
 
 <!-- TOUR -->
@@ -625,6 +684,114 @@ async function runChef(){
     document.getElementById("chefResult").innerHTML=`<div class="chef-card"><div class="chef-emoji">${r.emoji}</div><div class="chef-body"><div style="font-size:20px;font-weight:700;margin-bottom:2px">${r.name}</div><div style="font-size:12px;color:#888;margin-bottom:10px">📍 ${r.country} · ⏱ ${r.cookTime} · 🔥 ${r.calories} kcal</div><div style="font-size:13px;color:#555;line-height:1.6;margin-bottom:12px">${r.description}</div>${r.missingIngredients?.length?`<div class="missing-box"><div style="font-size:10px;font-weight:600;color:#92400E;margin-bottom:3px">YOU'LL ALSO NEED</div><div style="font-size:12px;color:#92400E">${r.missingIngredients.join(", ")}</div></div>`:""}<div style="font-size:10px;font-weight:600;color:#888;letter-spacing:0.05em;margin-bottom:8px">STEPS</div>${r.steps?.map((s,i)=>`<div class="step-row"><div class="step-num">${i+1}</div><div class="step-text">${s}</div></div>`).join("")}${r.tip?`<div class="tip-box"><div style="font-size:10px;font-weight:600;color:#166534;margin-bottom:2px">💡 TIP</div><div style="font-size:12px;color:#166534">${r.tip}</div></div>`:""}</div></div>`;
   }catch(e){document.getElementById("chefResult").innerHTML='<div style="padding:12px;background:#FEE2E2;border-radius:10px;color:#991B1B;font-size:13px">Couldn\'t find a dish — try again!</div>';}
   btn.disabled=false;btn.textContent="✨ Find me a world dish";
+}
+
+
+function generateSmartPlan(){
+  const budget = Number(document.getElementById("weeklyBudget")?.value || 0);
+  const people = Number(document.getElementById("peopleCount")?.value || 1);
+  const diet = document.getElementById("plannerDiet")?.value || "all";
+  const maxSpice = Number(document.getElementById("plannerSpice")?.value || 5);
+
+  if(!budget || budget < 10){
+    toast("Enter a weekly budget first");
+    return;
+  }
+
+  const preferredBudgetPerServing = budget / people;
+  let pool = MEALS.filter(m=>{
+    if(diet !== "all" && !(m.tags||[]).includes(diet)) return false;
+    if(m.spice > maxSpice) return false;
+    return m.budget <= preferredBudgetPerServing;
+  });
+
+  if(pool.length < 7){
+    pool = MEALS.filter(m=>m.spice <= maxSpice && m.budget <= preferredBudgetPerServing);
+  }
+
+  if(pool.length < 7){
+    pool = MEALS.filter(m=>m.spice <= maxSpice).sort((a,b)=>a.budget-b.budget);
+  }
+
+  pool = [...pool].sort((a,b)=>{
+    if(a.region !== b.region) return a.region.localeCompare(b.region);
+    return a.budget - b.budget;
+  });
+
+  const selected = [];
+  const usedCountries = new Set();
+  let total = 0;
+
+  // First pass: prioritize variety by country while staying under budget.
+  for(const meal of pool){
+    if(selected.length >= 7) break;
+    const mealCost = meal.budget * people;
+    if(total + mealCost <= budget && !usedCountries.has(meal.country)){
+      selected.push(meal);
+      usedCountries.add(meal.country);
+      total += mealCost;
+    }
+  }
+
+  // Second pass: fill remaining days if needed.
+  for(const meal of pool){
+    if(selected.length >= 7) break;
+    if(selected.some(x=>x.id===meal.id)) continue;
+    const mealCost = meal.budget * people;
+    if(total + mealCost <= budget){
+      selected.push(meal);
+      total += mealCost;
+    }
+  }
+
+  if(selected.length < 7){
+    toast("Budget too low for 7 meals");
+    return;
+  }
+
+  DAYS.forEach((day,i)=>{ plan[day] = selected[i].id; });
+  save();
+  renderPlanner();
+
+  const remaining = Math.max(0, budget-total);
+  const summary = document.getElementById("plannerSummary");
+  if(summary){
+    summary.style.display="block";
+    summary.innerHTML=`✨ Plan created for <b>${people}</b> ${people===1?"person":"people"}. Estimated weekly total: <b>$${total}</b>. Remaining budget: <b>$${remaining}</b>.`;
+  }
+  toast("Weekly plan generated!");
+}
+
+function clearSmartPlan(){
+  plan = {};
+  save();
+  renderPlanner();
+  const grocery = document.getElementById("groceryList");
+  if(grocery) grocery.innerHTML="";
+  const summary = document.getElementById("plannerSummary");
+  if(summary){ summary.style.display="none"; summary.innerHTML=""; }
+  toast("Planner reset");
+}
+
+function generateGroceryList(){
+  const plannedMeals = Object.values(plan)
+    .map(id => MEALS.find(m => m.id === id))
+    .filter(Boolean);
+
+  if(!plannedMeals.length){
+    toast("Generate or add meals first");
+    return;
+  }
+
+  const items = [...new Set(plannedMeals.flatMap(m => m.ingredients || []))].sort();
+  const totalBudget = plannedMeals.reduce((s,m)=>s+(m.budget||0),0);
+
+  document.getElementById("groceryList").innerHTML =
+    `<div class="grocery-box">
+      <div class="grocery-title">🛒 Smart Grocery List</div>
+      <div class="grocery-sub">Combined ingredients for your current weekly plan. Estimated base cost: $${totalBudget} per serving.</div>
+      <div class="grocery-grid">${items.map(i=>`<div class="grocery-item">${i}</div>`).join("")}</div>
+    </div>`;
 }
 
 // INIT — render dishes immediately
