@@ -49316,25 +49316,6 @@ window.WORLD_MEALS_DATABASE = [
       ]
     }
   },
-  {id:1001,name:"Attiéké Poisson",country:"Ivory Coast",region:"Africa",emoji:"🐟",cal:520,protein:32,budget:6,time:"45 min",spice:2,tags:["dairy-free","gluten-free","high-protein"],desc:"Grilled fish served with attiéké, onions, tomatoes, and fresh vegetables. A beloved Ivorian classic.",ingredients:["Attiéké","Whole fish","Tomatoes","Onion","Cucumber","Lemon","Chili"],swaps:{spice:[{from:"Chili",to:"Sweet pepper",note:"Keeps flavor with less heat"}],vegan:[{from:"Fish",to:"Grilled mushrooms",note:"Serve the same way with attiéké"}]}},
-
-{id:1002,name:"Garba",country:"Ivory Coast",region:"Africa",emoji:"🐟",cal:560,protein:30,budget:5,time:"25 min",spice:3,tags:["dairy-free","high-protein"],desc:"Popular Ivorian street food made with attiéké and fried tuna, usually topped with onions and spicy seasoning.",ingredients:["Attiéké","Tuna","Onion","Tomato","Chili","Oil","Bouillon"],swaps:{spice:[{from:"Chili",to:"Paprika",note:"Milder but still colorful"}]}},
-
-{id:1003,name:"Kedjenou",country:"Ivory Coast",region:"Africa",emoji:"🍗",cal:580,protein:38,budget:7,time:"1.5 hrs",spice:2,tags:["dairy-free","gluten-free","high-protein"],desc:"Slow-cooked chicken stew prepared with tomatoes, onions, peppers, and herbs. One of Ivory Coast's most loved dishes.",ingredients:["Chicken","Tomatoes","Onion","Bell pepper","Garlic","Ginger","Bay leaf"],swaps:{spice:[{from:"Hot pepper",to:"Bell pepper",note:"Keeps the stew mild"}]}},
-
-{id:1004,name:"Alloco",country:"Ivory Coast",region:"Africa",emoji:"🍌",cal:320,protein:3,budget:3,time:"20 min",spice:1,tags:["dairy-free","vegan","gluten-free"],desc:"Sweet ripe plantains fried until golden and served as a snack, side dish, or street food favorite.",ingredients:["Ripe plantains","Oil","Salt","Onion","Tomato sauce"],swaps:{vegan:[{from:"Tomato sauce with fish",to:"Plain spicy tomato sauce",note:"Keeps it fully vegan"}]}},
-
-{id:1005,name:"Sauce Graine",country:"Ivory Coast",region:"Africa",emoji:"🌴",cal:610,protein:34,budget:8,time:"1.5 hrs",spice:2,tags:["dairy-free","gluten-free","high-protein"],desc:"Rich palm nut sauce often cooked with meat or fish and served with foutou, rice, or plantain.",ingredients:["Palm nut cream","Beef","Fish","Onion","Tomatoes","Garlic","Chili"],swaps:{spice:[{from:"Chili",to:"Sweet pepper",note:"Less heat, same richness"}]}},
-
-{id:1006,name:"Foutou Banane",country:"Ivory Coast",region:"Africa",emoji:"🍌",cal:410,protein:4,budget:4,time:"40 min",spice:1,tags:["dairy-free","vegan","gluten-free"],desc:"Traditional pounded plantain served with soups and sauces across Ivory Coast.",ingredients:["Green plantains","Cassava","Water","Salt"],swaps:{gluten:[{from:"None",to:"Naturally gluten-free",note:"No change needed"}]}},
-
-{id:1007,name:"Foutou Igname",country:"Ivory Coast",region:"Africa",emoji:"🍠",cal:430,protein:5,budget:4,time:"45 min",spice:1,tags:["dairy-free","vegan","gluten-free"],desc:"Smooth pounded yam often served with sauce graine, peanut sauce, or light soup.",ingredients:["Yam","Water","Salt"],swaps:{vegan:[{from:"Traditional sauces with meat",to:"Vegetable peanut sauce",note:"Pairs well with yam"}]}},
-
-{id:1008,name:"Sauce Arachide",country:"Ivory Coast",region:"Africa",emoji:"🥜",cal:590,protein:35,budget:7,time:"1 hr",spice:2,tags:["dairy-free","gluten-free","high-protein"],desc:"Creamy peanut sauce cooked with chicken or beef and served with rice, foutou, or plantain.",ingredients:["Peanut butter","Chicken","Tomatoes","Onion","Garlic","Ginger","Stock"],swaps:{vegan:[{from:"Chicken",to:"Mushrooms + chickpeas",note:"Keeps protein and richness"}]}},
-
-{id:1009,name:"Riz Gras",country:"Ivory Coast",region:"Africa",emoji:"🍚",cal:640,protein:28,budget:6,time:"55 min",spice:2,tags:["dairy-free","gluten-free"],desc:"Flavorful one-pot rice cooked with meat, vegetables, tomatoes, and spices.",ingredients:["Rice","Beef","Tomatoes","Carrots","Onion","Garlic","Bell pepper"],swaps:{vegan:[{from:"Beef",to:"Beans + mushrooms",note:"Adds protein and depth"}]}},
-
-{id:1010,name:"Sauce Claire",country:"Ivory Coast",region:"Africa",emoji:"🍲",cal:470,protein:29,budget:6,time:"45 min",spice:1,tags:["dairy-free","gluten-free","high-protein"],desc:"Light Ivorian soup made with fish or chicken, tomatoes, vegetables, and gentle seasoning.",ingredients:["Fish","Tomatoes","Onion","Okra","Garlic","Ginger","Water"],swaps:{spice:[{from:"Hot pepper",to:"No pepper",note:"Keeps it gentle and family-friendly"}]}}
    {
     "name": "Shurpa Turkmen",
     "country": "Turkmenistan",
