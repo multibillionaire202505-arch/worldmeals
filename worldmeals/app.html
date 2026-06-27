@@ -211,6 +211,299 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 .scan-summary-sub{font-size:12px;color:var(--muted);line-height:1.5}
 @media(max-width:520px){.scan-actions{grid-template-columns:1fr}}
 
+
+/* WORLDMEALS PREMIUM POLISH — filter cards + premium browse */
+.premium-top{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+  margin-bottom:14px;
+}
+.brand-hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:4px 2px 2px;
+}
+.brand-main{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.brand-globe{
+  font-size:38px;
+  filter:drop-shadow(0 8px 14px rgba(47,143,91,.16));
+}
+.brand-title{
+  font-size:28px;
+  line-height:1;
+  font-weight:900;
+  letter-spacing:-1px;
+}
+.brand-title .green{color:#137333}
+.brand-title .orange{color:#D9630B}
+.brand-tagline{
+  font-size:12px;
+  color:var(--muted);
+  font-weight:700;
+  margin-top:3px;
+}
+.search-wrap{
+  position:relative;
+}
+.search-wrap::before{
+  content:"🔍";
+  position:absolute;
+  left:16px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:17px;
+  opacity:.75;
+  z-index:1;
+}
+.search-wrap .search{
+  padding-left:48px;
+  margin-bottom:0;
+  min-height:58px;
+  border-radius:22px;
+  font-size:15px;
+}
+.filter-row{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin-bottom:12px;
+}
+.filter-group{
+  position:relative;
+  background:rgba(255,255,255,.78);
+  border:1px solid rgba(232,221,208,.95);
+  border-radius:18px;
+  padding:12px 14px 10px 50px;
+  min-height:70px;
+  box-shadow:0 8px 22px rgba(83,55,29,.07);
+}
+.filter-group::before{
+  position:absolute;
+  left:15px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:25px;
+}
+.filter-group.f-region::before{content:"🌍"}
+.filter-group.f-diet::before{content:"🥗"}
+.filter-group.f-country::before{content:"🏳️"}
+.filter-group.f-time::before{content:"⏱️"}
+.filter-group.f-protein::before{content:"💪"}
+.filter-group.f-spice::before{content:"🌶️"}
+.filter-group.f-calories::before{content:"🔥"}
+.filter-group.f-budget::before{content:"💰"}
+.filter-group label{
+  margin:0 0 2px;
+  font-size:11px;
+  letter-spacing:0;
+  text-transform:none;
+  color:#5F554A;
+  font-weight:800;
+}
+.filter-group select{
+  padding:0 26px 0 0;
+  border:none;
+  background:transparent;
+  border-radius:0;
+  font-size:15px;
+  font-weight:900;
+  color:var(--text);
+  box-shadow:none;
+  outline:none;
+  appearance:auto;
+}
+.slider-row{
+  grid-template-columns:1fr;
+  gap:12px;
+  padding:14px;
+  border-radius:22px;
+}
+.slider-group label{
+  font-size:12px;
+  color:var(--text);
+  letter-spacing:0;
+  text-transform:none;
+}
+.slider-group input[type=range]{
+  height:6px;
+}
+.count{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:15px;
+  color:var(--text);
+  margin:16px 0 14px;
+}
+.count::before{
+  content:"🍴";
+  width:26px;
+  height:26px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#E6B53E;
+  color:white;
+  font-size:14px;
+  box-shadow:0 8px 18px rgba(196,122,44,.18);
+}
+.count strong{color:var(--green)}
+.grid{
+  grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:18px;
+}
+.card{
+  border-radius:24px;
+}
+.card-img{
+  height:210px;
+}
+.card-body{
+  padding:14px 16px 16px;
+}
+.card-name{
+  font-size:17px;
+  margin-bottom:6px;
+}
+.card-country{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:12px;
+  margin-bottom:12px;
+}
+.card-rating{
+  margin-left:auto;
+  color:#6B5C4D;
+  font-size:12px;
+  font-weight:800;
+}
+.metric-row{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+  margin:12px 0 14px;
+}
+.metric{
+  text-align:center;
+  font-size:11px;
+  color:var(--muted);
+  font-weight:700;
+}
+.metric b{
+  display:block;
+  color:var(--text);
+  font-size:12px;
+  margin-bottom:3px;
+}
+.view-recipe-btn{
+  width:100%;
+  border:1px solid #E89452;
+  color:#D9630B;
+  background:linear-gradient(135deg,#FFFDF8,#FFF7EC);
+  border-radius:14px;
+  padding:11px;
+  font-size:13px;
+  font-weight:900;
+  font-family:Inter,system-ui,sans-serif;
+}
+@media (min-width:900px){
+  .premium-top{
+    grid-template-columns:260px 1fr;
+    align-items:center;
+  }
+  .filter-row{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+  }
+  .slider-row{
+    grid-template-columns:1fr 1fr 1fr auto;
+    align-items:center;
+  }
+}
+@media (max-width:520px){
+  .brand-title{font-size:23px}
+  .brand-globe{font-size:32px}
+  .filter-row{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+  .card-img{height:220px}
+}
+
+
+/* WORLDMEALS FILTER GRID UPDATE — 4 cards per row + sliders on same line */
+.filter-row{
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:12px !important;
+}
+.slider-row{
+  grid-template-columns:1fr 1fr 1fr 140px !important;
+  align-items:center !important;
+}
+.slider-row .btn-chef{
+  height:54px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+@media(max-width:760px){
+  .filter-row{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+  .slider-row{
+    grid-template-columns:1fr 1fr !important;
+  }
+  .slider-row .btn-chef{
+    grid-column:1 / -1;
+  }
+}
+@media(max-width:420px){
+  .filter-row{
+    grid-template-columns:1fr !important;
+  }
+  .slider-row{
+    grid-template-columns:1fr !important;
+  }
+}
+
+
+/* WORLDMEALS TYPOGRAPHY SOFTENING — less bold, more premium */
+.filter-group{
+  padding-left:48px !important;
+}
+.filter-group::before{
+  font-size:21px !important;
+}
+.filter-group label{
+  font-size:11px !important;
+  font-weight:600 !important;
+  color:#6B6258 !important;
+  letter-spacing:0 !important;
+}
+.filter-group select{
+  font-size:15px !important;
+  font-weight:600 !important;
+  color:#24201B !important;
+  line-height:1.25 !important;
+  padding-right:30px !important;
+}
+.card-name{
+  font-weight:750 !important;
+}
+.card-country,
+.metric,
+.metric b{
+  font-weight:600 !important;
+}
+.view-recipe-btn{
+  font-weight:700 !important;
+}
+
 </style>
 </head>
 <body>
@@ -225,27 +518,36 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 
 <!-- BROWSE -->
 <div class="page active" id="page-browse">
-  <input class="search" id="searchInput" placeholder="Search dish or country…" oninput="renderGrid()">
+  <div class="premium-top">
+    <div class="brand-hero">
+      <div class="brand-main">
+        <div class="brand-globe">🌍</div>
+        <div>
+          <div class="brand-title"><span class="green">World</span> <span class="orange">Meals</span></div>
+          <div class="brand-tagline">Global Recipes. Local Love.</div>
+        </div>
+      </div>
+    </div>
+    <div class="search-wrap">
+      <input class="search" id="searchInput" placeholder="Search dish or country…" oninput="renderGrid()">
+    </div>
+  </div>
+
   <div class="filter-row">
-    <div class="filter-group"><label>Region</label>
+    <div class="filter-group f-region"><label>Region</label>
       <select id="regionFilter" onchange="renderGrid()">
         <option>All regions</option><option>Asia</option><option>Europe</option><option>Americas</option><option>Africa</option><option>Middle East</option>
       </select>
     </div>
-    <div class="filter-group"><label>Diet</label>
+    <div class="filter-group f-country"><label>Country</label>
+      <select id="countryFilter" onchange="renderGrid()"><option value="all">All countries</option></select>
+    </div>
+    <div class="filter-group f-diet"><label>Diet</label>
       <select id="dietFilter" onchange="renderGrid()">
         <option value="all">All diets</option><option value="dairy-free">Dairy-free</option><option value="gluten-free">Gluten-free</option><option value="vegan">Vegan</option><option value="gluten-free-option">GF option</option><option value="vegan-option">Vegan option</option>
       </select>
     </div>
-    <div class="filter-group"><label>Country</label>
-      <select id="countryFilter" onchange="renderGrid()"><option value="all">All countries</option></select>
-    </div>
-    <div class="filter-group"><label>Cook Time</label>
-      <select id="timeFilter" onchange="renderGrid()">
-        <option value="all">Any time</option><option value="15">15 min or less</option><option value="30">30 min or less</option><option value="45">45 min or less</option><option value="60">1 hour or less</option>
-      </select>
-    </div>
-    <div class="filter-group"><label>Protein</label>
+    <div class="filter-group f-protein"><label>Protein</label>
       <select id="proteinFilter" onchange="renderGrid()">
         <option value="all">Any protein</option>
         <option value="20">20g+ protein</option>
@@ -253,20 +555,42 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
         <option value="40">40g+ athlete mode</option>
       </select>
     </div>
+    <div class="filter-group f-time"><label>Cook Time</label>
+      <select id="timeFilter" onchange="renderGrid()">
+        <option value="all">Any time</option><option value="15">15 min or less</option><option value="30">30 min or less</option><option value="45">45 min or less</option><option value="60">1 hour or less</option>
+      </select>
+    </div>
+    <div class="filter-group f-spice"><label>Spice Level</label>
+      <select id="spiceQuickFilter" onchange="syncSpiceSelect(this.value)">
+        <option value="5">Any spice</option><option value="1">Mild only</option><option value="2">Low spice</option><option value="3">Medium spice</option><option value="4">Hot is okay</option>
+      </select>
+    </div>
+    <div class="filter-group f-calories"><label>Calories</label>
+      <select id="calQuickFilter" onchange="syncCalSelect(this.value)">
+        <option value="1000">Any calories</option><option value="400">Under 400</option><option value="600">Under 600</option><option value="800">Under 800</option>
+      </select>
+    </div>
+    <div class="filter-group f-budget"><label>Budget</label>
+      <select id="budgetQuickFilter" onchange="syncBudgetSelect(this.value)">
+        <option value="40">Any budget</option><option value="5">$5 or less</option><option value="10">$10 or less</option><option value="20">$20 or less</option>
+      </select>
+    </div>
   </div>
+
   <div class="slider-row">
     <div class="slider-group">
-      <label>Cal: <b id="calLbl">1000</b></label>
-      <input type="range" id="calSlider" min="200" max="1000" step="50" value="1000" oninput="document.getElementById('calLbl').textContent=this.value;renderGrid()">
+      <label>Calories: 0 - <b id="calLbl">1000+</b></label>
+      <input type="range" id="calSlider" min="200" max="1000" step="50" value="1000" oninput="document.getElementById('calLbl').textContent=this.value>=1000?'1000+':this.value;renderGrid()">
     </div>
     <div class="slider-group">
-      <label>Budget: <b id="budLbl">$40</b></label>
-      <input type="range" id="budSlider" min="1" max="40" step="1" value="40" oninput="document.getElementById('budLbl').textContent='$'+this.value;renderGrid()">
+      <label>Budget: $0 - <b id="budLbl">$40+</b></label>
+      <input type="range" id="budSlider" min="1" max="40" step="1" value="40" oninput="document.getElementById('budLbl').textContent=this.value>=40?'$40+':'$'+this.value;renderGrid()">
     </div>
     <div class="slider-group">
       <label>Spice: <b id="spLbl">Any</b></label>
       <input type="range" id="spSlider" min="1" max="5" step="1" value="5" oninput="updateSpiceLabel(this.value);renderGrid()">
     </div>
+    <button class="btn-chef" style="margin:0;padding:13px 18px;white-space:nowrap" onclick="resetBrowseFilters()">↻ Reset</button>
   </div>
   <div class="count" id="countLbl"></div>
   <div class="grid" id="grid"></div>
@@ -573,6 +897,48 @@ function isHighProtein(m, min=30){
 
 function updateSpiceLabel(v){document.getElementById("spLbl").textContent=SPICE[parseInt(v)]||"Any";}
 
+
+function syncSpiceSelect(v){
+  document.getElementById("spSlider").value=v;
+  updateSpiceLabel(v);
+  renderGrid();
+}
+function syncCalSelect(v){
+  document.getElementById("calSlider").value=v;
+  document.getElementById("calLbl").textContent=Number(v)>=1000?"1000+":v;
+  renderGrid();
+}
+function syncBudgetSelect(v){
+  document.getElementById("budSlider").value=v;
+  document.getElementById("budLbl").textContent=Number(v)>=40?"$40+":"$"+v;
+  renderGrid();
+}
+function resetBrowseFilters(){
+  document.getElementById("searchInput").value="";
+  document.getElementById("regionFilter").value="All regions";
+  document.getElementById("dietFilter").value="all";
+  document.getElementById("countryFilter").value="all";
+  document.getElementById("timeFilter").value="all";
+  document.getElementById("proteinFilter").value="all";
+  document.getElementById("spiceQuickFilter").value="5";
+  document.getElementById("calQuickFilter").value="1000";
+  document.getElementById("budgetQuickFilter").value="40";
+  document.getElementById("calSlider").value="1000";
+  document.getElementById("budSlider").value="40";
+  document.getElementById("spSlider").value="5";
+  document.getElementById("calLbl").textContent="1000+";
+  document.getElementById("budLbl").textContent="$40+";
+  updateSpiceLabel(5);
+  renderGrid();
+}
+function countryFlag(country){
+  const flags={"India":"🇮🇳","Japan":"🇯🇵","Thailand":"🇹🇭","South Korea":"🇰🇷","Ivory Coast":"🇨🇮","Nigeria":"🇳🇬","Ghana":"🇬🇭","France":"🇫🇷","Italy":"🇮🇹","Mexico":"🇲🇽","USA":"🇺🇸","United States":"🇺🇸","China":"🇨🇳","Morocco":"🇲🇦","Ethiopia":"🇪🇹","Spain":"🇪🇸","Germany":"🇩🇪","Canada":"🇨🇦","Brazil":"🇧🇷","Colombia":"🇨🇴","Peru":"🇵🇪","Vietnam":"🇻🇳","Lebanon":"🇱🇧","Turkey":"🇹🇷","Indonesia":"🇮🇩","Malaysia":"🇲🇾","Philippines":"🇵🇭","Jamaica":"🇯🇲","South Africa":"🇿🇦"};
+  return flags[country] || "🌍";
+}
+function mealRating(m){
+  return (4.6 + ((m.id % 4) * 0.1)).toFixed(1);
+}
+
 function renderGrid(){
   const q=document.getElementById("searchInput").value.toLowerCase();
   const reg=document.getElementById("regionFilter").value;
@@ -597,7 +963,7 @@ function renderGrid(){
     return true;
   });
 
-  document.getElementById("countLbl").textContent=filtered.length+" of "+MEALS.length+" dishes";
+  document.getElementById("countLbl").innerHTML=`<strong>${filtered.length.toLocaleString()}+</strong> dishes found`;
   const g=document.getElementById("grid");
 
   if(!filtered.length){
@@ -612,13 +978,17 @@ function renderGrid(){
       ${cooked.includes(m.id)?'<div class="cooked-badge">✓ Cooked</div>':""}
       <div class="card-body">
         <div class="card-name">${m.name}</div>
-        <div class="card-country">📍 ${m.country}</div>
-        <div class="tags">
-          <span class="tag t-cal">${m.cal} kcal</span>
-          <span class="tag t-protein">💪 ${mealProtein(m)}g</span>
-          <span class="tag t-bud">$${m.budget}</span>
-          <span class="tag t-sp"><span class="dot" style="background:${sc(m.spice)}"></span>${SPICE[m.spice]}</span>
+        <div class="card-country">
+          <span>${countryFlag(m.country)} ${m.country}</span>
+          <span class="card-rating">⭐ ${mealRating(m)}</span>
         </div>
+        <div class="metric-row">
+          <div class="metric"><b>💪 ${mealProtein(m)}g</b>Protein</div>
+          <div class="metric"><b>🔥 ${m.cal}</b>Calories</div>
+          <div class="metric"><b>⏱ ${m.time}</b>Cook Time</div>
+          <div class="metric"><b>💵 $${m.budget}</b>Budget</div>
+        </div>
+        <button class="view-recipe-btn" onclick="event.stopPropagation();openModal(${m.id})">View Recipe</button>
       </div>
     </div>`).join("");
 }
