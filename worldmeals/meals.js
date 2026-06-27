@@ -49364,6 +49364,146 @@ window.WORLD_MEALS_DATABASE = [
           "note": "Use the closest local substitute"
         }
       ]
-    }
-  }
+    }0o
+ ,{
+    "id": 1001,
+    "name": "Attiéké",
+    "country": "Ivory Coast",
+    "region": "Africa",
+    "emoji": "🍚",
+    "cal": 320,
+    "budget": 4,
+    "time": "30 min",
+    "spice": 1,
+    "tags": ["dairy-free", "vegan", "gluten-free"],
+    "desc": "Fermented cassava couscous served with grilled fish and fresh vegetables. The most beloved side dish in Côte d'Ivoire.",
+    "ingredients": ["Cassava", "Grilled fish", "Tomatoes", "Onion", "Lime", "Chili", "Palm oil"],
+    "swaps": {"spice": [{"from": "Chili", "to": "Omit", "note": "Still fresh and flavorful without heat"}], "vegan": [{"from": "Grilled fish", "to": "Grilled tofu", "note": "Marinate in lime and spices"}]}
+  },{
+    "id": 1002,
+    "name": "Kedjenou",
+    "country": "Ivory Coast",
+    "region": "Africa",
+    "emoji": "🍗",
+    "cal": 420,
+    "budget": 9,
+    "time": "1.5 hrs",
+    "spice": 2,
+    "tags": ["dairy-free", "gluten-free"],
+    "desc": "Slow-steamed chicken with vegetables in a sealed pot. A traditional Ivorian celebration dish.",
+    "ingredients": ["Chicken", "Tomatoes", "Onion", "Bell pepper", "Eggplant", "Ginger", "Thyme"],
+    "swaps": {"spice": [{"from": "Scotch bonnet", "to": "Bell pepper only", "note": "Same sweetness, no heat"}], "vegan": [{"from": "Chicken", "to": "Jackfruit", "note": "Same slow cooking method"}]}
+  },{
+    "id": 1003,
+    "name": "Sauce Graine",
+    "country": "Ivory Coast",
+    "region": "Africa",
+    "emoji": "🥘",
+    "cal": 520,
+    "budget": 8,
+    "time": "2 hrs",
+    "spice": 2,
+    "tags": ["dairy-free", "gluten-free"],
+    "desc": "Rich palm nut sauce with smoked fish and meat. A deeply aromatic West African classic.",
+    "ingredients": ["Palm nuts", "Smoked fish", "Beef", "Onion", "Garlic", "Ginger", "Chili"],
+    "swaps": {"spice": [{"from": "Chili", "to": "Mild paprika", "note": "Keeps the rich color"}], "vegan": [{"from": "Smoked fish + beef", "to": "Smoked tofu + mushrooms", "note": "Add nori for ocean depth"}]}
+  },{
+    "id": 1004,
+    "name": "Foutou Banane",
+    "country": "Ivory Coast",
+    "region": "Africa",
+    "emoji": "🍌",
+    "cal": 380,
+    "budget": 5,
+    "time": "45 min",
+    "spice": 1,
+    "tags": ["dairy-free", "vegan", "gluten-free"],
+    "desc": "Pounded plantain and cassava dough served alongside rich soups and stews.",
+    "ingredients": ["Plantain", "Cassava", "Water", "Salt"],
+    "swaps": {"vegan": [{"from": "Already vegan", "to": "Already vegan", "note": "Naturally plant-based"}]}
+  },{
+    "id": 1005,
+    "name": "Garba",
+    "country": "Ivory Coast",
+    "region": "Africa",
+    "emoji": "🐟",
+    "cal": 480,
+    "budget": 5,
+    "time": "20 min",
+    "spice": 2,
+    "tags": ["dairy-free", "gluten-free"],
+    "desc": "Attiéké served with fried tuna, raw onions, and chili. Abidjan's most popular street food.",
+    "ingredients": ["Attiéké", "Fried tuna", "Raw onion", "Tomatoes", "Chili", "Lime", "Mustard"],
+    "swaps": {"spice": [{"from": "Chili", "to": "Omit", "note": "Still bright with lime"}], "vegan": [{"from": "Fried tuna", "to": "Fried tofu", "note": "Season with nori and soy"}]}
+  },{
+    "id": 1006,
+    "name": "Aloco",
+    "country": "Ivory Coast",
+    "region": "Africa",
+    "emoji": "🍟",
+    "cal": 320,
+    "budget": 3,
+    "time": "20 min",
+    "spice": 1,
+    "tags": ["dairy-free", "vegan", "gluten-free"],
+    "desc": "Deep fried ripe plantains served with chili sauce and fried fish. A beloved Ivorian snack.",
+    "ingredients": ["Ripe plantains", "Palm oil", "Chili", "Salt", "Fried fish"],
+    "swaps": {"spice": [{"from": "Chili sauce", "to": "Mild tomato sauce", "note": "Sweet and tangy without heat"}], "vegan": [{"from": "Fried fish", "to": "Omit or fried tofu", "note": "Aloco is delicious on its own"}]}
+  },{
+    "id": 1007,
+    "name": "Soupe Kpé",
+    "country": "Ivory Coast",
+    "region": "Africa",
+    "emoji": "🍲",
+    "cal": 380,
+    "budget": 7,
+    "time": "1 hr",
+    "spice": 2,
+    "tags": ["dairy-free", "gluten-free"],
+    "desc": "Okra soup with smoked fish and leafy greens. A staple of southern Ivory Coast.",
+    "ingredients": ["Okra", "Smoked fish", "Spinach", "Palm oil", "Onion", "Garlic", "Chili"],
+    "swaps": {"spice": [{"from": "Chili", "to": "Mild pepper", "note": "All the flavor without heat"}], "vegan": [{"from": "Smoked fish", "to": "Smoked tofu", "note": "Adds same depth"}]}
+  },{
+    "id": 1008,
+    "name": "Riz Gras",
+    "country": "Ivory Coast",
+    "region": "Africa",
+    "emoji": "🍛",
+    "cal": 520,
+    "budget": 6,
+    "time": "1 hr",
+    "spice": 2,
+    "tags": ["dairy-free", "gluten-free"],
+    "desc": "One pot rice cooked in tomato sauce with meat and vegetables. Ivorian comfort food.",
+    "ingredients": ["Long grain rice", "Chicken", "Tomatoes", "Onion", "Garlic", "Bell pepper", "Palm oil"],
+    "swaps": {"spice": [{"from": "Scotch bonnet", "to": "Bell pepper only", "note": "All color, no fire"}], "vegan": [{"from": "Chicken", "to": "Chickpeas + vegetables", "note": "Season same way"}]}
+  },{
+    "id": 1009,
+    "name": "Bangui",
+    "country": "Ivory Coast",
+    "region": "Africa",
+    "emoji": "🥤",
+    "cal": 120,
+    "budget": 2,
+    "time": "5 min",
+    "spice": 1,
+    "tags": ["dairy-free", "vegan", "gluten-free"],
+    "desc": "Fresh palm wine tapped directly from palm trees. A traditional Ivorian ceremonial drink.",
+    "ingredients": ["Palm sap", "Water"],
+    "swaps": {"vegan": [{"from": "Already vegan", "to": "Already vegan", "note": "Naturally plant-based"}]}
+  },{
+    "id": 1010,
+    "name": "Poisson Braisé",
+    "country": "Ivory Coast",
+    "region": "Africa",
+    "emoji": "🐟",
+    "cal": 380,
+    "budget": 10,
+    "time": "45 min",
+    "spice": 2,
+    "tags": ["dairy-free", "gluten-free"],
+    "desc": "Whole fish grilled over charcoal with spiced tomato sauce and attiéké. Street food perfection.",
+    "ingredients": ["Whole tilapia", "Tomatoes", "Onion", "Garlic", "Ginger", "Chili", "Lime"],
+    "swaps": {"spice": [{"from": "Chili", "to": "Mild paprika", "note": "Same smoky flavor"}], "vegan": [{"from": "Whole tilapia", "to": "Whole cauliflower", "note": "Marinate and grill same way"}]}
+  } }
 ];
