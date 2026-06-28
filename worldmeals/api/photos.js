@@ -5,6 +5,21 @@ export default async function handler(req) {
     const url = new URL(req.url);
     const rawQuery = url.searchParams.get("query") || "food";
 
+    // DEBUG - remove after testing
+    if (rawQuery === "debug") {
+      return new Response(
+        JSON.stringify({
+          hasUnsplashKey: !!process.env.UNSPLASH_ACCESS_KEY,
+          unsplashKeyLength: process.env.UNSPLASH_ACCESS_KEY
+            ? process.env.UNSPLASH_ACCESS_KEY.length
+            : 0
+        }),
+        {
+          headers: { "Content-Type": "application/json" }
+        }
+      );
+    }
+
     const clean = rawQuery
       .replace(/\bfood\b/gi, "")
       .replace(/\bdish\b/gi, "")
@@ -20,6 +35,7 @@ export default async function handler(req) {
       `${clean} food`
     ].filter(Boolean);
 
+    // 1. Try TheMealDB
     for (const q of searches) {
       const mealDbRes = await fetch(
         `https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(q)}`
@@ -30,13 +46,21 @@ export default async function handler(req) {
         const meal = mealDbData?.meals?.[0];
 
         if (meal?.strMealThumb) {
-          return new Response(JSON.stringify({ url: meal.strMealThumb, source: "themealdb", query: q }), {
-            headers: { "Content-Type": "application/json" }
-          });
+          return new Response(
+            JSON.stringify({
+              url: meal.strMealThumb,
+              source: "themealdb",
+              query: q
+            }),
+            {
+              headers: { "Content-Type": "application/json" }
+            }
+          );
         }
       }
     }
 
+    // 2. Try Unsplash
     for (const q of searches) {
       const unsplashRes = await fetch(
         `https://api.unsplash.com/search/photos?query=${encodeURIComponent(q)}&per_page=1&orientation=landscape`,
@@ -52,21 +76,41 @@ export default async function handler(req) {
         const photo = data?.results?.[0];
 
         if (photo?.urls?.regular) {
-          return new Response(JSON.stringify({ url: photo.urls.regular, source: "unsplash", query: q }), {
-            headers: { "Content-Type": "application/json" }
-          });
+          return new Response(
+            JSON.stringify({
+              url: photo.urls.regular,
+              source: "unsplash",
+              query: q
+            }),
+            {
+              headers: { "Content-Type": "application/json" }
+            }
+          );
         }
       }
     }
 
-    return new Response(JSON.stringify({ url: "", source: "none" }), {
-      headers: { "Content-Type": "application/json" }
-    });
+    return new Response(
+      JSON.stringify({
+        url: "",
+        source: "none"
+      }),
+      {
+        headers: { "Content-Type": "application/json" }
+      }
+    );
 
   } catch (e) {
-    return new Response(JSON.stringify({ url: "", source: "error" }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" }
-    });
+    return new Response(
+      JSON.stringify({
+        url: "",
+        source: "error",
+        message: e.message
+      }),
+      {
+        status: 200,
+        headers: { "Content-Type": "application/json" }
+      }
+    );
   }
 }
