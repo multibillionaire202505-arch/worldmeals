@@ -864,26 +864,100 @@ function thumbHTML(m){
   return `<div class="day-thumb"><img src="${mealImage(m)}" alt="${m.name}" loading="lazy" onerror="this.outerHTML='<span>${m.emoji||'🍽️'}</span>'"></div>`;
 }
 
-async function loadMealPhotos(){
-  const batch = MEALS
-    .filter(m => !m.image || m.image.includes("source.unsplash.com"))
-    .slice(0, 30);
+/* REAL PHOTO LOADER — uses /api/photos and replaces old source.unsplash links */
+const WM_PHOTO_CACHE_KEY = "wm_photo_cache_v1";
+let wmPhotoCache = {};
+let wmPhotoLoading = false;
+let wmPhotoTimer = null;
+let currentRenderedMeals = [];
 
-  for(const m of batch){
+try{
+  wmPhotoCache = JSON.parse(localStorage.getItem(WM_PHOTO_CACHE_KEY) || "{}");
+}catch(e){
+  wmPhotoCache = {};
+}
+
+function mealPhotoKey(m){
+  return String(m?.id || slugifyMeal(m?.name || ""));
+}
+
+function needsRealPhoto(m){
+  const img = String(m?.image || "");
+  return !m?._photoTried && (!img || img.includes("source.unsplash.com"));
+}
+
+function applyCachedMealPhotos(){
+  MEALS.forEach(m=>{
+    const cached = wmPhotoCache[mealPhotoKey(m)];
+    if(cached) m.image = cached;
+  });
+}
+
+async function fetchMealPhoto(m){
+  if(!m || !needsRealPhoto(m)) return null;
+
+  const key = mealPhotoKey(m);
+  if(wmPhotoCache[key]){
+    m.image = wmPhotoCache[key];
+    return m.image;
+  }
+
+  const searches = [
+    `${m.name} ${m.country} food`,
+    `${m.name} dish`,
+    `${m.name} recipe`,
+    `${m.country} traditional food`
+  ];
+
+  for(const search of searches){
     try{
-      const q = encodeURIComponent(`${m.name} ${m.country} food`);
-      const res = await fetch(`/api/photos?query=${q}`);
-      const data = await res.json();
+      const res = await fetch(`/api/photos?query=${encodeURIComponent(search)}`);
+      if(!res.ok) continue;
 
+      const data = await res.json();
       if(data.url){
         m.image = data.url;
+        wmPhotoCache[key] = data.url;
+        localStorage.setItem(WM_PHOTO_CACHE_KEY, JSON.stringify(wmPhotoCache));
+        return data.url;
       }
     }catch(e){
-      console.log("Photo fetch failed for", m.name);
+      console.log("Photo fetch failed for", m.name, e);
     }
   }
 
+  m._photoTried = true;
+  return null;
+}
+
+function scheduleMealPhotoLoad(){
+  clearTimeout(wmPhotoTimer);
+  wmPhotoTimer = setTimeout(()=>loadMealPhotos(), 250);
+}
+
+async function loadMealPhotos(){
+  if(wmPhotoLoading) return;
+
+  applyCachedMealPhotos();
+
+  const visible = (currentRenderedMeals.length ? currentRenderedMeals : MEALS)
+    .filter(needsRealPhoto)
+    .slice(0, 12);
+
+  if(!visible.length) return;
+
+  wmPhotoLoading = true;
+
+  for(const m of visible){
+    await fetchMealPhoto(m);
+  }
+
+  wmPhotoLoading = false;
   renderGrid();
+
+  if((currentRenderedMeals.length ? currentRenderedMeals : MEALS).some(needsRealPhoto)){
+    scheduleMealPhotoLoad();
+  }
 }
 
 function parseMealMinutes(time){
@@ -985,6 +1059,7 @@ function renderGrid(){
     return true;
   });
 
+  currentRenderedMeals = filtered;
   document.getElementById("countLbl").innerHTML=`<strong>${filtered.length.toLocaleString()}+</strong> dishes found`;
   const g=document.getElementById("grid");
 
@@ -1013,6 +1088,8 @@ function renderGrid(){
         <button class="view-recipe-btn" onclick="event.stopPropagation();openModal(${m.id})">View Recipe</button>
       </div>
     </div>`).join("");
+
+  scheduleMealPhotoLoad();
 }
 
 function toggleFav(id){
