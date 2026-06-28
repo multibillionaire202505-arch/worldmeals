@@ -5,7 +5,7 @@ export default async function handler(req) {
     const url = new URL(req.url);
     const rawQuery = url.searchParams.get("query") || "food";
 
-    // DEBUG - remove after testing
+    // DEBUG 1 — check if Vercel can read the key
     if (rawQuery === "debug") {
       return new Response(
         JSON.stringify({
@@ -14,9 +14,30 @@ export default async function handler(req) {
             ? process.env.UNSPLASH_ACCESS_KEY.length
             : 0
         }),
-        {
-          headers: { "Content-Type": "application/json" }
+        { headers: { "Content-Type": "application/json" } }
+      );
+    }
+
+    // DEBUG 2 — check Unsplash response directly
+    if (rawQuery === "debug-unsplash") {
+      const testUrl =
+        "https://api.unsplash.com/search/photos?query=Butter%20Chicken&per_page=1&orientation=landscape";
+
+      const testRes = await fetch(testUrl, {
+        headers: {
+          Authorization: `Client-ID ${process.env.UNSPLASH_ACCESS_KEY}`
         }
+      });
+
+      const text = await testRes.text();
+
+      return new Response(
+        JSON.stringify({
+          status: testRes.status,
+          ok: testRes.ok,
+          body: text.slice(0, 600)
+        }),
+        { headers: { "Content-Type": "application/json" } }
       );
     }
 
@@ -29,7 +50,7 @@ export default async function handler(req) {
 
     const searches = [
       clean,
-      clean.replace(/\bindia\b|\bjapan\b|\bthailand\b|\bitaly\b|\bmexico\b|\bchina\b|\bfrance\b|\bnigeria\b|\bghana\b|\bivory coast\b/gi, "").trim(),
+      clean.replace(/\bindia\b|\bjapan\b|\bthailand\b|\bitaly\b|\bmexico\b|\bchina\b|\bfrance\b|\bnigeria\b|\bghana\b|\bivory coast\b|\busa\b|\bunited states\b/gi, "").trim(),
       rawQuery,
       `${clean} recipe`,
       `${clean} food`
@@ -52,9 +73,7 @@ export default async function handler(req) {
               source: "themealdb",
               query: q
             }),
-            {
-              headers: { "Content-Type": "application/json" }
-            }
+            { headers: { "Content-Type": "application/json" } }
           );
         }
       }
@@ -71,22 +90,22 @@ export default async function handler(req) {
         }
       );
 
-      if (unsplashRes.ok) {
-        const data = await unsplashRes.json();
-        const photo = data?.results?.[0];
+      if (!unsplashRes.ok) {
+        continue;
+      }
 
-        if (photo?.urls?.regular) {
-          return new Response(
-            JSON.stringify({
-              url: photo.urls.regular,
-              source: "unsplash",
-              query: q
-            }),
-            {
-              headers: { "Content-Type": "application/json" }
-            }
-          );
-        }
+      const data = await unsplashRes.json();
+      const photo = data?.results?.[0];
+
+      if (photo?.urls?.regular) {
+        return new Response(
+          JSON.stringify({
+            url: photo.urls.regular,
+            source: "unsplash",
+            query: q
+          }),
+          { headers: { "Content-Type": "application/json" } }
+        );
       }
     }
 
@@ -95,11 +114,8 @@ export default async function handler(req) {
         url: "",
         source: "none"
       }),
-      {
-        headers: { "Content-Type": "application/json" }
-      }
+      { headers: { "Content-Type": "application/json" } }
     );
-
   } catch (e) {
     return new Response(
       JSON.stringify({
