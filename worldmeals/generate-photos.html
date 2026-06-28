@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>WorldMeals Photo Generator</h2>
+<button onclick="generatePhotos()">Generate Photos</button>
+<pre id="log"></pre>
+<textarea id="output" style="width:100%;height:400px"></textarea>
+
+<script src="meals.js"></script>
+<script>
+const MEALS = window.WORLD_MEALS_DATABASE || [];
+const log = document.getElementById("log");
+const output = document.getElementById("output");
+
+async function getPhoto(meal){
+  const searches = [
+    `${meal.name} ${meal.country} food`,
+    `${meal.name} dish`,
+    `${meal.name} recipe`,
+    `${meal.country} traditional food`
+  ];
+
+  for(const q of searches){
+    try{
+      const res = await fetch(`/api/photos?query=${encodeURIComponent(q)}`);
+      const data = await res.json();
+      if(data.url) return data.url;
+    }catch(e){}
+  }
+
+  return "";
+}
+
+async function generatePhotos(){
+  log.textContent = "Starting...\n";
+
+  for(let i = 0; i < MEALS.length; i++){
+    const meal = MEALS[i];
+
+    if(!meal.image){
+      log.textContent += `Loading ${i + 1}/${MEALS.length}: ${meal.name}\n`;
+      meal.image = await getPhoto(meal);
+      await new Promise(r => setTimeout(r, 300));
+    }
+  }
+
+  const finalCode =
+`// WorldMeals v4 database with real photos
+// ${MEALS.length} dish records. Keep this file in the same folder as app.html.
+window.WORLD_MEALS_DATABASE = ` + JSON.stringify(MEALS, null, 2) + ";";
+
+  output.value = finalCode;
+  log.textContent += "\nDONE. Copy the code from the box and replace meals.js.";
+}
+</script>
+</body>
+</html>
