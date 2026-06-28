@@ -864,6 +864,28 @@ function thumbHTML(m){
   return `<div class="day-thumb"><img src="${mealImage(m)}" alt="${m.name}" loading="lazy" onerror="this.outerHTML='<span>${m.emoji||'🍽️'}</span>'"></div>`;
 }
 
+async function loadMealPhotos(){
+  const batch = MEALS
+    .filter(m => !m.image || m.image.includes("source.unsplash.com"))
+    .slice(0, 30);
+
+  for(const m of batch){
+    try{
+      const q = encodeURIComponent(`${m.name} ${m.country} food`);
+      const res = await fetch(`/api/photos?query=${q}`);
+      const data = await res.json();
+
+      if(data.url){
+        m.image = data.url;
+      }
+    }catch(e){
+      console.log("Photo fetch failed for", m.name);
+    }
+  }
+
+  renderGrid();
+}
+
 function parseMealMinutes(time){
   const t=String(time||"").toLowerCase();
   if(t.includes("1.5"))return 90;
@@ -1572,7 +1594,13 @@ function copyGroceryList(){
 populateCountryFilter();
 renderGrid();
 updateFavCount();
-loadFavsFromDB().then(()=>{renderGrid();updateFavCount();});
+
+loadFavsFromDB().then(()=>{
+  renderGrid();
+  updateFavCount();
+});
+
+loadMealPhotos();
 </script>
 </body>
 </html>
