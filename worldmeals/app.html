@@ -794,6 +794,11 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 <script>
 const MEALS = window.WORLD_MEALS_DATABASE || [];
 
+// Clear old AI/Unsplash photo cache so local dish photos stay correct.
+// After this update works, you may leave this line or remove it later.
+localStorage.removeItem("wm_photo_cache_v1");
+
+
 
 const DAYS=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
 const SPICE=["","Mild 🟢","Low 🟡","Medium 🟠","Hot 🔴","Fiery 🌶️"];
@@ -883,11 +888,23 @@ function mealPhotoKey(m){
 
 function needsRealPhoto(m){
   const img = String(m?.image || "");
+
+  // If a dish has a local WorldMeals image, keep it forever.
+  if(isLocalDishImage(img)) return false;
+
   return !m?._photoTried && (!img || img.includes("source.unsplash.com"));
+}
+
+function isLocalDishImage(img){
+  const src = String(img || "");
+  return src.startsWith("/images/dishes/") || src.startsWith("images/dishes/");
 }
 
 function applyCachedMealPhotos(){
   MEALS.forEach(m=>{
+    // Never replace our real local dish photos with cached AI/Unsplash photos.
+    if(isLocalDishImage(m.image)) return;
+
     const cached = wmPhotoCache[mealPhotoKey(m)];
     if(cached) m.image = cached;
   });
@@ -895,6 +912,7 @@ function applyCachedMealPhotos(){
 
 async function fetchMealPhoto(m){
   if(!m || !needsRealPhoto(m)) return null;
+  if(isLocalDishImage(m.image)) return m.image;
 
   const key = mealPhotoKey(m);
   if(wmPhotoCache[key]){
