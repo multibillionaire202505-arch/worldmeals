@@ -857,8 +857,29 @@ function sc(s){return SCOL[s]||"#ccc"}
 function slugifyMeal(name){
   return String(name||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/&/g,"and").replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
 }
+function localDishImagePath(m){
+  return "/images/dishes/" + slugifyMeal(m?.name || "") + ".jpg";
+}
+
+function isLocalDishImage(img){
+  const src = String(img || "");
+  return src.startsWith("/images/dishes/") || src.startsWith("images/dishes/");
+}
+
 function mealImage(m){
-  return m.image || "/images/" + slugifyMeal(m.name) + ".jpg";
+  // WorldMeals official image rule:
+  // 1) Always try the local dish photo first using the dish name.
+  // 2) If a special local/custom image was manually added, keep it.
+  // 3) Only use online images for dishes that do not yet have local photos.
+  // 4) If the image is missing, the img onerror fallback will show the emoji.
+  const autoLocal = localDishImagePath(m);
+
+  if(isLocalDishImage(m?.image)) return m.image;
+
+  // Prefer our automatic local photo path over old AI/Unsplash links.
+  if(m?.name) return autoLocal;
+
+  return m?.image || "/images/dishes/placeholder.jpg";
 }
 function foodImageHTML(m, cls=""){
   const img = mealImage(m);
@@ -895,10 +916,7 @@ function needsRealPhoto(m){
   return !m?._photoTried && (!img || img.includes("source.unsplash.com"));
 }
 
-function isLocalDishImage(img){
-  const src = String(img || "");
-  return src.startsWith("/images/dishes/") || src.startsWith("images/dishes/");
-}
+
 
 function applyCachedMealPhotos(){
   MEALS.forEach(m=>{
