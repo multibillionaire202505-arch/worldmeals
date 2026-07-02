@@ -7576,7 +7576,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 26,
     "fat": 8,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/f3cxnc1765656994.jpg"
+    "image": "/images/dishes/hainanese-wenchang-chicken.jpg"
   },
   {
     "id": 162,
