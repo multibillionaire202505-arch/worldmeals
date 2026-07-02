@@ -97,7 +97,7 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Tamari",
           "note": "Identical flavor, fully GF"
         }
-      ],
+      ], 
       "vegan": [
         {
           "from": "Salmon/Tuna",
@@ -3250,7 +3250,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1537372023620-37161b1ad8ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxTdXlhJTIwTmlnZXJpYXxlbnwwfDB8fHwxNzgyNjkzOTU3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/suya.jpg",
   },
   {
     "id": 71,
