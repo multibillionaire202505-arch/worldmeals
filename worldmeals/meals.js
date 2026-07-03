@@ -3487,7 +3487,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 32,
     "fat": 10,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1629300678017-eb3cb4eb4b77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxUaGllYm91ZGllbm5lJTIwU2VuZWdhbHxlbnwwfDB8fHwxNzgyNjkzOTYyfDA&ixlib=rb-4.1.0&q=80&w=1080"
+  "image": "/images/dishes/Thieboudienne.jpg",
   },
   {
     "id": 76,
