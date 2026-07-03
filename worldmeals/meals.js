@@ -4813,7 +4813,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 31,
     "fat": 10,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1661083098412-054431ab7112?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDb3VzY291cyUyMFJveWFsJTIwTW9yb2NjbyUyMGZvb2R8ZW58MHwwfHx8MTc4MjY5NTI1NHww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Couscous-Royal.jpg"
   },
   {
     "id": 105,
