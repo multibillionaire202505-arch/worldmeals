@@ -3769,7 +3769,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 56,
     "fat": 18,
     "fiber": 5,
-     "image": "/images/dishes/Red-red.jpg"
+     "image": "/images/dishes/Red-Red.jpg"
         },
     {
     "id": 82,
@@ -4736,7 +4736,7 @@ window.WORLD_MEALS_DATABASE = [
       "Almonds",
       "Eggs",
       "Cinnamon",
-      "Powdered sugar",
+      "Powderedsugar",
       "Onion"
     ],
     "swaps": {
