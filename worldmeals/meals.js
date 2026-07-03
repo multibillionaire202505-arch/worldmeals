@@ -4525,7 +4525,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 66,
     "fat": 21,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1694643666478-87660ba357a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxCdW5ueSUyMENob3clMjBTb3V0aCUyMEFmcmljYSUyMGZvb2R8ZW58MHwwfHx8MTc4MjY5NTI0Mnww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Bunny-Chow.jpg",
   },
   {
     "id": 99,
