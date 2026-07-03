@@ -2656,7 +2656,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 52,
     "fat": 16,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1664806462756-b7f24b69e615?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxTdXNoaSUyMEJ1cnJpdG8lMjBKYXBhbnxlbnwwfDB8fHwxNzgyNjkzOTQ0fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Sushi-Burrito.jpg"
   },
   {
     "id": 58,
