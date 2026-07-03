@@ -1,3 +1,4 @@
+
 // WorldMeals v4 database with real photos
 // 1010 dish records. Keep this file in the same folder as app.html.
 window.WORLD_MEALS_DATABASE = [
@@ -3641,7 +3642,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 44,
     "fat": 14,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1634074967416-dd24d702c93c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxXYWFreWUlMjBHaGFuYXxlbnwwfDB8fHwxNzgyNjkzOTY2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Waakye.jpg"
   },
   {
     "id": 79,
