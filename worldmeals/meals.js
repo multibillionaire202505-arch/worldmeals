@@ -967,7 +967,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 77,
     "fat": 24,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1587085416963-22efba033dd5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxNYXJnaGVyaXRhJTIwUGl6emElMjBJdGFseXxlbnwwfDB8fHwxNzgyNjkzOTI0fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Kibbeh.jpg",
   },
   {
     "id": 22,
