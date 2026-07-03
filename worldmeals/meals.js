@@ -18254,7 +18254,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+ "image": "/images/dishes/Scallion-Pancakes.jpg"
   },
   {
     "id": 377,
