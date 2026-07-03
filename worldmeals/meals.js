@@ -657,7 +657,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 59,
     "fat": 18,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1540287082551-b6f969623813?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxCcmF0d3Vyc3QlMjBHZXJtYW55fGVufDB8MHx8fDE3ODI2OTM5MTd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Bratwurst.jpg"
   },
   {
     "id": 15,
