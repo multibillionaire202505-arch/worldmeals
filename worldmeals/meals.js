@@ -5371,7 +5371,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 80,
     "fat": 25,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1761998849345-7757a8c3b818?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxTYWthJTIwU2FrYSUyMENvbmdvfGVufDB8MHx8fDE3ODI2OTg4MzF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Saka-Saka.jpg"
   },
   {
     "id": 117,
