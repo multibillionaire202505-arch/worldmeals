@@ -3815,7 +3815,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 60,
     "fat": 19,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1630386226447-af0a955c1009?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxHaGFuYXxlbnwwfDB8fHwxNzgyNjk1MjMxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+ "image": "/images/dishes/kenkey-and-Fish.jpg"
   },
   {
     "id": 83,
