@@ -3205,7 +3205,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1606043406175-a631b7b9ae9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxTcGFuYWtvcGl0YSUyMEdyZWVjZSUyMHJlY2lwZXxlbnwwfDB8fHwxNzgyNjkzOTU2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Spanakopita.jpg",
   },
   {
     "id": 70,
