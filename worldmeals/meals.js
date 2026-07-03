@@ -3682,7 +3682,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 48,
     "fat": 15,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1650815232474-12d5b9375d63?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxLZWxld2VsZSUyMEdoYW5hJTIwcmVjaXBlfGVufDB8MHx8fDE3ODI2OTM5Njh8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Kelewele.jpg",
   },
   {
     "id": 80,
