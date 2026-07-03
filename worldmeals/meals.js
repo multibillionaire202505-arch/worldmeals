@@ -3815,7 +3815,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 60,
     "fat": 19,
     "fiber": 5,
- "image": "/images/dishes/kenkey-and-Fish.jpg"
+ "image": "/images/dishes/Kenkey-and-Fish.jpg"
   },
   {
     "id": 83,
