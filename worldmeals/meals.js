@@ -5566,7 +5566,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 37,
     "fat": 11,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1513415277900-a62401e19be4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxSb3VnYWlsbGUlMjBTYXVjaXNzZSUyME1hdXJpdGl1c3xlbnwwfDB8fHwxNzgyNjk4ODQwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+     "image": "/images/dishes/Rougaille-Saucisse.jpg"
   },
   {
     "id": 121,
