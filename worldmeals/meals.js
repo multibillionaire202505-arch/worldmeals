@@ -11033,7 +11033,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 73,
     "fat": 23,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1668680765230-95cf8e1dae58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDYWxkbyUyMFZlcmRlJTIwUG9ydHVnYWwlMjByZWNpcGV8ZW58MHwwfHx8MTc4MjY4MzQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Caldo-Verde.jpg",
   },
   {
     "id": 232,
