@@ -3770,6 +3770,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 18,
     "fiber": 5,
      "image": "/images/dishes/Red-red.jpg"
+        },
+    {
     "id": 82,
     "name": "Kenkey and Fish",
     "country": "Ghana",
