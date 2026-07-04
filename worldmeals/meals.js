@@ -5060,7 +5060,7 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 16,
     "fiber": 5,
     "image": "/images/dishes/Misir-Wat.jpg"
-  }
+  },
   {
     "id": 110,
     "name": "Shiro",
