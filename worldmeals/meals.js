@@ -8327,7 +8327,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 27,
     "fat": 8,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Hainanese-Wenchang-Chicken.jpg"
   },
   {
     "id": 177,
