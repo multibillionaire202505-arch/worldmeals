@@ -41635,7 +41635,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Riz-Gras.jpg"
   },
   {
     "id": 834,
@@ -50492,7 +50492,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+  "image": "/images/dishes/Sauce-Graine.jpg"
   },
   {
     "id": 1004,
@@ -50567,7 +50567,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Garba.jpg"
   },
   {
     "id": 1006,
