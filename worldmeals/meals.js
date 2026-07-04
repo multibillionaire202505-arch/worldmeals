@@ -50408,7 +50408,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Attiéké.jpg"
   },
   {
     "id": 1002,
