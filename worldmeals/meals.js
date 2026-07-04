@@ -4332,7 +4332,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 50,
     "fat": 16,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1698147043108-4bd4dda0336a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxBa2FyYXxlbnwwfDB8fHwxNzgyNjk1MjM3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Akara.jpg"
   },
   {
     "id": 95,
@@ -4572,7 +4572,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 70,
     "fat": 22,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1579905030369-82783f55c493?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxCb2VyZXdvcnMlMjBSb2xsfGVufDB8MHx8fDE3ODI2OTUyNDV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Boerewors-Roll.jpg"
   },
   {
     "id": 100,
@@ -5019,7 +5019,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 47,
     "fat": 15,
     "fiber": 5,
-    "image": "https://images.unsplash.com/flagged/photo-1572644973628-e9be84915d59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxEb3JvJTIwV2F0JTIwRXRoaW9waWF8ZW58MHwwfHx8MTc4MjY5NTI2MXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Doro-Wa.jpg"
   },
   {
     "id": 109,
@@ -5059,8 +5059,8 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 52,
     "fat": 16,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1542627501-51dde88c1bdc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxNaXNpciUyMFdhdCUyMGRpc2h8ZW58MHwwfHx8MTc4MjY5NTI2NHww&ixlib=rb-4.1.0&q=80&w=1080"
-  },
+    "image": "/images/dishes/Misir-Wat.jpg"
+  }
   {
     "id": 110,
     "name": "Shiro",
@@ -50450,7 +50450,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kedjenou.jpg"
   },
   {
     "id": 1003,
@@ -50525,7 +50525,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Foutou-Banane.jpg"
   },
   {
     "id": 1005,
@@ -50608,7 +50608,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+   "image": "/images/dishes/Aloco.jpg"
   },
   {
     "id": 1007,
@@ -50650,7 +50650,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Soupe-Kpe.jpg"
   },
   {
     "id": 1008,
@@ -50692,7 +50692,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Riz-Gras.jpg"
   },
   {
     "id": 1009,
@@ -50725,7 +50725,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Attoukpou.jpg"
   },
   {
     "id": 1010,
@@ -50767,6 +50767,6 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Poisson-Braisé.jpg"
   }
 ];
