@@ -3909,7 +3909,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 69,
     "fat": 21,
     "fiber": 5,
-    "image": "/images/dishes/Molokhia.jpg",
+    "image": "/images/dishes/Molokhia.jpg"
   },
   {
     "id": 85,
