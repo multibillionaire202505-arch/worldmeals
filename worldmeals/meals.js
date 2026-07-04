@@ -10652,7 +10652,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 40,
     "fat": 12,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1675893494034-455bfa1b0a83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDcmVwZXMlMjBGcmFuY2V8ZW58MHwwfHx8MTc4MjY4MzQ0MHww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Crepes.jpg"
   },
   {
     "id": 224,
@@ -49529,7 +49529,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/rlwcc51598734603.jpg"
+    "image": "/images/dishes/Fatteh.jpg"
   },
   {
     "id": 985,
