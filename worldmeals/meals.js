@@ -4912,7 +4912,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 39,
     "fat": 12,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/t8mn9g1560460231.jpg"
+    image": "/images/dishes/Shakshouka-Tunisienne.jpg"
   },
   {
     "id": 107,
