@@ -25714,7 +25714,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "/images/dishes/Rouladen.jpg"
+    "image": "/images/dishes/Pretzel.jpg"
   },
   {
     "id": 523,
