@@ -50768,5 +50768,209 @@ window.WORLD_MEALS_DATABASE = [
       ]
     },
     "image": "/images/dishes/Poisson-Braisé.jpg"
-  }
+  },
+  {
+  "id": 1011,
+  "name": "Falafel",
+  "country": "Israel",
+  "region": "Middle East",
+  "emoji": "🧆",
+  "cal": 330,
+  "budget": 5,
+  "time": "30 min",
+  "spice": 2,
+  "tags": ["dairy-free", "vegan", "gluten-free-option"],
+  "desc": "Crispy chickpea fritters seasoned with herbs, garlic, cumin, and coriander, often served in pita with salad and tahini.",
+  "ingredients": ["Chickpeas", "Parsley", "Cilantro", "Garlic", "Onion", "Cumin", "Tahini"],
+  "swaps": {
+    "gluten": [{"from": "Pita bread", "to": "Lettuce wraps", "note": "Keeps it fresh and gluten-free"}]
+  },
+  "protein": 14,
+  "carbs": 36,
+  "fat": 11,
+  "fiber": 7,
+  "image": "https://source.unsplash.com/1080x720/?falafel"
+},
+{
+  "id": 1012,
+  "name": "Sabich",
+  "country": "Israel",
+  "region": "Middle East",
+  "emoji": "🥙",
+  "cal": 560,
+  "budget": 7,
+  "time": "35 min",
+  "spice": 2,
+  "tags": ["vegetarian", "dairy-free-option"],
+  "desc": "A popular Israeli pita sandwich filled with fried eggplant, hard-boiled egg, Israeli salad, tahini, and amba sauce.",
+  "ingredients": ["Pita", "Eggplant", "Eggs", "Tomato", "Cucumber", "Tahini", "Amba sauce"],
+  "swaps": {
+    "gluten": [{"from": "Pita", "to": "Gluten-free pita", "note": "Warm before filling so it bends easily"}],
+    "vegan": [{"from": "Eggs", "to": "Roasted chickpeas", "note": "Adds protein and texture"}]
+  },
+  "protein": 18,
+  "carbs": 62,
+  "fat": 26,
+  "fiber": 8,
+  "image": "https://source.unsplash.com/1080x720/?sabich"
+},
+{
+  "id": 1013,
+  "name": "Jerusalem Mixed Grill",
+  "country": "Israel",
+  "region": "Middle East",
+  "emoji": "🍖",
+  "cal": 620,
+  "budget": 12,
+  "time": "35 min",
+  "spice": 3,
+  "tags": ["dairy-free", "gluten-free-option"],
+  "desc": "A Jerusalem street-food specialty of spiced grilled chicken, onions, and warm spices, usually served in pita or on a plate.",
+  "ingredients": ["Chicken", "Onions", "Turmeric", "Cumin", "Paprika", "Black pepper", "Pita"],
+  "swaps": {
+    "gluten": [{"from": "Pita", "to": "Rice or salad plate", "note": "Keeps all the flavor without bread"}],
+    "vegan": [{"from": "Chicken", "to": "Mushrooms + seitan", "note": "Sear hard with the same spice blend"}]
+  },
+  "protein": 38,
+  "carbs": 45,
+  "fat": 24,
+  "fiber": 5,
+  "image": "https://source.unsplash.com/1080x720/?jerusalem-mixed-grill"
+},
+{
+  "id": 1014,
+  "name": "Jachnun",
+  "country": "Israel",
+  "region": "Middle East",
+  "emoji": "🫓",
+  "cal": 520,
+  "budget": 5,
+  "time": "8 hrs",
+  "spice": 1,
+  "tags": ["vegetarian", "dairy-free-option"],
+  "desc": "Slow-baked Yemenite Jewish pastry popular in Israel, served with grated tomato, zhug, and hard-boiled egg.",
+  "ingredients": ["Flour", "Margarine", "Sugar", "Salt", "Tomatoes", "Zhug", "Eggs"],
+  "swaps": {
+    "spice": [{"from": "Zhug", "to": "Grated tomato only", "note": "Keeps it mild and traditional"}],
+    "vegan": [{"from": "Eggs", "to": "Cucumber tomato salad", "note": "Fresh side with the pastry"}]
+  },
+  "protein": 12,
+  "carbs": 74,
+  "fat": 18,
+  "fiber": 4,
+  "image": "https://source.unsplash.com/1080x720/?jachnun"
+},
+{
+  "id": 1015,
+  "name": "Malawach",
+  "country": "Israel",
+  "region": "Middle East",
+  "emoji": "🥐",
+  "cal": 480,
+  "budget": 5,
+  "time": "25 min",
+  "spice": 1,
+  "tags": ["vegetarian", "dairy-free-option"],
+  "desc": "Flaky Yemenite-style fried flatbread popular in Israel, served with grated tomato, hard-boiled egg, and spicy zhug.",
+  "ingredients": ["Flour", "Margarine", "Salt", "Tomatoes", "Eggs", "Zhug", "Cucumber"],
+  "swaps": {
+    "spice": [{"from": "Zhug", "to": "Yogurt or grated tomato", "note": "Cooling and mild"}],
+    "vegan": [{"from": "Eggs", "to": "Avocado slices", "note": "Keeps the meal rich and satisfying"}]
+  },
+  "protein": 11,
+  "carbs": 65,
+  "fat": 19,
+  "fiber": 4,
+  "image": "https://source.unsplash.com/1080x720/?malawach"
+},
+{
+  "id": 1016,
+  "name": "Ptitim",
+  "country": "Israel",
+  "region": "Middle East",
+  "emoji": "🍝",
+  "cal": 390,
+  "budget": 4,
+  "time": "20 min",
+  "spice": 1,
+  "tags": ["dairy-free", "vegan-option"],
+  "desc": "Toasted pasta pearls often called Israeli couscous, cooked like rice and served as a comforting side dish.",
+  "ingredients": ["Ptitim", "Onion", "Olive oil", "Vegetable stock", "Tomato paste", "Parsley", "Black pepper"],
+  "swaps": {
+    "gluten": [{"from": "Wheat ptitim", "to": "Rice or quinoa", "note": "Different texture but similar side-dish role"}]
+  },
+  "protein": 10,
+  "carbs": 68,
+  "fat": 8,
+  "fiber": 4,
+  "image": "https://source.unsplash.com/1080x720/?israeli-couscous"
+},
+{
+  "id": 1017,
+  "name": "Bourekas",
+  "country": "Israel",
+  "region": "Middle East",
+  "emoji": "🥟",
+  "cal": 430,
+  "budget": 6,
+  "time": "45 min",
+  "spice": 1,
+  "tags": ["vegetarian"],
+  "desc": "Flaky savory pastries filled with cheese, potato, spinach, or mushrooms, commonly enjoyed as a snack or breakfast.",
+  "ingredients": ["Puff pastry", "Feta cheese", "Potatoes", "Spinach", "Egg", "Sesame seeds", "Black pepper"],
+  "swaps": {
+    "dairy": [{"from": "Feta cheese", "to": "Potato filling", "note": "Classic non-cheese filling"}],
+    "vegan": [{"from": "Egg wash", "to": "Olive oil brush", "note": "Still bakes shiny and golden"}]
+  },
+  "protein": 12,
+  "carbs": 45,
+  "fat": 22,
+  "fiber": 4,
+  "image": "https://source.unsplash.com/1080x720/?bourekas"
+},
+{
+  "id": 1018,
+  "name": "Sufganiyah",
+  "country": "Israel",
+  "region": "Middle East",
+  "emoji": "🍩",
+  "cal": 360,
+  "budget": 5,
+  "time": "2 hrs",
+  "spice": 1,
+  "tags": ["vegetarian", "dairy-free-option"],
+  "desc": "A soft jelly-filled doughnut traditionally eaten during Hanukkah, dusted with powdered sugar.",
+  "ingredients": ["Flour", "Yeast", "Sugar", "Eggs", "Jam", "Oil", "Powdered sugar"],
+  "swaps": {
+    "dairy": [{"from": "Milk", "to": "Oat milk", "note": "Works well in enriched dough"}],
+    "vegan": [{"from": "Eggs", "to": "Applesauce", "note": "Keeps the dough soft"}]
+  },
+  "protein": 7,
+  "carbs": 55,
+  "fat": 13,
+  "fiber": 2,
+  "image": "https://source.unsplash.com/1080x720/?sufganiyah"
+},
+{
+  "id": 1019,
+  "name": "Hummus",
+  "country": "Israel",
+  "region": "Middle East",
+  "emoji": "🥣",
+  "cal": 310,
+  "budget": 4,
+  "time": "15 min",
+  "spice": 1,
+  "tags": ["dairy-free", "vegan", "gluten-free"],
+  "desc": "Creamy chickpea and tahini dip served with olive oil, paprika, herbs, and warm pita or vegetables.",
+  "ingredients": ["Chickpeas", "Tahini", "Lemon juice", "Garlic", "Olive oil", "Cumin", "Paprika"],
+  "swaps": {
+    "gluten": [{"from": "Pita bread", "to": "Cucumber and carrot sticks", "note": "Naturally gluten-free pairing"}]
+  },
+  "protein": 12,
+  "carbs": 30,
+  "fat": 16,
+  "fiber": 8,
+  "image": "https://source.unsplash.com/1080x720/?hummus"
+}
 ];
