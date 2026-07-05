@@ -50709,7 +50709,7 @@ window.WORLD_MEALS_DATABASE = [
   "carbs": 36,
   "fat": 11,
   "fiber": 7,
-  "image": "https://source.unsplash.com/1080x720/?falafel"
+ "image": "/images/dishes/Falafel.jpg"
 },
 {
   "id": 1012,
