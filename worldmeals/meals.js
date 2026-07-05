@@ -4028,7 +4028,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 81,
     "fat": 25,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/lqampv1762325397.jpg"
+    "image": "/images/dishes/Ugali-Sukuma.jpg"
   },
   {
     "id": 88,
