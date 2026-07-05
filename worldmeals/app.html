@@ -796,7 +796,7 @@ const MEALS = window.WORLD_MEALS_DATABASE || [];
 
 // Clear old AI/Unsplash photo cache so local dish photos stay correct.
 // After this update works, you may leave this line or remove it later.
-// localStorage.removeItem("wm_photo_cache_v1");
+localStorage.removeItem("wm_photo_cache_v1");
 
 
 
@@ -858,22 +858,16 @@ function slugifyMeal(name){
   return String(name||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/&/g,"and").replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
 }
 
-/* WORLDMEALS IMAGE PRIORITY — FINAL HYBRID ENGINE
-   Rule:
-   1) If a real photo exists in /images/dishes/, it wins.
-   2) If no local real photo exists, keep meals.js image (Unsplash/TheMealDB/etc.).
-   3) If that fails, try the old /images/slug.jpg path.
-   4) If everything fails, show emoji fallback.
-*/
-const WM_LOCAL_IMAGE_VERSION = "20260705"; // change only if your browser keeps an old cached photo
+const WM_LOCAL_IMAGE_VERSION = "20260705-final";
 
-function mealLocalSlugs(m){
-  const slugs = [];
-  [m?.id, m?.slug, m?.name].forEach(value=>{
-    const s = slugifyMeal(value);
-    if(s && !slugs.includes(s)) slugs.push(s);
-  });
-  return slugs;
+/* WORLDMEALS IMAGE PRIORITY
+   1) Real local photo in /images/dishes/
+   2) Existing meals.js image
+   3) Old /images/slug.jpg path
+   4) Emoji fallback
+*/
+function mealLocalSlug(m){
+  return slugifyMeal(m?.name || m?.slug || m?.id || "");
 }
 
 function isLocalDishImage(img){
@@ -885,43 +879,26 @@ function uniquePush(arr, value){
   if(value && !arr.includes(value)) arr.push(value);
 }
 
-function localDishImageCandidates(m, withCacheBust=true){
-  const list = [];
-  const exts = ["jpg", "jpeg", "png", "webp", "JPG", "JPEG", "PNG", "WEBP"];
-
-  mealLocalSlugs(m).forEach(slug=>{
-    exts.forEach(ext=>{
-      const path = `/images/dishes/${slug}.${ext}`;
-      uniquePush(list, withCacheBust ? `${path}?v=${WM_LOCAL_IMAGE_VERSION}` : path);
-    });
-  });
-
-  return list;
-}
-
-async function findExistingLocalPhoto(m){
-  for(const url of localDishImageCandidates(m, true)){
-    try{
-      const res = await fetch(url, { method:"HEAD", cache:"no-store" });
-      if(res.ok) return url;
-    }catch(e){
-      // If HEAD is blocked by the host, the normal <img> fallback system still works.
-    }
-  }
-  return "";
+function localDishPath(slug, ext){
+  return `/images/dishes/${slug}.${ext}?v=${WM_LOCAL_IMAGE_VERSION}`;
 }
 
 function mealImageFallbacks(m){
+  const slug = mealLocalSlug(m);
   const list = [];
 
-  // Real local photos are always first. If one exists, it loads before Unsplash/TheMealDB.
-  localDishImageCandidates(m, true).forEach(src=>uniquePush(list, src));
+  if(slug){
+    uniquePush(list, localDishPath(slug, "jpg"));
+    uniquePush(list, localDishPath(slug, "jpeg"));
+    uniquePush(list, localDishPath(slug, "png"));
+    uniquePush(list, localDishPath(slug, "webp"));
+  }
 
   // Keep whatever image is already in meals.js as the backup.
   uniquePush(list, m?.image);
 
   // Keep the old image path as a final backup in case older photos live there.
-  mealLocalSlugs(m).forEach(slug=>uniquePush(list, `/images/${slug}.jpg`));
+  if(slug) uniquePush(list, `/images/${slug}.jpg`);
 
   return list;
 }
@@ -994,7 +971,17 @@ function thumbHTML(m){
   return `<div class="day-thumb"><img src="${escapeAttr(fallbacks[0] || "")}" alt="${escapeAttr(m.name)}" loading="lazy" data-fallbacks="${encodeURIComponent(JSON.stringify(fallbacks))}" data-fallback-index="0" data-emoji="${escapeAttr(m.emoji||'🍽️')}" data-fallback-class="" onerror="handleMealImgError(this)"></div>`;
 }
 
-/* REAL PHOTO LOADER — uses /api/photos and replaces old source.unsplash links */
+/* WORLDMEALS PHOTO API LOADER — DISABLED FOR FINAL LOCAL-IMAGE PRIORITY
+   Important: this used to call /api/photos and rewrite m.image with random
+   TheMealDB/Unsplash images after the cards rendered. That is why a new
+   real local dish photo could appear to lose.
+
+   Final rule:
+   1) /images/dishes/dish-name.jpg/jpeg/png/webp always wins.
+   2) meals.js image remains as backup only.
+   3) old /images/dish-name.jpg remains as backup only.
+   4) emoji fallback last.
+*/
 const WM_PHOTO_CACHE_KEY = "wm_photo_cache_v1";
 let wmPhotoCache = {};
 let wmPhotoLoading = false;
@@ -1002,107 +989,31 @@ let wmPhotoTimer = null;
 let currentRenderedMeals = [];
 
 try{
-  wmPhotoCache = JSON.parse(localStorage.getItem(WM_PHOTO_CACHE_KEY) || "{}");
-}catch(e){
-  wmPhotoCache = {};
-}
+  localStorage.removeItem(WM_PHOTO_CACHE_KEY);
+}catch(e){}
 
 function mealPhotoKey(m){
   return String(m?.id || slugifyMeal(m?.name || ""));
 }
 
 function needsRealPhoto(m){
-  const img = String(m?.image || "");
-
-  // Local real photos are handled first by mealImageFallbacks().
-  if(isLocalDishImage(img)) return false;
-
-  return !m?._photoTried && (!img || img.includes("source.unsplash.com"));
+  return false;
 }
 
 function applyCachedMealPhotos(){
-  MEALS.forEach(m=>{
-    // Never replace our real local dish photos with cached AI/Unsplash photos.
-    if(isLocalDishImage(m.image)) return;
-
-    const cached = wmPhotoCache[mealPhotoKey(m)];
-    if(cached) m.image = cached;
-  });
+  // Disabled so cached/random API images never override local dish photos.
 }
 
 async function fetchMealPhoto(m){
-  if(!m || !needsRealPhoto(m)) return null;
-
-  // Before calling /api/photos, check if you uploaded a real local photo.
-  // This is the BOOM rule: upload /images/dishes/garba.jpg and it wins.
-  const localPhoto = await findExistingLocalPhoto(m);
-  if(localPhoto){
-    m.image = localPhoto;
-    return localPhoto;
-  }
-
-  const key = mealPhotoKey(m);
-  if(wmPhotoCache[key]){
-    m.image = wmPhotoCache[key];
-    return m.image;
-  }
-
-  const searches = [
-    `${m.name} ${m.country} food`,
-    `${m.name} dish`,
-    `${m.name} recipe`,
-    `${m.country} traditional food`
-  ];
-
-  for(const search of searches){
-    try{
-      const res = await fetch(`/api/photos?query=${encodeURIComponent(search)}`);
-      if(!res.ok) continue;
-
-      const data = await res.json();
-      if(data.url){
-        m.image = data.url;
-        wmPhotoCache[key] = data.url;
-        localStorage.setItem(WM_PHOTO_CACHE_KEY, JSON.stringify(wmPhotoCache));
-        return data.url;
-      }
-    }catch(e){
-      console.log("Photo fetch failed for", m.name, e);
-    }
-  }
-
-  m._photoTried = true;
   return null;
 }
 
 function scheduleMealPhotoLoad(){
-  clearTimeout(wmPhotoTimer);
-  wmPhotoTimer = setTimeout(()=>loadMealPhotos(), 250);
+  // Disabled on purpose. Local dish files are handled by mealImageFallbacks().
 }
 
 async function loadMealPhotos(){
-  if(wmPhotoLoading) return;
-
-  applyCachedMealPhotos();
-
-  const visible = (currentRenderedMeals.length ? currentRenderedMeals : MEALS)
-    .filter(needsRealPhoto)
-    .slice(0, 12);
-
-  if(!visible.length) return;
-
-  wmPhotoLoading = true;
-
-  for(const m of visible){
-    await fetchMealPhoto(m);
-  }
-
-  wmPhotoLoading = false;
-  renderGrid();
-
-  if((currentRenderedMeals.length ? currentRenderedMeals : MEALS).some(needsRealPhoto)){
-    scheduleMealPhotoLoad();
-  }
+  // Disabled on purpose.
 }
 
 function parseMealMinutes(time){
