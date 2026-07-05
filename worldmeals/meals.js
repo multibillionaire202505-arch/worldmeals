@@ -39489,7 +39489,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Barramundi-Bowl.jpg"
   },
   {
     "id": 793,
