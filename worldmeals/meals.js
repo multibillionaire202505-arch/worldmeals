@@ -343,7 +343,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 36,
     "fat": 11,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/u5e9qq1763795441.jpg"
+    "image": "/images/dishes/Falafe.jpg"
   },
   {
     "id": 8,
@@ -1910,7 +1910,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 35,
     "fat": 11,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/g373701551450225.jpg"
+    "image": "/images/dishes/Shakshuka.jpg"
   },
   {
     "id": 42,
@@ -2418,7 +2418,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 30,
     "fat": 9,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/gpon5u1763801180.jpg"
+    "image": "/images/dishes/Hummus.jpg"
   },
   {
     "id": 53,
@@ -50812,7 +50812,7 @@ window.WORLD_MEALS_DATABASE = [
   "carbs": 62,
   "fat": 26,
   "fiber": 8,
-  "image": "https://source.unsplash.com/1080x720/?sabich"
+ "image": "/images/dishes/Sabich.jpg"
 },
 {
   "id": 1013,
@@ -50835,7 +50835,7 @@ window.WORLD_MEALS_DATABASE = [
   "carbs": 45,
   "fat": 24,
   "fiber": 5,
-  "image": "https://source.unsplash.com/1080x720/?jerusalem-mixed-grill"
+ "image": "/images/dishes/Jerusalem-Mixed-Grill.jpg"
 },
 {
   "id": 1014,
@@ -50858,7 +50858,7 @@ window.WORLD_MEALS_DATABASE = [
   "carbs": 74,
   "fat": 18,
   "fiber": 4,
-  "image": "https://source.unsplash.com/1080x720/?jachnun"
+ "image": "/images/dishes/Jachnun.jpg"
 },
 {
   "id": 1015,
@@ -50881,7 +50881,7 @@ window.WORLD_MEALS_DATABASE = [
   "carbs": 65,
   "fat": 19,
   "fiber": 4,
-  "image": "https://source.unsplash.com/1080x720/?malawach"
+  "image": "/images/dishes/Malawach.jpg"
 },
 {
   "id": 1016,
@@ -50903,7 +50903,7 @@ window.WORLD_MEALS_DATABASE = [
   "carbs": 68,
   "fat": 8,
   "fiber": 4,
-  "image": "https://source.unsplash.com/1080x720/?israeli-couscous"
+  "image": "/images/dishes/Ptitim.jpg"
 },
 {
   "id": 1017,
@@ -50926,7 +50926,7 @@ window.WORLD_MEALS_DATABASE = [
   "carbs": 45,
   "fat": 22,
   "fiber": 4,
-  "image": "https://source.unsplash.com/1080x720/?bourekas"
+ "image": "/images/dishes/Bourekas.jpg"
 },
 {
   "id": 1018,
@@ -50949,7 +50949,7 @@ window.WORLD_MEALS_DATABASE = [
   "carbs": 55,
   "fat": 13,
   "fiber": 2,
-  "image": "https://source.unsplash.com/1080x720/?sufganiyah"
+  "image": "/images/dishes/Sufganiyah.jpg"
 },
 {
   "id": 1019,
