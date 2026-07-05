@@ -8234,7 +8234,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 78,
     "fat": 25,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Hot-Pot.jpg"
   },
   {
     "id": 175,
