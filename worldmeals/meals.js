@@ -306,46 +306,6 @@ window.WORLD_MEALS_DATABASE = [
     "image": "https://images.unsplash.com/photo-1616627052149-22c4f8a6316e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxCaWJpbWJhcCUyMFNvdXRoJTIwS29yZWF8ZW58MHwwfHx8MTc4MjY5MzkxMHww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
-    "id": 7,
-    "name": "Falafel",
-    "country": "Lebanon",
-    "region": "Middle East",
-    "emoji": "🧆",
-    "cal": 330,
-    "budget": 5,
-    "time": "25 min",
-    "spice": 1,
-    "tags": [
-      "dairy-free",
-      "vegan",
-      "gluten-free-option"
-    ],
-    "desc": "Crispy fried chickpea balls with cumin and coriander. Served in pita with tahini.",
-    "ingredients": [
-      "Chickpeas",
-      "Parsley",
-      "Cumin",
-      "Coriander",
-      "Garlic",
-      "Tahini",
-      "Lemon"
-    ],
-    "swaps": {
-      "gluten": [
-        {
-          "from": "Pita bread",
-          "to": "Lettuce wraps",
-          "note": "Fresh and crunchy"
-        }
-      ]
-    },
-    "protein": 14,
-    "carbs": 36,
-    "fat": 11,
-    "fiber": 5,
-    "image": "/images/dishes/Falafe.jpg"
-  },
-  {
     "id": 8,
     "name": "Ceviche",
     "country": "Peru",
