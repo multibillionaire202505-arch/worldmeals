@@ -8141,7 +8141,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 70,
     "fat": 22,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Mapo-Tofu.jpg"
   },
   {
     "id": 173,
