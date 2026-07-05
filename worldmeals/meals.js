@@ -3989,7 +3989,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 77,
     "fat": 24,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/rlwcc51598734603.jpg"
+   "image": "/images/dishes/Taameya.jpg"
   },
   {
     "id": 87,
