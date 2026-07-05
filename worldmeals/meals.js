@@ -2381,46 +2381,6 @@ window.WORLD_MEALS_DATABASE = [
     "image": "https://images.unsplash.com/photo-1599921841143-819065a55cc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxXaWVuZXIlMjBTY2huaXR6ZWx8ZW58MHwwfHx8MTc4MjY4NzYwOHww&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
-    "id": 52,
-    "name": "Hummus",
-    "country": "Lebanon",
-    "region": "Middle East",
-    "emoji": "🫘",
-    "cal": 280,
-    "budget": 4,
-    "time": "15 min",
-    "spice": 1,
-    "tags": [
-      "dairy-free",
-      "vegan",
-      "gluten-free"
-    ],
-    "desc": "Smooth blended chickpeas with tahini, lemon, and garlic. The Middle East's favorite dip.",
-    "ingredients": [
-      "Chickpeas",
-      "Tahini",
-      "Lemon juice",
-      "Garlic",
-      "Olive oil",
-      "Cumin",
-      "Paprika"
-    ],
-    "swaps": {
-      "spice": [
-        {
-          "from": "Cumin",
-          "to": "Omit",
-          "note": "Still delicious without"
-        }
-      ]
-    },
-    "protein": 14,
-    "carbs": 30,
-    "fat": 9,
-    "fiber": 5,
-    "image": "/images/dishes/Hummus.jpg"
-  },
-  {
     "id": 53,
     "name": "Pierogi",
     "country": "Poland",
@@ -50971,6 +50931,6 @@ window.WORLD_MEALS_DATABASE = [
   "carbs": 30,
   "fat": 16,
   "fiber": 8,
-  "image": "https://source.unsplash.com/1080x720/?hummus"
+  "image": "/images/dishes/Hummus.jpg"
 }
 ];
