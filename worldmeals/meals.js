@@ -4666,7 +4666,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 78,
     "fat": 25,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDaGFrYWxha2ElMjBTb3V0aCUyMEFmcmljYXxlbnwwfDB8fHwxNzgyNjk1MjUwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Chakalaka.jpg"
   },
   {
     "id": 102,
