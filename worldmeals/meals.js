@@ -4626,7 +4626,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 74,
     "fat": 23,
     "fiber": 5,
-    "image": "/images/dishes/Cape Malay Curry.jpg"
+    "image": "/images/dishes/Cape-Malay-Curry.jpg"
   },
   {
     "id": 101,
