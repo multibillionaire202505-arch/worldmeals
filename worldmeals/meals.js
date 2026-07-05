@@ -257,7 +257,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 46,
     "fat": 14,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1599974496394-93f03b1ba1e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxUYWNvcyUyMGFsJTIwUGFzdG9yJTIwTWV4aWNvfGVufDB8MHx8fDE3ODI2OTM5MDl8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Tacos-al-Pastor.jpg"
   },
   {
     "id": 6,
