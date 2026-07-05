@@ -58,7 +58,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 63,
     "fat": 20,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxCdXR0ZXIlMjBDaGlja2VufGVufDB8MHx8fDE3ODI2OTM5MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Butter-Chicken.jpg"
   },
   {
     "id": 2,
