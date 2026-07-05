@@ -13991,7 +13991,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 71,
     "fat": 22,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Tamales.jpg"
   },
   {
     "id": 290,
@@ -14052,7 +14052,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 75,
     "fat": 24,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Chiles-Rellenos.jpg"
   },
   {
     "id": 291,
@@ -14145,7 +14145,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 24,
     "fat": 7,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Sopes.jpg"
   },
   {
     "id": 293,
@@ -14191,7 +14191,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 28,
     "fat": 9,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Elote.jpg"
   },
   {
     "id": 294,
