@@ -111,7 +111,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 35,
     "fat": 11,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/g046bb1663960946.jpg"
+    "image": "/images/dishes/Sushi.jpg"
   },
   {
     "id": 3,
