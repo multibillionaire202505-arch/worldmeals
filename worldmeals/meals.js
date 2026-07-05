@@ -4168,7 +4168,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 34,
     "fat": 10,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/lqampv1762325397.jpg"
+    "image": "/images/dishes/Irio.jpg"
   },
   {
     "id": 91,
@@ -4626,7 +4626,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 74,
     "fat": 23,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1694643666478-87660ba357a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDYXBlJTIwTWFsYXklMjBDdXJyeSUyMFNvdXRoJTIwQWZyaWNhfGVufDB8MHx8fDE3ODI2OTUyNDZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Boerewors Roll.jpg"
   },
   {
     "id": 101,
@@ -4713,7 +4713,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 82,
     "fat": 26,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1661083098412-054431ab7112?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxIYXJpcmElMjBNb3JvY2NvJTIwcmVjaXBlfGVufDB8MHx8fDE3ODI2OTUyNTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Harira.jpg"
   },
   {
     "id": 103,
