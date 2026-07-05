@@ -4626,7 +4626,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 74,
     "fat": 23,
     "fiber": 5,
-    "image": "/images/dishes/Boerewors Roll.jpg"
+    "image": "/images/dishes/Boerewors-Roll.jpg"
   },
   {
     "id": 101,
