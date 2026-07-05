@@ -5231,7 +5231,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 68,
     "fat": 21,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1610514000782-b205b70fbe71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxCYXJpaXMlMjBJc2t1a2FyaXMlMjByZWNpcGV8ZW58MHwwfHx8MTc4MjY5ODgyMnww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Bariis-Iskukaris.jpg"
   },
   {
     "id": 114,
