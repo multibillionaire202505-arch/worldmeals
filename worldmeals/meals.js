@@ -11172,7 +11172,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 26,
     "fat": 8,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1599921841143-819065a55cc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxLYXJ0b2ZmZWxzYWxhdCUyMEdlcm1hbnl8ZW58MHwwfHx8MTc4MjY4MzQ1MHww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Kartoffelsalat.jpg"
   },
   {
     "id": 235,
