@@ -18052,7 +18052,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+  "image": "/images/dishes/Char-Siu.jpg"
   },
   {
     "id": 373,
