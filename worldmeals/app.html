@@ -857,16 +857,112 @@ function sc(s){return SCOL[s]||"#ccc"}
 function slugifyMeal(name){
   return String(name||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/&/g,"and").replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
 }
+
+/* WORLDMEALS IMAGE PRIORITY
+   1) Real local photo in /images/dishes/
+   2) Existing meals.js image
+   3) Old /images/slug.jpg path
+   4) Emoji fallback
+*/
+function mealLocalSlug(m){
+  return slugifyMeal(m?.name || m?.slug || m?.id || "");
+}
+
+function isLocalDishImage(img){
+  const src = String(img || "");
+  return src.startsWith("/images/dishes/") || src.startsWith("images/dishes/");
+}
+
+function uniquePush(arr, value){
+  if(value && !arr.includes(value)) arr.push(value);
+}
+
+function mealImageFallbacks(m){
+  const slug = mealLocalSlug(m);
+  const list = [];
+
+  if(slug){
+    uniquePush(list, `/images/dishes/${slug}.jpg`);
+    uniquePush(list, `/images/dishes/${slug}.jpeg`);
+    uniquePush(list, `/images/dishes/${slug}.png`);
+    uniquePush(list, `/images/dishes/${slug}.webp`);
+  }
+
+  // Keep whatever image is already in meals.js as the backup.
+  uniquePush(list, m?.image);
+
+  // Keep the old image path as a final backup in case older photos live there.
+  if(slug) uniquePush(list, `/images/${slug}.jpg`);
+
+  return list;
+}
+
 function mealImage(m){
-  return m.image || "/images/" + slugifyMeal(m.name) + ".jpg";
+  return mealImageFallbacks(m)[0] || "";
 }
+
+function escapeAttr(value){
+  return String(value || "")
+    .replace(/&/g,"&amp;")
+    .replace(/"/g,"&quot;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;");
+}
+
+function setMealImgData(img, m, fallbackClass=""){
+  const fallbacks = mealImageFallbacks(m);
+  img.dataset.fallbacks = encodeURIComponent(JSON.stringify(fallbacks));
+  img.dataset.fallbackIndex = "0";
+  img.dataset.emoji = m?.emoji || "🍽️";
+  img.dataset.fallbackClass = fallbackClass;
+  img.src = fallbacks[0] || "";
+  img.alt = m?.name || "";
+}
+
+function handleMealImgError(img){
+  let fallbacks = [];
+  try{
+    fallbacks = JSON.parse(decodeURIComponent(img.dataset.fallbacks || "%5B%5D"));
+  }catch(e){
+    fallbacks = [];
+  }
+
+  let index = parseInt(img.dataset.fallbackIndex || "0", 10) + 1;
+
+  while(index < fallbacks.length && fallbacks[index] === img.src){
+    index++;
+  }
+
+  if(index < fallbacks.length){
+    img.dataset.fallbackIndex = String(index);
+    img.src = fallbacks[index];
+    return;
+  }
+
+  if(img.id === "modalImage"){
+    const modalFallback = document.getElementById("modalEmojiText");
+    img.style.display = "none";
+    if(modalFallback){
+      modalFallback.textContent = img.dataset.emoji || "🍽️";
+      modalFallback.style.display = "flex";
+    }
+    return;
+  }
+
+  const cls = img.dataset.fallbackClass || "";
+  const emoji = img.dataset.emoji || "🍽️";
+  img.outerHTML = `<span class="${escapeAttr(cls)}">${escapeAttr(emoji)}</span>`;
+}
+
 function foodImageHTML(m, cls=""){
-  const img = mealImage(m);
-  const klass = cls ? ` ${cls}` : "";
-  return `<img src="${img}" alt="${m.name}" loading="lazy" onerror="this.outerHTML='<span class=&quot;img-fallback${klass}&quot;>${m.emoji||'🍽️'}</span>'">`;
+  const fallbacks = mealImageFallbacks(m);
+  const klass = cls ? `img-fallback ${cls}` : "img-fallback";
+  return `<img src="${escapeAttr(fallbacks[0] || "")}" alt="${escapeAttr(m.name)}" loading="lazy" data-fallbacks="${encodeURIComponent(JSON.stringify(fallbacks))}" data-fallback-index="0" data-emoji="${escapeAttr(m.emoji||'🍽️')}" data-fallback-class="${escapeAttr(klass)}" onerror="handleMealImgError(this)">`;
 }
+
 function thumbHTML(m){
-  return `<div class="day-thumb"><img src="${mealImage(m)}" alt="${m.name}" loading="lazy" onerror="this.outerHTML='<span>${m.emoji||'🍽️'}</span>'"></div>`;
+  const fallbacks = mealImageFallbacks(m);
+  return `<div class="day-thumb"><img src="${escapeAttr(fallbacks[0] || "")}" alt="${escapeAttr(m.name)}" loading="lazy" data-fallbacks="${encodeURIComponent(JSON.stringify(fallbacks))}" data-fallback-index="0" data-emoji="${escapeAttr(m.emoji||'🍽️')}" data-fallback-class="" onerror="handleMealImgError(this)"></div>`;
 }
 
 /* REAL PHOTO LOADER — uses /api/photos and replaces old source.unsplash links */
@@ -889,15 +985,10 @@ function mealPhotoKey(m){
 function needsRealPhoto(m){
   const img = String(m?.image || "");
 
-  // If a dish has a local WorldMeals image, keep it forever.
+  // Local real photos are handled first by mealImageFallbacks().
   if(isLocalDishImage(img)) return false;
 
   return !m?._photoTried && (!img || img.includes("source.unsplash.com"));
-}
-
-function isLocalDishImage(img){
-  const src = String(img || "");
-  return src.startsWith("/images/dishes/") || src.startsWith("images/dishes/");
 }
 
 function applyCachedMealPhotos(){
@@ -1132,9 +1223,8 @@ function openModal(id){
   modalFallback.textContent=m.emoji||"🍽️";
   modalFallback.style.display="none";
   modalImg.style.display="block";
-  modalImg.src=mealImage(m);
-  modalImg.alt=m.name;
-  modalImg.onerror=function(){modalImg.style.display="none";modalFallback.style.display="flex";};
+  setMealImgData(modalImg, m);
+  modalImg.onerror=function(){handleMealImgError(modalImg);};
   document.getElementById("modalFavBtn").textContent=favs.includes(m.id)?"❤️":"🤍";
   document.getElementById("modalName").textContent=m.name;
   document.getElementById("modalMeta").textContent="📍 "+m.country+" · "+m.region;
