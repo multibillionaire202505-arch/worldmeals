@@ -4973,7 +4973,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 43,
     "fat": 13,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1607869861980-da5f9b8b4969?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxMYWJsYWJpJTIwVHVuaXNpYXxlbnwwfDB8fHwxNzgyNjk1MjYwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Lablabi.jpg"
   },
   {
     "id": 108,
