@@ -11264,7 +11264,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 34,
     "fat": 10,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1717333941125-bd43a513b73b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDdXJyeXd1cnN0JTIwR2VybWFueXxlbnwwfDB8fHwxNzgyNjgzNDUxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Currywurst.jpg"
   },
   {
     "id": 237,
@@ -25612,7 +25612,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kartoffelpuffer.jpg"
   },
   {
     "id": 521,
@@ -25815,7 +25815,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Eintopf.jpg"
   },
   {
     "id": 525,
