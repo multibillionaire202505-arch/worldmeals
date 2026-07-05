@@ -5145,7 +5145,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 60,
     "fat": 19,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1542627501-cadbb5b43ad7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxaaWduaSUyMEVyaXRyZWElMjByZWNpcGV8ZW58MHwwfHx8MTc4MjY5ODgxN3ww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Zigni.jpg"
   },
   {
     "id": 112,
@@ -5278,7 +5278,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 72,
     "fat": 23,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1587593810167-a84920ea0781?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxQb3VsZXQlMjBER3xlbnwwfDB8fHwxNzgyNjk4ODI1fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Poulet-DG.jpg"
   },
   {
     "id": 115,
