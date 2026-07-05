@@ -8435,7 +8435,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 35,
     "fat": 11,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/d8f6qx1604182128.jpg"
+    "image": "/images/dishes/Katsu-Curry.jpg"
   },
   {
     "id": 179,
@@ -8474,7 +8474,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 39,
     "fat": 12,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/d8f6qx1604182128.jpg"
+    "image": "/images/dishes/Yakitori.jpg"
   },
   {
     "id": 180,
@@ -8574,7 +8574,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 48,
     "fat": 15,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/d8f6qx1604182128.jpg"
+    "image": "/images/dishes/Onigiri.jpg"
   },
   {
     "id": 182,
@@ -8627,7 +8627,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 52,
     "fat": 16,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/d8f6qx1604182128.jpg"
+  "image": "/images/dishes/Takoyaki.jpg"
   },
   {
     "id": 183,
@@ -18001,7 +18001,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/d8f6qx1604182128.jpg"
+    "image": "/images/dishes/Miso-Soup.jpg"
   },
   {
     "id": 372,
