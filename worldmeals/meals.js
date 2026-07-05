@@ -25663,7 +25663,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Rouladen.jpg"
   },
   {
     "id": 522,
