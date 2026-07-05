@@ -6001,7 +6001,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 74,
     "fat": 23,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1698587355176-58a5d44a2c3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxNYXFsdWJhJTIwUGFsZXN0aW5lfGVufDB8MHx8fDE3ODI2OTg4NDV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Maqluba.jpg"
   },
   {
     "id": 130,
@@ -6047,7 +6047,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 78,
     "fat": 24,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1448964899744-8929e9d992d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxNdXNha2hhbiUyMFBhbGVzdGluZXxlbnwwfDB8fHwxNzgyNjk4ODQ2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Musakhan.jpg"
   },
   {
     "id": 131,
@@ -6100,7 +6100,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 82,
     "fat": 26,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/76nffj1763593933.jpg"
+    "image": "/images/dishes/Knafeh.jpg"
   },
   {
     "id": 132,
