@@ -10129,7 +10129,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 59,
     "fat": 18,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Arancini.jpg"
   },
   {
     "id": 214,
@@ -25764,7 +25764,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Black-Forest-Cake.jpg"
   },
   {
     "id": 524,
