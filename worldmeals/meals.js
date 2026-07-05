@@ -5106,7 +5106,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 56,
     "fat": 17,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1572888195250-3037a59d3578?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYXxlbnwwfDB8fHwxNzgyNjg3NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Shiro.jpg"
   },
   {
     "id": 111,
