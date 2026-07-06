@@ -927,7 +927,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 77,
     "fat": 24,
     "fiber": 5,
-    "image": "/images/dishes/Kibbeh.jpg",
+    "image": "/images/dishes/Margherita-Pizza.jpg",
   },
   {
     "id": 22,
