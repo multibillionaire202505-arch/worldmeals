@@ -436,7 +436,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/g7jomp1763763994.jpg"
+    "image": "/images/dishes/Pho-Bo.jpg"
   },
   {
     "id": 11,
@@ -1960,7 +1960,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 46,
     "fat": 14,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/sonirb1763782831.jpg"
+    "image": "/images/dishes/Banh-Mi.jpg"
   },
   {
     "id": 44,
@@ -7854,7 +7854,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 54,
     "fat": 17,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/g7jomp1763763994.jpg"
+    "image": "/images/dishes/Bun-Cha.jpg"
   },
   {
     "id": 169,
@@ -7908,7 +7908,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 58,
     "fat": 18,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/g7jomp1763763994.jpg"
+   "image": "/images/dishes/Goi-Cuon.jpg"
   },
   {
     "id": 170,
@@ -7962,7 +7962,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 62,
     "fat": 19,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/g7jomp1763763994.jpg"
+    "image": "/images/dishes/Com-Tam.jpg"
   },
   {
     "id": 171,
@@ -8016,7 +8016,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 66,
     "fat": 21,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/g7jomp1763763994.jpg"
+   "image": "/images/dishes/Mi-Quang.jpg"
   },
   {
     "id": 172,
@@ -17765,7 +17765,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 36,
     "fat": 11,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/pbzcrx1763765096.jpg"
+    "image": "/images/dishes/Beef-Pho-Ga.jpg"
   },
   {
     "id": 369,
@@ -17819,7 +17819,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/g7jomp1763763994.jpg"
+   "image": "/images/dishes/Banh-Xeo.jpg"
   },
   {
     "id": 370,
@@ -17873,7 +17873,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 45,
     "fat": 14,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/g7jomp1763763994.jpg"
+    "image": "/images/dishes/Caramelized-Pork.jpg"
   },
   {
     "id": 371,
@@ -18689,7 +18689,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1597345637412-9fd611e758f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxCdW4lMjBCbyUyMEh1ZSUyMFZpZXRuYW18ZW58MHwwfHx8MTc4MjY4MzQzOXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Bun-Bo-Hue.jpg"
   },
   {
     "id": 387,
@@ -18740,7 +18740,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1509072619873-adb3dc289b50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDYW8lMjBMYXUlMjBWaWV0bmFtJTIwZm9vZHxlbnwwfDB8fHwxNzgyNjgzNDQwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Cao-Lau.jpg"
   },
   {
     "id": 388,
@@ -18791,7 +18791,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1779376786769-d7cb5a5f9a48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDaGElMjBDYXxlbnwwfDB8fHwxNzgyNjgzNDQyfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Cha-Ca.jpg"
   },
   {
     "id": 389,
@@ -18842,7 +18842,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1597345637412-9fd611e758f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxCdW4lMjBUaGl0JTIwTnVvbmclMjBWaWV0bmFtfGVufDB8MHx8fDE3ODI2ODM0NDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+   "image": "/images/dishes/Bun-Thit-Nuong.jpg"
   },
   {
     "id": 390,
