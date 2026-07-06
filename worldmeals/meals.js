@@ -14521,7 +14521,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 65,
     "fat": 20,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1589402249680-5ff95f2ac3bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxNb2ZvbmdvJTIwUHVlcnRvJTIwUmljb3xlbnwwfDB8fHwxNzgyNzAyMDA4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Mofongo.jpg"
   },
   {
     "id": 303,
@@ -14568,7 +14568,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 69,
     "fat": 22,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/jc6oub1763196663.jpg"
+    "image": "/images/dishes/Arroz-con-Gandule.jpg"
   },
   {
     "id": 304,
