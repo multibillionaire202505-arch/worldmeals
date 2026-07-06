@@ -2338,7 +2338,9 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 74,
     "fat": 23,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1599921841143-819065a55cc6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxXaWVuZXIlMjBTY2huaXR6ZWx8ZW58MHwwfHx8MTc4MjY4NzYwOHww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Wiener-Schnitzel.jpg"
+},
+{
   },
   {
     "id": 53,
