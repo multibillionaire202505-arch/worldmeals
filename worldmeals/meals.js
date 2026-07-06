@@ -6162,7 +6162,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 34,
     "fat": 11,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1563389845181-317e9b3be029?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxNYW5ha2lzaCUyMExlYmFub258ZW58MHwwfHx8MTc4MjY5ODg1Mnww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Manakish.jpg"
   },
   {
     "id": 135,
