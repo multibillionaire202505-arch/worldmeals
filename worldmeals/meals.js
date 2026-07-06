@@ -5533,7 +5533,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1651104677157-f14b80602682?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxEaG9sbCUyMFB1cmklMjBNYXVyaXRpdXN8ZW58MHwwfHx8MTc4MjY5ODg0MXww&ixlib=rb-4.1.0&q=80&w=1080"
+   "image": "/images/dishes/Dholl-Puri.jpg"
   },
   {
     "id": 122,
