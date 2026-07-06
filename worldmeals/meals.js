@@ -9300,7 +9300,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 57,
     "fat": 18,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1593252719532-53f183016149?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxOZXBhbCUyMHJlY2lwZXxlbnwwfDB8fHwxNzgyNjg0MDAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Momo.jpg"
   },
   {
     "id": 199,
@@ -9340,7 +9340,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 61,
     "fat": 19,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1593252719532-53f183016149?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxOZXBhbCUyMHJlY2lwZXxlbnwwfDB8fHwxNzgyNjg0MDAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Dal-Bhat.jpg"
   },
   {
     "id": 200,
@@ -20784,7 +20784,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1593252719532-53f183016149?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxOZXBhbCUyMHJlY2lwZXxlbnwwfDB8fHwxNzgyNjg0MDAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Sel-Roti.jpg"
   },
   {
     "id": 428,
@@ -20835,7 +20835,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1593252719532-53f183016149?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxOZXBhbCUyMHJlY2lwZXxlbnwwfDB8fHwxNzgyNjg0MDAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Thukpa.jpg"
   },
   {
     "id": 429,
@@ -20886,7 +20886,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1593252719532-53f183016149?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxOZXBhbCUyMHJlY2lwZXxlbnwwfDB8fHwxNzgyNjg0MDAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Chatamari.jpg"
   },
   {
     "id": 430,
@@ -20937,7 +20937,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1593252719532-53f183016149?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxOZXBhbCUyMHJlY2lwZXxlbnwwfDB8fHwxNzgyNjg0MDAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Aloo-Tama.jpg"
   },
   {
     "id": 431,
@@ -20987,7 +20987,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1572442568216-e4a31af30b69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxHdW5kcnVrJTIwU291cCUyME5lcGFsJTIwcmVjaXBlfGVufDB8MHx8fDE3ODI2ODQwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Gundruk-Soup.jpg"
   },
   {
     "id": 432,
@@ -21038,7 +21038,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxZb21hcmklMjBOZXBhbHxlbnwwfDB8fHwxNzgyNjg0MDAzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Yomari.jpg"
   },
   {
     "id": 433,
