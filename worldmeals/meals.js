@@ -1114,7 +1114,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 71,
     "fat": 22,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/xrttsx1487339558.jpg"
+    "image": "/images/dishes/Biryani.jpg"
   },
   {
     "id": 26,
@@ -2623,7 +2623,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 35,
     "fat": 11,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1727018742095-14c9a05aa71a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxEYWFsJTIwSW5kaWF8ZW58MHwwfHx8MTc4MjY4NzYxMnww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Daal.jpg"
   },
   {
     "id": 59,
@@ -2856,7 +2856,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 57,
     "fat": 18,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1716535232842-d10da4eb33d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDaGlja2VuJTIwVGlra2ElMjBNYXNhbGElMjBJbmRpYXxlbnwwfDB8fHwxNzgyNjg3NjE4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Chicken-Tikka-Masala.jpg"
   },
   {
     "id": 64,
@@ -8788,7 +8788,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 72,
     "fat": 23,
     "fiber": 5,
-    "image": ""
+   "image": "/images/dishes/Chana-Masala.jpg"
   },
   {
     "id": 188,
@@ -8834,7 +8834,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 76,
     "fat": 24,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Palak-Paneer.jpg"
   },
   {
     "id": 189,
@@ -8888,7 +8888,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 80,
     "fat": 25,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/vvstvq1487342592.jpg"
+  "image": "/images/dishes/Rogan-Josh.jpg"
   },
   {
     "id": 190,
@@ -8928,7 +8928,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 25,
     "fat": 8,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Masala-Dosa.jpg"
   },
   {
     "id": 191,
@@ -8968,7 +8968,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 29,
     "fat": 9,
     "fiber": 5,
-    "image": ""
+   "image": "/images/dishes/Aloo-Gobi.jpg"
   },
   {
     "id": 192,
@@ -9029,7 +9029,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 33,
     "fat": 10,
     "fiber": 5,
-    "image": ""
+  "image": "/images/dishes/Pav-Bhaji.jpg"
   },
   {
     "id": 193,
@@ -9076,7 +9076,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 37,
     "fat": 11,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Vada-Pav.jpg"
   },
   {
     "id": 194,
@@ -18891,7 +18891,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1780504863220-514ba37dcba0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDaG9sZSUyMEJoYXR1cmUlMjBJbmRpYXxlbnwwfDB8fHwxNzgyNjgzNDQ0fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Chole-Bhature.jpg"
   },
   {
     "id": 391,
@@ -18942,7 +18942,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1668236534990-73c4ed23043c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxSYWptYSUyMENoYXdhbHxlbnwwfDB8fHwxNzgyNjgzNDQ2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Rajma-Chawal.jpg"
   },
   {
     "id": 392,
