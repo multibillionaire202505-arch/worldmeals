@@ -392,7 +392,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 74,
     "fat": 23,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/ctg8jd1585563097.jpg"
+    "image": "/images/dishes/Moussaka.jpg"
   },
   {
     "id": 10,
@@ -1401,7 +1401,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/rjhf741585564676.jpg"
+    "image": "/images/dishes/Souvlaki.jpg",
   },
   {
     "id": 32,
@@ -25786,7 +25786,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Gyro.jpg",
   },
   {
     "id": 526,
@@ -25837,7 +25837,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+   "image": "/images/dishes/Pastitsio.jpg",
   },
   {
     "id": 527,
@@ -25888,7 +25888,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Dolmades.jpg",
   },
   {
     "id": 528,
@@ -25939,7 +25939,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/k29viq1585565980.jpg"
+    "image": "/images/dishes/Greek-Salad.jpg",
   },
   {
     "id": 529,
@@ -25990,7 +25990,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Tzatziki-Plate.jpg",
   },
   {
     "id": 530,
@@ -26041,7 +26041,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kleftiko.jpg",
   },
   {
     "id": 531,
@@ -26092,7 +26092,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Gemista.jpg",
   },
   {
     "id": 532,
@@ -26143,7 +26143,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+   "image": "/images/dishes/Avgolemono.jpg",
   },
   {
     "id": 533,
