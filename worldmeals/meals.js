@@ -10913,7 +10913,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 69,
     "fat": 22,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1729553310340-02b916e68ed5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxCYWNhbGhhdSUyMGElMjBCcmFzJTIwUG9ydHVnYWwlMjByZWNpcGV8ZW58MHwwfHx8MTc4MjY4MzQ0NXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Bacalhau-a-Bras.jpg"
   },
   {
     "id": 231,
@@ -11006,7 +11006,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 77,
     "fat": 24,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1550603102-8ee4752b5ba8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxQYXN0ZWwlMjBkZSUyME5hdGElMjBQb3J0dWdhbHxlbnwwfDB8fHwxNzgyNjgzNDQ4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Pastel-de-Nata.jpg"
   },
   {
     "id": 233,
@@ -25277,7 +25277,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Piri-Piri-Chicken.jpg"
   },
   {
     "id": 516,
@@ -25328,7 +25328,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Arroz-de-Pato.jpg"
   },
   {
     "id": 517,
@@ -25379,7 +25379,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+   "image": "/images/dishes/Cataplana.jpg"
   },
   {
     "id": 518,
@@ -25430,7 +25430,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Feijoada-Portuguesa.jpg"
   },
   {
     "id": 519,
