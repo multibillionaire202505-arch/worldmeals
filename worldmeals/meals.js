@@ -14568,7 +14568,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 69,
     "fat": 22,
     "fiber": 5,
-    "image": "/images/dishes/Arroz-con-Gandule.jpg"
+    "image": "/images/dishes/Arroz-con-Gandules.jpg"
   },
   {
     "id": 304,
