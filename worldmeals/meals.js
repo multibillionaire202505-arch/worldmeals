@@ -10413,7 +10413,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 28,
     "fat": 9,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/qstyvs1505931190.jpg"
+    "image": "/images/dishes/Coq-au-Vin.jpg"
   },
   {
     "id": 221,
@@ -10467,7 +10467,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 32,
     "fat": 10,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/wxuvuv1511299147.jpg"
+    "image": "/images/dishes/Cassoulet.jpg"
   },
   {
     "id": 222,
@@ -10521,7 +10521,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 36,
     "fat": 11,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1472926373053-51b220987527?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxTYWxhZGUlMjBOaWNvaXNlJTIwRnJhbmNlfGVufDB8MHx8fDE3ODI2ODM0Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Salade-Nicoise.jpg"
   },
   {
     "id": 223,
@@ -24718,7 +24718,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Bouillabaisse.jpg"
   },
   {
     "id": 505,
@@ -24820,7 +24820,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/wvpvsu1511786158.jpg"
+   "image": "/images/dishes/Duck-Confit.jpg"
   },
   {
     "id": 507,
@@ -24870,7 +24870,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/ryspuw1511786688.jpg"
+    "image": "/images/dishes/Tarte-Tatin.jpg"
   },
   {
     "id": 508,
