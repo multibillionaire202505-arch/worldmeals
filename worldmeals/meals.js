@@ -157,7 +157,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 53,
     "fat": 17,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/rg9ze01763479093.jpg"
+    "image": "/images/dishes/Pad-Thai.jpg"
   },
   {
     "id": 4,
