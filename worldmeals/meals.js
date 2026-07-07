@@ -7753,7 +7753,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 46,
     "fat": 14,
     "fiber": 5,
-    "image": "/images/dishes/Pancit-Canton.jpg"
+    "image": "/images/dishes/Pancit.jpg"
   },
   {
     "id": 167,
