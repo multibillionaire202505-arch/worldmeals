@@ -2195,7 +2195,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 57,
     "fat": 18,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/y7h0lq1683208991.jpg"
+   "image": "/images/dishes/Adobo.jpg"
   },
   {
     "id": 49,
@@ -7646,7 +7646,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 38,
     "fat": 12,
     "fiber": 5,
-    "image": ""
+   "image": "/images/dishes/Chicken-Adobo.jpg"
   },
   {
     "id": 165,
@@ -7700,7 +7700,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 42,
     "fat": 13,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Sinigang.jpg"
   },
   {
     "id": 166,
@@ -7753,7 +7753,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 46,
     "fat": 14,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Pancit-Canton.jpg"
   },
   {
     "id": 167,
@@ -7800,7 +7800,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 50,
     "fat": 16,
     "fiber": 5,
-    "image": ""
+  "image": "/images/dishes/Lechon-Kawali.jpg"
   },
   {
     "id": 168,
@@ -17509,7 +17509,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 76,
     "fat": 24,
     "fiber": 5,
-    "image": ""
+   "image": "/images/dishes/Lumpia.jpg"
   },
   {
     "id": 364,
@@ -17563,7 +17563,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 80,
     "fat": 25,
     "fiber": 5,
-    "image": ""
+   "image": "/images/dishes/Kare-Kare.jpg"
   },
   {
     "id": 365,
@@ -17617,7 +17617,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 24,
     "fat": 7,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Bicol-Express.jpg"
   },
   {
     "id": 366,
@@ -17671,7 +17671,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 28,
     "fat": 9,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Laing.jpg"
   },
   {
     "id": 367,
@@ -17711,7 +17711,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 32,
     "fat": 10,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Turon.jpg"
   },
   {
     "id": 368,
@@ -19714,7 +19714,8 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+   "image": "/images/dishes/Chicken-Inasal
+.jpg"
   },
   {
     "id": 407,
@@ -19765,7 +19766,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Arroz-Caldo.jpg"
   },
   {
     "id": 408,
