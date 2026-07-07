@@ -212,7 +212,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 71,
     "fat": 22,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1574969903809-3f7a1668ceb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxQYXN0YSUyMENhcmJvbmFyYSUyMEl0YWx5fGVufDB8MHx8fDE3ODI2OTM5MDd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+   "image": "/images/dishes/Pasta-Carbonara.jpg"
   },
   {
     "id": 5,
