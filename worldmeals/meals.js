@@ -19714,8 +19714,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Chicken-Inasal
-.jpg"
+   "image": "/images/dishes/Chicken-Inasal.jpg"
   },
   {
     "id": 407,
