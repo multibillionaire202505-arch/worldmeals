@@ -24769,7 +24769,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+  "image": "/images/dishes/Nicoise-Salad.jpg"
   },
   {
     "id": 506,
