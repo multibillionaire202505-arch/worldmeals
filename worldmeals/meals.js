@@ -348,7 +348,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 24,
     "fat": 7,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDZXZpY2hlJTIwUGVydXxlbnwwfDB8fHwxNzgyNjkzOTExfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Ceviche.jpg"
   },
   {
     "id": 9,
