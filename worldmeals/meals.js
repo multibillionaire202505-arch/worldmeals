@@ -303,7 +303,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 52,
     "fat": 16,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1616627052149-22c4f8a6316e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxCaWJpbWJhcCUyMFNvdXRoJTIwS29yZWF8ZW58MHwwfHx8MTc4MjY5MzkxMHww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Bibimbap.jpg"
   },
   {
     "id": 8,
