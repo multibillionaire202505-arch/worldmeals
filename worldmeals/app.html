@@ -222,15 +222,16 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 .brand-hero{
   display:flex;
   align-items:center;
-  justify-content:space-between;
+  justify-content:center;
   gap:12px;
-  padding:4px 2px 2px;
+  padding:6px 2px 4px;
 }
 .brand-main{
   display:flex;
   align-items:center;
   gap:10px;
 }
+.search-wrap{display:none}
 .brand-globe{
   font-size:38px;
   filter:drop-shadow(0 8px 14px rgba(47,143,91,.16));
@@ -472,6 +473,168 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 }
 
 
+/* ADVANCED FILTERS PANEL — collapsible header + mixer faders */
+.adv-filters{
+  background:rgba(255,255,255,.7);
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:14px 16px 18px;
+  margin-bottom:14px;
+  box-shadow:0 8px 20px rgba(83,55,29,.06);
+}
+.adv-filters-head{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:10px;
+  margin-bottom:10px;
+}
+.adv-btn{
+  border:1px solid var(--border);
+  background:#fff;
+  color:var(--accent-dark);
+  font-size:12px;
+  font-weight:800;
+  padding:8px 14px;
+  border-radius:999px;
+  cursor:pointer;
+  font-family:Inter,system-ui,sans-serif;
+  white-space:nowrap;
+}
+.adv-btn.hide{background:var(--accent-soft);border-color:#EFCFA0}
+.adv-body{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+}
+.adv-body.collapsed{display:none}
+.mixer{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+.mixer-label{
+  font-size:12px;
+  font-weight:800;
+  color:var(--text);
+  margin-bottom:6px;
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+.mixer-pill{
+  background:var(--accent-soft);
+  color:var(--accent-dark);
+  font-size:11px;
+  font-weight:800;
+  padding:4px 10px;
+  border-radius:999px;
+  margin-bottom:10px;
+  white-space:nowrap;
+}
+.mixer-track-wrap{
+  display:flex;
+  align-items:stretch;
+  gap:8px;
+  height:170px;
+}
+.mixer-ticks{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  font-size:9px;
+  color:var(--muted);
+  font-weight:700;
+  text-align:right;
+  line-height:1;
+}
+.mixer-fader{
+  writing-mode:vertical-lr;
+  direction:rtl;
+  width:22px;
+  height:170px;
+  appearance:none;
+  -webkit-appearance:none;
+  background:transparent;
+  cursor:pointer;
+}
+.mixer-fader::-webkit-slider-runnable-track{
+  width:6px;
+  background:linear-gradient(to top,var(--accent),var(--accent) var(--fill,50%),#E9DED0 var(--fill,50%),#E9DED0);
+  border-radius:999px;
+}
+.mixer-fader::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  width:34px;
+  height:16px;
+  border-radius:6px;
+  background:var(--text);
+  border:2px solid #fff;
+  box-shadow:0 3px 8px rgba(0,0,0,.28);
+  margin-left:-14px;
+  background-image:linear-gradient(to bottom,transparent 45%,rgba(255,255,255,.55) 45%,rgba(255,255,255,.55) 55%,transparent 55%);
+}
+.mixer-fader::-moz-range-track{
+  width:6px;
+  background:#E9DED0;
+  border-radius:999px;
+}
+.mixer-fader::-moz-range-progress{
+  width:6px;
+  background:var(--accent);
+  border-radius:999px;
+}
+.mixer-fader::-moz-range-thumb{
+  width:34px;
+  height:16px;
+  border-radius:6px;
+  background:var(--text);
+  border:2px solid #fff;
+  box-shadow:0 3px 8px rgba(0,0,0,.28);
+}
+@media(max-width:900px){
+  .adv-body{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:560px){
+  .adv-body{grid-template-columns:repeat(2,1fr)}
+}
+
+/* RESULTS TOOLBAR — count + sort + grid/list toggle */
+.results-toolbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin:16px 0 14px;
+  flex-wrap:wrap;
+}
+.results-toolbar .count{margin:0}
+.toolbar-right{display:flex;align-items:center;gap:10px}
+.sort-wrap{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);font-weight:700}
+.sort-wrap select{
+  border:1px solid var(--border);
+  background:#fff;
+  border-radius:999px;
+  padding:8px 14px;
+  font-size:12px;
+  font-weight:800;
+  color:var(--text);
+  font-family:Inter,system-ui,sans-serif;
+  outline:none;
+}
+.view-toggle{display:flex;background:var(--accent-soft);border-radius:999px;padding:3px;gap:2px}
+.view-toggle button{
+  border:none;background:transparent;width:30px;height:30px;border-radius:999px;
+  cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;
+  color:var(--accent-dark);
+}
+.view-toggle button.active{background:var(--accent);color:#fff}
+.grid.list-view{grid-template-columns:1fr}
+.grid.list-view .card{display:flex;flex-direction:row;align-items:stretch}
+.grid.list-view .card-img{width:150px;height:auto;flex-shrink:0}
+.grid.list-view .card-body{flex:1}
+
 /* WORLDMEALS TYPOGRAPHY SOFTENING — less bold, more premium */
 .filter-group{
   padding-left:48px !important;
@@ -502,6 +665,285 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 }
 .view-recipe-btn{
   font-weight:700 !important;
+}
+
+
+
+/* ==========================================================
+   WORLDMEALS 2.0 — SIGNATURE PREMIUM MIXER FADERS
+   One range input per filter. Luxury channel-strip styling.
+   Paste-safe override: does not change your data or core app logic.
+   ========================================================== */
+:root{
+  --wm-gold:#F5A623;
+  --wm-gold-2:#D9630B;
+  --wm-cream:#FFF7EC;
+  --wm-track:#E7DED2;
+  --wm-ink:#221B14;
+}
+
+.adv-filters{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(145deg,rgba(255,255,255,.94),rgba(255,248,238,.92));
+  border:1px solid rgba(232,221,208,.95);
+  border-radius:28px;
+  padding:18px 18px 22px;
+  box-shadow:0 22px 55px rgba(83,55,29,.13), inset 0 1px 0 rgba(255,255,255,.95);
+}
+.adv-filters::before{
+  content:"";
+  position:absolute;
+  inset:-80px auto auto -80px;
+  width:210px;
+  height:210px;
+  background:radial-gradient(circle,rgba(245,166,35,.18),transparent 64%);
+  pointer-events:none;
+}
+.adv-filters::after{
+  content:"";
+  position:absolute;
+  right:-90px;
+  bottom:-90px;
+  width:230px;
+  height:230px;
+  background:radial-gradient(circle,rgba(47,143,91,.10),transparent 64%);
+  pointer-events:none;
+}
+.adv-filters-head{
+  position:relative;
+  z-index:2;
+  justify-content:space-between;
+  margin-bottom:16px;
+}
+.adv-filters-head::before{
+  content:"🎛️ Advanced filters";
+  color:var(--wm-ink);
+  font-size:14px;
+  font-weight:850;
+  letter-spacing:-.2px;
+}
+.adv-btn{
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+  box-shadow:0 8px 18px rgba(83,55,29,.06);
+}
+.adv-btn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 13px 26px rgba(83,55,29,.13);
+}
+.adv-btn.hide{
+  color:#fff;
+  border-color:rgba(217,99,11,.18);
+  background:linear-gradient(135deg,var(--wm-gold),var(--wm-gold-2));
+  box-shadow:0 12px 24px rgba(217,99,11,.22);
+}
+
+.adv-body{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:repeat(5,minmax(118px,1fr));
+  gap:16px;
+  align-items:stretch;
+}
+.mixer{
+  position:relative;
+  min-height:285px;
+  padding:14px 10px 16px;
+  border-radius:24px;
+  background:linear-gradient(180deg,rgba(255,255,255,.92),rgba(255,249,241,.86));
+  border:1px solid rgba(232,221,208,.92);
+  box-shadow:0 12px 28px rgba(83,55,29,.08), inset 0 1px 0 rgba(255,255,255,.98);
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.mixer:hover,
+.mixer:focus-within{
+  transform:translateY(-4px);
+  border-color:rgba(245,166,35,.55);
+  box-shadow:0 22px 42px rgba(83,55,29,.14), 0 0 0 4px rgba(245,166,35,.10), inset 0 1px 0 rgba(255,255,255,1);
+}
+.mixer-label{
+  justify-content:center;
+  font-size:12px;
+  line-height:1.2;
+  font-weight:850;
+  color:var(--wm-ink);
+  margin-bottom:7px;
+}
+.mixer-pill{
+  min-height:24px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:5px 10px;
+  border-radius:999px;
+  color:#8A4B18;
+  background:linear-gradient(135deg,#FFF3DA,#FFE2BC);
+  border:1px solid rgba(245,166,35,.30);
+  font-size:10px;
+  font-weight:850;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9);
+}
+.mixer-track-wrap{
+  position:relative;
+  height:196px;
+  display:flex;
+  justify-content:center;
+  align-items:stretch;
+  gap:9px;
+  margin-top:2px;
+}
+.mixer-ticks{
+  min-width:54px;
+  max-width:68px;
+  color:#8A7C6D;
+  font-size:9px;
+  font-weight:750;
+  letter-spacing:-.15px;
+  line-height:1.08;
+  opacity:.94;
+}
+.mixer-ticks span{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  min-height:18px;
+}
+
+/* one native input, styled like a physical studio channel fader */
+.mixer-fader{
+  --fill:100%;
+  width:42px !important;
+  height:196px !important;
+  padding:0;
+  margin:0;
+  background:transparent !important;
+  touch-action:none;
+  outline:none;
+  transition:filter .18s ease;
+}
+.mixer-fader:focus-visible{
+  filter:drop-shadow(0 0 0 rgba(0,0,0,0));
+}
+.mixer-fader::-webkit-slider-runnable-track{
+  width:9px;
+  height:196px;
+  border-radius:999px;
+  background:linear-gradient(to top,
+    var(--wm-gold-2) 0%,
+    var(--wm-gold) var(--fill),
+    var(--wm-track) var(--fill),
+    var(--wm-track) 100%);
+  box-shadow:inset 0 2px 5px rgba(83,55,29,.22), 0 0 0 1px rgba(255,255,255,.72);
+}
+.mixer-fader::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  width:42px;
+  height:18px;
+  border-radius:8px;
+  border:2px solid rgba(255,255,255,.92);
+  margin-left:-16.5px;
+  background:
+    linear-gradient(to bottom,transparent 0 4px,rgba(255,255,255,.64) 4px 5px,transparent 5px 8px,rgba(255,255,255,.64) 8px 9px,transparent 9px 12px,rgba(255,255,255,.64) 12px 13px,transparent 13px),
+    linear-gradient(180deg,#3B2A1C,#1F1A14);
+  box-shadow:0 8px 16px rgba(31,26,20,.30), 0 2px 0 rgba(255,255,255,.20) inset;
+  cursor:grab;
+  transition:transform .16s ease, box-shadow .16s ease, background .16s ease;
+}
+.mixer-fader:hover::-webkit-slider-thumb,
+.mixer-fader:active::-webkit-slider-thumb{
+  transform:scale(1.07);
+  cursor:grabbing;
+  background:
+    linear-gradient(to bottom,transparent 0 4px,rgba(255,255,255,.70) 4px 5px,transparent 5px 8px,rgba(255,255,255,.70) 8px 9px,transparent 9px 12px,rgba(255,255,255,.70) 12px 13px,transparent 13px),
+    linear-gradient(180deg,#F5A623,#D9630B);
+  box-shadow:0 12px 24px rgba(217,99,11,.38), 0 0 0 5px rgba(245,166,35,.14);
+}
+.mixer-fader::-moz-range-track{
+  width:9px;
+  height:196px;
+  border-radius:999px;
+  background:var(--wm-track);
+  box-shadow:inset 0 2px 5px rgba(83,55,29,.22);
+}
+.mixer-fader::-moz-range-progress{
+  width:9px;
+  border-radius:999px;
+  background:linear-gradient(to top,var(--wm-gold-2),var(--wm-gold));
+}
+.mixer-fader::-moz-range-thumb{
+  width:42px;
+  height:18px;
+  border-radius:8px;
+  border:2px solid rgba(255,255,255,.92);
+  background:linear-gradient(180deg,#3B2A1C,#1F1A14);
+  box-shadow:0 8px 16px rgba(31,26,20,.30);
+  cursor:grab;
+}
+
+/* Primary filter cards: keep your current structure, make it feel premium */
+.filter-row{
+  margin-top:2px;
+  margin-bottom:14px !important;
+}
+.filter-group{
+  background:rgba(255,255,255,.88) !important;
+  border:1px solid rgba(232,221,208,.95) !important;
+  border-radius:22px !important;
+  min-height:76px;
+  box-shadow:0 12px 28px rgba(83,55,29,.08), inset 0 1px 0 rgba(255,255,255,.92) !important;
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease !important;
+}
+.filter-group:hover,
+.filter-group:focus-within{
+  transform:translateY(-3px);
+  background:#fff !important;
+  border-color:rgba(245,166,35,.55) !important;
+  box-shadow:0 22px 42px rgba(83,55,29,.14), 0 0 0 4px rgba(245,166,35,.10) !important;
+}
+.filter-group::after{
+  content:"⌄";
+  position:absolute;
+  right:14px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#A05A18;
+  font-size:18px;
+  pointer-events:none;
+  transition:transform .22s ease;
+}
+.filter-group:hover::after,
+.filter-group:focus-within::after{
+  transform:translateY(-50%) rotate(180deg);
+}
+.filter-group select{
+  appearance:none !important;
+  -webkit-appearance:none !important;
+  cursor:pointer;
+}
+.results-toolbar{
+  padding:13px 14px;
+  border:1px solid rgba(232,221,208,.85);
+  border-radius:22px;
+  background:rgba(255,255,255,.72);
+  box-shadow:0 10px 24px rgba(83,55,29,.07);
+}
+
+@media(max-width:980px){
+  .adv-body{grid-template-columns:repeat(3,minmax(118px,1fr));}
+}
+@media(max-width:620px){
+  .adv-filters{padding:14px 12px 18px;border-radius:24px;}
+  .adv-filters-head{align-items:flex-start;gap:8px;flex-wrap:wrap;}
+  .adv-filters-head::before{width:100%;}
+  .adv-body{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+  .mixer{min-height:268px;padding-left:8px;padding-right:8px;}
+  .mixer-track-wrap,.mixer-fader,.mixer-fader::-webkit-slider-runnable-track{height:180px !important;}
+  .mixer-ticks{font-size:8px;min-width:46px;}
+}
+@media(max-width:390px){
+  .adv-body{grid-template-columns:1fr;}
+  .mixer-track-wrap,.mixer-fader,.mixer-fader::-webkit-slider-runnable-track{height:190px !important;}
 }
 
 </style>
@@ -548,16 +990,16 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
       </select>
     </div>
     <div class="filter-group f-protein"><label>Protein</label>
-      <select id="proteinFilter" onchange="renderGrid()">
-        <option value="all">Any protein</option>
+      <select id="proteinQuickFilter" onchange="syncProteinSelect(this.value)">
+        <option value="0">Any protein</option>
         <option value="20">20g+ protein</option>
         <option value="30">30g+ high protein</option>
         <option value="40">40g+ athlete mode</option>
       </select>
     </div>
     <div class="filter-group f-time"><label>Cook Time</label>
-      <select id="timeFilter" onchange="renderGrid()">
-        <option value="all">Any time</option><option value="15">15 min or less</option><option value="30">30 min or less</option><option value="45">45 min or less</option><option value="60">1 hour or less</option>
+      <select id="timeQuickFilter" onchange="syncTimeSelect(this.value)">
+        <option value="180">Any time</option><option value="15">15 min or less</option><option value="30">30 min or less</option><option value="45">45 min or less</option><option value="60">1 hour or less</option>
       </select>
     </div>
     <div class="filter-group f-spice"><label>Spice Level</label>
@@ -577,22 +1019,73 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
     </div>
   </div>
 
-  <div class="slider-row">
-    <div class="slider-group">
-      <label>Calories: 0 - <b id="calLbl">1000+</b></label>
-      <input type="range" id="calSlider" min="200" max="1000" step="50" value="1000" oninput="document.getElementById('calLbl').textContent=this.value>=1000?'1000+':this.value;renderGrid()">
+  <div class="adv-filters">
+    <div class="adv-filters-head">
+      <button class="adv-btn hide" id="advToggleBtn" onclick="toggleAdvFilters()">▾ Hide filters</button>
+      <button class="adv-btn" onclick="resetBrowseFilters()">↻ Reset</button>
     </div>
-    <div class="slider-group">
-      <label>Budget: $0 - <b id="budLbl">$40+</b></label>
-      <input type="range" id="budSlider" min="1" max="40" step="1" value="40" oninput="document.getElementById('budLbl').textContent=this.value>=40?'$40+':'$'+this.value;renderGrid()">
+    <div class="adv-body" id="advBody">
+      <div class="mixer">
+        <div class="mixer-label">🔥 Calories</div>
+        <div class="mixer-pill" id="calPill">0 - 1000+</div>
+        <div class="mixer-track-wrap">
+          <div class="mixer-ticks"><span>1000+</span><span>750</span><span>500</span><span>250</span><span>0</span></div>
+          <input class="mixer-fader" type="range" id="calSlider" min="200" max="1000" step="50" value="1000" oninput="onCalSlider(this.value)">
+        </div>
+      </div>
+      <div class="mixer">
+        <div class="mixer-label">💰 Budget</div>
+        <div class="mixer-pill" id="budPill">$0 - $40+</div>
+        <div class="mixer-track-wrap">
+          <div class="mixer-ticks"><span>$40+</span><span>$30</span><span>$20</span><span>$10</span><span>$0</span></div>
+          <input class="mixer-fader" type="range" id="budSlider" min="1" max="40" step="1" value="40" oninput="onBudSlider(this.value)">
+        </div>
+      </div>
+      <div class="mixer">
+        <div class="mixer-label">⏱️ Cook Time</div>
+        <div class="mixer-pill" id="timePill">Any time</div>
+        <div class="mixer-track-wrap">
+          <div class="mixer-ticks"><span>3+ hrs</span><span>2 hrs</span><span>1 hr</span><span>30 min</span><span>0 min</span></div>
+          <input class="mixer-fader" type="range" id="timeSlider" min="0" max="180" step="15" value="180" oninput="onTimeSlider(this.value)">
+        </div>
+      </div>
+      <div class="mixer">
+        <div class="mixer-label">🌶️ Spice Level</div>
+        <div class="mixer-pill" id="spPill">Any spice</div>
+        <div class="mixer-track-wrap">
+          <div class="mixer-ticks"><span>Extra Hot 🌶️🌶️🌶️</span><span>Hot 🌶️🌶️</span><span>Medium 🌶️</span><span>Mild</span><span>None</span></div>
+          <input class="mixer-fader" type="range" id="spSlider" min="1" max="5" step="1" value="5" oninput="onSpSlider(this.value)">
+        </div>
+      </div>
+      <div class="mixer">
+        <div class="mixer-label">💪 Protein</div>
+        <div class="mixer-pill" id="proteinPill">Any protein</div>
+        <div class="mixer-track-wrap">
+          <div class="mixer-ticks"><span>High (30g+)</span><span>Medium (15-30g)</span><span>Low (5-15g)</span><span>Very Low (0-5g)</span></div>
+          <input class="mixer-fader" type="range" id="proteinSlider" min="0" max="40" step="5" value="0" oninput="onProteinSlider(this.value)">
+        </div>
+      </div>
     </div>
-    <div class="slider-group">
-      <label>Spice: <b id="spLbl">Any</b></label>
-      <input type="range" id="spSlider" min="1" max="5" step="1" value="5" oninput="updateSpiceLabel(this.value);renderGrid()">
-    </div>
-    <button class="btn-chef" style="margin:0;padding:13px 18px;white-space:nowrap" onclick="resetBrowseFilters()">↻ Reset</button>
   </div>
-  <div class="count" id="countLbl"></div>
+
+  <div class="results-toolbar">
+    <div class="count" id="countLbl"></div>
+    <div class="toolbar-right">
+      <div class="sort-wrap">Sort by
+        <select id="sortFilter" onchange="renderGrid()">
+          <option value="popularity">Popularity</option>
+          <option value="rating">Rating</option>
+          <option value="time">Cook Time</option>
+          <option value="cal">Calories</option>
+          <option value="price">Price</option>
+        </select>
+      </div>
+      <div class="view-toggle">
+        <button id="viewGridBtn" class="active" onclick="setViewMode('grid')">▦</button>
+        <button id="viewListBtn" onclick="setViewMode('list')">☰</button>
+      </div>
+    </div>
+  </div>
   <div class="grid" id="grid"></div>
 </div>
 
@@ -790,7 +1283,109 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
   <button class="nav-btn" id="nb-saved" onclick="showPage('saved')"><span class="ic">❤️</span><span class="lb">Saved</span></button>
 </div>
 
-<script src="meals.js"></script>
+<script src="meals.js">
+
+/* ==========================================================
+   WORLDMEALS 2.0 — Premium fader behavior
+   One range input per filter: simple, fast, premium.
+   ========================================================== */
+function setFaderFill(el){
+  if(!el) return;
+  const min=Number(el.min || 0), max=Number(el.max || 100), v=Number(el.value || 0);
+  const pct=Math.max(0,Math.min(100,Math.round(((v-min)/(max-min))*100)));
+  el.style.setProperty('--fill', pct+'%');
+}
+function setFilterValue(id,value){
+  const el=document.getElementById(id);
+  if(el) el.value=String(value);
+}
+function caloriesLabel(v){
+  v=Number(v);
+  if(v>=1000) return 'Any calories';
+  if(v<=400) return 'Light • up to '+v;
+  if(v<=700) return 'Balanced • up to '+v;
+  return 'Indulgent • up to '+v;
+}
+function budgetLabel(v){
+  v=Number(v);
+  if(v>=40) return 'Any budget';
+  if(v<=5) return 'Ultra budget • $'+v;
+  if(v<=10) return 'Budget friendly • $'+v;
+  if(v<=20) return 'Everyday • $'+v;
+  return 'Premium • $'+v;
+}
+function timeLabel(v){
+  v=Number(v);
+  if(v>=180) return 'Any time';
+  if(v<=15) return 'Flash meal • '+v+' min';
+  if(v<=30) return 'Quick meal • '+v+' min';
+  if(v<=60) return 'Weeknight • '+v+' min';
+  return 'Slow cooking • '+v+' min';
+}
+function spiceLabel(v){
+  v=Number(v);
+  const labels={1:'Mild only',2:'Low spice',3:'Medium spice',4:'Hot is okay',5:'Any spice'};
+  return labels[v] || 'Any spice';
+}
+function proteinLabel(v){
+  v=Number(v);
+  if(v<=0) return 'Any protein';
+  if(v<15) return 'Light • '+v+'g+';
+  if(v<30) return 'Balanced • '+v+'g+';
+  if(v<40) return 'High protein • '+v+'g+';
+  return 'Athlete mode • '+v+'g+';
+}
+
+function onCalSlider(v){
+  const el=document.getElementById('calSlider');
+  setFaderFill(el);
+  document.getElementById('calPill').textContent = caloriesLabel(v);
+  setFilterValue('calQuickFilter', Number(v)>=1000?'1000':(Number(v)<=400?'400':Number(v)<=600?'600':'800'));
+  renderGrid();
+}
+function onBudSlider(v){
+  const el=document.getElementById('budSlider');
+  setFaderFill(el);
+  document.getElementById('budPill').textContent = budgetLabel(v);
+  setFilterValue('budgetQuickFilter', Number(v)>=40?'40':(Number(v)<=5?'5':Number(v)<=10?'10':'20'));
+  renderGrid();
+}
+function onTimeSlider(v){
+  const el=document.getElementById('timeSlider');
+  setFaderFill(el);
+  document.getElementById('timePill').textContent = timeLabel(v);
+  setFilterValue('timeQuickFilter', Number(v)>=180?'180':(Number(v)<=15?'15':Number(v)<=30?'30':Number(v)<=45?'45':'60'));
+  renderGrid();
+}
+function onSpSlider(v){
+  const el=document.getElementById('spSlider');
+  setFaderFill(el);
+  document.getElementById('spPill').textContent = spiceLabel(v);
+  setFilterValue('spiceQuickFilter', v);
+  renderGrid();
+}
+function onProteinSlider(v){
+  const el=document.getElementById('proteinSlider');
+  setFaderFill(el);
+  document.getElementById('proteinPill').textContent = proteinLabel(v);
+  setFilterValue('proteinQuickFilter', Number(v)>=40?'40':Number(v)>=30?'30':Number(v)>=20?'20':'0');
+  renderGrid();
+}
+function refreshPremiumFaders(){
+  [
+    ['calSlider',onCalSlider],
+    ['budSlider',onBudSlider],
+    ['timeSlider',onTimeSlider],
+    ['spSlider',onSpSlider],
+    ['proteinSlider',onProteinSlider]
+  ].forEach(([id,fn])=>{
+    const el=document.getElementById(id);
+    if(el){ setFaderFill(el); }
+  });
+}
+requestAnimationFrame(refreshPremiumFaders);
+
+</script>
 <script>
 const MEALS = window.WORLD_MEALS_DATABASE || [];
 
@@ -1100,41 +1695,108 @@ function isHighProtein(m, min=30){
   return mealProtein(m) >= min;
 }
 
-function updateSpiceLabel(v){document.getElementById("spLbl").textContent=SPICE[parseInt(v)]||"Any";}
+function setFaderFill(el){
+  const min=Number(el.min), max=Number(el.max), v=Number(el.value);
+  const pct=Math.round(((v-min)/(max-min))*100);
+  el.style.setProperty('--fill', pct+'%');
+}
 
+function onCalSlider(v){
+  const el=document.getElementById('calSlider');
+  setFaderFill(el);
+  document.getElementById('calPill').textContent = Number(v)>=1000 ? '0 - 1000+' : '0 - '+v;
+  document.getElementById('calQuickFilter').value = Number(v)>=1000?"1000":(Number(v)<=400?"400":Number(v)<=600?"600":"800");
+  renderGrid();
+}
+function onBudSlider(v){
+  const el=document.getElementById('budSlider');
+  setFaderFill(el);
+  document.getElementById('budPill').textContent = Number(v)>=40 ? '$0 - $40+' : '$0 - $'+v;
+  document.getElementById('budgetQuickFilter').value = Number(v)>=40?"40":(Number(v)<=5?"5":Number(v)<=10?"10":"20");
+  renderGrid();
+}
+function onSpSlider(v){
+  const el=document.getElementById('spSlider');
+  setFaderFill(el);
+  updateSpiceLabel(v);
+  document.getElementById('spPill').textContent = Number(v)>=5 ? 'Any spice' : (SPICE[parseInt(v)]||'Any spice');
+  document.getElementById('spiceQuickFilter').value = v;
+  renderGrid();
+}
+function onTimeSlider(v){
+  const el=document.getElementById('timeSlider');
+  setFaderFill(el);
+  document.getElementById('timePill').textContent = Number(v)>=180 ? 'Any time' : v+' min or less';
+  document.getElementById('timeQuickFilter').value = Number(v)>=180?"180":(Number(v)<=15?"15":Number(v)<=30?"30":Number(v)<=45?"45":"60");
+  renderGrid();
+}
+function onProteinSlider(v){
+  const el=document.getElementById('proteinSlider');
+  setFaderFill(el);
+  document.getElementById('proteinPill').textContent = Number(v)<=0 ? 'Any protein' : v+'g+ protein';
+  document.getElementById('proteinQuickFilter').value = Number(v)>=40?"40":Number(v)>=30?"30":Number(v)>=20?"20":"0";
+  renderGrid();
+}
+
+function updateSpiceLabel(v){ /* pill text is set directly in onSpSlider */ }
 
 function syncSpiceSelect(v){
   document.getElementById("spSlider").value=v;
-  updateSpiceLabel(v);
-  renderGrid();
+  onSpSlider(v);
 }
 function syncCalSelect(v){
   document.getElementById("calSlider").value=v;
-  document.getElementById("calLbl").textContent=Number(v)>=1000?"1000+":v;
-  renderGrid();
+  onCalSlider(v);
 }
 function syncBudgetSelect(v){
   document.getElementById("budSlider").value=v;
-  document.getElementById("budLbl").textContent=Number(v)>=40?"$40+":"$"+v;
-  renderGrid();
+  onBudSlider(v);
 }
+function syncProteinSelect(v){
+  document.getElementById("proteinSlider").value=v;
+  onProteinSlider(v);
+}
+function syncTimeSelect(v){
+  document.getElementById("timeSlider").value=v;
+  onTimeSlider(v);
+}
+
+function toggleAdvFilters(){
+  const body=document.getElementById("advBody");
+  const btn=document.getElementById("advToggleBtn");
+  const collapsed=body.classList.toggle("collapsed");
+  btn.textContent = collapsed ? "▸ Show filters" : "▾ Hide filters";
+  btn.classList.toggle("hide", !collapsed);
+}
+
+let currentViewMode="grid";
+function setViewMode(mode){
+  currentViewMode=mode;
+  document.getElementById("viewGridBtn").classList.toggle("active", mode==="grid");
+  document.getElementById("viewListBtn").classList.toggle("active", mode==="list");
+  document.getElementById("grid").classList.toggle("list-view", mode==="list");
+}
+
 function resetBrowseFilters(){
   document.getElementById("searchInput").value="";
   document.getElementById("regionFilter").value="All regions";
   document.getElementById("dietFilter").value="all";
   document.getElementById("countryFilter").value="all";
-  document.getElementById("timeFilter").value="all";
-  document.getElementById("proteinFilter").value="all";
+  document.getElementById("timeQuickFilter").value="180";
+  document.getElementById("proteinQuickFilter").value="0";
   document.getElementById("spiceQuickFilter").value="5";
   document.getElementById("calQuickFilter").value="1000";
   document.getElementById("budgetQuickFilter").value="40";
   document.getElementById("calSlider").value="1000";
   document.getElementById("budSlider").value="40";
   document.getElementById("spSlider").value="5";
-  document.getElementById("calLbl").textContent="1000+";
-  document.getElementById("budLbl").textContent="$40+";
-  updateSpiceLabel(5);
-  renderGrid();
+  document.getElementById("timeSlider").value="180";
+  document.getElementById("proteinSlider").value="0";
+  onCalSlider("1000");
+  onBudSlider("40");
+  onSpSlider("5");
+  onTimeSlider("180");
+  onProteinSlider("0");
 }
 function countryFlag(country){
   const flags={"India":"🇮🇳","Japan":"🇯🇵","Thailand":"🇹🇭","South Korea":"🇰🇷","Ivory Coast":"🇨🇮","Nigeria":"🇳🇬","Ghana":"🇬🇭","France":"🇫🇷","Italy":"🇮🇹","Mexico":"🇲🇽","USA":"🇺🇸","United States":"🇺🇸","China":"🇨🇳","Morocco":"🇲🇦","Ethiopia":"🇪🇹","Spain":"🇪🇸","Germany":"🇩🇪","Canada":"🇨🇦","Brazil":"🇧🇷","Colombia":"🇨🇴","Peru":"🇵🇪","Vietnam":"🇻🇳","Lebanon":"🇱🇧","Turkey":"🇹🇷","Indonesia":"🇮🇩","Malaysia":"🇲🇾","Philippines":"🇵🇭","Jamaica":"🇯🇲","South Africa":"🇿🇦"};
@@ -1149,23 +1811,32 @@ function renderGrid(){
   const reg=document.getElementById("regionFilter").value;
   const diet=document.getElementById("dietFilter").value;
   const country=document.getElementById("countryFilter")?.value||"all";
-  const maxTime=document.getElementById("timeFilter")?.value||"all";
-  const proteinMin=document.getElementById("proteinFilter")?.value||"all";
+  const maxTime=parseInt(document.getElementById("timeSlider")?.value||"180");
+  const proteinMin=parseInt(document.getElementById("proteinSlider")?.value||"0");
   const cal=parseInt(document.getElementById("calSlider").value);
   const bud=parseInt(document.getElementById("budSlider").value);
   const sp=parseInt(document.getElementById("spSlider").value);
+  const sortMode=document.getElementById("sortFilter")?.value||"popularity";
 
-  const filtered=MEALS.filter(m=>{
+  let filtered=MEALS.filter(m=>{
     const searchable=(m.name+" "+m.country+" "+m.region+" "+(m.ingredients||[]).join(" ")).toLowerCase();
     if(q && q.includes("high protein") && !isHighProtein(m))return false;
     if(q&&!searchable.includes(q)&&!q.includes("high protein"))return false;
     if(reg!=="All regions"&&m.region!==reg)return false;
     if(diet!=="all"&&!m.tags.includes(diet))return false;
     if(country!=="all"&&m.country!==country)return false;
-    if(maxTime!=="all"&&parseMealMinutes(m.time)>Number(maxTime))return false;
-    if(proteinMin!=="all"&&mealProtein(m)<Number(proteinMin))return false;
+    if(maxTime<180&&parseMealMinutes(m.time)>maxTime)return false;
+    if(proteinMin>0&&mealProtein(m)<proteinMin)return false;
     if(m.cal>cal||m.budget>bud||m.spice>sp)return false;
     return true;
+  });
+
+  filtered=[...filtered].sort((a,b)=>{
+    if(sortMode==="rating") return mealRating(b)-mealRating(a);
+    if(sortMode==="time") return parseMealMinutes(a.time)-parseMealMinutes(b.time);
+    if(sortMode==="cal") return a.cal-b.cal;
+    if(sortMode==="price") return a.budget-b.budget;
+    return mealRating(b)-mealRating(a); // popularity default
   });
 
   currentRenderedMeals = filtered;
@@ -1777,6 +2448,10 @@ function copyGroceryList(){
 
 // INIT — render dishes immediately
 populateCountryFilter();
+["calSlider","budSlider","spSlider","timeSlider","proteinSlider"].forEach(id=>{
+  const el=document.getElementById(id);
+  if(el) setFaderFill(el);
+});
 renderGrid();
 updateFavCount();
 
