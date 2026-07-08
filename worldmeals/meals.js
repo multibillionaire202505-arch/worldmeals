@@ -24003,7 +24003,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Manty.jpg"
+   "image": "/images/dishes/Manty Kyrgyz.jpg"
   },
   {
     "id": 491,
