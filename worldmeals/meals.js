@@ -9905,7 +9905,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 47,
     "fat": 15,
     "fiber": 5,
-    "image": ""
+  "image": "/images/dishes/Manti.jpg"
   },
   {
     "id": 211,
