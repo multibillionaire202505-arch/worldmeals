@@ -231,7 +231,7 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
   align-items:center;
   gap:10px;
 }
-.search-wrap{display:none}
+.search-wrap{display:block}
 .brand-globe{
   font-size:38px;
   filter:drop-shadow(0 8px 14px rgba(47,143,91,.16));
@@ -946,6 +946,126 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
   .mixer-track-wrap,.mixer-fader,.mixer-fader::-webkit-slider-runnable-track{height:190px !important;}
 }
 
+
+/* WORLDMEALS 2.1 — PREMIUM SEARCH BAR RESTORED */
+.search-wrap{
+  display:block !important;
+  position:relative !important;
+  width:100%;
+}
+.search-wrap::before{
+  content:"🔍";
+  position:absolute;
+  left:18px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:17px;
+  opacity:.78;
+  z-index:2;
+  pointer-events:none;
+}
+.search-wrap .search{
+  display:block !important;
+  width:100%;
+  min-height:58px;
+  padding:15px 18px 15px 50px !important;
+  margin:0 !important;
+  border-radius:24px !important;
+  border:1px solid rgba(232,221,208,.95) !important;
+  background:rgba(255,255,255,.92) !important;
+  box-shadow:0 12px 30px rgba(83,55,29,.09), inset 0 1px 0 rgba(255,255,255,.95) !important;
+  font-size:15px !important;
+  font-weight:650;
+  color:var(--text);
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease;
+}
+.search-wrap .search:focus{
+  transform:translateY(-2px);
+  background:#fff !important;
+  border-color:rgba(245,166,35,.62) !important;
+  box-shadow:0 18px 40px rgba(83,55,29,.14), 0 0 0 4px rgba(245,166,35,.12) !important;
+}
+.search-wrap .search::placeholder{
+  color:#9A8A7A;
+  font-weight:600;
+}
+
+@media(max-width:520px){
+  .premium-top{
+    gap:12px;
+    margin-bottom:14px;
+  }
+  .search-wrap .search{
+    min-height:56px;
+    border-radius:22px !important;
+    font-size:14px !important;
+  }
+}
+
+
+
+/* ==========================================================
+   WORLDMEALS 2.1 MOBILE ONLY — ADVANCED MIXERS SLIDE ROW
+   Desktop/tablet stays unchanged. On phones, all 5 mixer cards
+   stay on one horizontal row and can be swiped left/right.
+   ========================================================== */
+@media(max-width:620px){
+  .adv-filters{
+    overflow:hidden;
+  }
+
+  .adv-body:not(.collapsed){
+    display:flex !important;
+    grid-template-columns:none !important;
+    gap:12px !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    -webkit-overflow-scrolling:touch;
+    scroll-snap-type:x proximity;
+    padding:2px 4px 10px 2px;
+  }
+
+  .adv-body:not(.collapsed)::after{
+    content:"";
+    flex:0 0 12px;
+  }
+
+  .adv-body:not(.collapsed) .mixer{
+    flex:0 0 142px !important;
+    min-width:142px !important;
+    max-width:142px !important;
+    min-height:268px;
+    scroll-snap-align:start;
+  }
+
+  .adv-body::-webkit-scrollbar{
+    height:4px;
+  }
+
+  .adv-body::-webkit-scrollbar-track{
+    background:rgba(232,221,208,.55);
+    border-radius:999px;
+  }
+
+  .adv-body::-webkit-scrollbar-thumb{
+    background:linear-gradient(90deg,var(--wm-gold),var(--wm-gold-2));
+    border-radius:999px;
+  }
+}
+
+@media(max-width:390px){
+  .adv-body:not(.collapsed){
+    display:flex !important;
+    grid-template-columns:none !important;
+  }
+
+  .adv-body:not(.collapsed) .mixer{
+    flex:0 0 140px !important;
+    min-width:140px !important;
+    max-width:140px !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -971,7 +1091,7 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
       </div>
     </div>
     <div class="search-wrap">
-      <input class="search" id="searchInput" placeholder="Search dish or country…" oninput="renderGrid()">
+      <input class="search" id="searchInput" placeholder="Search dishes or countries…" oninput="renderGrid()">
     </div>
   </div>
 
