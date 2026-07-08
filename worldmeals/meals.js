@@ -5582,7 +5582,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 45,
     "fat": 14,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1542627501-cadbb5b43ad7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxNdWFtYmElMjBkZSUyMEdhbGluaGElMjBkaXNofGVufDB8MHx8fDE3ODI2OTg4NDR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Muamba-de-Galinha.jpg"
   },
   {
     "id": 123,
