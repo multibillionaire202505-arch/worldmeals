@@ -27112,7 +27112,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+   "image": "/images/dishes/Kaiserschmarrn.jpg"
   },
   {
     "id": 552,
@@ -27163,7 +27163,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/svf3d01780298321.jpg"
+    "image": "/images/dishes/Tafelspitz.jpg"
   },
   {
     "id": 553,
@@ -27214,7 +27214,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Apfelstrudel.jpg"
   },
   {
     "id": 554,
@@ -27265,7 +27265,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Sachertorte.jpg"
   },
   {
     "id": 555,
@@ -27316,7 +27316,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/x26z3y1780155760.jpg"
+    "image": "/images/dishes/Knodel.jpg"
   },
   {
     "id": 556,
@@ -27367,7 +27367,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+   "image": "/images/dishes/Gulaschsuppe.jpg"
   },
   {
     "id": 557,
@@ -27418,7 +27418,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+   "image": "/images/dishes/Kasnocken.jpg"
   },
   {
     "id": 558,
@@ -27469,7 +27469,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Frittatensuppe.jpg"
   },
   {
     "id": 559,
