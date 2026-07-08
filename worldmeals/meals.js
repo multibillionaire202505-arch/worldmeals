@@ -5808,7 +5808,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 65,
     "fat": 20,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1656416584402-b720e0d786dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxNYW5kaSUyMFllbWVufGVufDB8MHx8fDE3ODI2ODQwMTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Mandi.jpg"
   },
   {
     "id": 128,
