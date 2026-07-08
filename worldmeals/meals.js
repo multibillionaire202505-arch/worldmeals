@@ -48511,7 +48511,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Cassava-Leaf-Stew.jpg"
   },
   {
     "id": 967,
