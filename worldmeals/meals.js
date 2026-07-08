@@ -7161,7 +7161,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 61,
     "fat": 19,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Satay.jpg"
   },
   {
     "id": 156,
@@ -24003,7 +24003,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+   "image": "/images/dishes/Manty.jpg"
   },
   {
     "id": 491,
