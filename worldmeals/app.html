@@ -1066,6 +1066,96 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
   }
 }
 
+
+
+/* WORLDMEALS 2.1 — SEARCH CLEAR BUTTON ONLY */
+.search-wrap{
+  display:block !important;
+  position:relative !important;
+}
+
+.search-wrap .search{
+  padding-left:50px !important;
+  padding-right:52px !important;
+}
+
+.search-clear{
+  position:absolute;
+  right:14px;
+  top:50%;
+  transform:translateY(-50%) scale(.88);
+  width:30px;
+  height:30px;
+  border:none;
+  border-radius:50%;
+  background:rgba(31,26,20,.08);
+  color:#6B5C4D;
+  font-size:15px;
+  font-weight:900;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .18s ease, transform .18s ease, background .18s ease, color .18s ease;
+  z-index:3;
+  font-family:Inter,system-ui,sans-serif;
+}
+
+.search-wrap:focus-within .search-clear,
+.search-wrap.has-text .search-clear{
+  opacity:1;
+  pointer-events:auto;
+  transform:translateY(-50%) scale(1);
+}
+
+.search-clear:hover{
+  background:linear-gradient(135deg,var(--wm-gold,#F5A623),var(--wm-gold-2,#D9630B));
+  color:#fff;
+  box-shadow:0 8px 18px rgba(217,99,11,.22);
+}
+
+.search-clear:active{
+  transform:translateY(-50%) scale(.92);
+}
+
+
+
+/* WORLDMEALS 2.1 — SEARCH ICONS ONLY AFTER TAP
+   Only search bar behavior changed. Everything else stays the same. */
+.search-wrap::before{
+  opacity:0 !important;
+  transform:translateY(-50%) scale(.88) !important;
+  transition:opacity .18s ease, transform .18s ease !important;
+}
+.search-wrap:focus-within::before,
+.search-wrap.has-text::before{
+  opacity:.78 !important;
+  transform:translateY(-50%) scale(1) !important;
+}
+.search-wrap .search{
+  padding-left:18px !important;
+  padding-right:18px !important;
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease, padding-left .18s ease, padding-right .18s ease !important;
+}
+.search-wrap:focus-within .search,
+.search-wrap.has-text .search{
+  padding-left:50px !important;
+  padding-right:52px !important;
+}
+.search-clear{
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(-50%) scale(.88);
+}
+.search-wrap:focus-within .search-clear,
+.search-wrap.has-text .search-clear{
+  opacity:1;
+  pointer-events:auto;
+  transform:translateY(-50%) scale(1);
+}
+
 </style>
 </head>
 <body>
@@ -1091,7 +1181,8 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
       </div>
     </div>
     <div class="search-wrap">
-      <input class="search" id="searchInput" placeholder="Search dishes or countries…" oninput="renderGrid()">
+      <input class="search" id="searchInput" placeholder="Search dishes, ingredients or countries..." oninput="renderGrid();updateSearchClear()" onfocus="updateSearchClear()" onblur="setTimeout(updateSearchClear,120)">
+      <button type="button" class="search-clear" id="searchClearBtn" aria-label="Clear search" onclick="clearSearch()">✕</button>
     </div>
   </div>
 
@@ -2581,6 +2672,27 @@ loadFavsFromDB().then(()=>{
 });
 
 loadMealPhotos();
+
+
+/* WORLDMEALS 2.1 — SEARCH CLEAR BUTTON ONLY */
+function updateSearchClear(){
+  const wrap=document.querySelector(".search-wrap");
+  const input=document.getElementById("searchInput");
+  if(!wrap || !input) return;
+  wrap.classList.toggle("has-text", input.value.trim().length > 0 || document.activeElement === input);
+}
+
+function clearSearch(){
+  const input=document.getElementById("searchInput");
+  if(!input) return;
+  input.value="";
+  updateSearchClear();
+  renderGrid();
+  input.focus();
+}
+
+window.addEventListener("DOMContentLoaded", updateSearchClear);
+
 </script>
 </body>
 </html>
