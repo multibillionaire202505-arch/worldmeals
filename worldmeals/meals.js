@@ -15290,7 +15290,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 71,
     "fat": 22,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1606591808963-8fc3c63fa6a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxMbGFwaW5nYWNob3MlMjBFY3VhZG9yfGVufDB8MHx8fDE3ODI3MDIwMjN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      "image": "/images/dishes/Lomo-Saltado.jpg"
   },
   {
     "id": 319,
@@ -15337,7 +15337,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 75,
     "fat": 23,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1660840628054-1cf3ff4df88f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxMb21vJTIwU2FsdGFkbyUyMFBlcnV8ZW58MHwwfHx8MTc4MjcwMjAyNXww&ixlib=rb-4.1.0&q=80&w=1080"
+    
   },
   {
     "id": 320,
@@ -15452,7 +15452,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 83,
     "fat": 26,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1603649637982-a21463e9d01b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxQYXBhJTIwYSUyMGxhJTIwSHVhbmNhaW5hJTIwUGVydXxlbnwwfDB8fHwxNzgyNzAyMDI3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+      "image": "/images/dishes/Papa-a-la-Huancaina.jpg"
   },
   {
     "id": 322,
