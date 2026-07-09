@@ -12456,7 +12456,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 72,
     "fat": 23,
     "fiber": 5,
-    "image": ""
+   "image": "/images/dishes/Ciorba-de-Burta.jpg"
   },
   {
     "id": 261,
@@ -30985,7 +30985,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Mici.jpg"
   },
   {
     "id": 628,
@@ -31036,7 +31036,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Mamaliga.jpg"
   },
   {
     "id": 629,
@@ -31087,7 +31087,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Papanasi.jpg"
   },
   {
     "id": 630,
@@ -31138,7 +31138,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Zacusca.jpg"
   },
   {
     "id": 631,
@@ -31189,7 +31189,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+  "image": "/images/dishes/Tochitura.jpg"
   },
   {
     "id": 632,
@@ -31240,7 +31240,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Cozonac.jpg"
   },
   {
     "id": 633,
@@ -46469,7 +46469,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Sarmale.jpg"
   },
   {
     "id": 928,
