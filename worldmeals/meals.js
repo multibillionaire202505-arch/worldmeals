@@ -15337,7 +15337,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 75,
     "fat": 23,
     "fiber": 5,
-    
+      "image": "/images/dishes/Lomo-Saltado.jpg"
   },
   {
     "id": 320,
