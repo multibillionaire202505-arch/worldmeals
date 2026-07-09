@@ -12510,7 +12510,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 76,
     "fat": 24,
     "fiber": 5,
-  "image": "/images/dishes/Sarmales.jpg"
+  "image": "/images/dishes/Sarmale.jpg"
   },
   {
     "id": 262,
