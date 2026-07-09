@@ -2247,7 +2247,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 52,
     "fat": 16,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1591465619339-60fce055bc82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxCb2JvdGllJTIwcmVjaXBlfGVufDB8MHx8fDE3ODI2ODc2MDV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Bobotie.jpg"
   },
   {
     "id": 50,
@@ -37655,7 +37655,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1758030306457-e54f25fe4384?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxQb3RqaWVrb3MlMjBTb3V0aCUyMEFmcmljYSUyMHJlY2lwZXxlbnwwfDB8fHwxNzgyNjg3NjIwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Potjiekos.jpg"
   },
   {
     "id": 759,
