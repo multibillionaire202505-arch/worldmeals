@@ -482,7 +482,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 49,
     "fat": 15,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1665332195309-9d75071138f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxKb2xsb2YlMjBSaWNlJTIwTmlnZXJpYXxlbnwwfDB8fHwxNzgyNjkzOTEyfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Jollof-Rice.jpg"
   },
   {
     "id": 12,
