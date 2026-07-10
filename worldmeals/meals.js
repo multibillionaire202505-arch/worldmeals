@@ -13321,7 +13321,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 82,
     "fat": 26,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/vc08jn1628769553.jpg"
+   "image": "/images/dishes/Gumbo.jpg"
   },
   {
     "id": 278,
@@ -13366,9 +13366,10 @@ window.WORLD_MEALS_DATABASE = [
     },
     "protein": 22,
     "carbs": 27,
+    
     "fat": 8,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/vc08jn1628769553.jpg"
+    "image": "/images/dishes/Jambalaya.jpg"
   },
   {
     "id": 279,
@@ -13422,7 +13423,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 31,
     "fat": 9,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/rvtvuw1511190488.jpg"
+    "image": "/images/dishes/Clam-Chowder.jpg"
   },
   {
     "id": 280,
@@ -13475,7 +13476,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 35,
     "fat": 11,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/vc08jn1628769553.jpg"
+   "image": "/images/dishes/Lobster-Roll.jpg"
   },
   {
     "id": 281,
@@ -13567,7 +13568,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 43,
     "fat": 13,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/vc08jn1628769553.jpg"
+   "image": "/images/dishes/BBQ-Ribs.jpg"
   },
   {
     "id": 283,
@@ -13620,7 +13621,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 47,
     "fat": 15,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/mp9z0i1782238092.jpg"
+    "image": "/images/dishes/Chicken-and-Waffles.jpg"
   },
   {
     "id": 284,
@@ -13681,7 +13682,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 51,
     "fat": 16,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/vc08jn1628769553.jpg"
+   "image": "/images/dishes/Fry-Bread-Tacos.jpg"
   },
   {
     "id": 285,
