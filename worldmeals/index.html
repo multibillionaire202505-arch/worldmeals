@@ -682,6 +682,881 @@
 
 #heroSlide{transition:opacity .8s ease;}
 
+
+  /* =========================
+     WORLDMEALS 3.0
+     ========================= */
+  .v3-section{
+    padding:96px 24px;
+  }
+
+  .v3-inner{
+    max-width:1180px;
+    margin:0 auto;
+  }
+
+  .v3-kicker{
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#167A5A;
+    margin-bottom:12px;
+  }
+
+  .v3-title{
+    font-size:clamp(32px,5vw,54px);
+    line-height:1.04;
+    letter-spacing:-1.7px;
+    font-weight:900;
+    margin-bottom:16px;
+    color:#171512;
+  }
+
+  .v3-title em{
+    font-style:normal;
+    background:linear-gradient(135deg,#167A5A,#D96A16);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+
+  .v3-sub{
+    max-width:640px;
+    color:#70675D;
+    font-size:16px;
+    line-height:1.75;
+  }
+
+  .discovery{
+    background:
+      radial-gradient(circle at 8% 0%,rgba(29,158,117,.10),transparent 30%),
+      linear-gradient(180deg,#FFFDF9,#F8F3EB);
+  }
+
+  .discovery-row{
+    margin-top:38px;
+    display:flex;
+    gap:18px;
+    overflow-x:auto;
+    padding:4px 4px 24px;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:thin;
+    scrollbar-color:#D8CBBB transparent;
+  }
+
+  .discovery-card{
+    flex:0 0 290px;
+    scroll-snap-align:start;
+    background:#fff;
+    border:1px solid rgba(233,222,208,.95);
+    border-radius:26px;
+    overflow:hidden;
+    box-shadow:0 16px 42px rgba(62,43,24,.08);
+    transition:transform .22s ease,box-shadow .22s ease;
+  }
+
+  .discovery-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 24px 55px rgba(62,43,24,.14);
+  }
+
+  .discovery-photo{
+    height:210px;
+    position:relative;
+    overflow:hidden;
+  }
+
+  .discovery-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .7s cubic-bezier(.2,.7,.2,1);
+  }
+
+  .discovery-card:hover .discovery-photo img{
+    transform:scale(1.055);
+  }
+
+  .discovery-photo::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,rgba(15,12,9,.45),transparent 55%);
+  }
+
+  .discovery-flag{
+    position:absolute;
+    left:14px;
+    bottom:13px;
+    z-index:2;
+    color:#fff;
+    font-size:13px;
+    font-weight:800;
+    background:rgba(17,15,12,.42);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:999px;
+    padding:7px 10px;
+  }
+
+  .discovery-body{
+    padding:19px;
+  }
+
+  .discovery-name{
+    font-size:18px;
+    font-weight:850;
+    margin-bottom:7px;
+  }
+
+  .discovery-copy{
+    font-size:13px;
+    line-height:1.6;
+    color:#746A60;
+    margin-bottom:14px;
+  }
+
+  .discovery-list{
+    display:flex;
+    gap:7px;
+    flex-wrap:wrap;
+  }
+
+  .discovery-chip{
+    font-size:10px;
+    font-weight:700;
+    padding:5px 8px;
+    border-radius:999px;
+    background:#F5EFE7;
+    color:#5E554C;
+  }
+
+  .ai-showcase{
+    background:
+      radial-gradient(circle at 90% 0%,rgba(230,163,74,.14),transparent 28%),
+      linear-gradient(180deg,#171513,#0F0E0D);
+    color:#fff;
+  }
+
+  .ai-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:44px;
+    align-items:center;
+  }
+
+  .ai-showcase .v3-title{
+    color:#fff;
+  }
+
+  .ai-showcase .v3-sub{
+    color:#A69C91;
+  }
+
+  .chef-panel{
+    background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04));
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:30px;
+    padding:24px;
+    box-shadow:0 28px 70px rgba(0,0,0,.26);
+  }
+
+  .chef-head{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:18px;
+  }
+
+  .chef-avatar{
+    width:48px;
+    height:48px;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    background:linear-gradient(135deg,#FFF2DA,#E5F8F0);
+    color:#171512;
+  }
+
+  .chef-name{
+    font-weight:850;
+    font-size:15px;
+  }
+
+  .chef-status{
+    color:#8F867D;
+    font-size:11px;
+  }
+
+  .chef-bubble{
+    background:#fff;
+    color:#29231D;
+    border-radius:18px 18px 18px 6px;
+    padding:15px 16px;
+    font-size:13px;
+    line-height:1.6;
+    margin-bottom:12px;
+  }
+
+  .chef-input{
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:16px;
+    padding:13px 14px;
+    color:#B8AFA5;
+    font-size:12px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+
+  .chef-button{
+    width:34px;
+    height:34px;
+    border-radius:11px;
+    border:none;
+    background:#fff;
+    color:#171512;
+    font-weight:900;
+    cursor:pointer;
+  }
+
+  .passport{
+    background:#FFFDF9;
+  }
+
+  .passport-grid{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:46px;
+    align-items:center;
+  }
+
+  .passport-card{
+    background:
+      radial-gradient(circle at 100% 0%,rgba(230,163,74,.16),transparent 35%),
+      linear-gradient(180deg,#1A1714,#11100E);
+    border-radius:32px;
+    padding:28px;
+    color:#fff;
+    box-shadow:0 30px 80px rgba(23,21,18,.25);
+    border:1px solid rgba(255,255,255,.06);
+  }
+
+  .passport-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:24px;
+  }
+
+  .passport-brand{
+    font-weight:900;
+    letter-spacing:.02em;
+  }
+
+  .passport-id{
+    font-size:10px;
+    color:#8D857C;
+  }
+
+  .passport-progress{
+    font-size:42px;
+    font-weight:950;
+    letter-spacing:-1px;
+    margin-bottom:6px;
+  }
+
+  .passport-label{
+    color:#AAA096;
+    font-size:12px;
+    margin-bottom:18px;
+  }
+
+  .passport-bar{
+    height:10px;
+    background:rgba(255,255,255,.08);
+    border-radius:999px;
+    overflow:hidden;
+    margin-bottom:22px;
+  }
+
+  .passport-fill{
+    width:34%;
+    height:100%;
+    background:linear-gradient(90deg,#1D9E75,#E6A34A);
+    border-radius:999px;
+  }
+
+  .passport-stamps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+  }
+
+  .stamp{
+    aspect-ratio:1/1;
+    border-radius:18px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.08);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+  }
+
+  .stamp span:first-child{
+    font-size:24px;
+  }
+
+  .stamp span:last-child{
+    font-size:9px;
+    color:#AAA096;
+    font-weight:700;
+  }
+
+  .promise{
+    padding:110px 24px;
+    text-align:center;
+    background:
+      radial-gradient(circle at 50% 20%,rgba(29,158,117,.13),transparent 30%),
+      linear-gradient(180deg,#171513,#0D0C0B);
+  }
+
+  .promise-inner{
+    max-width:860px;
+    margin:0 auto;
+  }
+
+  .promise .v3-title{
+    color:#fff;
+  }
+
+  .promise p{
+    color:#A49B91;
+    font-size:16px;
+    line-height:1.8;
+    max-width:720px;
+    margin:0 auto 26px;
+  }
+
+  .promise-line{
+    display:inline-flex;
+    gap:10px;
+    align-items:center;
+    flex-wrap:wrap;
+    justify-content:center;
+    color:#ECE5DB;
+    font-size:13px;
+    font-weight:750;
+  }
+
+  .promise-dot{
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:#1D9E75;
+  }
+
+  .v3-cta{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    margin-top:26px;
+    padding:15px 24px;
+    border-radius:16px;
+    text-decoration:none;
+    color:#171512;
+    background:#fff;
+    font-weight:850;
+    box-shadow:0 16px 36px rgba(0,0,0,.22);
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+
+  .v3-cta:hover{
+    transform:translateY(-3px);
+    box-shadow:0 22px 44px rgba(0,0,0,.28);
+  }
+
+  @media(max-width:850px){
+    .ai-grid,
+    .passport-grid{
+      grid-template-columns:1fr;
+      gap:30px;
+    }
+
+    .passport-card{
+      max-width:560px;
+      width:100%;
+      margin:0 auto;
+    }
+  }
+
+  @media(max-width:600px){
+    .v3-section{
+      padding:72px 16px;
+    }
+
+    .discovery-card{
+      flex-basis:82vw;
+    }
+
+    .passport-stamps{
+      grid-template-columns:repeat(2,1fr);
+    }
+
+    .passport-progress{
+      font-size:36px;
+    }
+  }
+
+
+  /* TIME-AWARE HOMEPAGE */
+  .time-greeting{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:14px;
+    padding:7px 12px;
+    border-radius:999px;
+    background:rgba(255,255,255,.72);
+    border:1px solid rgba(233,222,208,.88);
+    box-shadow:0 8px 22px rgba(62,43,24,.06);
+    color:#6F655B;
+    font-size:12px;
+    font-weight:800;
+  }
+
+  body[data-daypart="morning"]{
+    background:
+      radial-gradient(circle at 14% 0%,rgba(255,188,92,.18),transparent 28%),
+      radial-gradient(circle at 88% 4%,rgba(255,224,171,.16),transparent 27%),
+      linear-gradient(180deg,#FFFDF7 0%,#F8F0E4 42%,#F7F3EC 100%);
+  }
+
+  body[data-daypart="afternoon"]{
+    background:
+      radial-gradient(circle at 15% 0%,rgba(230,163,74,.13),transparent 26%),
+      radial-gradient(circle at 88% 5%,rgba(29,158,117,.11),transparent 25%),
+      linear-gradient(180deg,#FFFDF9 0%,#F7F3EC 38%,#F8F4EE 100%);
+  }
+
+  body[data-daypart="evening"]{
+    background:
+      radial-gradient(circle at 10% 0%,rgba(218,106,22,.12),transparent 28%),
+      radial-gradient(circle at 90% 4%,rgba(72,49,89,.13),transparent 30%),
+      linear-gradient(180deg,#FCF7F1 0%,#F4ECE5 40%,#F6F1EA 100%);
+  }
+
+  
+
+  
+
+  .hero-photo-main img,
+  .hero-photo-small img{
+    transition:opacity .55s ease,transform 1.1s cubic-bezier(.2,.7,.2,1);
+  }
+
+  .daypart-note{
+    margin-top:10px;
+    font-size:11px;
+    color:#8A7F73;
+    text-align:center;
+  }
+
+
+/* WorldMeals Premium Brand Palette */
+:root{
+  --wm-emerald:#167A5A;
+  --wm-emerald-light:#1D9E75;
+  --wm-gold:#D4A24C;
+  --wm-terracotta:#B85A2B;
+  --wm-ivory:#FFFDF9;
+  --wm-sand:#F7F1E8;
+  --wm-charcoal:#171512;
+}
+
+body{
+  background:
+    radial-gradient(circle at 12% 0%, rgba(212,162,76,.10), transparent 28%),
+    radial-gradient(circle at 88% 6%, rgba(29,158,117,.10), transparent 26%),
+    linear-gradient(180deg,var(--wm-ivory),var(--wm-sand));
+}
+
+.hero h1 em{
+  background:linear-gradient(135deg,var(--wm-emerald),var(--wm-gold));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent!important;
+}
+
+.hero-tag,
+.time-greeting{
+  background:rgba(255,255,255,.88)!important;
+  border:1px solid rgba(22,122,90,.12)!important;
+  box-shadow:0 10px 24px rgba(23,21,18,.06)!important;
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,var(--wm-charcoal),#2A211B)!important;
+}
+
+.btn-primary:hover{
+  box-shadow:0 22px 48px rgba(23,21,18,.22)!important;
+}
+
+.btn-secondary{
+  background:#fff!important;
+}
+
+.discovery-card,
+.feature-card,
+.testi-card,
+.price-card{
+  border-radius:28px!important;
+  border:1px solid #EEE3D5!important;
+  box-shadow:0 18px 42px rgba(58,41,24,.08)!important;
+}
+
+.discovery-flag,
+.photo-label{
+  background:rgba(23,21,18,.48)!important;
+}
+
+.promise{
+  background:
+   radial-gradient(circle at 50% 10%,rgba(22,122,90,.16),transparent 30%),
+   linear-gradient(180deg,#171512,#0F0E0D)!important;
+}
+
+
+  /* AUTO-SLIDING GLOBAL DISCOVERY */
+  .discovery-row{
+    scroll-behavior:smooth;
+    cursor:grab;
+  }
+
+  .discovery-row.is-dragging{
+    cursor:grabbing;
+    scroll-behavior:auto;
+    user-select:none;
+  }
+
+  .discovery-row::after{
+    content:"";
+    flex:0 0 18px;
+  }
+
+  .discovery-row:hover{
+    scrollbar-color:#C9B8A4 transparent;
+  }
+
+  .discovery-controls{
+    display:flex;
+    justify-content:flex-end;
+    gap:8px;
+    margin-top:4px;
+  }
+
+  .discovery-control{
+    width:38px;
+    height:38px;
+    border-radius:13px;
+    border:1px solid #E9DED0;
+    background:#fff;
+    color:#171512;
+    font-size:16px;
+    font-weight:900;
+    cursor:pointer;
+    box-shadow:0 10px 24px rgba(58,41,24,.07);
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+
+  .discovery-control:hover{
+    transform:translateY(-2px);
+    box-shadow:0 15px 30px rgba(58,41,24,.11);
+  }
+
+  @media(max-width:600px){
+    .discovery-controls{
+      justify-content:center;
+      margin-top:8px;
+    }
+  }
+
+
+  /* INTERACTIVE WORLD MAP */
+  .world-map-section{
+    padding:104px 24px;
+    background:
+      radial-gradient(circle at 18% 10%,rgba(29,158,117,.12),transparent 28%),
+      radial-gradient(circle at 82% 0%,rgba(212,162,76,.12),transparent 30%),
+      linear-gradient(180deg,#FFFDF9,#F7F1E8);
+  }
+
+  .world-map-grid{
+    max-width:1180px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:52px;
+    align-items:center;
+  }
+
+  .globe-wrap{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .globe{
+    width:min(520px,88vw);
+    aspect-ratio:1/1;
+    border-radius:50%;
+    position:relative;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 36% 28%,rgba(255,255,255,.52),transparent 16%),
+      radial-gradient(circle at 62% 65%,rgba(255,255,255,.08),transparent 30%),
+      linear-gradient(145deg,#1B8A73,#0A4F66 58%,#073949);
+    box-shadow:
+      inset -36px -30px 70px rgba(0,0,0,.28),
+      inset 24px 20px 45px rgba(255,255,255,.10),
+      0 38px 90px rgba(24,55,47,.24);
+    border:1px solid rgba(255,255,255,.42);
+  }
+
+  .globe::before,
+  .globe::after{
+    content:"";
+    position:absolute;
+    inset:7%;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.14);
+    pointer-events:none;
+  }
+
+  .globe::after{
+    inset:20% 3%;
+    border-left:none;
+    border-right:none;
+    transform:rotate(-10deg);
+  }
+
+  .globe-gridline{
+    position:absolute;
+    left:50%;
+    top:4%;
+    bottom:4%;
+    width:1px;
+    background:rgba(255,255,255,.12);
+    transform-origin:center;
+    pointer-events:none;
+  }
+
+  .globe-gridline.g2{transform:rotate(45deg)}
+  .globe-gridline.g3{transform:rotate(90deg)}
+  .globe-gridline.g4{transform:rotate(135deg)}
+
+  .land{
+    position:absolute;
+    background:linear-gradient(145deg,#E8C875,#B79548);
+    opacity:.92;
+    filter:drop-shadow(0 5px 7px rgba(0,0,0,.18));
+  }
+
+  .land.one{
+    width:30%;
+    height:23%;
+    left:15%;
+    top:24%;
+    border-radius:52% 38% 48% 42%;
+    transform:rotate(-15deg);
+  }
+
+  .land.two{
+    width:18%;
+    height:31%;
+    left:36%;
+    top:47%;
+    border-radius:48% 52% 65% 35%;
+    transform:rotate(9deg);
+  }
+
+  .land.three{
+    width:33%;
+    height:25%;
+    right:12%;
+    top:27%;
+    border-radius:50% 42% 54% 46%;
+    transform:rotate(8deg);
+  }
+
+  .land.four{
+    width:14%;
+    height:13%;
+    right:16%;
+    bottom:17%;
+    border-radius:56% 44% 52% 48%;
+    transform:rotate(-10deg);
+  }
+
+  .country-pin{
+    position:absolute;
+    width:36px;
+    height:36px;
+    border:none;
+    border-radius:50%;
+    background:#fff;
+    color:#171512;
+    font-size:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:0 10px 24px rgba(0,0,0,.24);
+    transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
+    z-index:4;
+  }
+
+  .country-pin::after{
+    content:"";
+    position:absolute;
+    inset:-7px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.42);
+    animation:pinPulse 2.8s infinite;
+  }
+
+  .country-pin:hover,
+  .country-pin.active{
+    transform:translateY(-4px) scale(1.12);
+    background:#FFF5E6;
+    box-shadow:0 16px 32px rgba(0,0,0,.30);
+  }
+
+  @keyframes pinPulse{
+    0%,100%{transform:scale(.85);opacity:.2}
+    50%{transform:scale(1.15);opacity:.7}
+  }
+
+  .pin-usa{left:23%;top:32%}
+  .pin-mexico{left:27%;top:46%}
+  .pin-ghana{left:48%;top:50%}
+  .pin-italy{left:52%;top:31%}
+  .pin-india{left:65%;top:43%}
+  .pin-japan{right:16%;top:34%}
+  .pin-peru{left:34%;bottom:21%}
+
+  .map-panel{
+    background:rgba(255,255,255,.82);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(233,222,208,.94);
+    border-radius:30px;
+    padding:28px;
+    box-shadow:0 28px 70px rgba(62,43,24,.12);
+  }
+
+  .map-country-head{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:8px;
+  }
+
+  .map-country-flag{
+    width:48px;
+    height:48px;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    background:linear-gradient(135deg,#EEF8F4,#FFF0DC);
+    box-shadow:inset 0 1px 0 #fff;
+  }
+
+  .map-country-name{
+    font-size:24px;
+    font-weight:900;
+    letter-spacing:-.6px;
+  }
+
+  .map-country-note{
+    color:#746A60;
+    font-size:13px;
+    line-height:1.6;
+    margin-bottom:22px;
+  }
+
+  .map-dishes{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+
+  .map-dish{
+    background:#fff;
+    border:1px solid #EEE3D5;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 24px rgba(62,43,24,.06);
+  }
+
+  .map-dish img{
+    width:100%;
+    height:118px;
+    object-fit:cover;
+    display:block;
+  }
+
+  .map-dish div{
+    padding:10px 11px;
+    font-size:12px;
+    font-weight:800;
+  }
+
+  .map-open{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    margin-top:18px;
+    color:#fff;
+    background:#171512;
+    text-decoration:none;
+    padding:13px 17px;
+    border-radius:14px;
+    font-size:13px;
+    font-weight:850;
+    box-shadow:0 12px 26px rgba(23,21,18,.16);
+  }
+
+  .map-hint{
+    margin-top:14px;
+    color:#8B8177;
+    font-size:11px;
+  }
+
+  @media(max-width:900px){
+    .world-map-grid{
+      grid-template-columns:1fr;
+      gap:34px;
+    }
+  }
+
+  @media(max-width:560px){
+    .world-map-section{padding:78px 16px}
+    .map-panel{padding:20px;border-radius:24px}
+    .map-dishes{grid-template-columns:1fr}
+    .map-dish img{height:160px}
+    .country-pin{width:32px;height:32px;font-size:16px}
+  }
+
 </style>
 </head>
 <body>
@@ -690,6 +1565,7 @@
 <nav>
   <a href="#" class="nav-logo">🌍 WorldMeals</a>
   <div class="nav-links">
+    <a href="#discover" class="nav-link">Discover</a>
     <a href="#features" class="nav-link">Features</a>
     <a href="#how" class="nav-link">How it works</a>
     <a href="#pricing" class="nav-link">Pricing</a>
@@ -699,9 +1575,10 @@
 
 <!-- HERO -->
 <section class="hero">
+  <div class="time-greeting" id="timeGreeting">☀️ Welcome to WorldMeals</div>
   <div class="hero-tag"><span></span> Now live · 1000+ authentic dishes · 195 countries</div>
-  <h1>Stop cooking<br/>the same 5 meals.<br/>Eat the <em>whole world</em>.</h1>
-  <p class="hero-sub">Discover authentic dishes from every country, filtered by your budget, calories, spice level, and diet. With an AI chef that works around what's already in your fridge.</p>
+  <h1 id="heroHeadline">Stop cooking<br/>the same 5 meals.<br/>Eat the <em>whole world</em>.</h1>
+  <p class="hero-sub" id="heroSubtitle">Discover authentic dishes from every country, filtered by your budget, calories, spice level, and diet. With an AI chef that works around what's already in your fridge.</p>
   <div style="font-size:12px;color:#8A7F73;font-weight:700;letter-spacing:.02em;margin:-18px 0 28px">Built in America · Connecting people through food</div>
   <div class="hero-ctas">
    <a href="app.html" class="btn-primary">🍽 Start cooking the world</a>
@@ -722,12 +1599,12 @@
   </div>
   <div class="hero-photo-stack">
     <div class="hero-photo-small">
-      <img src="/images/dishes/Sushi.jpg" alt="Sushi">
-      <div class="photo-label">🇯🇵 Sushi · Japan</div>
+      <img id="sideImageOne" src="/images/dishes/Sushi.jpg" alt="Sushi">
+      <div class="photo-label" id="sideLabelOne">🇯🇵 Sushi · Japan</div>
     </div>
     <div class="hero-photo-small">
-      <img src="/images/dishes/Tacos-al-Pastor.jpg" alt="Tacos al Pastor">
-      <div class="photo-label">🇲🇽 Tacos al Pastor · Mexico</div>
+      <img id="sideImageTwo" src="/images/dishes/Tacos-al-Pastor.jpg" alt="Tacos al Pastor">
+      <div class="photo-label" id="sideLabelTwo">🇲🇽 Tacos al Pastor · Mexico</div>
     </div>
   </div>
 </section>
@@ -860,6 +1737,119 @@
   </div>
 </section>
 
+
+<!-- GLOBAL DISCOVERY -->
+<section class="v3-section discovery" id="discover">
+  <div class="v3-inner">
+    <div class="v3-kicker">Global discovery</div>
+    <div class="v3-title">Travel the world<br><em>without leaving your kitchen.</em></div>
+    <div class="v3-sub">Explore beautifully curated cuisine collections from every corner of the globe. Start with a country, discover its iconic dishes, and cook your way across the world.</div>
+
+    <div class="discovery-row">
+      <article class="discovery-card">
+        <div class="discovery-photo">
+          <img src="/images/dishes/Pizza-Margherita.jpg" alt="Pizza Margherita">
+          <div class="discovery-flag">🇮🇹 Taste Italy</div>
+        </div>
+        <div class="discovery-body">
+          <div class="discovery-name">Italian Classics</div>
+          <div class="discovery-copy">Comforting, elegant, and timeless dishes loved across generations.</div>
+          <div class="discovery-list">
+            <span class="discovery-chip">Pizza</span>
+            <span class="discovery-chip">Carbonara</span>
+            <span class="discovery-chip">Risotto</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="discovery-card">
+        <div class="discovery-photo">
+          <img src="/images/dishes/Sushi.jpg" alt="Sushi">
+          <div class="discovery-flag">🇯🇵 Explore Japan</div>
+        </div>
+        <div class="discovery-body">
+          <div class="discovery-name">Japanese Favorites</div>
+          <div class="discovery-copy">Balanced flavors, refined technique, and unforgettable presentation.</div>
+          <div class="discovery-list">
+            <span class="discovery-chip">Sushi</span>
+            <span class="discovery-chip">Ramen</span>
+            <span class="discovery-chip">Tempura</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="discovery-card">
+        <div class="discovery-photo">
+          <img src="/images/dishes/Tacos-al-Pastor.jpg" alt="Tacos al Pastor">
+          <div class="discovery-flag">🇲🇽 Discover Mexico</div>
+        </div>
+        <div class="discovery-body">
+          <div class="discovery-name">Mexican Street Food</div>
+          <div class="discovery-copy">Bold, colorful, and full of the flavors that bring people together.</div>
+          <div class="discovery-list">
+            <span class="discovery-chip">Tacos</span>
+            <span class="discovery-chip">Tamales</span>
+            <span class="discovery-chip">Sopes</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="discovery-card">
+        <div class="discovery-photo">
+          <img src="/images/dishes/Jollof-Rice.jpg" alt="Jollof Rice">
+          <div class="discovery-flag">🇬🇭 Discover Ghana</div>
+        </div>
+        <div class="discovery-body">
+          <div class="discovery-name">West African Favorites</div>
+          <div class="discovery-copy">Rich, comforting dishes built around community, tradition, and celebration.</div>
+          <div class="discovery-list">
+            <span class="discovery-chip">Jollof Rice</span>
+            <span class="discovery-chip">Waakye</span>
+            <span class="discovery-chip">Fufu</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="discovery-card">
+        <div class="discovery-photo">
+          <img src="/images/dishes/BBQ-Ribs.jpg" alt="BBQ Ribs">
+          <div class="discovery-flag">🇺🇸 Explore USA</div>
+        </div>
+        <div class="discovery-body">
+          <div class="discovery-name">American Regional Icons</div>
+          <div class="discovery-copy">From Southern comfort food to New England seafood and Texas barbecue.</div>
+          <div class="discovery-list">
+            <span class="discovery-chip">BBQ Ribs</span>
+            <span class="discovery-chip">Gumbo</span>
+            <span class="discovery-chip">Lobster Roll</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="discovery-card">
+        <div class="discovery-photo">
+          <img src="/images/dishes/Ceviche.jpg" alt="Ceviche">
+          <div class="discovery-flag">🇵🇪 Taste Peru</div>
+        </div>
+        <div class="discovery-body">
+          <div class="discovery-name">Peruvian Essentials</div>
+          <div class="discovery-copy">Fresh, vibrant flavors shaped by coast, mountains, and centuries of tradition.</div>
+          <div class="discovery-list">
+            <span class="discovery-chip">Ceviche</span>
+            <span class="discovery-chip">Lomo Saltado</span>
+            <span class="discovery-chip">Ají de Gallina</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="discovery-controls" aria-label="Global discovery controls">
+      <button class="discovery-control" id="discoveryPrev" aria-label="Previous dishes">←</button>
+      <button class="discovery-control" id="discoveryNext" aria-label="Next dishes">→</button>
+    </div>
+  </div>
+</section>
+
 <!-- FEATURES -->
 <section class="features reveal" id="features">
   <div class="features-inner">
@@ -906,6 +1896,105 @@
   </div>
 </section>
 
+
+
+<!-- INTERACTIVE WORLD MAP -->
+<section class="world-map-section" id="world-map">
+  <div class="world-map-grid">
+    <div>
+      <div class="v3-kicker">Interactive world map</div>
+      <div class="v3-title">Tap a country.<br><em>Meet its cuisine instantly.</em></div>
+      <div class="v3-sub">No searching. No complicated menus. Choose a country on the globe and discover some of its iconic dishes in a single tap.</div>
+
+      <div class="globe-wrap">
+        <div class="globe" aria-label="Interactive cuisine globe">
+          <div class="globe-gridline"></div>
+          <div class="globe-gridline g2"></div>
+          <div class="globe-gridline g3"></div>
+          <div class="globe-gridline g4"></div>
+
+          <div class="land one"></div>
+          <div class="land two"></div>
+          <div class="land three"></div>
+          <div class="land four"></div>
+
+          <button class="country-pin pin-usa active" data-country="usa" aria-label="Explore United States">🇺🇸</button>
+          <button class="country-pin pin-mexico" data-country="mexico" aria-label="Explore Mexico">🇲🇽</button>
+          <button class="country-pin pin-ghana" data-country="ghana" aria-label="Explore Ghana">🇬🇭</button>
+          <button class="country-pin pin-italy" data-country="italy" aria-label="Explore Italy">🇮🇹</button>
+          <button class="country-pin pin-india" data-country="india" aria-label="Explore India">🇮🇳</button>
+          <button class="country-pin pin-japan" data-country="japan" aria-label="Explore Japan">🇯🇵</button>
+          <button class="country-pin pin-peru" data-country="peru" aria-label="Explore Peru">🇵🇪</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-panel">
+      <div class="map-country-head">
+        <div class="map-country-flag" id="mapFlag">🇺🇸</div>
+        <div>
+          <div class="map-country-name" id="mapCountry">United States</div>
+          <div style="font-size:11px;color:#8B8177;font-weight:700">Featured cuisine</div>
+        </div>
+      </div>
+
+      <div class="map-country-note" id="mapNote">Explore regional American classics from barbecue and Southern comfort food to New England seafood.</div>
+
+      <div class="map-dishes" id="mapDishes">
+        <div class="map-dish">
+          <img src="/images/dishes/BBQ-Ribs.jpg" alt="BBQ Ribs">
+          <div>BBQ Ribs</div>
+        </div>
+        <div class="map-dish">
+          <img src="/images/dishes/Gumbo.jpg" alt="Gumbo">
+          <div>Gumbo</div>
+        </div>
+        <div class="map-dish">
+          <img src="/images/dishes/Lobster-Roll.jpg" alt="Lobster Roll">
+          <div>Lobster Roll</div>
+        </div>
+        <div class="map-dish">
+          <img src="/images/dishes/Chicken-and-Waffles.jpg" alt="Chicken and Waffles">
+          <div>Chicken and Waffles</div>
+        </div>
+      </div>
+
+      <a class="map-open" id="mapOpen" href="app.html">Explore United States →</a>
+      <div class="map-hint">Tap another flag on the globe to change countries.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CHEF AI -->
+<section class="v3-section ai-showcase">
+  <div class="v3-inner ai-grid">
+    <div>
+      <div class="v3-kicker">Meet Chef AI</div>
+      <div class="v3-title">Your personal chef.<br><em>Ready when you are.</em></div>
+      <div class="v3-sub">Tell Chef AI what you have, what you can spend, and how much time you have. It helps you turn everyday ingredients into authentic dishes from around the world.</div>
+      <a class="v3-cta" href="app.html">Ask Chef AI →</a>
+    </div>
+
+    <div class="chef-panel">
+      <div class="chef-head">
+        <div class="chef-avatar">👨‍🍳</div>
+        <div>
+          <div class="chef-name">Chef AI</div>
+          <div class="chef-status">Online · Ready to cook</div>
+        </div>
+      </div>
+
+      <div class="chef-bubble">Tell me what ingredients you have, your budget, and how much time you want to spend cooking.</div>
+      <div class="chef-bubble" style="background:#EAF8F2;color:#175844;border-radius:18px 18px 6px 18px;margin-left:34px">Chicken, rice, tomatoes, and about 30 minutes.</div>
+
+      <div class="chef-input">
+        <span>Type your ingredients...</span>
+        <button class="chef-button" aria-label="Send message">↑</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SPICE SUBSTITUTION HIGHLIGHT -->
 <section class="spice reveal">
   <div class="spice-inner">
@@ -929,6 +2018,40 @@
       </div>
       <div style="font-size:11px;color:#888;margin-bottom:12px;padding:0 4px">💡 Same rich colour, zero heat — you won't miss a thing</div>
       <div style="background:#F0FDF4;border-radius:10px;padding:10px 12px;font-size:12px;color:#166534">✓ Your personalised recipe is ready. Same authentic dish — just built around you.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WORLD TOUR -->
+<section class="v3-section passport">
+  <div class="v3-inner passport-grid">
+    <div class="passport-card">
+      <div class="passport-top">
+        <div class="passport-brand">🌍 WorldMeals Passport</div>
+        <div class="passport-id">CULINARY EXPLORER</div>
+      </div>
+
+      <div class="passport-progress">67 / 195</div>
+      <div class="passport-label">Countries explored</div>
+
+      <div class="passport-bar">
+        <div class="passport-fill"></div>
+      </div>
+
+      <div class="passport-stamps">
+        <div class="stamp"><span>🇯🇵</span><span>JAPAN</span></div>
+        <div class="stamp"><span>🇲🇽</span><span>MEXICO</span></div>
+        <div class="stamp"><span>🇬🇭</span><span>GHANA</span></div>
+        <div class="stamp"><span>🇺🇸</span><span>USA</span></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="v3-kicker">World Tour</div>
+      <div class="v3-title">Cook your way<br><em>around the world.</em></div>
+      <div class="v3-sub">Every dish becomes a new destination. Track the countries you explore, collect culinary stamps, and build a personal journey through world cuisine.</div>
+      <a class="v3-cta" href="app.html" style="background:#171512;color:#fff">Start your World Tour →</a>
     </div>
   </div>
 </section>
@@ -1055,6 +2178,24 @@
   </div>
 </section>
 
+
+<!-- WORLDMEALS PROMISE -->
+<section class="promise">
+  <div class="promise-inner">
+    <div class="v3-kicker">The WorldMeals promise</div>
+    <div class="v3-title">Every culture deserves<br><em>a place at the table.</em></div>
+    <p>WorldMeals was built with one mission: to help people discover, respect, and enjoy the world's cuisines. Every country matters. Every dish tells a story. Every shared meal can bring people closer.</p>
+
+    <div class="promise-line">
+      <span>Built in America</span>
+      <span class="promise-dot"></span>
+      <span>Inspired by the world</span>
+      <span class="promise-dot"></span>
+      <span>Made for everyone</span>
+    </div>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <section class="final-cta reveal">
   <div class="final-dishes">
@@ -1069,8 +2210,8 @@
     <img src="/images/dishes/Gumbo.jpg" alt="Gumbo">
     <img src="/images/dishes/Cheese-Fondue.jpg" alt="Cheese Fondue">
   </div>
-  <h2>The world is waiting.<br/>Start cooking it tonight.</h2>
-  <p>Join thousands of home cooks exploring global cuisine — one dish at a time.</p>
+  <h2>The world is waiting.<br/>Start exploring it tonight.</h2>
+  <p>Discover authentic cuisine, cook with confidence, and connect with the world — one dish at a time.</p>
   <a href="#pricing" class="btn-primary" style="font-size:16px;padding:16px 32px;border-radius:16px">🍽 Start your free trial</a>
   <div style="margin-top:16px;font-size:12px;color:#444">7 days free · No card required · Cancel anytime</div>
 </section>
@@ -1112,28 +2253,306 @@
 </script>
 
 
+
+
 <script>
-const heroSlides=[
-["/images/dishes/Pizza-Margherita.jpg","🇮🇹 Pizza Margherita"],
-["/images/dishes/Sushi.jpg","🇯🇵 Sushi"],
-["/images/dishes/Tacos-al-Pastor.jpg","🇲🇽 Tacos al Pastor"],
-["/images/dishes/Jollof-Rice.jpg","🇬🇭 Jollof Rice"],
-["/images/dishes/BBQ-Ribs.jpg","🇺🇸 BBQ Ribs"],
-["/images/dishes/Ceviche.jpg","🇵🇪 Ceviche"],
-["/images/dishes/Butter-Chicken.jpg","🇮🇳 Butter Chicken"]
-];
-let i=0;
-const img=document.getElementById('heroSlide');
-const lbl=document.getElementById('heroLabel');
-setInterval(()=>{
- i=(i+1)%heroSlides.length;
- img.style.opacity=0;
- setTimeout(()=>{
-   img.src=heroSlides[i][0];
-   lbl.textContent=heroSlides[i][1];
-   img.style.opacity=1;
- },400);
-},6000);
+(() => {
+  const hour = new Date().getHours();
+  const body = document.body;
+
+  const experiences = {
+    morning: {
+      greeting: "🌅 Good morning · Start with something warm",
+      headline: "Wake up hungry.<br>Discover a <em>world of breakfast</em>.",
+      subtitle: "Begin the day with comforting breakfasts and morning favorites from cultures around the world.",
+      slides: [
+        ["/images/dishes/Chicken-and-Waffles.jpg", "🇺🇸 Chicken and Waffles"],
+        ["/images/dishes/Crepes.jpg", "🇫🇷 Crêpes"],
+        ["/images/dishes/Shakshouka-Tunisienne.jpg", "🇹🇳 Shakshouka"],
+        ["/images/dishes/Tamago-Kake-Gohan.jpg", "🇯🇵 Tamago Kake Gohan"],
+        ["/images/dishes/Ful-Medames.jpg", "🇪🇬 Ful Medames"]
+      ],
+      sides: [
+        ["/images/dishes/Pancakes.jpg", "🥞 Morning comfort"],
+        ["/images/dishes/Chilaquiles.jpg", "🇲🇽 Chilaquiles"]
+      ]
+    },
+    afternoon: {
+      greeting: "☀️ Good afternoon · Fresh flavors are waiting",
+      headline: "Take a delicious break.<br>Explore the <em>whole world</em>.",
+      subtitle: "Discover vibrant lunches, street foods, and fresh dishes that fit your time, budget, and appetite.",
+      slides: [
+        ["/images/dishes/Pizza-Margherita.jpg", "🇮🇹 Pizza Margherita"],
+        ["/images/dishes/Sushi.jpg", "🇯🇵 Sushi"],
+        ["/images/dishes/Tacos-al-Pastor.jpg", "🇲🇽 Tacos al Pastor"],
+        ["/images/dishes/Ceviche.jpg", "🇵🇪 Ceviche"],
+        ["/images/dishes/Greek-Salad.jpg", "🇬🇷 Greek Salad"]
+      ],
+      sides: [
+        ["/images/dishes/Sushi.jpg", "🇯🇵 Sushi · Japan"],
+        ["/images/dishes/Tacos-al-Pastor.jpg", "🇲🇽 Tacos al Pastor · Mexico"]
+      ]
+    },
+    evening: {
+      greeting: "🌙 Good evening · Let dinner take you somewhere",
+      headline: "Slow down tonight.<br>Cook something <em>unforgettable</em>.",
+      subtitle: "Settle in with rich comfort foods, family dinners, and traditional evening dishes from around the world.",
+      slides: [
+        ["/images/dishes/Gumbo.jpg", "🇺🇸 Gumbo"],
+        ["/images/dishes/Jollof-Rice.jpg", "🇬🇭 Jollof Rice"],
+        ["/images/dishes/Beef-Brisket.jpg", "🇺🇸 Beef Brisket"],
+        ["/images/dishes/Butter-Chicken.jpg", "🇮🇳 Butter Chicken"],
+        ["/images/dishes/Beef-Pho.jpg", "🇻🇳 Beef Pho"]
+      ],
+      sides: [
+        ["/images/dishes/BBQ-Ribs.jpg", "🇺🇸 BBQ Ribs · USA"],
+        ["/images/dishes/Pad-Thai.jpg", "🇹🇭 Pad Thai · Thailand"]
+      ]
+    }
+  };
+
+  const daypart = hour < 11 ? "morning" : hour < 17 ? "afternoon" : "evening";
+  const experience = experiences[daypart];
+  body.dataset.daypart = daypart;
+
+  const greeting = document.getElementById("timeGreeting");
+  const headline = document.getElementById("heroHeadline");
+  const subtitle = document.getElementById("heroSubtitle");
+  const heroImage = document.getElementById("heroSlide");
+  const heroLabel = document.getElementById("heroLabel");
+  const sideImageOne = document.getElementById("sideImageOne");
+  const sideImageTwo = document.getElementById("sideImageTwo");
+  const sideLabelOne = document.getElementById("sideLabelOne");
+  const sideLabelTwo = document.getElementById("sideLabelTwo");
+
+  greeting.textContent = experience.greeting;
+  headline.innerHTML = experience.headline;
+  subtitle.textContent = experience.subtitle;
+
+  const setImage = (image, label, data) => {
+    image.style.opacity = "0";
+    setTimeout(() => {
+      image.src = data[0];
+      image.alt = data[1].replace(/^[^\s]+\s/, "");
+      label.textContent = data[1];
+      image.style.opacity = "1";
+    }, 260);
+  };
+
+  setImage(heroImage, heroLabel, experience.slides[0]);
+  setImage(sideImageOne, sideLabelOne, experience.sides[0]);
+  setImage(sideImageTwo, sideLabelTwo, experience.sides[1]);
+
+  let slideIndex = 0;
+  window.setInterval(() => {
+    slideIndex = (slideIndex + 1) % experience.slides.length;
+    setImage(heroImage, heroLabel, experience.slides[slideIndex]);
+  }, 6000);
+})();
+</script>
+
+
+<script>
+(() => {
+  const row = document.querySelector('.discovery-row');
+  const prev = document.getElementById('discoveryPrev');
+  const next = document.getElementById('discoveryNext');
+
+  if (!row) return;
+
+  const cardStep = () => {
+    const card = row.querySelector('.discovery-card');
+    if (!card) return 310;
+    const gap = parseFloat(getComputedStyle(row).gap || 18);
+    return card.getBoundingClientRect().width + gap;
+  };
+
+  const move = (direction = 1) => {
+    const step = cardStep();
+    const maxScroll = row.scrollWidth - row.clientWidth;
+    const nearEnd = row.scrollLeft >= maxScroll - step * 0.7;
+    const nearStart = row.scrollLeft <= step * 0.2;
+
+    if (direction > 0 && nearEnd) {
+      row.scrollTo({ left: 0, behavior: 'smooth' });
+    } else if (direction < 0 && nearStart) {
+      row.scrollTo({ left: maxScroll, behavior: 'smooth' });
+    } else {
+      row.scrollBy({ left: direction * step, behavior: 'smooth' });
+    }
+  };
+
+  let autoplay = setInterval(() => move(1), 3200);
+  const pause = () => clearInterval(autoplay);
+  const resume = () => {
+    clearInterval(autoplay);
+    autoplay = setInterval(() => move(1), 3200);
+  };
+
+  row.addEventListener('mouseenter', pause);
+  row.addEventListener('mouseleave', resume);
+  row.addEventListener('touchstart', pause, { passive: true });
+  row.addEventListener('touchend', resume, { passive: true });
+
+  prev?.addEventListener('click', () => {
+    move(-1);
+    resume();
+  });
+
+  next?.addEventListener('click', () => {
+    move(1);
+    resume();
+  });
+
+  let isDown = false;
+  let startX = 0;
+  let startScroll = 0;
+
+  row.addEventListener('pointerdown', (event) => {
+    isDown = true;
+    pause();
+    row.classList.add('is-dragging');
+    startX = event.clientX;
+    startScroll = row.scrollLeft;
+    row.setPointerCapture(event.pointerId);
+  });
+
+  row.addEventListener('pointermove', (event) => {
+    if (!isDown) return;
+    const distance = event.clientX - startX;
+    row.scrollLeft = startScroll - distance;
+  });
+
+  const finishDrag = (event) => {
+    if (!isDown) return;
+    isDown = false;
+    row.classList.remove('is-dragging');
+    try { row.releasePointerCapture(event.pointerId); } catch {}
+    resume();
+  };
+
+  row.addEventListener('pointerup', finishDrag);
+  row.addEventListener('pointercancel', finishDrag);
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) pause();
+    else resume();
+  });
+})();
+</script>
+
+
+<script>
+(() => {
+  const countries = {
+    usa: {
+      flag:"🇺🇸",
+      name:"United States",
+      note:"Explore regional American classics from barbecue and Southern comfort food to New England seafood.",
+      dishes:[
+        ["BBQ Ribs","/images/dishes/BBQ-Ribs.jpg"],
+        ["Gumbo","/images/dishes/Gumbo.jpg"],
+        ["Lobster Roll","/images/dishes/Lobster-Roll.jpg"],
+        ["Chicken and Waffles","/images/dishes/Chicken-and-Waffles.jpg"]
+      ]
+    },
+    mexico: {
+      flag:"🇲🇽",
+      name:"Mexico",
+      note:"Discover vibrant street food, festive flavors, and deeply rooted regional traditions.",
+      dishes:[
+        ["Tacos al Pastor","/images/dishes/Tacos-al-Pastor.jpg"],
+        ["Tamales","/images/dishes/Tamales.jpg"],
+        ["Sopes","/images/dishes/Sopes.jpg"],
+        ["Chiles Rellenos","/images/dishes/Chiles-Rellenos.jpg"]
+      ]
+    },
+    ghana: {
+      flag:"🇬🇭",
+      name:"Ghana",
+      note:"Experience comforting dishes shaped by community, celebration, and bold West African flavors.",
+      dishes:[
+        ["Jollof Rice","/images/dishes/Jollof-Rice.jpg"],
+        ["Waakye","/images/dishes/Waakye.jpg"],
+        ["Fufu","/images/dishes/Fufu.jpg"],
+        ["Groundnut Soup","/images/dishes/Groundnut-Soup.jpg"]
+      ]
+    },
+    italy: {
+      flag:"🇮🇹",
+      name:"Italy",
+      note:"Explore timeless regional cooking built around beautiful ingredients and simple technique.",
+      dishes:[
+        ["Pizza Margherita","/images/dishes/Pizza-Margherita.jpg"],
+        ["Carbonara","/images/dishes/Carbonara.jpg"],
+        ["Risotto","/images/dishes/Risotto.jpg"],
+        ["Lasagna","/images/dishes/Lasagna.jpg"]
+      ]
+    },
+    india: {
+      flag:"🇮🇳",
+      name:"India",
+      note:"Discover layered spices, regional diversity, and dishes filled with color and character.",
+      dishes:[
+        ["Butter Chicken","/images/dishes/Butter-Chicken.jpg"],
+        ["Biryani","/images/dishes/Biryani.jpg"],
+        ["Masala Dosa","/images/dishes/Masala-Dosa.jpg"],
+        ["Palak Paneer","/images/dishes/Palak-Paneer.jpg"]
+      ]
+    },
+    japan: {
+      flag:"🇯🇵",
+      name:"Japan",
+      note:"Explore refined technique, balanced flavors, and dishes designed with care and precision.",
+      dishes:[
+        ["Sushi","/images/dishes/Sushi.jpg"],
+        ["Ramen","/images/dishes/Ramen.jpg"],
+        ["Tempura","/images/dishes/Tempura.jpg"],
+        ["Katsu Curry","/images/dishes/Katsu-Curry.jpg"]
+      ]
+    },
+    peru: {
+      flag:"🇵🇪",
+      name:"Peru",
+      note:"Taste a cuisine shaped by coast, mountains, migration, and centuries of culinary creativity.",
+      dishes:[
+        ["Ceviche","/images/dishes/Ceviche.jpg"],
+        ["Lomo Saltado","/images/dishes/Lomo-Saltado.jpg"],
+        ["Ají de Gallina","/images/dishes/Aji-de-Gallina.jpg"],
+        ["Papa a la Huancaína","/images/dishes/Papa-a-la-Huancaina.jpg"]
+      ]
+    }
+  };
+
+  const pins = document.querySelectorAll(".country-pin");
+  const flag = document.getElementById("mapFlag");
+  const country = document.getElementById("mapCountry");
+  const note = document.getElementById("mapNote");
+  const dishes = document.getElementById("mapDishes");
+  const open = document.getElementById("mapOpen");
+
+  pins.forEach((pin) => {
+    pin.addEventListener("click", () => {
+      const data = countries[pin.dataset.country];
+      if (!data) return;
+
+      pins.forEach((p) => p.classList.remove("active"));
+      pin.classList.add("active");
+
+      flag.textContent = data.flag;
+      country.textContent = data.name;
+      note.textContent = data.note;
+      open.textContent = `Explore ${data.name} →`;
+
+      dishes.innerHTML = data.dishes.map(([name, image]) => `
+        <div class="map-dish">
+          <img src="${image}" alt="${name}">
+          <div>${name}</div>
+        </div>
+      `).join("");
+    });
+  });
+})();
 </script>
 
 </body>
