@@ -16359,7 +16359,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 37,
     "fat": 12,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1648285522721-04b56f3ce119?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxNZWF0JTIwUGllJTIwQXVzdHJhbGlhJTIwZm9vZHxlbnwwfDB8fHwxNzgyNzAyMDM5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Meat-Pie.jpg"
   },
   {
     "id": 340,
@@ -16405,7 +16405,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/j2n7vg1761848636.jpg"
+  "image": "/images/dishes/Lamington.jpg"
   },
   {
     "id": 341,
@@ -16445,7 +16445,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 45,
     "fat": 14,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/4o4wh11761848573.jpg"
+    "image": "/images/dishes/Barramundi.jpg"
   },
   {
     "id": 342,
@@ -39464,7 +39464,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "/images/dishes/Barramundi-Bowl.jpg"
+    "image": "/images/dishes/Chicken-Parmigiana.jpg"
   },
   {
     "id": 794,
@@ -39517,7 +39517,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+   "image": "/images/dishes/Pumpkin-Damper.jpg"
   },
   {
     "id": 795,
