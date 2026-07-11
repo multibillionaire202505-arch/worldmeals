@@ -20378,7 +20378,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/r7mcjm1780261264.jpg"
+   "image": "/images/dishes/Hilsa-Curry.jpg"
   },
   {
     "id": 420,
@@ -20428,8 +20428,8 @@ window.WORLD_MEALS_DATABASE = [
           "note": "Use the closest local substitute"
         }
       ]
-    },
-    "image": "https://www.themealdb.com/images/media/meals/r7mcjm1780261264.jpg"
+    },"
+    "image": "/images/dishes/Bhuna-Khichuri.jpg"
   },
   {
     "id": 421,
@@ -20480,7 +20480,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/r7mcjm1780261264.jpg"
+  "image": "/images/dishes/Panta-Bhat.jpg"
   },
   {
     "id": 422,
@@ -20532,7 +20532,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/r7mcjm1780261264.jpg"
+   "image": "/images/dishesBeef-Tehari/.jpg"
   },
   {
     "id": 423,
@@ -20583,7 +20583,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/r7mcjm1780261264.jpg"
+    "image": "/images/dishes/Shorshe-Ilish.jpg"
   },
   {
     "id": 424,
@@ -20634,7 +20634,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/r7mcjm1780261264.jpg"
+    "image": "/images/dishes/Chingri-Malai.jpg"
   },
   {
     "id": 425,
@@ -20685,7 +20685,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/r7mcjm1780261264.jpg"
+    "image": "/images/dishes/Fuchka.jpg"
   },
   {
     "id": 426,
@@ -20736,7 +20736,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/r7mcjm1780261264.jpg"
+    "image": "/images/dishes/Dal-Puri.jpg"
   },
   {
     "id": 427,
@@ -39988,7 +39988,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/r7mcjm1780261264.jpg"
+ "image": "/images/dishes/Chingri-Malai-Curry.jpg"
   },
   {
     "id": 804,
