@@ -52195,5 +52195,952 @@ window.WORLD_MEALS_DATABASE = [
   "fat": 16,
   "fiber": 2,
   "image": "/images/dishes/Chocolate-Chip-Cookies.jpg"
-} 
+},
+  {
+  "id": 8035,
+  "name": "Chilaquiles",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🍳",
+  "cal": 480,
+  "budget": 7,
+  "time": "25 min",
+  "spice": 2,
+  "tags": [
+    "vegetarian-option",
+    "gluten-free"
+  ],
+  "desc": "Crisp corn tortilla pieces simmered briefly in red or green salsa and finished with crema, cheese, onion, and eggs.",
+  "ingredients": [
+    "Corn tortillas",
+    "Salsa roja or salsa verde",
+    "Eggs",
+    "Mexican crema",
+    "Queso fresco",
+    "Red onion",
+    "Cilantro"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Hot salsa",
+        "to": "Mild roasted tomato salsa",
+        "note": "Keeps the flavor with less heat"
+      }
+    ],
+    "dairy": [
+      {
+        "from": "Mexican crema and queso fresco",
+        "to": "Plant-based crema and vegan cheese",
+        "note": "Use just before serving"
+      }
+    ]
+  },
+  "protein": 18,
+  "carbs": 55,
+  "fat": 21,
+  "fiber": 8,
+  "image": "/images/dishes/Chilaquiles.jpg"
+},
+{
+  "id": 8036,
+  "name": "Huevos Rancheros",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🍳",
+  "cal": 430,
+  "budget": 6,
+  "time": "25 min",
+  "spice": 2,
+  "tags": [
+    "vegetarian",
+    "gluten-free"
+  ],
+  "desc": "Fried eggs served on corn tortillas with warm ranchero tomato-chile sauce and beans.",
+  "ingredients": [
+    "Eggs",
+    "Corn tortillas",
+    "Tomatoes",
+    "Jalapeño",
+    "Onion",
+    "Refried beans",
+    "Cilantro"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Jalapeño",
+        "to": "Green bell pepper",
+        "note": "Fresh flavor without the heat"
+      }
+    ]
+  },
+  "protein": 20,
+  "carbs": 43,
+  "fat": 20,
+  "fiber": 9,
+  "image": "/images/dishes/Huevos-Rancheros.jpg"
+},
+{
+  "id": 8037,
+  "name": "Huevos a la Mexicana",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🍳",
+  "cal": 310,
+  "budget": 5,
+  "time": "15 min",
+  "spice": 2,
+  "tags": [
+    "vegetarian",
+    "gluten-free"
+  ],
+  "desc": "Scrambled eggs cooked with tomato, onion, and green chile in the colors of the Mexican flag.",
+  "ingredients": [
+    "Eggs",
+    "Tomatoes",
+    "White onion",
+    "Serrano pepper",
+    "Cilantro",
+    "Oil",
+    "Salt"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Serrano pepper",
+        "to": "Green bell pepper",
+        "note": "Keeps the color and crunch"
+      }
+    ]
+  },
+  "protein": 19,
+  "carbs": 10,
+  "fat": 21,
+  "fiber": 3,
+  "image": "/images/dishes/Huevos-a-la-Mexicana.jpg"
+},
+{
+  "id": 8038,
+  "name": "Molletes",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🥖",
+  "cal": 520,
+  "budget": 6,
+  "time": "20 min",
+  "spice": 1,
+  "tags": [
+    "vegetarian"
+  ],
+  "desc": "Toasted bolillo halves spread with refried beans, melted cheese, and fresh pico de gallo.",
+  "ingredients": [
+    "Bolillo rolls",
+    "Refried beans",
+    "Oaxaca cheese",
+    "Tomatoes",
+    "Onion",
+    "Cilantro",
+    "Lime"
+  ],
+  "swaps": {
+    "gluten": [
+      {
+        "from": "Bolillo rolls",
+        "to": "Gluten-free rolls",
+        "note": "Toast well before topping"
+      }
+    ],
+    "dairy": [
+      {
+        "from": "Oaxaca cheese",
+        "to": "Vegan melting cheese",
+        "note": "Broil until bubbly"
+      }
+    ]
+  },
+  "protein": 22,
+  "carbs": 69,
+  "fat": 18,
+  "fiber": 11,
+  "image": "/images/dishes/Molletes.jpg"
+},
+{
+  "id": 8039,
+  "name": "Machaca con Huevo",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🥩",
+  "cal": 470,
+  "budget": 9,
+  "time": "25 min",
+  "spice": 2,
+  "tags": [
+    "dairy-free",
+    "gluten-free"
+  ],
+  "desc": "Northern Mexican dried beef scrambled with eggs, tomatoes, onion, and chile.",
+  "ingredients": [
+    "Machaca dried beef",
+    "Eggs",
+    "Tomatoes",
+    "Onion",
+    "Jalapeño",
+    "Oil",
+    "Cilantro"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Jalapeño",
+        "to": "Green bell pepper",
+        "note": "Mild and family friendly"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 12,
+  "fat": 30,
+  "fiber": 3,
+  "image": "/images/dishes/Machaca-con-Huevo.jpg"
+},
+{
+  "id": 8040,
+  "name": "Carnitas",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🐖",
+  "cal": 590,
+  "budget": 10,
+  "time": "3 hrs",
+  "spice": 1,
+  "tags": [
+    "dairy-free",
+    "gluten-free"
+  ],
+  "desc": "Pork slowly cooked until tender, then crisped and served with tortillas, onion, cilantro, and lime.",
+  "ingredients": [
+    "Pork shoulder",
+    "Orange",
+    "Garlic",
+    "Bay leaves",
+    "Cumin",
+    "Corn tortillas",
+    "Lime"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Pork shoulder",
+        "to": "Young jackfruit",
+        "note": "Season and crisp in a skillet"
+      }
+    ]
+  },
+  "protein": 38,
+  "carbs": 30,
+  "fat": 34,
+  "fiber": 5,
+  "image": "/images/dishes/Carnitas.jpg"
+},
+{
+  "id": 8041,
+  "name": "Torta Ahogada",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🥪",
+  "cal": 720,
+  "budget": 11,
+  "time": "50 min",
+  "spice": 4,
+  "tags": [
+    "dairy-free"
+  ],
+  "desc": "A Guadalajara-style crusty pork sandwich submerged in tomato sauce and a fiery chile de árbol salsa.",
+  "ingredients": [
+    "Birote bread",
+    "Carnitas",
+    "Tomatoes",
+    "Chile de árbol",
+    "Onion",
+    "Garlic",
+    "Lime"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Chile de árbol salsa",
+        "to": "Mild tomato salsa",
+        "note": "Serve hot salsa separately"
+      }
+    ]
+  },
+  "protein": 34,
+  "carbs": 83,
+  "fat": 28,
+  "fiber": 7,
+  "image": "/images/dishes/Torta-Ahogada.jpg"
+},
+{
+  "id": 8042,
+  "name": "Birria",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🍲",
+  "cal": 620,
+  "budget": 14,
+  "time": "4 hrs",
+  "spice": 3,
+  "tags": [
+    "dairy-free",
+    "gluten-free"
+  ],
+  "desc": "Jalisco-style slow-braised meat in a deeply flavored chile and spice broth, served with onion and lime.",
+  "ingredients": [
+    "Beef chuck or goat",
+    "Guajillo chiles",
+    "Ancho chiles",
+    "Tomatoes",
+    "Garlic",
+    "Cinnamon",
+    "Cloves"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Hot dried chiles",
+        "to": "Guajillo and ancho only",
+        "note": "Rich chile flavor with gentler heat"
+      }
+    ]
+  },
+  "protein": 44,
+  "carbs": 20,
+  "fat": 38,
+  "fiber": 5,
+  "image": "/images/dishes/Birria.jpg"
+},
+{
+  "id": 8043,
+  "name": "Chile en Nogada",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🌶️",
+  "cal": 690,
+  "budget": 16,
+  "time": "1.5 hrs",
+  "spice": 1,
+  "tags": [
+    "gluten-free"
+  ],
+  "desc": "A poblano chile filled with savory-sweet picadillo, covered in walnut sauce, and garnished with pomegranate.",
+  "ingredients": [
+    "Poblano peppers",
+    "Ground meat",
+    "Walnuts",
+    "Pomegranate",
+    "Apple",
+    "Pear",
+    "Cream"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Cream",
+        "to": "Unsweetened cashew cream",
+        "note": "Blends naturally with walnuts"
+      }
+    ]
+  },
+  "protein": 30,
+  "carbs": 50,
+  "fat": 39,
+  "fiber": 9,
+  "image": "/images/dishes/Chile-en-Nogada.jpg"
+},
+{
+  "id": 8044,
+  "name": "Gorditas",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🫓",
+  "cal": 460,
+  "budget": 6,
+  "time": "40 min",
+  "spice": 2,
+  "tags": [
+    "gluten-free",
+    "vegetarian-option"
+  ],
+  "desc": "Thick masa cakes split and filled with beans, meat, cheese, salsa, and fresh toppings.",
+  "ingredients": [
+    "Masa harina",
+    "Water",
+    "Salt",
+    "Refried beans",
+    "Shredded meat",
+    "Queso fresco",
+    "Salsa"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Meat and cheese",
+        "to": "Beans, mushrooms, and avocado",
+        "note": "A hearty plant-based filling"
+      }
+    ]
+  },
+  "protein": 18,
+  "carbs": 58,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Gorditas.jpg"
+},
+{
+  "id": 8045,
+  "name": "Flautas",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🌯",
+  "cal": 540,
+  "budget": 7,
+  "time": "35 min",
+  "spice": 2,
+  "tags": [
+    "gluten-free-option"
+  ],
+  "desc": "Rolled tortillas filled with seasoned chicken, fried until crisp, and topped with crema, lettuce, and cheese.",
+  "ingredients": [
+    "Corn tortillas",
+    "Shredded chicken",
+    "Lettuce",
+    "Mexican crema",
+    "Queso fresco",
+    "Salsa",
+    "Oil"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Crema and queso fresco",
+        "to": "Avocado crema",
+        "note": "Creamy and dairy free"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Chicken",
+        "to": "Mashed potatoes and black beans",
+        "note": "Season before rolling"
+      }
+    ]
+  },
+  "protein": 27,
+  "carbs": 49,
+  "fat": 26,
+  "fiber": 7,
+  "image": "/images/dishes/Flautas.jpg"
+},
+{
+  "id": 8046,
+  "name": "Menudo",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🍲",
+  "cal": 390,
+  "budget": 10,
+  "time": "4 hrs",
+  "spice": 3,
+  "tags": [
+    "dairy-free",
+    "gluten-free"
+  ],
+  "desc": "A restorative red chile soup with tender beef tripe and hominy, traditionally enjoyed on weekends.",
+  "ingredients": [
+    "Beef tripe",
+    "Hominy",
+    "Guajillo chiles",
+    "Garlic",
+    "Oregano",
+    "Onion",
+    "Lime"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Chile sauce",
+        "to": "Mild guajillo broth",
+        "note": "Red color and depth with less heat"
+      }
+    ]
+  },
+  "protein": 30,
+  "carbs": 31,
+  "fat": 16,
+  "fiber": 6,
+  "image": "/images/dishes/Menudo.jpg"
+},
+{
+  "id": 8047,
+  "name": "Sopa de Tortilla",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🍲",
+  "cal": 360,
+  "budget": 6,
+  "time": "35 min",
+  "spice": 2,
+  "tags": [
+    "vegetarian-option",
+    "gluten-free"
+  ],
+  "desc": "Tomato-chile broth topped with crisp tortilla strips, avocado, cheese, and crema.",
+  "ingredients": [
+    "Tomatoes",
+    "Corn tortillas",
+    "Pasilla chile",
+    "Chicken stock",
+    "Avocado",
+    "Queso fresco",
+    "Crema"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Chicken stock, cheese, and crema",
+        "to": "Vegetable stock, avocado, and plant crema",
+        "note": "Keeps it rich and satisfying"
+      }
+    ]
+  },
+  "protein": 14,
+  "carbs": 42,
+  "fat": 17,
+  "fiber": 8,
+  "image": "/images/dishes/Sopa-de-Tortilla.jpg"
+},
+{
+  "id": 8048,
+  "name": "Aguachile",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🦐",
+  "cal": 250,
+  "budget": 14,
+  "time": "25 min",
+  "spice": 4,
+  "tags": [
+    "dairy-free",
+    "gluten-free"
+  ],
+  "desc": "Sinaloa-style shrimp cured in lime and covered with a vivid chile-cilantro sauce, cucumber, and onion.",
+  "ingredients": [
+    "Raw shrimp",
+    "Lime juice",
+    "Serrano peppers",
+    "Cilantro",
+    "Cucumber",
+    "Red onion",
+    "Salt"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Serrano peppers",
+        "to": "Poblano or green bell pepper",
+        "note": "Fresh green flavor with less heat"
+      }
+    ]
+  },
+  "protein": 29,
+  "carbs": 15,
+  "fat": 7,
+  "fiber": 4,
+  "image": "/images/dishes/Aguachile.jpg"
+},
+{
+  "id": 8049,
+  "name": "Ensalada de Nopales",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🥗",
+  "cal": 190,
+  "budget": 5,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "vegetarian",
+    "gluten-free"
+  ],
+  "desc": "Tender cactus paddles tossed with tomato, onion, cilantro, lime, and crumbly cheese.",
+  "ingredients": [
+    "Nopales",
+    "Tomatoes",
+    "White onion",
+    "Cilantro",
+    "Lime",
+    "Queso fresco",
+    "Oregano"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Queso fresco",
+        "to": "Avocado",
+        "note": "Adds richness without dairy"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 18,
+  "fat": 10,
+  "fiber": 7,
+  "image": "/images/dishes/Ensalada-de-Nopales.jpg"
+},
+{
+  "id": 8050,
+  "name": "Jicama Salad",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🥗",
+  "cal": 170,
+  "budget": 5,
+  "time": "15 min",
+  "spice": 2,
+  "tags": [
+    "vegan",
+    "gluten-free"
+  ],
+  "desc": "Crisp jícama, cucumber, orange, and lime seasoned with chile for a refreshing Mexican salad.",
+  "ingredients": [
+    "Jicama",
+    "Cucumber",
+    "Orange",
+    "Lime juice",
+    "Cilantro",
+    "Chile powder",
+    "Salt"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Chile powder",
+        "to": "Sweet paprika or omit",
+        "note": "Keeps the color without heat"
+      }
+    ]
+  },
+  "protein": 3,
+  "carbs": 38,
+  "fat": 1,
+  "fiber": 12,
+  "image": "/images/dishes/Jicama-Salad.jpg"
+},
+{
+  "id": 8051,
+  "name": "Churros",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🍩",
+  "cal": 390,
+  "budget": 4,
+  "time": "35 min",
+  "spice": 1,
+  "tags": [
+    "vegetarian"
+  ],
+  "desc": "Crisp ridged pastries rolled in cinnamon sugar and served warm, often with chocolate sauce.",
+  "ingredients": [
+    "Flour",
+    "Water",
+    "Butter",
+    "Sugar",
+    "Cinnamon",
+    "Oil",
+    "Chocolate sauce"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Butter",
+        "to": "Plant-based butter",
+        "note": "Works the same in the dough"
+      }
+    ]
+  },
+  "protein": 6,
+  "carbs": 58,
+  "fat": 16,
+  "fiber": 3,
+  "image": "/images/dishes/Churros.jpg"
+},
+{
+  "id": 8052,
+  "name": "Flan Napolitano",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🍮",
+  "cal": 420,
+  "budget": 7,
+  "time": "1.5 hrs",
+  "spice": 1,
+  "tags": [
+    "vegetarian",
+    "gluten-free"
+  ],
+  "desc": "Silky Mexican caramel custard enriched with cream cheese and sweetened condensed milk.",
+  "ingredients": [
+    "Eggs",
+    "Sweetened condensed milk",
+    "Evaporated milk",
+    "Cream cheese",
+    "Sugar",
+    "Vanilla",
+    "Salt"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Dairy milks and cream cheese",
+        "to": "Coconut condensed milk and plant cream cheese",
+        "note": "Chill fully before unmolding"
+      }
+    ]
+  },
+  "protein": 12,
+  "carbs": 55,
+  "fat": 18,
+  "fiber": 0,
+  "image": "/images/dishes/Flan-Napolitano.jpg"
+},
+{
+  "id": 8053,
+  "name": "Arroz con Leche",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🍚",
+  "cal": 330,
+  "budget": 4,
+  "time": "45 min",
+  "spice": 1,
+  "tags": [
+    "vegetarian",
+    "gluten-free"
+  ],
+  "desc": "Creamy cinnamon-scented rice pudding served warm or chilled with raisins.",
+  "ingredients": [
+    "Rice",
+    "Milk",
+    "Cinnamon",
+    "Sugar",
+    "Vanilla",
+    "Raisins",
+    "Lime peel"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Milk",
+        "to": "Oat milk or coconut milk",
+        "note": "Use unsweetened milk"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 63,
+  "fat": 6,
+  "fiber": 2,
+  "image": "/images/dishes/Arroz-con-Leche.jpg"
+},
+{
+  "id": 8054,
+  "name": "Horchata",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🥤",
+  "cal": 210,
+  "budget": 3,
+  "time": "8 hrs",
+  "spice": 1,
+  "tags": [
+    "vegan-option",
+    "gluten-free"
+  ],
+  "desc": "A chilled rice-and-cinnamon drink blended until creamy and lightly sweetened.",
+  "ingredients": [
+    "Long-grain rice",
+    "Cinnamon sticks",
+    "Water",
+    "Sugar",
+    "Vanilla",
+    "Milk",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Milk",
+        "to": "Oat milk or almond milk",
+        "note": "Keeps the drink creamy"
+      }
+    ]
+  },
+  "protein": 3,
+  "carbs": 44,
+  "fat": 3,
+  "fiber": 1,
+  "image": "/images/dishes/Horchata.jpg"
+},
+{
+  "id": 8055,
+  "name": "Agua de Jamaica",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🥤",
+  "cal": 90,
+  "budget": 3,
+  "time": "20 min",
+  "spice": 1,
+  "tags": [
+    "vegan",
+    "gluten-free"
+  ],
+  "desc": "A ruby-red hibiscus drink with a tart, floral flavor, served cold over ice.",
+  "ingredients": [
+    "Dried hibiscus flowers",
+    "Water",
+    "Sugar",
+    "Lime",
+    "Ice"
+  ],
+  "swaps": {
+    "sugar": [
+      {
+        "from": "Sugar",
+        "to": "Honey, agave, or less sweetener",
+        "note": "Adjust after chilling"
+      }
+    ]
+  },
+  "protein": 0,
+  "carbs": 23,
+  "fat": 0,
+  "fiber": 1,
+  "image": "/images/dishes/Agua-de-Jamaica.jpg"
+},
+{
+  "id": 8056,
+  "name": "Agua de Tamarindo",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🥤",
+  "cal": 130,
+  "budget": 4,
+  "time": "35 min",
+  "spice": 1,
+  "tags": [
+    "vegan",
+    "gluten-free"
+  ],
+  "desc": "A sweet-tart tamarind cooler made from tamarind pulp, water, and sugar.",
+  "ingredients": [
+    "Tamarind pods or pulp",
+    "Water",
+    "Sugar",
+    "Lime",
+    "Ice"
+  ],
+  "swaps": {
+    "sugar": [
+      {
+        "from": "Sugar",
+        "to": "Agave or reduced sugar",
+        "note": "Tamarind remains naturally tangy"
+      }
+    ]
+  },
+  "protein": 1,
+  "carbs": 34,
+  "fat": 0,
+  "fiber": 2,
+  "image": "/images/dishes/Agua-de-Tamarindo.jpg"
+},
+{
+  "id": 8057,
+  "name": "Champurrado",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "☕",
+  "cal": 320,
+  "budget": 4,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "vegetarian",
+    "gluten-free"
+  ],
+  "desc": "A thick, warming Mexican chocolate drink made with masa, cinnamon, and piloncillo.",
+  "ingredients": [
+    "Masa harina",
+    "Mexican chocolate",
+    "Milk",
+    "Piloncillo",
+    "Cinnamon",
+    "Water",
+    "Vanilla"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Milk",
+        "to": "Oat milk",
+        "note": "Creates a smooth, rich texture"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 56,
+  "fat": 8,
+  "fiber": 4,
+  "image": "/images/dishes/Champurrado.jpg"
+},
+{
+  "id": 8058,
+  "name": "Café de Olla",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "☕",
+  "cal": 80,
+  "budget": 3,
+  "time": "20 min",
+  "spice": 1,
+  "tags": [
+    "vegan",
+    "gluten-free"
+  ],
+  "desc": "Traditional Mexican coffee brewed with cinnamon and piloncillo for a warm caramel-spice aroma.",
+  "ingredients": [
+    "Ground coffee",
+    "Water",
+    "Piloncillo",
+    "Cinnamon stick",
+    "Cloves",
+    "Orange peel"
+  ],
+  "swaps": {
+    "sugar": [
+      {
+        "from": "Piloncillo",
+        "to": "Brown sugar",
+        "note": "Use slightly less and adjust to taste"
+      }
+    ]
+  },
+  "protein": 0,
+  "carbs": 20,
+  "fat": 0,
+  "fiber": 0,
+  "image": "/images/dishes/Cafe-de-Olla.jpg"
+}
 ];
