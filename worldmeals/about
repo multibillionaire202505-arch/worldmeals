@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>About — WorldMeals</title>
+<meta name="description" content="About for WorldMeals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="trust-pages.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href="index.html">🌍 <span class="world">World</span><span class="meals">Meals</span></a>
+  <div class="nav-links">
+    <a href="about.html" class="active">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="app.html">Open App</a>
+  </div>
+</nav>
+
+<main>
+<section class="hero">
+  <div class="kicker">About WorldMeals</div>
+  <h1>Travel the world without leaving your kitchen.</h1>
+  <p class="lead">WorldMeals is a global cooking platform built to help people discover dishes, plan affordable meals, use what they already have, and cook with confidence.</p>
+</section>
+<section class="grid">
+  <article class="card">
+    <h2>🌍 Our mission</h2>
+    <p>Make global food discovery simple, useful, and welcoming for everyone. We believe every recipe carries a story and every kitchen can become a doorway to another culture.</p>
+  </article>
+  <article class="card">
+    <h2>🚀 Our vision</h2>
+    <p>Build the world’s most useful cooking companion by combining global dishes, practical planning tools, intelligent guidance, and an experience that feels effortless.</p>
+  </article>
+  <article class="card full">
+    <h2>What WorldMeals helps you do</h2>
+    <ul class="feature-list">
+      <li>🌎 Explore dishes by country and region</li>
+      <li>🤖 Get cooking help from Chef AI</li>
+      <li>📷 Scan fridge ingredients for ideas</li>
+      <li>📅 Plan meals across the week</li>
+      <li>💰 Stay within a food budget</li>
+      <li>🛒 Build a smart grocery list</li>
+      <li>❤️ Save favorite dishes</li>
+      <li>🎛️ Filter by diet, calories, protein, spice, time, and cost</li>
+    </ul>
+  </article>
+  <article class="card full">
+    <h2>❤️ Our promise</h2>
+    <p>Every WorldMeals feature should make cooking easier, clearer, or more enjoyable. We value usefulness over clutter, guidance over confusion, and respect for the cultures behind the food we share.</p>
+  </article>
+</section>
+</main>
+
+<footer>
+  <div>© 2026 WorldMeals. Every meal tells a story.</div>
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+</footer>
+
+</body>
+</html>
