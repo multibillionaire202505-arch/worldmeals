@@ -43597,7 +43597,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1539768942893-daf53e448371?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxIYXdhd3NoaSUyMEVneXB0fGVufDB8MHx8fDE3ODI2ODM0NDl8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Hawawshi.jpg"
   },
   {
     "id": 873,
@@ -43650,7 +43650,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/9f4z6v1598734293.jpg"
+  "image": "/images/dishes/Feteer-Meshaltet.jpg"
   },
   {
     "id": 874,
