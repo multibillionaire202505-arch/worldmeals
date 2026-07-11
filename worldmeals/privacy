@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Privacy Policy — WorldMeals</title>
+<meta name="description" content="Privacy Policy for WorldMeals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="trust-pages.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href="index.html">🌍 <span class="world">World</span><span class="meals">Meals</span></a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html" class="active">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="app.html">Open App</a>
+  </div>
+</nav>
+
+<main>
+<section class="hero">
+  <div class="kicker">Privacy Policy</div>
+  <h1>Your privacy should be easy to understand.</h1>
+  <p class="lead">This policy explains what WorldMeals may collect, why it is used, and the choices available to you.</p>
+</section>
+<section class="grid">
+  <article class="card full">
+    <p class="small"><strong>Effective date:</strong> July 11, 2026</p>
+    <h2>Information we may process</h2>
+    <ul>
+      <li>Searches, filter choices, meal plans, favorites, cooked dishes, grocery-list activity, and app preferences.</li>
+      <li>An anonymous browser identifier used to save or sync certain app activity.</li>
+      <li>Text you submit to Chef AI or the fridge-scanning feature.</li>
+      <li>Images you choose to upload for fridge scanning.</li>
+      <li>Basic technical information such as browser type, device type, approximate region, and error logs when analytics or hosting services provide it.</li>
+      <li>Contact information and message contents when you contact us.</li>
+    </ul>
+  </article>
+  <article class="card">
+    <h2>How information is used</h2>
+    <p>To operate the app, remember your choices, save favorites, generate recipes or suggestions, improve reliability, prevent abuse, respond to messages, and understand which features are useful.</p>
+  </article>
+  <article class="card">
+    <h2>Local storage</h2>
+    <p>WorldMeals may store preferences, favorites, meal plans, progress, photo-cache references, and session hints in your browser using localStorage or sessionStorage.</p>
+  </article>
+  <article class="card">
+    <h2>AI and uploaded content</h2>
+    <p>Text or images sent to AI-powered features may be transmitted to service providers that help generate results. Avoid submitting confidential, highly sensitive, or unnecessary personal information.</p>
+  </article>
+  <article class="card">
+    <h2>Service providers</h2>
+    <p>We may use hosting, database, image, analytics, security, and AI providers. They may process limited information only to provide their services to WorldMeals.</p>
+  </article>
+  <article class="card">
+    <h2>Your choices</h2>
+    <p>You can clear browser storage, avoid optional AI features, decline to upload images, and contact us to request access, correction, or deletion where applicable.</p>
+  </article>
+  <article class="card">
+    <h2>Data retention and security</h2>
+    <p>Information is kept only as long as reasonably needed for the purposes described. We use reasonable safeguards, but no online service can guarantee absolute security.</p>
+  </article>
+  <article class="card full">
+    <h2>Children and international users</h2>
+    <p>WorldMeals is not intended to knowingly collect personal information from children under the age required by applicable law without appropriate consent. Privacy rights vary by location, and we will respond to valid requests as required.</p>
+  </article>
+  <article class="card full">
+    <div class="notice"><strong>Contact:</strong> Replace <code>privacy@worldmeals.app</code> with your active privacy email before launch.</div>
+  </article>
+</section>
+</main>
+
+<footer>
+  <div>© 2026 WorldMeals. Every meal tells a story.</div>
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+</footer>
+
+</body>
+</html>
