@@ -14215,7 +14215,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 36,
     "fat": 11,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1635000158455-42a69b4cbcd6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxQdXB1c2FzJTIwRWwlMjBTYWx2YWRvcnxlbnwwfDB8fHwxNzgyNzAyMDAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Pupusas.jpg"
   },
   {
     "id": 296,
@@ -43754,7 +43754,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1743213993877-4f2ed41a0eba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxTb3BhJTIwZGUlMjBQYXRhJTIwRWwlMjBTYWx2YWRvcnxlbnwwfDB8fHwxNzgyNjgzNDUxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Sopa-de-Pata.jpg"
   },
   {
     "id": 876,
