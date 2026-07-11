@@ -14255,7 +14255,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 40,
     "fat": 13,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1657044154711-255ba5c67852?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDYXNhbWllbnRvJTIwRWwlMjBTYWx2YWRvcnxlbnwwfDB8fHwxNzgyNzAyMDAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Casamiento.jpg"
   },
   {
     "id": 297,
@@ -43702,7 +43702,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1752367799020-48160b694eb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxZdWNhJTIwRnJpdGElMjBFbCUyMFNhbHZhZG9yfGVufDB8MHx8fDE3ODI2ODM0NTB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Yuca-Frita.jpg"
   },
   {
     "id": 875,
@@ -43806,7 +43806,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1718913978729-6a569605573f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxQYW4lMjBjb24lMjBQYXZvJTIwRWwlMjBTYWx2YWRvcnxlbnwwfDB8fHwxNzgyNjgzNDUzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+   "image": "/images/dishes/Pan-con-Pavo.jpg"
   },
   {
     "id": 877,
