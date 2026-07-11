@@ -20532,7 +20532,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishesBeef-Tehari/.jpg"
+   "image": "/images/dishes/Beef-Tehari.jpg"
   },
   {
     "id": 423,
