@@ -1282,6 +1282,55 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
   }
 }
 
+
+/* WORLDMEALS 2.6 — NEAR-INVISIBLE GLASS NAV */
+.bottom-nav{
+  background:rgba(255,255,255,.025) !important;
+  border:1px solid rgba(255,255,255,.14) !important;
+  -webkit-backdrop-filter:blur(12px) saturate(135%) !important;
+  backdrop-filter:blur(12px) saturate(135%) !important;
+  box-shadow:
+    0 14px 28px rgba(43,31,20,.07),
+    inset 0 1px 0 rgba(255,255,255,.14) !important;
+}
+
+.bottom-nav::before,
+.bottom-nav::after{
+  content:none !important;
+  display:none !important;
+}
+
+.bottom-nav .nav-btn{
+  background:transparent !important;
+}
+
+/* Only the selected tab keeps a soft warm capsule */
+.bottom-nav .nav-btn::before{
+  background:linear-gradient(
+    135deg,
+    rgba(255,239,215,.46),
+    rgba(255,210,157,.24)
+  ) !important;
+  border:1px solid rgba(245,166,35,.26) !important;
+  box-shadow:
+    0 7px 15px rgba(217,99,11,.09),
+    inset 0 1px 0 rgba(255,255,255,.38) !important;
+}
+
+.bottom-nav .nav-btn .lb{
+  color:rgba(69,57,46,.76) !important;
+}
+
+.bottom-nav .nav-btn.active .lb{
+  color:#A85212 !important;
+}
+
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .bottom-nav{
+    background:rgba(255,253,248,.58) !important;
+  }
+}
+
 </style>
 </head>
 <body>
