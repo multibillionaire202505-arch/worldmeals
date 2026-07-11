@@ -40040,7 +40040,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/5tf8j11782236249.jpg"
+    "image": "/images/dishes/Cou-Cou-and-Flying-Fish.jpg"
   },
   {
     "id": 805,
@@ -40092,7 +40092,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/5tf8j11782236249.jpg"
+   "image": "/images/dishes/Bajan-Fish-Cakes.jpg"
   },
   {
     "id": 806,
@@ -40145,7 +40145,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/5tf8j11782236249.jpg"
+    "image": "/images/dishes/Pepperpo.jpg"
   },
   {
     "id": 807,
