@@ -53141,6 +53141,6 @@ window.WORLD_MEALS_DATABASE = [
   "carbs": 20,
   "fat": 0,
   "fiber": 0,
-  "image": "/images/dishes/Cafe-de-Olla.jpg"
+  "image": "/images/dishes/Café de Olla.jpg"
 }
 ];
