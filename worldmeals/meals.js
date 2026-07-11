@@ -53142,5 +53142,45 @@ window.WORLD_MEALS_DATABASE = [
   "fat": 0,
   "fiber": 0,
   "image": "/images/dishes/Café de Olla.jpg"
-}
+},
+  {
+  "id": 1078,
+  "name": "Tamago Kake Gohan",
+  "country": "Japan",
+  "region": "Asia",
+  "emoji": "🍚",
+  "cal": 350,
+  "budget": 3,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "breakfast",
+    "vegetarian",
+    "dairy-free",
+    "gluten-free-option"
+  ],
+  "desc": "A comforting Japanese breakfast of hot steamed rice mixed with egg and seasoned with soy sauce.",
+  "ingredients": [
+    "Steamed Japanese rice",
+    "Fresh egg",
+    "Soy sauce",
+    "Green onions",
+    "Nori",
+    "Sesame seeds"
+  ],
+  "swaps": {
+    "gluten": [
+      {
+        "from": "Soy sauce",
+        "to": "Tamari",
+        "note": "Provides the same savory flavor without gluten"
+      }
+    ]
+  },
+  "protein": 13,
+  "carbs": 55,
+  "fat": 8,
+  "fiber": 1,
+  "image": "/images/dishes/Tamago-Kake-Gohan.jpg"
+},
 ];
