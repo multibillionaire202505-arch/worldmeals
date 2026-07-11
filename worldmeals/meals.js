@@ -1915,7 +1915,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 90,
     "fat": 31,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/uuyrrx1487327597.jpg"
+    "image": "/images/dishes/Poutine.jpg"
   },
   {
     "id": 43,
@@ -13729,7 +13729,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 55,
     "fat": 17,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/ytpstt1511814614.jpg"
+    "image": "/images/dishes/Tourtiere.jpg"
   },
   {
     "id": 286,
@@ -13782,7 +13782,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 59,
     "fat": 18,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/wpputp1511812960.jpg"
+  "image": "/images/dishes/Butter-Tarts.jpg"
   },
   {
     "id": 287,
@@ -13828,7 +13828,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 63,
     "fat": 20,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/vwuprt1511813703.jpg"
+    "image": "/images/dishes/Nanaimo-Bars.jpg"
   },
   {
     "id": 288,
@@ -13875,7 +13875,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 67,
     "fat": 21,
     "fiber": 5,
-    "image": ""
+  "image": "/images/dishes/Maple-Salmon.jpg"
   },
   {
     "id": 289,
@@ -42026,7 +42026,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/xxtsvx1511814083.jpg"
+    "image": "/images/dishes/Split-Pea-Soup.jpg"
   },
   {
     "id": 843,
