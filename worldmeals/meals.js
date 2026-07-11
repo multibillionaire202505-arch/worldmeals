@@ -3036,7 +3036,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 30,
     "fat": 9,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/lvn2d51598732465.jpg"
+     "image": "/images/dishes/Ful-Medames.jpg"
   },
   {
     "id": 68,
@@ -3082,7 +3082,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 46,
     "fat": 14,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1564834744159-ff0ea41ba4b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxCZWVmJTIwQnVsZ29naSUyMFNvdXRoJTIwS29yZWF8ZW58MHwwfHx8MTc4MjY5Mzk1NXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Beef-Bulgogi.jpg"
   },
   {
     "id": 69,
@@ -3127,7 +3127,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-    "image": "/images/dishes/Spanakopita.jpg",
+    "image": "/images/dishes/Spanakopita.jpg"
   },
   {
     "id": 70,
@@ -3219,7 +3219,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 30,
     "fat": 9,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1764313549132-c001aa72ec26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxMYXJiJTIwTGFvcyUyMHJlY2lwZXxlbnwwfDB8fHwxNzgyNjkzOTU5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+   "image": "/images/dishes/Larb.jpg"
   },
   {
     "id": 72,
