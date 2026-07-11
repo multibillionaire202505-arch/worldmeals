@@ -53183,4 +53183,55 @@ window.WORLD_MEALS_DATABASE = [
   "fiber": 1,
   "image": "/images/dishes/Tamago-Kake-Gohan.jpg"
 },
+  {
+  "id": 1079,
+  "name": "Pancakes",
+  "country": "United States",
+  "region": "Americas",
+  "emoji": "🥞",
+  "cal": 430,
+  "budget": 4,
+  "time": "20 min",
+  "spice": 1,
+  "tags": [
+    "breakfast",
+    "vegetarian"
+  ],
+  "desc": "Fluffy American pancakes served warm with butter and maple syrup.",
+  "ingredients": [
+    "Flour",
+    "Milk",
+    "Eggs",
+    "Butter",
+    "Baking powder",
+    "Sugar",
+    "Maple syrup"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Milk",
+        "to": "Oat milk",
+        "note": "Keeps the pancakes soft and fluffy"
+      },
+      {
+        "from": "Butter",
+        "to": "Plant-based butter",
+        "note": "Use the same amount"
+      }
+    ],
+    "gluten": [
+      {
+        "from": "Flour",
+        "to": "Gluten-free all-purpose flour",
+        "note": "Use a one-to-one baking blend"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 68,
+  "fat": 13,
+  "fiber": 2,
+  "image": "/images/dishes/Pancakes.jpg"
+},
 ];
