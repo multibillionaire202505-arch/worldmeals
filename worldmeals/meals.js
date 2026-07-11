@@ -20428,7 +20428,7 @@ window.WORLD_MEALS_DATABASE = [
           "note": "Use the closest local substitute"
         }
       ]
-    },"
+    },
     "image": "/images/dishes/Bhuna-Khichuri.jpg"
   },
   {
