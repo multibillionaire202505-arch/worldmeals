@@ -1557,6 +1557,24 @@ body{
     .country-pin{width:32px;height:32px;font-size:16px}
   }
 
+
+  /* WORLDMEALS — CONNECTED TRUST PAGE LINKS */
+  .footer-link{
+    padding:7px 10px;
+    border-radius:999px;
+    transition:color .18s ease,background .18s ease,transform .18s ease;
+  }
+  .footer-link:hover,
+  .footer-link:focus-visible{
+    color:#F3E9DD;
+    background:rgba(255,255,255,.07);
+    transform:translateY(-1px);
+    outline:none;
+  }
+  @media(max-width:600px){
+    .footer-links{flex-wrap:wrap;justify-content:center}
+  }
+
 </style>
 </head>
 <body>
@@ -2219,10 +2237,11 @@ body{
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">🌍 WorldMeals</div>
-  <div class="footer-links">
-    <a href="#" class="footer-link">Privacy</a>
-    <a href="#" class="footer-link">Terms</a>
-    <a href="#" class="footer-link">Contact</a>
+  <div class="footer-links" aria-label="WorldMeals information">
+    <a href="about.html" class="footer-link">About</a>
+    <a href="privacy.html" class="footer-link">Privacy</a>
+    <a href="terms.html" class="footer-link">Terms</a>
+    <a href="contact.html" class="footer-link">Contact</a>
   </div>
   <div class="footer-stripe">🔒 Payments secured by Stripe · We never see your card</div>
 </footer>
