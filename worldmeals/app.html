@@ -2693,6 +2693,72 @@ function clearSearch(){
 
 window.addEventListener("DOMContentLoaded", updateSearchClear);
 
+
+/* WORLDMEALS — one-time mobile swipe hint for Advanced Filters */
+(function setupAdvancedFilterSwipeHint(){
+  const STORAGE_KEY = "wm_advanced_filter_swipe_hint_seen";
+
+  function runHint(){
+    const bar = document.getElementById("advBody");
+    if (!bar || bar.classList.contains("collapsed")) return;
+
+    const prefersReducedMotion =
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const isMobile = window.matchMedia
+      ? window.matchMedia("(max-width: 620px)").matches
+      : window.innerWidth <= 620;
+
+    const canScroll = bar.scrollWidth > bar.clientWidth + 10;
+
+    if (
+      prefersReducedMotion ||
+      !isMobile ||
+      !canScroll ||
+      sessionStorage.getItem(STORAGE_KEY) === "1"
+    ) return;
+
+    let cancelled = false;
+    const cancelHint = () => {
+      cancelled = true;
+      sessionStorage.setItem(STORAGE_KEY, "1");
+    };
+
+    ["pointerdown", "touchstart", "wheel"].forEach(eventName => {
+      bar.addEventListener(eventName, cancelHint, { once: true, passive: true });
+    });
+
+    sessionStorage.setItem(STORAGE_KEY, "1");
+
+    window.setTimeout(() => {
+      if (cancelled || bar.classList.contains("collapsed")) return;
+
+      const distance = Math.min(190, Math.max(120, bar.clientWidth * 0.48));
+
+      bar.scrollTo({
+        left: distance,
+        behavior: "smooth"
+      });
+
+      window.setTimeout(() => {
+        if (cancelled) return;
+
+        bar.scrollTo({
+          left: 0,
+          behavior: "smooth"
+        });
+      }, 1150);
+    }, 1100);
+  }
+
+  if (document.readyState === "loading") {
+    window.addEventListener("DOMContentLoaded", runHint, { once: true });
+  } else {
+    runHint();
+  }
+})();
+
 </script>
 </body>
 </html>
