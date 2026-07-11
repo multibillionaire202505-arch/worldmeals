@@ -40145,7 +40145,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "/images/dishes/Pepperpo.jpg"
+    "image": "/images/dishes/Pepperpot.jpg"
   },
   {
     "id": 807,
