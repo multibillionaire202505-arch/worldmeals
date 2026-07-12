@@ -5629,7 +5629,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 49,
     "fat": 15,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1622482654895-bf62e38b1b49?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDYWx1bHUlMjByZWNpcGV8ZW58MHwwfHx8MTc4MjY4NDAwMXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Calulu.jpg"
   },
   {
     "id": 124,
@@ -39098,7 +39098,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+   "image": "/images/dishes/Moamba-de-Galinha.jpg"
   },
   {
     "id": 787,
@@ -39151,7 +39151,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+   "image": "/images/dishes/Funge.jpg"
   },
   {
     "id": 788,
@@ -39204,7 +39204,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+   "image": "/images/dishes/Kizaca.jpg"
   },
   {
     "id": 789,
