@@ -39360,7 +39360,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/vy6k391780090969.jpg"
+    "image": "/images/dishes/Lahmajoun.jpg"
   },
   {
     "id": 792,
