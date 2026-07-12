@@ -13221,7 +13221,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 74,
     "fat": 23,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/6awyvm1782685205.jpg"
+    "image": "/images/dishes/Moussaka-Bulgarian.jpg"
   },
   {
     "id": 276,
@@ -31292,7 +31292,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/bqx8mc1782684286.jpg"
+    "image": "/images/dishes/Shopska-Salad.jpg"
   },
   {
     "id": 634,
@@ -31343,7 +31343,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/6awyvm1782685205.jpg"
+    "image": "/images/dishes/Kavarma.jpg"
   },
   {
     "id": 635,
@@ -31394,7 +31394,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/6awyvm1782685205.jpg"
+    "image": "/images/dishes/Tarator.jpg"
   },
   {
     "id": 636,
@@ -31445,7 +31445,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/6awyvm1782685205.jpg"
+    "image": "/images/dishes/Kebapche.jpg"
   },
   {
     "id": 637,
@@ -31496,7 +31496,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/6awyvm1782685205.jpg"
+    "image": "/images/dishes/Lutenitsa-Plate.jpg"
   },
   {
     "id": 638,
@@ -31547,7 +31547,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/6awyvm1782685205.jpg"
+     "image": "/images/dishes/Mekitsa.jpg"
   },
   {
     "id": 639,
