@@ -41610,7 +41610,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/1525876468.jpg"
+     image": "/images/dishes/Tô.jpg"
   },
   {
     "id": 835,
@@ -41662,7 +41662,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+   image": "/images/dishes/Babenda.jpg"
   },
   {
     "id": 836,
@@ -41714,7 +41714,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+   image": "/images/dishes/Poulet-Bicyclette.jpg"
   },
   {
     "id": 837,
