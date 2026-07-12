@@ -48094,7 +48094,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Isombe.jpg"
   },
   {
     "id": 959,
@@ -48146,7 +48146,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+   "image": "/images/dishes/Brochettes.jpg"
   },
   {
     "id": 960,
@@ -48198,7 +48198,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+  "image": "/images/dishes/Agatogo.jpg"
   },
   {
     "id": 961,
@@ -48250,7 +48250,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Rwandan-Beans.jpg"
   },
   {
     "id": 962,
