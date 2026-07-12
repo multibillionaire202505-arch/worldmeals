@@ -14356,7 +14356,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 49,
     "fat": 15,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1536709017021-ce8f99c17e38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDYXNhZG8lMjBDb3N0YSUyMFJpY2F8ZW58MHwwfHx8MTc4MjcwMjAwNnww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Asado.jpg"
   },
   {
     "id": 299,
