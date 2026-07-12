@@ -14356,7 +14356,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 49,
     "fat": 15,
     "fiber": 5,
-    "image": "/images/dishes/Asado.jpg"
+    "image": "/images/dishes/Casado.jpg"
   },
   {
     "id": 299,
@@ -14403,7 +14403,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 53,
     "fat": 16,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/t1hg8s1780087329.jpg"
+    
   },
   {
     "id": 300,
@@ -15706,7 +15706,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 44,
     "fat": 14,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/kgfh3q1763075438.jpg"
+   "image": "/images/dishes/Asado.jpg"
   },
   {
     "id": 327,
