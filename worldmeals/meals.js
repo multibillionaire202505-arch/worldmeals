@@ -15767,7 +15767,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 48,
     "fat": 15,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/wdfa171763065079.jpg"
+   "image": "/images/dishes/Milanesa.jpg"
   },
   {
     "id": 328,
