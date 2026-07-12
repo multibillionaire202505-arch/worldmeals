@@ -31853,7 +31853,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/vy6k391780090969.jpg"
+   "image": "/images/dishes/Khorovats.jpg"
   },
   {
     "id": 645,
@@ -31904,7 +31904,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/vy6k391780090969.jpg"
+    "image": "/images/dishes/Dolma-Armenian.jpg"
   },
   {
     "id": 646,
@@ -31955,7 +31955,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/vy6k391780090969.jpg"
+     "image": "/images/dishes/Harissa-Armenian.jpg"
   },
   {
     "id": 647,
@@ -32006,7 +32006,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/vy6k391780090969.jpg"
+   "image": "/images/dishes/Lavash-Wrap.jpg"
   },
   {
     "id": 648,
@@ -32057,7 +32057,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/vy6k391780090969.jpg"
+    "image": "/images/dishes/Ghapama.jpg"
   },
   {
     "id": 649,
@@ -32108,7 +32108,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/vy6k391780090969.jpg"
+    "image": "/images/dishes/Lahmajun-Armenian.jpg"
   },
   {
     "id": 650,
@@ -32158,7 +32158,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/vy6k391780090969.jpg"
+     "image": "/images/dishes/Spas-Soup.jpg"
   },
   {
     "id": 651,
@@ -32209,7 +32209,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/vy6k391780090969.jpg"
+    "image": "/images/dishes/Khash.jpg"
   },
   {
     "id": 652,
