@@ -1,6 +1,6 @@
-
-// WorldMeals v4 database with real photos
-// 1010 dish records. Keep this file in the same folder as app.html.
+// WorldMeals v4 database with manual local photos
+// All dish photos use /images/dishes/Filename.jpg
+// Upload each matching JPG file into public/images/dishes/.
 window.WORLD_MEALS_DATABASE = [
   {
     "id": 1,
@@ -98,7 +98,7 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Tamari",
           "note": "Identical flavor, fully GF"
         }
-      ], 
+      ],
       "vegan": [
         {
           "from": "Salmon/Tuna",
@@ -212,7 +212,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 71,
     "fat": 22,
     "fiber": 5,
-   "image": "/images/dishes/Pasta-Carbonara.jpg"
+    "image": "/images/dishes/Pasta-Carbonara.jpg"
   },
   {
     "id": 5,
@@ -528,7 +528,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 67,
     "fat": 21,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/yuwtuu1511295751.jpg"
+    "image": "/images/dishes/Tagine.jpg"
   },
   {
     "id": 13,
@@ -573,7 +573,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 90,
     "fat": 31,
     "fiber": 5,
-   "image": "/images/dishes/Peking-Duck.jpg"
+    "image": "/images/dishes/Peking-Duck.jpg"
   },
   {
     "id": 14,
@@ -661,7 +661,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 42,
     "fat": 13,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/q99te31763075494.jpg"
+    "image": "/images/dishes/Empanadas.jpg"
   },
   {
     "id": 16,
@@ -706,7 +706,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 61,
     "fat": 19,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/kcv6hj1598733479.jpg"
+    "image": "/images/dishes/Shawarma.jpg"
   },
   {
     "id": 17,
@@ -756,7 +756,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 38,
     "fat": 12,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1760228865341-675704c22a5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxLaW1jaGklMjBKamlnYWV8ZW58MHwwfHx8MTc4MjY5MzkyMHww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Kimchi-Jjigae.jpg"
   },
   {
     "id": 18,
@@ -800,7 +800,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 90,
     "fat": 31,
     "fiber": 5,
-    "image": "/images/dishes/fish-and-chips.jpg"
+    "image": "/images/dishes/Fish-and-Chips.jpg"
   },
   {
     "id": 19,
@@ -839,7 +839,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 17,
     "fat": 5,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/h5qmn31763304965.jpg"
+    "image": "/images/dishes/Gazpacho.jpg"
   },
   {
     "id": 20,
@@ -884,7 +884,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 68,
     "fat": 21,
     "fiber": 5,
-    "image": "/images/dishes/doro-wat.jpg"
+    "image": "/images/dishes/Injera-and-Doro-Wat.jpg"
   },
   {
     "id": 21,
@@ -927,7 +927,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 77,
     "fat": 24,
     "fiber": 5,
-    "image": "/images/dishes/Margherita-Pizza.jpg",
+    "image": "/images/dishes/Margherita-Pizza.jpg"
   },
   {
     "id": 22,
@@ -969,7 +969,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 34,
     "fat": 10,
     "fiber": 5,
-    "image": "/images/dishes/croissant.jpg"
+    "image": "/images/dishes/Croissant.jpg"
   },
   {
     "id": 23,
@@ -1015,7 +1015,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 79,
     "fat": 25,
     "fiber": 5,
-    "image": "/images/dishes/boeuf-bourguignon.jpg"
+    "image": "/images/dishes/Boeuf-Bourguignon.jpg"
   },
   {
     "id": 24,
@@ -1061,7 +1061,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 19,
     "fat": 6,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/l50vz41763422681.jpg"
+    "image": "/images/dishes/Tom-Yum-Soup.jpg"
   },
   {
     "id": 25,
@@ -1159,7 +1159,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/xnv4wf1763756529.jpg"
+    "image": "/images/dishes/Tempura.jpg"
   },
   {
     "id": 27,
@@ -1212,7 +1212,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 46,
     "fat": 14,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/1525872624.jpg"
+    "image": "/images/dishes/Kung-Pao-Chicken.jpg"
   },
   {
     "id": 28,
@@ -1264,7 +1264,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 57,
     "fat": 18,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Enchiladas.jpg"
   },
   {
     "id": 29,
@@ -1315,7 +1315,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 63,
     "fat": 20,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/xxrxux1503070723.jpg"
+    "image": "/images/dishes/Risotto.jpg"
   },
   {
     "id": 30,
@@ -1355,7 +1355,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 24,
     "fat": 7,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/wrpwuu1511786491.jpg"
+    "image": "/images/dishes/Ratatouille.jpg"
   },
   {
     "id": 31,
@@ -1401,7 +1401,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-    "image": "/images/dishes/Souvlaki.jpg",
+    "image": "/images/dishes/Souvlaki.jpg"
   },
   {
     "id": 32,
@@ -1447,7 +1447,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 53,
     "fat": 17,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/04axct1763793018.jpg"
+    "image": "/images/dishes/Kebab.jpg"
   },
   {
     "id": 33,
@@ -1493,7 +1493,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 63,
     "fat": 20,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/9bl20p1763248192.jpg"
+    "image": "/images/dishes/Paella.jpg"
   },
   {
     "id": 34,
@@ -1539,7 +1539,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 46,
     "fat": 14,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1618839851956-b5280e86677a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxQb2tlJTIwQm93bCUyMEhhd2FpaXxlbnwwfDB8fHwxNzgyNjkzOTI3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Poke-Bowl.jpg"
   },
   {
     "id": 35,
@@ -1585,7 +1585,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 63,
     "fat": 20,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1646850149335-f15d028036b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxNYXNzYW1hbiUyMEN1cnJ5JTIwVGhhaWxhbmQlMjBmb29kfGVufDB8MHx8fDE3ODI2OTM5Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Massaman-Curry.jpg"
   },
   {
     "id": 36,
@@ -1631,7 +1631,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 57,
     "fat": 18,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/cyuhwp1764362103.jpg"
+    "image": "/images/dishes/Goulash.jpg"
   },
   {
     "id": 37,
@@ -1677,7 +1677,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 52,
     "fat": 16,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1655740242852-3a0cae4c0843?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxOYXNpJTIwR29yZW5nJTIwSW5kb25lc2lhfGVufDB8MHx8fDE3ODI2OTM5MzB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Nasi-Goreng.jpg"
   },
   {
     "id": 38,
@@ -1724,7 +1724,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 24,
     "fat": 7,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/zadvgb1699012544.jpg"
+    "image": "/images/dishes/Borscht.jpg"
   },
   {
     "id": 39,
@@ -1770,7 +1770,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 63,
     "fat": 20,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1584208632869-05fa2b2a5934?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxNb2xlJTIwUG9ibGFubyUyME1leGljb3xlbnwwfDB8fHwxNzgyNjg3NjAyfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Mole-Poblano.jpg"
   },
   {
     "id": 40,
@@ -1816,7 +1816,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 68,
     "fat": 21,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/bc8v651619789840.jpg"
+    "image": "/images/dishes/Rendang.jpg"
   },
   {
     "id": 41,
@@ -2006,7 +2006,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 52,
     "fat": 16,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/tytyxu1515363282.jpg"
+    "image": "/images/dishes/Jerk-Chicken.jpg"
   },
   {
     "id": 45,
@@ -2052,7 +2052,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/jbw8m11780155348.jpg"
+    "image": "/images/dishes/Dumplings.jpg"
   },
   {
     "id": 46,
@@ -2104,7 +2104,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 68,
     "fat": 21,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/svprys1511176755.jpg"
+    "image": "/images/dishes/Beef-Stroganoff.jpg"
   },
   {
     "id": 47,
@@ -2150,7 +2150,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 63,
     "fat": 20,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/rvypwy1503069308.jpg"
+    "image": "/images/dishes/Laksa.jpg"
   },
   {
     "id": 48,
@@ -2195,7 +2195,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 57,
     "fat": 18,
     "fiber": 5,
-   "image": "/images/dishes/Adobo.jpg"
+    "image": "/images/dishes/Adobo.jpg"
   },
   {
     "id": 49,
@@ -2293,7 +2293,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 52,
     "fat": 16,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/sstssx1487349585.jpg"
+    "image": "/images/dishes/Green-Curry.jpg"
   },
   {
     "id": 51,
@@ -2339,8 +2339,6 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 23,
     "fiber": 5,
     "image": "/images/dishes/Wiener-Schnitzel.jpg"
-},
-{
   },
   {
     "id": 53,
@@ -2390,7 +2388,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 46,
     "fat": 14,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/ckbx1h1764123606.jpg"
+    "image": "/images/dishes/Pierogi.jpg"
   },
   {
     "id": 54,
@@ -2441,7 +2439,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 46,
     "fat": 14,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/d8f6qx1604182128.jpg"
+    "image": "/images/dishes/Okonomiyaki.jpg"
   },
   {
     "id": 55,
@@ -2487,7 +2485,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 52,
     "fat": 16,
     "fiber": 5,
-    "image": "/images/dishes/chili-con-carne.jpg"
+    "image": "/images/dishes/Chili-con-Carne.jpg"
   },
   {
     "id": 56,
@@ -2532,7 +2530,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1691688334265-7936fb8c49ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxUaXJhbWlzdSUyMEl0YWx5fGVufDB8MHx8fDE3ODI2ODc2MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Tiramisu.jpg"
   },
   {
     "id": 57,
@@ -2670,7 +2668,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/ytme8t1764111401.jpg"
+    "image": "/images/dishes/Baklava.jpg"
   },
   {
     "id": 60,
@@ -2716,7 +2714,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 46,
     "fat": 14,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1652545296821-09a023a9fd08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxQZXJpJTIwUGVyaSUyMENoaWNrZW58ZW58MHwwfHx8MTc4MjY4NzYxNXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Peri-Peri-Chicken.jpg"
   },
   {
     "id": 61,
@@ -2762,7 +2760,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 74,
     "fat": 23,
     "fiber": 5,
-    "image": "/images/dishes/Fufu-Egusi-Soup.jpg"
+    "image": "/images/dishes/Fufu-and-Egusi-Soup.jpg"
   },
   {
     "id": 62,
@@ -2805,7 +2803,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 61,
     "fat": 19,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1588013273468-315fd88ea34c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDYWNpbyUyMGUlMjBQZXBlfGVufDB8MHx8fDE3ODI2ODc2MTh8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Cacio-e-Pepe.jpg"
   },
   {
     "id": 63,
@@ -2904,7 +2902,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 46,
     "fat": 14,
     "fiber": 5,
-   "image": "/images/dishes/Kibbeh.jpg",
+    "image": "/images/dishes/Kibbeh.jpg"
   },
   {
     "id": 65,
@@ -2950,7 +2948,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 63,
     "fat": 20,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1569229490681-4085b3f54ba3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDaGltaWNodXJyaSUyMFN0ZWFrfGVufDB8MHx8fDE3ODI2OTM5NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Chimichurri-Steak.jpg"
   },
   {
     "id": 66,
@@ -2996,7 +2994,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 57,
     "fat": 18,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/uuuspp1468263334.jpg"
+    "image": "/images/dishes/Pad-See-Ew.jpg"
   },
   {
     "id": 67,
@@ -3036,7 +3034,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 30,
     "fat": 9,
     "fiber": 5,
-     "image": "/images/dishes/Ful-Medames.jpg"
+    "image": "/images/dishes/Ful-Medames.jpg"
   },
   {
     "id": 68,
@@ -3173,7 +3171,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-    "image": "/images/dishes/suya.jpg",
+    "image": "/images/dishes/Suya.jpg"
   },
   {
     "id": 71,
@@ -3219,7 +3217,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 30,
     "fat": 9,
     "fiber": 5,
-   "image": "/images/dishes/Larb.jpg"
+    "image": "/images/dishes/Larb.jpg"
   },
   {
     "id": 72,
@@ -3265,7 +3263,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 63,
     "fat": 20,
     "fiber": 5,
-    "image": "/images/dishes/cornish-pasty.jpg"
+    "image": "/images/dishes/Cornish-Pasty.jpg"
   },
   {
     "id": 73,
@@ -3312,7 +3310,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/h68o161782679437.jpg"
+    "image": "/images/dishes/Açaí-Bowl.jpg"
   },
   {
     "id": 74,
@@ -3362,7 +3360,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 60,
     "fat": 19,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/ip5xtp1769779958.jpg"
+    "image": "/images/dishes/Ramen.jpg"
   },
   {
     "id": 75,
@@ -3409,7 +3407,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 32,
     "fat": 10,
     "fiber": 5,
-  "image": "/images/dishes/Thieboudienne.jpg",
+    "image": "/images/dishes/Thieboudienne.jpg"
   },
   {
     "id": 76,
@@ -3463,7 +3461,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 36,
     "fat": 11,
     "fiber": 5,
-    "image": "/images/dishes/mafe.jpg"
+    "image": "/images/dishes/Mafe.jpg"
   },
   {
     "id": 77,
@@ -3510,7 +3508,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 40,
     "fat": 12,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1665400808116-f0e6339b7e9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxZYXNzYSUyMENoaWNrZW4lMjBTZW5lZ2FsfGVufDB8MHx8fDE3ODI2OTM5NjV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Yassa-Chicken.jpg"
   },
   {
     "id": 78,
@@ -3651,7 +3649,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 52,
     "fat": 16,
     "fiber": 5,
-     "image": "/images/dishes/Banku-and-Tilapia.jpg"
+    "image": "/images/dishes/Banku-and-Tilapia.jpg"
   },
   {
     "id": 81,
@@ -3691,9 +3689,9 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 56,
     "fat": 18,
     "fiber": 5,
-     "image": "/images/dishes/Red-Red.jpg"
-        },
-    {
+    "image": "/images/dishes/Red-Red.jpg"
+  },
+  {
     "id": 82,
     "name": "Kenkey and Fish",
     "country": "Ghana",
@@ -3737,7 +3735,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 60,
     "fat": 19,
     "fiber": 5,
- "image": "/images/dishes/Kenkey-and-Fish.jpg"
+    "image": "/images/dishes/Kenkey-and-Fish.jpg"
   },
   {
     "id": 83,
@@ -3784,7 +3782,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 65,
     "fat": 20,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/4er7mj1598733193.jpg"
+    "image": "/images/dishes/Koshari.jpg"
   },
   {
     "id": 84,
@@ -3871,7 +3869,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 73,
     "fat": 23,
     "fiber": 5,
-   "image": "/images/dishes/Mahshi.jpg",
+    "image": "/images/dishes/Mahshi.jpg"
   },
   {
     "id": 86,
@@ -3911,7 +3909,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 77,
     "fat": 24,
     "fiber": 5,
-   "image": "/images/dishes/Taameya.jpg"
+    "image": "/images/dishes/Taameya.jpg"
   },
   {
     "id": 87,
@@ -3989,7 +3987,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 25,
     "fat": 8,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/lqampv1762325397.jpg"
+    "image": "/images/dishes/Nyama-Choma.jpg"
   },
   {
     "id": 89,
@@ -4036,7 +4034,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 30,
     "fat": 9,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/cr2kyr1763793839.jpg"
+    "image": "/images/dishes/Pilau.jpg"
   },
   {
     "id": 90,
@@ -4129,7 +4127,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 38,
     "fat": 12,
     "fiber": 5,
-    "image": "/images/dishes/matoke.jpg"
+    "image": "/images/dishes/Matoke.jpg"
   },
   {
     "id": 92,
@@ -4175,7 +4173,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 42,
     "fat": 13,
     "fiber": 5,
-    "image": "/images/dishes/rolex.jpg"
+    "image": "/images/dishes/Rolex.jpg"
   },
   {
     "id": 93,
@@ -4214,7 +4212,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 46,
     "fat": 14,
     "fiber": 5,
-    "image": "/images/dishes/efo-riro.jpg"
+    "image": "/images/dishes/Efo-Riro.jpg"
   },
   {
     "id": 94,
@@ -4300,7 +4298,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 54,
     "fat": 17,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1665332195309-9d75071138f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxNb2klMjBNb2klMjBOaWdlcmlhfGVufDB8MHx8fDE3ODI2OTUyMzh8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Moi-Moi.jpg"
   },
   {
     "id": 96,
@@ -4354,7 +4352,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 58,
     "fat": 18,
     "fiber": 5,
-    "image": "/images/dishes/ofada-rice.jpg"
+    "image": "/images/dishes/Ofada-Rice.jpg"
   },
   {
     "id": 97,
@@ -4393,7 +4391,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 62,
     "fat": 19,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1673465580365-b96bef916770?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxQb3VuZGVkJTIwWWFtJTIwYW5kJTIwTnNhbGElMjBOaWdlcmlhJTIwcmVjaXBlfGVufDB8MHx8fDE3ODI2OTUyNDF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Pounded-Yam-and-Nsala.jpg"
   },
   {
     "id": 98,
@@ -4447,7 +4445,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 66,
     "fat": 21,
     "fiber": 5,
-    "image": "/images/dishes/Bunny-Chow.jpg",
+    "image": "/images/dishes/Bunny-Chow.jpg"
   },
   {
     "id": 99,
@@ -4494,7 +4492,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 70,
     "fat": 22,
     "fiber": 5,
-    "image": "/images/dishes/Boerewors.jpg"
+    "image": "/images/dishes/Boerewors-Roll.jpg"
   },
   {
     "id": 100,
@@ -4788,7 +4786,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 35,
     "fat": 11,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/2dsltq1560461468.jpg"
+    "image": "/images/dishes/Brik.jpg"
   },
   {
     "id": 106,
@@ -4834,7 +4832,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 39,
     "fat": 12,
     "fiber": 5,
-   "image": "/images/dishes/Shakshouka-Tunisienne.jpg"
+    "image": "/images/dishes/Shakshouka-Tunisienne.jpg"
   },
   {
     "id": 107,
@@ -4941,7 +4939,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 47,
     "fat": 15,
     "fiber": 5,
-    "image": "/images/dishes/Doro-Wa.jpg"
+    "image": "/images/dishes/Doro-Wat.jpg"
   },
   {
     "id": 109,
@@ -5113,7 +5111,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 64,
     "fat": 20,
     "fiber": 5,
-    "image": "/images/dishes/sambusa.jpg"
+    "image": "/images/dishes/Sambusa.jpg"
   },
   {
     "id": 113,
@@ -5239,7 +5237,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 76,
     "fat": 24,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxOZG9sZSUyMGRpc2h8ZW58MHwwfHx8MTc4MjY5ODgyOXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Ndole.jpg"
   },
   {
     "id": 116,
@@ -5340,7 +5338,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 25,
     "fat": 8,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1603496987351-f84a3ba5ec85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxNb2FtYmUlMjBDaGlja2VuJTIwcmVjaXBlfGVufDB8MHx8fDE3ODI2OTg4MzR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Moambe-Chicken.jpg"
   },
   {
     "id": 118,
@@ -5387,7 +5385,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 29,
     "fat": 9,
     "fiber": 5,
-    "image": "/images/dishes/romazava.jpg"
+    "image": "/images/dishes/Romazava.jpg"
   },
   {
     "id": 119,
@@ -5441,7 +5439,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 33,
     "fat": 10,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1597593361791-f5d9717e332d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxSYXZpdG90byUyMHJlY2lwZXxlbnwwfDB8fHwxNzgyNjk4ODM5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Ravitoto.jpg"
   },
   {
     "id": 120,
@@ -5488,7 +5486,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 37,
     "fat": 11,
     "fiber": 5,
-     "image": "/images/dishes/Rougaille-Saucisse.jpg"
+    "image": "/images/dishes/Rougaille-Saucisse.jpg"
   },
   {
     "id": 121,
@@ -5535,7 +5533,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-   "image": "/images/dishes/Dholl-Puri.jpg"
+    "image": "/images/dishes/Dholl-Puri.jpg"
   },
   {
     "id": 122,
@@ -5668,7 +5666,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 53,
     "fat": 17,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxTYWR6YSUyMGFuZCUyMFN0ZXd8ZW58MHwwfHx8MTc4MjY4NDAwNXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Sadza-and-Stew.jpg"
   },
   {
     "id": 125,
@@ -5714,7 +5712,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 57,
     "fat": 18,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1678059466227-d19beeff7557?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxLYXBlbnRhJTIwWmltYmFid2UlMjByZWNpcGV8ZW58MHwwfHx8MTc4MjY4NDAwOXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Kapenta.jpg"
   },
   {
     "id": 126,
@@ -5761,7 +5759,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 61,
     "fat": 19,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1551041777-575d3855ca71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxLYWJzYSUyMFNhdWRpJTIwQXJhYmlhfGVufDB8MHx8fDE3ODI2ODQwMTB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Kabsa.jpg"
   },
   {
     "id": 127,
@@ -5869,7 +5867,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 69,
     "fat": 22,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1643019237376-ef702ddfe654?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxNYW5zYWYlMjBKb3JkYW4lMjByZWNpcGV8ZW58MHwwfHx8MTc4MjY4NDAxNXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Mansaf.jpg"
   },
   {
     "id": 129,
@@ -6069,7 +6067,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 26,
     "fat": 8,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1674315526518-f8891c4a8b70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxGYXR0b3VzaCUyMGRpc2h8ZW58MHwwfHx8MTc4MjY5ODg1MHww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Fattoush.jpg"
   },
   {
     "id": 133,
@@ -6109,7 +6107,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 30,
     "fat": 9,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1651509246071-0cdc4bb5e1da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxUYWJib3VsZWglMjBMZWJhbm9ufGVufDB8MHx8fDE3ODI2OTg4NTF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Tabbouleh.jpg"
   },
   {
     "id": 134,
@@ -6208,7 +6206,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 39,
     "fat": 12,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/lgmnff1763789847.jpg"
+    "image": "/images/dishes/Kofta.jpg"
   },
   {
     "id": 136,
@@ -6254,7 +6252,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 43,
     "fat": 13,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/tqd3ac1763786065.jpg"
+    "image": "/images/dishes/Lahmacun.jpg"
   },
   {
     "id": 137,
@@ -6307,7 +6305,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 47,
     "fat": 15,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/ypuxtw1511297463.jpg"
+    "image": "/images/dishes/Menemen.jpg"
   },
   {
     "id": 138,
@@ -6347,7 +6345,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 51,
     "fat": 16,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/7vdtqi1780160088.jpg"
+    "image": "/images/dishes/Dolma.jpg"
   },
   {
     "id": 139,
@@ -6400,7 +6398,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 55,
     "fat": 17,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/ypuxtw1511297463.jpg"
+    "image": "/images/dishes/Iskender-Kebab.jpg"
   },
   {
     "id": 140,
@@ -6447,7 +6445,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 59,
     "fat": 18,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1604741333810-0ef6017256da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxHaG9ybWVoJTIwU2FiemklMjBJcmFufGVufDB8MHx8fDE3ODI2OTg4NTR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Ghormeh-Sabzi.jpg"
   },
   {
     "id": 141,
@@ -6494,7 +6492,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 63,
     "fat": 20,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Fesenjan.jpg"
   },
   {
     "id": 142,
@@ -6548,7 +6546,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 67,
     "fat": 21,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Tahdig.jpg"
   },
   {
     "id": 143,
@@ -6601,7 +6599,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 71,
     "fat": 22,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Kuku-Sabzi.jpg"
   },
   {
     "id": 144,
@@ -6648,7 +6646,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 75,
     "fat": 24,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Machboos.jpg"
   },
   {
     "id": 145,
@@ -6694,7 +6692,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 79,
     "fat": 25,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Harees.jpg"
   },
   {
     "id": 146,
@@ -6741,7 +6739,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 24,
     "fat": 7,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Luqaimat.jpg"
   },
   {
     "id": 147,
@@ -6788,7 +6786,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 28,
     "fat": 9,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/oe8rg51699014028.jpg"
+    "image": "/images/dishes/Samak-Mashwi.jpg"
   },
   {
     "id": 148,
@@ -6835,7 +6833,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 32,
     "fat": 10,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Bahraini-Machboos.jpg"
   },
   {
     "id": 149,
@@ -6882,7 +6880,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 36,
     "fat": 11,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Quzi.jpg"
   },
   {
     "id": 150,
@@ -6936,7 +6934,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 40,
     "fat": 12,
     "fiber": 5,
-    "image": "/images/dishes/kubba-halab.jpg"
+    "image": "/images/dishes/Kubba-Halab.jpg"
   },
   {
     "id": 151,
@@ -6975,7 +6973,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 44,
     "fat": 14,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/54xzk31760524666.jpg"
+    "image": "/images/dishes/Kibbeh-Bil-Sanieh.jpg"
   },
   {
     "id": 152,
@@ -7022,7 +7020,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 48,
     "fat": 15,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/54xzk31760524666.jpg"
+    "image": "/images/dishes/Muhammara.jpg"
   },
   {
     "id": 153,
@@ -7075,7 +7073,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 52,
     "fat": 16,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Khao-Soi.jpg"
   },
   {
     "id": 154,
@@ -7114,7 +7112,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 56,
     "fat": 18,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Som-Tam.jpg"
   },
   {
     "id": 155,
@@ -7215,7 +7213,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 65,
     "fat": 20,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Gado-Gado.jpg"
   },
   {
     "id": 157,
@@ -7276,7 +7274,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 69,
     "fat": 22,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Soto-Ayam.jpg"
   },
   {
     "id": 158,
@@ -7337,7 +7335,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 73,
     "fat": 23,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/xquakq1619787532.jpg"
+    "image": "/images/dishes/Mee-Goreng.jpg"
   },
   {
     "id": 159,
@@ -7391,7 +7389,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 77,
     "fat": 24,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/wai9bw1619788844.jpg"
+    "image": "/images/dishes/Nasi-Lemak.jpg"
   },
   {
     "id": 160,
@@ -7452,7 +7450,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 81,
     "fat": 25,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Char-Kway-Teow.jpg"
   },
   {
     "id": 161,
@@ -7499,7 +7497,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 26,
     "fat": 8,
     "fiber": 5,
-    "image": "/images/dishes/hainanese-wenchang-chicken.jpg"
+    "image": "/images/dishes/Hainanese-Chicken-Rice.jpg"
   },
   {
     "id": 162,
@@ -7552,7 +7550,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 30,
     "fat": 9,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/f3cxnc1765656994.jpg"
+    "image": "/images/dishes/Chili-Crab.jpg"
   },
   {
     "id": 163,
@@ -7599,7 +7597,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 34,
     "fat": 10,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/f3cxnc1765656994.jpg"
+    "image": "/images/dishes/Chicken-Satay.jpg"
   },
   {
     "id": 164,
@@ -7646,7 +7644,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 38,
     "fat": 12,
     "fiber": 5,
-   "image": "/images/dishes/Chicken-Adobo.jpg"
+    "image": "/images/dishes/Chicken-Adobo.jpg"
   },
   {
     "id": 165,
@@ -7753,7 +7751,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 46,
     "fat": 14,
     "fiber": 5,
-    "image": "/images/dishes/Pancit.jpg"
+    "image": "/images/dishes/Pancit-Canton.jpg"
   },
   {
     "id": 167,
@@ -7800,7 +7798,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 50,
     "fat": 16,
     "fiber": 5,
-  "image": "/images/dishes/Lechon-Kawali.jpg"
+    "image": "/images/dishes/Lechon-Kawali.jpg"
   },
   {
     "id": 168,
@@ -7908,7 +7906,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 58,
     "fat": 18,
     "fiber": 5,
-   "image": "/images/dishes/Goi-Cuon.jpg"
+    "image": "/images/dishes/Goi-Cuon.jpg"
   },
   {
     "id": 170,
@@ -8016,7 +8014,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 66,
     "fat": 21,
     "fiber": 5,
-   "image": "/images/dishes/Mi-Quang.jpg"
+    "image": "/images/dishes/Mi-Quang.jpg"
   },
   {
     "id": 172,
@@ -8102,7 +8100,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 74,
     "fat": 23,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Xiao-Long-Bao.jpg"
   },
   {
     "id": 174,
@@ -8202,7 +8200,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 83,
     "fat": 26,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Dan-Dan-Noodles.jpg"
   },
   {
     "id": 176,
@@ -8310,7 +8308,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 31,
     "fat": 10,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/lwsnkl1604181187.jpg"
+    "image": "/images/dishes/Tonkatsu.jpg"
   },
   {
     "id": 178,
@@ -8449,7 +8447,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 44,
     "fat": 14,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/wrustq1511475474.jpg"
+    "image": "/images/dishes/Udon.jpg"
   },
   {
     "id": 181,
@@ -8549,7 +8547,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 52,
     "fat": 16,
     "fiber": 5,
-  "image": "/images/dishes/Takoyaki.jpg"
+    "image": "/images/dishes/Takoyaki.jpg"
   },
   {
     "id": 183,
@@ -8595,7 +8593,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 56,
     "fat": 17,
     "fiber": 5,
-    "image": "/images/dishes/japchae.jpg"
+    "image": "/images/dishes/Japchae.jpg"
   },
   {
     "id": 184,
@@ -8649,7 +8647,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 60,
     "fat": 19,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Tteokbokki.jpg"
   },
   {
     "id": 185,
@@ -8696,7 +8694,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 64,
     "fat": 20,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Samgyeopsal.jpg"
   },
   {
     "id": 186,
@@ -8750,7 +8748,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 68,
     "fat": 21,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Kimbap.jpg"
   },
   {
     "id": 187,
@@ -8790,7 +8788,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 72,
     "fat": 23,
     "fiber": 5,
-   "image": "/images/dishes/Chana-Masala.jpg"
+    "image": "/images/dishes/Chana-Masala.jpg"
   },
   {
     "id": 188,
@@ -8890,7 +8888,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 80,
     "fat": 25,
     "fiber": 5,
-  "image": "/images/dishes/Rogan-Josh.jpg"
+    "image": "/images/dishes/Rogan-Josh.jpg"
   },
   {
     "id": 190,
@@ -8970,7 +8968,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 29,
     "fat": 9,
     "fiber": 5,
-   "image": "/images/dishes/Aloo-Gobi.jpg"
+    "image": "/images/dishes/Aloo-Gobi.jpg"
   },
   {
     "id": 192,
@@ -9031,7 +9029,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 33,
     "fat": 10,
     "fiber": 5,
-  "image": "/images/dishes/Pav-Bhaji.jpg"
+    "image": "/images/dishes/Pav-Bhaji.jpg"
   },
   {
     "id": 193,
@@ -9132,7 +9130,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Haleem.jpg"
   },
   {
     "id": 195,
@@ -9178,7 +9176,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 45,
     "fat": 14,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Nihari.jpg"
   },
   {
     "id": 196,
@@ -9224,7 +9222,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 49,
     "fat": 15,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Chapli-Kebab.jpg"
   },
   {
     "id": 197,
@@ -9263,7 +9261,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 53,
     "fat": 17,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Chicken-Karahi.jpg"
   },
   {
     "id": 198,
@@ -9396,7 +9394,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 66,
     "fat": 21,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Thukpa.jpg"
   },
   {
     "id": 201,
@@ -9450,7 +9448,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 70,
     "fat": 22,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Ema-Datshi.jpg"
   },
   {
     "id": 202,
@@ -9496,7 +9494,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 74,
     "fat": 23,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Kottu-Roti.jpg"
   },
   {
     "id": 203,
@@ -9557,7 +9555,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 78,
     "fat": 24,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Hoppers.jpg"
   },
   {
     "id": 204,
@@ -9604,7 +9602,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 82,
     "fat": 26,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Fish-Ambul-Thiyal.jpg"
   },
   {
     "id": 205,
@@ -9665,7 +9663,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 26,
     "fat": 8,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Mohinga.jpg"
   },
   {
     "id": 206,
@@ -9705,7 +9703,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 31,
     "fat": 9,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Tea-Leaf-Salad.jpg"
   },
   {
     "id": 207,
@@ -9752,7 +9750,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 35,
     "fat": 11,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/kos9av1699014767.jpg"
+    "image": "/images/dishes/Plov.jpg"
   },
   {
     "id": 208,
@@ -9798,7 +9796,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 39,
     "fat": 12,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Lagman.jpg"
   },
   {
     "id": 209,
@@ -9852,7 +9850,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 43,
     "fat": 13,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Beshbarmak.jpg"
   },
   {
     "id": 210,
@@ -9905,7 +9903,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 47,
     "fat": 15,
     "fiber": 5,
-  "image": "/images/dishes/Manti.jpg"
+    "image": "/images/dishes/Manti.jpg"
   },
   {
     "id": 211,
@@ -9951,7 +9949,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 51,
     "fat": 16,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/rvxxuy1468312893.jpg"
+    "image": "/images/dishes/Lasagna.jpg"
   },
   {
     "id": 212,
@@ -9990,7 +9988,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 55,
     "fat": 17,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/wwuqvt1487345467.jpg"
+    "image": "/images/dishes/Osso-Buco.jpg"
   },
   {
     "id": 213,
@@ -10098,7 +10096,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 63,
     "fat": 20,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/xrrwpx1487347049.jpg"
+    "image": "/images/dishes/Ribollita.jpg"
   },
   {
     "id": 215,
@@ -10152,7 +10150,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 67,
     "fat": 21,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Pesto-Genovese-Pasta.jpg"
   },
   {
     "id": 216,
@@ -10213,7 +10211,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 71,
     "fat": 22,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Raclette.jpg"
   },
   {
     "id": 217,
@@ -10267,7 +10265,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 75,
     "fat": 24,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Fondue.jpg"
   },
   {
     "id": 218,
@@ -10321,7 +10319,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 79,
     "fat": 25,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Rosti.jpg"
   },
   {
     "id": 219,
@@ -10374,7 +10372,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 24,
     "fat": 7,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1701197159530-80a188e34dfc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxRdWljaGUlMjBMb3JyYWluZXxlbnwwfDB8fHwxNzgyNjgzNDM4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Quiche-Lorraine.jpg"
   },
   {
     "id": 220,
@@ -10628,7 +10626,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 44,
     "fat": 14,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1639669794539-952631b44515?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxUb3J0aWxsYSUyMEVzcGFub2xhJTIwU3BhaW4lMjBmb29kfGVufDB8MHx8fDE3ODI2ODM0NDF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Tortilla-Espanola.jpg"
   },
   {
     "id": 225,
@@ -10668,7 +10666,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 48,
     "fat": 15,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/bvg8sn1763298713.jpg"
+    "image": "/images/dishes/Patatas-Bravas.jpg"
   },
   {
     "id": 226,
@@ -10714,7 +10712,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 53,
     "fat": 16,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/ze8uwg1763196123.jpg"
+    "image": "/images/dishes/Gambas-al-Ajillo.jpg"
   },
   {
     "id": 227,
@@ -10761,7 +10759,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 57,
     "fat": 18,
     "fiber": 5,
-    "image": "/images/dishes/fabada-asturiana.jpg"
+    "image": "/images/dishes/Fabada-Asturiana.jpg"
   },
   {
     "id": 228,
@@ -10808,7 +10806,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 61,
     "fat": 19,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/nxnny61763250596.jpg"
+    "image": "/images/dishes/Churros.jpg"
   },
   {
     "id": 229,
@@ -10861,7 +10859,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 65,
     "fat": 20,
     "fiber": 5,
-    "image": "/images/dishes/francesinha.jpg"
+    "image": "/images/dishes/Francesinha.jpg"
   },
   {
     "id": 230,
@@ -10955,7 +10953,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 73,
     "fat": 23,
     "fiber": 5,
-    "image": "/images/dishes/Caldo-Verde.jpg",
+    "image": "/images/dishes/Caldo-Verde.jpg"
   },
   {
     "id": 232,
@@ -11147,7 +11145,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 30,
     "fat": 9,
     "fiber": 5,
-    "image": "/images/dishes/spatzle.jpg"
+    "image": "/images/dishes/Spatzle.jpg"
   },
   {
     "id": 236,
@@ -11240,7 +11238,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 38,
     "fat": 12,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/w8umt11583268117.jpg"
+    "image": "/images/dishes/Shepherds-Pie.jpg"
   },
   {
     "id": 238,
@@ -11287,7 +11285,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 42,
     "fat": 13,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/sxxpst1468569714.jpg"
+    "image": "/images/dishes/Irish-Stew.jpg"
   },
   {
     "id": 239,
@@ -11348,7 +11346,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 46,
     "fat": 14,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/naqyel1608588563.jpg"
+    "image": "/images/dishes/Boxty.jpg"
   },
   {
     "id": 240,
@@ -11387,7 +11385,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 50,
     "fat": 16,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1745194807527-4d7ea2e361ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxIYWdnaXMlMjBTY290bGFuZHxlbnwwfDB8fHwxNzgyNjgzNDUyfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Haggis.jpg"
   },
   {
     "id": 241,
@@ -11440,7 +11438,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 54,
     "fat": 17,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Scotch-Eggs.jpg"
   },
   {
     "id": 242,
@@ -11493,7 +11491,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 58,
     "fat": 18,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/ytuvwr1503070420.jpg"
+    "image": "/images/dishes/Toad-in-the-Hole.jpg"
   },
   {
     "id": 243,
@@ -11546,7 +11544,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 62,
     "fat": 19,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/vvpprx1487325699.jpg"
+    "image": "/images/dishes/Beef-Wellington.jpg"
   },
   {
     "id": 244,
@@ -11599,7 +11597,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 66,
     "fat": 21,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Smorgastarta.jpg"
   },
   {
     "id": 245,
@@ -11660,7 +11658,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 70,
     "fat": 22,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Swedish-Meatballs.jpg"
   },
   {
     "id": 246,
@@ -11706,7 +11704,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 75,
     "fat": 23,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Gravlax.jpg"
   },
   {
     "id": 247,
@@ -11767,7 +11765,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 79,
     "fat": 25,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Kottbullar.jpg"
   },
   {
     "id": 248,
@@ -11828,7 +11826,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 83,
     "fat": 26,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Frikadeller.jpg"
   },
   {
     "id": 249,
@@ -11881,7 +11879,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 27,
     "fat": 8,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/8a8fu01762772651.jpg"
+    "image": "/images/dishes/Smorrebrod.jpg"
   },
   {
     "id": 250,
@@ -11935,7 +11933,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 31,
     "fat": 10,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/raqjbj1762773035.jpg"
+    "image": "/images/dishes/Fiskesuppe.jpg"
   },
   {
     "id": 251,
@@ -11989,7 +11987,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 35,
     "fat": 11,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Lutefisk.jpg"
   },
   {
     "id": 252,
@@ -12050,7 +12048,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 40,
     "fat": 12,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Karjalanpiirakka.jpg"
   },
   {
     "id": 253,
@@ -12104,7 +12102,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 44,
     "fat": 14,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Lohikeitto.jpg"
   },
   {
     "id": 254,
@@ -12158,7 +12156,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 48,
     "fat": 15,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Moussaka-Cypriot.jpg"
   },
   {
     "id": 255,
@@ -12204,7 +12202,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 52,
     "fat": 16,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/rjhf741585564676.jpg"
+    "image": "/images/dishes/Souvla.jpg"
   },
   {
     "id": 256,
@@ -12257,7 +12255,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 56,
     "fat": 17,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/vc08jn1628769553.jpg"
+    "image": "/images/dishes/Cevapi.jpg"
   },
   {
     "id": 257,
@@ -12310,7 +12308,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 60,
     "fat": 19,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/tkxquw1628771028.jpg"
+    "image": "/images/dishes/Burek.jpg"
   },
   {
     "id": 258,
@@ -12357,7 +12355,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 64,
     "fat": 20,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Sarma.jpg"
   },
   {
     "id": 259,
@@ -12410,7 +12408,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 68,
     "fat": 21,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Ajvar.jpg"
   },
   {
     "id": 260,
@@ -12456,7 +12454,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 72,
     "fat": 23,
     "fiber": 5,
-   "image": "/images/dishes/Ciorba-de-Burta.jpg"
+    "image": "/images/dishes/Ciorba-de-Burta.jpg"
   },
   {
     "id": 261,
@@ -12510,7 +12508,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 76,
     "fat": 24,
     "fiber": 5,
-  "image": "/images/dishes/Sarmale.jpg"
+    "image": "/images/dishes/Sarmale.jpg"
   },
   {
     "id": 262,
@@ -12563,7 +12561,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 80,
     "fat": 25,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Langos.jpg"
   },
   {
     "id": 263,
@@ -12616,7 +12614,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 25,
     "fat": 8,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Chicken-Paprikash.jpg"
   },
   {
     "id": 264,
@@ -12669,7 +12667,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 29,
     "fat": 9,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/kwmdk41764120884.jpg"
+    "image": "/images/dishes/Piernik.jpg"
   },
   {
     "id": 265,
@@ -12708,7 +12706,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 33,
     "fat": 10,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/md8w601593348504.jpg"
+    "image": "/images/dishes/Bigos.jpg"
   },
   {
     "id": 266,
@@ -12754,7 +12752,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 37,
     "fat": 11,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Zapiekanka.jpg"
   },
   {
     "id": 267,
@@ -12807,7 +12805,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Syrniki.jpg"
   },
   {
     "id": 268,
@@ -12860,7 +12858,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 45,
     "fat": 14,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Chicken-Kyiv.jpg"
   },
   {
     "id": 269,
@@ -12921,7 +12919,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 49,
     "fat": 15,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Draniki.jpg"
   },
   {
     "id": 270,
@@ -12975,7 +12973,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 53,
     "fat": 17,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/ebvuir1699013665.jpg"
+    "image": "/images/dishes/Olivier-Salad.jpg"
   },
   {
     "id": 271,
@@ -13028,7 +13026,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 57,
     "fat": 18,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Pelmeni.jpg"
   },
   {
     "id": 272,
@@ -13081,7 +13079,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 62,
     "fat": 19,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Khachapuri.jpg"
   },
   {
     "id": 273,
@@ -13127,7 +13125,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 66,
     "fat": 21,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Khinkali.jpg"
   },
   {
     "id": 274,
@@ -13167,7 +13165,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 70,
     "fat": 22,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Lobio.jpg"
   },
   {
     "id": 275,
@@ -13274,7 +13272,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 78,
     "fat": 24,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/6awyvm1782685205.jpg"
+    "image": "/images/dishes/Banitsa.jpg"
   },
   {
     "id": 277,
@@ -13321,7 +13319,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 82,
     "fat": 26,
     "fiber": 5,
-   "image": "/images/dishes/Gumbo.jpg"
+    "image": "/images/dishes/Gumbo.jpg"
   },
   {
     "id": 278,
@@ -13366,7 +13364,6 @@ window.WORLD_MEALS_DATABASE = [
     },
     "protein": 22,
     "carbs": 27,
-    
     "fat": 8,
     "fiber": 5,
     "image": "/images/dishes/Jambalaya.jpg"
@@ -13476,7 +13473,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 35,
     "fat": 11,
     "fiber": 5,
-   "image": "/images/dishes/Lobster-Roll.jpg"
+    "image": "/images/dishes/Lobster-Roll.jpg"
   },
   {
     "id": 281,
@@ -13529,7 +13526,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 39,
     "fat": 12,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/qrqywr1503066605.jpg"
+    "image": "/images/dishes/Mac-and-Cheese.jpg"
   },
   {
     "id": 282,
@@ -13568,7 +13565,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 43,
     "fat": 13,
     "fiber": 5,
-   "image": "/images/dishes/BBQ-Ribs.jpg"
+    "image": "/images/dishes/BBQ-Ribs.jpg"
   },
   {
     "id": 283,
@@ -13682,7 +13679,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 51,
     "fat": 16,
     "fiber": 5,
-   "image": "/images/dishes/Fry-Bread-Tacos.jpg"
+    "image": "/images/dishes/Fry-Bread-Tacos.jpg"
   },
   {
     "id": 285,
@@ -13782,7 +13779,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 59,
     "fat": 18,
     "fiber": 5,
-  "image": "/images/dishes/Butter-Tarts.jpg"
+    "image": "/images/dishes/Butter-Tarts.jpg"
   },
   {
     "id": 287,
@@ -13875,7 +13872,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 67,
     "fat": 21,
     "fiber": 5,
-  "image": "/images/dishes/Maple-Salmon.jpg"
+    "image": "/images/dishes/Maple-Salmon.jpg"
   },
   {
     "id": 289,
@@ -14014,7 +14011,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 79,
     "fat": 25,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Pozole-Rojo.jpg"
   },
   {
     "id": 292,
@@ -14161,7 +14158,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 32,
     "fat": 10,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Cochinita-Pibil.jpg"
   },
   {
     "id": 295,
@@ -14309,7 +14306,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 44,
     "fat": 14,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1630527910939-275499aa3650?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxHYWxsbyUyMFBpbnRvJTIwQ29zdGElMjBSaWNhJTIwcmVjaXBlfGVufDB8MHx8fDE3ODI3MDIwMDR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Gallo-Pinto.jpg"
   },
   {
     "id": 298,
@@ -14403,7 +14400,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 53,
     "fat": 16,
     "fiber": 5,
-    
+    "image": "/images/dishes/Ropa-Vieja.jpg"
   },
   {
     "id": 300,
@@ -14443,7 +14440,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 57,
     "fat": 18,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1583586507353-61a65fa3d56d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxNb3JvcyUyMHklMjBDcmlzdGlhbm9zJTIwQ3ViYXxlbnwwfDB8fHwxNzgyNzAyMDA3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Moros-y-Cristianos.jpg"
   },
   {
     "id": 301,
@@ -14483,7 +14480,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 61,
     "fat": 19,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/z1hz7z1765316430.jpg"
+    "image": "/images/dishes/Tostones.jpg"
   },
   {
     "id": 302,
@@ -14615,7 +14612,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 73,
     "fat": 23,
     "fiber": 5,
-    "image": "/images/dishes/Arroz-con-Gandulesjpg"
+    "image": "/images/dishes/Callaloo.jpg"
   },
   {
     "id": 305,
@@ -14655,7 +14652,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 77,
     "fat": 24,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1660848301580-cc851b8a6ad7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxEb3VibGVzJTIwVHJpbmlkYWQlMjBhbmQlMjBUb2JhZ298ZW58MHwwfHx8MTc4MjcwMjAwOXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Doubles.jpg"
   },
   {
     "id": 306,
@@ -14702,7 +14699,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 81,
     "fat": 25,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/uc9qp11764796575.jpg"
+    "image": "/images/dishes/Curry-Goat.jpg"
   },
   {
     "id": 307,
@@ -14741,7 +14738,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 26,
     "fat": 8,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/uc9qp11764796575.jpg"
+    "image": "/images/dishes/Ackee-and-Saltfish.jpg"
   },
   {
     "id": 308,
@@ -14788,7 +14785,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 30,
     "fat": 9,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1574465636384-0f07d33c8e39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxIYWl0aWFuJTIwR3Jpb3QlMjBIYWl0aXxlbnwwfDB8fHwxNzgyNzAyMDExfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Haitian-Griot.jpg"
   },
   {
     "id": 309,
@@ -14842,7 +14839,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 34,
     "fat": 10,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1763048443535-1243379234e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxTb3VwJTIwSm91bW91fGVufDB8MHx8fDE3ODI3MDIwMTR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Soup-Joumou.jpg"
   },
   {
     "id": 310,
@@ -14896,7 +14893,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 38,
     "fat": 12,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1621794506117-4db8e50c2bb1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxQZWxhdSUyMFRyaW5pZGFkJTIwYW5kJTIwVG9iYWdvfGVufDB8MHx8fDE3ODI3MDIwMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Pelau.jpg"
   },
   {
     "id": 311,
@@ -14950,7 +14947,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 42,
     "fat": 13,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/3hcy191764376285.jpg"
+    "image": "/images/dishes/Arepas.jpg"
   },
   {
     "id": 312,
@@ -14997,7 +14994,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 46,
     "fat": 14,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/3hcy191764376285.jpg"
+    "image": "/images/dishes/Pabellon-Criollo.jpg"
   },
   {
     "id": 313,
@@ -15036,7 +15033,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 50,
     "fat": 16,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1722271551043-fef6d612097d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxIYWxsYWNhcyUyMFZlbmV6dWVsYXxlbnwwfDB8fHwxNzgyNzAyMDE3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Hallacas.jpg"
   },
   {
     "id": 314,
@@ -15090,7 +15087,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 54,
     "fat": 17,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1532443603613-61fa154742cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxBamlhY28lMjBDb2xvbWJpYXxlbnwwfDB8fHwxNzgyNzAyMDE4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Ajiaco.jpg"
   },
   {
     "id": 315,
@@ -15144,7 +15141,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 58,
     "fat": 18,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1532443603613-61fa154742cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxCYW5kZWphJTIwUGFpc2ElMjBDb2xvbWJpYXxlbnwwfDB8fHwxNzgyNzAyMDE5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Bandeja-Paisa.jpg"
   },
   {
     "id": 316,
@@ -15190,7 +15187,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 62,
     "fat": 20,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1644753787067-d62ae70f303d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxBcmVwYSUyMGRlJTIwSHVldm8lMjBDb2xvbWJpYXxlbnwwfDB8fHwxNzgyNzAyMDIxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Arepa-de-Huevo.jpg"
   },
   {
     "id": 317,
@@ -15237,7 +15234,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 66,
     "fat": 21,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1564394232860-52605aab6780?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxTZWNvJTIwZGUlMjBDaGl2byUyMEVjdWFkb3J8ZW58MHwwfHx8MTc4MjcwMjAyMnww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Seco-de-Chivo.jpg"
   },
   {
     "id": 318,
@@ -15291,7 +15288,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 71,
     "fat": 22,
     "fiber": 5,
-      "image": "/images/dishes/Lomo-Saltado.jpg"
+    "image": "/images/dishes/Llapingachos.jpg"
   },
   {
     "id": 319,
@@ -15338,7 +15335,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 75,
     "fat": 23,
     "fiber": 5,
-      "image": "/images/dishes/Lomo-Saltado.jpg"
+    "image": "/images/dishes/Lomo-Saltado.jpg"
   },
   {
     "id": 320,
@@ -15399,7 +15396,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 79,
     "fat": 25,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1535400875775-0269e7a919af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxBamklMjBkZSUyMEdhbGxpbmElMjBQZXJ1JTIwZm9vZHxlbnwwfDB8fHwxNzgyNzAyMDI2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Aji-de-Gallina.jpg"
   },
   {
     "id": 321,
@@ -15453,7 +15450,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 83,
     "fat": 26,
     "fiber": 5,
-      "image": "/images/dishes/Papa-a-la-Huancaina.jpg"
+    "image": "/images/dishes/Papa-a-la-Huancaina.jpg"
   },
   {
     "id": 322,
@@ -15507,7 +15504,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 27,
     "fat": 8,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1623606963687-84374f2baccd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxTYWx0ZW5hcyUyMEJvbGl2aWF8ZW58MHwwfHx8MTc4MjcwMjAyOXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Saltenas.jpg"
   },
   {
     "id": 323,
@@ -15568,7 +15565,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 32,
     "fat": 10,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1650700312125-f0dfe9063a42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxTaWxwYW5jaG8lMjBCb2xpdmlhfGVufDB8MHx8fDE3ODI3MDIwMzB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Silpancho.jpg"
   },
   {
     "id": 324,
@@ -15614,7 +15611,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 36,
     "fat": 11,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1721942893909-d3b59335bfdc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxTb3BhJTIwUGFyYWd1YXlhJTIwUGFyYWd1YXklMjBmb29kfGVufDB8MHx8fDE3ODI3MDIwMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Sopa-Paraguaya.jpg"
   },
   {
     "id": 325,
@@ -15660,7 +15657,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 40,
     "fat": 12,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1628448433960-e9d7b306dd9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDaGlwYSUyMFBhcmFndWF5fGVufDB8MHx8fDE3ODI3MDIwMzN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Chipa.jpg"
   },
   {
     "id": 326,
@@ -15706,7 +15703,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 44,
     "fat": 14,
     "fiber": 5,
-   "image": "/images/dishes/Asado.jpg"
+    "image": "/images/dishes/Asado.jpg"
   },
   {
     "id": 327,
@@ -15767,7 +15764,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 48,
     "fat": 15,
     "fiber": 5,
-   "image": "/images/dishes/Milanesa.jpg"
+    "image": "/images/dishes/Milanesa.jpg"
   },
   {
     "id": 328,
@@ -15814,7 +15811,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 52,
     "fat": 16,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/5sgsob1763196284.jpg"
+    "image": "/images/dishes/Locro.jpg"
   },
   {
     "id": 329,
@@ -15867,7 +15864,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 56,
     "fat": 17,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/n7qnkb1630444129.jpg"
+    "image": "/images/dishes/Chivito.jpg"
   },
   {
     "id": 330,
@@ -15921,7 +15918,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 60,
     "fat": 19,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/e2kcut1782591669.jpg"
+    "image": "/images/dishes/Moqueca.jpg"
   },
   {
     "id": 331,
@@ -15968,7 +15965,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 64,
     "fat": 20,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/xrxz7h1782592711.jpg"
+    "image": "/images/dishes/Feijoada.jpg"
   },
   {
     "id": 332,
@@ -16021,7 +16018,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 68,
     "fat": 21,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/sl7cr91782588539.jpg"
+    "image": "/images/dishes/Pao-de-Queijo.jpg"
   },
   {
     "id": 333,
@@ -16074,7 +16071,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 72,
     "fat": 23,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/h68o161782679437.jpg"
+    "image": "/images/dishes/Coxinha.jpg"
   },
   {
     "id": 334,
@@ -16120,7 +16117,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 76,
     "fat": 24,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/dg7tad1782588053.jpg"
+    "image": "/images/dishes/Brigadeiro.jpg"
   },
   {
     "id": 335,
@@ -16173,7 +16170,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 80,
     "fat": 25,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/h68o161782679437.jpg"
+    "image": "/images/dishes/Pastel.jpg"
   },
   {
     "id": 336,
@@ -16220,7 +16217,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 25,
     "fat": 8,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1695088224158-f07345e58940?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDdXJhbnRvJTIwQ2hpbGUlMjByZWNpcGV8ZW58MHwwfHx8MTc4MjcwMjAzNXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Curanto.jpg"
   },
   {
     "id": 337,
@@ -16266,7 +16263,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 29,
     "fat": 9,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1632929541783-b67da9cd462c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxQYXN0ZWwlMjBkZSUyMENob2NsbyUyMENoaWxlJTIwZm9vZHxlbnwwfDB8fHwxNzgyNzAyMDM2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Pastel-de-Choclo.jpg"
   },
   {
     "id": 338,
@@ -16313,7 +16310,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 33,
     "fat": 10,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1599987141071-f5810d32e21a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDb21wbGV0byUyMENoaWxlfGVufDB8MHx8fDE3ODI3MDIwMzh8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Completo.jpg"
   },
   {
     "id": 339,
@@ -16405,7 +16402,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-  "image": "/images/dishes/Lamington.jpg"
+    "image": "/images/dishes/Lamington.jpg"
   },
   {
     "id": 341,
@@ -16491,7 +16488,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 49,
     "fat": 15,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1702744754798-4a1d980b03e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxQYXZsb3ZhfGVufDB8MHx8fDE3ODI3MDIwNDJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Pavlova.jpg"
   },
   {
     "id": 343,
@@ -16538,7 +16535,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 54,
     "fat": 17,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1547314283-befb6cc5cf29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxIYW5naSUyME5ldyUyMFplYWxhbmR8ZW58MHwwfHx8MTc4MjcwMjA0M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Hangi.jpg"
   },
   {
     "id": 344,
@@ -16591,7 +16588,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 58,
     "fat": 18,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1761530571392-57a6a8906988?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxXaGl0ZWJhaXQlMjBGcml0dGVycyUyME5ldyUyMFplYWxhbmR8ZW58MHwwfHx8MTc4MjcwMjA0NXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Whitebait-Fritters.jpg"
   },
   {
     "id": 345,
@@ -16637,7 +16634,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 62,
     "fat": 19,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1556137063-79f1ed788b08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxLb2tvZGElMjBGaWppJTIwZm9vZHxlbnwwfDB8fHwxNzgyNzAyMDQ2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Kokoda.jpg"
   },
   {
     "id": 346,
@@ -16683,7 +16680,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 66,
     "fat": 21,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1556137063-79f1ed788b08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxMb3ZvJTIwRmlqaSUyMGZvb2R8ZW58MHwwfHx8MTc4MjcwMjA0OHww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Lovo.jpg"
   },
   {
     "id": 347,
@@ -16729,7 +16726,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 70,
     "fat": 22,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Palusami.jpg"
   },
   {
     "id": 348,
@@ -16775,7 +16772,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 74,
     "fat": 23,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Oka-Ia.jpg"
   },
   {
     "id": 349,
@@ -16821,7 +16818,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 78,
     "fat": 24,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Laplap.jpg"
   },
   {
     "id": 350,
@@ -16867,7 +16864,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 82,
     "fat": 26,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Poisson-Cru.jpg"
   },
   {
     "id": 351,
@@ -16906,7 +16903,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 27,
     "fat": 8,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Kelaguen.jpg"
   },
   {
     "id": 352,
@@ -16953,7 +16950,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 31,
     "fat": 9,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Chamorro-Red-Rice.jpg"
   },
   {
     "id": 353,
@@ -17000,7 +16997,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 35,
     "fat": 11,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Satay-Lilit.jpg"
   },
   {
     "id": 354,
@@ -17047,7 +17044,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 39,
     "fat": 12,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Ayam-Betutu.jpg"
   },
   {
     "id": 355,
@@ -17087,7 +17084,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 43,
     "fat": 13,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Rujak.jpg"
   },
   {
     "id": 356,
@@ -17141,7 +17138,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 47,
     "fat": 15,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Bubur-Ayam.jpg"
   },
   {
     "id": 357,
@@ -17188,7 +17185,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 51,
     "fat": 16,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Ikan-Bakar.jpg"
   },
   {
     "id": 358,
@@ -17241,7 +17238,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 55,
     "fat": 17,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/bc8v651619789840.jpg"
+    "image": "/images/dishes/Beef-Rendang-Noodles.jpg"
   },
   {
     "id": 359,
@@ -17302,7 +17299,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 59,
     "fat": 19,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Laksa-Johor.jpg"
   },
   {
     "id": 360,
@@ -17363,7 +17360,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 63,
     "fat": 20,
     "fiber": 5,
-    "image": ""
+    "image": "/images/dishes/Roti-Canai.jpg"
   },
   {
     "id": 361,
@@ -17417,7 +17414,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 67,
     "fat": 21,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/f3cxnc1765656994.jpg"
+    "image": "/images/dishes/Beef-Hor-Fun.jpg"
   },
   {
     "id": 362,
@@ -17471,7 +17468,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 71,
     "fat": 22,
     "fiber": 5,
-    "image": "https://www.themealdb.com/images/media/meals/f3cxnc1765656994.jpg"
+    "image": "/images/dishes/Fish-Head-Curry.jpg"
   },
   {
     "id": 363,
@@ -17510,7 +17507,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 76,
     "fat": 24,
     "fiber": 5,
-   "image": "/images/dishes/Lumpia.jpg"
+    "image": "/images/dishes/Lumpia.jpg"
   },
   {
     "id": 364,
@@ -17564,7 +17561,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 80,
     "fat": 25,
     "fiber": 5,
-   "image": "/images/dishes/Kare-Kare.jpg"
+    "image": "/images/dishes/Kare-Kare.jpg"
   },
   {
     "id": 365,
@@ -17820,7 +17817,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 41,
     "fat": 13,
     "fiber": 5,
-   "image": "/images/dishes/Banh-Xeo.jpg"
+    "image": "/images/dishes/Banh-Xeo.jpg"
   },
   {
     "id": 370,
@@ -17975,7 +17972,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-  "image": "/images/dishes/Char-Siu.jpg"
+    "image": "/images/dishes/Char-Siu.jpg"
   },
   {
     "id": 373,
@@ -18026,7 +18023,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Xiaolongbao.jpg"
   },
   {
     "id": 374,
@@ -18077,7 +18074,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Chow-Mein.jpg"
   },
   {
     "id": 375,
@@ -18128,7 +18125,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/1529446352.jpg"
+    "image": "/images/dishes/Congee.jpg"
   },
   {
     "id": 376,
@@ -18178,7 +18175,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
- "image": "/images/dishes/Scallion-Pancakes.jpg"
+    "image": "/images/dishes/Scallion-Pancakes.jpg"
   },
   {
     "id": 377,
@@ -18229,7 +18226,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Sundubu-Jjigae.jpg"
   },
   {
     "id": 378,
@@ -18280,7 +18277,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Naengmyeon.jpg"
   },
   {
     "id": 379,
@@ -18332,7 +18329,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kimchi-Fried-Rice.jpg"
   },
   {
     "id": 380,
@@ -18383,7 +18380,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Bossam.jpg"
   },
   {
     "id": 381,
@@ -18434,7 +18431,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Panang-Curry.jpg"
   },
   {
     "id": 382,
@@ -18486,7 +18483,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Mango-Sticky-Rice.jpg"
   },
   {
     "id": 383,
@@ -18538,7 +18535,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Thai-Basil-Chicken.jpg"
   },
   {
     "id": 384,
@@ -18589,7 +18586,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1650559347569-09a6bbed5f28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxZZWxsb3clMjBDdXJyeXxlbnwwfDB8fHwxNzgyNjgzNDM2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Yellow-Curry.jpg"
   },
   {
     "id": 385,
@@ -18639,7 +18636,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1758346970347-300106fecfbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDb2NvbnV0JTIwU291cCUyMFRoYWlsYW5kfGVufDB8MHx8fDE3ODI2ODM0Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Coconut-Soup.jpg"
   },
   {
     "id": 386,
@@ -18843,7 +18840,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Bun-Thit-Nuong.jpg"
+    "image": "/images/dishes/Bun-Thit-Nuong.jpg"
   },
   {
     "id": 390,
@@ -18996,7 +18993,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1693141520831-f0466dd82cdc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxTYWFnJTIwUGFraXN0YW58ZW58MHwwfHx8MTc4MjY4MzQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Saag.jpg"
   },
   {
     "id": 393,
@@ -19047,7 +19044,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1700680057041-e2c682a6e614?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxTZWVraCUyMEtlYmFiJTIwUGFraXN0YW58ZW58MHwwfHx8MTc4MjY4MzQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Seekh-Kebab.jpg"
   },
   {
     "id": 394,
@@ -19098,7 +19095,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1693141520831-f0466dd82cdc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxBbG9vJTIwS2VlbWElMjBQYWtpc3RhbnxlbnwwfDB8fHwxNzgyNjgzNDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Aloo-Keema.jpg"
   },
   {
     "id": 395,
@@ -19149,7 +19146,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1693141520831-f0466dd82cdc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxQYXlhJTIwUGFraXN0YW58ZW58MHwwfHx8MTc4MjY4MzQ1MXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Paya.jpg"
   },
   {
     "id": 396,
@@ -19200,7 +19197,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1542897643-8158da5b4607?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxCYWtzbyUyMEluZG9uZXNpYXxlbnwwfDB8fHwxNzgyNjgzNDUyfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Bakso.jpg"
   },
   {
     "id": 397,
@@ -19251,7 +19248,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1666239308347-4292ea2ff777?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxBeWFtJTIwUGVueWV0JTIwSW5kb25lc2lhfGVufDB8MHx8fDE3ODI2ODM0NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Ayam-Penyet.jpg"
   },
   {
     "id": 398,
@@ -19302,7 +19299,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Rawon.jpg"
   },
   {
     "id": 399,
@@ -19353,7 +19350,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pempek.jpg"
   },
   {
     "id": 400,
@@ -19404,7 +19401,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Sambal-Fried-Fish.jpg"
   },
   {
     "id": 401,
@@ -19457,7 +19454,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Hainanese-Chicken-Rice.jpg"
   },
   {
     "id": 402,
@@ -19509,7 +19506,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/bc8v651619789840.jpg"
+    "image": "/images/dishes/Beef-Rendang.jpg"
   },
   {
     "id": 403,
@@ -19561,7 +19558,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Curry-Mee.jpg"
   },
   {
     "id": 404,
@@ -19612,7 +19609,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/020z181619788503.jpg"
+    "image": "/images/dishes/Ayam-Percik.jpg"
   },
   {
     "id": 405,
@@ -19663,7 +19660,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pancit.jpg"
   },
   {
     "id": 406,
@@ -19715,7 +19712,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Chicken-Inasal.jpg"
+    "image": "/images/dishes/Chicken-Inasal.jpg"
   },
   {
     "id": 407,
@@ -19817,7 +19814,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/f3cxnc1765656994.jpg"
+    "image": "/images/dishes/Kaya-Toast.jpg"
   },
   {
     "id": 409,
@@ -19869,7 +19866,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/f3cxnc1765656994.jpg"
+    "image": "/images/dishes/Hokkien-Mee.jpg"
   },
   {
     "id": 410,
@@ -19920,7 +19917,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/f3cxnc1765656994.jpg"
+    "image": "/images/dishes/Laksa-Singapore.jpg"
   },
   {
     "id": 411,
@@ -19971,7 +19968,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/f3cxnc1765656994.jpg"
+    "image": "/images/dishes/Bak-Kut-Teh.jpg"
   },
   {
     "id": 412,
@@ -20021,7 +20018,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/vrspxv1511722107.jpg"
+    "image": "/images/dishes/Carrot-Cake.jpg"
   },
   {
     "id": 413,
@@ -20072,7 +20069,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/f3cxnc1765656994.jpg"
+    "image": "/images/dishes/Satay-Bee-Hoon.jpg"
   },
   {
     "id": 414,
@@ -20123,7 +20120,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Lamprais.jpg"
   },
   {
     "id": 415,
@@ -20174,7 +20171,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pol-Sambol.jpg"
   },
   {
     "id": 416,
@@ -20225,7 +20222,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Dhal-Curry.jpg"
   },
   {
     "id": 417,
@@ -20276,7 +20273,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Watalappam.jpg"
   },
   {
     "id": 418,
@@ -20327,7 +20324,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/String-Hoppers.jpg"
   },
   {
     "id": 419,
@@ -20378,7 +20375,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Hilsa-Curry.jpg"
+    "image": "/images/dishes/Hilsa-Curry.jpg"
   },
   {
     "id": 420,
@@ -20480,7 +20477,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-  "image": "/images/dishes/Panta-Bhat.jpg"
+    "image": "/images/dishes/Panta-Bhat.jpg"
   },
   {
     "id": 422,
@@ -20532,7 +20529,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Beef-Tehari.jpg"
+    "image": "/images/dishes/Beef-Tehari.jpg"
   },
   {
     "id": 423,
@@ -21092,7 +21089,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1663075039771-1396ae640777?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxGaXNoJTIwQW1vayUyMENhbWJvZGlhfGVufDB8MHx8fDE3ODI2ODQwMDV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Fish-Amok.jpg"
   },
   {
     "id": 434,
@@ -21144,7 +21141,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/t2b8bn1779737789.jpg"
+    "image": "/images/dishes/Beef-Lok-Lak.jpg"
   },
   {
     "id": 435,
@@ -21195,7 +21192,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1728740303677-da7b05eba98e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxOb20lMjBCYW5oJTIwQ2hvayUyMENhbWJvZGlhfGVufDB8MHx8fDE3ODI2ODQwMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Nom-Banh-Chok.jpg"
   },
   {
     "id": 436,
@@ -21246,7 +21243,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1761038170236-1ed27c5ccbb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxLaG1lciUyMEN1cnJ5JTIwQ2FtYm9kaWF8ZW58MHwwfHx8MTc4MjY4NDAwN3ww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Khmer-Curry.jpg"
   },
   {
     "id": 437,
@@ -21297,7 +21294,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1565668314564-9d1bebb0a1db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxCYWklMjBTYWNoJTIwQ2hyb3VrJTIwQ2FtYm9kaWF8ZW58MHwwfHx8MTc4MjY4NDAwOHww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Bai-Sach-Chrouk.jpg"
   },
   {
     "id": 438,
@@ -21348,7 +21345,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1763214904257-1ff410d023f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxQcmFob2slMjBLdGlzJTIwQ2FtYm9kaWF8ZW58MHwwfHx8MTc4MjY4NDAxMXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Prahok-Ktis.jpg"
   },
   {
     "id": 439,
@@ -21399,7 +21396,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1565668314564-9d1bebb0a1db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxLdXklMjBUZWF2JTIwQ2FtYm9kaWF8ZW58MHwwfHx8MTc4MjY4NDAxM3ww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Kuy-Teav.jpg"
   },
   {
     "id": 440,
@@ -21450,7 +21447,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1565668314564-9d1bebb0a1db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxOdW0lMjBBbnNvbSUyMENhbWJvZGlhfGVufDB8MHx8fDE3ODI2ODQwMTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Num-Ansom.jpg"
   },
   {
     "id": 441,
@@ -21501,7 +21498,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1646850149335-f15d028036b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxMYWFwJTIwTGFvcyUyMHJlY2lwZXxlbnwwfDB8fHwxNzgyNjg0MDE3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Laap.jpg"
   },
   {
     "id": 442,
@@ -21552,7 +21549,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/5pmn0g1779813285.jpg"
+    "image": "/images/dishes/Khao-Piak-Sen.jpg"
   },
   {
     "id": 443,
@@ -21603,7 +21600,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/5pmn0g1779813285.jpg"
+    "image": "/images/dishes/Tam-Mak-Hoong.jpg"
   },
   {
     "id": 444,
@@ -21654,7 +21651,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/5pmn0g1779813285.jpg"
+    "image": "/images/dishes/Khao-Jee.jpg"
   },
   {
     "id": 445,
@@ -21705,7 +21702,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/5pmn0g1779813285.jpg"
+    "image": "/images/dishes/Or-Lam.jpg"
   },
   {
     "id": 446,
@@ -21756,7 +21753,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/5pmn0g1779813285.jpg"
+    "image": "/images/dishes/Sai-Oua.jpg"
   },
   {
     "id": 447,
@@ -21807,7 +21804,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/5pmn0g1779813285.jpg"
+    "image": "/images/dishes/Mok-Pa.jpg"
   },
   {
     "id": 448,
@@ -21858,7 +21855,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/5pmn0g1779813285.jpg"
+    "image": "/images/dishes/Khao-Poon.jpg"
   },
   {
     "id": 449,
@@ -21910,7 +21907,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Shan-Noodles.jpg"
   },
   {
     "id": 450,
@@ -21961,7 +21958,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Burmese-Curry.jpg"
   },
   {
     "id": 451,
@@ -22012,7 +22009,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Ohn-No-Khao-Swe.jpg"
   },
   {
     "id": 452,
@@ -22063,7 +22060,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Laphet-Thoke.jpg"
   },
   {
     "id": 453,
@@ -22114,7 +22111,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Htamin-Jin.jpg"
   },
   {
     "id": 454,
@@ -22165,7 +22162,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Mont-Lin-Ma-Yar.jpg"
   },
   {
     "id": 455,
@@ -22216,7 +22213,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Buuz.jpg"
   },
   {
     "id": 456,
@@ -22267,7 +22264,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Khuushuur.jpg"
   },
   {
     "id": 457,
@@ -22318,7 +22315,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Tsuivan.jpg"
   },
   {
     "id": 458,
@@ -22369,7 +22366,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Boodog.jpg"
   },
   {
     "id": 459,
@@ -22421,7 +22418,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Mongolian-Beef.jpg"
   },
   {
     "id": 460,
@@ -22472,7 +22469,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Guriltai-Shul.jpg"
   },
   {
     "id": 461,
@@ -22523,7 +22520,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Airag-Stew.jpg"
   },
   {
     "id": 462,
@@ -22574,7 +22571,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Bansh.jpg"
   },
   {
     "id": 463,
@@ -22626,7 +22623,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Beef-Noodle-Soup.jpg"
   },
   {
     "id": 464,
@@ -22677,7 +22674,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Lu-Rou-Fan.jpg"
   },
   {
     "id": 465,
@@ -22728,7 +22725,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Oyster-Omelette.jpg"
   },
   {
     "id": 466,
@@ -22779,7 +22776,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Gua-Bao.jpg"
   },
   {
     "id": 467,
@@ -22831,7 +22828,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Three-Cup-Chicken.jpg"
   },
   {
     "id": 468,
@@ -22883,7 +22880,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Scallion-Beef-Rolls.jpg"
   },
   {
     "id": 469,
@@ -22934,7 +22931,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Dan-Bing.jpg"
   },
   {
     "id": 470,
@@ -22984,7 +22981,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pineapple-Cake.jpg"
   },
   {
     "id": 471,
@@ -23035,7 +23032,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Samsa.jpg"
   },
   {
     "id": 472,
@@ -23086,7 +23083,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Manti.jpg"
   },
   {
     "id": 473,
@@ -23137,7 +23134,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Shurpa.jpg"
   },
   {
     "id": 474,
@@ -23188,7 +23185,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Non-Bread.jpg"
   },
   {
     "id": 475,
@@ -23239,7 +23236,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kazan-Kabob.jpg"
   },
   {
     "id": 476,
@@ -23290,7 +23287,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Dimlama.jpg"
   },
   {
     "id": 477,
@@ -23341,7 +23338,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kazy.jpg"
   },
   {
     "id": 478,
@@ -23392,7 +23389,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Baursak.jpg"
   },
   {
     "id": 479,
@@ -23443,7 +23440,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kuurdak.jpg"
   },
   {
     "id": 480,
@@ -23494,7 +23491,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Lagman-Kazakh.jpg"
   },
   {
     "id": 481,
@@ -23545,7 +23542,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Syrne.jpg"
   },
   {
     "id": 482,
@@ -23596,7 +23593,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Nauryz-Kozhe.jpg"
   },
   {
     "id": 483,
@@ -23647,7 +23644,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Shashlik.jpg"
   },
   {
     "id": 484,
@@ -23698,7 +23695,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Beshbarmak-Kyrgyz.jpg"
   },
   {
     "id": 485,
@@ -23749,7 +23746,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Oromo.jpg"
   },
   {
     "id": 486,
@@ -23800,7 +23797,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kuurdak-Kyrgyz.jpg"
   },
   {
     "id": 487,
@@ -23851,7 +23848,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Ashlyan-Fu.jpg"
   },
   {
     "id": 488,
@@ -23902,7 +23899,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Samsa-Kyrgyz.jpg"
   },
   {
     "id": 489,
@@ -23953,7 +23950,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Shorpo.jpg"
   },
   {
     "id": 490,
@@ -24004,7 +24001,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Manty Kyrgyz.jpg"
+    "image": "/images/dishes/Manty-Kyrgyz.jpg"
   },
   {
     "id": 491,
@@ -24055,7 +24052,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Boorsok.jpg"
   },
   {
     "id": 492,
@@ -24107,7 +24104,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kabuli-Pulao.jpg"
   },
   {
     "id": 493,
@@ -24158,7 +24155,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/oemdp11779556068.jpg"
+    "image": "/images/dishes/Mantu.jpg"
   },
   {
     "id": 494,
@@ -24209,7 +24206,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Ashak.jpg"
   },
   {
     "id": 495,
@@ -24260,7 +24257,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/de0sns1779555283.jpg"
+    "image": "/images/dishes/Bolani.jpg"
   },
   {
     "id": 496,
@@ -24311,7 +24308,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Qorma.jpg"
   },
   {
     "id": 497,
@@ -24362,7 +24359,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Chapli-Kabab-Afghan.jpg"
   },
   {
     "id": 498,
@@ -24413,7 +24410,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Sheer-Khurma.jpg"
   },
   {
     "id": 499,
@@ -24464,7 +24461,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Borani-Banjan.jpg"
   },
   {
     "id": 500,
@@ -24515,7 +24512,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pesto-Trofie.jpg"
   },
   {
     "id": 501,
@@ -24566,7 +24563,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Minestrone.jpg"
   },
   {
     "id": 502,
@@ -24617,7 +24614,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Gnocchi-alla-Sorrentina.jpg"
   },
   {
     "id": 503,
@@ -24668,7 +24665,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Saltimbocca.jpg"
   },
   {
     "id": 504,
@@ -24770,7 +24767,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-  "image": "/images/dishes/Nicoise-Salad.jpg"
+    "image": "/images/dishes/Nicoise-Salad.jpg"
   },
   {
     "id": 506,
@@ -24821,7 +24818,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Duck-Confit.jpg"
+    "image": "/images/dishes/Duck-Confit.jpg"
   },
   {
     "id": 507,
@@ -24922,7 +24919,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Tortilla-Española.jpg"
   },
   {
     "id": 509,
@@ -24973,7 +24970,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Fabada.jpg"
   },
   {
     "id": 510,
@@ -25024,7 +25021,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/6dpa7m1763331105.jpg"
+    "image": "/images/dishes/Croquetas.jpg"
   },
   {
     "id": 511,
@@ -25075,7 +25072,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/rqtxvr1511792990.jpg"
+    "image": "/images/dishes/Pisto.jpg"
   },
   {
     "id": 512,
@@ -25126,7 +25123,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pulpo-a-la-Gallega.jpg"
   },
   {
     "id": 513,
@@ -25177,7 +25174,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/wqqvyq1511179730.jpg"
+    "image": "/images/dishes/Fideua.jpg"
   },
   {
     "id": 514,
@@ -25228,7 +25225,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Bacalhau-à-Brás.jpg"
   },
   {
     "id": 515,
@@ -25382,7 +25379,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Cataplana.jpg"
+    "image": "/images/dishes/Cataplana.jpg"
   },
   {
     "id": 518,
@@ -25484,7 +25481,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "/images/dishes/spatzle.jpg"
+    "image": "/images/dishes/Spätzle.jpg"
   },
   {
     "id": 520,
@@ -25789,7 +25786,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "/images/dishes/Gyro.jpg",
+    "image": "/images/dishes/Gyro.jpg"
   },
   {
     "id": 526,
@@ -25840,7 +25837,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Pastitsio.jpg",
+    "image": "/images/dishes/Pastitsio.jpg"
   },
   {
     "id": 527,
@@ -25891,7 +25888,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "/images/dishes/Dolmades.jpg",
+    "image": "/images/dishes/Dolmades.jpg"
   },
   {
     "id": 528,
@@ -25942,7 +25939,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "/images/dishes/Greek-Salad.jpg",
+    "image": "/images/dishes/Greek-Salad.jpg"
   },
   {
     "id": 529,
@@ -25993,7 +25990,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "/images/dishes/Tzatziki-Plate.jpg",
+    "image": "/images/dishes/Tzatziki-Plate.jpg"
   },
   {
     "id": 530,
@@ -26044,7 +26041,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "/images/dishes/Kleftiko.jpg",
+    "image": "/images/dishes/Kleftiko.jpg"
   },
   {
     "id": 531,
@@ -26095,7 +26092,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "/images/dishes/Gemista.jpg",
+    "image": "/images/dishes/Gemista.jpg"
   },
   {
     "id": 532,
@@ -26146,7 +26143,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Avgolemono.jpg",
+    "image": "/images/dishes/Avgolemono.jpg"
   },
   {
     "id": 533,
@@ -26197,7 +26194,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/ypuxtw1511297463.jpg"
+    "image": "/images/dishes/Manti-Turkish.jpg"
   },
   {
     "id": 534,
@@ -26247,7 +26244,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/ypuxtw1511297463.jpg"
+    "image": "/images/dishes/Mercimek-Soup.jpg"
   },
   {
     "id": 535,
@@ -26298,7 +26295,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/ypuxtw1511297463.jpg"
+    "image": "/images/dishes/Pide.jpg"
   },
   {
     "id": 536,
@@ -26349,7 +26346,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/ampz9v1763787134.jpg"
+    "image": "/images/dishes/Imam-Bayildi.jpg"
   },
   {
     "id": 537,
@@ -26400,7 +26397,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/ypuxtw1511297463.jpg"
+    "image": "/images/dishes/Menemen-Eggs.jpg"
   },
   {
     "id": 538,
@@ -26451,7 +26448,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Zurek.jpg"
   },
   {
     "id": 539,
@@ -26502,7 +26499,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/q8sp3j1593349686.jpg"
+    "image": "/images/dishes/Golabki.jpg"
   },
   {
     "id": 540,
@@ -26553,7 +26550,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kielbasa-Plate.jpg"
   },
   {
     "id": 541,
@@ -26604,7 +26601,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Placki-Ziemniaczane.jpg"
   },
   {
     "id": 542,
@@ -26655,7 +26652,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Barszcz.jpg"
   },
   {
     "id": 543,
@@ -26706,7 +26703,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kotlet-Schabowy.jpg"
   },
   {
     "id": 544,
@@ -26757,7 +26754,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Sernik.jpg"
   },
   {
     "id": 545,
@@ -26807,7 +26804,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Hortobagyi-Pancake.jpg"
   },
   {
     "id": 546,
@@ -26858,7 +26855,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Fisherman-Soup.jpg"
   },
   {
     "id": 547,
@@ -26909,7 +26906,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Dobos-Torte.jpg"
   },
   {
     "id": 548,
@@ -26960,7 +26957,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/w0rsga1782683912.jpg"
+    "image": "/images/dishes/Stuffed-Peppers.jpg"
   },
   {
     "id": 549,
@@ -27011,7 +27008,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Rakott-Krumpli.jpg"
   },
   {
     "id": 550,
@@ -27062,7 +27059,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Turos-Csusza.jpg"
   },
   {
     "id": 551,
@@ -27113,7 +27110,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Kaiserschmarrn.jpg"
+    "image": "/images/dishes/Kaiserschmarrn.jpg"
   },
   {
     "id": 552,
@@ -27368,7 +27365,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Gulaschsuppe.jpg"
+    "image": "/images/dishes/Gulaschsuppe.jpg"
   },
   {
     "id": 557,
@@ -27419,7 +27416,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Kasnocken.jpg"
+    "image": "/images/dishes/Kasnocken.jpg"
   },
   {
     "id": 558,
@@ -27521,7 +27518,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1570161766218-f8488ebb8078?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxadXJjaGVyJTIwR2VzY2huZXR6ZWx0ZXMlMjBTd2l0emVybGFuZHxlbnwwfDB8fHwxNzgyNjg0MDAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Zurcher-Geschnetzeltes.jpg"
   },
   {
     "id": 560,
@@ -27572,7 +27569,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1630231181362-e3c862cc6cff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHwlQzMlODRscGxlcm1hZ3JvbmVuJTIwcmVjaXBlfGVufDB8MHx8fDE3ODI2ODQwMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Älplermagronen.jpg"
   },
   {
     "id": 561,
@@ -27623,7 +27620,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1560791515-36971f0d491e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxCaXJjaGVyJTIwTXVlc2xpJTIwZGlzaHxlbnwwfDB8fHwxNzgyNjg0MDEwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Bircher-Muesli.jpg"
   },
   {
     "id": 562,
@@ -27674,7 +27671,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1663712407393-8f1663d36c85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxTd2lzcyUyMFBvdGF0byUyMFNvdXAlMjBTd2l0emVybGFuZHxlbnwwfDB8fHwxNzgyNjg0MDExfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Swiss-Potato-Soup.jpg"
   },
   {
     "id": 563,
@@ -27725,7 +27722,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Basler-Leckerli.jpg"
   },
   {
     "id": 564,
@@ -27776,7 +27773,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Moules-Frites.jpg"
   },
   {
     "id": 565,
@@ -27827,7 +27824,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Carbonade-Flamande.jpg"
   },
   {
     "id": 566,
@@ -27877,7 +27874,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Belgian-Waffles.jpg"
   },
   {
     "id": 567,
@@ -27928,7 +27925,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/nmxec11782498644.jpg"
+    "image": "/images/dishes/Waterzooi.jpg"
   },
   {
     "id": 568,
@@ -27979,7 +27976,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/byolko1782500400.jpg"
+    "image": "/images/dishes/Stoemp.jpg"
   },
   {
     "id": 569,
@@ -28030,7 +28027,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Speculoos.jpg"
   },
   {
     "id": 570,
@@ -28081,7 +28078,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Flemish-Asparagus.jpg"
   },
   {
     "id": 571,
@@ -28132,7 +28129,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Vol-au-Vent.jpg"
   },
   {
     "id": 572,
@@ -28183,7 +28180,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/hyarod1565090529.jpg"
+    "image": "/images/dishes/Stamppot.jpg"
   },
   {
     "id": 573,
@@ -28234,7 +28231,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/lhqev81565090111.jpg"
+    "image": "/images/dishes/Bitterballen.jpg"
   },
   {
     "id": 574,
@@ -28285,7 +28282,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Hutspot.jpg"
   },
   {
     "id": 575,
@@ -28336,7 +28333,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/oaqz9f1766593912.jpg"
+    "image": "/images/dishes/Poffertjes.jpg"
   },
   {
     "id": 576,
@@ -28387,7 +28384,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Erwtensoep.jpg"
   },
   {
     "id": 577,
@@ -28438,7 +28435,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Haring-Sandwich.jpg"
   },
   {
     "id": 578,
@@ -28489,7 +28486,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/sxysrt1468240488.jpg"
+    "image": "/images/dishes/Kapsalon.jpg"
   },
   {
     "id": 579,
@@ -28539,7 +28536,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/zy4fs51777540384.jpg"
+    "image": "/images/dishes/Dutch-Apple-Pie.jpg"
   },
   {
     "id": 580,
@@ -28590,7 +28587,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/n41ny81608588066.jpg"
+    "image": "/images/dishes/Colcannon.jpg"
   },
   {
     "id": 581,
@@ -28642,7 +28639,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/7vpsfp1608588991.jpg"
+    "image": "/images/dishes/Coddle.jpg"
   },
   {
     "id": 582,
@@ -28693,7 +28690,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/9aia021779646058.jpg"
+    "image": "/images/dishes/Soda-Bread.jpg"
   },
   {
     "id": 583,
@@ -28744,7 +28741,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Seafood-Chowder.jpg"
   },
   {
     "id": 584,
@@ -28795,7 +28792,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Barmbrack.jpg"
   },
   {
     "id": 585,
@@ -28845,7 +28842,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/w8umt11583268117.jpg"
+    "image": "/images/dishes/Shepherds-Pie-Irish.jpg"
   },
   {
     "id": 586,
@@ -28896,7 +28893,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Janssons-Temptation.jpg"
   },
   {
     "id": 587,
@@ -28947,7 +28944,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Toast-Skagen.jpg"
   },
   {
     "id": 588,
@@ -28998,7 +28995,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Raggmunk.jpg"
   },
   {
     "id": 589,
@@ -29049,7 +29046,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kanelbullar.jpg"
   },
   {
     "id": 590,
@@ -29099,7 +29096,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/xxtsvx1511814083.jpg"
+    "image": "/images/dishes/Pea-Soup.jpg"
   },
   {
     "id": 591,
@@ -29150,7 +29147,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/ttfxxn1762773067.jpg"
+    "image": "/images/dishes/Fårikål.jpg"
   },
   {
     "id": 592,
@@ -29201,7 +29198,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kjøttkaker.jpg"
   },
   {
     "id": 593,
@@ -29252,7 +29249,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/hyk47c1762772689.jpg"
+    "image": "/images/dishes/Rømmegrøt.jpg"
   },
   {
     "id": 594,
@@ -29303,7 +29300,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/7n8su21699013057.jpg"
+    "image": "/images/dishes/Fish-Soup-Norway.jpg"
   },
   {
     "id": 595,
@@ -29354,7 +29351,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/hxcuj01762772827.jpg"
+    "image": "/images/dishes/Lefse.jpg"
   },
   {
     "id": 596,
@@ -29405,7 +29402,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Sodd.jpg"
   },
   {
     "id": 597,
@@ -29456,7 +29453,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Brunost-Toast.jpg"
   },
   {
     "id": 598,
@@ -29507,7 +29504,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Poronkäristys.jpg"
   },
   {
     "id": 599,
@@ -29558,7 +29555,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Korvapuusti.jpg"
   },
   {
     "id": 600,
@@ -29609,7 +29606,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Hernekeitto.jpg"
   },
   {
     "id": 601,
@@ -29660,7 +29657,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kalakukko.jpg"
   },
   {
     "id": 602,
@@ -29711,7 +29708,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Mustikkapiirakka.jpg"
   },
   {
     "id": 603,
@@ -29762,7 +29759,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Finnish-Meatballs.jpg"
   },
   {
     "id": 604,
@@ -29813,7 +29810,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/8a8fu01762772651.jpg"
+    "image": "/images/dishes/Smørrebrød.jpg"
   },
   {
     "id": 605,
@@ -29864,7 +29861,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Stegt-Flæsk.jpg"
   },
   {
     "id": 606,
@@ -29915,7 +29912,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Rødgrød.jpg"
   },
   {
     "id": 607,
@@ -29965,7 +29962,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Danish-Pastry.jpg"
   },
   {
     "id": 608,
@@ -30016,7 +30013,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Herring-Plate.jpg"
   },
   {
     "id": 609,
@@ -30067,7 +30064,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/wkhg581762773124.jpg"
+    "image": "/images/dishes/Æbleskiver.jpg"
   },
   {
     "id": 610,
@@ -30118,7 +30115,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Chicken-Asparagus-Tartlets.jpg"
   },
   {
     "id": 611,
@@ -30169,7 +30166,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/pn59o51628769837.jpg"
+    "image": "/images/dishes/Peka.jpg"
   },
   {
     "id": 612,
@@ -30220,7 +30217,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/pn59o51628769837.jpg"
+    "image": "/images/dishes/Cevapi-Croatian.jpg"
   },
   {
     "id": 613,
@@ -30272,7 +30269,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/pn59o51628769837.jpg"
+    "image": "/images/dishes/Black-Risotto.jpg"
   },
   {
     "id": 614,
@@ -30323,7 +30320,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/pn59o51628769837.jpg"
+    "image": "/images/dishes/Strukli.jpg"
   },
   {
     "id": 615,
@@ -30374,7 +30371,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/pn59o51628769837.jpg"
+    "image": "/images/dishes/Sarma-Croatian.jpg"
   },
   {
     "id": 616,
@@ -30425,7 +30422,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/pn59o51628769837.jpg"
+    "image": "/images/dishes/Fritule.jpg"
   },
   {
     "id": 617,
@@ -30476,7 +30473,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/pn59o51628769837.jpg"
+    "image": "/images/dishes/Brudet.jpg"
   },
   {
     "id": 618,
@@ -30527,7 +30524,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/pn59o51628769837.jpg"
+    "image": "/images/dishes/Pasticada.jpg"
   },
   {
     "id": 619,
@@ -30578,7 +30575,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/vc08jn1628769553.jpg"
+    "image": "/images/dishes/Ćevapi.jpg"
   },
   {
     "id": 620,
@@ -30629,7 +30626,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pljeskavica.jpg"
   },
   {
     "id": 621,
@@ -30680,7 +30677,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Sarma-Serbian.jpg"
   },
   {
     "id": 622,
@@ -30731,7 +30728,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Gibanica.jpg"
   },
   {
     "id": 623,
@@ -30782,7 +30779,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Ajvar-Plate.jpg"
   },
   {
     "id": 624,
@@ -30833,7 +30830,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Prebranac.jpg"
   },
   {
     "id": 625,
@@ -30884,7 +30881,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Karađorđeva-Schnitzel.jpg"
   },
   {
     "id": 626,
@@ -30935,7 +30932,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Proja.jpg"
   },
   {
     "id": 627,
@@ -31190,7 +31187,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-  "image": "/images/dishes/Tochitura.jpg"
+    "image": "/images/dishes/Tochitura.jpg"
   },
   {
     "id": 632,
@@ -31547,7 +31544,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-     "image": "/images/dishes/Mekitsa.jpg"
+    "image": "/images/dishes/Mekitsa.jpg"
   },
   {
     "id": 639,
@@ -31598,7 +31595,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Chkmeruli.jpg"
   },
   {
     "id": 640,
@@ -31649,7 +31646,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Satsivi.jpg"
   },
   {
     "id": 641,
@@ -31700,7 +31697,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pkhali.jpg"
   },
   {
     "id": 642,
@@ -31751,7 +31748,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Chakapuli.jpg"
   },
   {
     "id": 643,
@@ -31802,7 +31799,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Churchkhela.jpg"
   },
   {
     "id": 644,
@@ -31853,7 +31850,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Khorovats.jpg"
+    "image": "/images/dishes/Khorovats.jpg"
   },
   {
     "id": 645,
@@ -31955,7 +31952,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-     "image": "/images/dishes/Harissa-Armenian.jpg"
+    "image": "/images/dishes/Harissa-Armenian.jpg"
   },
   {
     "id": 647,
@@ -32006,7 +32003,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Lavash-Wrap.jpg"
+    "image": "/images/dishes/Lavash-Wrap.jpg"
   },
   {
     "id": 648,
@@ -32158,7 +32155,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-     "image": "/images/dishes/Spas-Soup.jpg"
+    "image": "/images/dishes/Spas-Soup.jpg"
   },
   {
     "id": 651,
@@ -32260,7 +32257,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Svíčková.jpg"
   },
   {
     "id": 653,
@@ -32311,7 +32308,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Goulash-Czech.jpg"
   },
   {
     "id": 654,
@@ -32362,7 +32359,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Bramboráky.jpg"
   },
   {
     "id": 655,
@@ -32413,7 +32410,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kulajda.jpg"
   },
   {
     "id": 656,
@@ -32464,7 +32461,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Roast-Duck-Czech.jpg"
   },
   {
     "id": 657,
@@ -32515,7 +32512,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Trdelnik.jpg"
   },
   {
     "id": 658,
@@ -32566,7 +32563,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Fried-Cheese.jpg"
   },
   {
     "id": 659,
@@ -32617,7 +32614,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Fruit-Dumplings.jpg"
   },
   {
     "id": 660,
@@ -32668,7 +32665,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/g33c901763365484.jpg"
+    "image": "/images/dishes/Bryndzové-Halušky.jpg"
   },
   {
     "id": 661,
@@ -32719,7 +32716,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kapustnica.jpg"
   },
   {
     "id": 662,
@@ -32770,7 +32767,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/0umm891763364625.jpg"
+    "image": "/images/dishes/Zemiakové-Placky.jpg"
   },
   {
     "id": 663,
@@ -32821,7 +32818,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Segedín-Goulash.jpg"
   },
   {
     "id": 664,
@@ -32872,7 +32869,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pirohy-Slovak.jpg"
   },
   {
     "id": 665,
@@ -32923,7 +32920,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Lokše.jpg"
   },
   {
     "id": 666,
@@ -32974,7 +32971,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Demikat.jpg"
   },
   {
     "id": 667,
@@ -33025,7 +33022,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Makové-Šúľance.jpg"
   },
   {
     "id": 668,
@@ -33076,7 +33073,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Potica.jpg"
   },
   {
     "id": 669,
@@ -33127,7 +33124,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Jota.jpg"
   },
   {
     "id": 670,
@@ -33179,7 +33176,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kranjska-Sausage.jpg"
   },
   {
     "id": 671,
@@ -33230,7 +33227,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Štruklji.jpg"
   },
   {
     "id": 672,
@@ -33281,7 +33278,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Idrija-Žlikrofi.jpg"
   },
   {
     "id": 673,
@@ -33332,7 +33329,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Bograč.jpg"
   },
   {
     "id": 674,
@@ -33383,7 +33380,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Prekmurska-Gibanica.jpg"
   },
   {
     "id": 675,
@@ -33434,7 +33431,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Buckwheat-Spoonbread.jpg"
   },
   {
     "id": 676,
@@ -33485,7 +33482,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/a1mi7t1779643816.jpg"
+    "image": "/images/dishes/Tavë-Kosi.jpg"
   },
   {
     "id": 677,
@@ -33536,7 +33533,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Byrek.jpg"
   },
   {
     "id": 678,
@@ -33587,7 +33584,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Fërgesë.jpg"
   },
   {
     "id": 679,
@@ -33638,7 +33635,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Qofte.jpg"
   },
   {
     "id": 680,
@@ -33689,7 +33686,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Speca-të-Mbushur.jpg"
   },
   {
     "id": 681,
@@ -33740,7 +33737,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Trilece.jpg"
   },
   {
     "id": 682,
@@ -33791,7 +33788,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pite.jpg"
   },
   {
     "id": 683,
@@ -33842,7 +33839,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Jani-me-Fasule.jpg"
   },
   {
     "id": 684,
@@ -33893,7 +33890,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Cepelinai.jpg"
   },
   {
     "id": 685,
@@ -33944,7 +33941,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Šaltibarščiai.jpg"
   },
   {
     "id": 686,
@@ -33995,7 +33992,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kugelis.jpg"
   },
   {
     "id": 687,
@@ -34046,7 +34043,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kibinai.jpg"
   },
   {
     "id": 688,
@@ -34097,7 +34094,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Bulviniai-Blynai.jpg"
   },
   {
     "id": 689,
@@ -34147,7 +34144,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/lmc6r51764365554.jpg"
+    "image": "/images/dishes/Rye-Bread-Soup.jpg"
   },
   {
     "id": 690,
@@ -34198,7 +34195,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Skilandis-Plate.jpg"
   },
   {
     "id": 691,
@@ -34249,7 +34246,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Varškėčiai.jpg"
   },
   {
     "id": 692,
@@ -34300,7 +34297,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Grey-Peas-and-Bacon.jpg"
   },
   {
     "id": 693,
@@ -34351,7 +34348,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Sklandrausis.jpg"
   },
   {
     "id": 694,
@@ -34402,7 +34399,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Rupjmaize.jpg"
   },
   {
     "id": 695,
@@ -34452,7 +34449,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Cold-Beet-Soup-Latvia.jpg"
   },
   {
     "id": 696,
@@ -34503,7 +34500,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Piragi.jpg"
   },
   {
     "id": 697,
@@ -34554,7 +34551,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Potato-Pancakes-Latvia.jpg"
   },
   {
     "id": 698,
@@ -34605,7 +34602,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Jāņu-Siers.jpg"
   },
   {
     "id": 699,
@@ -34655,7 +34652,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Herring-with-Potatoes.jpg"
   },
   {
     "id": 700,
@@ -34706,7 +34703,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Verivorst.jpg"
   },
   {
     "id": 701,
@@ -34757,7 +34754,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Mulgipuder.jpg"
   },
   {
     "id": 702,
@@ -34807,7 +34804,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kama-Dessert.jpg"
   },
   {
     "id": 703,
@@ -34858,7 +34855,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kiluvõileib.jpg"
   },
   {
     "id": 704,
@@ -34909,7 +34906,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Rosolje.jpg"
   },
   {
     "id": 705,
@@ -34960,7 +34957,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Cabbage-Stew-Estonia.jpg"
   },
   {
     "id": 706,
@@ -35010,7 +35007,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Curd-Pancakes.jpg"
   },
   {
     "id": 707,
@@ -35061,7 +35058,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Hapukapsas.jpg"
   },
   {
     "id": 708,
@@ -35112,7 +35109,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Plokkfiskur.jpg"
   },
   {
     "id": 709,
@@ -35163,7 +35160,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/t8mn9g1560460231.jpg"
+    "image": "/images/dishes/Lamb-Soup-Iceland.jpg"
   },
   {
     "id": 710,
@@ -35214,7 +35211,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Skyr-Bowl.jpg"
   },
   {
     "id": 711,
@@ -35265,7 +35262,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Icelandic-Fish-Stew.jpg"
   },
   {
     "id": 712,
@@ -35316,7 +35313,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/lmc6r51764365554.jpg"
+    "image": "/images/dishes/Rye-Bread-Ice-Cream.jpg"
   },
   {
     "id": 713,
@@ -35367,7 +35364,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kjötsúpa.jpg"
   },
   {
     "id": 714,
@@ -35418,7 +35415,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Harðfiskur-Plate.jpg"
   },
   {
     "id": 715,
@@ -35469,7 +35466,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pylsur.jpg"
   },
   {
     "id": 716,
@@ -35520,7 +35517,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Rabbit-Stew.jpg"
   },
   {
     "id": 717,
@@ -35571,7 +35568,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pastizzi.jpg"
   },
   {
     "id": 718,
@@ -35622,7 +35619,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Bragioli.jpg"
   },
   {
     "id": 719,
@@ -35673,7 +35670,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Timpana.jpg"
   },
   {
     "id": 720,
@@ -35724,7 +35721,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Aljotta.jpg"
   },
   {
     "id": 721,
@@ -35775,7 +35772,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Bigilla.jpg"
   },
   {
     "id": 722,
@@ -35826,7 +35823,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Ftira.jpg"
   },
   {
     "id": 723,
@@ -35877,7 +35874,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Imqaret.jpg"
   },
   {
     "id": 724,
@@ -35928,7 +35925,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Halloumi-Souvla.jpg"
   },
   {
     "id": 725,
@@ -35979,7 +35976,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Sheftalia.jpg"
   },
   {
     "id": 726,
@@ -36030,7 +36027,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kleftiko-Cyprus.jpg"
   },
   {
     "id": 727,
@@ -36081,7 +36078,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kolokotes.jpg"
   },
   {
     "id": 728,
@@ -36132,7 +36129,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Afelia.jpg"
   },
   {
     "id": 729,
@@ -36182,7 +36179,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Trahana-Soup.jpg"
   },
   {
     "id": 730,
@@ -36233,7 +36230,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Loukoumades-Cyprus.jpg"
   },
   {
     "id": 731,
@@ -36284,7 +36281,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Makaronia-tou-Fournou.jpg"
   },
   {
     "id": 732,
@@ -36334,7 +36331,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Egusi-Soup.jpg"
   },
   {
     "id": 733,
@@ -36384,7 +36381,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pepper-Soup.jpg"
   },
   {
     "id": 734,
@@ -36435,7 +36432,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pounded-Yam.jpg"
   },
   {
     "id": 735,
@@ -36536,7 +36533,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Kontomire-Stew.jpg"
+    "image": "/images/dishes/Kontomire-Stew.jpg"
   },
   {
     "id": 737,
@@ -36637,7 +36634,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-      "image": "/images/dishes/Light-Soup.jpg"
+    "image": "/images/dishes/Light-Soup.jpg"
   },
   {
     "id": 739,
@@ -36688,7 +36685,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pastels-Senegal.jpg"
   },
   {
     "id": 740,
@@ -36739,7 +36736,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Thiakry.jpg"
   },
   {
     "id": 741,
@@ -36790,7 +36787,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Domoda.jpg"
   },
   {
     "id": 742,
@@ -36841,7 +36838,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Fataya.jpg"
   },
   {
     "id": 743,
@@ -36892,7 +36889,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Lakh.jpg"
   },
   {
     "id": 744,
@@ -36943,7 +36940,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/qxytrx1511304021.jpg"
+    "image": "/images/dishes/Couscous.jpg"
   },
   {
     "id": 745,
@@ -36994,7 +36991,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Rfissa.jpg"
   },
   {
     "id": 746,
@@ -37045,7 +37042,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Zaalouk.jpg"
   },
   {
     "id": 747,
@@ -37096,7 +37093,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Mechoui.jpg"
   },
   {
     "id": 748,
@@ -37147,7 +37144,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Bissara.jpg"
   },
   {
     "id": 749,
@@ -37198,7 +37195,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Seffa.jpg"
   },
   {
     "id": 750,
@@ -37249,7 +37246,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1572888195250-3037a59d3578?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYXxlbnwwfDB8fHwxNzgyNjg3NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Tibs.jpg"
   },
   {
     "id": 751,
@@ -37300,7 +37297,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1572888195250-3037a59d3578?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYXxlbnwwfDB8fHwxNzgyNjg3NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Kitfo.jpg"
   },
   {
     "id": 752,
@@ -37351,7 +37348,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1604877565491-2295c6650cf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxBdGFraWx0JTIwV2F0JTIwRXRoaW9waWElMjByZWNpcGV8ZW58MHwwfHx8MTc4MjY4NzYwNHww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Atakilt-Wat.jpg"
   },
   {
     "id": 753,
@@ -37402,7 +37399,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1530313292289-fa316f332666?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxGaXJmaXIlMjBFdGhpb3BpYXxlbnwwfDB8fHwxNzgyNjg3NjA2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Firfir.jpg"
   },
   {
     "id": 754,
@@ -37453,7 +37450,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1572888195250-3037a59d3578?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYXxlbnwwfDB8fHwxNzgyNjg3NjAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Genfo.jpg"
   },
   {
     "id": 755,
@@ -37504,7 +37501,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1530313292289-fa316f332666?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxDaGVjaGVic2ElMjBFdGhpb3BpYXxlbnwwfDB8fHwxNzgyNjg3NjE0fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Chechebsa.jpg"
   },
   {
     "id": 756,
@@ -37555,7 +37552,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1751895638568-32259b7d45fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxCb2VyZXdvcnMlMjBTb3V0aCUyMEFmcmljYSUyMHJlY2lwZXxlbnwwfDB8fHwxNzgyNjg3NjE2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Boerewors.jpg"
   },
   {
     "id": 757,
@@ -37760,7 +37757,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Samp-and-Beans.jpg"
+    "image": "/images/dishes/Samp-and-Beans.jpg"
   },
   {
     "id": 761,
@@ -37811,7 +37808,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/lqampv1762325397.jpg"
+    "image": "/images/dishes/Githeri.jpg"
   },
   {
     "id": 762,
@@ -37862,7 +37859,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/thazgm1555350962.jpg"
+    "image": "/images/dishes/Mandazi.jpg"
   },
   {
     "id": 763,
@@ -37913,7 +37910,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/lqampv1762325397.jpg"
+    "image": "/images/dishes/Mukimo.jpg"
   },
   {
     "id": 764,
@@ -37964,7 +37961,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/lqampv1762325397.jpg"
+    "image": "/images/dishes/Pilau-Kenya.jpg"
   },
   {
     "id": 765,
@@ -38015,7 +38012,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/lqampv1762325397.jpg"
+    "image": "/images/dishes/Matoke-Kenya.jpg"
   },
   {
     "id": 766,
@@ -38066,7 +38063,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Zanzibar-Pilau.jpg"
   },
   {
     "id": 767,
@@ -38117,7 +38114,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Mishkaki.jpg"
   },
   {
     "id": 768,
@@ -38168,7 +38165,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Chipsi-Mayai.jpg"
   },
   {
     "id": 769,
@@ -38218,7 +38215,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Urojo-Soup.jpg"
   },
   {
     "id": 770,
@@ -38269,7 +38266,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Ndizi-Nyama.jpg"
   },
   {
     "id": 771,
@@ -38320,7 +38317,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Wali-wa-Nazi.jpg"
   },
   {
     "id": 772,
@@ -38371,7 +38368,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Mchuzi-wa-Samaki.jpg"
   },
   {
     "id": 773,
@@ -38422,7 +38419,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Vitumbua.jpg"
   },
   {
     "id": 774,
@@ -38473,7 +38470,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Luwombo.jpg"
   },
   {
     "id": 775,
@@ -38524,7 +38521,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Groundnut-Stew-Uganda.jpg"
   },
   {
     "id": 776,
@@ -38575,7 +38572,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Posho.jpg"
   },
   {
     "id": 777,
@@ -38626,7 +38623,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Katogo.jpg"
   },
   {
     "id": 778,
@@ -38677,7 +38674,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Nsenene.jpg"
   },
   {
     "id": 779,
@@ -38730,7 +38727,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Chapati-Beans.jpg"
   },
   {
     "id": 780,
@@ -38782,7 +38779,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/a1mi7t1779643816.jpg"
+    "image": "/images/dishes/Tave-Kosi.jpg"
   },
   {
     "id": 781,
@@ -38835,7 +38832,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Fergese.jpg"
   },
   {
     "id": 782,
@@ -38888,7 +38885,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/o2cd4r1764113576.jpg"
+    "image": "/images/dishes/Couscous-Royale.jpg"
   },
   {
     "id": 783,
@@ -38941,7 +38938,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/gpz67p1560458984.jpg"
+    "image": "/images/dishes/Chakchouka.jpg"
   },
   {
     "id": 784,
@@ -38994,7 +38991,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/o2cd4r1764113576.jpg"
+    "image": "/images/dishes/Rechta.jpg"
   },
   {
     "id": 785,
@@ -39046,7 +39043,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/o2cd4r1764113576.jpg"
+    "image": "/images/dishes/Mhadjeb.jpg"
   },
   {
     "id": 786,
@@ -39098,7 +39095,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Moamba-de-Galinha.jpg"
+    "image": "/images/dishes/Moamba-de-Galinha.jpg"
   },
   {
     "id": 787,
@@ -39151,7 +39148,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Funge.jpg"
+    "image": "/images/dishes/Funge.jpg"
   },
   {
     "id": 788,
@@ -39204,7 +39201,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Kizaca.jpg"
+    "image": "/images/dishes/Kizaca.jpg"
   },
   {
     "id": 789,
@@ -39256,7 +39253,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/yqwtvu1487426027.jpg"
+    "image": "/images/dishes/Harissa.jpg"
   },
   {
     "id": 790,
@@ -39308,7 +39305,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/7vdtqi1780160088.jpg"
+    "image": "/images/dishes/Dolma.jpg"
   },
   {
     "id": 791,
@@ -39517,7 +39514,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Pumpkin-Damper.jpg"
+    "image": "/images/dishes/Pumpkin-Damper.jpg"
   },
   {
     "id": 795,
@@ -39569,7 +39566,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/kos9av1699014767.jpg"
+    "image": "/images/dishes/Plov.jpg"
   },
   {
     "id": 796,
@@ -39621,7 +39618,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Dushbara.jpg"
   },
   {
     "id": 797,
@@ -39674,7 +39671,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Qutab.jpg"
   },
   {
     "id": 798,
@@ -39726,7 +39723,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Piti.jpg"
   },
   {
     "id": 799,
@@ -39779,7 +39776,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Conch-Salad.jpg"
   },
   {
     "id": 800,
@@ -39831,7 +39828,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Cracked-Conch.jpg"
   },
   {
     "id": 801,
@@ -39884,7 +39881,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Peas-and-Rice.jpg"
   },
   {
     "id": 802,
@@ -39936,7 +39933,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Stewed-Fish.jpg"
   },
   {
     "id": 803,
@@ -39988,7 +39985,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
- "image": "/images/dishes/Chingri-Malai-Curry.jpg"
+    "image": "/images/dishes/Chingri-Malai-Curry.jpg"
   },
   {
     "id": 804,
@@ -40092,7 +40089,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Bajan-Fish-Cakes.jpg"
+    "image": "/images/dishes/Bajan-Fish-Cakes.jpg"
   },
   {
     "id": 806,
@@ -40197,7 +40194,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/kpiu4t1782242131.jpg"
+    "image": "/images/dishes/Macaroni-Pie.jpg"
   },
   {
     "id": 808,
@@ -40249,7 +40246,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Carbonnade-Flamande.jpg"
   },
   {
     "id": 809,
@@ -40301,7 +40298,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/pkyvrn1764878267.jpg"
+    "image": "/images/dishes/Rice-and-Beans.jpg"
   },
   {
     "id": 810,
@@ -40353,7 +40350,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/sypxpx1515365095.jpg"
+    "image": "/images/dishes/Stew-Chicken.jpg"
   },
   {
     "id": 811,
@@ -40406,7 +40403,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Fry-Jacks.jpg"
   },
   {
     "id": 812,
@@ -40459,7 +40456,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Hudut.jpg"
   },
   {
     "id": 813,
@@ -40511,7 +40508,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Amiwo.jpg"
   },
   {
     "id": 814,
@@ -40563,7 +40560,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Akassa.jpg"
   },
   {
     "id": 815,
@@ -40615,7 +40612,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pate-Rouge.jpg"
   },
   {
     "id": 816,
@@ -40667,7 +40664,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Peanut-Stew.jpg"
   },
   {
     "id": 817,
@@ -40719,7 +40716,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Jasha-Maroo.jpg"
   },
   {
     "id": 818,
@@ -40772,7 +40769,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Phaksha-Paa.jpg"
   },
   {
     "id": 819,
@@ -40824,7 +40821,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Red-Rice-Bowl.jpg"
   },
   {
     "id": 820,
@@ -40877,7 +40874,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pique-Macho.jpg"
   },
   {
     "id": 821,
@@ -40929,7 +40926,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Sopa-de-Mani.jpg"
   },
   {
     "id": 822,
@@ -40981,7 +40978,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/vc08jn1628769553.jpg"
+    "image": "/images/dishes/Cevapi.jpg"
   },
   {
     "id": 823,
@@ -41033,7 +41030,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/tkxquw1628771028.jpg"
+    "image": "/images/dishes/Burek.jpg"
   },
   {
     "id": 824,
@@ -41085,7 +41082,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Begova-Corba.jpg"
   },
   {
     "id": 825,
@@ -41138,7 +41135,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Sogan-Dolma.jpg"
   },
   {
     "id": 826,
@@ -41191,7 +41188,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/p7eid81782503889.jpg"
+    "image": "/images/dishes/Seswaa.jpg"
   },
   {
     "id": 827,
@@ -41243,7 +41240,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/lyr07q1782505714.jpg"
+    "image": "/images/dishes/Bogobe.jpg"
   },
   {
     "id": 828,
@@ -41296,7 +41293,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/lyr07q1782505714.jpg"
+    "image": "/images/dishes/Vetkoek.jpg"
   },
   {
     "id": 829,
@@ -41348,7 +41345,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/lyr07q1782505714.jpg"
+    "image": "/images/dishes/Morogo.jpg"
   },
   {
     "id": 830,
@@ -41400,7 +41397,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/dxs5t71782678369.jpg"
+    "image": "/images/dishes/Acaraje.jpg"
   },
   {
     "id": 831,
@@ -41453,7 +41450,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/h68o161782679437.jpg"
+    "image": "/images/dishes/Vatapa.jpg"
   },
   {
     "id": 832,
@@ -41506,7 +41503,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/h68o161782679437.jpg"
+    "image": "/images/dishes/Farofa-Bowl.jpg"
   },
   {
     "id": 833,
@@ -41610,7 +41607,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-     image": "/images/dishes/Tô.jpg"
+    "image": "/images/dishes/Tô.jpg"
   },
   {
     "id": 835,
@@ -41662,7 +41659,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   image": "/images/dishes/Babenda.jpg"
+    "image": "/images/dishes/Babenda.jpg"
   },
   {
     "id": 836,
@@ -41714,7 +41711,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   image": "/images/dishes/Poulet-Bicyclette.jpg"
+    "image": "/images/dishes/Poulet-Bicyclette.jpg"
   },
   {
     "id": 837,
@@ -41766,7 +41763,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/diuub11782687570.jpg"
+    "image": "/images/dishes/Amok-Trey.jpg"
   },
   {
     "id": 838,
@@ -41818,7 +41815,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/t2b8bn1779737789.jpg"
+    "image": "/images/dishes/Lok-Lak.jpg"
   },
   {
     "id": 839,
@@ -41870,7 +41867,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Koki-Beans.jpg"
   },
   {
     "id": 840,
@@ -41922,7 +41919,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Eru.jpg"
   },
   {
     "id": 841,
@@ -41974,7 +41971,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Achu-Soup.jpg"
   },
   {
     "id": 842,
@@ -42078,7 +42075,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Cachupa.jpg"
   },
   {
     "id": 844,
@@ -42131,7 +42128,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pastel-com-Diabo-Dentro.jpg"
   },
   {
     "id": 845,
@@ -42183,7 +42180,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Canja.jpg"
   },
   {
     "id": 846,
@@ -42236,7 +42233,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Buzio-Stew.jpg"
   },
   {
     "id": 847,
@@ -42289,7 +42286,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Cazuela.jpg"
   },
   {
     "id": 848,
@@ -42342,7 +42339,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Porotos-Granados.jpg"
   },
   {
     "id": 849,
@@ -42394,7 +42391,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/8859m71764377470.jpg"
+    "image": "/images/dishes/Sancocho.jpg"
   },
   {
     "id": 850,
@@ -42446,7 +42443,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Liboke-Fish.jpg"
   },
   {
     "id": 851,
@@ -42499,7 +42496,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pondu.jpg"
   },
   {
     "id": 852,
@@ -42551,7 +42548,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Fumbwa.jpg"
   },
   {
     "id": 853,
@@ -42604,7 +42601,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Olla-de-Carne.jpg"
   },
   {
     "id": 854,
@@ -42657,7 +42654,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Chifrijo.jpg"
   },
   {
     "id": 855,
@@ -42710,7 +42707,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/pn59o51628769837.jpg"
+    "image": "/images/dishes/Sarma.jpg"
   },
   {
     "id": 856,
@@ -42762,7 +42759,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/t1hg8s1780087329.jpg"
+    "image": "/images/dishes/Picadillo.jpg"
   },
   {
     "id": 857,
@@ -42814,7 +42811,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/t1hg8s1780087329.jpg"
+    "image": "/images/dishes/Yuca-con-Mojo.jpg"
   },
   {
     "id": 858,
@@ -42866,7 +42863,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Halloumi-Souvlaki.jpg"
   },
   {
     "id": 859,
@@ -42918,7 +42915,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Trahanas-Soup.jpg"
   },
   {
     "id": 860,
@@ -42970,7 +42967,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kleftiko.jpg"
   },
   {
     "id": 861,
@@ -43022,7 +43019,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Svickova.jpg"
   },
   {
     "id": 862,
@@ -43074,7 +43071,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Bramboraky.jpg"
   },
   {
     "id": 863,
@@ -43127,7 +43124,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Guláš.jpg"
   },
   {
     "id": 864,
@@ -43179,7 +43176,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Stegt-Flaesk.jpg"
   },
   {
     "id": 865,
@@ -43231,7 +43228,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1725770717141-482172dc596b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxSZWQlMjBCZXJyeSUyMFB1ZGRpbmd8ZW58MHwwfHx8MTc4MjY4MzQzOXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Red-Berry-Pudding.jpg"
   },
   {
     "id": 866,
@@ -43283,7 +43280,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1615305182074-29b3a07b9954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxMYSUyMEJhbmRlcmElMjBEb21pbmljYW4lMjBSZXB1YmxpY3xlbnwwfDB8fHwxNzgyNjgzNDQwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/La-Bandera.jpg"
   },
   {
     "id": 867,
@@ -43336,7 +43333,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1711161988375-da7eff032e45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxNYW5nJUMzJUJBJTIwZGlzaHxlbnwwfDB8fHwxNzgyNjgzNDQyfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Mangú.jpg"
   },
   {
     "id": 868,
@@ -43388,7 +43385,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1639605821463-fc4d9c09cb9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxTYW5jb2NobyUyMERvbWluaWNhbm8lMjBEb21pbmljYW4lMjBSZXB1YmxpY3xlbnwwfDB8fHwxNzgyNjgzNDQzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Sancocho-Dominicano.jpg"
   },
   {
     "id": 869,
@@ -43441,7 +43438,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1756521973435-4e4e1d2884b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxQb2xsbyUyMEd1aXNhZG98ZW58MHwwfHx8MTc4MjY4MzQ0Nnww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Pollo-Guisado.jpg"
   },
   {
     "id": 870,
@@ -43493,7 +43490,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1564394232860-52605aab6780?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxFbmNlYm9sbGFkbyUyMEVjdWFkb3J8ZW58MHwwfHx8MTc4MjY4MzQ0N3ww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Encebollado.jpg"
   },
   {
     "id": 871,
@@ -43545,7 +43542,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1564394232860-52605aab6780?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxCb2xvbiUyMGRlJTIwVmVyZGUlMjBFY3VhZG9yfGVufDB8MHx8fDE3ODI2ODM0NDh8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Bolon-de-Verde.jpg"
   },
   {
     "id": 872,
@@ -43650,7 +43647,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-  "image": "/images/dishes/Feteer-Meshaltet.jpg"
+    "image": "/images/dishes/Feteer-Meshaltet.jpg"
   },
   {
     "id": 874,
@@ -43806,7 +43803,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Pan-con-Pavo.jpg"
+    "image": "/images/dishes/Pan-con-Pavo.jpg"
   },
   {
     "id": 877,
@@ -43858,7 +43855,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Cabbage-Stew.jpg"
   },
   {
     "id": 878,
@@ -43911,7 +43908,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pepian.jpg"
   },
   {
     "id": 879,
@@ -43963,7 +43960,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kakik.jpg"
   },
   {
     "id": 880,
@@ -44015,7 +44012,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Hilachas.jpg"
   },
   {
     "id": 881,
@@ -44067,7 +44064,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Jocon.jpg"
   },
   {
     "id": 882,
@@ -44119,7 +44116,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/5tf8j11782236249.jpg"
+    "image": "/images/dishes/Pepperpot.jpg"
   },
   {
     "id": 883,
@@ -44172,7 +44169,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Cook-Up-Rice.jpg"
   },
   {
     "id": 884,
@@ -44224,7 +44221,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Metemgee.jpg"
   },
   {
     "id": 885,
@@ -44276,7 +44273,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Guyanese-Chow-Mein.jpg"
   },
   {
     "id": 886,
@@ -44328,7 +44325,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Griot.jpg"
   },
   {
     "id": 887,
@@ -44381,7 +44378,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Diri-Kole.jpg"
   },
   {
     "id": 888,
@@ -44433,7 +44430,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Tassot.jpg"
   },
   {
     "id": 889,
@@ -44485,7 +44482,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Baleadas.jpg"
   },
   {
     "id": 890,
@@ -44537,7 +44534,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Sopa-de-Caracol.jpg"
   },
   {
     "id": 891,
@@ -44589,7 +44586,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pollo-Chuco.jpg"
   },
   {
     "id": 892,
@@ -44641,7 +44638,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pastelitos.jpg"
   },
   {
     "id": 893,
@@ -44693,7 +44690,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/t8mn9g1560460231.jpg"
+    "image": "/images/dishes/Lamb-Soup.jpg"
   },
   {
     "id": 894,
@@ -44745,7 +44742,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kleinur.jpg"
   },
   {
     "id": 895,
@@ -44798,7 +44795,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Zereshk-Polo.jpg"
   },
   {
     "id": 896,
@@ -44850,7 +44847,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Masgouf.jpg"
   },
   {
     "id": 897,
@@ -44902,7 +44899,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Tashreeb.jpg"
   },
   {
     "id": 898,
@@ -44954,7 +44951,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kubba-Mosul.jpg"
   },
   {
     "id": 899,
@@ -45007,7 +45004,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Maqluba.jpg"
   },
   {
     "id": 900,
@@ -45060,7 +45057,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Musakhan.jpg"
   },
   {
     "id": 901,
@@ -45113,7 +45110,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Galayet-Bandora.jpg"
   },
   {
     "id": 902,
@@ -45165,7 +45162,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kuyrdak.jpg"
   },
   {
     "id": 903,
@@ -45218,7 +45215,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Laghman.jpg"
   },
   {
     "id": 904,
@@ -45270,7 +45267,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/lqampv1762325397.jpg"
+    "image": "/images/dishes/Pilau-Ya-Nyama.jpg"
   },
   {
     "id": 905,
@@ -45322,7 +45319,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kuurdak.jpg"
   },
   {
     "id": 906,
@@ -45374,7 +45371,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Ashlyanfu.jpg"
   },
   {
     "id": 907,
@@ -45426,7 +45423,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Grey-Peas-with-Bacon.jpg"
   },
   {
     "id": 908,
@@ -45478,7 +45475,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/lmc6r51764365554.jpg"
+    "image": "/images/dishes/Rye-Bread-Soup.jpg"
   },
   {
     "id": 909,
@@ -45530,7 +45527,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Cold-Beet-Soup.jpg"
   },
   {
     "id": 910,
@@ -45582,7 +45579,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Saltibarsciai.jpg"
   },
   {
     "id": 911,
@@ -45635,7 +45632,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Mofo-Gasy.jpg"
   },
   {
     "id": 912,
@@ -45687,7 +45684,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Akoho-sy-Voanio.jpg"
   },
   {
     "id": 913,
@@ -45739,7 +45736,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Nsima-with-Ndiwo.jpg"
   },
   {
     "id": 914,
@@ -45791,7 +45788,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Chambo-Fish.jpg"
   },
   {
     "id": 915,
@@ -45844,7 +45841,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kachumbari-Beans.jpg"
   },
   {
     "id": 916,
@@ -45896,7 +45893,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Mandasi.jpg"
   },
   {
     "id": 917,
@@ -45949,7 +45946,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Tiga-Deguena.jpg"
   },
   {
     "id": 918,
@@ -46001,7 +45998,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Fakoye.jpg"
   },
   {
     "id": 919,
@@ -46053,7 +46050,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Jollof-Mali.jpg"
   },
   {
     "id": 920,
@@ -46105,7 +46102,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Poulet-Yassa-Mali.jpg"
   },
   {
     "id": 921,
@@ -46157,7 +46154,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Rougaille.jpg"
   },
   {
     "id": 922,
@@ -46209,7 +46206,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Mine-Frite.jpg"
   },
   {
     "id": 923,
@@ -46261,7 +46258,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Bol-Renverse.jpg"
   },
   {
     "id": 924,
@@ -46313,7 +46310,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Mamaliga.jpg"
   },
   {
     "id": 925,
@@ -46365,7 +46362,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Zeama.jpg"
   },
   {
     "id": 926,
@@ -46418,7 +46415,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Placinta.jpg"
   },
   {
     "id": 927,
@@ -46470,7 +46467,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "/images/dishes/Sarmale.jpg"
+    "image": "/images/dishes/Sarmale-Moldovan.jpg"
   },
   {
     "id": 928,
@@ -46523,7 +46520,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Bansh-Soup.jpg"
   },
   {
     "id": 929,
@@ -46576,7 +46573,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kapana.jpg"
   },
   {
     "id": 930,
@@ -46628,7 +46625,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Oshifima.jpg"
   },
   {
     "id": 931,
@@ -46732,7 +46729,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Mahangu-Porridge.jpg"
   },
   {
     "id": 933,
@@ -46784,7 +46781,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Green-Lipped-Mussels.jpg"
   },
   {
     "id": 934,
@@ -46836,7 +46833,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kumara-Mash.jpg"
   },
   {
     "id": 935,
@@ -46888,7 +46885,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Gallo-Pinto-Nica.jpg"
   },
   {
     "id": 936,
@@ -46940,7 +46937,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Nacatamal.jpg"
   },
   {
     "id": 937,
@@ -46992,7 +46989,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Vigoron.jpg"
   },
   {
     "id": 938,
@@ -47045,7 +47042,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Indio-Viejo.jpg"
   },
   {
     "id": 939,
@@ -47097,7 +47094,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Djerma-Rice.jpg"
   },
   {
     "id": 940,
@@ -47149,7 +47146,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Dambou.jpg"
   },
   {
     "id": 941,
@@ -47201,7 +47198,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kilishi.jpg"
   },
   {
     "id": 942,
@@ -47253,7 +47250,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Peanut-Millet-Stew.jpg"
   },
   {
     "id": 943,
@@ -47305,7 +47302,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/7n8su21699013057.jpg"
+    "image": "/images/dishes/Fish-Soup.jpg"
   },
   {
     "id": 944,
@@ -47358,7 +47355,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/oe8rg51699014028.jpg"
+    "image": "/images/dishes/Shuwa.jpg"
   },
   {
     "id": 945,
@@ -47411,7 +47408,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/oe8rg51699014028.jpg"
+    "image": "/images/dishes/Mashuai.jpg"
   },
   {
     "id": 946,
@@ -47464,7 +47461,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/oe8rg51699014028.jpg"
+    "image": "/images/dishes/Majboos-Omani.jpg"
   },
   {
     "id": 947,
@@ -47516,7 +47513,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/oe8rg51699014028.jpg"
+    "image": "/images/dishes/Harees.jpg"
   },
   {
     "id": 948,
@@ -47569,7 +47566,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Sancocho-Panameño.jpg"
   },
   {
     "id": 949,
@@ -47622,7 +47619,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Carimañolas.jpg"
   },
   {
     "id": 950,
@@ -47674,7 +47671,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Ropa-Vieja-Panama.jpg"
   },
   {
     "id": 951,
@@ -47726,7 +47723,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/jc6oub1763196663.jpg"
+    "image": "/images/dishes/Arroz-con-Guandu.jpg"
   },
   {
     "id": 952,
@@ -47779,7 +47776,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Chipa-Guasu.jpg"
   },
   {
     "id": 953,
@@ -47832,7 +47829,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Mbeju.jpg"
   },
   {
     "id": 954,
@@ -47885,7 +47882,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Bori-Bori.jpg"
   },
   {
     "id": 955,
@@ -47937,7 +47934,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Madrouba.jpg"
   },
   {
     "id": 956,
@@ -47989,7 +47986,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Balaleet.jpg"
   },
   {
     "id": 957,
@@ -48042,7 +48039,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Thareed.jpg"
   },
   {
     "id": 958,
@@ -48146,7 +48143,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Brochettes.jpg"
+    "image": "/images/dishes/Brochettes.jpg"
   },
   {
     "id": 960,
@@ -48198,7 +48195,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-  "image": "/images/dishes/Agatogo.jpg"
+    "image": "/images/dishes/Agatogo.jpg"
   },
   {
     "id": 961,
@@ -48303,7 +48300,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/1nalo51765188375.jpg"
+    "image": "/images/dishes/Mandi.jpg"
   },
   {
     "id": 963,
@@ -48356,7 +48353,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Jareesh.jpg"
   },
   {
     "id": 964,
@@ -48408,7 +48405,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/i5o2b61763739053.jpg"
+    "image": "/images/dishes/Mutabbaq.jpg"
   },
   {
     "id": 965,
@@ -48460,7 +48457,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Karadjordjeva-Schnitzel.jpg"
   },
   {
     "id": 966,
@@ -48564,7 +48561,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Groundnut-Soup-Sierra-Leone.jpg"
   },
   {
     "id": 968,
@@ -48617,7 +48614,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Jollof-Sierra-Leone.jpg"
   },
   {
     "id": 969,
@@ -48670,7 +48667,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Fry-Fry.jpg"
   },
   {
     "id": 970,
@@ -48722,7 +48719,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/f3cxnc1765656994.jpg"
+    "image": "/images/dishes/Char-Kway-Teow.jpg"
   },
   {
     "id": 971,
@@ -48774,7 +48771,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pirohy.jpg"
   },
   {
     "id": 972,
@@ -48826,7 +48823,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Idrijski-Žlikrofi.jpg"
   },
   {
     "id": 973,
@@ -48878,7 +48875,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kranjska-Klobasa.jpg"
   },
   {
     "id": 974,
@@ -48930,7 +48927,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Canjeero.jpg"
   },
   {
     "id": 975,
@@ -48982,7 +48979,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Suqaar.jpg"
   },
   {
     "id": 976,
@@ -49034,7 +49031,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1774869221268-885bf68455f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxTYW1idXNhJTIwU29tYWxpYXxlbnwwfDB8fHwxNzgyNjk4ODE4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Sambusa-Somalia.jpg"
   },
   {
     "id": 977,
@@ -49086,7 +49083,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Pol-Sambol-Rice.jpg"
   },
   {
     "id": 978,
@@ -49139,7 +49136,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Ful-Sudani.jpg"
   },
   {
     "id": 979,
@@ -49192,7 +49189,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Kisra.jpg"
   },
   {
     "id": 980,
@@ -49244,7 +49241,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Mulah-Wekia.jpg"
   },
   {
     "id": 981,
@@ -49296,7 +49293,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Aseeda.jpg"
   },
   {
     "id": 982,
@@ -49348,7 +49345,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Janssons-Temptation.jpg"
   },
   {
     "id": 983,
@@ -49400,7 +49397,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/54xzk31760524666.jpg"
+    "image": "/images/dishes/Kibbeh-Nayyeh.jpg"
   },
   {
     "id": 984,
@@ -49504,7 +49501,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/54xzk31760524666.jpg"
+    "image": "/images/dishes/Shish-Barak.jpg"
   },
   {
     "id": 986,
@@ -49557,7 +49554,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Beef-Noodle-Soup-Taiwan.jpg"
   },
   {
     "id": 987,
@@ -49609,7 +49606,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Scallion-Pancake.jpg"
   },
   {
     "id": 988,
@@ -49661,7 +49658,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Qurutob.jpg"
   },
   {
     "id": 989,
@@ -49714,7 +49711,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Oshi-Palav.jpg"
   },
   {
     "id": 990,
@@ -49766,7 +49763,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Shurbo.jpg"
   },
   {
     "id": 991,
@@ -49818,7 +49815,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Sambusa-Tajik.jpg"
   },
   {
     "id": 992,
@@ -49870,7 +49867,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Mandazi-Tanzania.jpg"
   },
   {
     "id": 993,
@@ -49922,7 +49919,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Callaloo-Trinidad.jpg"
   },
   {
     "id": 994,
@@ -49974,7 +49971,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Bake-and-Shark.jpg"
   },
   {
     "id": 995,
@@ -50026,7 +50023,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/t8mn9g1560460231.jpg"
+    "image": "/images/dishes/Ojja.jpg"
   },
   {
     "id": 996,
@@ -50079,7 +50076,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://www.themealdb.com/images/media/meals/t8mn9g1560460231.jpg"
+    "image": "/images/dishes/Makroudh.jpg"
   },
   {
     "id": 997,
@@ -50131,7 +50128,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Turkmen-Plov.jpg"
   },
   {
     "id": 998,
@@ -50184,7 +50181,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Dograma.jpg"
   },
   {
     "id": 999,
@@ -50236,7 +50233,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Ichlekli.jpg"
   },
   {
     "id": 1000,
@@ -50288,7 +50285,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": ""
+    "image": "/images/dishes/Shurpa-Turkmen.jpg"
   },
   {
     "id": 1001,
@@ -50415,7 +50412,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-  "image": "/images/dishes/Sauce-Graine.jpg"
+    "image": "/images/dishes/Sauce-Graine.jpg"
   },
   {
     "id": 1004,
@@ -50531,7 +50528,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-   "image": "/images/dishes/Aloco.jpg"
+    "image": "/images/dishes/Aloco.jpg"
   },
   {
     "id": 1007,
@@ -50573,7 +50570,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "/images/dishes/Soupe-Kpe.jpg"
+    "image": "/images/dishes/Soupe-Kpé.jpg"
   },
   {
     "id": 1008,
@@ -50693,2545 +50690,3672 @@ window.WORLD_MEALS_DATABASE = [
     "image": "/images/dishes/Poisson-Braisé.jpg"
   },
   {
-  "id": 1011,
-  "name": "Falafel",
-  "country": "Israel",
-  "region": "Middle East",
-  "emoji": "🧆",
-  "cal": 330,
-  "budget": 5,
-  "time": "30 min",
-  "spice": 2,
-  "tags": ["dairy-free", "vegan", "gluten-free-option"],
-  "desc": "Crispy chickpea fritters seasoned with herbs, garlic, cumin, and coriander, often served in pita with salad and tahini.",
-  "ingredients": ["Chickpeas", "Parsley", "Cilantro", "Garlic", "Onion", "Cumin", "Tahini"],
-  "swaps": {
-    "gluten": [{"from": "Pita bread", "to": "Lettuce wraps", "note": "Keeps it fresh and gluten-free"}]
-  },
-  "protein": 14,
-  "carbs": 36,
-  "fat": 11,
-  "fiber": 7,
- "image": "/images/dishes/Falafel.jpg"
-},
-{
-  "id": 1012,
-  "name": "Sabich",
-  "country": "Israel",
-  "region": "Middle East",
-  "emoji": "🥙",
-  "cal": 560,
-  "budget": 7,
-  "time": "35 min",
-  "spice": 2,
-  "tags": ["vegetarian", "dairy-free-option"],
-  "desc": "A popular Israeli pita sandwich filled with fried eggplant, hard-boiled egg, Israeli salad, tahini, and amba sauce.",
-  "ingredients": ["Pita", "Eggplant", "Eggs", "Tomato", "Cucumber", "Tahini", "Amba sauce"],
-  "swaps": {
-    "gluten": [{"from": "Pita", "to": "Gluten-free pita", "note": "Warm before filling so it bends easily"}],
-    "vegan": [{"from": "Eggs", "to": "Roasted chickpeas", "note": "Adds protein and texture"}]
-  },
-  "protein": 18,
-  "carbs": 62,
-  "fat": 26,
-  "fiber": 8,
- "image": "/images/dishes/Sabich.jpg"
-},
-{
-  "id": 1013,
-  "name": "Jerusalem Mixed Grill",
-  "country": "Israel",
-  "region": "Middle East",
-  "emoji": "🍖",
-  "cal": 620,
-  "budget": 12,
-  "time": "35 min",
-  "spice": 3,
-  "tags": ["dairy-free", "gluten-free-option"],
-  "desc": "A Jerusalem street-food specialty of spiced grilled chicken, onions, and warm spices, usually served in pita or on a plate.",
-  "ingredients": ["Chicken", "Onions", "Turmeric", "Cumin", "Paprika", "Black pepper", "Pita"],
-  "swaps": {
-    "gluten": [{"from": "Pita", "to": "Rice or salad plate", "note": "Keeps all the flavor without bread"}],
-    "vegan": [{"from": "Chicken", "to": "Mushrooms + seitan", "note": "Sear hard with the same spice blend"}]
-  },
-  "protein": 38,
-  "carbs": 45,
-  "fat": 24,
-  "fiber": 5,
- "image": "/images/dishes/Jerusalem-Mixed-Grill.jpg"
-},
-{
-  "id": 1014,
-  "name": "Jachnun",
-  "country": "Israel",
-  "region": "Middle East",
-  "emoji": "🫓",
-  "cal": 520,
-  "budget": 5,
-  "time": "8 hrs",
-  "spice": 1,
-  "tags": ["vegetarian", "dairy-free-option"],
-  "desc": "Slow-baked Yemenite Jewish pastry popular in Israel, served with grated tomato, zhug, and hard-boiled egg.",
-  "ingredients": ["Flour", "Margarine", "Sugar", "Salt", "Tomatoes", "Zhug", "Eggs"],
-  "swaps": {
-    "spice": [{"from": "Zhug", "to": "Grated tomato only", "note": "Keeps it mild and traditional"}],
-    "vegan": [{"from": "Eggs", "to": "Cucumber tomato salad", "note": "Fresh side with the pastry"}]
-  },
-  "protein": 12,
-  "carbs": 74,
-  "fat": 18,
-  "fiber": 4,
- "image": "/images/dishes/Jachnun.jpg"
-},
-{
-  "id": 1015,
-  "name": "Malawach",
-  "country": "Israel",
-  "region": "Middle East",
-  "emoji": "🥐",
-  "cal": 480,
-  "budget": 5,
-  "time": "25 min",
-  "spice": 1,
-  "tags": ["vegetarian", "dairy-free-option"],
-  "desc": "Flaky Yemenite-style fried flatbread popular in Israel, served with grated tomato, hard-boiled egg, and spicy zhug.",
-  "ingredients": ["Flour", "Margarine", "Salt", "Tomatoes", "Eggs", "Zhug", "Cucumber"],
-  "swaps": {
-    "spice": [{"from": "Zhug", "to": "Yogurt or grated tomato", "note": "Cooling and mild"}],
-    "vegan": [{"from": "Eggs", "to": "Avocado slices", "note": "Keeps the meal rich and satisfying"}]
-  },
-  "protein": 11,
-  "carbs": 65,
-  "fat": 19,
-  "fiber": 4,
-  "image": "/images/dishes/Malawach.jpg"
-},
-{
-  "id": 1016,
-  "name": "Ptitim",
-  "country": "Israel",
-  "region": "Middle East",
-  "emoji": "🍝",
-  "cal": 390,
-  "budget": 4,
-  "time": "20 min",
-  "spice": 1,
-  "tags": ["dairy-free", "vegan-option"],
-  "desc": "Toasted pasta pearls often called Israeli couscous, cooked like rice and served as a comforting side dish.",
-  "ingredients": ["Ptitim", "Onion", "Olive oil", "Vegetable stock", "Tomato paste", "Parsley", "Black pepper"],
-  "swaps": {
-    "gluten": [{"from": "Wheat ptitim", "to": "Rice or quinoa", "note": "Different texture but similar side-dish role"}]
-  },
-  "protein": 10,
-  "carbs": 68,
-  "fat": 8,
-  "fiber": 4,
-  "image": "/images/dishes/Ptitim.jpg"
-},
-{
-  "id": 1017,
-  "name": "Bourekas",
-  "country": "Israel",
-  "region": "Middle East",
-  "emoji": "🥟",
-  "cal": 430,
-  "budget": 6,
-  "time": "45 min",
-  "spice": 1,
-  "tags": ["vegetarian"],
-  "desc": "Flaky savory pastries filled with cheese, potato, spinach, or mushrooms, commonly enjoyed as a snack or breakfast.",
-  "ingredients": ["Puff pastry", "Feta cheese", "Potatoes", "Spinach", "Egg", "Sesame seeds", "Black pepper"],
-  "swaps": {
-    "dairy": [{"from": "Feta cheese", "to": "Potato filling", "note": "Classic non-cheese filling"}],
-    "vegan": [{"from": "Egg wash", "to": "Olive oil brush", "note": "Still bakes shiny and golden"}]
-  },
-  "protein": 12,
-  "carbs": 45,
-  "fat": 22,
-  "fiber": 4,
- "image": "/images/dishes/Bourekas.jpg"
-},
-{
-  "id": 1018,
-  "name": "Sufganiyah",
-  "country": "Israel",
-  "region": "Middle East",
-  "emoji": "🍩",
-  "cal": 360,
-  "budget": 5,
-  "time": "2 hrs",
-  "spice": 1,
-  "tags": ["vegetarian", "dairy-free-option"],
-  "desc": "A soft jelly-filled doughnut traditionally eaten during Hanukkah, dusted with powdered sugar.",
-  "ingredients": ["Flour", "Yeast", "Sugar", "Eggs", "Jam", "Oil", "Powdered sugar"],
-  "swaps": {
-    "dairy": [{"from": "Milk", "to": "Oat milk", "note": "Works well in enriched dough"}],
-    "vegan": [{"from": "Eggs", "to": "Applesauce", "note": "Keeps the dough soft"}]
-  },
-  "protein": 7,
-  "carbs": 55,
-  "fat": 13,
-  "fiber": 2,
-  "image": "/images/dishes/Sufganiyah.jpg"
-},
-{
-  "id": 1019,
-  "name": "Hummus",
-  "country": "Israel",
-  "region": "Middle East",
-  "emoji": "🥣",
-  "cal": 310,
-  "budget": 4,
-  "time": "15 min",
-  "spice": 1,
-  "tags": ["dairy-free", "vegan", "gluten-free"],
-  "desc": "Creamy chickpea and tahini dip served with olive oil, paprika, herbs, and warm pita or vegetables.",
-  "ingredients": ["Chickpeas", "Tahini", "Lemon juice", "Garlic", "Olive oil", "Cumin", "Paprika"],
-  "swaps": {
-    "gluten": [{"from": "Pita bread", "to": "Cucumber and carrot sticks", "note": "Naturally gluten-free pairing"}]
-  },
-  "protein": 12,
-  "carbs": 30,
-  "fat": 16,
-  "fiber": 8,
-  "image": "/images/dishes/Hummus.jpg"
-},
-  {
-  "id": 1020,
-  "name": "Arroz con Gandules",
-  "country": "Puerto Rico",
-  "region": "Americas",
-  "emoji": "🍚",
-  "cal": 430,
-  "budget": 6,
-  "time": "45 min",
-  "spice": 1,
-  "tags": ["dairy-free", "gluten-free", "vegan-option"],
-  "desc": "Puerto Rico's classic rice with pigeon peas, sofrito, and sazón, often served during holidays and family gatherings.",
-  "ingredients": ["Rice", "Pigeon peas", "Sofrito", "Sazón", "Olive oil", "Garlic", "Culantro"],
-  "swaps": {
-    "vegan": [{"from": "Pork or ham", "to": "Smoked paprika + extra sofrito", "note": "Keeps smoky flavor without meat"}]
-  },
-  "protein": 12,
-  "carbs": 72,
-  "fat": 10,
-  "fiber": 7,
-  "image": "/images/dishes/Arroz-con-Gandules.jpg"
-},
-{
-  "id": 1021,
-  "name": "Lechon Asado",
-  "country": "Puerto Rico",
-  "region": "Americas",
-  "emoji": "🐖",
-  "cal": 690,
-  "budget": 15,
-  "time": "4 hrs",
-  "spice": 1,
-  "tags": ["dairy-free", "gluten-free"],
-  "desc": "Slow-roasted Puerto Rican pork marinated with garlic, oregano, citrus, and adobo until tender with crisp skin.",
-  "ingredients": ["Pork shoulder", "Garlic", "Oregano", "Adobo", "Orange juice", "Lime juice", "Olive oil"],
-  "swaps": {
-    "vegan": [{"from": "Pork shoulder", "to": "Jackfruit or mushrooms", "note": "Use the same citrus-garlic marinade"}]
-  },
-  "protein": 36,
-  "carbs": 12,
-  "fat": 42,
-  "fiber": 2,
-  "image": "/images/dishes/Lechon-Asado.jpg"
-},
-{
-  "id": 1022,
-  "name": "Pasteles",
-  "country": "Puerto Rico",
-  "region": "Americas",
-  "emoji": "🫔",
-  "cal": 470,
-  "budget": 10,
-  "time": "3 hrs",
-  "spice": 1,
-  "tags": ["dairy-free", "gluten-free"],
-  "desc": "Traditional Puerto Rican holiday parcels made with green banana masa, savory filling, and banana leaves.",
-  "ingredients": ["Green bananas", "Yautía", "Plantain", "Pork", "Sofrito", "Achiote oil", "Banana leaves"],
-  "swaps": {
-    "vegan": [{"from": "Pork filling", "to": "Chickpeas + mushrooms", "note": "Season with sofrito and achiote oil"}]
-  },
-  "protein": 18,
-  "carbs": 58,
-  "fat": 18,
-  "fiber": 6,
-  "image": "/images/dishes/Pasteles.jpg"
-},
-{
-  "id": 1023,
-  "name": "Alcapurrias",
-  "country": "Puerto Rico",
-  "region": "Americas",
-  "emoji": "🥟",
-  "cal": 520,
-  "budget": 7,
-  "time": "1 hr",
-  "spice": 2,
-  "tags": ["dairy-free", "gluten-free"],
-  "desc": "Crispy Puerto Rican fritters made from green banana or yautía masa and filled with seasoned meat.",
-  "ingredients": ["Green bananas", "Yautía", "Ground beef", "Sofrito", "Adobo", "Achiote oil", "Oil"],
-  "swaps": {
-    "vegan": [{"from": "Ground beef", "to": "Lentils or mushrooms", "note": "Cook with sofrito until thick"}]
-  },
-  "protein": 18,
-  "carbs": 54,
-  "fat": 25,
-  "fiber": 6,
-  "image": "/images/dishes/Alcapurrias.jpg"
-},
-{
-  "id": 1024,
-  "name": "Bacalaitos",
-  "country": "Puerto Rico",
-  "region": "Americas",
-  "emoji": "🐟",
-  "cal": 390,
-  "budget": 6,
-  "time": "35 min",
-  "spice": 1,
-  "tags": ["dairy-free"],
-  "desc": "Thin crispy Puerto Rican salt cod fritters served hot as a beachside snack or street food favorite.",
-  "ingredients": ["Salt cod", "Flour", "Garlic", "Cilantro", "Adobo", "Water", "Oil"],
-  "swaps": {
-    "gluten": [{"from": "Flour", "to": "Rice flour", "note": "Makes the fritters crisp and gluten-free"}],
-    "vegan": [{"from": "Salt cod", "to": "Shredded hearts of palm", "note": "Add nori flakes for seafood flavor"}]
-  },
-  "protein": 20,
-  "carbs": 42,
-  "fat": 16,
-  "fiber": 3,
-  "image": "/images/dishes/Bacalaitos.jpg"
-},
-{
-  "id": 1025,
-  "name": "Asopao de Pollo",
-  "country": "Puerto Rico",
-  "region": "Americas",
-  "emoji": "🍲",
-  "cal": 460,
-  "budget": 8,
-  "time": "1 hr",
-  "spice": 1,
-  "tags": ["dairy-free", "gluten-free"],
-  "desc": "A comforting Puerto Rican chicken and rice stew flavored with sofrito, olives, herbs, and broth.",
-  "ingredients": ["Chicken", "Rice", "Sofrito", "Chicken broth", "Olives", "Cilantro", "Tomato sauce"],
-  "swaps": {
-    "vegan": [{"from": "Chicken", "to": "Chickpeas + mushrooms", "note": "Use vegetable broth and extra sofrito"}]
-  },
-  "protein": 28,
-  "carbs": 55,
-  "fat": 12,
-  "fiber": 5,
-  "image": "/images/dishes/Asopao-de-Pollo.jpg"
-},
-{
-  "id": 1026,
-  "name": "Tembleque",
-  "country": "Puerto Rico",
-  "region": "Americas",
-  "emoji": "🥥",
-  "cal": 280,
-  "budget": 4,
-  "time": "20 min",
-  "spice": 1,
-  "tags": ["dairy-free", "vegan", "gluten-free"],
-  "desc": "Silky Puerto Rican coconut pudding flavored with cinnamon and served chilled until it gently jiggles.",
-  "ingredients": ["Coconut milk", "Sugar", "Cornstarch", "Cinnamon", "Vanilla", "Salt"],
-  "swaps": {
-    "vegan": [{"from": "Already vegan", "to": "Already vegan", "note": "Naturally dairy-free and plant-based"}]
-  },
-  "protein": 4,
-  "carbs": 38,
-  "fat": 12,
-  "fiber": 2,
-  "image": "/images/dishes/Tembleque.jpg"
-},
-{
-  "id": 1027,
-  "name": "Arroz con Dulce",
-  "country": "Puerto Rico",
-  "region": "Americas",
-  "emoji": "🍚",
-  "cal": 360,
-  "budget": 5,
-  "time": "1 hr",
-  "spice": 1,
-  "tags": ["dairy-free", "vegetarian", "gluten-free"],
-  "desc": "Puerto Rican coconut rice pudding cooked with cinnamon, cloves, ginger, raisins, and coconut milk.",
-  "ingredients": ["Rice", "Coconut milk", "Cinnamon", "Cloves", "Ginger", "Raisins", "Sugar"],
-  "swaps": {
-    "vegan": [{"from": "Already dairy-free", "to": "Already dairy-free", "note": "Use plant-based sugar if needed"}]
-  },
-  "protein": 5,
-  "carbs": 68,
-  "fat": 8,
-  "fiber": 3,
-  "image": "/images/dishes/Arroz-con-Dulce.jpg"
-},
-{
-  "id": 1028,
-  "name": "Sorullitos",
-  "country": "Puerto Rico",
-  "region": "Americas",
-  "emoji": "🧀",
-  "cal": 340,
-  "budget": 4,
-  "time": "30 min",
-  "spice": 1,
-  "tags": ["vegetarian", "gluten-free-option"],
-  "desc": "Golden fried Puerto Rican cornmeal sticks, often filled with cheese and served with mayo-ketchup sauce.",
-  "ingredients": ["Cornmeal", "Water", "Butter", "Sugar", "Cheese", "Salt", "Oil"],
-  "swaps": {
-    "dairy": [{"from": "Cheese and butter", "to": "Vegan cheese + olive oil", "note": "Keeps the center rich"}]
-  },
-  "protein": 9,
-  "carbs": 42,
-  "fat": 15,
-  "fiber": 3,
-  "image": "/images/dishes/Sorullitos.jpg"
-},
-{
-  "id": 1029,
-  "name": "Flan de Queso",
-  "country": "Puerto Rico",
-  "region": "Americas",
-  "emoji": "🍮",
-  "cal": 420,
-  "budget": 6,
-  "time": "1.5 hrs",
-  "spice": 1,
-  "tags": ["vegetarian", "dairy"],
-  "desc": "Creamy Puerto Rican cream cheese flan with a smooth custard texture and glossy caramel topping.",
-  "ingredients": ["Cream cheese", "Eggs", "Condensed milk", "Evaporated milk", "Sugar", "Vanilla", "Caramel"],
-  "swaps": {
-    "dairy": [{"from": "Cream cheese and milk", "to": "Coconut cream + vegan cream cheese", "note": "Changes flavor but keeps creaminess"}]
-  },
-  "protein": 10,
-  "carbs": 52,
-  "fat": 18,
-  "fiber": 1,
-  "image": "/images/dishes/Flan-de-Queso.jpg"
-},
-  {
-  "id": 1001,
-  "name": "Choripan",
-  "country": "Argentina",
-  "region": "South America",
-  "emoji": "🌭",
-  "cal": 520,
-  "budget": 6,
-  "time": "25 min",
-  "spice": 2,
-  "tags": ["gluten"],
-  "desc": "Grilled chorizo sausage served in crusty bread with fresh chimichurri sauce.",
-  "ingredients": ["Chorizo sausage", "Bread roll", "Chimichurri", "Parsley", "Garlic"],
-  "swaps": {
-    "gluten": [{ "from": "Bread roll", "to": "Gluten-free roll", "note": "Toast before serving" }],
-    "vegan": [{ "from": "Chorizo sausage", "to": "Plant-based sausage", "note": "Grill until browned" }]
-  },
-  "protein": 24,
-  "carbs": 42,
-  "fat": 29,
-  "fiber": 4,
-  "image": "/images/dishes/Choripan.jpg"
-},
-{
-  "id": 1002,
-  "name": "Provoleta",
-  "country": "Argentina",
-  "region": "South America",
-  "emoji": "🧀",
-  "cal": 430,
-  "budget": 7,
-  "time": "15 min",
-  "spice": 1,
-  "tags": ["dairy"],
-  "desc": "Grilled provolone cheese seasoned with oregano, chili flakes, and olive oil.",
-  "ingredients": ["Provolone cheese", "Oregano", "Chili flakes", "Olive oil", "Bread"],
-  "swaps": {
-    "dairy": [{ "from": "Provolone cheese", "to": "Vegan melting cheese", "note": "Use a firm slice" }],
-    "gluten": [{ "from": "Bread", "to": "Gluten-free bread", "note": "Serve toasted" }]
-  },
-  "protein": 23,
-  "carbs": 18,
-  "fat": 31,
-  "fiber": 2,
-  "image": "/images/dishes/Provoleta.jpg"
-},
-{
-  "id": 1003,
-  "name": "Humita en Chala",
-  "country": "Argentina",
-  "region": "South America",
-  "emoji": "🌽",
-  "cal": 390,
-  "budget": 5,
-  "time": "55 min",
-  "spice": 1,
-  "tags": ["vegetarian", "dairy"],
-  "desc": "Fresh corn mixture wrapped in corn husks and steamed until tender.",
-  "ingredients": ["Fresh corn", "Corn husks", "Onion", "Bell pepper", "Cheese"],
-  "swaps": {
-    "dairy": [{ "from": "Cheese", "to": "Vegan cheese", "note": "Use a mild melting style" }],
-    "vegan": [{ "from": "Cheese", "to": "Nutritional yeast", "note": "Adds savory flavor" }]
-  },
-  "protein": 12,
-  "carbs": 58,
-  "fat": 13,
-  "fiber": 7,
-  "image": "/images/dishes/Humita-en-Chala.jpg"
-},
-{
-  "id": 1004,
-  "name": "Carbonada Criolla",
-  "country": "Argentina",
-  "region": "South America",
-  "emoji": "🍲",
-  "cal": 610,
-  "budget": 9,
-  "time": "1 hr 20 min",
-  "spice": 1,
-  "tags": [],
-  "desc": "Sweet and savory Argentine beef stew with squash, potatoes, corn, and fruit.",
-  "ingredients": ["Beef", "Squash", "Potatoes", "Corn", "Peaches"],
-  "swaps": {
-    "vegan": [{ "from": "Beef", "to": "Mushrooms and beans", "note": "Keeps the stew hearty" }]
-  },
-  "protein": 34,
-  "carbs": 62,
-  "fat": 21,
-  "fiber": 8,
-  "image": "/images/dishes/Carbonada-Criolla.jpg"
-},
-{
-  "id": 1005,
-  "name": "Matambre a la Pizza",
-  "country": "Argentina",
-  "region": "South America",
-  "emoji": "🥩",
-  "cal": 720,
-  "budget": 11,
-  "time": "1 hr",
-  "spice": 1,
-  "tags": ["dairy"],
-  "desc": "Thin flank steak topped with tomato sauce, mozzarella, oregano, and olives.",
-  "ingredients": ["Flank steak", "Tomato sauce", "Mozzarella", "Oregano", "Olives"],
-  "swaps": {
-    "dairy": [{ "from": "Mozzarella", "to": "Dairy-free mozzarella", "note": "Melt under the broiler" }]
-  },
-  "protein": 52,
-  "carbs": 14,
-  "fat": 48,
-  "fiber": 3,
-  "image": "/images/dishes/Matambre-a-la-Pizza.jpg"
-},
-{
-  "id": 1006,
-  "name": "Vitel Tone",
-  "country": "Argentina",
-  "region": "South America",
-  "emoji": "🍖",
-  "cal": 540,
-  "budget": 10,
-  "time": "1 hr 15 min",
-  "spice": 1,
-  "tags": ["eggs", "fish"],
-  "desc": "Tender sliced veal served cold with creamy tuna, caper, and mayonnaise sauce.",
-  "ingredients": ["Veal", "Tuna", "Mayonnaise", "Capers", "Egg yolks"],
-  "swaps": {
-    "fish": [{ "from": "Tuna", "to": "Roasted chickpeas", "note": "Blend into the sauce for body" }],
-    "eggs": [{ "from": "Mayonnaise", "to": "Egg-free mayonnaise", "note": "Keeps the sauce creamy" }]
-  },
-  "protein": 42,
-  "carbs": 6,
-  "fat": 38,
-  "fiber": 1,
-  "image": "/images/dishes/Vitel-Tone.jpg"
-},
-{
-  "id": 1007,
-  "name": "Pastel de Papa",
-  "country": "Argentina",
-  "region": "South America",
-  "emoji": "🥔",
-  "cal": 650,
-  "budget": 8,
-  "time": "1 hr",
-  "spice": 1,
-  "tags": ["dairy"],
-  "desc": "Argentine-style shepherd's pie with seasoned beef, mashed potatoes, and baked cheese topping.",
-  "ingredients": ["Ground beef", "Potatoes", "Onion", "Eggs", "Cheese"],
-  "swaps": {
-    "dairy": [{ "from": "Cheese", "to": "Dairy-free cheese", "note": "Sprinkle on top before baking" }],
-    "vegan": [{ "from": "Ground beef", "to": "Lentils", "note": "Season well with paprika and cumin" }]
-  },
-  "protein": 32,
-  "carbs": 58,
-  "fat": 31,
-  "fiber": 7,
-  "image": "/images/dishes/Pastel-de-Papa.jpg"
-},
-{
-  "id": 1008,
-  "name": "Fugazzeta",
-  "country": "Argentina",
-  "region": "South America",
-  "emoji": "🍕",
-  "cal": 760,
-  "budget": 7,
-  "time": "50 min",
-  "spice": 1,
-  "tags": ["gluten", "dairy"],
-  "desc": "Argentine stuffed pizza filled with mozzarella and topped with sweet onions.",
-  "ingredients": ["Pizza dough", "Mozzarella", "Onions", "Oregano", "Olive oil"],
-  "swaps": {
-    "gluten": [{ "from": "Pizza dough", "to": "Gluten-free pizza dough", "note": "Bake until crisp" }],
-    "dairy": [{ "from": "Mozzarella", "to": "Vegan mozzarella", "note": "Use a good melting brand" }]
-  },
-  "protein": 28,
-  "carbs": 84,
-  "fat": 34,
-  "fiber": 5,
-  "image": "/images/dishes/Fugazzeta.jpg"
-},
-{
-  "id": 1009,
-  "name": "Revuelto Gramajo",
-  "country": "Argentina",
-  "region": "South America",
-  "emoji": "🥚",
-  "cal": 620,
-  "budget": 6,
-  "time": "30 min",
-  "spice": 1,
-  "tags": ["eggs"],
-  "desc": "Scrambled eggs mixed with crispy potatoes, ham, peas, and onions.",
-  "ingredients": ["Eggs", "Potatoes", "Ham", "Peas", "Onion"],
-  "swaps": {
-    "eggs": [{ "from": "Eggs", "to": "Tofu scramble", "note": "Season with turmeric and black salt" }],
-    "vegan": [{ "from": "Ham", "to": "Smoked mushrooms", "note": "Pan-fry until crisp" }]
-  },
-  "protein": 26,
-  "carbs": 54,
-  "fat": 34,
-  "fiber": 6,
-  "image": "/images/dishes/Revuelto-Gramajo.jpg"
-},
-{
-  "id": 1010,
-  "name": "Dulce de Leche Flan",
-  "country": "Argentina",
-  "region": "South America",
-  "emoji": "🍮",
-  "cal": 480,
-  "budget": 5,
-  "time": "1 hr 10 min",
-  "spice": 0,
-  "tags": ["dairy", "eggs"],
-  "desc": "Creamy caramel custard served with rich dulce de leche.",
-  "ingredients": ["Eggs", "Milk", "Sugar", "Vanilla", "Dulce de leche"],
-  "swaps": {
-    "dairy": [{ "from": "Milk", "to": "Coconut milk", "note": "Adds richness" }],
-    "eggs": [{ "from": "Eggs", "to": "Cornstarch custard base", "note": "Chill until fully set" }]
-  },
-  "protein": 12,
-  "carbs": 62,
-  "fat": 19,
-  "fiber": 1,
-  "image": "/images/dishes/Dulce-de-Leche-Flan.jpg"
-},
-  {
-  "id": 1011,
-  "name": "French Onion Soup",
-  "country": "France",
-  "region": "Europe",
-  "emoji": "🧅",
-  "cal": 420,
-  "budget": 6,
-  "time": "1 hr",
-  "spice": 1,
-  "tags": ["dairy", "gluten"],
-  "desc": "Slow-cooked caramelized onion soup topped with toasted bread and melted cheese.",
-  "ingredients": ["Onions", "Beef stock", "Baguette", "Gruyere cheese", "Butter"],
-  "swaps": {
-    "dairy": [{ "from": "Gruyere cheese", "to": "Vegan melting cheese", "note": "Broil until bubbly" }],
-    "gluten": [{ "from": "Baguette", "to": "Gluten-free bread", "note": "Toast before topping" }],
-    "vegan": [{ "from": "Beef stock", "to": "Vegetable stock", "note": "Add mushrooms for depth" }]
-  },
-  "protein": 16,
-  "carbs": 42,
-  "fat": 21,
-  "fiber": 5,
-  "image": "/images/dishes/French-Onion-Soup.jpg"
-},
-{
-  "id": 1012,
-  "name": "Steak Frites",
-  "country": "France",
-  "region": "Europe",
-  "emoji": "🥩",
-  "cal": 820,
-  "budget": 12,
-  "time": "35 min",
-  "spice": 1,
-  "tags": [],
-  "desc": "Pan-seared steak served with crispy fries and a simple herb butter or sauce.",
-  "ingredients": ["Steak", "Potatoes", "Butter", "Parsley", "Garlic"],
-  "swaps": {
-    "dairy": [{ "from": "Butter", "to": "Olive oil", "note": "Use for a lighter finish" }],
-    "vegan": [{ "from": "Steak", "to": "Portobello mushroom steak", "note": "Sear until browned" }]
-  },
-  "protein": 46,
-  "carbs": 58,
-  "fat": 44,
-  "fiber": 6,
-  "image": "/images/dishes/Steak-Frites.jpg"
-},
-{
-  "id": 1013,
-  "name": "Croque Monsieur",
-  "country": "France",
-  "region": "Europe",
-  "emoji": "🥪",
-  "cal": 690,
-  "budget": 7,
-  "time": "25 min",
-  "spice": 1,
-  "tags": ["dairy", "gluten"],
-  "desc": "Classic French grilled ham and cheese sandwich with creamy bechamel sauce.",
-  "ingredients": ["Bread", "Ham", "Gruyere cheese", "Milk", "Butter"],
-  "swaps": {
-    "dairy": [{ "from": "Gruyere cheese", "to": "Dairy-free cheese", "note": "Use a meltable style" }],
-    "gluten": [{ "from": "Bread", "to": "Gluten-free bread", "note": "Toast well" }],
-    "vegan": [{ "from": "Ham", "to": "Smoked mushrooms", "note": "Adds savory flavor" }]
-  },
-  "protein": 34,
-  "carbs": 48,
-  "fat": 39,
-  "fiber": 3,
-  "image": "/images/dishes/Croque-Monsieur.jpg"
-},
-{
-  "id": 1014,
-  "name": "Gratin Dauphinois",
-  "country": "France",
-  "region": "Europe",
-  "emoji": "🥔",
-  "cal": 540,
-  "budget": 6,
-  "time": "1 hr 10 min",
-  "spice": 1,
-  "tags": ["dairy"],
-  "desc": "Thinly sliced potatoes baked slowly with cream, garlic, and cheese until tender.",
-  "ingredients": ["Potatoes", "Cream", "Garlic", "Gruyere cheese", "Nutmeg"],
-  "swaps": {
-    "dairy": [{ "from": "Cream", "to": "Cashew cream", "note": "Keeps the gratin rich" }],
-    "vegan": [{ "from": "Gruyere cheese", "to": "Nutritional yeast", "note": "Adds cheesy flavor" }]
-  },
-  "protein": 14,
-  "carbs": 52,
-  "fat": 31,
-  "fiber": 5,
-  "image": "/images/dishes/Gratin-Dauphinois.jpg"
-},
-{
-  "id": 1015,
-  "name": "Blanquette de Veau",
-  "country": "France",
-  "region": "Europe",
-  "emoji": "🍲",
-  "cal": 650,
-  "budget": 11,
-  "time": "1 hr 30 min",
-  "spice": 1,
-  "tags": ["dairy"],
-  "desc": "Tender veal stew in a creamy white sauce with carrots, mushrooms, and herbs.",
-  "ingredients": ["Veal", "Carrots", "Mushrooms", "Cream", "Bay leaf"],
-  "swaps": {
-    "dairy": [{ "from": "Cream", "to": "Oat cream", "note": "Stir in at the end" }],
-    "vegan": [{ "from": "Veal", "to": "White beans and mushrooms", "note": "Simmer until tender" }]
-  },
-  "protein": 42,
-  "carbs": 32,
-  "fat": 34,
-  "fiber": 5,
-  "image": "/images/dishes/Blanquette-de-Veau.jpg"
-},
-{
-  "id": 1016,
-  "name": "Sole Meuniere",
-  "country": "France",
-  "region": "Europe",
-  "emoji": "🐟",
-  "cal": 480,
-  "budget": 10,
-  "time": "25 min",
-  "spice": 1,
-  "tags": ["fish", "dairy", "gluten"],
-  "desc": "Delicate sole lightly floured, pan-fried in butter, and finished with lemon and parsley.",
-  "ingredients": ["Sole fillets", "Flour", "Butter", "Lemon", "Parsley"],
-  "swaps": {
-    "fish": [{ "from": "Sole fillets", "to": "Tofu cutlets", "note": "Coat and pan-fry gently" }],
-    "gluten": [{ "from": "Flour", "to": "Rice flour", "note": "Creates a light crust" }],
-    "dairy": [{ "from": "Butter", "to": "Olive oil", "note": "Finish with lemon" }]
-  },
-  "protein": 38,
-  "carbs": 18,
-  "fat": 28,
-  "fiber": 2,
-  "image": "/images/dishes/Sole-Meuniere.jpg"
-},
-{
-  "id": 1017,
-  "name": "Gougeres",
-  "country": "France",
-  "region": "Europe",
-  "emoji": "🧀",
-  "cal": 360,
-  "budget": 5,
-  "time": "45 min",
-  "spice": 0,
-  "tags": ["dairy", "gluten", "eggs"],
-  "desc": "Light French cheese puffs made with choux pastry and Gruyere cheese.",
-  "ingredients": ["Flour", "Eggs", "Butter", "Gruyere cheese", "Milk"],
-  "swaps": {
-    "dairy": [{ "from": "Gruyere cheese", "to": "Dairy-free cheese", "note": "Use finely grated" }],
-    "gluten": [{ "from": "Flour", "to": "Gluten-free flour blend", "note": "Use a baking blend" }],
-    "eggs": [{ "from": "Eggs", "to": "Aquafaba", "note": "Texture will be softer" }]
-  },
-  "protein": 14,
-  "carbs": 24,
-  "fat": 23,
-  "fiber": 1,
-  "image": "/images/dishes/Gougeres.jpg"
-},
-{
-  "id": 1018,
-  "name": "Aligot",
-  "country": "France",
-  "region": "Europe",
-  "emoji": "🥔",
-  "cal": 620,
-  "budget": 7,
-  "time": "40 min",
-  "spice": 0,
-  "tags": ["dairy"],
-  "desc": "Stretchy mashed potatoes blended with cheese, cream, butter, and garlic.",
-  "ingredients": ["Potatoes", "Tomme cheese", "Cream", "Butter", "Garlic"],
-  "swaps": {
-    "dairy": [{ "from": "Tomme cheese", "to": "Vegan mozzarella", "note": "Choose a stretchy style" }],
-    "vegan": [{ "from": "Cream", "to": "Cashew cream", "note": "Blend until very smooth" }]
-  },
-  "protein": 18,
-  "carbs": 56,
-  "fat": 36,
-  "fiber": 5,
-  "image": "/images/dishes/Aligot.jpg"
-},
-{
-  "id": 1019,
-  "name": "Clafoutis",
-  "country": "France",
-  "region": "Europe",
-  "emoji": "🍒",
-  "cal": 390,
-  "budget": 5,
-  "time": "50 min",
-  "spice": 0,
-  "tags": ["dairy", "eggs", "gluten"],
-  "desc": "Rustic baked French custard dessert traditionally made with cherries.",
-  "ingredients": ["Cherries", "Eggs", "Milk", "Flour", "Sugar"],
-  "swaps": {
-    "dairy": [{ "from": "Milk", "to": "Almond milk", "note": "Use unsweetened" }],
-    "gluten": [{ "from": "Flour", "to": "Rice flour", "note": "Keeps it light" }],
-    "eggs": [{ "from": "Eggs", "to": "Cornstarch custard base", "note": "Bake until set" }]
-  },
-  "protein": 10,
-  "carbs": 56,
-  "fat": 13,
-  "fiber": 3,
-  "image": "/images/dishes/Clafoutis.jpg"
-},
-{
-  "id": 1020,
-  "name": "Pissaladiere",
-  "country": "France",
-  "region": "Europe",
-  "emoji": "🫓",
-  "cal": 520,
-  "budget": 6,
-  "time": "1 hr",
-  "spice": 1,
-  "tags": ["fish", "gluten"],
-  "desc": "Provencal onion tart topped with anchovies, olives, and herbs.",
-  "ingredients": ["Bread dough", "Onions", "Anchovies", "Olives", "Thyme"],
-  "swaps": {
-    "fish": [{ "from": "Anchovies", "to": "Capers", "note": "Adds salty flavor" }],
-    "gluten": [{ "from": "Bread dough", "to": "Gluten-free flatbread base", "note": "Bake until crisp" }]
-  },
-  "protein": 14,
-  "carbs": 68,
-  "fat": 21,
-  "fiber": 6,
-  "image": "/images/dishes/Pissaladiere.jpg"
-},
-{
-  "id": 1021,
-  "name": "Choucroute Garnie",
-  "country": "France",
-  "region": "Europe",
-  "emoji": "🥬",
-  "cal": 760,
-  "budget": 10,
-  "time": "1 hr 20 min",
-  "spice": 1,
-  "tags": [],
-  "desc": "Alsatian sauerkraut served with sausages, pork, potatoes, and mustard.",
-  "ingredients": ["Sauerkraut", "Sausages", "Pork", "Potatoes", "Mustard"],
-  "swaps": {
-    "vegan": [{ "from": "Sausages and pork", "to": "Plant-based sausages", "note": "Simmer with sauerkraut" }]
-  },
-  "protein": 39,
-  "carbs": 46,
-  "fat": 43,
-  "fiber": 8,
-  "image": "/images/dishes/Choucroute-Garnie.jpg"
-},
-{
-  "id": 1022,
-  "name": "Hachis Parmentier",
-  "country": "France",
-  "region": "Europe",
-  "emoji": "🥘",
-  "cal": 640,
-  "budget": 8,
-  "time": "1 hr",
-  "spice": 1,
-  "tags": ["dairy"],
-  "desc": "French minced beef and mashed potato casserole baked until golden on top.",
-  "ingredients": ["Ground beef", "Potatoes", "Onion", "Butter", "Milk"],
-  "swaps": {
-    "dairy": [{ "from": "Butter and milk", "to": "Olive oil and oat milk", "note": "Mash until creamy" }],
-    "vegan": [{ "from": "Ground beef", "to": "Lentils", "note": "Cook with onion and herbs" }]
-  },
-  "protein": 32,
-  "carbs": 55,
-  "fat": 31,
-  "fiber": 7,
-  "image": "/images/dishes/Hachis-Parmentier.jpg"
-},
-{
-  "id": 1023,
-  "name": "Escargots de Bourgogne",
-  "country": "France",
-  "region": "Europe",
-  "emoji": "🐌",
-  "cal": 330,
-  "budget": 9,
-  "time": "30 min",
-  "spice": 1,
-  "tags": ["dairy"],
-  "desc": "Burgundy-style snails baked with garlic, parsley, and butter.",
-  "ingredients": ["Snails", "Butter", "Garlic", "Parsley", "Shallots"],
-  "swaps": {
-    "dairy": [{ "from": "Butter", "to": "Olive oil spread", "note": "Mix with garlic and parsley" }],
-    "vegan": [{ "from": "Snails", "to": "Mushroom caps", "note": "Bake with garlic parsley topping" }]
-  },
-  "protein": 18,
-  "carbs": 8,
-  "fat": 25,
-  "fiber": 1,
-  "image": "/images/dishes/Escargots-de-Bourgogne.jpg"
-},
-{
-  "id": 1024,
-  "name": "Souffle au Fromage",
-  "country": "France",
-  "region": "Europe",
-  "emoji": "🧀",
-  "cal": 460,
-  "budget": 6,
-  "time": "45 min",
-  "spice": 0,
-  "tags": ["dairy", "eggs", "gluten"],
-  "desc": "Light and airy French cheese souffle made with eggs, bechamel, and Gruyere.",
-  "ingredients": ["Eggs", "Gruyere cheese", "Milk", "Butter", "Flour"],
-  "swaps": {
-    "dairy": [{ "from": "Gruyere cheese", "to": "Dairy-free cheese", "note": "Use finely shredded" }],
-    "gluten": [{ "from": "Flour", "to": "Cornstarch", "note": "Use less than flour" }],
-    "eggs": [{ "from": "Eggs", "to": "Aquafaba", "note": "Rise may be softer" }]
-  },
-  "protein": 24,
-  "carbs": 18,
-  "fat": 32,
-  "fiber": 1,
-  "image": "/images/dishes/Souffle-au-Fromage.jpg"
-},
-{
-  "id": 1025,
-  "name": "Profiteroles",
-  "country": "France",
-  "region": "Europe",
-  "emoji": "🍫",
-  "cal": 510,
-  "budget": 6,
-  "time": "1 hr",
-  "spice": 0,
-  "tags": ["dairy", "eggs", "gluten"],
-  "desc": "Choux pastry puffs filled with cream or ice cream and topped with chocolate sauce.",
-  "ingredients": ["Flour", "Eggs", "Butter", "Cream", "Chocolate"],
-  "swaps": {
-    "dairy": [{ "from": "Cream", "to": "Coconut whipped cream", "note": "Chill before filling" }],
-    "gluten": [{ "from": "Flour", "to": "Gluten-free flour blend", "note": "Use a baking blend" }],
-    "eggs": [{ "from": "Eggs", "to": "Aquafaba", "note": "Pastry may be less airy" }]
-  },
-  "protein": 9,
-  "carbs": 52,
-  "fat": 29,
-  "fiber": 3,
-  "image": "/images/dishes/Profiteroles.jpg"
-},
- {
-  "id": 8010,
-  "name": "Beef Brisket",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🥩",
-  "cal": 720,
-  "budget": 18,
-  "time": "6 hrs",
-  "spice": 2,
-  "tags": [],
-  "desc": "Slow-smoked Texas-style beef brisket with a peppery bark and tender sliced meat.",
-  "ingredients": ["Beef brisket", "Salt", "Black pepper", "Garlic powder", "BBQ rub"],
-  "swaps": {},
-  "protein": 48,
-  "carbs": 6,
-  "fat": 54,
-  "fiber": 1,
-  "image": "/images/dishes/Beef-Brisket.jpg"
-},
-{
-  "id": 8011,
-  "name": "Pulled Pork Sandwich",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🐖",
-  "cal": 690,
-  "budget": 12,
-  "time": "4 hrs",
-  "spice": 2,
-  "tags": ["gluten"],
-  "desc": "Tender shredded pork tossed with barbecue sauce and served on a soft bun.",
-  "ingredients": ["Pork shoulder", "BBQ sauce", "Burger bun", "Coleslaw", "Paprika"],
-  "swaps": {},
-  "protein": 38,
-  "carbs": 52,
-  "fat": 34,
-  "fiber": 3,
-  "image": "/images/dishes/Pulled-Pork-Sandwich.jpg"
-},
-{
-  "id": 8012,
-  "name": "Nashville Hot Chicken",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🔥",
-  "cal": 760,
-  "budget": 11,
-  "time": "1 hr",
-  "spice": 5,
-  "tags": ["gluten", "dairy"],
-  "desc": "Crispy fried chicken coated in a fiery Nashville-style cayenne spice oil.",
-  "ingredients": ["Chicken", "Flour", "Buttermilk", "Cayenne pepper", "Pickles"],
-  "swaps": {},
-  "protein": 42,
-  "carbs": 48,
-  "fat": 41,
-  "fiber": 2,
-  "image": "/images/dishes/Nashville-Hot-Chicken.jpg"
-},
-{
-  "id": 8013,
-  "name": "Buffalo Wings",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🍗",
-  "cal": 640,
-  "budget": 10,
-  "time": "45 min",
-  "spice": 4,
-  "tags": ["dairy"],
-  "desc": "Crispy chicken wings tossed in tangy Buffalo sauce and served with celery and dip.",
-  "ingredients": ["Chicken wings", "Hot sauce", "Butter", "Celery", "Blue cheese dressing"],
-  "swaps": {},
-  "protein": 39,
-  "carbs": 8,
-  "fat": 48,
-  "fiber": 1,
-  "image": "/images/dishes/Buffalo-Wings.jpg"
-},
-{
-  "id": 8014,
-  "name": "Philly Cheesesteak",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🥪",
-  "cal": 760,
-  "budget": 13,
-  "time": "30 min",
-  "spice": 1,
-  "tags": ["dairy", "gluten"],
-  "desc": "Philadelphia sandwich with thin-sliced beef, melted cheese, and onions on a hoagie roll.",
-  "ingredients": ["Ribeye steak", "Hoagie roll", "Provolone", "Onion", "Bell pepper"],
-  "swaps": {},
-  "protein": 42,
-  "carbs": 58,
-  "fat": 38,
-  "fiber": 3,
-  "image": "/images/dishes/Philly-Cheesesteak.jpg"
-},
-{
-  "id": 8015,
-  "name": "Chicago Deep-Dish Pizza",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🍕",
-  "cal": 880,
-  "budget": 14,
-  "time": "1 hr 20 min",
-  "spice": 1,
-  "tags": ["dairy", "gluten"],
-  "desc": "Thick Chicago-style pizza baked in a deep pan with cheese, toppings, and tomato sauce.",
-  "ingredients": ["Pizza dough", "Mozzarella", "Tomato sauce", "Sausage", "Parmesan"],
-  "swaps": {},
-  "protein": 36,
-  "carbs": 92,
-  "fat": 38,
-  "fiber": 6,
-  "image": "/images/dishes/Chicago-Deep-Dish-Pizza.jpg"
-},
-{
-  "id": 8016,
-  "name": "Chicago Hot Dog",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🌭",
-  "cal": 460,
-  "budget": 7,
-  "time": "15 min",
-  "spice": 1,
-  "tags": ["gluten"],
-  "desc": "Classic Chicago hot dog topped with mustard, relish, onion, tomato, pickle, peppers, and celery salt.",
-  "ingredients": ["Hot dog", "Poppy seed bun", "Mustard", "Relish", "Pickle spear", "Tomato"],
-  "swaps": {},
-  "protein": 18,
-  "carbs": 42,
-  "fat": 24,
-  "fiber": 3,
-  "image": "/images/dishes/Chicago-Hot-Dog.jpg"
-},
-{
-  "id": 8017,
-  "name": "New York Pizza",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🍕",
-  "cal": 620,
-  "budget": 9,
-  "time": "45 min",
-  "spice": 1,
-  "tags": ["dairy", "gluten"],
-  "desc": "Thin, foldable New York-style pizza with tomato sauce, mozzarella, and a crisp chewy crust.",
-  "ingredients": ["Pizza dough", "Tomato sauce", "Mozzarella", "Olive oil", "Oregano"],
-  "swaps": {},
-  "protein": 26,
-  "carbs": 78,
-  "fat": 23,
-  "fiber": 4,
-  "image": "/images/dishes/New-York-Pizza.jpg"
-},
-{
-  "id": 8018,
-  "name": "Po' Boy",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🥖",
-  "cal": 720,
-  "budget": 13,
-  "time": "35 min",
-  "spice": 2,
-  "tags": ["gluten", "shellfish"],
-  "desc": "Louisiana sandwich filled with fried shrimp, lettuce, tomato, pickles, and remoulade.",
-  "ingredients": ["French bread", "Shrimp", "Lettuce", "Tomato", "Pickles", "Remoulade"],
-  "swaps": {},
-  "protein": 34,
-  "carbs": 74,
-  "fat": 31,
-  "fiber": 5,
-  "image": "/images/dishes/Po'-Boy.jpg"
-},
-{
-  "id": 8019,
-  "name": "Muffuletta",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🥪",
-  "cal": 820,
-  "budget": 14,
-  "time": "20 min",
-  "spice": 1,
-  "tags": ["dairy", "gluten"],
-  "desc": "New Orleans sandwich layered with Italian meats, cheese, and olive salad.",
-  "ingredients": ["Round bread", "Salami", "Ham", "Provolone", "Olive salad"],
-  "swaps": {},
-  "protein": 39,
-  "carbs": 65,
-  "fat": 44,
-  "fiber": 5,
-  "image": "/images/dishes/Muffuletta.jpg"
-},
-{
-  "id": 8020,
-  "name": "Red Beans and Rice",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🍚",
-  "cal": 560,
-  "budget": 7,
-  "time": "1 hr 30 min",
-  "spice": 2,
-  "tags": [],
-  "desc": "Louisiana comfort dish with red beans, rice, smoked sausage, and Creole seasoning.",
-  "ingredients": ["Red beans", "Rice", "Smoked sausage", "Onion", "Celery", "Creole seasoning"],
-  "swaps": {},
-  "protein": 25,
-  "carbs": 76,
-  "fat": 16,
-  "fiber": 13,
-  "image": "/images/dishes/Red-Beans-and-Rice.jpg"
-},
-{
-  "id": 8021,
-  "name": "Shrimp and Grits",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🦐",
-  "cal": 610,
-  "budget": 13,
-  "time": "35 min",
-  "spice": 2,
-  "tags": ["shellfish", "dairy"],
-  "desc": "Southern dish with seasoned shrimp served over creamy stone-ground grits.",
-  "ingredients": ["Shrimp", "Grits", "Cheddar cheese", "Butter", "Garlic", "Green onion"],
-  "swaps": {},
-  "protein": 32,
-  "carbs": 48,
-  "fat": 31,
-  "fiber": 3,
-  "image": "/images/dishes/Shrimp-and-Grits.jpg"
-},
-{
-  "id": 8022,
-  "name": "Country Fried Steak",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🥩",
-  "cal": 790,
-  "budget": 11,
-  "time": "45 min",
-  "spice": 1,
-  "tags": ["gluten", "dairy"],
-  "desc": "Tenderized beef steak breaded, fried, and served with creamy country gravy.",
-  "ingredients": ["Cube steak", "Flour", "Eggs", "Milk", "Black pepper", "Gravy"],
-  "swaps": {},
-  "protein": 41,
-  "carbs": 46,
-  "fat": 45,
-  "fiber": 2,
-  "image": "/images/dishes/Country-Fried-Steak.jpg"
-},
-{
-  "id": 8023,
-  "name": "Biscuits and Gravy",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🥣",
-  "cal": 680,
-  "budget": 7,
-  "time": "35 min",
-  "spice": 1,
-  "tags": ["gluten", "dairy"],
-  "desc": "Southern breakfast with fluffy biscuits covered in creamy sausage gravy.",
-  "ingredients": ["Biscuits", "Breakfast sausage", "Milk", "Flour", "Black pepper"],
-  "swaps": {},
-  "protein": 23,
-  "carbs": 62,
-  "fat": 37,
-  "fiber": 2,
-  "image": "/images/dishes/Biscuits-and-Gravy.jpg"
-},
-{
-  "id": 8024,
-  "name": "Cornbread",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🌽",
-  "cal": 330,
-  "budget": 5,
-  "time": "30 min",
-  "spice": 1,
-  "tags": ["gluten", "dairy"],
-  "desc": "Golden American cornmeal bread with a tender crumb and lightly sweet flavor.",
-  "ingredients": ["Cornmeal", "Flour", "Milk", "Eggs", "Butter", "Baking powder"],
-  "swaps": {},
-  "protein": 8,
-  "carbs": 48,
-  "fat": 12,
-  "fiber": 3,
-  "image": "/images/dishes/Cornbread.jpg"
-},
-{
-  "id": 8025,
-  "name": "Baked Beans",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🫘",
-  "cal": 390,
-  "budget": 6,
-  "time": "1 hr",
-  "spice": 1,
-  "tags": [],
-  "desc": "Sweet and smoky baked beans cooked with molasses, brown sugar, and barbecue flavors.",
-  "ingredients": ["Navy beans", "Molasses", "Brown sugar", "Onion", "Bacon", "Mustard"],
-  "swaps": {},
-  "protein": 16,
-  "carbs": 64,
-  "fat": 8,
-  "fiber": 12,
-  "image": "/images/dishes/Baked-Beans.jpg"
-},
-{
-  "id": 8026,
-  "name": "Maryland Crab Cakes",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🦀",
-  "cal": 520,
-  "budget": 18,
-  "time": "35 min",
-  "spice": 1,
-  "tags": ["shellfish", "gluten"],
-  "desc": "Maryland-style crab cakes made with lump crab meat, light seasoning, and golden crust.",
-  "ingredients": ["Crab meat", "Breadcrumbs", "Egg", "Mayonnaise", "Old Bay seasoning", "Lemon"],
-  "swaps": {},
-  "protein": 33,
-  "carbs": 28,
-  "fat": 29,
-  "fiber": 2,
-  "image": "/images/dishes/Maryland-Crab-Cakes.jpg"
-},
-{
-  "id": 8027,
-  "name": "Reuben Sandwich",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🥪",
-  "cal": 760,
-  "budget": 12,
-  "time": "20 min",
-  "spice": 1,
-  "tags": ["dairy", "gluten"],
-  "desc": "Grilled deli sandwich with corned beef, Swiss cheese, sauerkraut, and Russian dressing.",
-  "ingredients": ["Rye bread", "Corned beef", "Swiss cheese", "Sauerkraut", "Russian dressing"],
-  "swaps": {},
-  "protein": 38,
-  "carbs": 58,
-  "fat": 40,
-  "fiber": 5,
-  "image": "/images/dishes/Reuben-Sandwich.jpg"
-},
-{
-  "id": 8028,
-  "name": "Cobb Salad",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🥗",
-  "cal": 540,
-  "budget": 10,
-  "time": "25 min",
-  "spice": 1,
-  "tags": ["dairy"],
-  "desc": "Classic California salad with chicken, bacon, avocado, egg, blue cheese, and greens.",
-  "ingredients": ["Chicken", "Bacon", "Avocado", "Eggs", "Blue cheese", "Lettuce"],
-  "swaps": {},
-  "protein": 35,
-  "carbs": 18,
-  "fat": 36,
-  "fiber": 7,
-  "image": "/images/dishes/Cobb-Salad.jpg"
-},
-{
-  "id": 8029,
-  "name": "Pecan Pie",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🥧",
-  "cal": 620,
-  "budget": 9,
-  "time": "1 hr",
-  "spice": 1,
-  "tags": ["gluten", "nuts", "dairy"],
-  "desc": "Southern dessert pie filled with pecans, syrup, butter, and a rich caramel-like filling.",
-  "ingredients": ["Pecans", "Pie crust", "Corn syrup", "Eggs", "Butter", "Brown sugar"],
-  "swaps": {},
-  "protein": 7,
-  "carbs": 72,
-  "fat": 34,
-  "fiber": 4,
-  "image": "/images/dishes/Pecan-Pie.jpg"
-},
-{
-  "id": 8030,
-  "name": "Peach Cobbler",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🍑",
-  "cal": 460,
-  "budget": 7,
-  "time": "50 min",
-  "spice": 1,
-  "tags": ["gluten", "dairy"],
-  "desc": "Warm Southern dessert with sweet peaches baked under a golden biscuit-style topping.",
-  "ingredients": ["Peaches", "Flour", "Sugar", "Butter", "Cinnamon", "Milk"],
-  "swaps": {},
-  "protein": 5,
-  "carbs": 68,
-  "fat": 18,
-  "fiber": 4,
-  "image": "/images/dishes/Peach-Cobbler.jpg"
-},
-{
-  "id": 8031,
-  "name": "Banana Pudding",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🍌",
-  "cal": 420,
-  "budget": 6,
-  "time": "25 min",
-  "spice": 1,
-  "tags": ["dairy", "gluten"],
-  "desc": "Creamy Southern dessert layered with bananas, vanilla wafers, and pudding.",
-  "ingredients": ["Bananas", "Vanilla wafers", "Vanilla pudding", "Milk", "Whipped cream"],
-  "swaps": {},
-  "protein": 6,
-  "carbs": 62,
-  "fat": 16,
-  "fiber": 3,
-  "image": "/images/dishes/Banana-Pudding.jpg"
-},
-{
-  "id": 8032,
-  "name": "Key Lime Pie",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🍋",
-  "cal": 470,
-  "budget": 8,
-  "time": "35 min",
-  "spice": 1,
-  "tags": ["dairy", "gluten"],
-  "desc": "Florida dessert with tart key lime filling in a graham cracker crust.",
-  "ingredients": ["Key lime juice", "Condensed milk", "Egg yolks", "Graham cracker crust", "Whipped cream"],
-  "swaps": {},
-  "protein": 8,
-  "carbs": 58,
-  "fat": 23,
-  "fiber": 2,
-  "image": "/images/dishes/Key-Lime-Pie.jpg"
-},
-{
-  "id": 8033,
-  "name": "New York Cheesecake",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🍰",
-  "cal": 610,
-  "budget": 9,
-  "time": "1 hr 20 min",
-  "spice": 1,
-  "tags": ["dairy", "gluten"],
-  "desc": "Dense and creamy New York-style cheesecake with a graham cracker crust.",
-  "ingredients": ["Cream cheese", "Sugar", "Eggs", "Sour cream", "Graham cracker crust"],
-  "swaps": {},
-  "protein": 11,
-  "carbs": 52,
-  "fat": 39,
-  "fiber": 1,
-  "image": "/images/dishes/New-York-Cheesecake.jpg"
-},
-{
-  "id": 8034,
-  "name": "Chocolate Chip Cookies",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🍪",
-  "cal": 320,
-  "budget": 5,
-  "time": "25 min",
-  "spice": 1,
-  "tags": ["gluten", "dairy"],
-  "desc": "Classic American cookies with buttery dough and melted chocolate chips.",
-  "ingredients": ["Flour", "Butter", "Sugar", "Chocolate chips", "Eggs", "Vanilla"],
-  "swaps": {},
-  "protein": 4,
-  "carbs": 42,
-  "fat": 16,
-  "fiber": 2,
-  "image": "/images/dishes/Chocolate-Chip-Cookies.jpg"
-},
-  {
-  "id": 8035,
-  "name": "Chilaquiles",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🍳",
-  "cal": 480,
-  "budget": 7,
-  "time": "25 min",
-  "spice": 2,
-  "tags": [
-    "vegetarian-option",
-    "gluten-free"
-  ],
-  "desc": "Crisp corn tortilla pieces simmered briefly in red or green salsa and finished with crema, cheese, onion, and eggs.",
-  "ingredients": [
-    "Corn tortillas",
-    "Salsa roja or salsa verde",
-    "Eggs",
-    "Mexican crema",
-    "Queso fresco",
-    "Red onion",
-    "Cilantro"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Hot salsa",
-        "to": "Mild roasted tomato salsa",
-        "note": "Keeps the flavor with less heat"
-      }
+    "id": 1011,
+    "name": "Falafel",
+    "country": "Israel",
+    "region": "Middle East",
+    "emoji": "🧆",
+    "cal": 330,
+    "budget": 5,
+    "time": "30 min",
+    "spice": 2,
+    "tags": [
+      "dairy-free",
+      "vegan",
+      "gluten-free-option"
     ],
-    "dairy": [
-      {
-        "from": "Mexican crema and queso fresco",
-        "to": "Plant-based crema and vegan cheese",
-        "note": "Use just before serving"
-      }
-    ]
-  },
-  "protein": 18,
-  "carbs": 55,
-  "fat": 21,
-  "fiber": 8,
-  "image": "/images/dishes/Chilaquiles.jpg"
-},
-{
-  "id": 8036,
-  "name": "Huevos Rancheros",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🍳",
-  "cal": 430,
-  "budget": 6,
-  "time": "25 min",
-  "spice": 2,
-  "tags": [
-    "vegetarian",
-    "gluten-free"
-  ],
-  "desc": "Fried eggs served on corn tortillas with warm ranchero tomato-chile sauce and beans.",
-  "ingredients": [
-    "Eggs",
-    "Corn tortillas",
-    "Tomatoes",
-    "Jalapeño",
-    "Onion",
-    "Refried beans",
-    "Cilantro"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Jalapeño",
-        "to": "Green bell pepper",
-        "note": "Fresh flavor without the heat"
-      }
-    ]
-  },
-  "protein": 20,
-  "carbs": 43,
-  "fat": 20,
-  "fiber": 9,
-  "image": "/images/dishes/Huevos-Rancheros.jpg"
-},
-{
-  "id": 8037,
-  "name": "Huevos a la Mexicana",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🍳",
-  "cal": 310,
-  "budget": 5,
-  "time": "15 min",
-  "spice": 2,
-  "tags": [
-    "vegetarian",
-    "gluten-free"
-  ],
-  "desc": "Scrambled eggs cooked with tomato, onion, and green chile in the colors of the Mexican flag.",
-  "ingredients": [
-    "Eggs",
-    "Tomatoes",
-    "White onion",
-    "Serrano pepper",
-    "Cilantro",
-    "Oil",
-    "Salt"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Serrano pepper",
-        "to": "Green bell pepper",
-        "note": "Keeps the color and crunch"
-      }
-    ]
-  },
-  "protein": 19,
-  "carbs": 10,
-  "fat": 21,
-  "fiber": 3,
-  "image": "/images/dishes/Huevos-a-la-Mexicana.jpg"
-},
-{
-  "id": 8038,
-  "name": "Molletes",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🥖",
-  "cal": 520,
-  "budget": 6,
-  "time": "20 min",
-  "spice": 1,
-  "tags": [
-    "vegetarian"
-  ],
-  "desc": "Toasted bolillo halves spread with refried beans, melted cheese, and fresh pico de gallo.",
-  "ingredients": [
-    "Bolillo rolls",
-    "Refried beans",
-    "Oaxaca cheese",
-    "Tomatoes",
-    "Onion",
-    "Cilantro",
-    "Lime"
-  ],
-  "swaps": {
-    "gluten": [
-      {
-        "from": "Bolillo rolls",
-        "to": "Gluten-free rolls",
-        "note": "Toast well before topping"
-      }
+    "desc": "Crispy chickpea fritters seasoned with herbs, garlic, cumin, and coriander, often served in pita with salad and tahini.",
+    "ingredients": [
+      "Chickpeas",
+      "Parsley",
+      "Cilantro",
+      "Garlic",
+      "Onion",
+      "Cumin",
+      "Tahini"
     ],
-    "dairy": [
-      {
-        "from": "Oaxaca cheese",
-        "to": "Vegan melting cheese",
-        "note": "Broil until bubbly"
-      }
-    ]
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Pita bread",
+          "to": "Lettuce wraps",
+          "note": "Keeps it fresh and gluten-free"
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 36,
+    "fat": 11,
+    "fiber": 7,
+    "image": "/images/dishes/Falafel.jpg"
   },
-  "protein": 22,
-  "carbs": 69,
-  "fat": 18,
-  "fiber": 11,
-  "image": "/images/dishes/Molletes.jpg"
-},
-{
-  "id": 8039,
-  "name": "Machaca con Huevo",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🥩",
-  "cal": 470,
-  "budget": 9,
-  "time": "25 min",
-  "spice": 2,
-  "tags": [
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Northern Mexican dried beef scrambled with eggs, tomatoes, onion, and chile.",
-  "ingredients": [
-    "Machaca dried beef",
-    "Eggs",
-    "Tomatoes",
-    "Onion",
-    "Jalapeño",
-    "Oil",
-    "Cilantro"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Jalapeño",
-        "to": "Green bell pepper",
-        "note": "Mild and family friendly"
-      }
-    ]
-  },
-  "protein": 36,
-  "carbs": 12,
-  "fat": 30,
-  "fiber": 3,
-  "image": "/images/dishes/Machaca-con-Huevo.jpg"
-},
-{
-  "id": 8040,
-  "name": "Carnitas",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🐖",
-  "cal": 590,
-  "budget": 10,
-  "time": "3 hrs",
-  "spice": 1,
-  "tags": [
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Pork slowly cooked until tender, then crisped and served with tortillas, onion, cilantro, and lime.",
-  "ingredients": [
-    "Pork shoulder",
-    "Orange",
-    "Garlic",
-    "Bay leaves",
-    "Cumin",
-    "Corn tortillas",
-    "Lime"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Pork shoulder",
-        "to": "Young jackfruit",
-        "note": "Season and crisp in a skillet"
-      }
-    ]
-  },
-  "protein": 38,
-  "carbs": 30,
-  "fat": 34,
-  "fiber": 5,
-  "image": "/images/dishes/Carnitas.jpg"
-},
-{
-  "id": 8041,
-  "name": "Torta Ahogada",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🥪",
-  "cal": 720,
-  "budget": 11,
-  "time": "50 min",
-  "spice": 4,
-  "tags": [
-    "dairy-free"
-  ],
-  "desc": "A Guadalajara-style crusty pork sandwich submerged in tomato sauce and a fiery chile de árbol salsa.",
-  "ingredients": [
-    "Birote bread",
-    "Carnitas",
-    "Tomatoes",
-    "Chile de árbol",
-    "Onion",
-    "Garlic",
-    "Lime"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Chile de árbol salsa",
-        "to": "Mild tomato salsa",
-        "note": "Serve hot salsa separately"
-      }
-    ]
-  },
-  "protein": 34,
-  "carbs": 83,
-  "fat": 28,
-  "fiber": 7,
-  "image": "/images/dishes/Torta-Ahogada.jpg"
-},
-{
-  "id": 8042,
-  "name": "Birria",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🍲",
-  "cal": 620,
-  "budget": 14,
-  "time": "4 hrs",
-  "spice": 3,
-  "tags": [
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Jalisco-style slow-braised meat in a deeply flavored chile and spice broth, served with onion and lime.",
-  "ingredients": [
-    "Beef chuck or goat",
-    "Guajillo chiles",
-    "Ancho chiles",
-    "Tomatoes",
-    "Garlic",
-    "Cinnamon",
-    "Cloves"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Hot dried chiles",
-        "to": "Guajillo and ancho only",
-        "note": "Rich chile flavor with gentler heat"
-      }
-    ]
-  },
-  "protein": 44,
-  "carbs": 20,
-  "fat": 38,
-  "fiber": 5,
-  "image": "/images/dishes/Birria.jpg"
-},
-{
-  "id": 8043,
-  "name": "Chile en Nogada",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🌶️",
-  "cal": 690,
-  "budget": 16,
-  "time": "1.5 hrs",
-  "spice": 1,
-  "tags": [
-    "gluten-free"
-  ],
-  "desc": "A poblano chile filled with savory-sweet picadillo, covered in walnut sauce, and garnished with pomegranate.",
-  "ingredients": [
-    "Poblano peppers",
-    "Ground meat",
-    "Walnuts",
-    "Pomegranate",
-    "Apple",
-    "Pear",
-    "Cream"
-  ],
-  "swaps": {
-    "dairy": [
-      {
-        "from": "Cream",
-        "to": "Unsweetened cashew cream",
-        "note": "Blends naturally with walnuts"
-      }
-    ]
-  },
-  "protein": 30,
-  "carbs": 50,
-  "fat": 39,
-  "fiber": 9,
-  "image": "/images/dishes/Chile-en-Nogada.jpg"
-},
-{
-  "id": 8044,
-  "name": "Gorditas",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🫓",
-  "cal": 460,
-  "budget": 6,
-  "time": "40 min",
-  "spice": 2,
-  "tags": [
-    "gluten-free",
-    "vegetarian-option"
-  ],
-  "desc": "Thick masa cakes split and filled with beans, meat, cheese, salsa, and fresh toppings.",
-  "ingredients": [
-    "Masa harina",
-    "Water",
-    "Salt",
-    "Refried beans",
-    "Shredded meat",
-    "Queso fresco",
-    "Salsa"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Meat and cheese",
-        "to": "Beans, mushrooms, and avocado",
-        "note": "A hearty plant-based filling"
-      }
-    ]
-  },
-  "protein": 18,
-  "carbs": 58,
-  "fat": 18,
-  "fiber": 9,
-  "image": "/images/dishes/Gorditas.jpg"
-},
-{
-  "id": 8045,
-  "name": "Flautas",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🌯",
-  "cal": 540,
-  "budget": 7,
-  "time": "35 min",
-  "spice": 2,
-  "tags": [
-    "gluten-free-option"
-  ],
-  "desc": "Rolled tortillas filled with seasoned chicken, fried until crisp, and topped with crema, lettuce, and cheese.",
-  "ingredients": [
-    "Corn tortillas",
-    "Shredded chicken",
-    "Lettuce",
-    "Mexican crema",
-    "Queso fresco",
-    "Salsa",
-    "Oil"
-  ],
-  "swaps": {
-    "dairy": [
-      {
-        "from": "Crema and queso fresco",
-        "to": "Avocado crema",
-        "note": "Creamy and dairy free"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "Chicken",
-        "to": "Mashed potatoes and black beans",
-        "note": "Season before rolling"
-      }
-    ]
-  },
-  "protein": 27,
-  "carbs": 49,
-  "fat": 26,
-  "fiber": 7,
-  "image": "/images/dishes/Flautas.jpg"
-},
-{
-  "id": 8046,
-  "name": "Menudo",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🍲",
-  "cal": 390,
-  "budget": 10,
-  "time": "4 hrs",
-  "spice": 3,
-  "tags": [
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "A restorative red chile soup with tender beef tripe and hominy, traditionally enjoyed on weekends.",
-  "ingredients": [
-    "Beef tripe",
-    "Hominy",
-    "Guajillo chiles",
-    "Garlic",
-    "Oregano",
-    "Onion",
-    "Lime"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Chile sauce",
-        "to": "Mild guajillo broth",
-        "note": "Red color and depth with less heat"
-      }
-    ]
-  },
-  "protein": 30,
-  "carbs": 31,
-  "fat": 16,
-  "fiber": 6,
-  "image": "/images/dishes/Menudo.jpg"
-},
-{
-  "id": 8047,
-  "name": "Sopa de Tortilla",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🍲",
-  "cal": 360,
-  "budget": 6,
-  "time": "35 min",
-  "spice": 2,
-  "tags": [
-    "vegetarian-option",
-    "gluten-free"
-  ],
-  "desc": "Tomato-chile broth topped with crisp tortilla strips, avocado, cheese, and crema.",
-  "ingredients": [
-    "Tomatoes",
-    "Corn tortillas",
-    "Pasilla chile",
-    "Chicken stock",
-    "Avocado",
-    "Queso fresco",
-    "Crema"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Chicken stock, cheese, and crema",
-        "to": "Vegetable stock, avocado, and plant crema",
-        "note": "Keeps it rich and satisfying"
-      }
-    ]
-  },
-  "protein": 14,
-  "carbs": 42,
-  "fat": 17,
-  "fiber": 8,
-  "image": "/images/dishes/Sopa-de-Tortilla.jpg"
-},
-{
-  "id": 8048,
-  "name": "Aguachile",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🦐",
-  "cal": 250,
-  "budget": 14,
-  "time": "25 min",
-  "spice": 4,
-  "tags": [
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Sinaloa-style shrimp cured in lime and covered with a vivid chile-cilantro sauce, cucumber, and onion.",
-  "ingredients": [
-    "Raw shrimp",
-    "Lime juice",
-    "Serrano peppers",
-    "Cilantro",
-    "Cucumber",
-    "Red onion",
-    "Salt"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Serrano peppers",
-        "to": "Poblano or green bell pepper",
-        "note": "Fresh green flavor with less heat"
-      }
-    ]
-  },
-  "protein": 29,
-  "carbs": 15,
-  "fat": 7,
-  "fiber": 4,
-  "image": "/images/dishes/Aguachile.jpg"
-},
-{
-  "id": 8049,
-  "name": "Ensalada de Nopales",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🥗",
-  "cal": 190,
-  "budget": 5,
-  "time": "25 min",
-  "spice": 1,
-  "tags": [
-    "vegetarian",
-    "gluten-free"
-  ],
-  "desc": "Tender cactus paddles tossed with tomato, onion, cilantro, lime, and crumbly cheese.",
-  "ingredients": [
-    "Nopales",
-    "Tomatoes",
-    "White onion",
-    "Cilantro",
-    "Lime",
-    "Queso fresco",
-    "Oregano"
-  ],
-  "swaps": {
-    "dairy": [
-      {
-        "from": "Queso fresco",
-        "to": "Avocado",
-        "note": "Adds richness without dairy"
-      }
-    ]
-  },
-  "protein": 8,
-  "carbs": 18,
-  "fat": 10,
-  "fiber": 7,
-  "image": "/images/dishes/Ensalada-de-Nopales.jpg"
-},
-{
-  "id": 8050,
-  "name": "Jicama Salad",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🥗",
-  "cal": 170,
-  "budget": 5,
-  "time": "15 min",
-  "spice": 2,
-  "tags": [
-    "vegan",
-    "gluten-free"
-  ],
-  "desc": "Crisp jícama, cucumber, orange, and lime seasoned with chile for a refreshing Mexican salad.",
-  "ingredients": [
-    "Jicama",
-    "Cucumber",
-    "Orange",
-    "Lime juice",
-    "Cilantro",
-    "Chile powder",
-    "Salt"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Chile powder",
-        "to": "Sweet paprika or omit",
-        "note": "Keeps the color without heat"
-      }
-    ]
-  },
-  "protein": 3,
-  "carbs": 38,
-  "fat": 1,
-  "fiber": 12,
-  "image": "/images/dishes/Jicama-Salad.jpg"
-},
-{
-  "id": 8051,
-  "name": "Churros",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🍩",
-  "cal": 390,
-  "budget": 4,
-  "time": "35 min",
-  "spice": 1,
-  "tags": [
-    "vegetarian"
-  ],
-  "desc": "Crisp ridged pastries rolled in cinnamon sugar and served warm, often with chocolate sauce.",
-  "ingredients": [
-    "Flour",
-    "Water",
-    "Butter",
-    "Sugar",
-    "Cinnamon",
-    "Oil",
-    "Chocolate sauce"
-  ],
-  "swaps": {
-    "dairy": [
-      {
-        "from": "Butter",
-        "to": "Plant-based butter",
-        "note": "Works the same in the dough"
-      }
-    ]
-  },
-  "protein": 6,
-  "carbs": 58,
-  "fat": 16,
-  "fiber": 3,
-  "image": "/images/dishes/Churros.jpg"
-},
-{
-  "id": 8052,
-  "name": "Flan Napolitano",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🍮",
-  "cal": 420,
-  "budget": 7,
-  "time": "1.5 hrs",
-  "spice": 1,
-  "tags": [
-    "vegetarian",
-    "gluten-free"
-  ],
-  "desc": "Silky Mexican caramel custard enriched with cream cheese and sweetened condensed milk.",
-  "ingredients": [
-    "Eggs",
-    "Sweetened condensed milk",
-    "Evaporated milk",
-    "Cream cheese",
-    "Sugar",
-    "Vanilla",
-    "Salt"
-  ],
-  "swaps": {
-    "dairy": [
-      {
-        "from": "Dairy milks and cream cheese",
-        "to": "Coconut condensed milk and plant cream cheese",
-        "note": "Chill fully before unmolding"
-      }
-    ]
-  },
-  "protein": 12,
-  "carbs": 55,
-  "fat": 18,
-  "fiber": 0,
-  "image": "/images/dishes/Flan-Napolitano.jpg"
-},
-{
-  "id": 8053,
-  "name": "Arroz con Leche",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🍚",
-  "cal": 330,
-  "budget": 4,
-  "time": "45 min",
-  "spice": 1,
-  "tags": [
-    "vegetarian",
-    "gluten-free"
-  ],
-  "desc": "Creamy cinnamon-scented rice pudding served warm or chilled with raisins.",
-  "ingredients": [
-    "Rice",
-    "Milk",
-    "Cinnamon",
-    "Sugar",
-    "Vanilla",
-    "Raisins",
-    "Lime peel"
-  ],
-  "swaps": {
-    "dairy": [
-      {
-        "from": "Milk",
-        "to": "Oat milk or coconut milk",
-        "note": "Use unsweetened milk"
-      }
-    ]
-  },
-  "protein": 8,
-  "carbs": 63,
-  "fat": 6,
-  "fiber": 2,
-  "image": "/images/dishes/Arroz-con-Leche.jpg"
-},
-{
-  "id": 8054,
-  "name": "Horchata",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🥤",
-  "cal": 210,
-  "budget": 3,
-  "time": "8 hrs",
-  "spice": 1,
-  "tags": [
-    "vegan-option",
-    "gluten-free"
-  ],
-  "desc": "A chilled rice-and-cinnamon drink blended until creamy and lightly sweetened.",
-  "ingredients": [
-    "Long-grain rice",
-    "Cinnamon sticks",
-    "Water",
-    "Sugar",
-    "Vanilla",
-    "Milk",
-    "Ice"
-  ],
-  "swaps": {
-    "dairy": [
-      {
-        "from": "Milk",
-        "to": "Oat milk or almond milk",
-        "note": "Keeps the drink creamy"
-      }
-    ]
-  },
-  "protein": 3,
-  "carbs": 44,
-  "fat": 3,
-  "fiber": 1,
-  "image": "/images/dishes/Horchata.jpg"
-},
-{
-  "id": 8055,
-  "name": "Agua de Jamaica",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🥤",
-  "cal": 90,
-  "budget": 3,
-  "time": "20 min",
-  "spice": 1,
-  "tags": [
-    "vegan",
-    "gluten-free"
-  ],
-  "desc": "A ruby-red hibiscus drink with a tart, floral flavor, served cold over ice.",
-  "ingredients": [
-    "Dried hibiscus flowers",
-    "Water",
-    "Sugar",
-    "Lime",
-    "Ice"
-  ],
-  "swaps": {
-    "sugar": [
-      {
-        "from": "Sugar",
-        "to": "Honey, agave, or less sweetener",
-        "note": "Adjust after chilling"
-      }
-    ]
-  },
-  "protein": 0,
-  "carbs": 23,
-  "fat": 0,
-  "fiber": 1,
-  "image": "/images/dishes/Agua-de-Jamaica.jpg"
-},
-{
-  "id": 8056,
-  "name": "Agua de Tamarindo",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🥤",
-  "cal": 130,
-  "budget": 4,
-  "time": "35 min",
-  "spice": 1,
-  "tags": [
-    "vegan",
-    "gluten-free"
-  ],
-  "desc": "A sweet-tart tamarind cooler made from tamarind pulp, water, and sugar.",
-  "ingredients": [
-    "Tamarind pods or pulp",
-    "Water",
-    "Sugar",
-    "Lime",
-    "Ice"
-  ],
-  "swaps": {
-    "sugar": [
-      {
-        "from": "Sugar",
-        "to": "Agave or reduced sugar",
-        "note": "Tamarind remains naturally tangy"
-      }
-    ]
-  },
-  "protein": 1,
-  "carbs": 34,
-  "fat": 0,
-  "fiber": 2,
-  "image": "/images/dishes/Agua-de-Tamarindo.jpg"
-},
-{
-  "id": 8057,
-  "name": "Champurrado",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "☕",
-  "cal": 320,
-  "budget": 4,
-  "time": "25 min",
-  "spice": 1,
-  "tags": [
-    "vegetarian",
-    "gluten-free"
-  ],
-  "desc": "A thick, warming Mexican chocolate drink made with masa, cinnamon, and piloncillo.",
-  "ingredients": [
-    "Masa harina",
-    "Mexican chocolate",
-    "Milk",
-    "Piloncillo",
-    "Cinnamon",
-    "Water",
-    "Vanilla"
-  ],
-  "swaps": {
-    "dairy": [
-      {
-        "from": "Milk",
-        "to": "Oat milk",
-        "note": "Creates a smooth, rich texture"
-      }
-    ]
-  },
-  "protein": 8,
-  "carbs": 56,
-  "fat": 8,
-  "fiber": 4,
-  "image": "/images/dishes/Champurrado.jpg"
-},
-{
-  "id": 8058,
-  "name": "Café de Olla",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "☕",
-  "cal": 80,
-  "budget": 3,
-  "time": "20 min",
-  "spice": 1,
-  "tags": [
-    "vegan",
-    "gluten-free"
-  ],
-  "desc": "Traditional Mexican coffee brewed with cinnamon and piloncillo for a warm caramel-spice aroma.",
-  "ingredients": [
-    "Ground coffee",
-    "Water",
-    "Piloncillo",
-    "Cinnamon stick",
-    "Cloves",
-    "Orange peel"
-  ],
-  "swaps": {
-    "sugar": [
-      {
-        "from": "Piloncillo",
-        "to": "Brown sugar",
-        "note": "Use slightly less and adjust to taste"
-      }
-    ]
-  },
-  "protein": 0,
-  "carbs": 20,
-  "fat": 0,
-  "fiber": 0,
-  "image": "/images/dishes/Café de Olla.jpg"
-},
   {
-  "id": 1078,
-  "name": "Tamago Kake Gohan",
-  "country": "Japan",
-  "region": "Asia",
-  "emoji": "🍚",
-  "cal": 350,
-  "budget": 3,
-  "time": "5 min",
-  "spice": 1,
-  "tags": [
-    "breakfast",
-    "vegetarian",
-    "dairy-free",
-    "gluten-free-option"
-  ],
-  "desc": "A comforting Japanese breakfast of hot steamed rice mixed with egg and seasoned with soy sauce.",
-  "ingredients": [
-    "Steamed Japanese rice",
-    "Fresh egg",
-    "Soy sauce",
-    "Green onions",
-    "Nori",
-    "Sesame seeds"
-  ],
-  "swaps": {
-    "gluten": [
-      {
-        "from": "Soy sauce",
-        "to": "Tamari",
-        "note": "Provides the same savory flavor without gluten"
-      }
-    ]
-  },
-  "protein": 13,
-  "carbs": 55,
-  "fat": 8,
-  "fiber": 1,
-  "image": "/images/dishes/Tamago-Kake-Gohan.jpg"
-},
-  {
-  "id": 1079,
-  "name": "Pancakes",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🥞",
-  "cal": 430,
-  "budget": 4,
-  "time": "20 min",
-  "spice": 1,
-  "tags": [
-    "breakfast",
-    "vegetarian"
-  ],
-  "desc": "Fluffy American pancakes served warm with butter and maple syrup.",
-  "ingredients": [
-    "Flour",
-    "Milk",
-    "Eggs",
-    "Butter",
-    "Baking powder",
-    "Sugar",
-    "Maple syrup"
-  ],
-  "swaps": {
-    "dairy": [
-      {
-        "from": "Milk",
-        "to": "Oat milk",
-        "note": "Keeps the pancakes soft and fluffy"
-      },
-      {
-        "from": "Butter",
-        "to": "Plant-based butter",
-        "note": "Use the same amount"
-      }
+    "id": 1012,
+    "name": "Sabich",
+    "country": "Israel",
+    "region": "Middle East",
+    "emoji": "🥙",
+    "cal": 560,
+    "budget": 7,
+    "time": "35 min",
+    "spice": 2,
+    "tags": [
+      "vegetarian",
+      "dairy-free-option"
     ],
-    "gluten": [
-      {
-        "from": "Flour",
-        "to": "Gluten-free all-purpose flour",
-        "note": "Use a one-to-one baking blend"
-      }
-    ]
+    "desc": "A popular Israeli pita sandwich filled with fried eggplant, hard-boiled egg, Israeli salad, tahini, and amba sauce.",
+    "ingredients": [
+      "Pita",
+      "Eggplant",
+      "Eggs",
+      "Tomato",
+      "Cucumber",
+      "Tahini",
+      "Amba sauce"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Pita",
+          "to": "Gluten-free pita",
+          "note": "Warm before filling so it bends easily"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Roasted chickpeas",
+          "note": "Adds protein and texture"
+        }
+      ]
+    },
+    "protein": 18,
+    "carbs": 62,
+    "fat": 26,
+    "fiber": 8,
+    "image": "/images/dishes/Sabich.jpg"
   },
-  "protein": 10,
-  "carbs": 68,
-  "fat": 13,
-  "fiber": 2,
-  "image": "/images/dishes/Pancakes.jpg"
-},
+  {
+    "id": 1013,
+    "name": "Jerusalem Mixed Grill",
+    "country": "Israel",
+    "region": "Middle East",
+    "emoji": "🍖",
+    "cal": 620,
+    "budget": 12,
+    "time": "35 min",
+    "spice": 3,
+    "tags": [
+      "dairy-free",
+      "gluten-free-option"
+    ],
+    "desc": "A Jerusalem street-food specialty of spiced grilled chicken, onions, and warm spices, usually served in pita or on a plate.",
+    "ingredients": [
+      "Chicken",
+      "Onions",
+      "Turmeric",
+      "Cumin",
+      "Paprika",
+      "Black pepper",
+      "Pita"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Pita",
+          "to": "Rice or salad plate",
+          "note": "Keeps all the flavor without bread"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Chicken",
+          "to": "Mushrooms + seitan",
+          "note": "Sear hard with the same spice blend"
+        }
+      ]
+    },
+    "protein": 38,
+    "carbs": 45,
+    "fat": 24,
+    "fiber": 5,
+    "image": "/images/dishes/Jerusalem-Mixed-Grill.jpg"
+  },
+  {
+    "id": 1014,
+    "name": "Jachnun",
+    "country": "Israel",
+    "region": "Middle East",
+    "emoji": "🫓",
+    "cal": 520,
+    "budget": 5,
+    "time": "8 hrs",
+    "spice": 1,
+    "tags": [
+      "vegetarian",
+      "dairy-free-option"
+    ],
+    "desc": "Slow-baked Yemenite Jewish pastry popular in Israel, served with grated tomato, zhug, and hard-boiled egg.",
+    "ingredients": [
+      "Flour",
+      "Margarine",
+      "Sugar",
+      "Salt",
+      "Tomatoes",
+      "Zhug",
+      "Eggs"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Zhug",
+          "to": "Grated tomato only",
+          "note": "Keeps it mild and traditional"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Cucumber tomato salad",
+          "note": "Fresh side with the pastry"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 74,
+    "fat": 18,
+    "fiber": 4,
+    "image": "/images/dishes/Jachnun.jpg"
+  },
+  {
+    "id": 1015,
+    "name": "Malawach",
+    "country": "Israel",
+    "region": "Middle East",
+    "emoji": "🥐",
+    "cal": 480,
+    "budget": 5,
+    "time": "25 min",
+    "spice": 1,
+    "tags": [
+      "vegetarian",
+      "dairy-free-option"
+    ],
+    "desc": "Flaky Yemenite-style fried flatbread popular in Israel, served with grated tomato, hard-boiled egg, and spicy zhug.",
+    "ingredients": [
+      "Flour",
+      "Margarine",
+      "Salt",
+      "Tomatoes",
+      "Eggs",
+      "Zhug",
+      "Cucumber"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Zhug",
+          "to": "Yogurt or grated tomato",
+          "note": "Cooling and mild"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Avocado slices",
+          "note": "Keeps the meal rich and satisfying"
+        }
+      ]
+    },
+    "protein": 11,
+    "carbs": 65,
+    "fat": 19,
+    "fiber": 4,
+    "image": "/images/dishes/Malawach.jpg"
+  },
+  {
+    "id": 1016,
+    "name": "Ptitim",
+    "country": "Israel",
+    "region": "Middle East",
+    "emoji": "🍝",
+    "cal": 390,
+    "budget": 4,
+    "time": "20 min",
+    "spice": 1,
+    "tags": [
+      "dairy-free",
+      "vegan-option"
+    ],
+    "desc": "Toasted pasta pearls often called Israeli couscous, cooked like rice and served as a comforting side dish.",
+    "ingredients": [
+      "Ptitim",
+      "Onion",
+      "Olive oil",
+      "Vegetable stock",
+      "Tomato paste",
+      "Parsley",
+      "Black pepper"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Wheat ptitim",
+          "to": "Rice or quinoa",
+          "note": "Different texture but similar side-dish role"
+        }
+      ]
+    },
+    "protein": 10,
+    "carbs": 68,
+    "fat": 8,
+    "fiber": 4,
+    "image": "/images/dishes/Ptitim.jpg"
+  },
+  {
+    "id": 1017,
+    "name": "Bourekas",
+    "country": "Israel",
+    "region": "Middle East",
+    "emoji": "🥟",
+    "cal": 430,
+    "budget": 6,
+    "time": "45 min",
+    "spice": 1,
+    "tags": [
+      "vegetarian"
+    ],
+    "desc": "Flaky savory pastries filled with cheese, potato, spinach, or mushrooms, commonly enjoyed as a snack or breakfast.",
+    "ingredients": [
+      "Puff pastry",
+      "Feta cheese",
+      "Potatoes",
+      "Spinach",
+      "Egg",
+      "Sesame seeds",
+      "Black pepper"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Feta cheese",
+          "to": "Potato filling",
+          "note": "Classic non-cheese filling"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Egg wash",
+          "to": "Olive oil brush",
+          "note": "Still bakes shiny and golden"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 45,
+    "fat": 22,
+    "fiber": 4,
+    "image": "/images/dishes/Bourekas.jpg"
+  },
+  {
+    "id": 1018,
+    "name": "Sufganiyah",
+    "country": "Israel",
+    "region": "Middle East",
+    "emoji": "🍩",
+    "cal": 360,
+    "budget": 5,
+    "time": "2 hrs",
+    "spice": 1,
+    "tags": [
+      "vegetarian",
+      "dairy-free-option"
+    ],
+    "desc": "A soft jelly-filled doughnut traditionally eaten during Hanukkah, dusted with powdered sugar.",
+    "ingredients": [
+      "Flour",
+      "Yeast",
+      "Sugar",
+      "Eggs",
+      "Jam",
+      "Oil",
+      "Powdered sugar"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Works well in enriched dough"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Applesauce",
+          "note": "Keeps the dough soft"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 55,
+    "fat": 13,
+    "fiber": 2,
+    "image": "/images/dishes/Sufganiyah.jpg"
+  },
+  {
+    "id": 1019,
+    "name": "Hummus",
+    "country": "Israel",
+    "region": "Middle East",
+    "emoji": "🥣",
+    "cal": 310,
+    "budget": 4,
+    "time": "15 min",
+    "spice": 1,
+    "tags": [
+      "dairy-free",
+      "vegan",
+      "gluten-free"
+    ],
+    "desc": "Creamy chickpea and tahini dip served with olive oil, paprika, herbs, and warm pita or vegetables.",
+    "ingredients": [
+      "Chickpeas",
+      "Tahini",
+      "Lemon juice",
+      "Garlic",
+      "Olive oil",
+      "Cumin",
+      "Paprika"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Pita bread",
+          "to": "Cucumber and carrot sticks",
+          "note": "Naturally gluten-free pairing"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 30,
+    "fat": 16,
+    "fiber": 8,
+    "image": "/images/dishes/Hummus.jpg"
+  },
+  {
+    "id": 1020,
+    "name": "Arroz con Gandules",
+    "country": "Puerto Rico",
+    "region": "Americas",
+    "emoji": "🍚",
+    "cal": 430,
+    "budget": 6,
+    "time": "45 min",
+    "spice": 1,
+    "tags": [
+      "dairy-free",
+      "gluten-free",
+      "vegan-option"
+    ],
+    "desc": "Puerto Rico's classic rice with pigeon peas, sofrito, and sazón, often served during holidays and family gatherings.",
+    "ingredients": [
+      "Rice",
+      "Pigeon peas",
+      "Sofrito",
+      "Sazón",
+      "Olive oil",
+      "Garlic",
+      "Culantro"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pork or ham",
+          "to": "Smoked paprika + extra sofrito",
+          "note": "Keeps smoky flavor without meat"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 72,
+    "fat": 10,
+    "fiber": 7,
+    "image": "/images/dishes/Arroz-con-Gandules.jpg"
+  },
+  {
+    "id": 1021,
+    "name": "Lechon Asado",
+    "country": "Puerto Rico",
+    "region": "Americas",
+    "emoji": "🐖",
+    "cal": 690,
+    "budget": 15,
+    "time": "4 hrs",
+    "spice": 1,
+    "tags": [
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Slow-roasted Puerto Rican pork marinated with garlic, oregano, citrus, and adobo until tender with crisp skin.",
+    "ingredients": [
+      "Pork shoulder",
+      "Garlic",
+      "Oregano",
+      "Adobo",
+      "Orange juice",
+      "Lime juice",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pork shoulder",
+          "to": "Jackfruit or mushrooms",
+          "note": "Use the same citrus-garlic marinade"
+        }
+      ]
+    },
+    "protein": 36,
+    "carbs": 12,
+    "fat": 42,
+    "fiber": 2,
+    "image": "/images/dishes/Lechon-Asado.jpg"
+  },
+  {
+    "id": 1022,
+    "name": "Pasteles",
+    "country": "Puerto Rico",
+    "region": "Americas",
+    "emoji": "🫔",
+    "cal": 470,
+    "budget": 10,
+    "time": "3 hrs",
+    "spice": 1,
+    "tags": [
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Traditional Puerto Rican holiday parcels made with green banana masa, savory filling, and banana leaves.",
+    "ingredients": [
+      "Green bananas",
+      "Yautía",
+      "Plantain",
+      "Pork",
+      "Sofrito",
+      "Achiote oil",
+      "Banana leaves"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pork filling",
+          "to": "Chickpeas + mushrooms",
+          "note": "Season with sofrito and achiote oil"
+        }
+      ]
+    },
+    "protein": 18,
+    "carbs": 58,
+    "fat": 18,
+    "fiber": 6,
+    "image": "/images/dishes/Pasteles.jpg"
+  },
+  {
+    "id": 1023,
+    "name": "Alcapurrias",
+    "country": "Puerto Rico",
+    "region": "Americas",
+    "emoji": "🥟",
+    "cal": 520,
+    "budget": 7,
+    "time": "1 hr",
+    "spice": 2,
+    "tags": [
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Crispy Puerto Rican fritters made from green banana or yautía masa and filled with seasoned meat.",
+    "ingredients": [
+      "Green bananas",
+      "Yautía",
+      "Ground beef",
+      "Sofrito",
+      "Adobo",
+      "Achiote oil",
+      "Oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Ground beef",
+          "to": "Lentils or mushrooms",
+          "note": "Cook with sofrito until thick"
+        }
+      ]
+    },
+    "protein": 18,
+    "carbs": 54,
+    "fat": 25,
+    "fiber": 6,
+    "image": "/images/dishes/Alcapurrias.jpg"
+  },
+  {
+    "id": 1024,
+    "name": "Bacalaitos",
+    "country": "Puerto Rico",
+    "region": "Americas",
+    "emoji": "🐟",
+    "cal": 390,
+    "budget": 6,
+    "time": "35 min",
+    "spice": 1,
+    "tags": [
+      "dairy-free"
+    ],
+    "desc": "Thin crispy Puerto Rican salt cod fritters served hot as a beachside snack or street food favorite.",
+    "ingredients": [
+      "Salt cod",
+      "Flour",
+      "Garlic",
+      "Cilantro",
+      "Adobo",
+      "Water",
+      "Oil"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Rice flour",
+          "note": "Makes the fritters crisp and gluten-free"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Salt cod",
+          "to": "Shredded hearts of palm",
+          "note": "Add nori flakes for seafood flavor"
+        }
+      ]
+    },
+    "protein": 20,
+    "carbs": 42,
+    "fat": 16,
+    "fiber": 3,
+    "image": "/images/dishes/Bacalaitos.jpg"
+  },
+  {
+    "id": 1025,
+    "name": "Asopao de Pollo",
+    "country": "Puerto Rico",
+    "region": "Americas",
+    "emoji": "🍲",
+    "cal": 460,
+    "budget": 8,
+    "time": "1 hr",
+    "spice": 1,
+    "tags": [
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "A comforting Puerto Rican chicken and rice stew flavored with sofrito, olives, herbs, and broth.",
+    "ingredients": [
+      "Chicken",
+      "Rice",
+      "Sofrito",
+      "Chicken broth",
+      "Olives",
+      "Cilantro",
+      "Tomato sauce"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken",
+          "to": "Chickpeas + mushrooms",
+          "note": "Use vegetable broth and extra sofrito"
+        }
+      ]
+    },
+    "protein": 28,
+    "carbs": 55,
+    "fat": 12,
+    "fiber": 5,
+    "image": "/images/dishes/Asopao-de-Pollo.jpg"
+  },
+  {
+    "id": 1026,
+    "name": "Tembleque",
+    "country": "Puerto Rico",
+    "region": "Americas",
+    "emoji": "🥥",
+    "cal": 280,
+    "budget": 4,
+    "time": "20 min",
+    "spice": 1,
+    "tags": [
+      "dairy-free",
+      "vegan",
+      "gluten-free"
+    ],
+    "desc": "Silky Puerto Rican coconut pudding flavored with cinnamon and served chilled until it gently jiggles.",
+    "ingredients": [
+      "Coconut milk",
+      "Sugar",
+      "Cornstarch",
+      "Cinnamon",
+      "Vanilla",
+      "Salt"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Already vegan",
+          "to": "Already vegan",
+          "note": "Naturally dairy-free and plant-based"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 38,
+    "fat": 12,
+    "fiber": 2,
+    "image": "/images/dishes/Tembleque.jpg"
+  },
+  {
+    "id": 1027,
+    "name": "Arroz con Dulce",
+    "country": "Puerto Rico",
+    "region": "Americas",
+    "emoji": "🍚",
+    "cal": 360,
+    "budget": 5,
+    "time": "1 hr",
+    "spice": 1,
+    "tags": [
+      "dairy-free",
+      "vegetarian",
+      "gluten-free"
+    ],
+    "desc": "Puerto Rican coconut rice pudding cooked with cinnamon, cloves, ginger, raisins, and coconut milk.",
+    "ingredients": [
+      "Rice",
+      "Coconut milk",
+      "Cinnamon",
+      "Cloves",
+      "Ginger",
+      "Raisins",
+      "Sugar"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Already dairy-free",
+          "to": "Already dairy-free",
+          "note": "Use plant-based sugar if needed"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 68,
+    "fat": 8,
+    "fiber": 3,
+    "image": "/images/dishes/Arroz-con-Dulce.jpg"
+  },
+  {
+    "id": 1028,
+    "name": "Sorullitos",
+    "country": "Puerto Rico",
+    "region": "Americas",
+    "emoji": "🧀",
+    "cal": 340,
+    "budget": 4,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "vegetarian",
+      "gluten-free-option"
+    ],
+    "desc": "Golden fried Puerto Rican cornmeal sticks, often filled with cheese and served with mayo-ketchup sauce.",
+    "ingredients": [
+      "Cornmeal",
+      "Water",
+      "Butter",
+      "Sugar",
+      "Cheese",
+      "Salt",
+      "Oil"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cheese and butter",
+          "to": "Vegan cheese + olive oil",
+          "note": "Keeps the center rich"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 42,
+    "fat": 15,
+    "fiber": 3,
+    "image": "/images/dishes/Sorullitos.jpg"
+  },
+  {
+    "id": 1029,
+    "name": "Flan de Queso",
+    "country": "Puerto Rico",
+    "region": "Americas",
+    "emoji": "🍮",
+    "cal": 420,
+    "budget": 6,
+    "time": "1.5 hrs",
+    "spice": 1,
+    "tags": [
+      "vegetarian",
+      "dairy"
+    ],
+    "desc": "Creamy Puerto Rican cream cheese flan with a smooth custard texture and glossy caramel topping.",
+    "ingredients": [
+      "Cream cheese",
+      "Eggs",
+      "Condensed milk",
+      "Evaporated milk",
+      "Sugar",
+      "Vanilla",
+      "Caramel"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cream cheese and milk",
+          "to": "Coconut cream + vegan cream cheese",
+          "note": "Changes flavor but keeps creaminess"
+        }
+      ]
+    },
+    "protein": 10,
+    "carbs": 52,
+    "fat": 18,
+    "fiber": 1,
+    "image": "/images/dishes/Flan-de-Queso.jpg"
+  },
+  {
+    "id": 8059,
+    "name": "Choripan",
+    "country": "Argentina",
+    "region": "South America",
+    "emoji": "🌭",
+    "cal": 520,
+    "budget": 6,
+    "time": "25 min",
+    "spice": 2,
+    "tags": [
+      "gluten"
+    ],
+    "desc": "Grilled chorizo sausage served in crusty bread with fresh chimichurri sauce.",
+    "ingredients": [
+      "Chorizo sausage",
+      "Bread roll",
+      "Chimichurri",
+      "Parsley",
+      "Garlic"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Bread roll",
+          "to": "Gluten-free roll",
+          "note": "Toast before serving"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Chorizo sausage",
+          "to": "Plant-based sausage",
+          "note": "Grill until browned"
+        }
+      ]
+    },
+    "protein": 24,
+    "carbs": 42,
+    "fat": 29,
+    "fiber": 4,
+    "image": "/images/dishes/Choripan.jpg"
+  },
+  {
+    "id": 8060,
+    "name": "Provoleta",
+    "country": "Argentina",
+    "region": "South America",
+    "emoji": "🧀",
+    "cal": 430,
+    "budget": 7,
+    "time": "15 min",
+    "spice": 1,
+    "tags": [
+      "dairy"
+    ],
+    "desc": "Grilled provolone cheese seasoned with oregano, chili flakes, and olive oil.",
+    "ingredients": [
+      "Provolone cheese",
+      "Oregano",
+      "Chili flakes",
+      "Olive oil",
+      "Bread"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Provolone cheese",
+          "to": "Vegan melting cheese",
+          "note": "Use a firm slice"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Bread",
+          "to": "Gluten-free bread",
+          "note": "Serve toasted"
+        }
+      ]
+    },
+    "protein": 23,
+    "carbs": 18,
+    "fat": 31,
+    "fiber": 2,
+    "image": "/images/dishes/Provoleta.jpg"
+  },
+  {
+    "id": 8061,
+    "name": "Humita en Chala",
+    "country": "Argentina",
+    "region": "South America",
+    "emoji": "🌽",
+    "cal": 390,
+    "budget": 5,
+    "time": "55 min",
+    "spice": 1,
+    "tags": [
+      "vegetarian",
+      "dairy"
+    ],
+    "desc": "Fresh corn mixture wrapped in corn husks and steamed until tender.",
+    "ingredients": [
+      "Fresh corn",
+      "Corn husks",
+      "Onion",
+      "Bell pepper",
+      "Cheese"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cheese",
+          "to": "Vegan cheese",
+          "note": "Use a mild melting style"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Cheese",
+          "to": "Nutritional yeast",
+          "note": "Adds savory flavor"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 58,
+    "fat": 13,
+    "fiber": 7,
+    "image": "/images/dishes/Humita-en-Chala.jpg"
+  },
+  {
+    "id": 8062,
+    "name": "Carbonada Criolla",
+    "country": "Argentina",
+    "region": "South America",
+    "emoji": "🍲",
+    "cal": 610,
+    "budget": 9,
+    "time": "1 hr 20 min",
+    "spice": 1,
+    "tags": [],
+    "desc": "Sweet and savory Argentine beef stew with squash, potatoes, corn, and fruit.",
+    "ingredients": [
+      "Beef",
+      "Squash",
+      "Potatoes",
+      "Corn",
+      "Peaches"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Beef",
+          "to": "Mushrooms and beans",
+          "note": "Keeps the stew hearty"
+        }
+      ]
+    },
+    "protein": 34,
+    "carbs": 62,
+    "fat": 21,
+    "fiber": 8,
+    "image": "/images/dishes/Carbonada-Criolla.jpg"
+  },
+  {
+    "id": 8063,
+    "name": "Matambre a la Pizza",
+    "country": "Argentina",
+    "region": "South America",
+    "emoji": "🥩",
+    "cal": 720,
+    "budget": 11,
+    "time": "1 hr",
+    "spice": 1,
+    "tags": [
+      "dairy"
+    ],
+    "desc": "Thin flank steak topped with tomato sauce, mozzarella, oregano, and olives.",
+    "ingredients": [
+      "Flank steak",
+      "Tomato sauce",
+      "Mozzarella",
+      "Oregano",
+      "Olives"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Mozzarella",
+          "to": "Dairy-free mozzarella",
+          "note": "Melt under the broiler"
+        }
+      ]
+    },
+    "protein": 52,
+    "carbs": 14,
+    "fat": 48,
+    "fiber": 3,
+    "image": "/images/dishes/Matambre-a-la-Pizza.jpg"
+  },
+  {
+    "id": 8064,
+    "name": "Vitel Tone",
+    "country": "Argentina",
+    "region": "South America",
+    "emoji": "🍖",
+    "cal": 540,
+    "budget": 10,
+    "time": "1 hr 15 min",
+    "spice": 1,
+    "tags": [
+      "eggs",
+      "fish"
+    ],
+    "desc": "Tender sliced veal served cold with creamy tuna, caper, and mayonnaise sauce.",
+    "ingredients": [
+      "Veal",
+      "Tuna",
+      "Mayonnaise",
+      "Capers",
+      "Egg yolks"
+    ],
+    "swaps": {
+      "fish": [
+        {
+          "from": "Tuna",
+          "to": "Roasted chickpeas",
+          "note": "Blend into the sauce for body"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Mayonnaise",
+          "to": "Egg-free mayonnaise",
+          "note": "Keeps the sauce creamy"
+        }
+      ]
+    },
+    "protein": 42,
+    "carbs": 6,
+    "fat": 38,
+    "fiber": 1,
+    "image": "/images/dishes/Vitel-Tone.jpg"
+  },
+  {
+    "id": 8065,
+    "name": "Pastel de Papa",
+    "country": "Argentina",
+    "region": "South America",
+    "emoji": "🥔",
+    "cal": 650,
+    "budget": 8,
+    "time": "1 hr",
+    "spice": 1,
+    "tags": [
+      "dairy"
+    ],
+    "desc": "Argentine-style shepherd's pie with seasoned beef, mashed potatoes, and baked cheese topping.",
+    "ingredients": [
+      "Ground beef",
+      "Potatoes",
+      "Onion",
+      "Eggs",
+      "Cheese"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cheese",
+          "to": "Dairy-free cheese",
+          "note": "Sprinkle on top before baking"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Ground beef",
+          "to": "Lentils",
+          "note": "Season well with paprika and cumin"
+        }
+      ]
+    },
+    "protein": 32,
+    "carbs": 58,
+    "fat": 31,
+    "fiber": 7,
+    "image": "/images/dishes/Pastel-de-Papa.jpg"
+  },
+  {
+    "id": 8066,
+    "name": "Fugazzeta",
+    "country": "Argentina",
+    "region": "South America",
+    "emoji": "🍕",
+    "cal": 760,
+    "budget": 7,
+    "time": "50 min",
+    "spice": 1,
+    "tags": [
+      "gluten",
+      "dairy"
+    ],
+    "desc": "Argentine stuffed pizza filled with mozzarella and topped with sweet onions.",
+    "ingredients": [
+      "Pizza dough",
+      "Mozzarella",
+      "Onions",
+      "Oregano",
+      "Olive oil"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Pizza dough",
+          "to": "Gluten-free pizza dough",
+          "note": "Bake until crisp"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Mozzarella",
+          "to": "Vegan mozzarella",
+          "note": "Use a good melting brand"
+        }
+      ]
+    },
+    "protein": 28,
+    "carbs": 84,
+    "fat": 34,
+    "fiber": 5,
+    "image": "/images/dishes/Fugazzeta.jpg"
+  },
+  {
+    "id": 8067,
+    "name": "Revuelto Gramajo",
+    "country": "Argentina",
+    "region": "South America",
+    "emoji": "🥚",
+    "cal": 620,
+    "budget": 6,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "eggs"
+    ],
+    "desc": "Scrambled eggs mixed with crispy potatoes, ham, peas, and onions.",
+    "ingredients": [
+      "Eggs",
+      "Potatoes",
+      "Ham",
+      "Peas",
+      "Onion"
+    ],
+    "swaps": {
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Tofu scramble",
+          "note": "Season with turmeric and black salt"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Ham",
+          "to": "Smoked mushrooms",
+          "note": "Pan-fry until crisp"
+        }
+      ]
+    },
+    "protein": 26,
+    "carbs": 54,
+    "fat": 34,
+    "fiber": 6,
+    "image": "/images/dishes/Revuelto-Gramajo.jpg"
+  },
+  {
+    "id": 8068,
+    "name": "Dulce de Leche Flan",
+    "country": "Argentina",
+    "region": "South America",
+    "emoji": "🍮",
+    "cal": 480,
+    "budget": 5,
+    "time": "1 hr 10 min",
+    "spice": 0,
+    "tags": [
+      "dairy",
+      "eggs"
+    ],
+    "desc": "Creamy caramel custard served with rich dulce de leche.",
+    "ingredients": [
+      "Eggs",
+      "Milk",
+      "Sugar",
+      "Vanilla",
+      "Dulce de leche"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Coconut milk",
+          "note": "Adds richness"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Cornstarch custard base",
+          "note": "Chill until fully set"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 62,
+    "fat": 19,
+    "fiber": 1,
+    "image": "/images/dishes/Dulce-de-Leche-Flan.jpg"
+  },
+  {
+    "id": 8069,
+    "name": "French Onion Soup",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🧅",
+    "cal": 420,
+    "budget": 6,
+    "time": "1 hr",
+    "spice": 1,
+    "tags": [
+      "dairy",
+      "gluten"
+    ],
+    "desc": "Slow-cooked caramelized onion soup topped with toasted bread and melted cheese.",
+    "ingredients": [
+      "Onions",
+      "Beef stock",
+      "Baguette",
+      "Gruyere cheese",
+      "Butter"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Gruyere cheese",
+          "to": "Vegan melting cheese",
+          "note": "Broil until bubbly"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Baguette",
+          "to": "Gluten-free bread",
+          "note": "Toast before topping"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Beef stock",
+          "to": "Vegetable stock",
+          "note": "Add mushrooms for depth"
+        }
+      ]
+    },
+    "protein": 16,
+    "carbs": 42,
+    "fat": 21,
+    "fiber": 5,
+    "image": "/images/dishes/French-Onion-Soup.jpg"
+  },
+  {
+    "id": 8070,
+    "name": "Steak Frites",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🥩",
+    "cal": 820,
+    "budget": 12,
+    "time": "35 min",
+    "spice": 1,
+    "tags": [],
+    "desc": "Pan-seared steak served with crispy fries and a simple herb butter or sauce.",
+    "ingredients": [
+      "Steak",
+      "Potatoes",
+      "Butter",
+      "Parsley",
+      "Garlic"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Use for a lighter finish"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Steak",
+          "to": "Portobello mushroom steak",
+          "note": "Sear until browned"
+        }
+      ]
+    },
+    "protein": 46,
+    "carbs": 58,
+    "fat": 44,
+    "fiber": 6,
+    "image": "/images/dishes/Steak-Frites.jpg"
+  },
+  {
+    "id": 8071,
+    "name": "Croque Monsieur",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🥪",
+    "cal": 690,
+    "budget": 7,
+    "time": "25 min",
+    "spice": 1,
+    "tags": [
+      "dairy",
+      "gluten"
+    ],
+    "desc": "Classic French grilled ham and cheese sandwich with creamy bechamel sauce.",
+    "ingredients": [
+      "Bread",
+      "Ham",
+      "Gruyere cheese",
+      "Milk",
+      "Butter"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Gruyere cheese",
+          "to": "Dairy-free cheese",
+          "note": "Use a meltable style"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Bread",
+          "to": "Gluten-free bread",
+          "note": "Toast well"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Ham",
+          "to": "Smoked mushrooms",
+          "note": "Adds savory flavor"
+        }
+      ]
+    },
+    "protein": 34,
+    "carbs": 48,
+    "fat": 39,
+    "fiber": 3,
+    "image": "/images/dishes/Croque-Monsieur.jpg"
+  },
+  {
+    "id": 8072,
+    "name": "Gratin Dauphinois",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🥔",
+    "cal": 540,
+    "budget": 6,
+    "time": "1 hr 10 min",
+    "spice": 1,
+    "tags": [
+      "dairy"
+    ],
+    "desc": "Thinly sliced potatoes baked slowly with cream, garlic, and cheese until tender.",
+    "ingredients": [
+      "Potatoes",
+      "Cream",
+      "Garlic",
+      "Gruyere cheese",
+      "Nutmeg"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cream",
+          "to": "Cashew cream",
+          "note": "Keeps the gratin rich"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Gruyere cheese",
+          "to": "Nutritional yeast",
+          "note": "Adds cheesy flavor"
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 52,
+    "fat": 31,
+    "fiber": 5,
+    "image": "/images/dishes/Gratin-Dauphinois.jpg"
+  },
+  {
+    "id": 8073,
+    "name": "Blanquette de Veau",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🍲",
+    "cal": 650,
+    "budget": 11,
+    "time": "1 hr 30 min",
+    "spice": 1,
+    "tags": [
+      "dairy"
+    ],
+    "desc": "Tender veal stew in a creamy white sauce with carrots, mushrooms, and herbs.",
+    "ingredients": [
+      "Veal",
+      "Carrots",
+      "Mushrooms",
+      "Cream",
+      "Bay leaf"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cream",
+          "to": "Oat cream",
+          "note": "Stir in at the end"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Veal",
+          "to": "White beans and mushrooms",
+          "note": "Simmer until tender"
+        }
+      ]
+    },
+    "protein": 42,
+    "carbs": 32,
+    "fat": 34,
+    "fiber": 5,
+    "image": "/images/dishes/Blanquette-de-Veau.jpg"
+  },
+  {
+    "id": 8074,
+    "name": "Sole Meuniere",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🐟",
+    "cal": 480,
+    "budget": 10,
+    "time": "25 min",
+    "spice": 1,
+    "tags": [
+      "fish",
+      "dairy",
+      "gluten"
+    ],
+    "desc": "Delicate sole lightly floured, pan-fried in butter, and finished with lemon and parsley.",
+    "ingredients": [
+      "Sole fillets",
+      "Flour",
+      "Butter",
+      "Lemon",
+      "Parsley"
+    ],
+    "swaps": {
+      "fish": [
+        {
+          "from": "Sole fillets",
+          "to": "Tofu cutlets",
+          "note": "Coat and pan-fry gently"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Rice flour",
+          "note": "Creates a light crust"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Finish with lemon"
+        }
+      ]
+    },
+    "protein": 38,
+    "carbs": 18,
+    "fat": 28,
+    "fiber": 2,
+    "image": "/images/dishes/Sole-Meuniere.jpg"
+  },
+  {
+    "id": 8075,
+    "name": "Gougeres",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🧀",
+    "cal": 360,
+    "budget": 5,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "dairy",
+      "gluten",
+      "eggs"
+    ],
+    "desc": "Light French cheese puffs made with choux pastry and Gruyere cheese.",
+    "ingredients": [
+      "Flour",
+      "Eggs",
+      "Butter",
+      "Gruyere cheese",
+      "Milk"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Gruyere cheese",
+          "to": "Dairy-free cheese",
+          "note": "Use finely grated"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Use a baking blend"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Aquafaba",
+          "note": "Texture will be softer"
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 24,
+    "fat": 23,
+    "fiber": 1,
+    "image": "/images/dishes/Gougeres.jpg"
+  },
+  {
+    "id": 8076,
+    "name": "Aligot",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🥔",
+    "cal": 620,
+    "budget": 7,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "dairy"
+    ],
+    "desc": "Stretchy mashed potatoes blended with cheese, cream, butter, and garlic.",
+    "ingredients": [
+      "Potatoes",
+      "Tomme cheese",
+      "Cream",
+      "Butter",
+      "Garlic"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Tomme cheese",
+          "to": "Vegan mozzarella",
+          "note": "Choose a stretchy style"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Cream",
+          "to": "Cashew cream",
+          "note": "Blend until very smooth"
+        }
+      ]
+    },
+    "protein": 18,
+    "carbs": 56,
+    "fat": 36,
+    "fiber": 5,
+    "image": "/images/dishes/Aligot.jpg"
+  },
+  {
+    "id": 8077,
+    "name": "Clafoutis",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🍒",
+    "cal": 390,
+    "budget": 5,
+    "time": "50 min",
+    "spice": 0,
+    "tags": [
+      "dairy",
+      "eggs",
+      "gluten"
+    ],
+    "desc": "Rustic baked French custard dessert traditionally made with cherries.",
+    "ingredients": [
+      "Cherries",
+      "Eggs",
+      "Milk",
+      "Flour",
+      "Sugar"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Almond milk",
+          "note": "Use unsweetened"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Rice flour",
+          "note": "Keeps it light"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Cornstarch custard base",
+          "note": "Bake until set"
+        }
+      ]
+    },
+    "protein": 10,
+    "carbs": 56,
+    "fat": 13,
+    "fiber": 3,
+    "image": "/images/dishes/Clafoutis.jpg"
+  },
+  {
+    "id": 8078,
+    "name": "Pissaladiere",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🫓",
+    "cal": 520,
+    "budget": 6,
+    "time": "1 hr",
+    "spice": 1,
+    "tags": [
+      "fish",
+      "gluten"
+    ],
+    "desc": "Provencal onion tart topped with anchovies, olives, and herbs.",
+    "ingredients": [
+      "Bread dough",
+      "Onions",
+      "Anchovies",
+      "Olives",
+      "Thyme"
+    ],
+    "swaps": {
+      "fish": [
+        {
+          "from": "Anchovies",
+          "to": "Capers",
+          "note": "Adds salty flavor"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Bread dough",
+          "to": "Gluten-free flatbread base",
+          "note": "Bake until crisp"
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 68,
+    "fat": 21,
+    "fiber": 6,
+    "image": "/images/dishes/Pissaladiere.jpg"
+  },
+  {
+    "id": 8079,
+    "name": "Choucroute Garnie",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🥬",
+    "cal": 760,
+    "budget": 10,
+    "time": "1 hr 20 min",
+    "spice": 1,
+    "tags": [],
+    "desc": "Alsatian sauerkraut served with sausages, pork, potatoes, and mustard.",
+    "ingredients": [
+      "Sauerkraut",
+      "Sausages",
+      "Pork",
+      "Potatoes",
+      "Mustard"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Sausages and pork",
+          "to": "Plant-based sausages",
+          "note": "Simmer with sauerkraut"
+        }
+      ]
+    },
+    "protein": 39,
+    "carbs": 46,
+    "fat": 43,
+    "fiber": 8,
+    "image": "/images/dishes/Choucroute-Garnie.jpg"
+  },
+  {
+    "id": 8080,
+    "name": "Hachis Parmentier",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🥘",
+    "cal": 640,
+    "budget": 8,
+    "time": "1 hr",
+    "spice": 1,
+    "tags": [
+      "dairy"
+    ],
+    "desc": "French minced beef and mashed potato casserole baked until golden on top.",
+    "ingredients": [
+      "Ground beef",
+      "Potatoes",
+      "Onion",
+      "Butter",
+      "Milk"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Butter and milk",
+          "to": "Olive oil and oat milk",
+          "note": "Mash until creamy"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Ground beef",
+          "to": "Lentils",
+          "note": "Cook with onion and herbs"
+        }
+      ]
+    },
+    "protein": 32,
+    "carbs": 55,
+    "fat": 31,
+    "fiber": 7,
+    "image": "/images/dishes/Hachis-Parmentier.jpg"
+  },
+  {
+    "id": 8081,
+    "name": "Escargots de Bourgogne",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🐌",
+    "cal": 330,
+    "budget": 9,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "dairy"
+    ],
+    "desc": "Burgundy-style snails baked with garlic, parsley, and butter.",
+    "ingredients": [
+      "Snails",
+      "Butter",
+      "Garlic",
+      "Parsley",
+      "Shallots"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Olive oil spread",
+          "note": "Mix with garlic and parsley"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Snails",
+          "to": "Mushroom caps",
+          "note": "Bake with garlic parsley topping"
+        }
+      ]
+    },
+    "protein": 18,
+    "carbs": 8,
+    "fat": 25,
+    "fiber": 1,
+    "image": "/images/dishes/Escargots-de-Bourgogne.jpg"
+  },
+  {
+    "id": 8082,
+    "name": "Souffle au Fromage",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🧀",
+    "cal": 460,
+    "budget": 6,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "dairy",
+      "eggs",
+      "gluten"
+    ],
+    "desc": "Light and airy French cheese souffle made with eggs, bechamel, and Gruyere.",
+    "ingredients": [
+      "Eggs",
+      "Gruyere cheese",
+      "Milk",
+      "Butter",
+      "Flour"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Gruyere cheese",
+          "to": "Dairy-free cheese",
+          "note": "Use finely shredded"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Cornstarch",
+          "note": "Use less than flour"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Aquafaba",
+          "note": "Rise may be softer"
+        }
+      ]
+    },
+    "protein": 24,
+    "carbs": 18,
+    "fat": 32,
+    "fiber": 1,
+    "image": "/images/dishes/Souffle-au-Fromage.jpg"
+  },
+  {
+    "id": 8083,
+    "name": "Profiteroles",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🍫",
+    "cal": 510,
+    "budget": 6,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "dairy",
+      "eggs",
+      "gluten"
+    ],
+    "desc": "Choux pastry puffs filled with cream or ice cream and topped with chocolate sauce.",
+    "ingredients": [
+      "Flour",
+      "Eggs",
+      "Butter",
+      "Cream",
+      "Chocolate"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cream",
+          "to": "Coconut whipped cream",
+          "note": "Chill before filling"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Use a baking blend"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Aquafaba",
+          "note": "Pastry may be less airy"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 52,
+    "fat": 29,
+    "fiber": 3,
+    "image": "/images/dishes/Profiteroles.jpg"
+  },
+  {
+    "id": 8010,
+    "name": "Beef Brisket",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥩",
+    "cal": 720,
+    "budget": 18,
+    "time": "6 hrs",
+    "spice": 2,
+    "tags": [],
+    "desc": "Slow-smoked Texas-style beef brisket with a peppery bark and tender sliced meat.",
+    "ingredients": [
+      "Beef brisket",
+      "Salt",
+      "Black pepper",
+      "Garlic powder",
+      "BBQ rub"
+    ],
+    "swaps": {},
+    "protein": 48,
+    "carbs": 6,
+    "fat": 54,
+    "fiber": 1,
+    "image": "/images/dishes/Beef-Brisket.jpg"
+  },
+  {
+    "id": 8011,
+    "name": "Pulled Pork Sandwich",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🐖",
+    "cal": 690,
+    "budget": 12,
+    "time": "4 hrs",
+    "spice": 2,
+    "tags": [
+      "gluten"
+    ],
+    "desc": "Tender shredded pork tossed with barbecue sauce and served on a soft bun.",
+    "ingredients": [
+      "Pork shoulder",
+      "BBQ sauce",
+      "Burger bun",
+      "Coleslaw",
+      "Paprika"
+    ],
+    "swaps": {},
+    "protein": 38,
+    "carbs": 52,
+    "fat": 34,
+    "fiber": 3,
+    "image": "/images/dishes/Pulled-Pork-Sandwich.jpg"
+  },
+  {
+    "id": 8012,
+    "name": "Nashville Hot Chicken",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🔥",
+    "cal": 760,
+    "budget": 11,
+    "time": "1 hr",
+    "spice": 5,
+    "tags": [
+      "gluten",
+      "dairy"
+    ],
+    "desc": "Crispy fried chicken coated in a fiery Nashville-style cayenne spice oil.",
+    "ingredients": [
+      "Chicken",
+      "Flour",
+      "Buttermilk",
+      "Cayenne pepper",
+      "Pickles"
+    ],
+    "swaps": {},
+    "protein": 42,
+    "carbs": 48,
+    "fat": 41,
+    "fiber": 2,
+    "image": "/images/dishes/Nashville-Hot-Chicken.jpg"
+  },
+  {
+    "id": 8013,
+    "name": "Buffalo Wings",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍗",
+    "cal": 640,
+    "budget": 10,
+    "time": "45 min",
+    "spice": 4,
+    "tags": [
+      "dairy"
+    ],
+    "desc": "Crispy chicken wings tossed in tangy Buffalo sauce and served with celery and dip.",
+    "ingredients": [
+      "Chicken wings",
+      "Hot sauce",
+      "Butter",
+      "Celery",
+      "Blue cheese dressing"
+    ],
+    "swaps": {},
+    "protein": 39,
+    "carbs": 8,
+    "fat": 48,
+    "fiber": 1,
+    "image": "/images/dishes/Buffalo-Wings.jpg"
+  },
+  {
+    "id": 8014,
+    "name": "Philly Cheesesteak",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥪",
+    "cal": 760,
+    "budget": 13,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "dairy",
+      "gluten"
+    ],
+    "desc": "Philadelphia sandwich with thin-sliced beef, melted cheese, and onions on a hoagie roll.",
+    "ingredients": [
+      "Ribeye steak",
+      "Hoagie roll",
+      "Provolone",
+      "Onion",
+      "Bell pepper"
+    ],
+    "swaps": {},
+    "protein": 42,
+    "carbs": 58,
+    "fat": 38,
+    "fiber": 3,
+    "image": "/images/dishes/Philly-Cheesesteak.jpg"
+  },
+  {
+    "id": 8015,
+    "name": "Chicago Deep-Dish Pizza",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍕",
+    "cal": 880,
+    "budget": 14,
+    "time": "1 hr 20 min",
+    "spice": 1,
+    "tags": [
+      "dairy",
+      "gluten"
+    ],
+    "desc": "Thick Chicago-style pizza baked in a deep pan with cheese, toppings, and tomato sauce.",
+    "ingredients": [
+      "Pizza dough",
+      "Mozzarella",
+      "Tomato sauce",
+      "Sausage",
+      "Parmesan"
+    ],
+    "swaps": {},
+    "protein": 36,
+    "carbs": 92,
+    "fat": 38,
+    "fiber": 6,
+    "image": "/images/dishes/Chicago-Deep-Dish-Pizza.jpg"
+  },
+  {
+    "id": 8016,
+    "name": "Chicago Hot Dog",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🌭",
+    "cal": 460,
+    "budget": 7,
+    "time": "15 min",
+    "spice": 1,
+    "tags": [
+      "gluten"
+    ],
+    "desc": "Classic Chicago hot dog topped with mustard, relish, onion, tomato, pickle, peppers, and celery salt.",
+    "ingredients": [
+      "Hot dog",
+      "Poppy seed bun",
+      "Mustard",
+      "Relish",
+      "Pickle spear",
+      "Tomato"
+    ],
+    "swaps": {},
+    "protein": 18,
+    "carbs": 42,
+    "fat": 24,
+    "fiber": 3,
+    "image": "/images/dishes/Chicago-Hot-Dog.jpg"
+  },
+  {
+    "id": 8017,
+    "name": "New York Pizza",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍕",
+    "cal": 620,
+    "budget": 9,
+    "time": "45 min",
+    "spice": 1,
+    "tags": [
+      "dairy",
+      "gluten"
+    ],
+    "desc": "Thin, foldable New York-style pizza with tomato sauce, mozzarella, and a crisp chewy crust.",
+    "ingredients": [
+      "Pizza dough",
+      "Tomato sauce",
+      "Mozzarella",
+      "Olive oil",
+      "Oregano"
+    ],
+    "swaps": {},
+    "protein": 26,
+    "carbs": 78,
+    "fat": 23,
+    "fiber": 4,
+    "image": "/images/dishes/New-York-Pizza.jpg"
+  },
+  {
+    "id": 8018,
+    "name": "Po' Boy",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥖",
+    "cal": 720,
+    "budget": 13,
+    "time": "35 min",
+    "spice": 2,
+    "tags": [
+      "gluten",
+      "shellfish"
+    ],
+    "desc": "Louisiana sandwich filled with fried shrimp, lettuce, tomato, pickles, and remoulade.",
+    "ingredients": [
+      "French bread",
+      "Shrimp",
+      "Lettuce",
+      "Tomato",
+      "Pickles",
+      "Remoulade"
+    ],
+    "swaps": {},
+    "protein": 34,
+    "carbs": 74,
+    "fat": 31,
+    "fiber": 5,
+    "image": "/images/dishes/Po-Boy.jpg"
+  },
+  {
+    "id": 8019,
+    "name": "Muffuletta",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥪",
+    "cal": 820,
+    "budget": 14,
+    "time": "20 min",
+    "spice": 1,
+    "tags": [
+      "dairy",
+      "gluten"
+    ],
+    "desc": "New Orleans sandwich layered with Italian meats, cheese, and olive salad.",
+    "ingredients": [
+      "Round bread",
+      "Salami",
+      "Ham",
+      "Provolone",
+      "Olive salad"
+    ],
+    "swaps": {},
+    "protein": 39,
+    "carbs": 65,
+    "fat": 44,
+    "fiber": 5,
+    "image": "/images/dishes/Muffuletta.jpg"
+  },
+  {
+    "id": 8020,
+    "name": "Red Beans and Rice",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍚",
+    "cal": 560,
+    "budget": 7,
+    "time": "1 hr 30 min",
+    "spice": 2,
+    "tags": [],
+    "desc": "Louisiana comfort dish with red beans, rice, smoked sausage, and Creole seasoning.",
+    "ingredients": [
+      "Red beans",
+      "Rice",
+      "Smoked sausage",
+      "Onion",
+      "Celery",
+      "Creole seasoning"
+    ],
+    "swaps": {},
+    "protein": 25,
+    "carbs": 76,
+    "fat": 16,
+    "fiber": 13,
+    "image": "/images/dishes/Red-Beans-and-Rice.jpg"
+  },
+  {
+    "id": 8021,
+    "name": "Shrimp and Grits",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🦐",
+    "cal": 610,
+    "budget": 13,
+    "time": "35 min",
+    "spice": 2,
+    "tags": [
+      "shellfish",
+      "dairy"
+    ],
+    "desc": "Southern dish with seasoned shrimp served over creamy stone-ground grits.",
+    "ingredients": [
+      "Shrimp",
+      "Grits",
+      "Cheddar cheese",
+      "Butter",
+      "Garlic",
+      "Green onion"
+    ],
+    "swaps": {},
+    "protein": 32,
+    "carbs": 48,
+    "fat": 31,
+    "fiber": 3,
+    "image": "/images/dishes/Shrimp-and-Grits.jpg"
+  },
+  {
+    "id": 8022,
+    "name": "Country Fried Steak",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥩",
+    "cal": 790,
+    "budget": 11,
+    "time": "45 min",
+    "spice": 1,
+    "tags": [
+      "gluten",
+      "dairy"
+    ],
+    "desc": "Tenderized beef steak breaded, fried, and served with creamy country gravy.",
+    "ingredients": [
+      "Cube steak",
+      "Flour",
+      "Eggs",
+      "Milk",
+      "Black pepper",
+      "Gravy"
+    ],
+    "swaps": {},
+    "protein": 41,
+    "carbs": 46,
+    "fat": 45,
+    "fiber": 2,
+    "image": "/images/dishes/Country-Fried-Steak.jpg"
+  },
+  {
+    "id": 8023,
+    "name": "Biscuits and Gravy",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥣",
+    "cal": 680,
+    "budget": 7,
+    "time": "35 min",
+    "spice": 1,
+    "tags": [
+      "gluten",
+      "dairy"
+    ],
+    "desc": "Southern breakfast with fluffy biscuits covered in creamy sausage gravy.",
+    "ingredients": [
+      "Biscuits",
+      "Breakfast sausage",
+      "Milk",
+      "Flour",
+      "Black pepper"
+    ],
+    "swaps": {},
+    "protein": 23,
+    "carbs": 62,
+    "fat": 37,
+    "fiber": 2,
+    "image": "/images/dishes/Biscuits-and-Gravy.jpg"
+  },
+  {
+    "id": 8024,
+    "name": "Cornbread",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🌽",
+    "cal": 330,
+    "budget": 5,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "gluten",
+      "dairy"
+    ],
+    "desc": "Golden American cornmeal bread with a tender crumb and lightly sweet flavor.",
+    "ingredients": [
+      "Cornmeal",
+      "Flour",
+      "Milk",
+      "Eggs",
+      "Butter",
+      "Baking powder"
+    ],
+    "swaps": {},
+    "protein": 8,
+    "carbs": 48,
+    "fat": 12,
+    "fiber": 3,
+    "image": "/images/dishes/Cornbread.jpg"
+  },
+  {
+    "id": 8025,
+    "name": "Baked Beans",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🫘",
+    "cal": 390,
+    "budget": 6,
+    "time": "1 hr",
+    "spice": 1,
+    "tags": [],
+    "desc": "Sweet and smoky baked beans cooked with molasses, brown sugar, and barbecue flavors.",
+    "ingredients": [
+      "Navy beans",
+      "Molasses",
+      "Brown sugar",
+      "Onion",
+      "Bacon",
+      "Mustard"
+    ],
+    "swaps": {},
+    "protein": 16,
+    "carbs": 64,
+    "fat": 8,
+    "fiber": 12,
+    "image": "/images/dishes/Baked-Beans.jpg"
+  },
+  {
+    "id": 8026,
+    "name": "Maryland Crab Cakes",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🦀",
+    "cal": 520,
+    "budget": 18,
+    "time": "35 min",
+    "spice": 1,
+    "tags": [
+      "shellfish",
+      "gluten"
+    ],
+    "desc": "Maryland-style crab cakes made with lump crab meat, light seasoning, and golden crust.",
+    "ingredients": [
+      "Crab meat",
+      "Breadcrumbs",
+      "Egg",
+      "Mayonnaise",
+      "Old Bay seasoning",
+      "Lemon"
+    ],
+    "swaps": {},
+    "protein": 33,
+    "carbs": 28,
+    "fat": 29,
+    "fiber": 2,
+    "image": "/images/dishes/Maryland-Crab-Cakes.jpg"
+  },
+  {
+    "id": 8027,
+    "name": "Reuben Sandwich",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥪",
+    "cal": 760,
+    "budget": 12,
+    "time": "20 min",
+    "spice": 1,
+    "tags": [
+      "dairy",
+      "gluten"
+    ],
+    "desc": "Grilled deli sandwich with corned beef, Swiss cheese, sauerkraut, and Russian dressing.",
+    "ingredients": [
+      "Rye bread",
+      "Corned beef",
+      "Swiss cheese",
+      "Sauerkraut",
+      "Russian dressing"
+    ],
+    "swaps": {},
+    "protein": 38,
+    "carbs": 58,
+    "fat": 40,
+    "fiber": 5,
+    "image": "/images/dishes/Reuben-Sandwich.jpg"
+  },
+  {
+    "id": 8028,
+    "name": "Cobb Salad",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥗",
+    "cal": 540,
+    "budget": 10,
+    "time": "25 min",
+    "spice": 1,
+    "tags": [
+      "dairy"
+    ],
+    "desc": "Classic California salad with chicken, bacon, avocado, egg, blue cheese, and greens.",
+    "ingredients": [
+      "Chicken",
+      "Bacon",
+      "Avocado",
+      "Eggs",
+      "Blue cheese",
+      "Lettuce"
+    ],
+    "swaps": {},
+    "protein": 35,
+    "carbs": 18,
+    "fat": 36,
+    "fiber": 7,
+    "image": "/images/dishes/Cobb-Salad.jpg"
+  },
+  {
+    "id": 8029,
+    "name": "Pecan Pie",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥧",
+    "cal": 620,
+    "budget": 9,
+    "time": "1 hr",
+    "spice": 1,
+    "tags": [
+      "gluten",
+      "nuts",
+      "dairy"
+    ],
+    "desc": "Southern dessert pie filled with pecans, syrup, butter, and a rich caramel-like filling.",
+    "ingredients": [
+      "Pecans",
+      "Pie crust",
+      "Corn syrup",
+      "Eggs",
+      "Butter",
+      "Brown sugar"
+    ],
+    "swaps": {},
+    "protein": 7,
+    "carbs": 72,
+    "fat": 34,
+    "fiber": 4,
+    "image": "/images/dishes/Pecan-Pie.jpg"
+  },
+  {
+    "id": 8030,
+    "name": "Peach Cobbler",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍑",
+    "cal": 460,
+    "budget": 7,
+    "time": "50 min",
+    "spice": 1,
+    "tags": [
+      "gluten",
+      "dairy"
+    ],
+    "desc": "Warm Southern dessert with sweet peaches baked under a golden biscuit-style topping.",
+    "ingredients": [
+      "Peaches",
+      "Flour",
+      "Sugar",
+      "Butter",
+      "Cinnamon",
+      "Milk"
+    ],
+    "swaps": {},
+    "protein": 5,
+    "carbs": 68,
+    "fat": 18,
+    "fiber": 4,
+    "image": "/images/dishes/Peach-Cobbler.jpg"
+  },
+  {
+    "id": 8031,
+    "name": "Banana Pudding",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍌",
+    "cal": 420,
+    "budget": 6,
+    "time": "25 min",
+    "spice": 1,
+    "tags": [
+      "dairy",
+      "gluten"
+    ],
+    "desc": "Creamy Southern dessert layered with bananas, vanilla wafers, and pudding.",
+    "ingredients": [
+      "Bananas",
+      "Vanilla wafers",
+      "Vanilla pudding",
+      "Milk",
+      "Whipped cream"
+    ],
+    "swaps": {},
+    "protein": 6,
+    "carbs": 62,
+    "fat": 16,
+    "fiber": 3,
+    "image": "/images/dishes/Banana-Pudding.jpg"
+  },
+  {
+    "id": 8032,
+    "name": "Key Lime Pie",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍋",
+    "cal": 470,
+    "budget": 8,
+    "time": "35 min",
+    "spice": 1,
+    "tags": [
+      "dairy",
+      "gluten"
+    ],
+    "desc": "Florida dessert with tart key lime filling in a graham cracker crust.",
+    "ingredients": [
+      "Key lime juice",
+      "Condensed milk",
+      "Egg yolks",
+      "Graham cracker crust",
+      "Whipped cream"
+    ],
+    "swaps": {},
+    "protein": 8,
+    "carbs": 58,
+    "fat": 23,
+    "fiber": 2,
+    "image": "/images/dishes/Key-Lime-Pie.jpg"
+  },
+  {
+    "id": 8033,
+    "name": "New York Cheesecake",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍰",
+    "cal": 610,
+    "budget": 9,
+    "time": "1 hr 20 min",
+    "spice": 1,
+    "tags": [
+      "dairy",
+      "gluten"
+    ],
+    "desc": "Dense and creamy New York-style cheesecake with a graham cracker crust.",
+    "ingredients": [
+      "Cream cheese",
+      "Sugar",
+      "Eggs",
+      "Sour cream",
+      "Graham cracker crust"
+    ],
+    "swaps": {},
+    "protein": 11,
+    "carbs": 52,
+    "fat": 39,
+    "fiber": 1,
+    "image": "/images/dishes/New-York-Cheesecake.jpg"
+  },
+  {
+    "id": 8034,
+    "name": "Chocolate Chip Cookies",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍪",
+    "cal": 320,
+    "budget": 5,
+    "time": "25 min",
+    "spice": 1,
+    "tags": [
+      "gluten",
+      "dairy"
+    ],
+    "desc": "Classic American cookies with buttery dough and melted chocolate chips.",
+    "ingredients": [
+      "Flour",
+      "Butter",
+      "Sugar",
+      "Chocolate chips",
+      "Eggs",
+      "Vanilla"
+    ],
+    "swaps": {},
+    "protein": 4,
+    "carbs": 42,
+    "fat": 16,
+    "fiber": 2,
+    "image": "/images/dishes/Chocolate-Chip-Cookies.jpg"
+  },
+  {
+    "id": 8035,
+    "name": "Chilaquiles",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🍳",
+    "cal": 480,
+    "budget": 7,
+    "time": "25 min",
+    "spice": 2,
+    "tags": [
+      "vegetarian-option",
+      "gluten-free"
+    ],
+    "desc": "Crisp corn tortilla pieces simmered briefly in red or green salsa and finished with crema, cheese, onion, and eggs.",
+    "ingredients": [
+      "Corn tortillas",
+      "Salsa roja or salsa verde",
+      "Eggs",
+      "Mexican crema",
+      "Queso fresco",
+      "Red onion",
+      "Cilantro"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Hot salsa",
+          "to": "Mild roasted tomato salsa",
+          "note": "Keeps the flavor with less heat"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Mexican crema and queso fresco",
+          "to": "Plant-based crema and vegan cheese",
+          "note": "Use just before serving"
+        }
+      ]
+    },
+    "protein": 18,
+    "carbs": 55,
+    "fat": 21,
+    "fiber": 8,
+    "image": "/images/dishes/Chilaquiles.jpg"
+  },
+  {
+    "id": 8036,
+    "name": "Huevos Rancheros",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🍳",
+    "cal": 430,
+    "budget": 6,
+    "time": "25 min",
+    "spice": 2,
+    "tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "desc": "Fried eggs served on corn tortillas with warm ranchero tomato-chile sauce and beans.",
+    "ingredients": [
+      "Eggs",
+      "Corn tortillas",
+      "Tomatoes",
+      "Jalapeño",
+      "Onion",
+      "Refried beans",
+      "Cilantro"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Jalapeño",
+          "to": "Green bell pepper",
+          "note": "Fresh flavor without the heat"
+        }
+      ]
+    },
+    "protein": 20,
+    "carbs": 43,
+    "fat": 20,
+    "fiber": 9,
+    "image": "/images/dishes/Huevos-Rancheros.jpg"
+  },
+  {
+    "id": 8037,
+    "name": "Huevos a la Mexicana",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🍳",
+    "cal": 310,
+    "budget": 5,
+    "time": "15 min",
+    "spice": 2,
+    "tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "desc": "Scrambled eggs cooked with tomato, onion, and green chile in the colors of the Mexican flag.",
+    "ingredients": [
+      "Eggs",
+      "Tomatoes",
+      "White onion",
+      "Serrano pepper",
+      "Cilantro",
+      "Oil",
+      "Salt"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Serrano pepper",
+          "to": "Green bell pepper",
+          "note": "Keeps the color and crunch"
+        }
+      ]
+    },
+    "protein": 19,
+    "carbs": 10,
+    "fat": 21,
+    "fiber": 3,
+    "image": "/images/dishes/Huevos-a-la-Mexicana.jpg"
+  },
+  {
+    "id": 8038,
+    "name": "Molletes",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🥖",
+    "cal": 520,
+    "budget": 6,
+    "time": "20 min",
+    "spice": 1,
+    "tags": [
+      "vegetarian"
+    ],
+    "desc": "Toasted bolillo halves spread with refried beans, melted cheese, and fresh pico de gallo.",
+    "ingredients": [
+      "Bolillo rolls",
+      "Refried beans",
+      "Oaxaca cheese",
+      "Tomatoes",
+      "Onion",
+      "Cilantro",
+      "Lime"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Bolillo rolls",
+          "to": "Gluten-free rolls",
+          "note": "Toast well before topping"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Oaxaca cheese",
+          "to": "Vegan melting cheese",
+          "note": "Broil until bubbly"
+        }
+      ]
+    },
+    "protein": 22,
+    "carbs": 69,
+    "fat": 18,
+    "fiber": 11,
+    "image": "/images/dishes/Molletes.jpg"
+  },
+  {
+    "id": 8039,
+    "name": "Machaca con Huevo",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🥩",
+    "cal": 470,
+    "budget": 9,
+    "time": "25 min",
+    "spice": 2,
+    "tags": [
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Northern Mexican dried beef scrambled with eggs, tomatoes, onion, and chile.",
+    "ingredients": [
+      "Machaca dried beef",
+      "Eggs",
+      "Tomatoes",
+      "Onion",
+      "Jalapeño",
+      "Oil",
+      "Cilantro"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Jalapeño",
+          "to": "Green bell pepper",
+          "note": "Mild and family friendly"
+        }
+      ]
+    },
+    "protein": 36,
+    "carbs": 12,
+    "fat": 30,
+    "fiber": 3,
+    "image": "/images/dishes/Machaca-con-Huevo.jpg"
+  },
+  {
+    "id": 8040,
+    "name": "Carnitas",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🐖",
+    "cal": 590,
+    "budget": 10,
+    "time": "3 hrs",
+    "spice": 1,
+    "tags": [
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Pork slowly cooked until tender, then crisped and served with tortillas, onion, cilantro, and lime.",
+    "ingredients": [
+      "Pork shoulder",
+      "Orange",
+      "Garlic",
+      "Bay leaves",
+      "Cumin",
+      "Corn tortillas",
+      "Lime"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pork shoulder",
+          "to": "Young jackfruit",
+          "note": "Season and crisp in a skillet"
+        }
+      ]
+    },
+    "protein": 38,
+    "carbs": 30,
+    "fat": 34,
+    "fiber": 5,
+    "image": "/images/dishes/Carnitas.jpg"
+  },
+  {
+    "id": 8041,
+    "name": "Torta Ahogada",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🥪",
+    "cal": 720,
+    "budget": 11,
+    "time": "50 min",
+    "spice": 4,
+    "tags": [
+      "dairy-free"
+    ],
+    "desc": "A Guadalajara-style crusty pork sandwich submerged in tomato sauce and a fiery chile de árbol salsa.",
+    "ingredients": [
+      "Birote bread",
+      "Carnitas",
+      "Tomatoes",
+      "Chile de árbol",
+      "Onion",
+      "Garlic",
+      "Lime"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Chile de árbol salsa",
+          "to": "Mild tomato salsa",
+          "note": "Serve hot salsa separately"
+        }
+      ]
+    },
+    "protein": 34,
+    "carbs": 83,
+    "fat": 28,
+    "fiber": 7,
+    "image": "/images/dishes/Torta-Ahogada.jpg"
+  },
+  {
+    "id": 8042,
+    "name": "Birria",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🍲",
+    "cal": 620,
+    "budget": 14,
+    "time": "4 hrs",
+    "spice": 3,
+    "tags": [
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Jalisco-style slow-braised meat in a deeply flavored chile and spice broth, served with onion and lime.",
+    "ingredients": [
+      "Beef chuck or goat",
+      "Guajillo chiles",
+      "Ancho chiles",
+      "Tomatoes",
+      "Garlic",
+      "Cinnamon",
+      "Cloves"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Hot dried chiles",
+          "to": "Guajillo and ancho only",
+          "note": "Rich chile flavor with gentler heat"
+        }
+      ]
+    },
+    "protein": 44,
+    "carbs": 20,
+    "fat": 38,
+    "fiber": 5,
+    "image": "/images/dishes/Birria.jpg"
+  },
+  {
+    "id": 8043,
+    "name": "Chile en Nogada",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🌶️",
+    "cal": 690,
+    "budget": 16,
+    "time": "1.5 hrs",
+    "spice": 1,
+    "tags": [
+      "gluten-free"
+    ],
+    "desc": "A poblano chile filled with savory-sweet picadillo, covered in walnut sauce, and garnished with pomegranate.",
+    "ingredients": [
+      "Poblano peppers",
+      "Ground meat",
+      "Walnuts",
+      "Pomegranate",
+      "Apple",
+      "Pear",
+      "Cream"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cream",
+          "to": "Unsweetened cashew cream",
+          "note": "Blends naturally with walnuts"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 50,
+    "fat": 39,
+    "fiber": 9,
+    "image": "/images/dishes/Chile-en-Nogada.jpg"
+  },
+  {
+    "id": 8044,
+    "name": "Gorditas",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🫓",
+    "cal": 460,
+    "budget": 6,
+    "time": "40 min",
+    "spice": 2,
+    "tags": [
+      "gluten-free",
+      "vegetarian-option"
+    ],
+    "desc": "Thick masa cakes split and filled with beans, meat, cheese, salsa, and fresh toppings.",
+    "ingredients": [
+      "Masa harina",
+      "Water",
+      "Salt",
+      "Refried beans",
+      "Shredded meat",
+      "Queso fresco",
+      "Salsa"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Meat and cheese",
+          "to": "Beans, mushrooms, and avocado",
+          "note": "A hearty plant-based filling"
+        }
+      ]
+    },
+    "protein": 18,
+    "carbs": 58,
+    "fat": 18,
+    "fiber": 9,
+    "image": "/images/dishes/Gorditas.jpg"
+  },
+  {
+    "id": 8045,
+    "name": "Flautas",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🌯",
+    "cal": 540,
+    "budget": 7,
+    "time": "35 min",
+    "spice": 2,
+    "tags": [
+      "gluten-free-option"
+    ],
+    "desc": "Rolled tortillas filled with seasoned chicken, fried until crisp, and topped with crema, lettuce, and cheese.",
+    "ingredients": [
+      "Corn tortillas",
+      "Shredded chicken",
+      "Lettuce",
+      "Mexican crema",
+      "Queso fresco",
+      "Salsa",
+      "Oil"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Crema and queso fresco",
+          "to": "Avocado crema",
+          "note": "Creamy and dairy free"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Chicken",
+          "to": "Mashed potatoes and black beans",
+          "note": "Season before rolling"
+        }
+      ]
+    },
+    "protein": 27,
+    "carbs": 49,
+    "fat": 26,
+    "fiber": 7,
+    "image": "/images/dishes/Flautas.jpg"
+  },
+  {
+    "id": 8046,
+    "name": "Menudo",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🍲",
+    "cal": 390,
+    "budget": 10,
+    "time": "4 hrs",
+    "spice": 3,
+    "tags": [
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "A restorative red chile soup with tender beef tripe and hominy, traditionally enjoyed on weekends.",
+    "ingredients": [
+      "Beef tripe",
+      "Hominy",
+      "Guajillo chiles",
+      "Garlic",
+      "Oregano",
+      "Onion",
+      "Lime"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Chile sauce",
+          "to": "Mild guajillo broth",
+          "note": "Red color and depth with less heat"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 31,
+    "fat": 16,
+    "fiber": 6,
+    "image": "/images/dishes/Menudo.jpg"
+  },
+  {
+    "id": 8047,
+    "name": "Sopa de Tortilla",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🍲",
+    "cal": 360,
+    "budget": 6,
+    "time": "35 min",
+    "spice": 2,
+    "tags": [
+      "vegetarian-option",
+      "gluten-free"
+    ],
+    "desc": "Tomato-chile broth topped with crisp tortilla strips, avocado, cheese, and crema.",
+    "ingredients": [
+      "Tomatoes",
+      "Corn tortillas",
+      "Pasilla chile",
+      "Chicken stock",
+      "Avocado",
+      "Queso fresco",
+      "Crema"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken stock, cheese, and crema",
+          "to": "Vegetable stock, avocado, and plant crema",
+          "note": "Keeps it rich and satisfying"
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 42,
+    "fat": 17,
+    "fiber": 8,
+    "image": "/images/dishes/Sopa-de-Tortilla.jpg"
+  },
+  {
+    "id": 8048,
+    "name": "Aguachile",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🦐",
+    "cal": 250,
+    "budget": 14,
+    "time": "25 min",
+    "spice": 4,
+    "tags": [
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Sinaloa-style shrimp cured in lime and covered with a vivid chile-cilantro sauce, cucumber, and onion.",
+    "ingredients": [
+      "Raw shrimp",
+      "Lime juice",
+      "Serrano peppers",
+      "Cilantro",
+      "Cucumber",
+      "Red onion",
+      "Salt"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Serrano peppers",
+          "to": "Poblano or green bell pepper",
+          "note": "Fresh green flavor with less heat"
+        }
+      ]
+    },
+    "protein": 29,
+    "carbs": 15,
+    "fat": 7,
+    "fiber": 4,
+    "image": "/images/dishes/Aguachile.jpg"
+  },
+  {
+    "id": 8049,
+    "name": "Ensalada de Nopales",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🥗",
+    "cal": 190,
+    "budget": 5,
+    "time": "25 min",
+    "spice": 1,
+    "tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "desc": "Tender cactus paddles tossed with tomato, onion, cilantro, lime, and crumbly cheese.",
+    "ingredients": [
+      "Nopales",
+      "Tomatoes",
+      "White onion",
+      "Cilantro",
+      "Lime",
+      "Queso fresco",
+      "Oregano"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Queso fresco",
+          "to": "Avocado",
+          "note": "Adds richness without dairy"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 18,
+    "fat": 10,
+    "fiber": 7,
+    "image": "/images/dishes/Ensalada-de-Nopales.jpg"
+  },
+  {
+    "id": 8050,
+    "name": "Jicama Salad",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🥗",
+    "cal": 170,
+    "budget": 5,
+    "time": "15 min",
+    "spice": 2,
+    "tags": [
+      "vegan",
+      "gluten-free"
+    ],
+    "desc": "Crisp jícama, cucumber, orange, and lime seasoned with chile for a refreshing Mexican salad.",
+    "ingredients": [
+      "Jicama",
+      "Cucumber",
+      "Orange",
+      "Lime juice",
+      "Cilantro",
+      "Chile powder",
+      "Salt"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Chile powder",
+          "to": "Sweet paprika or omit",
+          "note": "Keeps the color without heat"
+        }
+      ]
+    },
+    "protein": 3,
+    "carbs": 38,
+    "fat": 1,
+    "fiber": 12,
+    "image": "/images/dishes/Jicama-Salad.jpg"
+  },
+  {
+    "id": 8051,
+    "name": "Churros",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🍩",
+    "cal": 390,
+    "budget": 4,
+    "time": "35 min",
+    "spice": 1,
+    "tags": [
+      "vegetarian"
+    ],
+    "desc": "Crisp ridged pastries rolled in cinnamon sugar and served warm, often with chocolate sauce.",
+    "ingredients": [
+      "Flour",
+      "Water",
+      "Butter",
+      "Sugar",
+      "Cinnamon",
+      "Oil",
+      "Chocolate sauce"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Plant-based butter",
+          "note": "Works the same in the dough"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 58,
+    "fat": 16,
+    "fiber": 3,
+    "image": "/images/dishes/Churros.jpg"
+  },
+  {
+    "id": 8052,
+    "name": "Flan Napolitano",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🍮",
+    "cal": 420,
+    "budget": 7,
+    "time": "1.5 hrs",
+    "spice": 1,
+    "tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "desc": "Silky Mexican caramel custard enriched with cream cheese and sweetened condensed milk.",
+    "ingredients": [
+      "Eggs",
+      "Sweetened condensed milk",
+      "Evaporated milk",
+      "Cream cheese",
+      "Sugar",
+      "Vanilla",
+      "Salt"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Dairy milks and cream cheese",
+          "to": "Coconut condensed milk and plant cream cheese",
+          "note": "Chill fully before unmolding"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 55,
+    "fat": 18,
+    "fiber": 0,
+    "image": "/images/dishes/Flan-Napolitano.jpg"
+  },
+  {
+    "id": 8053,
+    "name": "Arroz con Leche",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🍚",
+    "cal": 330,
+    "budget": 4,
+    "time": "45 min",
+    "spice": 1,
+    "tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "desc": "Creamy cinnamon-scented rice pudding served warm or chilled with raisins.",
+    "ingredients": [
+      "Rice",
+      "Milk",
+      "Cinnamon",
+      "Sugar",
+      "Vanilla",
+      "Raisins",
+      "Lime peel"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk or coconut milk",
+          "note": "Use unsweetened milk"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 63,
+    "fat": 6,
+    "fiber": 2,
+    "image": "/images/dishes/Arroz-con-Leche.jpg"
+  },
+  {
+    "id": 8054,
+    "name": "Horchata",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🥤",
+    "cal": 210,
+    "budget": 3,
+    "time": "8 hrs",
+    "spice": 1,
+    "tags": [
+      "vegan-option",
+      "gluten-free"
+    ],
+    "desc": "A chilled rice-and-cinnamon drink blended until creamy and lightly sweetened.",
+    "ingredients": [
+      "Long-grain rice",
+      "Cinnamon sticks",
+      "Water",
+      "Sugar",
+      "Vanilla",
+      "Milk",
+      "Ice"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk or almond milk",
+          "note": "Keeps the drink creamy"
+        }
+      ]
+    },
+    "protein": 3,
+    "carbs": 44,
+    "fat": 3,
+    "fiber": 1,
+    "image": "/images/dishes/Horchata.jpg"
+  },
+  {
+    "id": 8055,
+    "name": "Agua de Jamaica",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🥤",
+    "cal": 90,
+    "budget": 3,
+    "time": "20 min",
+    "spice": 1,
+    "tags": [
+      "vegan",
+      "gluten-free"
+    ],
+    "desc": "A ruby-red hibiscus drink with a tart, floral flavor, served cold over ice.",
+    "ingredients": [
+      "Dried hibiscus flowers",
+      "Water",
+      "Sugar",
+      "Lime",
+      "Ice"
+    ],
+    "swaps": {
+      "sugar": [
+        {
+          "from": "Sugar",
+          "to": "Honey, agave, or less sweetener",
+          "note": "Adjust after chilling"
+        }
+      ]
+    },
+    "protein": 0,
+    "carbs": 23,
+    "fat": 0,
+    "fiber": 1,
+    "image": "/images/dishes/Agua-de-Jamaica.jpg"
+  },
+  {
+    "id": 8056,
+    "name": "Agua de Tamarindo",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🥤",
+    "cal": 130,
+    "budget": 4,
+    "time": "35 min",
+    "spice": 1,
+    "tags": [
+      "vegan",
+      "gluten-free"
+    ],
+    "desc": "A sweet-tart tamarind cooler made from tamarind pulp, water, and sugar.",
+    "ingredients": [
+      "Tamarind pods or pulp",
+      "Water",
+      "Sugar",
+      "Lime",
+      "Ice"
+    ],
+    "swaps": {
+      "sugar": [
+        {
+          "from": "Sugar",
+          "to": "Agave or reduced sugar",
+          "note": "Tamarind remains naturally tangy"
+        }
+      ]
+    },
+    "protein": 1,
+    "carbs": 34,
+    "fat": 0,
+    "fiber": 2,
+    "image": "/images/dishes/Agua-de-Tamarindo.jpg"
+  },
+  {
+    "id": 8057,
+    "name": "Champurrado",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "☕",
+    "cal": 320,
+    "budget": 4,
+    "time": "25 min",
+    "spice": 1,
+    "tags": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "desc": "A thick, warming Mexican chocolate drink made with masa, cinnamon, and piloncillo.",
+    "ingredients": [
+      "Masa harina",
+      "Mexican chocolate",
+      "Milk",
+      "Piloncillo",
+      "Cinnamon",
+      "Water",
+      "Vanilla"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Creates a smooth, rich texture"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 56,
+    "fat": 8,
+    "fiber": 4,
+    "image": "/images/dishes/Champurrado.jpg"
+  },
+  {
+    "id": 8058,
+    "name": "Café de Olla",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "☕",
+    "cal": 80,
+    "budget": 3,
+    "time": "20 min",
+    "spice": 1,
+    "tags": [
+      "vegan",
+      "gluten-free"
+    ],
+    "desc": "Traditional Mexican coffee brewed with cinnamon and piloncillo for a warm caramel-spice aroma.",
+    "ingredients": [
+      "Ground coffee",
+      "Water",
+      "Piloncillo",
+      "Cinnamon stick",
+      "Cloves",
+      "Orange peel"
+    ],
+    "swaps": {
+      "sugar": [
+        {
+          "from": "Piloncillo",
+          "to": "Brown sugar",
+          "note": "Use slightly less and adjust to taste"
+        }
+      ]
+    },
+    "protein": 0,
+    "carbs": 20,
+    "fat": 0,
+    "fiber": 0,
+    "image": "/images/dishes/Café-de-Olla.jpg"
+  },
+  {
+    "id": 1078,
+    "name": "Tamago Kake Gohan",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🍚",
+    "cal": 350,
+    "budget": 3,
+    "time": "5 min",
+    "spice": 1,
+    "tags": [
+      "breakfast",
+      "vegetarian",
+      "dairy-free",
+      "gluten-free-option"
+    ],
+    "desc": "A comforting Japanese breakfast of hot steamed rice mixed with egg and seasoned with soy sauce.",
+    "ingredients": [
+      "Steamed Japanese rice",
+      "Fresh egg",
+      "Soy sauce",
+      "Green onions",
+      "Nori",
+      "Sesame seeds"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Tamari",
+          "note": "Provides the same savory flavor without gluten"
+        }
+      ]
+    },
+    "protein": 13,
+    "carbs": 55,
+    "fat": 8,
+    "fiber": 1,
+    "image": "/images/dishes/Tamago-Kake-Gohan.jpg"
+  },
+  {
+    "id": 1079,
+    "name": "Pancakes",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥞",
+    "cal": 430,
+    "budget": 4,
+    "time": "20 min",
+    "spice": 1,
+    "tags": [
+      "breakfast",
+      "vegetarian"
+    ],
+    "desc": "Fluffy American pancakes served warm with butter and maple syrup.",
+    "ingredients": [
+      "Flour",
+      "Milk",
+      "Eggs",
+      "Butter",
+      "Baking powder",
+      "Sugar",
+      "Maple syrup"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Keeps the pancakes soft and fluffy"
+        },
+        {
+          "from": "Butter",
+          "to": "Plant-based butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free all-purpose flour",
+          "note": "Use a one-to-one baking blend"
+        }
+      ]
+    },
+    "protein": 10,
+    "carbs": 68,
+    "fat": 13,
+    "fiber": 2,
+    "image": "/images/dishes/Pancakes.jpg"
+  }
 ];
