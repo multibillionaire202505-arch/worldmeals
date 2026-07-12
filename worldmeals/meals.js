@@ -3604,7 +3604,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 48,
     "fat": 15,
     "fiber": 5,
-    "image": "/images/dishes/Kelewele.jpg",
+    "image": "/images/dishes/Kelewele.jpg"
   },
   {
     "id": 80,
@@ -36485,7 +36485,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1630386226447-af0a955c1009?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxHaGFuYXxlbnwwfDB8fHwxNzgyNjk1MjMxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Groundnut-Soup.jpg"
   },
   {
     "id": 736,
@@ -36536,7 +36536,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1630386226447-af0a955c1009?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxHaGFuYXxlbnwwfDB8fHwxNzgyNjk1MjMxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+   "image": "/images/dishes/Kontomire-Stew.jpg"
   },
   {
     "id": 737,
@@ -36587,7 +36587,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1630386226447-af0a955c1009?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxHaGFuYXxlbnwwfDB8fHwxNzgyNjk1MjMxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Kenkey.jpg"
   },
   {
     "id": 738,
@@ -36637,7 +36637,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "https://images.unsplash.com/photo-1630386226447-af0a955c1009?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxHaGFuYXxlbnwwfDB8fHwxNzgyNjk1MjMxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+      "image": "/images/dishes/Light-Soup.jpg"
   },
   {
     "id": 739,
