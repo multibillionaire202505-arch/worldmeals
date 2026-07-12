@@ -2762,7 +2762,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 74,
     "fat": 23,
     "fiber": 5,
-    "image": "https://images.unsplash.com/photo-1705088293125-063256c88cf5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5ODU5NjB8MHwxfHNlYXJjaHwxfHxGdWZ1JTIwJTI2JTIwRWd1c2klMjBTb3VwJTIwR2hhbmF8ZW58MHwwfHx8MTc4MjY4NzYxNnww&ixlib=rb-4.1.0&q=80&w=1080"
+    "image": "/images/dishes/Fufu-Egusi-Soup.jpg"
   },
   {
     "id": 62,
