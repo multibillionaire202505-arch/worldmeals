@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Discover authentic dishes from Countries around the world, plan meals, explore global cuisines, and cook with personalized guidance from WorldMeals.">
 <title>World Meals — Every Dish. Every Country.</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -1558,22 +1559,20 @@ body{
   }
 
 
-  /* WORLDMEALS — CONNECTED TRUST PAGE LINKS */
-  .footer-link{
-    padding:7px 10px;
-    border-radius:999px;
-    transition:color .18s ease,background .18s ease,transform .18s ease;
-  }
-  .footer-link:hover,
-  .footer-link:focus-visible{
-    color:#F3E9DD;
-    background:rgba(255,255,255,.07);
-    transform:translateY(-1px);
-    outline:none;
-  }
-  @media(max-width:600px){
-    .footer-links{flex-wrap:wrap;justify-content:center}
-  }
+  /* WORLDMEALS LAUNCH POLISH */
+  :root{--launch-max:1180px;--launch-border:rgba(221,210,196,.78);--launch-shadow:0 18px 48px rgba(48,34,21,.08);--launch-shadow-hover:0 26px 66px rgba(48,34,21,.13)}
+  body{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+  nav{min-height:68px;padding:14px max(24px,calc((100vw - var(--launch-max))/2))}
+  .nav-logo{font-size:18px;letter-spacing:-.45px}.nav-link{color:#625B54;font-weight:650}.nav-cta{padding:10px 19px;border-radius:12px}
+  .hero{max-width:920px;padding-left:24px;padding-right:24px}.hero h1{max-width:880px;margin-left:auto;margin-right:auto;line-height:1.01}.hero-sub{max-width:690px;line-height:1.7}
+  .hero-trust{row-gap:10px}.trust-item{min-height:34px}.section-eyebrow,.v3-kicker{font-size:11px;letter-spacing:.15em}.section-title,.v3-title{line-height:1.08}
+  .features-inner,.testimonials-inner,.preview,.spice,.pricing-inner{width:min(100%,var(--launch-max))}.features-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  .feature-card,.testi-card,.price-card,.discovery-card,.map-panel,.chef-panel,.passport-card{border-color:var(--launch-border)!important}.feature-card{min-height:250px;display:flex;flex-direction:column}.feature-title{font-size:17px;letter-spacing:-.18px}.feature-desc{font-size:13.5px;line-height:1.72}.feature-badge{margin-top:auto;align-self:flex-start;padding:5px 10px;border-radius:999px;letter-spacing:.01em}
+  .persona{min-height:185px}.persona-name{font-size:14px}.persona-desc{color:#AAA29A;font-size:12px;line-height:1.55}.story-copy .section-sub,.v3-sub,.map-country-note{line-height:1.75}
+  .discovery-card{box-shadow:var(--launch-shadow)!important}.discovery-card:hover,.feature-card:hover,.testi-card:hover{box-shadow:var(--launch-shadow-hover)!important}.map-open,.v3-cta,.btn-primary,.btn-secondary{letter-spacing:-.05px}.price-card.featured{border:1px solid rgba(255,255,255,.10)!important}
+  footer{padding-left:max(24px,calc((100vw - var(--launch-max))/2));padding-right:max(24px,calc((100vw - var(--launch-max))/2))}
+  @media(max-width:980px){.features-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:680px){nav{min-height:62px;padding:11px 16px}.nav-logo{font-size:16px}.nav-cta{font-size:12px;padding:9px 13px}.hero{padding-left:16px;padding-right:16px}.hero h1{letter-spacing:-1.45px}.hero-trust{gap:8px}.trust-item{width:calc(50% - 4px);justify-content:center;text-align:center;padding:8px 7px}.features-grid{grid-template-columns:1fr}.feature-card{min-height:0;padding:23px}.feature-badge{margin-top:16px}.personas-row{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;scroll-snap-type:x mandatory;padding-bottom:8px}.persona{flex:0 0 82%;max-width:none;scroll-snap-align:center}footer{justify-content:center;text-align:center}}
 
 </style>
 </head>
@@ -1594,9 +1593,10 @@ body{
 <!-- HERO -->
 <section class="hero">
   <div class="time-greeting" id="timeGreeting">☀️ Welcome to WorldMeals</div>
-  <div class="hero-tag"><span></span> Now live · 1000+ authentic dishes · 195 countries</div>
+  <div class="daypart-note" id="mealPeriodNote">Showing dishes for your local time</div>
+  <div class="hero-tag"><span></span> Now live · 1000+ authentic dishes · Global cuisines</div>
   <h1 id="heroHeadline">Stop cooking<br/>the same 5 meals.<br/>Eat the <em>whole world</em>.</h1>
-  <p class="hero-sub" id="heroSubtitle">Discover authentic dishes from every country, filtered by your budget, calories, spice level, and diet. With an AI chef that works around what's already in your fridge.</p>
+  <p class="hero-sub" id="heroSubtitle">Discover authentic dishes from countries around the world, filtered by your budget, calories, spice level, and diet. With an AI chef that works around what's already in your fridge.</p>
   <div style="font-size:12px;color:#8A7F73;font-weight:700;letter-spacing:.02em;margin:-18px 0 28px">Built in America · Connecting people through food</div>
   <div class="hero-ctas">
    <a href="app.html" class="btn-primary">🍽 Start cooking the world</a>
@@ -1629,13 +1629,13 @@ body{
 
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <div class="marquee-item">🌍 195 countries</div>
+    <div class="marquee-item">🌍 Cuisines from around the world</div>
     <div class="marquee-item">🍽️ 1000+ authentic dishes</div>
     <div class="marquee-item">🤖 AI-powered cooking</div>
     <div class="marquee-item">📸 Real food photography</div>
     <div class="marquee-item">❤️ Connecting people through food</div>
     <div class="marquee-item">🇺🇸 Built in America</div>
-    <div class="marquee-item">🌍 195 countries</div>
+    <div class="marquee-item">🌍 Cuisines from around the world</div>
     <div class="marquee-item">🍽️ 1000+ authentic dishes</div>
     <div class="marquee-item">🤖 AI-powered cooking</div>
     <div class="marquee-item">📸 Real food photography</div>
@@ -1872,25 +1872,25 @@ body{
 <section class="features reveal" id="features">
   <div class="features-inner">
     <div class="section-eyebrow">Everything included</div>
-    <div class="section-title">Features that no other<br/>food app has built</div>
+    <div class="section-title">Thoughtful tools for<br/>a better cooking experience</div>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">🌶️</div>
         <div class="feature-title">Smart Substitution Engine</div>
-        <div class="feature-desc">Scared of spicy food? Can't do dairy? We swap every ingredient in any dish to match your needs — without losing the authentic flavour.</div>
-        <span class="feature-badge" style="background:#FEF3C7;color:#92400E">Your idea. Nobody else has this.</span>
+        <div class="feature-desc">Scared of spicy food? Can't do dairy? We swap every ingredient in any dish to match your needs — without losing the authentic flavor.</div>
+        <span class="feature-badge" style="background:#FEF3C7;color:#92400E">Authentic flavor preserved</span>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🍳</div>
         <div class="feature-title">AI Fridge Chef</div>
         <div class="feature-desc">Type whatever ingredients you have. Our AI finds you an authentic world dish to cook right now — with steps, tips, and what to grab from the shop.</div>
-        <span class="feature-badge" style="background:#EEEDFE;color:#3C3489">Powered by Claude AI</span>
+        <span class="feature-badge" style="background:#EEEDFE;color:#3C3489">AI-powered guidance</span>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🗺️</div>
         <div class="feature-title">World Map Explorer</div>
-        <div class="feature-desc">Tap any country on the map and instantly see its dishes, flavour profiles, and cultural stories. Explore food like a traveller, not a searcher.</div>
-        <span class="feature-badge" style="background:#E1F5EE;color:#085041">195 countries</span>
+        <div class="feature-desc">Tap a featured country on the map and instantly see its dishes, flavor profiles, and cultural stories. Explore food like a traveler, not a searcher.</div>
+        <span class="feature-badge" style="background:#E1F5EE;color:#085041">Countries around the world</span>
       </div>
       <div class="feature-card">
         <div class="feature-icon">📅</div>
@@ -1901,14 +1901,14 @@ body{
       <div class="feature-card">
         <div class="feature-icon">🏆</div>
         <div class="feature-title">World Tour Challenge</div>
-        <div class="feature-desc">Cook one dish from every country and earn your place as a global chef. Track your progress, collect badges, and share your tour with the world.</div>
-        <span class="feature-badge" style="background:#FAEEDA;color:#633806">195 countries to conquer</span>
+        <div class="feature-desc">Cook dishes from around the world and grow your journey as a global chef. Track your progress, collect badges, and share your tour with the world.</div>
+        <span class="feature-badge" style="background:#FAEEDA;color:#633806">Countries around the world to conquer</span>
       </div>
       <div class="feature-card">
         <div class="feature-icon">💰</div>
         <div class="feature-title">Budget & Calorie Filters</div>
-        <div class="feature-desc">The only food app that lets you search by what you can afford AND what you want to eat. Set your limits, discover what fits, cook with confidence.</div>
-        <span class="feature-badge" style="background:#DCFCE7;color:#166534">Nobody else does this</span>
+        <div class="feature-desc">Search by budget, calories, and dietary preferences. Set your limits, discover what fits, and cook with confidence.</div>
+        <span class="feature-badge" style="background:#DCFCE7;color:#166534">Budget-friendly discovery</span>
       </div>
     </div>
   </div>
@@ -1922,7 +1922,7 @@ body{
     <div>
       <div class="v3-kicker">Interactive world map</div>
       <div class="v3-title">Tap a country.<br><em>Meet its cuisine instantly.</em></div>
-      <div class="v3-sub">No searching. No complicated menus. Choose a country on the globe and discover some of its iconic dishes in a single tap.</div>
+      <div class="v3-sub">No searching. No complicated menus. Choose one of the featured countries on the globe and discover some of its iconic dishes in a single tap.</div>
 
       <div class="globe-wrap">
         <div class="globe" aria-label="Interactive cuisine globe">
@@ -2017,10 +2017,10 @@ body{
 <section class="spice reveal">
   <div class="spice-inner">
     <div>
-      <div class="section-eyebrow">The feature everyone talks about</div>
+      <div class="section-eyebrow">Personalized for you</div>
       <div class="section-title">Love a cuisine.<br/>Hate the spice.</div>
-      <p style="font-size:15px;color:#666;line-height:1.7;margin-bottom:20px">Millions of people avoid entire cuisines because of one ingredient. Too spicy. Too much dairy. Can't eat gluten. World Meals fixes that instantly — for every single dish on the platform.</p>
-      <p style="font-size:13px;color:#888;line-height:1.6">Want Butter Chicken but can't handle heat? We swap the chili for sweet paprika. Same colour, same richness, zero fire. Want it dairy-free too? Coconut cream replaces the heavy cream perfectly. The dish is still authentic. Just made for you.</p>
+      <p style="font-size:15px;color:#666;line-height:1.7;margin-bottom:20px">Many people avoid dishes they would otherwise enjoy because of one ingredient. Too spicy. Too much dairy. Can't eat gluten. World Meals fixes that instantly — for every single dish on the platform.</p>
+      <p style="font-size:13px;color:#888;line-height:1.6">Want Butter Chicken but can't handle heat? We swap the chili for sweet paprika. Same colour, same richness, zero fire. Want it dairy-free too? Coconut cream replaces the heavy cream perfectly. The dish keeps its original inspiration while adapting to your needs.</p>
     </div>
     <div class="spice-demo">
       <div style="font-size:13px;font-weight:700;margin-bottom:14px">🍗 Butter Chicken — made for you</div>
@@ -2035,7 +2035,7 @@ body{
         <span class="swap-to">Sweet paprika</span>
       </div>
       <div style="font-size:11px;color:#888;margin-bottom:12px;padding:0 4px">💡 Same rich colour, zero heat — you won't miss a thing</div>
-      <div style="background:#F0FDF4;border-radius:10px;padding:10px 12px;font-size:12px;color:#166534">✓ Your personalised recipe is ready. Same authentic dish — just built around you.</div>
+      <div style="background:#F0FDF4;border-radius:10px;padding:10px 12px;font-size:12px;color:#166534">✓ Your personalised recipe is ready. Inspired by the original dish — thoughtfully adapted for you.</div>
     </div>
   </div>
 </section>
@@ -2050,7 +2050,7 @@ body{
         <div class="passport-id">CULINARY EXPLORER</div>
       </div>
 
-      <div class="passport-progress">67 / 195</div>
+      <div class="passport-progress">67 explored</div>
       <div class="passport-label">Countries explored</div>
 
       <div class="passport-bar">
@@ -2082,8 +2082,8 @@ body{
       <div class="stat-label">Authentic dishes</div>
     </div>
     <div>
-      <div class="stat-num">195</div>
-      <div class="stat-label">Countries covered</div>
+      <div class="stat-num">Global</div>
+      <div class="stat-label">Cuisines represented</div>
     </div>
     <div>
       <div class="stat-num">∞</div>
@@ -2104,7 +2104,7 @@ body{
     <div class="testi-grid">
       <div class="testi-card">
         <div class="feature-icon">🌍</div>
-        <div class="feature-title">195 Countries</div>
+        <div class="feature-title">Global Cuisine</div>
         <div class="feature-desc">Discover authentic cuisines from around the world and explore new cultures through food.</div>
       </div>
 
@@ -2237,11 +2237,10 @@ body{
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">🌍 WorldMeals</div>
-  <div class="footer-links" aria-label="WorldMeals information">
-    <a href="about.html" class="footer-link">About</a>
-    <a href="privacy.html" class="footer-link">Privacy</a>
-    <a href="terms.html" class="footer-link">Terms</a>
-    <a href="contact.html" class="footer-link">Contact</a>
+  <div class="footer-links">
+    <a href="#" class="footer-link">Privacy</a>
+    <a href="#" class="footer-link">Terms</a>
+    <a href="#" class="footer-link">Contact</a>
   </div>
   <div class="footer-stripe">🔒 Payments secured by Stripe · We never see your card</div>
 </footer>
@@ -2274,101 +2273,7 @@ body{
 
 
 
-<script>
-(() => {
-  const hour = new Date().getHours();
-  const body = document.body;
 
-  const experiences = {
-    morning: {
-      greeting: "🌅 Good morning · Start with something warm",
-      headline: "Wake up hungry.<br>Discover a <em>world of breakfast</em>.",
-      subtitle: "Begin the day with comforting breakfasts and morning favorites from cultures around the world.",
-      slides: [
-        ["/images/dishes/Chicken-and-Waffles.jpg", "🇺🇸 Chicken and Waffles"],
-        ["/images/dishes/Crepes.jpg", "🇫🇷 Crêpes"],
-        ["/images/dishes/Shakshouka-Tunisienne.jpg", "🇹🇳 Shakshouka"],
-        ["/images/dishes/Tamago-Kake-Gohan.jpg", "🇯🇵 Tamago Kake Gohan"],
-        ["/images/dishes/Ful-Medames.jpg", "🇪🇬 Ful Medames"]
-      ],
-      sides: [
-        ["/images/dishes/Pancakes.jpg", "🥞 Morning comfort"],
-        ["/images/dishes/Chilaquiles.jpg", "🇲🇽 Chilaquiles"]
-      ]
-    },
-    afternoon: {
-      greeting: "☀️ Good afternoon · Fresh flavors are waiting",
-      headline: "Take a delicious break.<br>Explore the <em>whole world</em>.",
-      subtitle: "Discover vibrant lunches, street foods, and fresh dishes that fit your time, budget, and appetite.",
-      slides: [
-        ["/images/dishes/Pizza-Margherita.jpg", "🇮🇹 Pizza Margherita"],
-        ["/images/dishes/Sushi.jpg", "🇯🇵 Sushi"],
-        ["/images/dishes/Tacos-al-Pastor.jpg", "🇲🇽 Tacos al Pastor"],
-        ["/images/dishes/Ceviche.jpg", "🇵🇪 Ceviche"],
-        ["/images/dishes/Greek-Salad.jpg", "🇬🇷 Greek Salad"]
-      ],
-      sides: [
-        ["/images/dishes/Sushi.jpg", "🇯🇵 Sushi · Japan"],
-        ["/images/dishes/Tacos-al-Pastor.jpg", "🇲🇽 Tacos al Pastor · Mexico"]
-      ]
-    },
-    evening: {
-      greeting: "🌙 Good evening · Let dinner take you somewhere",
-      headline: "Slow down tonight.<br>Cook something <em>unforgettable</em>.",
-      subtitle: "Settle in with rich comfort foods, family dinners, and traditional evening dishes from around the world.",
-      slides: [
-        ["/images/dishes/Gumbo.jpg", "🇺🇸 Gumbo"],
-        ["/images/dishes/Jollof-Rice.jpg", "🇬🇭 Jollof Rice"],
-        ["/images/dishes/Beef-Brisket.jpg", "🇺🇸 Beef Brisket"],
-        ["/images/dishes/Butter-Chicken.jpg", "🇮🇳 Butter Chicken"],
-        ["/images/dishes/Beef-Pho.jpg", "🇻🇳 Beef Pho"]
-      ],
-      sides: [
-        ["/images/dishes/BBQ-Ribs.jpg", "🇺🇸 BBQ Ribs · USA"],
-        ["/images/dishes/Pad-Thai.jpg", "🇹🇭 Pad Thai · Thailand"]
-      ]
-    }
-  };
-
-  const daypart = hour < 11 ? "morning" : hour < 17 ? "afternoon" : "evening";
-  const experience = experiences[daypart];
-  body.dataset.daypart = daypart;
-
-  const greeting = document.getElementById("timeGreeting");
-  const headline = document.getElementById("heroHeadline");
-  const subtitle = document.getElementById("heroSubtitle");
-  const heroImage = document.getElementById("heroSlide");
-  const heroLabel = document.getElementById("heroLabel");
-  const sideImageOne = document.getElementById("sideImageOne");
-  const sideImageTwo = document.getElementById("sideImageTwo");
-  const sideLabelOne = document.getElementById("sideLabelOne");
-  const sideLabelTwo = document.getElementById("sideLabelTwo");
-
-  greeting.textContent = experience.greeting;
-  headline.innerHTML = experience.headline;
-  subtitle.textContent = experience.subtitle;
-
-  const setImage = (image, label, data) => {
-    image.style.opacity = "0";
-    setTimeout(() => {
-      image.src = data[0];
-      image.alt = data[1].replace(/^[^\s]+\s/, "");
-      label.textContent = data[1];
-      image.style.opacity = "1";
-    }, 260);
-  };
-
-  setImage(heroImage, heroLabel, experience.slides[0]);
-  setImage(sideImageOne, sideLabelOne, experience.sides[0]);
-  setImage(sideImageTwo, sideLabelTwo, experience.sides[1]);
-
-  let slideIndex = 0;
-  window.setInterval(() => {
-    slideIndex = (slideIndex + 1) % experience.slides.length;
-    setImage(heroImage, heroLabel, experience.slides[slideIndex]);
-  }, 6000);
-})();
-</script>
 
 
 <script>
@@ -2571,6 +2476,136 @@ body{
       `).join("");
     });
   });
+})();
+</script>
+
+
+<script>
+(() => {
+  const now = new Date();
+  const hour = now.getHours();
+
+  // Local-time meal periods:
+  // Breakfast: 5:00 AM–10:59 AM
+  // Lunch: 11:00 AM–4:59 PM
+  // Dinner: 5:00 PM–4:59 AM
+  let period = "dinner";
+  if (hour >= 5 && hour < 11) period = "breakfast";
+  else if (hour >= 11 && hour < 17) period = "lunch";
+
+  const experiences = {
+    breakfast: {
+      bodyClass: "morning",
+      greeting: "🌅 Good morning · Breakfast around the world",
+      note: "Showing warm breakfast dishes for your local morning",
+      headline: "Start your morning<br>with a <em>world of breakfast</em>.",
+      subtitle: "Discover comforting breakfast dishes from different cultures, chosen automatically for the time of day.",
+      slides: [
+        ["/images/dishes/Chicken-and-Waffles.jpg", "🇺🇸 Chicken and Waffles"],
+        ["/images/dishes/Crepes.jpg", "🇫🇷 Crêpes"],
+        ["/images/dishes/Shakshouka-Tunisienne.jpg", "🇹🇳 Shakshouka"],
+        ["/images/dishes/Biscuits-and-Gravy.jpg", "🇺🇸 Biscuits and Gravy"],
+        ["/images/dishes/Onigiri.jpg", "🇯🇵 Onigiri"]
+      ],
+      sides: [
+        ["/images/dishes/Crepes.jpg", "🇫🇷 Crêpes · France"],
+        ["/images/dishes/Chicken-and-Waffles.jpg", "🇺🇸 Chicken and Waffles · USA"]
+      ]
+    },
+    lunch: {
+      bodyClass: "afternoon",
+      greeting: "☀️ Good afternoon · Lunch across the world",
+      note: "Showing fresh lunch dishes for your local afternoon",
+      headline: "Take a delicious break.<br>Explore the <em>whole world</em>.",
+      subtitle: "Enjoy vibrant lunches, street foods, and fresh dishes that fit your time, budget, and appetite.",
+      slides: [
+        ["/images/dishes/Pizza-Margherita.jpg", "🇮🇹 Pizza Margherita"],
+        ["/images/dishes/Sushi.jpg", "🇯🇵 Sushi"],
+        ["/images/dishes/Tacos-al-Pastor.jpg", "🇲🇽 Tacos al Pastor"],
+        ["/images/dishes/Ceviche.jpg", "🇵🇪 Ceviche"],
+        ["/images/dishes/Greek-Salad.jpg", "🇬🇷 Greek Salad"]
+      ],
+      sides: [
+        ["/images/dishes/Sushi.jpg", "🇯🇵 Sushi · Japan"],
+        ["/images/dishes/Tacos-al-Pastor.jpg", "🇲🇽 Tacos al Pastor · Mexico"]
+      ]
+    },
+    dinner: {
+      bodyClass: "evening",
+      greeting: "🌙 Good evening · Dinner around the world",
+      note: "Showing comforting dinner dishes for your local evening",
+      headline: "Slow down tonight.<br>Cook something <em>unforgettable</em>.",
+      subtitle: "Settle in with rich comfort foods, family dinners, and traditional evening dishes from around the world.",
+      slides: [
+        ["/images/dishes/Gumbo.jpg", "🇺🇸 Gumbo"],
+        ["/images/dishes/Jollof-Rice.jpg", "🇬🇭 Jollof Rice"],
+        ["/images/dishes/Beef-Brisket.jpg", "🇺🇸 Beef Brisket"],
+        ["/images/dishes/Butter-Chicken.jpg", "🇮🇳 Butter Chicken"],
+        ["/images/dishes/Pad-Thai.jpg", "🇹🇭 Pad Thai"]
+      ],
+      sides: [
+        ["/images/dishes/BBQ-Ribs.jpg", "🇺🇸 BBQ Ribs · USA"],
+        ["/images/dishes/Pad-Thai.jpg", "🇹🇭 Pad Thai · Thailand"]
+      ]
+    }
+  };
+
+  const experience = experiences[period];
+  document.body.dataset.daypart = experience.bodyClass;
+
+  const greeting = document.getElementById("timeGreeting");
+  const note = document.getElementById("mealPeriodNote");
+  const headline = document.getElementById("heroHeadline");
+  const subtitle = document.getElementById("heroSubtitle");
+  const heroImage = document.getElementById("heroSlide");
+  const heroLabel = document.getElementById("heroLabel");
+  const sideImageOne = document.getElementById("sideImageOne");
+  const sideImageTwo = document.getElementById("sideImageTwo");
+  const sideLabelOne = document.getElementById("sideLabelOne");
+  const sideLabelTwo = document.getElementById("sideLabelTwo");
+
+  greeting.textContent = experience.greeting;
+  note.textContent = experience.note;
+  headline.innerHTML = experience.headline;
+  subtitle.textContent = experience.subtitle;
+
+  const fallback = "/images/dishes/Pizza-Margherita.jpg";
+
+  const updateImage = (img, label, data) => {
+    img.style.opacity = "0";
+    window.setTimeout(() => {
+      img.onerror = () => {
+        img.onerror = null;
+        img.src = fallback;
+      };
+      img.src = data[0];
+      img.alt = data[1].replace(/^.{2,4}\s/, "");
+      label.textContent = data[1];
+      img.style.opacity = "1";
+    }, 220);
+  };
+
+  updateImage(heroImage, heroLabel, experience.slides[0]);
+  updateImage(sideImageOne, sideLabelOne, experience.sides[0]);
+  updateImage(sideImageTwo, sideLabelTwo, experience.sides[1]);
+
+  let index = 0;
+  window.setInterval(() => {
+    index = (index + 1) % experience.slides.length;
+    updateImage(heroImage, heroLabel, experience.slides[index]);
+  }, 6000);
+
+  // Refresh automatically if the visitor keeps the page open across a meal-period change.
+  window.setInterval(() => {
+    const newHour = new Date().getHours();
+    const newPeriod = newHour >= 5 && newHour < 11
+      ? "breakfast"
+      : newHour >= 11 && newHour < 17
+        ? "lunch"
+        : "dinner";
+
+    if (newPeriod !== period) window.location.reload();
+  }, 60000);
 })();
 </script>
 
