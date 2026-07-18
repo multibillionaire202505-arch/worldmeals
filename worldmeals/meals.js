@@ -10215,7 +10215,7 @@ window.WORLD_MEALS_DATABASE = [
   },
   {
     "id": 217,
-    "name": "Fondue",
+    "name": "Cheese Fondue",
     "country": "Switzerland",
     "region": "Europe",
     "emoji": "🫕",
@@ -10265,7 +10265,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 75,
     "fat": 24,
     "fiber": 5,
-    "image": "/images/dishes/Fondue.jpg"
+    "image": "/images/dishes/Cheese-Fondue.jpg"
   },
   {
     "id": 218,
