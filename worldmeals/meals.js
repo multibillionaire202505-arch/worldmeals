@@ -52850,7 +52850,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 74,
     "fat": 31,
     "fiber": 5,
-    "image": "/images/dishes/Po-Boy.jpg"
+    "image": "/images/dishes/Po'-Boy.jpg"
   },
   {
     "id": 8019,
