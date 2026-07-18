@@ -843,7 +843,7 @@ window.WORLD_MEALS_DATABASE = [
   },
   {
     "id": 20,
-    "name": "Injera and Doro Watt",
+    "name": "Injera and Doro Wat",
     "country": "Ethiopia",
     "region": "Africa",
     "emoji": "🫓",
