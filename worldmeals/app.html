@@ -1331,13 +1331,30 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
   }
 }
 
+
+/* ===== OFFICIAL WORLDMEALS APP BRANDING ===== */
+.logo{display:flex;align-items:center;justify-content:center;text-decoration:none}
+.top-brand-logo{display:block;height:28px;width:auto;max-width:210px;object-fit:contain}
+.brand-hero{display:flex;align-items:center;justify-content:center;padding:8px 2px 6px}
+.main-brand-logo{display:block;width:min(430px,92%);height:auto;margin:0 auto;object-fit:contain}
+@media(max-width:768px){
+  .top-brand-logo{height:24px;max-width:165px}
+  .main-brand-logo{width:min(350px,94%)}
+}
+@media(max-width:420px){
+  .top-brand-logo{height:22px;max-width:145px}
+  .main-brand-logo{width:min(320px,96%)}
+}
+
 </style>
 </head>
 <body>
 
 <nav>
   <a href="index.html" class="back">← worldmeals.app</a>
-  <a href="index.html" class="logo">🌍 World Meals</a>
+  <a href="index.html" class="logo" aria-label="WorldMeals home">
+    <img src="/images/worldmeals-logo-horizontal.png" alt="WorldMeals" class="top-brand-logo">
+  </a>
   <div class="fav-count" id="favCount">❤️ 0</div>
 </nav>
 
@@ -1347,13 +1364,9 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 <div class="page active" id="page-browse">
   <div class="premium-top">
     <div class="brand-hero">
-      <div class="brand-main">
-        <div class="brand-globe">🌍</div>
-        <div>
-          <div class="brand-title"><span class="green">World</span> <span class="orange">Meals</span></div>
-          <div class="brand-tagline">Global Recipes. Local Love.</div>
-        </div>
-      </div>
+      <img src="/images/worldmeals-logo-full.png"
+           alt="WorldMeals — Connecting People Through Food"
+           class="main-brand-logo">
     </div>
     <div class="search-wrap">
       <input class="search" id="searchInput" placeholder="Search dishes, ingredients or countries..." oninput="renderGrid();updateSearchClear()" onfocus="updateSearchClear()" onblur="setTimeout(updateSearchClear,120)">
