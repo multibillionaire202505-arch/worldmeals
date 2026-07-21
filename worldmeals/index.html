@@ -1596,6 +1596,52 @@ body{
     .nav-brand-image{height:26px;max-width:170px;}
     .footer-brand-image{height:24px;max-width:170px;}
   }
+
+/* =========================================================
+   WORLDMEALS FINAL BRAND + PERSONA PHOTO POLISH
+========================================================= */
+.persona{overflow:hidden;padding-top:0 !important}
+.persona-photo{
+  width:calc(100% + 48px);
+  height:170px;
+  margin:-1px -24px 22px;
+  overflow:hidden;
+  border-radius:24px 24px 0 0;
+  background:#222;
+}
+.persona-photo img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transition:transform .45s ease,filter .3s ease;
+}
+.persona:hover .persona-photo img{
+  transform:scale(1.055);
+  filter:saturate(1.06) contrast(1.02);
+}
+.app-preview-brand{
+  display:block;
+  width:auto;
+  height:34px;
+  max-width:205px;
+  object-fit:contain;
+}
+.app-bar{min-height:58px;align-items:center}
+@media(max-width:760px){
+  .persona-photo{
+    width:calc(100% + 36px);
+    height:190px;
+    margin:-1px -18px 20px;
+  }
+  .app-preview-brand{height:30px;max-width:180px}
+}
+@media(max-width:480px){
+  .persona-photo{height:180px}
+  .app-preview-brand{height:27px;max-width:160px}
+}
+
 </style>
 </head>
 <body>
@@ -1677,17 +1723,17 @@ body{
   <div class="personas-label">Built for every kind of cook</div>
   <div class="personas-row">
     <div class="persona">
-      <div class="persona-icon">⏱</div>
+      <div class="persona-photo"><img src="/images/home/busy-professional.jpg" alt="Busy professional planning meals while working"></div>
       <div class="persona-name">The Busy Professional</div>
       <div class="persona-desc">Plan your whole week in 5 minutes. Know exactly what it costs before you shop.</div>
     </div>
     <div class="persona">
-      <div class="persona-icon">🌍</div>
+      <div class="persona-photo"><img src="/images/home/food-adventurer.jpg" alt="Colorful table featuring dishes from around the world"></div>
       <div class="persona-name">The Food Adventurer</div>
       <div class="persona-desc">Cook a dish from a new country every week. Earn your World Tour badge.</div>
     </div>
     <div class="persona">
-      <div class="persona-icon">🥗</div>
+      <div class="persona-photo"><img src="/images/home/health-conscious-cook.jpg" alt="Healthy salmon, quinoa, vegetables and fresh ingredients"></div>
       <div class="persona-name">The Health-Conscious Cook</div>
       <div class="persona-desc">Filter by calories, macros, and diet. Get global cuisine that fits your goals.</div>
     </div>
@@ -1718,12 +1764,11 @@ body{
   <div class="app-frame">
     <div class="app-screen">
       <div class="app-bar">
-        <span style="font-size:16px">🌍</span>
-        <div>
-          <div class="app-bar-title">WorldMeals</div>
-          <div class="app-bar-sub">Every dish. Every country.</div>
-        </div>
-        <div style="margin-left:auto;font-size:10px;color:#555">❤️ 3</div>
+        <img
+          src="/images/worldmeals-logo-horizontal.png"
+          alt="WorldMeals"
+          class="app-preview-brand">
+        <div style="margin-left:auto;font-size:10px;color:#777">❤️ 3</div>
       </div>
       <div class="app-search">🔍 Search dish or country…</div>
       <div class="app-filters">
@@ -2270,11 +2315,11 @@ body{
       alt="WorldMeals — Connecting People Through Food"
       class="footer-brand-image">
   </div>
- <div class="footer-links">
-  <a href="/privacy.html" class="footer-link">Privacy</a>
-  <a href="/terms.html" class="footer-link">Terms</a>
-  <a href="/contact.html" class="footer-link">Contact</a>
-</div>
+  <div class="footer-links">
+    <a href="#" class="footer-link">Privacy</a>
+    <a href="#" class="footer-link">Terms</a>
+    <a href="#" class="footer-link">Contact</a>
+  </div>
   <div class="footer-stripe">🔒 Payments secured by Stripe · We never see your card</div>
 </footer>
 
