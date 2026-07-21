@@ -1642,6 +1642,155 @@ body{
   .app-preview-brand{height:27px;max-width:160px}
 }
 
+
+/* =========================================================
+   WORLDMEALS REAL FEATURE PHOTOS + PASSPORT DISH PHOTOS
+   Added without removing any existing launch CSS.
+========================================================= */
+
+/* Six feature-card photographs */
+.feature-card{
+  padding-top:0 !important;
+}
+
+.feature-photo{
+  width:calc(100% + 56px);
+  height:178px;
+  margin:0 -28px 22px;
+  overflow:hidden;
+  border-radius:24px 24px 0 0;
+  background:#EEE7DD;
+  position:relative;
+}
+
+.feature-photo::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(20,16,12,.18),transparent 55%);
+  pointer-events:none;
+}
+
+.feature-photo img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transition:transform .5s cubic-bezier(.2,.7,.2,1),filter .3s ease;
+}
+
+.feature-card:hover .feature-photo img{
+  transform:scale(1.055);
+  filter:saturate(1.05) contrast(1.02);
+}
+
+/* Real Butter Chicken photograph */
+.spice-dish-photo{
+  width:100%;
+  height:190px;
+  overflow:hidden;
+  border-radius:17px;
+  margin-bottom:16px;
+  background:#EEE7DD;
+  box-shadow:0 12px 28px rgba(62,43,24,.10);
+}
+
+.spice-dish-photo img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+}
+
+/* Passport stamps made from real dish images */
+.stamp-photo{
+  position:relative;
+  overflow:hidden;
+  padding:0;
+  justify-content:flex-end;
+  border-color:rgba(255,255,255,.14);
+  background:#201B17;
+}
+
+.stamp-photo::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(10,8,7,.88),rgba(10,8,7,.04) 65%);
+  z-index:1;
+}
+
+.stamp-photo img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .45s ease;
+}
+
+.stamp-photo:hover img{
+  transform:scale(1.08);
+}
+
+.stamp-photo span{
+  position:relative;
+  z-index:2;
+  width:100%;
+  padding:0 5px 11px;
+  color:#FFF !important;
+  font-size:9px !important;
+  font-weight:850 !important;
+  letter-spacing:.06em;
+  text-align:center;
+  text-shadow:0 2px 7px rgba(0,0,0,.75);
+}
+
+/* Footer links remain readable and responsive */
+.footer-link{
+  transition:color .18s ease;
+}
+
+.footer-link:hover{
+  color:#FFFFFF;
+}
+
+@media(max-width:980px){
+  .feature-photo{
+    height:188px;
+  }
+}
+
+@media(max-width:680px){
+  .feature-photo{
+    width:calc(100% + 46px);
+    height:210px;
+    margin:0 -23px 20px;
+  }
+
+  .spice-dish-photo{
+    height:210px;
+  }
+
+  .footer-links{
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+}
+
+@media(max-width:420px){
+  .feature-photo{
+    height:190px;
+  }
+
+  .spice-dish-photo{
+    height:185px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1723,17 +1872,17 @@ body{
   <div class="personas-label">Built for every kind of cook</div>
   <div class="personas-row">
     <div class="persona">
-      <div class="persona-photo"><img src="/images/busy-professional.jpg" alt="Busy professional planning meals while working"></div>
+      <div class="persona-photo"><img src="/images/home/busy-professional.jpg" alt="Busy professional planning meals while working"></div>
       <div class="persona-name">The Busy Professional</div>
       <div class="persona-desc">Plan your whole week in 5 minutes. Know exactly what it costs before you shop.</div>
     </div>
     <div class="persona">
-      <div class="persona-photo"><img src="/images/food-adventurer.jpg" alt="Colorful table featuring dishes from around the world"></div>
+      <div class="persona-photo"><img src="/images/home/food-adventurer.jpg" alt="Colorful table featuring dishes from around the world"></div>
       <div class="persona-name">The Food Adventurer</div>
       <div class="persona-desc">Cook a dish from a new country every week. Earn your World Tour badge.</div>
     </div>
     <div class="persona">
-      <div class="persona-photo"><img src="/images/health-conscious-cook.jpg" alt="Healthy salmon, quinoa, vegetables and fresh ingredients"></div>
+      <div class="persona-photo"><img src="/images/home/health-conscious-cook.jpg" alt="Healthy salmon, quinoa, vegetables and fresh ingredients"></div>
       <div class="persona-name">The Health-Conscious Cook</div>
       <div class="persona-desc">Filter by calories, macros, and diet. Get global cuisine that fits your goals.</div>
     </div>
@@ -1948,37 +2097,37 @@ body{
     <div class="section-title">Thoughtful tools for<br/>a better cooking experience</div>
     <div class="features-grid">
       <div class="feature-card">
-        <div class="feature-icon">🌶️</div>
+        <div class="feature-photo"><img src="/images/smart-substitution-engine.jpg" alt="Smart ingredient substitutions arranged with fresh foods"></div>
         <div class="feature-title">Smart Substitution Engine</div>
         <div class="feature-desc">Scared of spicy food? Can't do dairy? We swap every ingredient in any dish to match your needs — without losing the authentic flavor.</div>
         <span class="feature-badge" style="background:#FEF3C7;color:#92400E">Authentic flavor preserved</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">👨‍🍳</div>
+        <div class="feature-photo"><img src="/images/chef-ai.jpg" alt="Home cook using Chef AI while preparing a meal"></div>
         <div class="feature-title">AI Chef</div>
         <div class="feature-desc">Get personalized cooking guidance, ingredient substitutions, and recipe ideas based on what you already have at home.</div>
         <span class="feature-badge" style="background:#EEEDFE;color:#3C3489">AI-powered guidance</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">🗺️</div>
+        <div class="feature-photo"><img src="/images/world-map-explorer.jpg" alt="Exploring world cuisines with an interactive food map"></div>
         <div class="feature-title">World Map Explorer</div>
         <div class="feature-desc">Tap a featured country on the map and instantly see its dishes, flavor profiles, and cultural stories. Explore food like a traveler, not a searcher.</div>
         <span class="feature-badge" style="background:#E1F5EE;color:#085041">Countries around the world</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">📅</div>
+        <div class="feature-photo"><img src="/images/weekly-meal-planner.jpg" alt="Weekly meal planning with prepared meals and a tablet"></div>
         <div class="feature-title">Weekly Meal Planner</div>
         <div class="feature-desc">Plan your entire week of world meals in minutes. See the total calories and budget before you shop. No guessing. No waste.</div>
         <span class="feature-badge" style="background:#E6F1FB;color:#0C447C">Budget tracking built in</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">🏆</div>
+        <div class="feature-photo"><img src="/images/world-tour-challenge.jpg" alt="World food tour challenge with dishes and travel objects"></div>
         <div class="feature-title">World Tour Challenge</div>
         <div class="feature-desc">Cook dishes from around the world and grow your journey as a global chef. Track your progress, collect badges, and share your tour with the world.</div>
         <span class="feature-badge" style="background:#FAEEDA;color:#633806">Countries around the world to conquer</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">💰</div>
+        <div class="feature-photo"><img src="/images/budget-calorie-filters.jpg" alt="Budget and calorie meal planning with fresh ingredients"></div>
         <div class="feature-title">Budget & Calorie Filters</div>
         <div class="feature-desc">Search by budget, calories, and dietary preferences. Set your limits, discover what fits, and cook with confidence.</div>
         <span class="feature-badge" style="background:#DCFCE7;color:#166534">Budget-friendly discovery</span>
@@ -2096,7 +2245,10 @@ body{
       <p style="font-size:13px;color:#888;line-height:1.6">Want Butter Chicken but can't handle heat? We swap the chili for sweet paprika. Same colour, same richness, zero fire. Want it dairy-free too? Coconut cream replaces the heavy cream perfectly. The dish keeps its original inspiration while adapting to your needs.</p>
     </div>
     <div class="spice-demo">
-      <div style="font-size:13px;font-weight:700;margin-bottom:14px">🍗 Butter Chicken — made for you</div>
+      <div class="spice-dish-photo">
+        <img src="/images/butter-chicken.jpg" alt="Butter Chicken">
+      </div>
+      <div style="font-size:13px;font-weight:700;margin-bottom:14px">Butter Chicken — made for you</div>
       <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
         <button style="font-size:11px;padding:5px 12px;border-radius:20px;border:2px solid #92400E;background:#FEF3C7;color:#92400E;font-weight:600;cursor:pointer">🌶 Reduce spice</button>
         <button style="font-size:11px;padding:5px 12px;border-radius:20px;border:1px solid #E5E5E0;background:#fff;color:#555;cursor:pointer">🥛 Dairy-free</button>
@@ -2131,10 +2283,22 @@ body{
       </div>
 
       <div class="passport-stamps">
-        <div class="stamp"><span>🇯🇵</span><span>JAPAN</span></div>
-        <div class="stamp"><span>🇲🇽</span><span>MEXICO</span></div>
-        <div class="stamp"><span>🇬🇭</span><span>GHANA</span></div>
-        <div class="stamp"><span>🇺🇸</span><span>USA</span></div>
+        <div class="stamp stamp-photo">
+          <img src="/images/sushi.jpg" alt="Sushi from Japan">
+          <span>JAPAN</span>
+        </div>
+        <div class="stamp stamp-photo">
+          <img src="/images/tacos-al-pastor.jpg" alt="Tacos al Pastor from Mexico">
+          <span>MEXICO</span>
+        </div>
+        <div class="stamp stamp-photo">
+          <img src="/images/jollof-rice.jpg" alt="Jollof Rice from Ghana">
+          <span>GHANA</span>
+        </div>
+        <div class="stamp stamp-photo">
+          <img src="/images/new-york-pizza.jpg" alt="New York Pizza from the United States">
+          <span>USA</span>
+        </div>
       </div>
     </div>
 
@@ -2316,9 +2480,10 @@ body{
       class="footer-brand-image">
   </div>
   <div class="footer-links">
-    <a href="#" class="footer-link">Privacy</a>
-    <a href="#" class="footer-link">Terms</a>
-    <a href="#" class="footer-link">Contact</a>
+    <a href="/about.html" class="footer-link">About</a>
+    <a href="/privacy.html" class="footer-link">Privacy</a>
+    <a href="/terms.html" class="footer-link">Terms</a>
+    <a href="/contact.html" class="footer-link">Contact</a>
   </div>
   <div class="footer-stripe">🔒 Payments secured by Stripe · We never see your card</div>
 </footer>
