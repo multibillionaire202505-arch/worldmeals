@@ -1346,23 +1346,6 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
   .main-brand-logo{width:min(320px,96%)}
 }
 
-/* WORLD TOUR MASTER EXPERIENCE */
-.tour-dashboard-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
-.tour-country-card{background:#fff;border:1px solid var(--border);border-radius:22px;padding:15px;box-shadow:var(--shadow);cursor:pointer;transition:.2s}
-.tour-country-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
-.tour-country-card.conquered{border-color:#BDE6CB;background:#F5FCF7}
-.tour-country-top{display:flex;align-items:center;gap:10px;margin-bottom:10px}.tour-flag{font-size:30px}.tour-country-name{font-size:16px;font-weight:900}.tour-status{font-size:10px;font-weight:900;border-radius:999px;padding:4px 8px;margin-left:auto;background:#F4EFE6;color:var(--muted)}
-.tour-status.exploring{background:#FFF1D6;color:#9A5C0F}.tour-status.conquered{background:var(--green-soft);color:#1F6B42}
-.tour-card-bar{height:8px;background:#EEE5D8;border-radius:999px;overflow:hidden;margin:8px 0}.tour-card-bar>div{height:100%;background:linear-gradient(135deg,var(--accent),#E0A15D);border-radius:999px}.tour-country-card.conquered .tour-card-bar>div{background:var(--green)}
-.tour-card-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);font-weight:700}.tour-open{margin-top:11px;color:var(--accent-dark);font-size:12px;font-weight:900}
-.tour-breadcrumb{display:flex;gap:6px;align-items:center;font-size:12px;color:var(--muted);font-weight:800;margin-bottom:12px;flex-wrap:wrap}.tour-breadcrumb button{border:none;background:none;color:var(--accent-dark);font:inherit;cursor:pointer;padding:0}
-.tour-country-hero{background:linear-gradient(135deg,#2B2118,#6F3F17);color:#fff;border-radius:24px;padding:18px;margin-bottom:16px;box-shadow:var(--shadow)}
-.tour-country-hero h2{font-size:26px;margin:4px 0}.tour-country-hero p{font-size:13px;line-height:1.6;color:rgba(255,255,255,.8)}
-.tour-dish-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}.tour-dish-card{background:#fff;border:1px solid var(--border);border-radius:22px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer}.tour-dish-img{height:150px;background:#F3E8DA;overflow:hidden;display:flex;align-items:center;justify-content:center}.tour-dish-img img{width:100%;height:100%;object-fit:cover}.tour-dish-body{padding:12px}.tour-dish-title{font-size:15px;font-weight:900}.tour-dish-meta{font-size:11px;color:var(--muted);margin:5px 0 10px}.tour-challenge-btn{width:100%;border:none;border-radius:13px;padding:10px;font-weight:900;background:var(--accent-soft);color:var(--accent-dark);cursor:pointer}.tour-challenge-btn.done{background:var(--green-soft);color:#1F6B42}
-.tour-reward{margin-top:18px;background:linear-gradient(135deg,#FFF5D8,#FFE2B7);border:1px solid #F0C878;border-radius:22px;padding:18px;text-align:center;box-shadow:var(--shadow)}.tour-reward .gift{font-size:48px}.tour-reward h3{font-size:18px;margin:6px 0}.tour-reward.locked{filter:grayscale(.35);opacity:.72}
-.tour-celebration{position:fixed;inset:0;z-index:500;background:rgba(35,24,15,.72);display:none;align-items:center;justify-content:center;padding:20px}.tour-celebration.show{display:flex}.tour-celebration-card{background:#fff;border-radius:28px;padding:26px;max-width:420px;width:100%;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.3);animation:tourPop .35s ease}.tour-celebration-emoji{font-size:64px}.tour-celebration-card h2{font-size:24px;margin:8px 0}.tour-celebration-card p{color:var(--muted);line-height:1.6}.tour-celebration-card button{margin-top:14px;border:none;border-radius:14px;padding:12px 18px;background:var(--text);color:#fff;font-weight:900;cursor:pointer}@keyframes tourPop{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:scale(1)}}
-@media(max-width:520px){.tour-dashboard-grid,.tour-dish-grid{grid-template-columns:1fr}}
-
 </style>
 </head>
 <body>
@@ -1570,21 +1553,17 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 
 <!-- TOUR -->
 <div class="page" id="page-tour">
-  <div id="tourDashboardView">
-    <div class="page-title">🏆 World Tour Challenge</div>
-    <div class="page-sub">Cook every challenge dish, conquer each country, and become the WorldMeals Global Culinary Champion.</div>
-    <div class="tour-hero">
-      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:12px">
-        <div><div class="tour-num" id="tourNum">0</div><div style="font-size:12px;color:rgba(255,255,255,.72)" id="tourCountryText">countries conquered</div></div>
-        <div style="text-align:right"><div style="font-size:28px;font-weight:900" id="tourPct">0%</div><div style="font-size:11px;color:rgba(255,255,255,.72)" id="tourDishText">0 dishes cooked</div></div>
-      </div>
-      <div class="tour-bar-bg"><div class="tour-bar" id="tourBar" style="width:0%;background:#F5A623"></div></div>
-      <div style="font-size:11px;color:rgba(255,255,255,.75);margin-top:4px" id="tourMsg">Cook your first dish to start! 🌍</div>
+  <div class="page-title">🏆 World Tour Challenge</div>
+  <div class="page-sub">Cook a dish from every country. Conquer the culinary world.</div>
+  <div class="tour-hero">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <div><div class="tour-num" id="tourNum">0<span style="font-size:14px;font-weight:400;color:#888">/16</span></div><div style="font-size:12px;color:#888">countries conquered</div></div>
+      <div style="font-size:32px;font-weight:700;color:#888" id="tourPct">0%</div>
     </div>
-    <div class="tour-dashboard-grid" id="tourList"></div>
-    <div class="tour-reward locked" id="tourReward"><div class="gift">🎁</div><h3>WorldMeals Global Culinary Champion Gift</h3><p>Complete every country to unlock your champion certificate, profile badge, premium reward, and global cookbook.</p></div>
+    <div class="tour-bar-bg"><div class="tour-bar" id="tourBar" style="width:0%;background:#3B82F6"></div></div>
+    <div style="font-size:11px;color:#666;margin-top:4px" id="tourMsg">Cook your first dish to start! 🌍</div>
   </div>
-  <div id="tourCountryView" style="display:none"></div>
+  <div id="tourList"></div>
 </div>
 
 <!-- CHEF -->
@@ -1693,9 +1672,6 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
   </div>
 </div>
 
-
-<div class="tour-celebration" id="tourCelebration" onclick="if(event.target===this)closeTourCelebration()"><div class="tour-celebration-card"><div class="tour-celebration-emoji" id="tourCelebrationEmoji">🏆</div><h2 id="tourCelebrationTitle"></h2><p id="tourCelebrationText"></p><button onclick="closeTourCelebration()">Continue exploring</button></div></div>
-
 <!-- BOTTOM NAV -->
 <div class="bottom-nav" role="navigation" aria-label="WorldMeals app">
   <button type="button" class="nav-btn active" id="nb-browse" aria-label="Browse dishes" aria-current="page" onclick="showPage('browse')"><span class="ic" aria-hidden="true">🍽️</span><span class="lb">Browse</span></button>
@@ -1706,8 +1682,7 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
   <button type="button" class="nav-btn" id="nb-saved" aria-label="Saved dishes" onclick="showPage('saved')"><span class="ic" aria-hidden="true">❤️</span><span class="lb">Saved</span></button>
 </div>
 
-<script src="meals.js"></script>
-<script>
+<script src="meals.js">
 
 /* ==========================================================
    WORLDMEALS 2.0 — Premium fader behavior
@@ -1830,10 +1805,6 @@ let plan=JSON.parse(localStorage.getItem("wm_plan")||"{}");
 let currentMeal=null;
 let activeSwap=null;
 let pickerDay=null;
-let selectedTourCountry=null;
-let recipeSource="browse";
-let selectedMealId=null;
-let cookingHistory=JSON.parse(localStorage.getItem("wm_cooking_history")||"[]");
 
 // Generate or retrieve anonymous user ID
 function getAnonId(){
@@ -1867,7 +1838,6 @@ function save(){
   localStorage.setItem("wm_favs",JSON.stringify(favs));
   localStorage.setItem("wm_cooked",JSON.stringify(cooked));
   localStorage.setItem("wm_plan",JSON.stringify(plan));
-  localStorage.setItem("wm_cooking_history",JSON.stringify(cookingHistory));
 }
 
 function toast(msg){
@@ -2315,8 +2285,7 @@ function updateFavCount(){
   favs.length>0?(el.style.display="block",el.textContent="❤️ "+favs.length):el.style.display="none";
 }
 
-function openModal(id,source="browse"){
-  recipeSource=source; selectedMealId=id;
+function openModal(id){
   const m=MEALS.find(x=>x.id===id);
   currentMeal=m;activeSwap=null;
   const modalImg=document.getElementById("modalImage");
@@ -2368,19 +2337,10 @@ function updateCookBtn(){
 
 function markCooked(){
   if(!currentMeal||cooked.includes(currentMeal.id))return;
-  const beforeCountry=countryProgress(currentMeal.country);
-  cooked.push(currentMeal.id);
-  cookingHistory.unshift({mealId:currentMeal.id,country:currentMeal.country,cookedAt:new Date().toISOString(),source:recipeSource});
-  cookingHistory=cookingHistory.slice(0,200);
-  save();
-  const afterCountry=countryProgress(currentMeal.country);
+  cooked.push(currentMeal.id);save();
   toast("🍽 "+currentMeal.name+" cooked!");
   updateCookBtn();renderGrid();
   if(document.getElementById("page-tour").classList.contains("active"))renderTour();
-  if(recipeSource==="tour"){
-    if(!beforeCountry.conquered && afterCountry.conquered){showTourCelebration("🏅",currentMeal.country+" conquered!","You completed all "+afterCountry.total+" challenge dishes from "+currentMeal.country+".");}
-    else{showTourCelebration("🍽️",currentMeal.name+" completed!",currentMeal.country+" progress: "+afterCountry.completed+" / "+afterCountry.total);}
-  }
 }
 
 function closeModal(){
@@ -2390,10 +2350,7 @@ function closeModal(){
 
 function toggleFavModal(){if(currentMeal)toggleFav(currentMeal.id);}
 
-function goPlanner(){
-  if(currentMeal){const empty=DAYS.find(d=>!plan[d]); if(empty){plan[empty]=currentMeal.id; save(); toast("📅 Added to "+empty);}}
-  closeModal();showPage("planner");
-}
+function goPlanner(){closeModal();showPage("planner");}
 
 function searchRecipe(){
   if(!currentMeal)return;
@@ -2499,7 +2456,7 @@ function renderPlanner(){
   document.getElementById("weekBud").textContent="$"+wBud;
   document.getElementById("plannerDays").innerHTML=DAYS.map(day=>{
     const m=plan[day]?MEALS.find(x=>x.id===plan[day]):null;
-    return `<div class="day-row"><div class="day-lbl">${day}</div>${m?`${thumbHTML(m)}<div class="day-info" onclick="openModal(${m.id},'planner')" style="cursor:pointer"><div class="day-name">${m.name}</div><div class="day-sub">📍 ${m.country} · ${m.cal} kcal · 💪 ${mealProtein(m)}g · $${m.budget}</div></div><button class="btn-clear" onclick="clearDay('${day}')">✕</button>`:`<div class="day-empty">No meal planned</div><button class="btn-add" onclick="openPicker('${day}')">+ Add dish</button>`}</div>`;
+    return `<div class="day-row"><div class="day-lbl">${day}</div>${m?`${thumbHTML(m)}<div class="day-info"><div class="day-name">${m.name}</div><div class="day-sub">📍 ${m.country} · ${m.cal} kcal · 💪 ${mealProtein(m)}g · $${m.budget}</div></div><button class="btn-clear" onclick="clearDay('${day}')">✕</button>`:`<div class="day-empty">No meal planned</div><button class="btn-add" onclick="openPicker('${day}')">+ Add dish</button>`}</div>`;
   }).join("");
 }
 
@@ -2519,40 +2476,22 @@ function assignDay(day,id){
 
 function closePicker(){document.getElementById("pickerOverlay").classList.remove("open");}
 
-function countryProgress(country){
-  const dishes=MEALS.filter(m=>m.country===country);
-  const completed=dishes.filter(m=>cooked.includes(m.id)).length;
-  return {country,dishes,total:dishes.length,completed,pct:dishes.length?Math.round(completed/dishes.length*100):0,conquered:dishes.length>0&&completed===dishes.length,status:completed===0?"Not Started":completed===dishes.length?"Conquered":"Exploring"};
-}
 function renderTour(){
-  const countries=[...new Set(MEALS.map(m=>m.country).filter(Boolean))].sort();
-  const progress=countries.map(countryProgress);
-  const conquered=progress.filter(p=>p.conquered).length;
-  const totalDishes=MEALS.length;
-  const completedDishes=MEALS.filter(m=>cooked.includes(m.id)).length;
-  const pct=totalDishes?Math.round(completedDishes/totalDishes*100):0;
-  document.getElementById("tourNum").textContent=conquered+" / "+countries.length;
-  document.getElementById("tourCountryText").textContent="countries conquered";
-  document.getElementById("tourDishText").textContent=completedDishes+" dishes cooked";
+  const countries=[...new Set(MEALS.map(m=>m.country))];
+  const done=[...new Set(cooked.map(id=>MEALS.find(m=>m.id===id)?.country).filter(Boolean))];
+  const pct=Math.round((done.length/countries.length)*100);
+  document.getElementById("tourNum").innerHTML=done.length+'<span style="font-size:14px;font-weight:400;color:#888">/'+countries.length+'</span>';
   document.getElementById("tourPct").textContent=pct+"%";
+  document.getElementById("tourPct").style.color=pct>=100?"#FFD700":pct>=50?"#22C55E":"#888";
   document.getElementById("tourBar").style.width=pct+"%";
-  document.getElementById("tourMsg").textContent=pct===0?"Cook your first dish to start! 🌍":pct>=100?"🎉 WORLD TOUR COMPLETE!":pct>=50?"Over halfway across the culinary world! 🌟":"Keep exploring one country at a time. 🗺️";
-  const reward=document.getElementById("tourReward"); reward.classList.toggle("locked",pct<100);
-  document.getElementById("tourList").innerHTML=progress.map(p=>`<div class="tour-country-card ${p.conquered?'conquered':''}" onclick="openTourCountry('${escapeAttr(p.country)}')"><div class="tour-country-top"><div class="tour-flag">${countryFlag(p.country)}</div><div class="tour-country-name">${p.country}</div><div class="tour-status ${p.status.toLowerCase().replace(' ','-')}">${p.status}</div></div><div class="tour-card-meta"><span>${p.completed} / ${p.total} dishes cooked</span><span>${p.pct}%</span></div><div class="tour-card-bar"><div style="width:${p.pct}%"></div></div><div class="tour-open">Explore →</div></div>`).join("");
-  if(selectedTourCountry) openTourCountry(selectedTourCountry,false);
+  document.getElementById("tourBar").style.background=pct>=100?"#FFD700":pct>=50?"#22C55E":"#3B82F6";
+  document.getElementById("tourMsg").textContent=pct===0?"Cook your first dish to start! 🌍":pct>=100?"🎉 WORLD TOUR COMPLETE!":pct>=50?"Over halfway! 🌟":"Keep exploring! 🗺";
+  document.getElementById("tourList").innerHTML=countries.map(c=>{
+    const dishes=MEALS.filter(m=>m.country===c);
+    const isDone=done.includes(c);
+    return `<div class="country-row${isDone?" done":""}"><span style="font-size:24px">${dishes[0].emoji}</span><div style="flex:1"><div style="font-size:13px;font-weight:600;color:${isDone?"#1F6B42":"var(--text)"}">${c}</div><div style="font-size:11px;color:#888">${dishes.length} dish${dishes.length>1?"es":""}</div></div>${isDone?'<div class="badge-done">✓ Done</div>':`<button class="btn-explore" onclick="showPage('browse')">Explore →</button>`}</div>`;
+  }).join("");
 }
-function openTourCountry(country,scroll=true){
-  selectedTourCountry=country;
-  const p=countryProgress(country);
-  const region=p.dishes[0]?.region||"World";
-  document.getElementById("tourDashboardView").style.display="none";
-  const view=document.getElementById("tourCountryView"); view.style.display="block";
-  view.innerHTML=`<div class="tour-breadcrumb"><button onclick="backToTourDashboard()">Tour</button><span>→</span><span>${country}</span></div><div class="tour-country-hero"><div style="font-size:42px">${countryFlag(country)}</div><h2>${country}</h2><p>${region} cuisine challenge · Discover the signature dishes, cook each one, and earn the ${country} country badge.</p><div class="tour-card-meta" style="color:#fff;margin-top:12px"><span>${p.completed} / ${p.total} completed</span><span>${p.pct}%</span></div><div class="tour-bar-bg"><div class="tour-bar" style="width:${p.pct}%;background:${p.conquered?'#2F8F5B':'#F5A623'}"></div></div></div><div class="tour-dish-grid">${p.dishes.map(m=>`<div class="tour-dish-card" onclick="openModal(${m.id},'tour')"><div class="tour-dish-img">${foodImageHTML(m)}</div><div class="tour-dish-body"><div class="tour-dish-title">${m.name}</div><div class="tour-dish-meta">${m.time||'—'} · ${SPICE[m.spice]||'Mild'} · ${m.cal||'—'} kcal</div><button class="tour-challenge-btn ${cooked.includes(m.id)?'done':''}">${cooked.includes(m.id)?'✓ Cooked':'Start Challenge'}</button></div></div>`).join('')}</div>`;
-  if(scroll) window.scrollTo({top:0,behavior:'smooth'});
-}
-function backToTourDashboard(){selectedTourCountry=null;document.getElementById("tourCountryView").style.display="none";document.getElementById("tourDashboardView").style.display="block";renderTour();window.scrollTo({top:0,behavior:'smooth'});}
-function showTourCelebration(emoji,title,text){document.getElementById("tourCelebrationEmoji").textContent=emoji;document.getElementById("tourCelebrationTitle").textContent=title;document.getElementById("tourCelebrationText").textContent=text;document.getElementById("tourCelebration").classList.add("show");}
-function closeTourCelebration(){document.getElementById("tourCelebration").classList.remove("show");if(recipeSource==="tour"&&selectedTourCountry){closeModal();openTourCountry(selectedTourCountry,false);}}
 
 function renderSaved(){
   const saved=MEALS.filter(m=>favs.includes(m.id));
@@ -2564,62 +2503,307 @@ function renderSaved(){
   el.innerHTML='<div class="grid">'+saved.map(m=>`<div class="card" onclick="openModal(${m.id})"><div class="card-img">${foodImageHTML(m)}</div><button class="fav-btn" onclick="event.stopPropagation();toggleFav(${m.id})">❤️</button><div class="card-body"><div class="card-name">${m.name}</div><div class="card-country">📍 ${m.country}</div><div class="tags"><span class="tag t-cal">${m.cal} kcal</span><span class="tag t-protein">💪 ${mealProtein(m)}g</span><span class="tag t-bud">$${m.budget}</span></div></div></div>`).join("")+'</div>';
 }
 
+/* ==========================================================
+   WORLDMEALS CHEF AI — ACCURACY ENGINE REFINEMENT
+   Replace the existing block from:
+     function chefExample(text){
+   through the end of:
+     async function runChef(){ ... }
+   Keep generateSmartPlan() and everything after it unchanged.
+   ========================================================== */
+
 function chefExample(text){
   const input=document.getElementById("fridgeInput");
   if(input){ input.value=text; input.focus(); }
 }
 
-function tokenizeIngredients(text){
-  return String(text||"")
-    .toLowerCase()
-    .replace(/[^a-z0-9, ]+/g," ")
-    .split(/[,\n]| and | with | plus /)
-    .map(x=>x.trim())
-    .filter(x=>x.length>1);
+const CHEF_ALIAS_GROUPS = [
+  ["chicken","chicken breast","chicken breasts","chicken thigh","chicken thighs","poultry"],
+  ["beef","ground beef","minced beef","beef mince","steak"],
+  ["pork","ground pork","minced pork","pork belly"],
+  ["fish","white fish","cod","tilapia","haddock"],
+  ["shrimp","prawn","prawns"],
+  ["chickpea","chickpeas","garbanzo bean","garbanzo beans"],
+  ["bean","beans","kidney bean","kidney beans","black bean","black beans","white bean","white beans"],
+  ["lentil","lentils"],
+  ["tomato","tomatoes","cherry tomato","cherry tomatoes"],
+  ["onion","onions","yellow onion","red onion","white onion"],
+  ["green onion","green onions","scallion","scallions","spring onion","spring onions"],
+  ["bell pepper","bell peppers","sweet pepper","sweet peppers","capsicum"],
+  ["chili","chilli","chiles","chili pepper","chilli pepper","hot pepper"],
+  ["potato","potatoes"],
+  ["sweet potato","sweet potatoes"],
+  ["egg","eggs"],
+  ["noodle","noodles"],
+  ["pasta","spaghetti","macaroni","penne"],
+  ["rice","white rice","brown rice","jasmine rice","basmati rice"],
+  ["corn","sweetcorn","maize"],
+  ["cilantro","coriander leaves","fresh coriander"],
+  ["parsley","fresh parsley"],
+  ["coconut milk","coconut cream"],
+  ["cream","heavy cream","double cream","whipping cream"],
+  ["yogurt","yoghurt"],
+  ["cheese","cheddar","mozzarella","parmesan","feta"],
+  ["oil","cooking oil","vegetable oil","canola oil"],
+  ["olive oil","extra virgin olive oil"],
+  ["soy sauce","light soy sauce","dark soy sauce"],
+  ["flour","all purpose flour","plain flour"],
+  ["bread","bread slices","loaf"],
+  ["tortilla","tortillas","corn tortilla","flour tortilla"],
+  ["lime","limes"],
+  ["lemon","lemons"],
+  ["garlic","garlic clove","garlic cloves"],
+  ["ginger","fresh ginger"],
+  ["spinach","baby spinach"],
+  ["mushroom","mushrooms"],
+  ["avocado","avocados"]
+];
+
+const CHEF_ALIAS_MAP = (() => {
+  const map = {};
+  CHEF_ALIAS_GROUPS.forEach(group => {
+    const canonical = group[0];
+    group.forEach(alias => { map[alias] = canonical; });
+  });
+  return map;
+})();
+
+const CHEF_PANTRY = new Set([
+  "water","salt","black pepper","pepper","oil","olive oil",
+  "sugar","flour","vinegar","stock","broth","butter"
+]);
+
+const CHEF_LOW_VALUE_WORDS = new Set([
+  "fresh","dried","chopped","sliced","diced","minced","ground",
+  "large","small","medium","optional","taste","cup","cups",
+  "tablespoon","tablespoons","teaspoon","teaspoons","tbsp","tsp"
+]);
+
+function chefEscape(value){
+  return String(value ?? "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
 }
 
-function mealMatchScore(meal, tokens){
-  const hay=(meal.ingredients||[]).join(" ").toLowerCase()+" "+meal.name.toLowerCase()+" "+meal.country.toLowerCase();
-  const matched=[];
-  for(const t of tokens){
-    if(hay.includes(t) || t.split(" ").some(w=>w.length>3 && hay.includes(w))) matched.push(t);
-  }
-  const missing=(meal.ingredients||[]).filter(i=>!tokens.some(t=>i.toLowerCase().includes(t)||t.includes(i.toLowerCase()))).slice(0,4);
-  const score=matched.length*12 - Math.max(0, (meal.ingredients||[]).length-matched.length) + (meal.budget<=8?3:0) + (meal.spice<=2?2:0);
-  return {score,matched:[...new Set(matched)],missing};
+function singularizeChefWord(word){
+  if(word.endsWith("ies") && word.length>4) return word.slice(0,-3)+"y";
+  if(word.endsWith("oes") && word.length>4) return word.slice(0,-2);
+  if(word.endsWith("ses") && word.length>4) return word.slice(0,-2);
+  if(word.endsWith("s") && !word.endsWith("ss") && word.length>3) return word.slice(0,-1);
+  return word;
+}
+
+function cleanChefPhrase(value){
+  return String(value||"")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g,"")
+    .replace(/\([^)]*\)/g," ")
+    .replace(/\b\d+([./]\d+)?\b/g," ")
+    .replace(/[^a-z0-9 ]+/g," ")
+    .replace(/\s+/g," ")
+    .trim();
+}
+
+function canonicalChefIngredient(value){
+  let phrase=cleanChefPhrase(value);
+  if(!phrase) return "";
+
+  if(CHEF_ALIAS_MAP[phrase]) return CHEF_ALIAS_MAP[phrase];
+
+  const words=phrase
+    .split(" ")
+    .filter(w=>!CHEF_LOW_VALUE_WORDS.has(w))
+    .map(singularizeChefWord);
+
+  phrase=words.join(" ").trim();
+  if(CHEF_ALIAS_MAP[phrase]) return CHEF_ALIAS_MAP[phrase];
+
+  // Prefer the longest known alias contained inside a longer ingredient phrase.
+  const aliases=Object.keys(CHEF_ALIAS_MAP).sort((a,b)=>b.length-a.length);
+  const contained=aliases.find(alias=>phrase===alias || phrase.includes(" "+alias) || phrase.startsWith(alias+" ") || phrase.endsWith(" "+alias));
+  if(contained) return CHEF_ALIAS_MAP[contained];
+
+  return phrase;
+}
+
+function tokenizeIngredients(text){
+  const raw=String(text||"")
+    .split(/[,\n;]+|\s+\band\b\s+|\s+\bwith\b\s+|\s+\bplus\b\s+/i)
+    .map(x=>x.trim())
+    .filter(Boolean);
+
+  return [...new Set(raw.map(canonicalChefIngredient).filter(x=>x.length>1))];
+}
+
+function chefIngredientWeight(ingredient){
+  const x=canonicalChefIngredient(ingredient);
+  if(!x) return 0;
+  if(CHEF_PANTRY.has(x)) return 0.35;
+
+  if(/chicken|beef|pork|lamb|fish|shrimp|egg|tofu|tempeh|bean|lentil|chickpea/.test(x)) return 2.4;
+  if(/rice|pasta|noodle|potato|bread|tortilla|flour/.test(x)) return 1.8;
+  if(/tomato|onion|pepper|spinach|mushroom|cabbage|carrot|eggplant|avocado|corn/.test(x)) return 1.25;
+  if(/garlic|ginger|cilantro|parsley|basil|lime|lemon/.test(x)) return 0.9;
+  return 1;
+}
+
+function chefIngredientsEquivalent(a,b){
+  const left=canonicalChefIngredient(a);
+  const right=canonicalChefIngredient(b);
+  if(!left || !right) return false;
+  if(left===right) return true;
+
+  const leftWords=left.split(" ").filter(w=>w.length>2);
+  const rightWords=right.split(" ").filter(w=>w.length>2);
+  return leftWords.some(w=>rightWords.includes(w));
+}
+
+function chefSwapCanCover(meal,missingIngredient,userTokens){
+  if(!meal?.swaps) return false;
+  const missing=canonicalChefIngredient(missingIngredient);
+
+  return Object.values(meal.swaps).flat().some(swap=>{
+    const from=canonicalChefIngredient(swap?.from);
+    const to=canonicalChefIngredient(swap?.to);
+    if(!from || !to || !chefIngredientsEquivalent(from,missing)) return false;
+    return userTokens.some(token=>chefIngredientsEquivalent(token,to));
+  });
+}
+
+function mealMatchScore(meal,tokens){
+  const recipeIngredients=(meal.ingredients||[])
+    .map(raw=>({
+      raw,
+      canonical:canonicalChefIngredient(raw),
+      weight:chefIngredientWeight(raw)
+    }))
+    .filter(x=>x.canonical);
+
+  const matchedRecipe=[];
+  const matchedUser=[];
+  const substituted=[];
+  const missing=[];
+
+  let matchedWeight=0;
+  let totalWeight=0;
+
+  recipeIngredients.forEach(item=>{
+    totalWeight+=item.weight;
+
+    const directToken=tokens.find(token=>chefIngredientsEquivalent(token,item.canonical));
+    if(directToken){
+      matchedWeight+=item.weight;
+      matchedRecipe.push(item.raw);
+      matchedUser.push(directToken);
+      return;
+    }
+
+    if(chefSwapCanCover(meal,item.raw,tokens)){
+      matchedWeight+=item.weight*0.72;
+      substituted.push(item.raw);
+      return;
+    }
+
+    missing.push(item.raw);
+  });
+
+  const meaningfulMatched=matchedRecipe.filter(i=>chefIngredientWeight(i)>=0.9);
+  const coverage=totalWeight>0 ? matchedWeight/totalWeight : 0;
+  const confidence=Math.max(0,Math.min(99,Math.round(coverage*100)));
+
+  const majorMissing=missing.filter(i=>chefIngredientWeight(i)>=1.8);
+  const pantryMissing=missing.filter(i=>CHEF_PANTRY.has(canonicalChefIngredient(i)));
+
+  let score=confidence;
+  score+=Math.min(12,meaningfulMatched.length*2);
+  score-=majorMissing.length*10;
+  score-=Math.max(0,missing.length-5)*2;
+  score+=substituted.length*3;
+  if(meal.budget<=8) score+=2;
+
+  const reason=meaningfulMatched.length
+    ? `You already have ${meaningfulMatched.slice(0,3).join(", ")}${meaningfulMatched.length>3?" and more":""}.`
+    : "This dish shares a few ingredients with what you entered.";
+
+  return {
+    score,
+    confidence,
+    matched:[...new Set(matchedUser)],
+    matchedRecipe:[...new Set(matchedRecipe)],
+    substituted:[...new Set(substituted)],
+    missing:missing.filter(i=>!pantryMissing.includes(i)),
+    pantryMissing,
+    majorMissing,
+    reason
+  };
 }
 
 function getChefMatches(input){
   const tokens=tokenizeIngredients(input);
-  return MEALS.map(m=>({meal:m,...mealMatchScore(m,tokens)}))
-    .filter(x=>x.matched.length>0)
-    .sort((a,b)=>b.score-a.score || a.meal.budget-b.meal.budget)
+
+  return MEALS
+    .map(m=>({meal:m,...mealMatchScore(m,tokens)}))
+    .filter(x=>x.matched.length>0 && x.confidence>=12)
+    .sort((a,b)=>
+      b.score-a.score ||
+      b.confidence-a.confidence ||
+      a.majorMissing.length-b.majorMissing.length ||
+      a.meal.budget-b.meal.budget
+    )
     .slice(0,9);
 }
 
 function renderChefMatches(matches,input){
   const result=document.getElementById("chefResult");
+  const entered=tokenizeIngredients(input);
+
   if(!matches.length){
-    result.innerHTML=`<div class="chef-summary"><div class="chef-summary-title">No strong match yet</div><div class="chef-summary-sub">Try adding more ingredients like rice, chicken, tomatoes, eggs, beans, onions, pasta, or coconut milk.</div></div>`;
+    result.innerHTML=`<div class="chef-summary"><div class="chef-summary-title">No strong match yet</div><div class="chef-summary-sub">I could not find a reliable database match from <b>${chefEscape(entered.join(", "))}</b>. Add the main protein, grain, vegetable, or sauce you have.</div></div>`;
     return;
   }
+
   result.innerHTML=`
     <div class="chef-summary">
-      <div class="chef-summary-title">🍽️ You can cook ${matches.length} good match${matches.length>1?"es":""}</div>
-      <div class="chef-summary-sub">Best matches based on: <b>${tokenizeIngredients(input).join(", ")}</b>. Tap any dish to open the recipe card.</div>
+      <div class="chef-summary-title">🍽️ ${matches.length} reliable match${matches.length>1?"es":""} found</div>
+      <div class="chef-summary-sub">Ranked from the real WorldMeals database using ingredient importance, synonyms, pantry basics, and available substitutions.</div>
     </div>
     <div class="chef-match-grid">
-      ${matches.map(({meal,matched,missing})=>`
-        <div class="chef-match-card" onclick="openModal(${meal.id})">
+      ${matches.map(({meal,confidence,matchedRecipe,missing,substituted,reason})=>`
+        <div class="chef-match-card" onclick="openModal(${Number(meal.id)})">
           <div class="chef-match-img">${foodImageHTML(meal)}</div>
           <div class="chef-match-body">
-            <div class="chef-score">✓ ${matched.length} ingredient match${matched.length>1?"es":""}</div>
-            <div class="chef-match-name">${meal.name}</div>
-            <div class="chef-match-meta">📍 ${meal.country} · 💪 ${mealProtein(meal)}g · $${meal.budget} · ${meal.time}</div>
-            ${missing.length?`<div class="chef-missing">Missing: ${missing.join(", ")}</div>`:`<div class="chef-missing" style="color:#1F6B42;background:#E8F7EF">You likely have everything needed.</div>`}
+            <div class="chef-score">✓ ${confidence}% match</div>
+            <div class="chef-match-name">${chefEscape(meal.name)}</div>
+            <div class="chef-match-meta">📍 ${chefEscape(meal.country)} · 💪 ${mealProtein(meal)}g · $${meal.budget} · ${chefEscape(meal.time)}</div>
+            <div style="font-size:10px;color:var(--muted);line-height:1.45;margin-bottom:7px">${chefEscape(reason)}</div>
+            ${substituted.length?`<div class="chef-missing" style="color:#1F6B42;background:#E8F7EF;margin-bottom:6px">Substitution works for: ${chefEscape(substituted.slice(0,2).join(", "))}</div>`:""}
+            ${missing.length
+              ? `<div class="chef-missing">Still needed: ${chefEscape(missing.slice(0,4).join(", "))}</div>`
+              : `<div class="chef-missing" style="color:#1F6B42;background:#E8F7EF">You likely have the important ingredients.</div>`}
           </div>
         </div>`).join("")}
     </div>`;
+}
+
+function validateChefRecommendation(aiResult,matches){
+  const allowedIds=new Set(matches.map(x=>String(x.meal.id)));
+  const requestedId=String(aiResult?.mealId??"");
+
+  if(allowedIds.has(requestedId)){
+    return matches.find(x=>String(x.meal.id)===requestedId);
+  }
+
+  const name=cleanChefPhrase(aiResult?.name);
+  const country=cleanChefPhrase(aiResult?.country);
+
+  return matches.find(x=>
+    cleanChefPhrase(x.meal.name)===name &&
+    (!country || cleanChefPhrase(x.meal.country)===country)
+  ) || null;
 }
 
 async function runChef(){
@@ -2634,43 +2818,103 @@ async function runChef(){
   const matches=getChefMatches(input);
   renderChefMatches(matches,input);
 
+  if(!matches.length){
+    btn.disabled=false;
+    btn.textContent="✨ Find meals I can cook";
+    return;
+  }
+
   try{
     btn.textContent="Asking Chef AI…";
-    const topNames=matches.slice(0,5).map(x=>x.meal.name+" from "+x.meal.country).join(", ");
+
+    const candidates=matches.slice(0,5).map(x=>({
+      mealId:x.meal.id,
+      name:x.meal.name,
+      country:x.meal.country,
+      confidence:x.confidence,
+      matchedIngredients:x.matchedRecipe,
+      missingIngredients:x.missing.slice(0,5),
+      substitutionsAvailable:x.substituted
+    }));
+
     const res=await fetch("/api/chat",{
       method:"POST",
       headers:{"Content-Type":"application/json"},
       body:JSON.stringify({
         model:"claude-sonnet-4-6",
-        max_tokens:1000,
-        messages:[{role:"user",content:"You are WorldMeals Chef AI. User ingredients: "+input+". Existing dish matches: "+topNames+". Recommend the best dish and a practical cooking plan. Respond ONLY with valid JSON no markdown: {\"name\":\"\",\"country\":\"\",\"description\":\"\",\"useWhatYouHave\":[],\"missingIngredients\":[],\"steps\":[],\"budgetTip\":\"\",\"substitutionTip\":\"\"}"}]
+        max_tokens:1100,
+        messages:[{
+          role:"user",
+          content:
+`You are WorldMeals Chef AI.
+
+The user has:
+${input}
+
+You MUST select exactly one meal from this verified WorldMeals candidate list:
+${JSON.stringify(candidates)}
+
+Accuracy rules:
+1. Return the exact mealId, name, and country from one candidate.
+2. Never invent or rename a dish.
+3. Do not claim the user has an ingredient unless it appears in the user's list.
+4. Keep missingIngredients consistent with the selected candidate.
+5. Prefer the highest-confidence candidate unless another candidate is clearly more practical.
+6. Give safe, realistic cooking steps. Mention that poultry, ground meats, seafood, and leftovers must be cooked or reheated safely when relevant.
+7. Respond ONLY with valid JSON and no markdown.
+
+Schema:
+{"mealId":"","name":"","country":"","whyThisMeal":"","description":"","useWhatYouHave":[],"missingIngredients":[],"steps":[],"budgetTip":"","substitutionTip":"","safetyTip":""}`
+        }]
       })
     });
+
     const data=await res.json();
     if(!res.ok) throw new Error(data.error||"Chef AI unavailable");
+
     const text=data.content?.find(b=>b.type==="text")?.text||"";
     if(!text) throw new Error("No Chef AI text returned");
+
     const r=JSON.parse(text.replace(/```json|```/g,"").trim());
+    const selected=validateChefRecommendation(r,matches);
+    if(!selected) throw new Error("Chef AI returned a dish outside the verified matches");
+
+    const meal=selected.meal;
+    const safeUse=(Array.isArray(r.useWhatYouHave)?r.useWhatYouHave:[])
+      .filter(item=>tokenizeIngredients(input).some(token=>chefIngredientsEquivalent(token,item)))
+      .slice(0,10);
+
+    const verifiedMissing=selected.missing.slice(0,6);
+    const steps=Array.isArray(r.steps)?r.steps.slice(0,8):[];
 
     result.innerHTML += `
       <div class="chef-ai-card">
         <div class="chef-ai-head">
-          <div class="chef-ai-badge">🤖 CHEF AI RECOMMENDATION</div>
-          <div style="font-size:20px;font-weight:800;color:var(--text);margin-bottom:3px">${r.name}</div>
-          <div style="font-size:12px;color:var(--muted);margin-bottom:10px">📍 ${r.country}</div>
-          <div style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:12px">${r.description||""}</div>
+          <div class="chef-ai-badge">🤖 VERIFIED CHEF AI RECOMMENDATION</div>
+          <div style="font-size:20px;font-weight:800;color:var(--text);margin-bottom:3px">${chefEscape(meal.name)}</div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:6px">📍 ${chefEscape(meal.country)} · ${selected.confidence}% ingredient match</div>
+          <div style="font-size:12px;color:#1F6B42;font-weight:800;line-height:1.5;margin-bottom:8px">${chefEscape(r.whyThisMeal||selected.reason)}</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:12px">${chefEscape(r.description||"")}</div>
         </div>
         <div class="chef-body">
-          ${r.useWhatYouHave?.length?`<div class="missing-box" style="background:#E8F7EF;border-color:#CDEDDC"><div style="font-size:10px;font-weight:800;color:#1F6B42;margin-bottom:4px">USE WHAT YOU HAVE</div><div style="font-size:12px;color:#1F6B42">${r.useWhatYouHave.join(", ")}</div></div>`:""}
-          ${r.missingIngredients?.length?`<div class="missing-box"><div style="font-size:10px;font-weight:800;color:#92400E;margin-bottom:4px">YOU MAY NEED</div><div style="font-size:12px;color:#92400E">${r.missingIngredients.join(", ")}</div></div>`:""}
+          ${safeUse.length?`<div class="missing-box" style="background:#E8F7EF;border-color:#CDEDDC"><div style="font-size:10px;font-weight:800;color:#1F6B42;margin-bottom:4px">USE WHAT YOU HAVE</div><div style="font-size:12px;color:#1F6B42">${safeUse.map(chefEscape).join(", ")}</div></div>`:""}
+          ${verifiedMissing.length?`<div class="missing-box"><div style="font-size:10px;font-weight:800;color:#92400E;margin-bottom:4px">YOU MAY NEED</div><div style="font-size:12px;color:#92400E">${verifiedMissing.map(chefEscape).join(", ")}</div></div>`:""}
           <div class="section-label">COOKING PLAN</div>
-          ${(r.steps||[]).map((s,i)=>`<div class="step-row"><div class="step-num">${i+1}</div><div class="step-text">${s}</div></div>`).join("")}
-          ${r.budgetTip?`<div class="tip-box"><div style="font-size:10px;font-weight:800;color:#166534;margin-bottom:2px">💰 BUDGET TIP</div><div style="font-size:12px;color:#166534">${r.budgetTip}</div></div>`:""}
-          ${r.substitutionTip?`<div class="tip-box"><div style="font-size:10px;font-weight:800;color:#166534;margin-bottom:2px">🔄 SUBSTITUTION TIP</div><div style="font-size:12px;color:#166534">${r.substitutionTip}</div></div>`:""}
+          ${steps.map((s,i)=>`<div class="step-row"><div class="step-num">${i+1}</div><div class="step-text">${chefEscape(s)}</div></div>`).join("")}
+          ${r.budgetTip?`<div class="tip-box"><div style="font-size:10px;font-weight:800;color:#166534;margin-bottom:2px">💰 BUDGET TIP</div><div style="font-size:12px;color:#166534">${chefEscape(r.budgetTip)}</div></div>`:""}
+          ${r.substitutionTip?`<div class="tip-box"><div style="font-size:10px;font-weight:800;color:#166534;margin-bottom:2px">🔄 SUBSTITUTION TIP</div><div style="font-size:12px;color:#166534">${chefEscape(r.substitutionTip)}</div></div>`:""}
+          ${r.safetyTip?`<div class="tip-box"><div style="font-size:10px;font-weight:800;color:#92400E;margin-bottom:2px">🛡️ FOOD SAFETY</div><div style="font-size:12px;color:#92400E">${chefEscape(r.safetyTip)}</div></div>`:""}
+          <button class="btn-recipe" style="margin-top:12px" onclick="openModal(${Number(meal.id)})">Open verified WorldMeals dish</button>
         </div>
       </div>`;
   }catch(e){
-    console.log("Chef AI fallback:",e.message);
+    console.log("Chef AI validation fallback:",e.message);
+    const best=matches[0];
+    result.innerHTML += `
+      <div class="chef-summary" style="margin-top:14px">
+        <div class="chef-summary-title">👨‍🍳 Best verified match: ${chefEscape(best.meal.name)}</div>
+        <div class="chef-summary-sub">${best.confidence}% match from the WorldMeals database. Chef AI could not produce a validated cooking plan, so no unverified recommendation was shown.</div>
+      </div>`;
   }
 
   btn.disabled=false;
