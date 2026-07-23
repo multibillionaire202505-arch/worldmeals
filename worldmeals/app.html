@@ -1346,6 +1346,31 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
   .main-brand-logo{width:min(320px,96%)}
 }
 
+
+/* WORLDMEALS CHEF PREMIUM — verified recommendation experience */
+.chef-premium-card{background:linear-gradient(145deg,#fff,#fffaf2);border:1px solid var(--border);border-radius:28px;overflow:hidden;box-shadow:0 22px 55px rgba(83,55,29,.14);margin-top:18px}
+.chef-premium-hero{padding:20px;background:linear-gradient(135deg,#2B2118,#6F3F17);color:#fff;position:relative;overflow:hidden}
+.chef-premium-hero::after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-65px;top:-80px;background:radial-gradient(circle,rgba(245,166,35,.42),transparent 65%)}
+.chef-premium-kicker{font-size:10px;font-weight:900;letter-spacing:.12em;color:#FFD48F;margin-bottom:9px;position:relative;z-index:1}
+.chef-premium-title{font-size:30px;font-weight:900;letter-spacing:-.8px;margin-bottom:6px;position:relative;z-index:1}
+.chef-premium-meta{display:flex;gap:8px;flex-wrap:wrap;position:relative;z-index:1}
+.chef-premium-chip{display:inline-flex;align-items:center;gap:5px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);padding:6px 10px;font-size:11px;font-weight:800;color:#fff}
+.chef-premium-body{padding:18px}
+.chef-why{border:1px solid #CDEDDC;background:#F0FBF4;border-radius:20px;padding:14px;margin-bottom:14px}
+.chef-why-title{font-size:11px;font-weight:900;color:#1F6B42;letter-spacing:.08em;text-transform:uppercase;margin-bottom:7px}
+.chef-why-text{font-size:13px;color:#315E44;line-height:1.65;font-weight:650}
+.chef-ingredient-columns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:14px 0}
+.chef-ing-panel{border-radius:18px;padding:13px;border:1px solid var(--border);min-height:112px}
+.chef-ing-panel.have{background:#ECF9F1;border-color:#CDEDDC}.chef-ing-panel.essential{background:#FFF4DD;border-color:#F0D7B5}.chef-ing-panel.optional{background:#F7F3EE}
+.chef-ing-title{font-size:10px;font-weight:900;letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px}.chef-ing-panel.have .chef-ing-title{color:#1F6B42}.chef-ing-panel.essential .chef-ing-title{color:#92400E}.chef-ing-panel.optional .chef-ing-title{color:var(--muted)}
+.chef-ing-list{display:flex;flex-direction:column;gap:6px}.chef-ing-item{font-size:12px;font-weight:750;color:#4D4035;line-height:1.35}
+.chef-culture{background:linear-gradient(135deg,#FFF7EA,#FFFDF8);border:1px solid #F0D7B5;border-radius:20px;padding:14px;margin:14px 0}.chef-culture-title{font-size:11px;font-weight:900;color:#9A5C0F;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}.chef-culture-text{font-size:13px;color:#6F5330;line-height:1.65}
+.chef-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}.chef-fact{background:#fff;border:1px solid var(--border);border-radius:16px;padding:10px;text-align:center}.chef-fact b{display:block;font-size:13px;color:var(--text);margin-bottom:3px}.chef-fact span{font-size:9px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.chef-section-title{font-size:11px;font-weight:900;color:var(--text);letter-spacing:.09em;text-transform:uppercase;margin:18px 0 10px}
+.chef-step-premium{display:grid;grid-template-columns:32px 1fr;gap:10px;align-items:start;margin-bottom:10px}.chef-step-number{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--accent),#E0A15D);color:#fff;font-size:12px;font-weight:900;box-shadow:0 7px 15px rgba(196,122,44,.22)}.chef-step-copy{font-size:13px;color:#574A3F;line-height:1.65;padding-top:3px}
+.chef-premium-footer{font-size:13px;text-align:center;color:#6B5C4D;line-height:1.6;padding:6px 8px 2px;font-weight:700}
+@media(max-width:640px){.chef-ingredient-columns{grid-template-columns:1fr}.chef-facts{grid-template-columns:1fr 1fr}.chef-premium-title{font-size:25px}}
+
 </style>
 </head>
 <body>
@@ -2806,6 +2831,20 @@ function validateChefRecommendation(aiResult,matches){
   ) || null;
 }
 
+function chefMissingPriority(item){
+  const weight=chefIngredientWeight(item);
+  if(weight>=1.8) return "essential";
+  if(weight>=1.1) return "recommended";
+  return "optional";
+}
+
+function chefDifficulty(meal,steps=[]){
+  const mins=parseMealMinutes(meal?.time);
+  if(mins<=30 && steps.length<=6) return "Easy";
+  if(mins<=75 && steps.length<=8) return "Medium";
+  return "Advanced";
+}
+
 async function runChef(){
   const input=document.getElementById("fridgeInput").value.trim();
   if(!input){ toast("Type a few ingredients first"); return; }
@@ -2824,47 +2863,57 @@ async function runChef(){
     return;
   }
 
-  try{
-    btn.textContent="Asking Chef AI…";
+  /* WorldMeals chooses the verified database winner first.
+     Chef AI explains and teaches; it cannot switch dishes. */
+  const selected=matches[0];
+  const meal=selected.meal;
 
-    const candidates=matches.slice(0,5).map(x=>({
-      mealId:x.meal.id,
-      name:x.meal.name,
-      country:x.meal.country,
-      confidence:x.confidence,
-      matchedIngredients:x.matchedRecipe,
-      missingIngredients:x.missing.slice(0,5),
-      substitutionsAvailable:x.substituted
-    }));
+  try{
+    btn.textContent="Preparing your chef guide…";
+
+    const verifiedPayload={
+      mealId:meal.id,
+      name:meal.name,
+      country:meal.country,
+      region:meal.region,
+      confidence:selected.confidence,
+      userIngredients:tokenizeIngredients(input),
+      matchedIngredients:selected.matchedRecipe,
+      missingIngredients:selected.missing.slice(0,8),
+      substitutionsAvailable:selected.substituted,
+      databaseDescription:meal.desc||"",
+      cookTime:meal.time||"",
+      calories:meal.cal||null,
+      protein:mealProtein(meal),
+      estimatedBudget:meal.budget||null
+    };
 
     const res=await fetch("/api/chat",{
       method:"POST",
       headers:{"Content-Type":"application/json"},
       body:JSON.stringify({
         model:"claude-sonnet-4-6",
-        max_tokens:1100,
+        max_tokens:1300,
         messages:[{
           role:"user",
           content:
-`You are WorldMeals Chef AI.
+`You are WorldMeals Chef AI. WorldMeals has already selected one verified database dish. You are not allowed to change, rename, or replace it.
 
-The user has:
-${input}
-
-You MUST select exactly one meal from this verified WorldMeals candidate list:
-${JSON.stringify(candidates)}
+VERIFIED DISH DATA:
+${JSON.stringify(verifiedPayload)}
 
 Accuracy rules:
-1. Return the exact mealId, name, and country from one candidate.
-2. Never invent or rename a dish.
-3. Do not claim the user has an ingredient unless it appears in the user's list.
-4. Keep missingIngredients consistent with the selected candidate.
-5. Prefer the highest-confidence candidate unless another candidate is clearly more practical.
-6. Give safe, realistic cooking steps. Mention that poultry, ground meats, seafood, and leftovers must be cooked or reheated safely when relevant.
-7. Respond ONLY with valid JSON and no markdown.
+1. Use the exact verified dish name and country.
+2. Never claim the user has an ingredient unless it appears in userIngredients or matchedIngredients.
+3. Keep missing ingredients consistent with missingIngredients. You may classify them as essential or optional, but do not invent new required ingredients.
+4. Provide practical, numbered cooking steps for this exact dish.
+5. Give a short cultural introduction without claiming uncertain dates, superlatives, or unsupported historical facts.
+6. Give a realistic budget tip and substitution tip.
+7. Include food-safety guidance when meat, poultry, seafood, eggs, or leftovers are relevant.
+8. Respond ONLY with valid JSON and no markdown.
 
 Schema:
-{"mealId":"","name":"","country":"","whyThisMeal":"","description":"","useWhatYouHave":[],"missingIngredients":[],"steps":[],"budgetTip":"","substitutionTip":"","safetyTip":""}`
+{"whyThisMeal":"","description":"","aboutDish":"","useWhatYouHave":[],"essentialMissing":[],"optionalMissing":[],"steps":[],"budgetTip":"","substitutionTip":"","safetyTip":"","closingMessage":""}`
         }]
       })
     });
@@ -2876,51 +2925,91 @@ Schema:
     if(!text) throw new Error("No Chef AI text returned");
 
     const r=JSON.parse(text.replace(/```json|```/g,"").trim());
-    const selected=validateChefRecommendation(r,matches);
-    if(!selected) throw new Error("Chef AI returned a dish outside the verified matches");
-
-    const meal=selected.meal;
+    const userTokens=tokenizeIngredients(input);
     const safeUse=(Array.isArray(r.useWhatYouHave)?r.useWhatYouHave:[])
-      .filter(item=>tokenizeIngredients(input).some(token=>chefIngredientsEquivalent(token,item)))
+      .filter(item=>userTokens.some(token=>chefIngredientsEquivalent(token,item)))
       .slice(0,10);
 
-    const verifiedMissing=selected.missing.slice(0,6);
-    const steps=Array.isArray(r.steps)?r.steps.slice(0,8):[];
+    const verifiedMissing=selected.missing.slice(0,8);
+    const essential=verifiedMissing.filter(i=>chefMissingPriority(i)==="essential");
+    const optional=verifiedMissing.filter(i=>chefMissingPriority(i)!=="essential");
+    const steps=Array.isArray(r.steps)?r.steps.slice(0,9):[];
+    const difficulty=chefDifficulty(meal,steps);
+    const description=r.description||meal.desc||"";
+    const why=r.whyThisMeal||selected.reason;
+    const about=r.aboutDish||`${meal.name} is a traditional dish from ${meal.country}, presented here as part of your WorldMeals journey through global cuisine.`;
+    const closing=r.closingMessage||`Today you are cooking a dish from ${meal.country}. Enjoy exploring the world through food. 🌍`;
 
     result.innerHTML += `
-      <div class="chef-ai-card">
-        <div class="chef-ai-head">
-          <div class="chef-ai-badge">🤖 VERIFIED CHEF AI RECOMMENDATION</div>
-          <div style="font-size:20px;font-weight:800;color:var(--text);margin-bottom:3px">${chefEscape(meal.name)}</div>
-          <div style="font-size:12px;color:var(--muted);margin-bottom:6px">📍 ${chefEscape(meal.country)} · ${selected.confidence}% ingredient match</div>
-          <div style="font-size:12px;color:#1F6B42;font-weight:800;line-height:1.5;margin-bottom:8px">${chefEscape(r.whyThisMeal||selected.reason)}</div>
-          <div style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:12px">${chefEscape(r.description||"")}</div>
+      <div class="chef-premium-card">
+        <div class="chef-premium-hero">
+          <div class="chef-premium-kicker">🏆 BEST VERIFIED MATCH</div>
+          <div class="chef-premium-title">${countryFlag(meal.country)} ${chefEscape(meal.name)}</div>
+          <div class="chef-premium-meta">
+            <span class="chef-premium-chip">📍 ${chefEscape(meal.country)}</span>
+            <span class="chef-premium-chip">✓ ${selected.confidence}% match</span>
+            <span class="chef-premium-chip">👨‍🍳 ${difficulty}</span>
+          </div>
         </div>
-        <div class="chef-body">
-          ${safeUse.length?`<div class="missing-box" style="background:#E8F7EF;border-color:#CDEDDC"><div style="font-size:10px;font-weight:800;color:#1F6B42;margin-bottom:4px">USE WHAT YOU HAVE</div><div style="font-size:12px;color:#1F6B42">${safeUse.map(chefEscape).join(", ")}</div></div>`:""}
-          ${verifiedMissing.length?`<div class="missing-box"><div style="font-size:10px;font-weight:800;color:#92400E;margin-bottom:4px">YOU MAY NEED</div><div style="font-size:12px;color:#92400E">${verifiedMissing.map(chefEscape).join(", ")}</div></div>`:""}
-          <div class="section-label">COOKING PLAN</div>
-          ${steps.map((s,i)=>`<div class="step-row"><div class="step-num">${i+1}</div><div class="step-text">${chefEscape(s)}</div></div>`).join("")}
-          ${r.budgetTip?`<div class="tip-box"><div style="font-size:10px;font-weight:800;color:#166534;margin-bottom:2px">💰 BUDGET TIP</div><div style="font-size:12px;color:#166534">${chefEscape(r.budgetTip)}</div></div>`:""}
-          ${r.substitutionTip?`<div class="tip-box"><div style="font-size:10px;font-weight:800;color:#166534;margin-bottom:2px">🔄 SUBSTITUTION TIP</div><div style="font-size:12px;color:#166534">${chefEscape(r.substitutionTip)}</div></div>`:""}
-          ${r.safetyTip?`<div class="tip-box"><div style="font-size:10px;font-weight:800;color:#92400E;margin-bottom:2px">🛡️ FOOD SAFETY</div><div style="font-size:12px;color:#92400E">${chefEscape(r.safetyTip)}</div></div>`:""}
-          <button class="btn-recipe" style="margin-top:12px" onclick="openModal(${Number(meal.id)})">Open verified WorldMeals dish</button>
+        <div class="chef-premium-body">
+          <div class="chef-why">
+            <div class="chef-why-title">Why this recipe won</div>
+            <div class="chef-why-text">${chefEscape(why)}</div>
+          </div>
+
+          ${description?`<div style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:12px">${chefEscape(description)}</div>`:""}
+
+          <div class="chef-facts">
+            <div class="chef-fact"><b>${chefEscape(meal.time||"—")}</b><span>Cook time</span></div>
+            <div class="chef-fact"><b>${meal.cal||"—"}</b><span>Calories</span></div>
+            <div class="chef-fact"><b>${mealProtein(meal)}g</b><span>Protein</span></div>
+            <div class="chef-fact"><b>$${meal.budget||"—"}</b><span>Est. budget</span></div>
+          </div>
+
+          <div class="chef-ingredient-columns">
+            <div class="chef-ing-panel have">
+              <div class="chef-ing-title">✅ Already in your kitchen</div>
+              <div class="chef-ing-list">${(safeUse.length?safeUse:selected.matchedRecipe).slice(0,8).map(i=>`<div class="chef-ing-item">✓ ${chefEscape(i)}</div>`).join("")||'<div class="chef-ing-item">Confirmed ingredients</div>'}</div>
+            </div>
+            <div class="chef-ing-panel essential">
+              <div class="chef-ing-title">⭐ Essential to add</div>
+              <div class="chef-ing-list">${essential.length?essential.map(i=>`<div class="chef-ing-item">★ ${chefEscape(i)}</div>`).join(""):'<div class="chef-ing-item">No major ingredient missing</div>'}</div>
+            </div>
+            <div class="chef-ing-panel optional">
+              <div class="chef-ing-title">➕ Recommended / optional</div>
+              <div class="chef-ing-list">${optional.length?optional.map(i=>`<div class="chef-ing-item">• ${chefEscape(i)}</div>`).join(""):'<div class="chef-ing-item">Nothing else required</div>'}</div>
+            </div>
+          </div>
+
+          <div class="chef-culture">
+            <div class="chef-culture-title">🌍 About this dish</div>
+            <div class="chef-culture-text">${chefEscape(about)}</div>
+          </div>
+
+          <div class="chef-section-title">👨‍🍳 Cooking plan</div>
+          ${steps.map((s,i)=>`<div class="chef-step-premium"><div class="chef-step-number">${i+1}</div><div class="chef-step-copy">${chefEscape(s)}</div></div>`).join("")}
+
+          ${r.budgetTip?`<div class="tip-box"><div style="font-size:10px;font-weight:800;color:#166534;margin-bottom:2px">💰 BUDGET TIP</div><div style="font-size:12px;color:#166534;line-height:1.55">${chefEscape(r.budgetTip)}</div></div>`:""}
+          ${r.substitutionTip?`<div class="tip-box"><div style="font-size:10px;font-weight:800;color:#166534;margin-bottom:2px">🔄 SUBSTITUTION TIP</div><div style="font-size:12px;color:#166534;line-height:1.55">${chefEscape(r.substitutionTip)}</div></div>`:""}
+          ${r.safetyTip?`<div class="tip-box"><div style="font-size:10px;font-weight:800;color:#92400E;margin-bottom:2px">🛡️ FOOD SAFETY</div><div style="font-size:12px;color:#92400E;line-height:1.55">${chefEscape(r.safetyTip)}</div></div>`:""}
+
+          <div class="chef-premium-footer">${chefEscape(closing)}</div>
+          <button class="btn-recipe" style="margin-top:12px" onclick="openModal(${Number(meal.id)})">🍽 Open verified WorldMeals recipe</button>
         </div>
       </div>`;
   }catch(e){
-    console.log("Chef AI validation fallback:",e.message);
-    const best=matches[0];
+    console.log("Chef AI guide fallback:",e.message);
     result.innerHTML += `
       <div class="chef-summary" style="margin-top:14px">
-        <div class="chef-summary-title">👨‍🍳 Best verified match: ${chefEscape(best.meal.name)}</div>
-        <div class="chef-summary-sub">${best.confidence}% match from the WorldMeals database. Chef AI could not produce a validated cooking plan, so no unverified recommendation was shown.</div>
+        <div class="chef-summary-title">🏆 Best verified match: ${chefEscape(meal.name)}</div>
+        <div class="chef-summary-sub">${selected.confidence}% match from the WorldMeals database. The database recommendation remains available, but the detailed Chef AI guide could not be generated right now.</div>
+        <button class="btn-recipe" style="margin-top:12px" onclick="openModal(${Number(meal.id)})">Open verified WorldMeals recipe</button>
       </div>`;
   }
 
   btn.disabled=false;
   btn.textContent="✨ Find meals I can cook";
 }
-
 
 function generateSmartPlan(){
   const budget = Number(document.getElementById("weeklyBudget")?.value || 0);
