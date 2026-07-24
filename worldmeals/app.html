@@ -1411,7 +1411,19 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
     </div>
     <div class="filter-group f-diet"><label>Diet</label>
       <select id="dietFilter" onchange="renderGrid()">
-        <option value="all">All diets</option><option value="dairy-free">Dairy-free</option><option value="gluten-free">Gluten-free</option><option value="vegan">Vegan</option><option value="gluten-free-option">GF option</option><option value="vegan-option">Vegan option</option>
+        <option value="all">All diets</option>
+        <optgroup label="Goals">
+          <option value="lose-weight">🔥 Lose Weight</option>
+          <option value="gain-weight">⚖️ Gain Weight</option>
+          <option value="build-muscle">💪 Build Muscle</option>
+        </optgroup>
+        <optgroup label="Dietary Preferences">
+          <option value="dairy-free">Dairy-free</option>
+          <option value="gluten-free">Gluten-free</option>
+          <option value="vegan">Vegan</option>
+          <option value="gluten-free-option">GF option</option>
+          <option value="vegan-option">Vegan option</option>
+        </optgroup>
       </select>
     </div>
     <div class="filter-group f-protein"><label>Protein</label>
@@ -2120,6 +2132,64 @@ function isHighProtein(m, min=30){
   return mealProtein(m) >= min;
 }
 
+/* ==========================================================
+   WORLDMEALS GOAL FILTER
+   Uses the existing nutrition data while every item remains
+   organized under its original country.
+   ========================================================== */
+const WM_GOAL_FILTERS = new Set([
+  "lose-weight",
+  "gain-weight",
+  "build-muscle"
+]);
+
+function mealCalories(m){
+  return Number(m?.cal || 0);
+}
+
+function mealGoalMatch(m, goal){
+  const calories = mealCalories(m);
+  const protein = mealProtein(m);
+
+  if(goal === "lose-weight"){
+    // Lighter meals, drinks, or smoothies; protein is preferred
+    // for fuller meals, while very light options can also qualify.
+    return (
+      (calories > 0 && calories <= 550 && protein >= 15) ||
+      (calories > 0 && calories <= 300)
+    );
+  }
+
+  if(goal === "gain-weight"){
+    // Higher-energy choices, or substantial meals combining
+    // useful calories with protein.
+    return (
+      calories >= 650 ||
+      (calories >= 500 && protein >= 20)
+    );
+  }
+
+  if(goal === "build-muscle"){
+    // Protein-rich complete choices with a practical calorie range.
+    return (
+      protein >= 25 &&
+      calories >= 300 &&
+      calories <= 1000
+    );
+  }
+
+  return true;
+}
+
+function goalDisplayName(goal){
+  const names = {
+    "lose-weight": "Lose Weight",
+    "gain-weight": "Gain Weight",
+    "build-muscle": "Build Muscle"
+  };
+  return names[goal] || "";
+}
+
 function setFaderFill(el){
   const min=Number(el.min), max=Number(el.max), v=Number(el.value);
   const pct=Math.round(((v-min)/(max-min))*100);
@@ -2248,7 +2318,13 @@ function renderGrid(){
     if(q && q.includes("high protein") && !isHighProtein(m))return false;
     if(q&&!searchable.includes(q)&&!q.includes("high protein"))return false;
     if(reg!=="All regions"&&m.region!==reg)return false;
-    if(diet!=="all"&&!m.tags.includes(diet))return false;
+    if(diet !== "all"){
+      if(WM_GOAL_FILTERS.has(diet)){
+        if(!mealGoalMatch(m, diet)) return false;
+      }else{
+        if(!(m.tags || []).includes(diet)) return false;
+      }
+    }
     if(country!=="all"&&m.country!==country)return false;
     if(maxTime<180&&parseMealMinutes(m.time)>maxTime)return false;
     if(proteinMin>0&&mealProtein(m)<proteinMin)return false;
@@ -2269,7 +2345,29 @@ function renderGrid(){
   const g=document.getElementById("grid");
 
   if(!filtered.length){
-    g.innerHTML='<div class="empty">No dishes match. Try relaxing your filters.</div>';
+    const selectedGoal = WM_GOAL_FILTERS.has(diet)
+      ? goalDisplayName(diet)
+      : "";
+
+    if(selectedGoal && country !== "all"){
+      g.innerHTML = `
+        <div class="empty">
+          No ${selectedGoal.toLowerCase()} options are currently available from
+          <strong>${escapeAttr(country)}</strong>.<br><br>
+          Try selecting <strong>All countries</strong> to see what WorldMeals
+          currently has available.
+        </div>`;
+    }else if(selectedGoal){
+      g.innerHTML = `
+        <div class="empty">
+          No options currently match your
+          <strong>${selectedGoal}</strong> goal and the other filters you selected.<br><br>
+          Try increasing your budget, cook time, calories, or spice range.
+        </div>`;
+    }else{
+      g.innerHTML =
+        '<div class="empty">No dishes match. Try relaxing your filters.</div>';
+    }
     return;
   }
 
