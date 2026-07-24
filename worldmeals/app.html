@@ -119,6 +119,7 @@ nav{background:rgba(255,253,248,.88);backdrop-filter:blur(18px);padding:14px 16p
 .week-stats{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px}.week-stat{border-radius:18px;padding:13px;text-align:center;border:1px solid var(--border);box-shadow:0 8px 20px rgba(83,55,29,.06)}.week-stat.cal{background:#FFF4DD}.week-stat.bud{background:#EAF8EF}.week-val{font-size:22px;font-weight:900;color:var(--text)}
 .day-row{background:#fff;border-radius:18px;border:1px solid var(--border);padding:12px 13px;margin-bottom:9px;display:flex;align-items:center;gap:12px;box-shadow:0 6px 16px rgba(83,55,29,.05)}
 .day-lbl{font-weight:900;font-size:13px;min-width:34px;color:var(--accent-dark)}.day-info{flex:1}.day-name{font-size:14px;font-weight:900;color:var(--text)}.day-sub{font-size:12px;color:var(--muted);margin-top:2px}.day-empty{flex:1;font-size:13px;color:var(--muted-2)}.day-thumb{width:42px;height:42px;border-radius:14px;overflow:hidden;background:#F3E8DA;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}.day-thumb img{width:100%;height:100%;object-fit:cover}.btn-clear{background:none;border:none;color:var(--muted-2);cursor:pointer;font-size:17px}.btn-add{font-size:12px;padding:7px 13px;border-radius:999px;border:1px solid var(--border);background:#fff;cursor:pointer;color:var(--accent-dark);font-weight:900;font-family:'Inter',system-ui,sans-serif}
+.day-row.has-meal{cursor:pointer;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}.day-row.has-meal:hover{transform:translateY(-1px);border-color:#DEC9B3;box-shadow:0 10px 24px rgba(83,55,29,.10)}.day-recipe{border:1px solid #E8D3B8;background:#FFF7ED;color:#8A4B18;border-radius:999px;padding:6px 9px;font-size:10px;font-weight:900;cursor:pointer;font-family:Inter,system-ui,sans-serif;white-space:nowrap}.btn-clear{padding:6px;line-height:1}
 /* SMART GROCERY */
 .btn-plan-secondary{width:100%;margin-top:8px;padding:12px 13px;border-radius:16px;border:1px solid var(--border);background:#fff;color:var(--accent-dark);font-size:13px;font-weight:900;cursor:pointer;font-family:Inter,system-ui,sans-serif}
 .planner-summary{background:#FFF7E8;border:1px solid #F0D7B5;border-radius:18px;padding:13px 14px;margin-bottom:14px;font-size:13px;color:#6F4B20;line-height:1.5;box-shadow:0 8px 20px rgba(83,55,29,.05)}
@@ -2475,13 +2476,31 @@ function showPage(name){
 }
 
 function renderPlanner(){
-  const wCal=Object.values(plan).reduce((s,id)=>{const m=MEALS.find(x=>x.id===id);return s+(m?.cal||0);},0);
-  const wBud=Object.values(plan).reduce((s,id)=>{const m=MEALS.find(x=>x.id===id);return s+(m?.budget||0);},0);
+  const people=Math.max(1,Number(document.getElementById("peopleCount")?.value||localStorage.getItem("wm_plan_people")||1));
+  const plannedMeals=Object.values(plan).map(id=>MEALS.find(x=>x.id===id)).filter(Boolean);
+  const wCal=plannedMeals.reduce((sum,m)=>sum+(Number(m.cal)||0),0);
+  const wBud=plannedMeals.reduce((sum,m)=>sum+((Number(m.budget)||0)*people),0);
+
   document.getElementById("weekCal").textContent=wCal.toLocaleString();
-  document.getElementById("weekBud").textContent="$"+wBud;
+  document.getElementById("weekBud").textContent="$"+Math.round(wBud);
+
   document.getElementById("plannerDays").innerHTML=DAYS.map(day=>{
     const m=plan[day]?MEALS.find(x=>x.id===plan[day]):null;
-    return `<div class="day-row"><div class="day-lbl">${day}</div>${m?`${thumbHTML(m)}<div class="day-info"><div class="day-name">${m.name}</div><div class="day-sub">📍 ${m.country} · ${m.cal} kcal · 💪 ${mealProtein(m)}g · $${m.budget}</div></div><button class="btn-clear" onclick="clearDay('${day}')">✕</button>`:`<div class="day-empty">No meal planned</div><button class="btn-add" onclick="openPicker('${day}')">+ Add dish</button>`}</div>`;
+    if(!m){
+      return `<div class="day-row"><div class="day-lbl">${day}</div><div class="day-empty">No meal planned</div><button class="btn-add" onclick="openPicker('${day}')">+ Add dish</button></div>`;
+    }
+
+    const mealTotal=(Number(m.budget)||0)*people;
+    return `<div class="day-row has-meal" onclick="openModal(${Number(m.id)})" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openModal(${Number(m.id)})}">
+      <div class="day-lbl">${day}</div>
+      ${thumbHTML(m)}
+      <div class="day-info">
+        <div class="day-name">${m.name}</div>
+        <div class="day-sub">${countryFlag(m.country)} ${m.country} · ${m.cal} kcal · 💪 ${mealProtein(m)}g · $${mealTotal} for ${people}</div>
+      </div>
+      <button class="day-recipe" onclick="event.stopPropagation();openModal(${Number(m.id)})">Recipe</button>
+      <button class="btn-clear" aria-label="Remove ${escapeAttr(m.name)} from ${day}" onclick="event.stopPropagation();clearDay('${day}')">✕</button>
+    </div>`;
   }).join("");
 }
 
@@ -3013,7 +3032,7 @@ Schema:
 
 function generateSmartPlan(){
   const budget = Number(document.getElementById("weeklyBudget")?.value || 0);
-  const people = Number(document.getElementById("peopleCount")?.value || 1);
+  const people = Math.max(1,Number(document.getElementById("peopleCount")?.value || 1));
   const diet = document.getElementById("plannerDiet")?.value || "all";
   const maxSpice = Number(document.getElementById("plannerSpice")?.value || 5);
   const goal = document.getElementById("plannerGoal")?.value || "balanced";
@@ -3023,71 +3042,114 @@ function generateSmartPlan(){
     return;
   }
 
-  const preferredBudgetPerServing = budget / people;
-  let pool = MEALS.filter(m=>{
-    if(diet !== "all" && !(m.tags||[]).includes(diet)) return false;
-    if(m.spice > maxSpice) return false;
-    if(goal === "high-protein" && mealProtein(m) < 20) return false;
-    return m.budget <= preferredBudgetPerServing;
+  localStorage.setItem("wm_plan_people",String(people));
+
+  let pool=MEALS.filter(m=>{
+    if(diet!=="all" && !(m.tags||[]).includes(diet)) return false;
+    if(Number(m.spice||0)>maxSpice) return false;
+    if(goal==="high-protein" && mealProtein(m)<20) return false;
+    return Number(m.budget||0)*people<=budget;
   });
 
-  if(pool.length < 7){
-    pool = MEALS.filter(m=>m.spice <= maxSpice && m.budget <= preferredBudgetPerServing && (goal !== "high-protein" || mealProtein(m) >= 20));
+  if(pool.length<7){
+    pool=MEALS.filter(m=>Number(m.spice||0)<=maxSpice && (goal!=="high-protein" || mealProtein(m)>=20));
   }
 
-  if(pool.length < 7){
-    pool = MEALS.filter(m=>m.spice <= maxSpice).sort((a,b)=>a.budget-b.budget);
-  }
+  const cheapestSeven=[...pool]
+    .sort((a,b)=>(Number(a.budget)||0)-(Number(b.budget)||0))
+    .slice(0,7);
+  const minimumCost=cheapestSeven.reduce((sum,m)=>sum+(Number(m.budget)||0)*people,0);
 
-  pool = [...pool].sort((a,b)=>{
-    if(goal === "high-protein") return (mealProtein(b)-mealProtein(a)) || (a.budget-b.budget);
-    if(goal === "budget") return (a.budget-b.budget) || (mealProtein(b)-mealProtein(a));
-    if(a.region !== b.region) return a.region.localeCompare(b.region);
-    return a.budget - b.budget;
-  });
-
-  const selected = [];
-  const usedCountries = new Set();
-  let total = 0;
-
-  // First pass: prioritize variety by country while staying under budget.
-  for(const meal of pool){
-    if(selected.length >= 7) break;
-    const mealCost = meal.budget * people;
-    if(total + mealCost <= budget && !usedCountries.has(meal.country)){
-      selected.push(meal);
-      usedCountries.add(meal.country);
-      total += mealCost;
-    }
-  }
-
-  // Second pass: fill remaining days if needed.
-  for(const meal of pool){
-    if(selected.length >= 7) break;
-    if(selected.some(x=>x.id===meal.id)) continue;
-    const mealCost = meal.budget * people;
-    if(total + mealCost <= budget){
-      selected.push(meal);
-      total += mealCost;
-    }
-  }
-
-  if(selected.length < 7){
-    toast("Budget too low for 7 meals");
+  if(cheapestSeven.length<7 || minimumCost>budget){
+    toast(`Budget needs at least $${Math.ceil(minimumCost||10)} for 7 meals`);
     return;
   }
 
-  DAYS.forEach((day,i)=>{ plan[day] = selected[i].id; });
+  const targetUse=goal==="budget" ? Math.min(budget,minimumCost) : budget*0.88;
+  const targetPerMeal=targetUse/7;
+  const selected=[];
+  const usedCountries=new Set();
+  const usedRegions=new Map();
+  let total=0;
+
+  for(let slot=0;slot<7;slot++){
+    const remainingSlots=7-slot-1;
+    const candidates=pool.filter(m=>!selected.some(x=>x.id===m.id));
+    let best=null;
+    let bestScore=-Infinity;
+
+    for(const meal of candidates){
+      const cost=(Number(meal.budget)||0)*people;
+      if(total+cost>budget) continue;
+
+      const remainingPool=candidates.filter(x=>x.id!==meal.id).map(x=>(Number(x.budget)||0)*people).sort((a,b)=>a-b);
+      const cheapestRest=remainingPool.slice(0,remainingSlots).reduce((s,v)=>s+v,0);
+      if(total+cost+cheapestRest>budget) continue;
+
+      const regionCount=usedRegions.get(meal.region)||0;
+      const countryBonus=usedCountries.has(meal.country)?-24:18;
+      const regionBonus=regionCount===0?10:regionCount===1?2:-8;
+      const costCloseness=-Math.abs(cost-targetPerMeal)*4;
+      const proteinScore=goal==="high-protein"?mealProtein(meal)*1.9:mealProtein(meal)*0.28;
+      const budgetScore=goal==="budget"?-(cost*5):0;
+      const calorieBalance=goal==="balanced"?-Math.abs((Number(meal.cal)||500)-550)/45:0;
+      const seededTie=((Number(meal.id)||0)*31 + Math.round(budget)*17 + people*13 + slot*7)%19/100;
+      const score=countryBonus+regionBonus+costCloseness+proteinScore+budgetScore+calorieBalance+seededTie;
+
+      if(score>bestScore){bestScore=score;best=meal;}
+    }
+
+    if(!best) break;
+    selected.push(best);
+    usedCountries.add(best.country);
+    usedRegions.set(best.region,(usedRegions.get(best.region)||0)+1);
+    total+=(Number(best.budget)||0)*people;
+  }
+
+  if(selected.length<7){
+    toast("Could not build 7 meals with those preferences");
+    return;
+  }
+
+  // Upgrade meals when extra budget is available, so higher budgets produce richer plans.
+  if(goal!=="budget"){
+    let improved=true;
+    while(improved){
+      improved=false;
+      for(let i=0;i<selected.length;i++){
+        const current=selected[i];
+        const currentCost=(Number(current.budget)||0)*people;
+        const alternatives=pool
+          .filter(m=>!selected.some((x,index)=>index!==i && x.id===m.id))
+          .filter(m=>usedCountries.has(m.country) ? m.country===current.country : true)
+          .map(m=>({meal:m,cost:(Number(m.budget)||0)*people}))
+          .filter(x=>x.cost>currentCost && total-currentCost+x.cost<=budget)
+          .sort((a,b)=>{
+            const aValue=(goal==="high-protein"?mealProtein(a.meal)*3:mealProtein(a.meal)+(Number(a.meal.cal)||0)/120)-Math.abs(a.cost-targetPerMeal);
+            const bValue=(goal==="high-protein"?mealProtein(b.meal)*3:mealProtein(b.meal)+(Number(b.meal.cal)||0)/120)-Math.abs(b.cost-targetPerMeal);
+            return bValue-aValue;
+          });
+        if(alternatives.length && total<targetUse){
+          const next=alternatives[0];
+          selected[i]=next.meal;
+          total=total-currentCost+next.cost;
+          improved=true;
+        }
+      }
+    }
+  }
+
+  DAYS.forEach((day,i)=>{plan[day]=selected[i].id;});
   save();
   renderPlanner();
 
-  const remaining = Math.max(0, budget-total);
-  const summary = document.getElementById("plannerSummary");
+  const remaining=Math.max(0,budget-total);
+  const summary=document.getElementById("plannerSummary");
   if(summary){
     summary.style.display="block";
-    const proteinTotal = selected.reduce((sum,m)=>sum+mealProtein(m),0);
-    const goalLabel = goal === "high-protein" ? "High protein" : goal === "budget" ? "Lowest cost" : "Balanced";
-    summary.innerHTML=`✨ ${goalLabel} plan created for <b>${people}</b> ${people===1?"person":"people"}. Estimated weekly total: <b>$${total}</b>. Remaining budget: <b>$${remaining}</b>. Protein across the week: <b>${proteinTotal}g</b>.`;
+    const proteinTotal=selected.reduce((sum,m)=>sum+mealProtein(m),0);
+    const goalLabel=goal==="high-protein"?"High protein":goal==="budget"?"Lowest cost":"Balanced";
+    summary.innerHTML=`✨ ${goalLabel} plan created for <b>${people}</b> ${people===1?"person":"people"}. Estimated weekly total: <b>$${Math.round(total)}</b>. Remaining budget: <b>$${Math.round(remaining)}</b>. Protein across the week: <b>${proteinTotal}g</b>.`;
   }
   toast("Weekly plan generated!");
 }
