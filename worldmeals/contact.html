@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Contact — WorldMeals</title>
-<meta name="description" content="Contact for WorldMeals.">
+<meta name="description" content="Contact WorldMeals for support, feedback, bug reports, dish suggestions, country requests, and partnerships.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -29,6 +29,7 @@
   <h1>Questions, ideas, or a dish we should know about?</h1>
   <p class="lead">Send us a message about support, bugs, partnerships, country requests, or dishes you would love to see in WorldMeals.</p>
 </section>
+
 <section class="grid">
   <article class="card">
     <h2>How we can help</h2>
@@ -41,16 +42,32 @@
       <li>🤝 Discuss a partnership</li>
     </ul>
   </article>
+
   <article class="card">
-    <h2>Before launch</h2>
-    <p>Connect this form to Formspree, Resend, Supabase, your own API route, or another email service. The current version safely prepares an email in the visitor’s mail app.</p>
-    <p class="small" style="margin-top:10px">Current destination: <strong>hello@worldmeals.app</strong>. Replace it if that mailbox is not active.</p>
+    <h2>Contact us directly</h2>
+    <p>You can use the form below or email the WorldMeals support team directly.</p>
+    <p class="small" style="margin-top:10px">
+      Email:
+      <strong>
+        <a href="mailto:support@worldmeals.app">support@worldmeals.app</a>
+      </strong>
+    </p>
   </article>
+
   <article class="card full">
     <form id="contactForm">
-      <label>Name<input id="name" required autocomplete="name"></label>
-      <label>Email<input id="email" type="email" required autocomplete="email"></label>
-      <label>Topic
+      <label>
+        Name
+        <input id="name" required autocomplete="name">
+      </label>
+
+      <label>
+        Email
+        <input id="email" type="email" required autocomplete="email">
+      </label>
+
+      <label>
+        Topic
         <select id="topic">
           <option>General Support</option>
           <option>Report a Bug</option>
@@ -61,23 +78,40 @@
           <option>Privacy Request</option>
         </select>
       </label>
-      <label>Message<textarea id="message" required placeholder="Tell us how we can help..."></textarea></label>
+
+      <label>
+        Message
+        <textarea id="message" required placeholder="Tell us how we can help..."></textarea>
+      </label>
+
       <button type="submit">Send message</button>
       <p class="small">This opens your default email app. No message is sent until you confirm it there.</p>
     </form>
   </article>
 </section>
+
 <script>
-document.getElementById("contactForm").addEventListener("submit",function(e){
+document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
-  const destination="hello@worldmeals.app";
-  const name=document.getElementById("name").value.trim();
-  const email=document.getElementById("email").value.trim();
-  const topic=document.getElementById("topic").value;
-  const message=document.getElementById("message").value.trim();
-  const subject=encodeURIComponent("[WorldMeals] "+topic);
-  const body=encodeURIComponent("Name: "+name+"\nEmail: "+email+"\nTopic: "+topic+"\n\n"+message);
-  window.location.href="mailto:"+destination+"?subject="+subject+"&body="+body;
+
+  const destination = "support@worldmeals.app";
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const topic = document.getElementById("topic").value;
+  const message = document.getElementById("message").value.trim();
+
+  const subject = encodeURIComponent("[WorldMeals] " + topic);
+  const body = encodeURIComponent(
+    "Name: " + name +
+    "\nEmail: " + email +
+    "\nTopic: " + topic +
+    "\n\n" + message
+  );
+
+  window.location.href =
+    "mailto:" + destination +
+    "?subject=" + subject +
+    "&body=" + body;
 });
 </script>
 </main>
