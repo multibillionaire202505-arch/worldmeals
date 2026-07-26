@@ -97,3 +97,17 @@ footer{
   .grid,.feature-list{grid-template-columns:1fr}
   .hero{border-radius:26px}
 }
+.trust-page-logo {
+  display: block;
+  width: auto;
+  height: 34px;
+  max-width: 210px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .trust-page-logo {
+    height: 28px;
+    max-width: 175px;
+  }
+}
