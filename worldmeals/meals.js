@@ -14,7 +14,9 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 3,
     "tags": [
       "dairy",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option",
+      "dairy-free-option"
     ],
     "desc": "Tender chicken in a velvety tomato-cream sauce infused with warming spices.",
     "ingredients": [
@@ -72,7 +74,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "Vinegared rice paired with fresh fish and vegetables. Clean, precise Japanese flavors.",
     "ingredients": [
@@ -125,7 +128,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "Stir-fried rice noodles with shrimp, tofu, egg in tangy tamarind sauce.",
     "ingredients": [
@@ -170,7 +174,10 @@ window.WORLD_MEALS_DATABASE = [
     "time": "20 min",
     "spice": 1,
     "tags": [
-      "dairy"
+      "dairy",
+      "vegan-option",
+      "gluten-free-option",
+      "dairy-free-option"
     ],
     "desc": "Creamy egg and pecorino sauce with guanciale and black pepper. No cream needed.",
     "ingredients": [
@@ -226,7 +233,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 3,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Marinated pork in corn tortillas with pineapple and cilantro. Street food perfection.",
     "ingredients": [
@@ -317,7 +325,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Fresh fish cured in lime juice with red onion and chili. Light and refreshing.",
     "ingredients": [
@@ -361,7 +370,8 @@ window.WORLD_MEALS_DATABASE = [
     "time": "1.5 hrs",
     "spice": 1,
     "tags": [
-      "dairy"
+      "dairy",
+      "vegan-option"
     ],
     "desc": "Layered eggplant and spiced lamb with creamy béchamel baked until golden.",
     "ingredients": [
@@ -406,7 +416,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "Clear beef bone broth over rice noodles with fresh herbs and lime.",
     "ingredients": [
@@ -451,7 +462,7 @@ window.WORLD_MEALS_DATABASE = [
     "tags": [
       "dairy-free",
       "gluten-free",
-      "vegan"
+      "vegan-option"
     ],
     "desc": "One-pot West African rice in tomato and pepper sauce. The centerpiece of any celebration.",
     "ingredients": [
@@ -496,7 +507,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Slow-cooked lamb with preserved lemon and olives in aromatic spices.",
     "ingredients": [
@@ -541,7 +553,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "2 days",
     "spice": 1,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "Imperial roast duck with crispy lacquered skin in thin pancakes with hoisin.",
     "ingredients": [
@@ -587,7 +601,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "Juicy pork and veal sausage grilled with mustard and sauerkraut.",
     "ingredients": [
@@ -630,7 +645,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "1 hr",
     "spice": 1,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "Flaky pastry pockets stuffed with spiced ground beef, olives, and egg.",
     "ingredients": [
@@ -720,7 +737,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 4,
     "tags": [
       "dairy-free",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "Fiery kimchi stew with pork belly and silken tofu. Deeply savory Korean comfort food.",
     "ingredients": [
@@ -769,7 +787,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "30 min",
     "spice": 1,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "Beer-battered cod fried golden with thick-cut chips and mushy peas.",
     "ingredients": [
@@ -815,7 +835,7 @@ window.WORLD_MEALS_DATABASE = [
     "tags": [
       "dairy-free",
       "vegan",
-      "gluten-free"
+      "gluten-free-option"
     ],
     "desc": "Chilled blended raw tomato soup. Andalusia's answer to summer heat.",
     "ingredients": [
@@ -897,7 +917,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "25 min",
     "spice": 1,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option",
+      "dairy-free-option"
     ],
     "desc": "Thin Neapolitan crust with San Marzano tomatoes, buffalo mozzarella, and fresh basil.",
     "ingredients": [
@@ -940,7 +962,8 @@ window.WORLD_MEALS_DATABASE = [
     "time": "3 hrs",
     "spice": 1,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "dairy-free-option"
     ],
     "desc": "Buttery, flaky pastry with hundreds of paper-thin layers. Best eaten warm.",
     "ingredients": [
@@ -983,7 +1006,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "Slow-braised beef in Burgundy wine with pearl onions, mushrooms, and lardons.",
     "ingredients": [
@@ -1029,7 +1053,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 4,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Fragrant hot and sour Thai soup with lemongrass, galangal, and fresh herbs.",
     "ingredients": [
@@ -1075,7 +1100,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 3,
     "tags": [
       "gluten-free",
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option"
     ],
     "desc": "Aromatic slow-cooked rice layered with spiced meat and caramelized onions.",
     "ingredients": [
@@ -1127,7 +1153,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "30 min",
     "spice": 1,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "Light, crispy battered shrimp and vegetables served with dipping sauce.",
     "ingredients": [
@@ -1173,7 +1201,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 3,
     "tags": [
       "dairy-free",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "Stir-fried chicken with peanuts, dried chilies, and Sichuan peppercorns.",
     "ingredients": [
@@ -1225,7 +1254,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "45 min",
     "spice": 2,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option",
+      "dairy-free-option"
     ],
     "desc": "Corn tortillas filled with chicken and cheese, smothered in red chili sauce.",
     "ingredients": [
@@ -1278,7 +1309,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "gluten-free",
-      "vegan-option"
+      "vegan-option",
+      "dairy-free-option"
     ],
     "desc": "Creamy slow-stirred Arborio rice with white wine and Parmesan cheese.",
     "ingredients": [
@@ -1329,7 +1361,6 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "vegan",
       "gluten-free"
     ],
     "desc": "Slow-baked Provençal vegetable stew with tomatoes, zucchini, and eggplant.",
@@ -1369,7 +1400,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "Grilled pork skewers marinated in lemon, oregano, and olive oil.",
     "ingredients": [
@@ -1415,7 +1447,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "Spiced ground lamb on skewers grilled over charcoal with fresh herbs.",
     "ingredients": [
@@ -1461,7 +1494,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Saffron-infused rice with seafood and chicken cooked in a wide flat pan.",
     "ingredients": [
@@ -1507,7 +1541,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "Fresh ahi tuna over rice with avocado, edamame, and sesame dressing.",
     "ingredients": [
@@ -1552,8 +1587,8 @@ window.WORLD_MEALS_DATABASE = [
     "time": "1 hr",
     "spice": 2,
     "tags": [
-      "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Rich Southern Thai curry with potatoes and peanuts in coconut milk.",
     "ingredients": [
@@ -1599,7 +1634,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Slow-braised beef with paprika and vegetables. Hungary's national dish.",
     "ingredients": [
@@ -1645,7 +1681,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "Indonesian fried rice with sweet soy sauce, topped with a fried egg.",
     "ingredients": [
@@ -1738,7 +1775,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Complex chocolate-chili sauce with over 20 ingredients served over turkey.",
     "ingredients": [
@@ -1783,8 +1821,8 @@ window.WORLD_MEALS_DATABASE = [
     "time": "3 hrs",
     "spice": 4,
     "tags": [
-      "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Slow-cooked dry beef curry caramelized in coconut milk and spices.",
     "ingredients": [
@@ -1829,7 +1867,7 @@ window.WORLD_MEALS_DATABASE = [
     "time": "25 min",
     "spice": 2,
     "tags": [
-      "dairy-free",
+      "dairy-free-option",
       "vegan-option",
       "gluten-free"
     ],
@@ -1884,7 +1922,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "vegan-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "dairy-free-option"
     ],
     "desc": "Crispy fries topped with cheese curds and rich beef gravy.",
     "ingredients": [
@@ -1928,7 +1967,8 @@ window.WORLD_MEALS_DATABASE = [
     "time": "20 min",
     "spice": 1,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option"
     ],
     "desc": "Vietnamese baguette with pickled vegetables, pate, and fresh herbs.",
     "ingredients": [
@@ -1974,7 +2014,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 4,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Scotch bonnet marinated chicken grilled over pimento wood. Fiery Caribbean classic.",
     "ingredients": [
@@ -2020,7 +2061,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "Steamed or pan-fried pork and cabbage dumplings with dipping sauce.",
     "ingredients": [
@@ -2065,7 +2107,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "35 min",
     "spice": 1,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option",
+      "dairy-free-option"
     ],
     "desc": "Tender beef strips in creamy mushroom and sour cream sauce over egg noodles.",
     "ingredients": [
@@ -2117,8 +2161,8 @@ window.WORLD_MEALS_DATABASE = [
     "time": "40 min",
     "spice": 3,
     "tags": [
-      "dairy-free",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "Spicy coconut curry noodle soup with shrimp, tofu puffs, and bean sprouts.",
     "ingredients": [
@@ -2164,7 +2208,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "Chicken braised in vinegar, soy sauce, and garlic until deeply caramelized.",
     "ingredients": [
@@ -2208,7 +2253,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "1 hr",
     "spice": 2,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option",
+      "dairy-free-option"
     ],
     "desc": "Spiced minced meat baked with an egg custard topping. South African comfort food.",
     "ingredients": [
@@ -2260,8 +2307,8 @@ window.WORLD_MEALS_DATABASE = [
     "time": "30 min",
     "spice": 4,
     "tags": [
-      "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Vibrant Thai green curry with bamboo shoots and Thai basil in coconut milk.",
     "ingredients": [
@@ -2306,7 +2353,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "30 min",
     "spice": 1,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "Thin veal cutlet breaded and fried until golden, served with lemon.",
     "ingredients": [
@@ -2351,7 +2400,8 @@ window.WORLD_MEALS_DATABASE = [
     "time": "1 hr",
     "spice": 1,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "dairy-free-option"
     ],
     "desc": "Boiled then pan-fried dough pockets filled with potato and cheese.",
     "ingredients": [
@@ -2402,7 +2452,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "Japanese savory pancake with cabbage, pork belly, and okonomiyaki sauce.",
     "ingredients": [
@@ -2453,7 +2504,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 3,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Slow-cooked beef and kidney beans in rich chili sauce. American Southwest classic.",
     "ingredients": [
@@ -2498,7 +2550,8 @@ window.WORLD_MEALS_DATABASE = [
     "time": "30 min",
     "spice": 1,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "dairy-free-option"
     ],
     "desc": "Espresso-soaked ladyfingers layered with mascarpone cream and dusted with cocoa.",
     "ingredients": [
@@ -2544,7 +2597,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "Oversized sushi roll burrito style with fresh salmon, avocado, and pickled ginger.",
     "ingredients": [
@@ -2589,8 +2643,8 @@ window.WORLD_MEALS_DATABASE = [
     "time": "40 min",
     "spice": 2,
     "tags": [
-      "dairy-free",
-      "vegan",
+      "dairy-free-option",
+      "vegan-option",
       "gluten-free"
     ],
     "desc": "Slow-simmered spiced lentils tempered with cumin, garlic, and chili in ghee.",
@@ -2636,7 +2690,8 @@ window.WORLD_MEALS_DATABASE = [
     "time": "1 hr",
     "spice": 1,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "dairy-free-option"
     ],
     "desc": "Layers of crispy phyllo pastry filled with pistachios and soaked in honey syrup.",
     "ingredients": [
@@ -2682,7 +2737,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 4,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Flame-grilled chicken marinated in African bird's eye chili and lemon.",
     "ingredients": [
@@ -2728,7 +2784,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Pounded cassava dumplings served with rich melon seed and leafy green soup.",
     "ingredients": [
@@ -2773,7 +2830,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "20 min",
     "spice": 1,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option",
+      "dairy-free-option"
     ],
     "desc": "Roman pasta with only Pecorino Romano and black pepper. Simplicity perfected.",
     "ingredients": [
@@ -2817,7 +2876,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "gluten-free",
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option"
     ],
     "desc": "Tandoor-charred chicken in a silky tomato cream sauce. Britain's adopted national dish.",
     "ingredients": [
@@ -2870,7 +2930,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "Bulgur wheat shells stuffed with spiced minced lamb and pine nuts.",
     "ingredients": [
@@ -2916,7 +2977,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Grilled ribeye steak topped with vibrant parsley and garlic chimichurri sauce.",
     "ingredients": [
@@ -2962,7 +3024,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "Wide rice noodles stir-fried with Chinese broccoli, egg, and sweet soy sauce.",
     "ingredients": [
@@ -3048,7 +3111,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "Thinly sliced marinated beef grilled at the table with sesame and pear.",
     "ingredients": [
@@ -3093,7 +3157,8 @@ window.WORLD_MEALS_DATABASE = [
     "time": "1 hr",
     "spice": 1,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "dairy-free-option"
     ],
     "desc": "Crispy phyllo pastry filled with spinach, feta, and fresh dill.",
     "ingredients": [
@@ -3139,7 +3204,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 3,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "West African spiced beef skewers coated in ground peanuts and spices.",
     "ingredients": [
@@ -3185,7 +3251,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 3,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Minced meat salad with toasted rice powder, lime, and fresh herbs.",
     "ingredients": [
@@ -3277,8 +3344,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "vegan",
-      "gluten-free"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "Thick blended açaí topped with granola, fresh fruit, and honey.",
     "ingredients": [
@@ -3323,7 +3390,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "45 min",
     "spice": 1,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "Rich miso broth loaded with pork belly, soft-boiled egg, and bamboo shoots.",
     "ingredients": [
@@ -3615,7 +3684,6 @@ window.WORLD_MEALS_DATABASE = [
     "time": "15 min",
     "spice": 1,
     "tags": [
-      "vegan",
       "dairy-free",
       "gluten-free-option"
     ],
@@ -4140,8 +4208,7 @@ window.WORLD_MEALS_DATABASE = [
     "time": "25 min",
     "spice": 1,
     "tags": [
-      "dairy-free-option",
-      "gluten-free"
+      "dairy-free-option"
     ],
     "desc": "A beloved dish from Uganda, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
     "ingredients": [
@@ -4458,7 +4525,6 @@ window.WORLD_MEALS_DATABASE = [
     "time": "2 hrs",
     "spice": 2,
     "tags": [
-      "vegan",
       "dairy-free",
       "gluten-free-option"
     ],
@@ -4700,7 +4766,6 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "gluten-free",
       "vegan-option"
     ],
     "desc": "A beloved dish from Morocco, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
@@ -5124,7 +5189,6 @@ window.WORLD_MEALS_DATABASE = [
     "time": "30 min",
     "spice": 2,
     "tags": [
-      "vegan",
       "dairy-free",
       "gluten-free"
     ],
@@ -6081,8 +6145,7 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "vegan",
-      "dairy-free",
-      "gluten-free"
+      "dairy-free"
     ],
     "desc": "A beloved dish from Lebanon, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
     "ingredients": [
@@ -6659,7 +6722,6 @@ window.WORLD_MEALS_DATABASE = [
     "time": "40 min",
     "spice": 2,
     "tags": [
-      "dairy-free",
       "gluten-free-option"
     ],
     "desc": "A beloved dish from UAE, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
@@ -6947,8 +7009,7 @@ window.WORLD_MEALS_DATABASE = [
     "time": "20 min",
     "spice": 4,
     "tags": [
-      "dairy-free",
-      "gluten-free"
+      "dairy-free"
     ],
     "desc": "A beloved dish from Syria, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
     "ingredients": [
@@ -7126,7 +7187,6 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free",
       "vegan-option"
     ],
     "desc": "A beloved dish from Indonesia, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
@@ -7464,7 +7524,6 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free",
       "vegan-option"
     ],
     "desc": "A beloved dish from Singapore, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
@@ -7564,7 +7623,6 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free",
       "vegan-option"
     ],
     "desc": "A beloved dish from Singapore, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
@@ -7611,7 +7669,6 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "gluten-free",
       "vegan-option"
     ],
     "desc": "A beloved dish from Philippines, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
@@ -8074,8 +8131,7 @@ window.WORLD_MEALS_DATABASE = [
     "time": "30 min",
     "spice": 2,
     "tags": [
-      "dairy-free",
-      "gluten-free"
+      "dairy-free"
     ],
     "desc": "A beloved dish from China, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
     "ingredients": [
@@ -8214,7 +8270,6 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "gluten-free",
       "vegan-option"
     ],
     "desc": "A beloved dish from China, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
@@ -8322,7 +8377,6 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 3,
     "tags": [
       "dairy-free",
-      "gluten-free",
       "vegan-option"
     ],
     "desc": "A beloved dish from Japan, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
@@ -8368,8 +8422,7 @@ window.WORLD_MEALS_DATABASE = [
     "time": "2 hrs",
     "spice": 2,
     "tags": [
-      "dairy-free",
-      "gluten-free"
+      "dairy-free"
     ],
     "desc": "A beloved dish from Japan, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
     "ingredients": [
@@ -8607,7 +8660,6 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free-option",
-      "gluten-free",
       "vegan-option"
     ],
     "desc": "A beloved dish from South Korea, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
@@ -9274,8 +9326,7 @@ window.WORLD_MEALS_DATABASE = [
     "time": "1.5 hrs",
     "spice": 1,
     "tags": [
-      "dairy-free",
-      "gluten-free"
+      "dairy-free"
     ],
     "desc": "A beloved dish from Nepal, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
     "ingredients": [
@@ -9313,8 +9364,6 @@ window.WORLD_MEALS_DATABASE = [
     "time": "2 hrs",
     "spice": 4,
     "tags": [
-      "vegan",
-      "dairy-free",
       "gluten-free"
     ],
     "desc": "A beloved dish from Nepal, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
@@ -9461,8 +9510,7 @@ window.WORLD_MEALS_DATABASE = [
     "time": "25 min",
     "spice": 3,
     "tags": [
-      "dairy-free-option",
-      "gluten-free"
+      "dairy-free-option"
     ],
     "desc": "A beloved dish from Sri Lanka, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
     "ingredients": [
@@ -10109,7 +10157,7 @@ window.WORLD_MEALS_DATABASE = [
     "time": "40 min",
     "spice": 2,
     "tags": [
-      "vegan",
+      "vegan-option",
       "dairy-free-option",
       "gluten-free-option"
     ],
@@ -10926,7 +10974,6 @@ window.WORLD_MEALS_DATABASE = [
     "time": "20 min",
     "spice": 2,
     "tags": [
-      "vegan",
       "dairy-free",
       "gluten-free"
     ],
@@ -13839,7 +13886,6 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "gluten-free",
       "vegan-option"
     ],
     "desc": "A beloved dish from Canada, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
@@ -15201,7 +15247,6 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free",
       "vegan-option"
     ],
     "desc": "A beloved dish from Ecuador, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
@@ -15302,7 +15347,6 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free",
       "vegan-option"
     ],
     "desc": "A beloved dish from Peru, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
@@ -17098,7 +17142,6 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free-option",
-      "gluten-free",
       "vegan-option"
     ],
     "desc": "A beloved dish from Indonesia, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
@@ -17152,7 +17195,6 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free",
       "vegan-option"
     ],
     "desc": "A beloved dish from Indonesia, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
@@ -17481,8 +17523,7 @@ window.WORLD_MEALS_DATABASE = [
     "time": "30 min",
     "spice": 2,
     "tags": [
-      "dairy-free",
-      "gluten-free"
+      "dairy-free"
     ],
     "desc": "A beloved dish from Philippines, bringing regional flavors, comforting ingredients, and global cooking inspiration to your table.",
     "ingredients": [
@@ -17888,7 +17929,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 11,
     "fiber": 4,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Japan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -17939,7 +17982,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from China, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -17990,7 +18034,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from China, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -18041,7 +18086,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from China, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -18092,7 +18138,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from China, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -18142,7 +18189,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 29,
     "fiber": 7,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from China, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -18193,7 +18241,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from South Korea, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -18244,7 +18293,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from South Korea, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -18295,7 +18345,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from South Korea, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -18347,7 +18398,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from South Korea, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -18398,7 +18450,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Thailand, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -18449,7 +18502,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Thailand, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -18501,7 +18555,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Thailand, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -18553,7 +18608,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Thailand, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -18603,7 +18659,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 11,
     "fiber": 6,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Thailand, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -18654,7 +18712,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Vietnam, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -18705,7 +18764,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Vietnam, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -18756,7 +18816,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Vietnam, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -18807,7 +18868,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Vietnam, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -18858,7 +18920,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from India, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -18909,7 +18972,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from India, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -18960,7 +19024,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Pakistan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19011,7 +19076,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Pakistan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19062,7 +19128,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Pakistan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19113,7 +19180,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Pakistan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19164,7 +19232,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Indonesia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19215,7 +19284,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Indonesia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19266,7 +19336,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Indonesia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19317,7 +19388,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Indonesia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19367,7 +19439,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 19,
     "fiber": 6,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Indonesia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19419,7 +19493,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Malaysia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19472,7 +19547,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Malaysia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19524,7 +19600,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Malaysia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19576,7 +19653,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Malaysia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19627,7 +19705,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Philippines, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19678,7 +19757,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Philippines, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19730,7 +19810,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Philippines, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19781,7 +19862,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Singapore, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19832,7 +19914,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Singapore, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19884,7 +19967,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Singapore, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19935,7 +20019,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Singapore, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -19985,7 +20070,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 19,
     "fiber": 9,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Singapore, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -20036,7 +20122,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Singapore, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -20087,7 +20174,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Sri Lanka, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -20138,7 +20226,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Sri Lanka, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -20188,7 +20277,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 11,
     "fiber": 13,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Sri Lanka, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -20240,7 +20330,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Sri Lanka, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -20291,7 +20382,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Sri Lanka, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -20342,7 +20434,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Bangladesh, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -20393,7 +20486,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Bangladesh, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -20444,7 +20538,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Bangladesh, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -20495,7 +20590,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Bangladesh, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -20547,7 +20643,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Bangladesh, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -20598,7 +20695,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Bangladesh, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -20649,7 +20747,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Bangladesh, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -20700,7 +20799,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Bangladesh, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -20751,7 +20851,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Nepal, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -20802,7 +20903,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Nepal, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -20853,7 +20955,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Nepal, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -20904,7 +21007,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Nepal, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -20954,7 +21058,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 19,
     "fiber": 9,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Nepal, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21005,7 +21111,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Nepal, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21055,7 +21162,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 20,
     "fiber": 3,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Cambodia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21107,7 +21216,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Cambodia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21159,7 +21269,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Cambodia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21210,7 +21321,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Cambodia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21261,7 +21373,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Cambodia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21312,7 +21425,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Cambodia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21363,7 +21477,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Cambodia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21414,7 +21529,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Cambodia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21465,7 +21581,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Laos, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21516,7 +21633,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Laos, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21567,7 +21685,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Laos, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21618,7 +21737,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Laos, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21669,7 +21789,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Laos, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21720,7 +21841,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Laos, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21771,7 +21893,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Laos, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21822,7 +21945,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Laos, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21873,7 +21997,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Myanmar, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21925,7 +22050,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Myanmar, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -21976,7 +22102,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Myanmar, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22027,7 +22154,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Myanmar, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22078,7 +22206,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Myanmar, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22129,7 +22258,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Myanmar, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22180,7 +22310,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Mongolia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22231,7 +22362,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Mongolia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22282,7 +22414,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Mongolia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22333,7 +22466,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Mongolia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22384,7 +22518,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Mongolia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22436,7 +22571,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Mongolia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22487,7 +22623,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Mongolia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22538,7 +22675,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Mongolia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22588,7 +22726,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 22,
     "fiber": 6,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Taiwan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22641,7 +22781,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Taiwan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22692,7 +22833,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Taiwan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22743,7 +22885,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Taiwan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22794,7 +22937,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Taiwan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22846,7 +22990,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Taiwan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22898,7 +23043,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Taiwan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22948,7 +23094,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 29,
     "fiber": 6,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Taiwan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -22999,7 +23146,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Uzbekistan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -23050,7 +23198,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Uzbekistan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -23101,7 +23250,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Uzbekistan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -23152,7 +23302,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Uzbekistan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -23203,7 +23354,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Uzbekistan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -23254,7 +23406,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Uzbekistan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -23305,7 +23458,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kazakhstan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -23356,7 +23510,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kazakhstan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -23407,7 +23562,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kazakhstan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -23458,7 +23614,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kazakhstan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -23509,7 +23666,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kazakhstan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -23560,7 +23718,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kazakhstan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -23611,7 +23770,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kazakhstan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -23662,7 +23822,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kyrgyzstan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -23713,7 +23874,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kyrgyzstan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -23764,7 +23926,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kyrgyzstan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -23815,7 +23978,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kyrgyzstan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -23866,7 +24030,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kyrgyzstan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -23917,7 +24082,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kyrgyzstan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -23968,7 +24134,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kyrgyzstan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24019,7 +24186,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kyrgyzstan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24070,7 +24238,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Afghanistan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24122,7 +24291,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Afghanistan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24173,7 +24343,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Afghanistan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24224,7 +24395,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Afghanistan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24275,7 +24447,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Afghanistan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24326,7 +24499,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Afghanistan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24377,7 +24551,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Afghanistan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24428,7 +24603,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Afghanistan, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24479,7 +24655,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Italy, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24530,7 +24707,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Italy, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24581,7 +24759,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Italy, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24632,7 +24811,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Italy, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24683,7 +24863,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from France, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24734,7 +24915,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "vegan-option",
-      "dairy-free-option"
+      "dairy-free-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from France, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24785,7 +24967,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from France, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24835,7 +25018,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 19,
     "fiber": 7,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from France, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24886,7 +25070,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Spain, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24937,7 +25122,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Spain, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -24988,7 +25174,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Spain, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -25039,7 +25226,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Spain, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -25090,7 +25278,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Spain, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -25141,7 +25330,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Spain, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -25192,7 +25382,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Portugal, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -25243,7 +25434,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Portugal, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -25295,7 +25487,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Portugal, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -25346,7 +25539,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Portugal, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -25397,7 +25591,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Portugal, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -25448,7 +25643,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Germany, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -25499,7 +25695,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Germany, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -25550,7 +25747,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Germany, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -25601,7 +25799,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Germany, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -25651,7 +25850,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 20,
     "fiber": 5,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Germany, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -25702,7 +25902,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Germany, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -25753,7 +25954,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Greece, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -25804,7 +26006,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Greece, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -25855,7 +26058,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Greece, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -25906,7 +26110,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 14,
     "tags": [
       "vegan-option",
-      "dairy-free-option"
+      "dairy-free-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Greece, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -25957,7 +26162,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Greece, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26008,7 +26214,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Greece, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26059,7 +26266,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Greece, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26110,7 +26318,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Greece, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26161,7 +26370,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Turkey, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26211,7 +26421,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 17,
     "fiber": 6,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Turkey, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26262,7 +26474,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Turkey, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26313,7 +26526,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Turkey, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26364,7 +26578,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Turkey, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26415,7 +26630,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Poland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26466,7 +26682,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Poland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26517,7 +26734,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Poland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26568,7 +26786,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Poland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26619,7 +26838,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Poland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26670,7 +26890,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Poland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26721,7 +26942,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Poland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26771,7 +26993,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 23,
     "fiber": 7,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Hungary, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26821,7 +27044,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 24,
     "fiber": 5,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Hungary, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26873,7 +27098,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Hungary, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26924,7 +27150,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Hungary, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -26975,7 +27202,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Hungary, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27026,7 +27254,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Hungary, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27077,7 +27306,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Austria, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27128,7 +27358,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Austria, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27179,7 +27410,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Austria, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27230,7 +27462,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Austria, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27281,7 +27514,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Austria, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27332,7 +27566,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Austria, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27383,7 +27618,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Austria, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27434,7 +27670,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Austria, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27485,7 +27722,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Switzerland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27536,7 +27774,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Switzerland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27587,7 +27826,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Switzerland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27638,7 +27878,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Switzerland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27689,7 +27930,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Switzerland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27740,7 +27982,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Belgium, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27791,7 +28034,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Belgium, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27841,7 +28085,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 23,
     "fiber": 6,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Belgium, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27892,7 +28137,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Belgium, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27943,7 +28189,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Belgium, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -27994,7 +28241,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Belgium, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -28045,7 +28293,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Belgium, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -28096,7 +28345,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Belgium, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -28147,7 +28397,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Netherlands, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -28198,7 +28449,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Netherlands, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -28249,7 +28501,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Netherlands, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -28300,7 +28553,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Netherlands, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -28351,7 +28605,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Netherlands, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -28402,7 +28657,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Netherlands, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -28453,7 +28709,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Netherlands, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -28503,7 +28760,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 22,
     "fiber": 5,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Netherlands, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -28554,7 +28812,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Ireland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -28605,7 +28864,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Ireland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -28657,7 +28917,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Ireland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -28708,7 +28969,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Ireland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -28759,7 +29021,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Ireland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -28809,7 +29072,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 24,
     "fiber": 4,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Ireland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -28860,7 +29124,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Sweden, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -28911,7 +29176,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Sweden, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -28962,7 +29228,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Sweden, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29013,7 +29280,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Sweden, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29063,7 +29331,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 9,
     "fiber": 5,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Sweden, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29114,7 +29384,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Norway, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29165,7 +29436,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Norway, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29216,7 +29488,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Norway, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29266,7 +29539,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 24,
     "fiber": 5,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Norway, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29318,7 +29593,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Norway, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29369,7 +29645,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Norway, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29420,7 +29697,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Norway, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29471,7 +29749,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Finland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29522,7 +29801,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Finland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29573,7 +29853,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Finland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29624,7 +29905,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Finland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29675,7 +29957,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Finland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29726,7 +30009,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Finland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29777,7 +30061,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Denmark, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29828,7 +30113,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Denmark, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29879,7 +30165,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Denmark, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29929,7 +30216,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 29,
     "fiber": 8,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Denmark, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -29980,7 +30268,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Denmark, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -30031,7 +30320,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Denmark, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -30081,7 +30371,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 37,
     "fiber": 9,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Denmark, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -30133,7 +30424,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Croatia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -30184,7 +30476,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Croatia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -30235,7 +30528,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Croatia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -30287,7 +30581,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Croatia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -30338,7 +30633,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Croatia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -30389,7 +30685,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Croatia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -30440,7 +30737,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Croatia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -30491,7 +30789,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Croatia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -30542,7 +30841,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Serbia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -30593,7 +30893,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Serbia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -30644,7 +30945,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Serbia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -30695,7 +30997,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Serbia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -30746,7 +31049,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Serbia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -30797,7 +31101,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Serbia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -30848,7 +31153,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Serbia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -30899,7 +31205,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Serbia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -30950,7 +31257,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Romania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31001,7 +31309,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Romania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31052,7 +31361,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Romania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31103,7 +31413,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Romania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31154,7 +31465,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Romania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31205,7 +31517,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Romania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31256,7 +31569,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 12,
     "tags": [
       "vegan-option",
-      "dairy-free-option"
+      "dairy-free-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Bulgaria, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31307,7 +31621,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Bulgaria, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31358,7 +31673,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Bulgaria, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31409,7 +31725,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Bulgaria, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31460,7 +31777,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Bulgaria, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31511,7 +31829,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Bulgaria, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31562,7 +31881,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Georgia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31613,7 +31933,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Georgia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31664,7 +31985,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Georgia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31715,7 +32037,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Georgia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31766,7 +32089,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Georgia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31817,7 +32141,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Armenia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31868,7 +32193,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Armenia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31919,7 +32245,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Armenia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -31970,7 +32297,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Armenia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32021,7 +32349,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Armenia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32072,7 +32401,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Armenia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32122,7 +32452,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 15,
     "fiber": 6,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Armenia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32173,7 +32505,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Armenia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32224,7 +32557,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Czech Republic, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32275,7 +32609,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Czech Republic, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32326,7 +32661,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Czech Republic, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32377,7 +32713,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Czech Republic, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32428,7 +32765,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Czech Republic, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32479,7 +32817,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Czech Republic, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32530,7 +32869,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Czech Republic, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32581,7 +32921,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Czech Republic, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32632,7 +32973,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Slovakia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32683,7 +33025,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Slovakia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32734,7 +33077,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Slovakia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32785,7 +33129,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Slovakia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32836,7 +33181,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Slovakia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32887,7 +33233,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Slovakia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32938,7 +33285,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Slovakia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -32989,7 +33337,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Slovakia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -33040,7 +33389,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Slovenia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -33091,7 +33441,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Slovenia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -33142,7 +33493,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Slovenia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -33194,7 +33546,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Slovenia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -33245,7 +33598,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Slovenia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -33296,7 +33650,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Slovenia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -33347,7 +33702,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Slovenia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -33398,7 +33754,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Slovenia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -33449,7 +33806,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Albania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -33500,7 +33858,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Albania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -33551,7 +33910,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Albania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -33602,7 +33962,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Albania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -33653,7 +34014,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Albania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -33704,7 +34066,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Albania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -33755,7 +34118,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Albania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -33806,7 +34170,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Albania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -33857,7 +34222,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Lithuania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -33908,7 +34274,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Lithuania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -33959,7 +34326,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Lithuania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -34010,7 +34378,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Lithuania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -34061,7 +34430,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Lithuania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -34111,7 +34481,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 19,
     "fiber": 9,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Lithuania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -34162,7 +34534,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Lithuania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -34213,7 +34586,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Lithuania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -34264,7 +34638,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Latvia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -34315,7 +34690,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Latvia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -34366,7 +34742,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Latvia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -34416,7 +34793,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 15,
     "fiber": 4,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Latvia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -34467,7 +34846,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Latvia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -34569,7 +34949,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Latvia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -34619,7 +35000,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 9,
     "fiber": 8,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Latvia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -34670,7 +35052,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Estonia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -34721,7 +35104,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Estonia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -34771,7 +35155,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 24,
     "fiber": 9,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Estonia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -34822,7 +35207,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Estonia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -34873,7 +35259,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Estonia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -34924,7 +35311,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Estonia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -34974,7 +35362,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 25,
     "fiber": 6,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Estonia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35025,7 +35414,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Estonia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35076,7 +35466,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Iceland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35126,7 +35517,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 17,
     "fiber": 3,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Iceland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35178,7 +35571,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Iceland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35228,7 +35622,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 26,
     "fiber": 8,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Iceland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35280,7 +35676,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Iceland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35331,7 +35728,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Iceland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35382,7 +35780,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Iceland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35433,7 +35832,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Iceland, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35484,7 +35884,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Malta, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35535,7 +35936,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Malta, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35586,7 +35988,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Malta, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35637,7 +36040,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Malta, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35688,7 +36092,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Malta, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35739,7 +36144,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Malta, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35790,7 +36196,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Malta, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35841,7 +36248,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Malta, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35892,7 +36300,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Cyprus, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35943,7 +36352,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Cyprus, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -35994,7 +36404,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Cyprus, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -36045,7 +36456,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Cyprus, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -36096,7 +36508,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Cyprus, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -36146,7 +36559,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 12,
     "fiber": 9,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Cyprus, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -36197,7 +36612,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Cyprus, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -36248,7 +36664,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Cyprus, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -36298,7 +36715,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 17,
     "fiber": 8,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Nigeria, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -36348,7 +36767,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 9,
     "fiber": 7,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Nigeria, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -36399,7 +36820,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Nigeria, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -36449,7 +36871,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 18,
     "fiber": 9,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Ghana, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -36500,7 +36924,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Ghana, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -36551,7 +36976,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Ghana, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -36601,7 +37027,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 9,
     "fiber": 9,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Ghana, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -36652,7 +37080,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Senegal, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -36703,7 +37132,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Senegal, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -36754,7 +37184,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Senegal, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -36805,7 +37236,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Senegal, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -36856,7 +37288,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Senegal, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -36907,7 +37340,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Morocco, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -36958,7 +37392,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Morocco, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -37009,7 +37444,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Morocco, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -37060,7 +37496,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Morocco, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -37111,7 +37548,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Morocco, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -37162,7 +37600,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Morocco, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -37213,7 +37652,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Ethiopia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -37264,7 +37704,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Ethiopia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -37315,7 +37756,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Ethiopia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -37366,7 +37808,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Ethiopia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -37417,7 +37860,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Ethiopia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -37468,7 +37912,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Ethiopia, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -37519,7 +37964,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from South Africa, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -37569,7 +38015,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 19,
     "fiber": 7,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from South Africa, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -37620,7 +38067,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from South Africa, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -37671,7 +38119,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from South Africa, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -37775,7 +38224,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kenya, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -37826,7 +38276,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kenya, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -37877,7 +38328,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kenya, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -37928,7 +38380,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kenya, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -37979,7 +38432,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Kenya, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -38030,7 +38484,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Tanzania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -38081,7 +38536,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Tanzania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -38132,7 +38588,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Tanzania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -38182,7 +38639,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 19,
     "fiber": 8,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A beloved dish from Tanzania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -38233,7 +38692,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Tanzania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -38284,7 +38744,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Tanzania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -38335,7 +38796,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Tanzania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -38386,7 +38848,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Tanzania, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -38437,7 +38900,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Uganda, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -38488,7 +38952,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Uganda, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -38539,7 +39004,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Uganda, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -38590,7 +39056,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Uganda, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -38641,7 +39108,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free-option",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A beloved dish from Uganda, bringing local ingredients, comforting flavor, and cultural tradition to the table.",
     "ingredients": [
@@ -38744,7 +39212,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 17,
     "fiber": 7,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Albania, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -38797,7 +39267,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 10,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Albania, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -38850,7 +39321,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 11,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Algeria, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -38903,7 +39375,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Algeria, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -38956,7 +39429,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 11,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Algeria, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -39008,7 +39482,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 17,
     "fiber": 3,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Algeria, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -39060,7 +39536,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 21,
     "fiber": 4,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Angola, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -39113,7 +39591,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Angola, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -39166,7 +39645,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Angola, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -39218,7 +39698,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 7,
     "fiber": 4,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Armenia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -39270,7 +39751,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 21,
     "fiber": 11,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Armenia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -39322,7 +39804,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 9,
     "fiber": 10,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Armenia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -39374,7 +39857,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 18,
     "fiber": 3,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Australia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -39426,7 +39911,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 29,
     "fiber": 11,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Australia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -39479,7 +39965,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Australia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -39531,7 +40018,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 11,
     "fiber": 9,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Azerbaijan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -39583,7 +40071,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 24,
     "fiber": 9,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Azerbaijan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -39636,7 +40125,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Azerbaijan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -39688,7 +40178,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 22,
     "fiber": 4,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Azerbaijan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -39741,7 +40232,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 11,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Bahamas, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -39793,7 +40285,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 24,
     "fiber": 4,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Bahamas, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -39846,7 +40339,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Bahamas, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -39898,7 +40392,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 21,
     "fiber": 5,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Bahamas, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -39950,7 +40445,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 15,
     "fiber": 8,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Bangladesh, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40002,7 +40498,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 19,
     "fiber": 5,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Barbados, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40054,7 +40551,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 26,
     "fiber": 3,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Barbados, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40107,7 +40605,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Barbados, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40159,7 +40658,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 27,
     "fiber": 3,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Barbados, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40211,7 +40712,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 19,
     "fiber": 6,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Belgium, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40263,7 +40766,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 21,
     "fiber": 10,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Belize, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40315,7 +40819,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 12,
     "fiber": 12,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Belize, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40368,7 +40873,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Belize, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40421,7 +40927,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 12,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Belize, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40473,7 +40980,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 16,
     "fiber": 5,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Benin, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40525,7 +41033,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 29,
     "fiber": 8,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Benin, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40577,7 +41086,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 7,
     "fiber": 9,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Benin, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40629,7 +41139,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 18,
     "fiber": 5,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Benin, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40681,7 +41193,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 22,
     "fiber": 8,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Bhutan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40734,7 +41247,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 12,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Bhutan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40786,7 +41300,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 15,
     "fiber": 5,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Bhutan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40839,7 +41355,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 12,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Bolivia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40891,7 +41408,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 15,
     "fiber": 10,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Bolivia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40943,7 +41461,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 9,
     "fiber": 9,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Bosnia and Herzegovina, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -40995,7 +41514,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 10,
     "fiber": 10,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Bosnia and Herzegovina, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -41047,7 +41567,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 27,
     "fiber": 8,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Bosnia and Herzegovina, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -41100,7 +41621,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Bosnia and Herzegovina, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -41153,7 +41675,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 11,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Botswana, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -41205,7 +41728,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 10,
     "fiber": 9,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Botswana, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -41258,7 +41782,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Botswana, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -41310,7 +41835,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 27,
     "fiber": 3,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Botswana, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -41362,7 +41888,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 8,
     "fiber": 10,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Brazil, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -41415,7 +41943,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Brazil, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -41468,7 +41997,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Brazil, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -41520,7 +42050,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 20,
     "fiber": 8,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Burkina Faso, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -41572,7 +42103,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 30,
     "fiber": 7,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Burkina Faso, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -41624,7 +42156,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 10,
     "fiber": 9,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Burkina Faso, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -41676,7 +42210,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 23,
     "fiber": 4,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Burkina Faso, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -41728,7 +42263,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 13,
     "fiber": 7,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Cambodia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -41780,7 +42316,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 23,
     "fiber": 7,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Cambodia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -41832,7 +42370,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 24,
     "fiber": 7,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Cameroon, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -41884,7 +42423,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 29,
     "fiber": 9,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Cameroon, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -41936,7 +42477,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 28,
     "fiber": 6,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Cameroon, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -41988,7 +42530,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 19,
     "fiber": 6,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Canada, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -42040,7 +42584,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 16,
     "fiber": 7,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Cape Verde, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -42093,7 +42638,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 10,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Cape Verde, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -42145,7 +42691,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 19,
     "fiber": 6,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Cape Verde, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -42198,7 +42745,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 10,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Cape Verde, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -42251,7 +42799,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 12,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Chile, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -42304,7 +42853,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Chile, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -42356,7 +42906,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 7,
     "fiber": 3,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Colombia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -42408,7 +42960,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 25,
     "fiber": 10,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Congo, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -42461,7 +43014,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 10,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Congo, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -42513,7 +43067,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 22,
     "fiber": 3,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Congo, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -42566,7 +43121,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Costa Rica, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -42619,7 +43175,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Costa Rica, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -42672,7 +43229,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Croatia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -42724,7 +43282,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 13,
     "fiber": 6,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Cuba, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -42776,7 +43335,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 21,
     "fiber": 3,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Cuba, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -42828,7 +43388,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 23,
     "fiber": 10,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Cyprus, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -42880,7 +43442,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 24,
     "fiber": 9,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Cyprus, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -42932,7 +43495,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 17,
     "fiber": 8,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Cyprus, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -42984,7 +43548,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 13,
     "fiber": 6,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Czech Republic, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -43036,7 +43601,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 11,
     "fiber": 4,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Czech Republic, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -43089,7 +43655,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Czech Republic, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -43141,7 +43708,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 18,
     "fiber": 6,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Denmark, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -43193,7 +43762,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 8,
     "fiber": 5,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Denmark, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -43245,7 +43816,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 9,
     "fiber": 7,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Dominican Republic, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -43298,7 +43871,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Dominican Republic, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -43350,7 +43924,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 8,
     "fiber": 7,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Dominican Republic, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -43403,7 +43979,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Dominican Republic, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -43455,7 +44032,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 10,
     "fiber": 7,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Ecuador, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -43507,7 +44085,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 27,
     "fiber": 3,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Ecuador, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -43559,7 +44138,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 21,
     "fiber": 6,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Egypt, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -43612,7 +44192,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 12,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Egypt, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -43664,7 +44245,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 17,
     "fiber": 5,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from El Salvador, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -43716,7 +44299,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 24,
     "fiber": 4,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from El Salvador, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -43768,7 +44352,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 8,
     "fiber": 8,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from El Salvador, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -43820,7 +44405,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 27,
     "fiber": 12,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Estonia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -43873,7 +44459,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Guatemala, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -43925,7 +44512,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 25,
     "fiber": 3,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Guatemala, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -43977,7 +44565,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 16,
     "fiber": 3,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Guatemala, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -44029,7 +44619,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 18,
     "fiber": 5,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Guatemala, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -44081,7 +44673,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 18,
     "fiber": 7,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Guyana, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -44134,7 +44727,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 12,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Guyana, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -44186,7 +44780,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 9,
     "fiber": 7,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Guyana, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -44238,7 +44834,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 18,
     "fiber": 7,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Guyana, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -44290,7 +44887,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 26,
     "fiber": 8,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Haiti, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -44343,7 +44942,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Haiti, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -44395,7 +44995,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 13,
     "fiber": 4,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Haiti, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -44447,7 +45048,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 16,
     "fiber": 9,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Honduras, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -44499,7 +45102,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 8,
     "fiber": 9,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Honduras, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -44551,7 +45155,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 14,
     "fiber": 5,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Honduras, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -44603,7 +45209,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 21,
     "fiber": 4,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Honduras, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -44655,7 +45262,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 20,
     "fiber": 10,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Iceland, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -44707,7 +45316,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 11,
     "fiber": 9,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Iceland, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -44760,7 +45370,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Iran, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -44812,7 +45423,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 10,
     "fiber": 5,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Iraq, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -44864,7 +45477,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 17,
     "fiber": 11,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Iraq, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -44916,7 +45530,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 6,
     "fiber": 10,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Iraq, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -44969,7 +45584,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Jordan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -45022,7 +45638,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Jordan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -45075,7 +45692,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Jordan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -45127,7 +45745,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 28,
     "fiber": 10,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Kazakhstan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -45180,7 +45799,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 11,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Kazakhstan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -45232,7 +45852,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 27,
     "fiber": 8,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Kenya, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -45284,7 +45905,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 8,
     "fiber": 9,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Kyrgyzstan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -45336,7 +45958,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 30,
     "fiber": 10,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Kyrgyzstan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -45388,7 +46011,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 20,
     "fiber": 7,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Latvia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -45440,7 +46065,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 21,
     "fiber": 9,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Latvia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -45492,7 +46119,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 23,
     "fiber": 3,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Latvia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -45544,7 +46172,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 17,
     "fiber": 12,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Lithuania, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -45597,7 +46227,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Madagascar, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -45649,7 +46280,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 27,
     "fiber": 10,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Madagascar, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -45701,7 +46333,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 27,
     "fiber": 4,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Malawi, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -45753,7 +46386,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 8,
     "fiber": 9,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Malawi, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -45806,7 +46441,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Malawi, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -45858,7 +46494,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 10,
     "fiber": 5,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Malawi, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -45911,7 +46549,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Mali, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -45963,7 +46602,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 24,
     "fiber": 4,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Mali, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -46015,7 +46656,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 7,
     "fiber": 11,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Mali, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -46067,7 +46709,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 12,
     "fiber": 10,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Mali, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -46119,7 +46763,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 6,
     "fiber": 9,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Mauritius, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -46171,7 +46816,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 16,
     "fiber": 9,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Mauritius, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -46223,7 +46869,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 11,
     "fiber": 5,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Mauritius, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -46275,7 +46923,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 6,
     "fiber": 5,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Moldova, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -46327,7 +46976,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 30,
     "fiber": 3,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Moldova, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -46380,7 +47031,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 11,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Moldova, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -46432,7 +47084,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 24,
     "fiber": 10,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Moldova, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -46485,7 +47138,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 5,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Mongolia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -46538,7 +47192,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Namibia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -46590,7 +47245,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 20,
     "fiber": 9,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Namibia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -46642,7 +47298,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 24,
     "fiber": 10,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Namibia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -46694,7 +47352,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 13,
     "fiber": 7,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Namibia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -46746,7 +47406,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 7,
     "fiber": 7,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from New Zealand, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -46798,7 +47459,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 20,
     "fiber": 3,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from New Zealand, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -46850,7 +47512,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 7,
     "fiber": 11,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Nicaragua, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -46902,7 +47565,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 19,
     "fiber": 10,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Nicaragua, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -46954,7 +47618,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 22,
     "fiber": 12,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Nicaragua, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -47007,7 +47673,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Nicaragua, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -47059,7 +47726,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 19,
     "fiber": 3,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Niger, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -47111,7 +47779,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 6,
     "fiber": 9,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Niger, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -47163,7 +47833,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 7,
     "fiber": 9,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Niger, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -47215,7 +47886,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 26,
     "fiber": 10,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Niger, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -47267,7 +47940,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 28,
     "fiber": 3,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Norway, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -47320,7 +47994,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Oman, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -47373,7 +48048,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Oman, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -47426,7 +48102,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Oman, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -47478,7 +48155,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 21,
     "fiber": 8,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Oman, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -47531,7 +48209,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 10,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Panama, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -47584,7 +48263,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 12,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Panama, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -47636,7 +48316,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 19,
     "fiber": 7,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Panama, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -47688,7 +48369,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 20,
     "fiber": 4,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Panama, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -47741,7 +48423,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 11,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Paraguay, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -47794,7 +48477,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 12,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Paraguay, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -47847,7 +48531,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Paraguay, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -47899,7 +48584,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 26,
     "fiber": 6,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Qatar, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -47951,7 +48637,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 10,
     "fiber": 3,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Qatar, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48004,7 +48692,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 8,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Qatar, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48056,7 +48745,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 20,
     "fiber": 8,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Rwanda, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48108,7 +48799,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 19,
     "fiber": 6,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Rwanda, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48160,7 +48852,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 15,
     "fiber": 9,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Rwanda, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48212,7 +48905,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 8,
     "fiber": 4,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Rwanda, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48265,7 +48959,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 6,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Saudi Arabia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48318,7 +49013,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 11,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Saudi Arabia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48370,7 +49066,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 24,
     "fiber": 3,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Saudi Arabia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48422,7 +49120,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 12,
     "fiber": 5,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Serbia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48474,7 +49173,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 11,
     "fiber": 8,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Sierra Leone, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48526,7 +49226,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 13,
     "fiber": 10,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Sierra Leone, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48579,7 +49281,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 9,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Sierra Leone, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48632,7 +49335,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 12,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Sierra Leone, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48684,7 +49388,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 9,
     "fiber": 4,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Singapore, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48736,7 +49441,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 17,
     "fiber": 11,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Slovakia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48788,7 +49494,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 25,
     "fiber": 4,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Slovenia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48840,7 +49547,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 30,
     "fiber": 11,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Slovenia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48892,7 +49600,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 18,
     "fiber": 10,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Somalia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48944,7 +49653,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 20,
     "fiber": 7,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Somalia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -48996,7 +49706,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 30,
     "fiber": 4,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Somalia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -49048,7 +49759,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 20,
     "fiber": 4,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Sri Lanka, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -49101,7 +49814,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 3,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Sudan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -49154,7 +49868,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Sudan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -49206,7 +49921,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 23,
     "fiber": 12,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Sudan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -49258,7 +49974,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 28,
     "fiber": 10,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Sudan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -49310,7 +50028,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 14,
     "fiber": 4,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Sweden, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -49362,7 +50081,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 17,
     "fiber": 5,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Syria, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -49414,7 +50134,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 23,
     "fiber": 6,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Syria, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -49466,7 +50187,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 23,
     "fiber": 11,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Syria, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -49519,7 +50241,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 7,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Taiwan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -49571,7 +50294,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 22,
     "fiber": 6,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Taiwan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -49623,7 +50347,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 25,
     "fiber": 4,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Tajikistan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -49676,7 +50401,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Tajikistan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -49728,7 +50454,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 22,
     "fiber": 10,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Tajikistan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -49780,7 +50508,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 19,
     "fiber": 6,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Tajikistan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -49832,7 +50561,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 19,
     "fiber": 3,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Tanzania, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -49884,7 +50614,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 30,
     "fiber": 12,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Trinidad and Tobago, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -49936,7 +50667,9 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 17,
     "fiber": 11,
     "tags": [
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Trinidad and Tobago, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -49988,7 +50721,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 26,
     "fiber": 4,
     "tags": [
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Tunisia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -50041,7 +50775,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Tunisia, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -50093,7 +50828,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 20,
     "fiber": 8,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Turkmenistan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -50146,7 +50882,8 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 4,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A regional favorite from Turkmenistan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -50198,7 +50935,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 22,
     "fiber": 7,
     "tags": [
-      "vegan"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Turkmenistan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -50250,7 +50988,8 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 6,
     "fiber": 9,
     "tags": [
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A regional favorite from Turkmenistan, built for WorldMeals with budget, nutrition, and global flavor discovery in mind.",
     "ingredients": [
@@ -50299,7 +51038,7 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "vegan",
+      "vegan-option",
       "gluten-free"
     ],
     "desc": "Fermented cassava couscous served with grilled fish and fresh vegetables. The most beloved side dish in Côte d'Ivoire.",
@@ -50342,7 +51081,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Slow-steamed chicken with vegetables in a sealed pot. A traditional Ivorian celebration dish.",
     "ingredients": [
@@ -50384,7 +51124,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Rich palm nut sauce with smoked fish and meat. A deeply aromatic West African classic.",
     "ingredients": [
@@ -50426,7 +51167,7 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "vegan",
+      "vegan-option",
       "gluten-free"
     ],
     "desc": "Pounded plantain and cassava dough served alongside rich soups and stews.",
@@ -50459,7 +51200,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Attiéké served with fried tuna, raw onions, and chili. Abidjan's most popular street food.",
     "ingredients": [
@@ -50501,7 +51243,7 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "vegan",
+      "vegan-option",
       "gluten-free"
     ],
     "desc": "Deep fried ripe plantains served with chili sauce and fried fish. A beloved Ivorian snack.",
@@ -50542,7 +51284,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Okra soup with smoked fish and leafy greens. A staple of southern Ivory Coast.",
     "ingredients": [
@@ -50584,7 +51327,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "One pot rice cooked in tomato sauce with meat and vegetables. Ivorian comfort food.",
     "ingredients": [
@@ -50626,7 +51370,7 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "vegan",
+      "vegan-option",
       "gluten-free"
     ],
     "desc": "Steamed cassava cakes wrapped in leaves. A traditional Ivorian breakfast staple.",
@@ -50659,7 +51403,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Whole fish grilled over charcoal with spiced tomato sauce and attiéké. Street food perfection.",
     "ingredients": [
@@ -50741,7 +51486,9 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "vegetarian",
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "A popular Israeli pita sandwich filled with fried eggplant, hard-boiled egg, Israeli salad, tahini, and amba sauce.",
     "ingredients": [
@@ -50787,7 +51534,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 3,
     "tags": [
       "dairy-free",
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "A Jerusalem street-food specialty of spiced grilled chicken, onions, and warm spices, usually served in pita or on a plate.",
     "ingredients": [
@@ -50833,7 +51581,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "vegetarian",
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option"
     ],
     "desc": "Slow-baked Yemenite Jewish pastry popular in Israel, served with grated tomato, zhug, and hard-boiled egg.",
     "ingredients": [
@@ -50879,7 +51628,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "vegetarian",
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option"
     ],
     "desc": "Flaky Yemenite-style fried flatbread popular in Israel, served with grated tomato, hard-boiled egg, and spicy zhug.",
     "ingredients": [
@@ -50925,7 +51675,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "vegan-option"
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "Toasted pasta pearls often called Israeli couscous, cooked like rice and served as a comforting side dish.",
     "ingredients": [
@@ -50963,7 +51714,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "45 min",
     "spice": 1,
     "tags": [
-      "vegetarian"
+      "vegetarian",
+      "vegan-option",
+      "dairy-free-option"
     ],
     "desc": "Flaky savory pastries filled with cheese, potato, spinach, or mushrooms, commonly enjoyed as a snack or breakfast.",
     "ingredients": [
@@ -51009,7 +51762,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "vegetarian",
-      "dairy-free-option"
+      "dairy-free-option",
+      "vegan-option"
     ],
     "desc": "A soft jelly-filled doughnut traditionally eaten during Hanukkah, dusted with powdered sugar.",
     "ingredients": [
@@ -51056,7 +51810,7 @@ window.WORLD_MEALS_DATABASE = [
     "tags": [
       "dairy-free",
       "vegan",
-      "gluten-free"
+      "gluten-free-option"
     ],
     "desc": "Creamy chickpea and tahini dip served with olive oil, paprika, herbs, and warm pita or vegetables.",
     "ingredients": [
@@ -51135,7 +51889,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Slow-roasted Puerto Rican pork marinated with garlic, oregano, citrus, and adobo until tender with crisp skin.",
     "ingredients": [
@@ -51174,7 +51929,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Traditional Puerto Rican holiday parcels made with green banana masa, savory filling, and banana leaves.",
     "ingredients": [
@@ -51213,7 +51969,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Crispy Puerto Rican fritters made from green banana or yautía masa and filled with seasoned meat.",
     "ingredients": [
@@ -51251,7 +52008,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "35 min",
     "spice": 1,
     "tags": [
-      "dairy-free"
+      "dairy-free",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "Thin crispy Puerto Rican salt cod fritters served hot as a beachside snack or street food favorite.",
     "ingredients": [
@@ -51297,7 +52056,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "A comforting Puerto Rican chicken and rice stew flavored with sofrito, olives, herbs, and broth.",
     "ingredients": [
@@ -51335,8 +52095,7 @@ window.WORLD_MEALS_DATABASE = [
     "time": "20 min",
     "spice": 1,
     "tags": [
-      "dairy-free",
-      "vegan",
+      "vegan-option",
       "gluten-free"
     ],
     "desc": "Silky Puerto Rican coconut pudding flavored with cinnamon and served chilled until it gently jiggles.",
@@ -51374,9 +52133,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "1 hr",
     "spice": 1,
     "tags": [
-      "dairy-free",
       "vegetarian",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Puerto Rican coconut rice pudding cooked with cinnamon, cloves, ginger, raisins, and coconut milk.",
     "ingredients": [
@@ -51415,7 +52174,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "vegetarian",
-      "gluten-free-option"
+      "gluten-free-option",
+      "dairy-free-option"
     ],
     "desc": "Golden fried Puerto Rican cornmeal sticks, often filled with cheese and served with mayo-ketchup sauce.",
     "ingredients": [
@@ -51454,7 +52214,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "vegetarian",
-      "dairy"
+      "dairy",
+      "dairy-free-option"
     ],
     "desc": "Creamy Puerto Rican cream cheese flan with a smooth custard texture and glossy caramel topping.",
     "ingredients": [
@@ -51492,7 +52253,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "25 min",
     "spice": 2,
     "tags": [
-      "gluten"
+      "gluten",
+      "vegan-option",
+      "gluten-free-option"
     ],
     "desc": "Grilled chorizo sausage served in crusty bread with fresh chimichurri sauce.",
     "ingredients": [
@@ -51535,7 +52298,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "15 min",
     "spice": 1,
     "tags": [
-      "dairy"
+      "dairy",
+      "gluten-free-option",
+      "dairy-free-option"
     ],
     "desc": "Grilled provolone cheese seasoned with oregano, chili flakes, and olive oil.",
     "ingredients": [
@@ -51579,7 +52344,9 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "vegetarian",
-      "dairy"
+      "dairy",
+      "vegan-option",
+      "dairy-free-option"
     ],
     "desc": "Fresh corn mixture wrapped in corn husks and steamed until tender.",
     "ingredients": [
@@ -51656,7 +52423,8 @@ window.WORLD_MEALS_DATABASE = [
     "time": "1 hr",
     "spice": 1,
     "tags": [
-      "dairy"
+      "dairy",
+      "dairy-free-option"
     ],
     "desc": "Thin flank steak topped with tomato sauce, mozzarella, oregano, and olives.",
     "ingredients": [
@@ -51736,7 +52504,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "1 hr",
     "spice": 1,
     "tags": [
-      "dairy"
+      "dairy",
+      "vegan-option",
+      "dairy-free-option"
     ],
     "desc": "Argentine-style shepherd's pie with seasoned beef, mashed potatoes, and baked cheese topping.",
     "ingredients": [
@@ -51780,7 +52550,9 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "gluten",
-      "dairy"
+      "dairy",
+      "gluten-free-option",
+      "dairy-free-option"
     ],
     "desc": "Argentine stuffed pizza filled with mozzarella and topped with sweet onions.",
     "ingredients": [
@@ -51823,7 +52595,8 @@ window.WORLD_MEALS_DATABASE = [
     "time": "30 min",
     "spice": 1,
     "tags": [
-      "eggs"
+      "eggs",
+      "vegan-option"
     ],
     "desc": "Scrambled eggs mixed with crispy potatoes, ham, peas, and onions.",
     "ingredients": [
@@ -51867,7 +52640,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 0,
     "tags": [
       "dairy",
-      "eggs"
+      "eggs",
+      "dairy-free-option"
     ],
     "desc": "Creamy caramel custard served with rich dulce de leche.",
     "ingredients": [
@@ -51911,7 +52685,10 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy",
-      "gluten"
+      "gluten",
+      "vegan-option",
+      "gluten-free-option",
+      "dairy-free-option"
     ],
     "desc": "Slow-cooked caramelized onion soup topped with toasted bread and melted cheese.",
     "ingredients": [
@@ -52003,7 +52780,10 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy",
-      "gluten"
+      "gluten",
+      "vegan-option",
+      "gluten-free-option",
+      "dairy-free-option"
     ],
     "desc": "Classic French grilled ham and cheese sandwich with creamy bechamel sauce.",
     "ingredients": [
@@ -52053,7 +52833,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "1 hr 10 min",
     "spice": 1,
     "tags": [
-      "dairy"
+      "dairy",
+      "vegan-option",
+      "dairy-free-option"
     ],
     "desc": "Thinly sliced potatoes baked slowly with cream, garlic, and cheese until tender.",
     "ingredients": [
@@ -52096,7 +52878,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "1 hr 30 min",
     "spice": 1,
     "tags": [
-      "dairy"
+      "dairy",
+      "vegan-option",
+      "dairy-free-option"
     ],
     "desc": "Tender veal stew in a creamy white sauce with carrots, mushrooms, and herbs.",
     "ingredients": [
@@ -52141,7 +52925,9 @@ window.WORLD_MEALS_DATABASE = [
     "tags": [
       "fish",
       "dairy",
-      "gluten"
+      "gluten",
+      "gluten-free-option",
+      "dairy-free-option"
     ],
     "desc": "Delicate sole lightly floured, pan-fried in butter, and finished with lemon and parsley.",
     "ingredients": [
@@ -52193,7 +52979,9 @@ window.WORLD_MEALS_DATABASE = [
     "tags": [
       "dairy",
       "gluten",
-      "eggs"
+      "eggs",
+      "gluten-free-option",
+      "dairy-free-option"
     ],
     "desc": "Light French cheese puffs made with choux pastry and Gruyere cheese.",
     "ingredients": [
@@ -52243,7 +53031,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "40 min",
     "spice": 0,
     "tags": [
-      "dairy"
+      "dairy",
+      "vegan-option",
+      "dairy-free-option"
     ],
     "desc": "Stretchy mashed potatoes blended with cheese, cream, butter, and garlic.",
     "ingredients": [
@@ -52288,7 +53078,9 @@ window.WORLD_MEALS_DATABASE = [
     "tags": [
       "dairy",
       "eggs",
-      "gluten"
+      "gluten",
+      "gluten-free-option",
+      "dairy-free-option"
     ],
     "desc": "Rustic baked French custard dessert traditionally made with cherries.",
     "ingredients": [
@@ -52339,7 +53131,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "fish",
-      "gluten"
+      "gluten",
+      "gluten-free-option"
     ],
     "desc": "Provencal onion tart topped with anchovies, olives, and herbs.",
     "ingredients": [
@@ -52416,7 +53209,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "1 hr",
     "spice": 1,
     "tags": [
-      "dairy"
+      "dairy",
+      "vegan-option",
+      "dairy-free-option"
     ],
     "desc": "French minced beef and mashed potato casserole baked until golden on top.",
     "ingredients": [
@@ -52459,7 +53254,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "30 min",
     "spice": 1,
     "tags": [
-      "dairy"
+      "dairy",
+      "vegan-option",
+      "dairy-free-option"
     ],
     "desc": "Burgundy-style snails baked with garlic, parsley, and butter.",
     "ingredients": [
@@ -52504,7 +53301,9 @@ window.WORLD_MEALS_DATABASE = [
     "tags": [
       "dairy",
       "eggs",
-      "gluten"
+      "gluten",
+      "gluten-free-option",
+      "dairy-free-option"
     ],
     "desc": "Light and airy French cheese souffle made with eggs, bechamel, and Gruyere.",
     "ingredients": [
@@ -52556,7 +53355,9 @@ window.WORLD_MEALS_DATABASE = [
     "tags": [
       "dairy",
       "eggs",
-      "gluten"
+      "gluten",
+      "gluten-free-option",
+      "dairy-free-option"
     ],
     "desc": "Choux pastry puffs filled with cream or ice cream and topped with chocolate sauce.",
     "ingredients": [
@@ -53455,7 +54256,9 @@ window.WORLD_MEALS_DATABASE = [
     "time": "20 min",
     "spice": 1,
     "tags": [
-      "vegetarian"
+      "vegetarian",
+      "gluten-free-option",
+      "dairy-free-option"
     ],
     "desc": "Toasted bolillo halves spread with refried beans, melted cheese, and fresh pico de gallo.",
     "ingredients": [
@@ -53540,7 +54343,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Pork slowly cooked until tender, then crisped and served with tortillas, onion, cilantro, and lime.",
     "ingredients": [
@@ -53655,7 +54459,8 @@ window.WORLD_MEALS_DATABASE = [
     "time": "1.5 hrs",
     "spice": 1,
     "tags": [
-      "gluten-free"
+      "gluten-free",
+      "dairy-free-option"
     ],
     "desc": "A poblano chile filled with savory-sweet picadillo, covered in walnut sauce, and garnished with pomegranate.",
     "ingredients": [
@@ -53694,7 +54499,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "gluten-free",
-      "vegetarian-option"
+      "vegetarian-option",
+      "vegan-option"
     ],
     "desc": "Thick masa cakes split and filled with beans, meat, cheese, salsa, and fresh toppings.",
     "ingredients": [
@@ -53732,7 +54538,8 @@ window.WORLD_MEALS_DATABASE = [
     "time": "35 min",
     "spice": 2,
     "tags": [
-      "gluten-free-option"
+      "gluten-free-option",
+      "vegan-option"
     ],
     "desc": "Rolled tortillas filled with seasoned chicken, fried until crisp, and topped with crema, lettuce, and cheese.",
     "ingredients": [
@@ -53817,7 +54624,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 2,
     "tags": [
       "vegetarian-option",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
     "desc": "Tomato-chile broth topped with crisp tortilla strips, avocado, cheese, and crema.",
     "ingredients": [
@@ -53972,7 +54780,8 @@ window.WORLD_MEALS_DATABASE = [
     "time": "35 min",
     "spice": 1,
     "tags": [
-      "vegetarian"
+      "vegetarian",
+      "dairy-free-option"
     ],
     "desc": "Crisp ridged pastries rolled in cinnamon sugar and served warm, often with chocolate sauce.",
     "ingredients": [
@@ -54011,7 +54820,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "vegetarian",
-      "gluten-free"
+      "gluten-free",
+      "dairy-free-option"
     ],
     "desc": "Silky Mexican caramel custard enriched with cream cheese and sweetened condensed milk.",
     "ingredients": [
@@ -54050,7 +54860,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "vegetarian",
-      "gluten-free"
+      "gluten-free",
+      "dairy-free-option"
     ],
     "desc": "Creamy cinnamon-scented rice pudding served warm or chilled with raisins.",
     "ingredients": [
@@ -54089,7 +54900,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "vegan-option",
-      "gluten-free"
+      "gluten-free",
+      "dairy-free-option"
     ],
     "desc": "A chilled rice-and-cinnamon drink blended until creamy and lightly sweetened.",
     "ingredients": [
@@ -54202,7 +55014,8 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "vegetarian",
-      "gluten-free"
+      "gluten-free",
+      "dairy-free-option"
     ],
     "desc": "A thick, warming Mexican chocolate drink made with masa, cinnamon, and piloncillo.",
     "ingredients": [
@@ -54319,7 +55132,9 @@ window.WORLD_MEALS_DATABASE = [
     "spice": 1,
     "tags": [
       "breakfast",
-      "vegetarian"
+      "vegetarian",
+      "gluten-free-option",
+      "dairy-free-option"
     ],
     "desc": "Fluffy American pancakes served warm with butter and maple syrup.",
     "ingredients": [
