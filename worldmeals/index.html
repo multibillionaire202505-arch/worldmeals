@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Discover authentic dishes from Countries around the world, plan meals, explore global cuisines, and cook with personalized guidance from WorldMeals.">
 <title>World Meals — Every Dish. Every Country.</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#C47A2C">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -2850,6 +2852,15 @@ body{
     if (newPeriod !== period) window.location.reload();
   }, 60000);
 })();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js').catch(err => {
+      console.error('Service worker registration failed:', err);
+    });
+  });
+}
 </script>
 
 </body>
