@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.worldmeals.www.twa",
+      "sha256_cert_fingerprints": [
+        "9B:80:0C:28:6D:1E:06:7C:E5:18:8D:33:A0:AC:D8:71:8A:AF:51:94:E3:ED:61:DC:5C:3D:5B:3D:E5:79:4D:97"
+      ]
+    }
+  }
+]
