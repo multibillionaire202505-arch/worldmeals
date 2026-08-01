@@ -1374,6 +1374,280 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 .chef-premium-footer{font-size:13px;text-align:center;color:#6B5C4D;line-height:1.6;padding:6px 8px 2px;font-weight:700}
 @media(max-width:640px){.chef-ingredient-columns{grid-template-columns:1fr}.chef-facts{grid-template-columns:1fr 1fr}.chef-premium-title{font-size:25px}}
 
+
+/* ==========================================================
+   WORLD TOUR SIGNATURE — celebration + collectible badges
+   ========================================================== */
+.tour-badges-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:12px;
+  margin:24px 0 12px;
+}
+.tour-badges-title{
+  font-size:18px;
+  font-weight:900;
+  color:var(--text);
+  letter-spacing:-.3px;
+}
+.tour-badges-sub{
+  font-size:11px;
+  color:var(--muted);
+  margin-top:3px;
+}
+.badge-gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+  gap:12px;
+  margin-bottom:18px;
+}
+.country-badge-card{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(145deg,#FFFDF8,#FFF3DA);
+  border:1px solid #E9C98F;
+  border-radius:22px;
+  padding:15px 13px;
+  min-height:160px;
+  box-shadow:0 14px 32px rgba(122,77,23,.12),inset 0 1px 0 rgba(255,255,255,.95);
+}
+.country-badge-card::before{
+  content:"";
+  position:absolute;
+  width:110px;
+  height:110px;
+  right:-46px;
+  top:-48px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(245,166,35,.25),transparent 68%);
+}
+.country-badge-flag{
+  font-size:34px;
+  line-height:1;
+  margin-bottom:10px;
+  filter:drop-shadow(0 6px 10px rgba(83,55,29,.12));
+}
+.country-badge-name{
+  font-size:14px;
+  font-weight:900;
+  color:#5D3512;
+  margin-bottom:3px;
+}
+.country-badge-status{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  background:linear-gradient(135deg,#F7C75B,#D98B1B);
+  color:#fff;
+  border-radius:999px;
+  padding:4px 8px;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  margin-bottom:9px;
+  box-shadow:0 7px 15px rgba(217,139,27,.22);
+}
+.country-badge-meta{
+  font-size:10px;
+  color:#80684E;
+  line-height:1.5;
+}
+.badge-empty{
+  border:1px dashed #D8C7B4;
+  background:rgba(255,255,255,.55);
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.tour-celebration{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:500;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  background:rgba(31,22,14,.72);
+  -webkit-backdrop-filter:blur(14px);
+  backdrop-filter:blur(14px);
+}
+.tour-celebration.open{
+  display:flex;
+  animation:tourCelebrateFade .24s ease both;
+}
+.tour-celebration-card{
+  position:relative;
+  width:min(440px,100%);
+  overflow:hidden;
+  text-align:center;
+  border-radius:32px;
+  padding:30px 22px 24px;
+  background:
+    radial-gradient(circle at 50% 0,rgba(255,214,128,.55),transparent 34%),
+    linear-gradient(155deg,#FFFDF8,#FFF1D4);
+  border:1px solid rgba(255,221,157,.9);
+  box-shadow:0 34px 90px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.98);
+  animation:tourCelebratePop .55s cubic-bezier(.2,.9,.25,1.2) both;
+}
+.tour-celebration-card::before,
+.tour-celebration-card::after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  pointer-events:none;
+}
+.tour-celebration-card::before{
+  width:180px;height:180px;left:-90px;bottom:-90px;
+  background:radial-gradient(circle,rgba(47,143,91,.16),transparent 68%);
+}
+.tour-celebration-card::after{
+  width:210px;height:210px;right:-110px;top:-110px;
+  background:radial-gradient(circle,rgba(245,166,35,.22),transparent 68%);
+}
+.celebration-kicker{
+  position:relative;
+  z-index:2;
+  font-size:10px;
+  font-weight:900;
+  color:#A25A10;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:11px;
+}
+.celebration-flag{
+  position:relative;
+  z-index:2;
+  font-size:70px;
+  line-height:1;
+  margin-bottom:12px;
+  animation:tourFlagBounce .75s cubic-bezier(.2,.8,.2,1) .15s both;
+  filter:drop-shadow(0 12px 18px rgba(83,55,29,.18));
+}
+.celebration-title{
+  position:relative;
+  z-index:2;
+  font-size:29px;
+  font-weight:900;
+  color:#3A2818;
+  letter-spacing:-.8px;
+}
+.celebration-country{
+  position:relative;
+  z-index:2;
+  font-size:20px;
+  font-weight:900;
+  color:#C76A14;
+  margin:4px 0 10px;
+}
+.celebration-copy{
+  position:relative;
+  z-index:2;
+  font-size:13px;
+  color:#6E5B48;
+  line-height:1.65;
+  margin-bottom:14px;
+}
+.celebration-progress{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+  margin:14px 0;
+}
+.celebration-stat{
+  border:1px solid #E8D4B5;
+  border-radius:17px;
+  padding:11px;
+  background:rgba(255,255,255,.72);
+}
+.celebration-stat b{
+  display:block;
+  font-size:18px;
+  color:#3A2818;
+}
+.celebration-stat span{
+  display:block;
+  margin-top:2px;
+  font-size:9px;
+  font-weight:900;
+  color:#8D7760;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+}
+.celebration-badge{
+  position:relative;
+  z-index:2;
+  margin:12px 0 16px;
+  border-radius:20px;
+  padding:13px;
+  background:linear-gradient(135deg,#FFF4D7,#FFE0A5);
+  border:1px solid #EDC47A;
+  color:#6E430F;
+  font-size:12px;
+  font-weight:800;
+  line-height:1.55;
+}
+.celebration-btn{
+  position:relative;
+  z-index:2;
+  width:100%;
+  border:none;
+  border-radius:17px;
+  padding:14px 16px;
+  cursor:pointer;
+  font-family:Inter,system-ui,sans-serif;
+  font-size:14px;
+  font-weight:900;
+  color:#fff;
+  background:linear-gradient(135deg,#C47A2C,#E3A451);
+  box-shadow:0 13px 25px rgba(196,122,44,.27);
+}
+.confetti-piece{
+  position:fixed;
+  z-index:510;
+  top:-24px;
+  width:10px;
+  height:16px;
+  border-radius:3px;
+  pointer-events:none;
+  animation:tourConfettiFall var(--fall-duration,2.5s) linear forwards;
+  transform:translate3d(0,0,0) rotate(0deg);
+}
+@keyframes tourCelebrateFade{from{opacity:0}to{opacity:1}}
+@keyframes tourCelebratePop{
+  from{opacity:0;transform:translateY(24px) scale(.88)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+@keyframes tourFlagBounce{
+  0%{opacity:0;transform:translateY(18px) scale(.55) rotate(-8deg)}
+  65%{opacity:1;transform:translateY(-7px) scale(1.12) rotate(4deg)}
+  100%{opacity:1;transform:translateY(0) scale(1) rotate(0)}
+}
+@keyframes tourConfettiFall{
+  0%{transform:translate3d(0,-30px,0) rotate(0deg);opacity:1}
+  100%{transform:translate3d(var(--drift,0px),110vh,0) rotate(var(--spin,720deg));opacity:.9}
+}
+@media(max-width:520px){
+  .tour-celebration-card{border-radius:28px;padding:26px 17px 20px}
+  .celebration-title{font-size:25px}
+  .celebration-flag{font-size:62px}
+  .badge-gallery{grid-template-columns:1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .tour-celebration.open,
+  .tour-celebration-card,
+  .celebration-flag,
+  .confetti-piece{
+    animation:none !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1712,6 +1986,32 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
   </div>
 </div>
 
+
+<!-- WORLD TOUR COUNTRY CELEBRATION -->
+<div class="tour-celebration" id="tourCelebration" role="dialog" aria-modal="true" aria-labelledby="celebrationTitle">
+  <div class="tour-celebration-card">
+    <div class="celebration-kicker">🏆 World Tour Achievement</div>
+    <div class="celebration-flag" id="celebrationFlag">🌍</div>
+    <div class="celebration-title" id="celebrationTitle">Country Conquered!</div>
+    <div class="celebration-country" id="celebrationCountry"></div>
+    <div class="celebration-copy" id="celebrationCopy"></div>
+
+    <div class="celebration-progress">
+      <div class="celebration-stat">
+        <b id="celebrationCount">1 / 195</b>
+        <span>Countries explored</span>
+      </div>
+      <div class="celebration-stat">
+        <b id="celebrationPercent">1%</b>
+        <span>World progress</span>
+      </div>
+    </div>
+
+    <div class="celebration-badge" id="celebrationBadge"></div>
+    <button type="button" class="celebration-btn" onclick="closeCountryCelebration()">Continue the Journey</button>
+  </div>
+</div>
+
 <!-- BOTTOM NAV -->
 <div class="bottom-nav" role="navigation" aria-label="WorldMeals app">
   <button type="button" class="nav-btn active" id="nb-browse" aria-label="Browse dishes" aria-current="page" onclick="showPage('browse')"><span class="ic" aria-hidden="true">🍽️</span><span class="lb">Browse</span></button>
@@ -1845,6 +2145,7 @@ let plan=JSON.parse(localStorage.getItem("wm_plan")||"{}");
 let currentMeal=null;
 let activeSwap=null;
 let pickerDay=null;
+let countryBadges=JSON.parse(localStorage.getItem("wm_country_badges")||"{}");
 
 // Generate or retrieve anonymous user ID
 function getAnonId(){
@@ -1878,6 +2179,7 @@ function save(){
   localStorage.setItem("wm_favs",JSON.stringify(favs));
   localStorage.setItem("wm_cooked",JSON.stringify(cooked));
   localStorage.setItem("wm_plan",JSON.stringify(plan));
+  localStorage.setItem("wm_country_badges",JSON.stringify(countryBadges));
 }
 
 function toast(msg){
@@ -2462,11 +2764,36 @@ function updateCookBtn(){
 }
 
 function markCooked(){
-  if(!currentMeal||cooked.includes(currentMeal.id))return;
-  cooked.push(currentMeal.id);save();
-  toast("🍽 "+currentMeal.name+" cooked!");
-  updateCookBtn();renderGrid();
-  if(document.getElementById("page-tour").classList.contains("active"))renderTour();
+  if(!currentMeal || cooked.includes(currentMeal.id)) return;
+
+  const completedCountry = currentMeal.country;
+  const countryWasAlreadyConquered = cooked.some(id =>
+    MEALS.find(m => m.id === id)?.country === completedCountry
+  );
+
+  cooked.push(currentMeal.id);
+
+  if(!countryWasAlreadyConquered){
+    countryBadges[completedCountry] = {
+      country: completedCountry,
+      mealId: currentMeal.id,
+      mealName: currentMeal.name,
+      earnedAt: new Date().toISOString()
+    };
+  }
+
+  save();
+  toast("🍽 " + currentMeal.name + " cooked!");
+  updateCookBtn();
+  renderGrid();
+
+  if(!countryWasAlreadyConquered){
+    const conqueredMeal = currentMeal;
+    closeModal();
+    window.setTimeout(() => showCountryCelebration(conqueredMeal), 180);
+  }else if(document.getElementById("page-tour").classList.contains("active")){
+    renderTour();
+  }
 }
 
 function closeModal(){
@@ -2620,34 +2947,248 @@ function assignDay(day,id){
 
 function closePicker(){document.getElementById("pickerOverlay").classList.remove("open");}
 
-/* ==========================================================
-   FIX — "Explore" button now filters Browse by that country
-   instead of just switching tabs with no filter applied.
-   ========================================================== */
-function exploreCountry(country){
-  const countryFilter=document.getElementById("countryFilter");
-  if(countryFilter){
-    countryFilter.value=country;
+
+function getConqueredCountries(){
+  return [...new Set(
+    cooked
+      .map(id => MEALS.find(m => m.id === id)?.country)
+      .filter(Boolean)
+  )];
+}
+
+function formatBadgeDate(iso){
+  if(!iso) return "Recently earned";
+  const d = new Date(iso);
+  if(Number.isNaN(d.getTime())) return "Recently earned";
+  return d.toLocaleDateString(undefined,{
+    year:"numeric",
+    month:"short",
+    day:"numeric"
+  });
+}
+
+function ensureCountryBadges(){
+  let changed=false;
+
+  getConqueredCountries().forEach(country=>{
+    if(countryBadges[country]) return;
+
+    const firstCookedId = cooked.find(id =>
+      MEALS.find(m => m.id === id)?.country === country
+    );
+    const meal = MEALS.find(m => m.id === firstCookedId);
+
+    countryBadges[country] = {
+      country,
+      mealId: meal?.id || null,
+      mealName: meal?.name || "WorldMeals dish",
+      earnedAt: new Date().toISOString()
+    };
+    changed=true;
+  });
+
+  if(changed) save();
+}
+
+function launchCountryConfetti(){
+  const reduceMotion = window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if(reduceMotion) return;
+
+  document.querySelectorAll(".confetti-piece").forEach(el=>el.remove());
+
+  const colors=["#F5A623","#D9630B","#2F8F5B","#FFD36A","#FFFFFF","#E85D75"];
+  const total = window.innerWidth < 520 ? 52 : 78;
+
+  for(let i=0;i<total;i++){
+    const piece=document.createElement("span");
+    piece.className="confetti-piece";
+    piece.style.left=(Math.random()*100)+"vw";
+    piece.style.background=colors[i%colors.length];
+    piece.style.setProperty("--drift",((Math.random()*220)-110)+"px");
+    piece.style.setProperty("--spin",((Math.random()*900)+360)+"deg");
+    piece.style.setProperty("--fall-duration",(2+Math.random()*1.7)+"s");
+    piece.style.animationDelay=(Math.random()*.55)+"s";
+    piece.style.width=(6+Math.random()*7)+"px";
+    piece.style.height=(9+Math.random()*11)+"px";
+    document.body.appendChild(piece);
+    window.setTimeout(()=>piece.remove(),4300);
   }
-  showPage('browse');
+}
+
+function showCountryCelebration(meal){
+  ensureCountryBadges();
+
+  const countries=[...new Set(MEALS.map(m=>m.country).filter(Boolean))];
+  const conquered=getConqueredCountries();
+  const pct=countries.length ? Math.round((conquered.length/countries.length)*100) : 0;
+  const badge=countryBadges[meal.country];
+
+  document.getElementById("celebrationFlag").textContent=countryFlag(meal.country);
+  document.getElementById("celebrationCountry").textContent=meal.country+" Conquered";
+  document.getElementById("celebrationCopy").textContent=
+    "You completed your first dish from "+meal.country+" and unlocked a permanent World Tour badge.";
+  document.getElementById("celebrationCount").textContent=
+    conquered.length+" / "+countries.length;
+  document.getElementById("celebrationPercent").textContent=pct+"%";
+  document.getElementById("celebrationBadge").innerHTML=
+    "🏅 <strong>"+escapeAttr(meal.country)+" Badge Unlocked</strong><br>"+
+    "First dish: "+escapeAttr(badge?.mealName||meal.name)+" · "+
+    formatBadgeDate(badge?.earnedAt);
+
+  document.getElementById("tourCelebration").classList.add("open");
+  launchCountryConfetti();
+}
+
+function closeCountryCelebration(){
+  document.getElementById("tourCelebration").classList.remove("open");
+  document.querySelectorAll(".confetti-piece").forEach(el=>el.remove());
+  showPage("tour");
+}
+
+function renderBadgeGallery(){
+  ensureCountryBadges();
+
+  const countries=getConqueredCountries();
+  if(!countries.length){
+    return `
+      <div class="tour-badges-head">
+        <div>
+          <div class="tour-badges-title">🏅 My Country Badges</div>
+          <div class="tour-badges-sub">Your conquered countries will appear here.</div>
+        </div>
+      </div>
+      <div class="badge-empty">Cook your first dish to unlock your first collectible country badge.</div>
+    `;
+  }
+
+  const cards=countries
+    .sort((a,b)=>{
+      const da=new Date(countryBadges[a]?.earnedAt||0).getTime();
+      const db=new Date(countryBadges[b]?.earnedAt||0).getTime();
+      return db-da;
+    })
+    .map(country=>{
+      const badge=countryBadges[country]||{};
+      return `
+        <div class="country-badge-card">
+          <div class="country-badge-flag">${countryFlag(country)}</div>
+          <div class="country-badge-name">${escapeAttr(country)}</div>
+          <div class="country-badge-status">✓ Conquered</div>
+          <div class="country-badge-meta">
+            First dish: ${escapeAttr(badge.mealName||"WorldMeals dish")}<br>
+            Earned ${escapeAttr(formatBadgeDate(badge.earnedAt))}
+          </div>
+        </div>
+      `;
+    }).join("");
+
+  return `
+    <div class="tour-badges-head">
+      <div>
+        <div class="tour-badges-title">🏅 My Country Badges</div>
+        <div class="tour-badges-sub">${countries.length} collectible badge${countries.length===1?"":"s"} unlocked</div>
+      </div>
+    </div>
+    <div class="badge-gallery">${cards}</div>
+  `;
+}
+
+/* ==========================================================
+   WORLD TOUR — country-first challenge flow
+   Explore opens Browse with the chosen country selected.
+   Completed countries remain available through "View dishes".
+   ========================================================== */
+function exploreCountry(encodedCountry){
+  const country = decodeURIComponent(encodedCountry);
+  const countryFilter = document.getElementById("countryFilter");
+
+  // Clear old Browse filters so they cannot hide the selected country.
+  resetBrowseFilters();
+
+  if(countryFilter){
+    countryFilter.value = country;
+  }
+
+  showPage("browse");
   renderGrid();
+
+  toast(countryFlag(country) + " Exploring dishes from " + country);
 }
 
 function renderTour(){
-  const countries=[...new Set(MEALS.map(m=>m.country))];
-  const done=[...new Set(cooked.map(id=>MEALS.find(m=>m.id===id)?.country).filter(Boolean))];
-  const pct=Math.round((done.length/countries.length)*100);
-  document.getElementById("tourNum").innerHTML=done.length+'<span style="font-size:14px;font-weight:400;color:#888">/'+countries.length+'</span>';
-  document.getElementById("tourPct").textContent=pct+"%";
-  document.getElementById("tourPct").style.color=pct>=100?"#FFD700":pct>=50?"#22C55E":"#888";
-  document.getElementById("tourBar").style.width=pct+"%";
-  document.getElementById("tourBar").style.background=pct>=100?"#FFD700":pct>=50?"#22C55E":"#3B82F6";
-  document.getElementById("tourMsg").textContent=pct===0?"Cook your first dish to start! 🌍":pct>=100?"🎉 WORLD TOUR COMPLETE!":pct>=50?"Over halfway! 🌟":"Keep exploring! 🗺";
-  document.getElementById("tourList").innerHTML=countries.map(c=>{
-    const dishes=MEALS.filter(m=>m.country===c);
-    const isDone=done.includes(c);
-    return `<div class="country-row${isDone?" done":""}"><span style="font-size:24px">${dishes[0].emoji}</span><div style="flex:1"><div style="font-size:13px;font-weight:600;color:${isDone?"#1F6B42":"var(--text)"}">${c}</div><div style="font-size:11px;color:#888">${dishes.length} dish${dishes.length>1?"es":""}</div></div>${isDone?'<div class="badge-done">✓ Done</div>':`<button class="btn-explore" onclick="exploreCountry('${c.replace(/'/g,"\\'")}')">Explore →</button>`}</div>`;
+  ensureCountryBadges();
+
+  const countries = [...new Set(
+    MEALS.map(m => m.country).filter(Boolean)
+  )].sort();
+
+  const done = getConqueredCountries();
+  const pct = countries.length
+    ? Math.round((done.length / countries.length) * 100)
+    : 0;
+
+  document.getElementById("tourNum").innerHTML =
+    done.length +
+    '<span style="font-size:14px;font-weight:400;color:#888">/' +
+    countries.length +
+    "</span>";
+
+  document.getElementById("tourPct").textContent = pct + "%";
+  document.getElementById("tourPct").style.color =
+    pct >= 100 ? "#FFD700" :
+    pct >= 50 ? "#22C55E" :
+    "#888";
+
+  document.getElementById("tourBar").style.width = pct + "%";
+  document.getElementById("tourBar").style.background =
+    pct >= 100 ? "#FFD700" :
+    pct >= 50 ? "#22C55E" :
+    "#3B82F6";
+
+  document.getElementById("tourMsg").textContent =
+    pct === 0
+      ? "Cook your first dish to start! 🌍"
+      : pct >= 100
+        ? "🎉 WORLD TOUR COMPLETE!"
+        : pct >= 50
+          ? "Over halfway! 🌟"
+          : "Keep exploring! 🗺";
+
+  const countryRows = countries.map(country => {
+    const dishes = MEALS.filter(m => m.country === country);
+    const isDone = done.includes(country);
+    const encodedCountry = encodeURIComponent(country);
+
+    return `
+      <div class="country-row${isDone ? " done" : ""}">
+        <span style="font-size:24px">${countryFlag(country)}</span>
+
+        <div style="flex:1">
+          <div style="font-size:13px;font-weight:600;color:${isDone ? "#1F6B42" : "var(--text)"}">
+            ${escapeAttr(country)}
+          </div>
+          <div style="font-size:11px;color:#888">
+            ${dishes.length} dish${dishes.length === 1 ? "" : "es"}
+          </div>
+        </div>
+
+        ${isDone ? '<div class="badge-done">✓ Conquered</div>' : ""}
+
+        <button
+          type="button"
+          class="btn-explore"
+          onclick="exploreCountry('${encodedCountry}')"
+        >
+          ${isDone ? "View dishes →" : "Explore →"}
+        </button>
+      </div>
+    `;
   }).join("");
+
+  document.getElementById("tourList").innerHTML =
+    renderBadgeGallery() + countryRows;
 }
 
 function renderSaved(){
