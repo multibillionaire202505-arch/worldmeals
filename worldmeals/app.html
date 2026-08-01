@@ -2620,6 +2620,19 @@ function assignDay(day,id){
 
 function closePicker(){document.getElementById("pickerOverlay").classList.remove("open");}
 
+/* ==========================================================
+   FIX — "Explore" button now filters Browse by that country
+   instead of just switching tabs with no filter applied.
+   ========================================================== */
+function exploreCountry(country){
+  const countryFilter=document.getElementById("countryFilter");
+  if(countryFilter){
+    countryFilter.value=country;
+  }
+  showPage('browse');
+  renderGrid();
+}
+
 function renderTour(){
   const countries=[...new Set(MEALS.map(m=>m.country))];
   const done=[...new Set(cooked.map(id=>MEALS.find(m=>m.id===id)?.country).filter(Boolean))];
@@ -2633,7 +2646,7 @@ function renderTour(){
   document.getElementById("tourList").innerHTML=countries.map(c=>{
     const dishes=MEALS.filter(m=>m.country===c);
     const isDone=done.includes(c);
-    return `<div class="country-row${isDone?" done":""}"><span style="font-size:24px">${dishes[0].emoji}</span><div style="flex:1"><div style="font-size:13px;font-weight:600;color:${isDone?"#1F6B42":"var(--text)"}">${c}</div><div style="font-size:11px;color:#888">${dishes.length} dish${dishes.length>1?"es":""}</div></div>${isDone?'<div class="badge-done">✓ Done</div>':`<button class="btn-explore" onclick="showPage('browse')">Explore →</button>`}</div>`;
+    return `<div class="country-row${isDone?" done":""}"><span style="font-size:24px">${dishes[0].emoji}</span><div style="flex:1"><div style="font-size:13px;font-weight:600;color:${isDone?"#1F6B42":"var(--text)"}">${c}</div><div style="font-size:11px;color:#888">${dishes.length} dish${dishes.length>1?"es":""}</div></div>${isDone?'<div class="badge-done">✓ Done</div>':`<button class="btn-explore" onclick="exploreCountry('${c.replace(/'/g,"\\'")}')">Explore →</button>`}</div>`;
   }).join("");
 }
 
