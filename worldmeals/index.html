@@ -1864,6 +1864,14 @@ body{
   .billing-toggle{margin-top:24px;margin-bottom:26px}
 }
 
+
+.plan-cta{
+  width:100%;
+  border:none;
+  cursor:pointer;
+  font-family:'Inter',system-ui,sans-serif;
+}
+
 </style>
 </head>
 <body>
@@ -2460,7 +2468,7 @@ body{
 
     <div class="billing-toggle" role="group" aria-label="Billing period">
       <button type="button" class="billing-option" id="billingMonthly" data-billing="monthly">Monthly</button>
-      <button type="button" class="billing-option active" id="billingAnnual" data-billing="annual">Annual <span class="billing-save">SAVE UP TO 38%</span></button>
+      <button type="button" class="billing-option active" id="billingAnnual" data-billing="annual">Annual <span class="billing-save">SAVE UP TO 44%</span></button>
     </div>
 
     <div class="price-cards">
@@ -2482,30 +2490,30 @@ body{
         <div class="plan-icon">👨‍🍳</div>
         <div class="price-name" style="color:#fff">Chef</div>
         <div class="plan-tagline">Unlimited AI. Less planning. Better meals.</div>
-        <div class="price-amount" id="chefPrice" style="color:#fff">$59.88</div>
-        <div class="price-period" id="chefPeriod" style="color:#AAA096">/year · $4.99/mo equivalent</div>
-        <div class="plan-saving" id="chefSaving" style="display:inline-block">SAVE 38%</div>
+        <div class="price-amount" id="chefPrice" style="color:#fff">$59.99</div>
+        <div class="price-period" id="chefPeriod" style="color:#AAA096">/year · $5.00/mo equivalent</div>
+        <div class="plan-saving" id="chefSaving" style="display:inline-block">SAVE 37%</div>
         <div class="price-feature" style="color:#C8C0B8"><span style="color:#62D6A6">✓</span>Everything in Explorer</div>
         <div class="price-feature" style="color:#C8C0B8"><span style="color:#62D6A6">✓</span>Unlimited AI Chef</div>
         <div class="price-feature" style="color:#C8C0B8"><span style="color:#62D6A6">✓</span>Smart substitutions</div>
         <div class="price-feature" style="color:#C8C0B8"><span style="color:#62D6A6">✓</span>Weekly meal planner</div>
         <div class="price-feature" style="color:#C8C0B8"><span style="color:#62D6A6">✓</span>World Tour Challenge</div>
-        <a href="#" class="plan-cta plan-cta-featured" id="chefCta">Try Chef free for 3 days → then $59.88/yr</a>
-        <div class="plan-disclosure" id="chefDisclosure">3 days free, then $59.88/year. Cancel anytime. Subscription renews automatically unless canceled.</div>
+        <button type="button" class="plan-cta plan-cta-featured" id="chefCta" data-product-id="app.worldmeals.chef.annual">Try Chef free for 3 days → then $59.99/yr</button>
+        <div class="plan-disclosure" id="chefDisclosure">3 days free, then $59.99/year. Cancel anytime. Subscription renews automatically unless canceled.</div>
       </div>
 
       <div class="price-card" data-plan="passport">
         <div class="plan-icon">🌍</div>
         <div class="price-name">Passport</div>
         <div class="plan-tagline">Unlock the complete WorldMeals experience.</div>
-        <div class="price-amount" id="passportPrice">$119.88</div>
-        <div class="price-period" id="passportPeriod" style="color:#888">/year · $9.99/mo equivalent</div>
-        <div class="plan-saving" id="passportSaving" style="display:inline-block">SAVE 33%</div>
+        <div class="price-amount" id="passportPrice">$99.99</div>
+        <div class="price-period" id="passportPeriod" style="color:#888">/year · $8.33/mo equivalent</div>
+        <div class="plan-saving" id="passportSaving" style="display:inline-block">SAVE 44%</div>
         <div class="price-feature" style="color:#666"><span>✓</span>Everything in Chef</div>
         <div class="price-feature" style="color:#666"><span>✓</span>Camera Dish ID</div>
         <div class="price-feature" style="color:#666"><span>✓</span>Premium WorldMeals tools</div>
-        <a href="#" class="plan-cta plan-cta-light" id="passportCta">Choose Passport → $119.88/yr</a>
-        <div class="plan-disclosure" id="passportDisclosure">$119.88/year. Cancel anytime. Subscription renews automatically unless canceled.</div>
+        <button type="button" class="plan-cta plan-cta-light" id="passportCta" data-product-id="app.worldmeals.passport.annual">Choose Passport → $99.99/yr</button>
+        <div class="plan-disclosure" id="passportDisclosure">$99.99/year. Cancel anytime. Subscription renews automatically unless canceled.</div>
       </div>
     </div>
 
@@ -2964,34 +2972,94 @@ if ('serviceWorker' in navigator) {
 
   if (!monthly || !annual) return;
 
+  let billingMode = 'annual';
+
+  const productIds = {
+    chef: {
+      monthly: 'app.worldmeals.chef.monthly',
+      annual: 'app.worldmeals.chef.annual'
+    },
+    passport: {
+      monthly: 'app.worldmeals.passport.monthly',
+      annual: 'app.worldmeals.passport.annual'
+    }
+  };
+
   const renderBilling = (mode) => {
+    billingMode = mode;
     const isAnnual = mode === 'annual';
+
     monthly.classList.toggle('active', !isAnnual);
     annual.classList.toggle('active', isAnnual);
 
-    chefPrice.textContent = isAnnual ? '$59.88' : '$7.99';
-    chefPeriod.textContent = isAnnual ? '/year · $4.99/mo equivalent' : '/month';
+    // Chef
+    chefPrice.textContent = isAnnual ? '$59.99' : '$7.99';
+    chefPeriod.textContent = isAnnual ? '/year · $5.00/mo equivalent' : '/month';
+    chefSaving.textContent = 'SAVE 37%';
     chefSaving.style.display = isAnnual ? 'inline-block' : 'none';
+    chefCta.dataset.productId = isAnnual
+      ? productIds.chef.annual
+      : productIds.chef.monthly;
     chefCta.textContent = isAnnual
-      ? 'Try Chef free for 3 days → then $59.88/yr'
+      ? 'Try Chef free for 3 days → then $59.99/yr'
       : 'Try Chef free for 3 days → then $7.99/mo';
     chefDisclosure.textContent = isAnnual
-      ? '3 days free, then $59.88/year. Cancel anytime. Subscription renews automatically unless canceled.'
+      ? '3 days free, then $59.99/year. Cancel anytime. Subscription renews automatically unless canceled.'
       : '3 days free, then $7.99/month. Cancel anytime. Subscription renews automatically unless canceled.';
 
-    passportPrice.textContent = isAnnual ? '$119.88' : '$14.99';
-    passportPeriod.textContent = isAnnual ? '/year · $9.99/mo equivalent' : '/month';
+    // Passport — no free trial
+    passportPrice.textContent = isAnnual ? '$99.99' : '$14.99';
+    passportPeriod.textContent = isAnnual ? '/year · $8.33/mo equivalent' : '/month';
+    passportSaving.textContent = 'SAVE 44%';
     passportSaving.style.display = isAnnual ? 'inline-block' : 'none';
+    passportCta.dataset.productId = isAnnual
+      ? productIds.passport.annual
+      : productIds.passport.monthly;
     passportCta.textContent = isAnnual
-      ? 'Choose Passport → $119.88/yr'
+      ? 'Choose Passport → $99.99/yr'
       : 'Choose Passport → $14.99/mo';
     passportDisclosure.textContent = isAnnual
-      ? '$119.88/year. Cancel anytime. Subscription renews automatically unless canceled.'
-      : '$14.99/month. Cancel anytime. Subscription renews automatically unless canceled.';
+      ? '$99.99/year. No free trial. Cancel anytime. Subscription renews automatically unless canceled.'
+      : '$14.99/month. No free trial. Cancel anytime. Subscription renews automatically unless canceled.';
+  };
+
+  const requestApplePurchase = (productId) => {
+    if (!productId) return;
+
+    // Preferred iOS WKWebView bridge.
+    const iosBridge = window.webkit?.messageHandlers?.worldMealsIAP;
+    if (iosBridge?.postMessage) {
+      iosBridge.postMessage({
+        action: 'purchase',
+        productId
+      });
+      return;
+    }
+
+    // Optional generic bridge for other native wrappers.
+    if (window.WorldMealsIAP?.purchase) {
+      window.WorldMealsIAP.purchase(productId);
+      return;
+    }
+
+    // Safe fallback: expose the request without navigating or jumping to page top.
+    window.dispatchEvent(new CustomEvent('worldmeals:purchase', {
+      detail: { productId }
+    }));
+    console.warn('WorldMeals purchase bridge is not connected for product:', productId);
   };
 
   monthly.addEventListener('click', () => renderBilling('monthly'));
   annual.addEventListener('click', () => renderBilling('annual'));
+
+  chefCta?.addEventListener('click', () => {
+    requestApplePurchase(chefCta.dataset.productId);
+  });
+
+  passportCta?.addEventListener('click', () => {
+    requestApplePurchase(passportCta.dataset.productId);
+  });
+
   renderBilling('annual');
 })();
 </script>
