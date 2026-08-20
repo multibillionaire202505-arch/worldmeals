@@ -1793,6 +1793,77 @@ body{
   }
 }
 
+
+/* =========================================================
+   WORLDMEALS PREMIUM PRICING / PAYWALL — 2026 UPDATE
+   ========================================================= */
+.pricing-preview{
+  background:
+    radial-gradient(circle at 12% 0%,rgba(29,158,117,.10),transparent 30%),
+    radial-gradient(circle at 90% 8%,rgba(212,162,76,.12),transparent 28%),
+    linear-gradient(180deg,#FFFDF9,#F7F1E8);
+}
+.pricing-inner{max-width:920px!important}
+.pricing-lead{max-width:620px;margin:0 auto 22px;color:#70675D;font-size:15px;line-height:1.65}
+.billing-toggle{
+  width:min(390px,100%);margin:28px auto 34px;padding:5px;border-radius:16px;
+  background:#EEE8DF;display:grid;grid-template-columns:1fr 1fr;gap:5px;
+  box-shadow:inset 0 1px 3px rgba(62,43,24,.08)
+}
+.billing-option{
+  border:0;border-radius:12px;padding:12px 14px;background:transparent;color:#746A60;
+  font:800 13px/1 'Inter',system-ui,sans-serif;cursor:pointer;transition:.2s ease
+}
+.billing-option.active{background:#fff;color:#171512;box-shadow:0 8px 20px rgba(62,43,24,.09)}
+.billing-save{display:inline-block;margin-left:6px;color:#167A5A;font-size:10px;font-weight:900}
+.price-cards{grid-template-columns:repeat(3,minmax(0,1fr))!important;align-items:stretch}
+.price-card{
+  position:relative!important;padding:28px 22px!important;border-radius:26px!important;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease
+}
+.price-card:hover{transform:translateY(-4px)}
+.price-card.featured{
+  transform:translateY(-7px);background:
+    radial-gradient(circle at 100% 0%,rgba(29,158,117,.20),transparent 34%),
+    linear-gradient(180deg,#1B1815,#11100E)!important
+}
+.plan-badge{
+  position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(135deg,#167A5A,#1D9E75);color:#fff;
+  font-size:10px;font-weight:900;letter-spacing:.05em;padding:6px 13px;border-radius:999px;
+  white-space:nowrap;box-shadow:0 8px 20px rgba(22,122,90,.22)
+}
+.plan-icon{font-size:28px;margin-bottom:10px}
+.plan-tagline{font-size:11px;line-height:1.5;color:#82786E;margin:4px 0 16px;min-height:34px}
+.featured .plan-tagline{color:#AAA096}
+.price-amount{font-size:31px!important}
+.price-period{min-height:31px;line-height:1.45}
+.plan-saving{
+  display:none;width:max-content;margin:0 0 14px;padding:5px 9px;border-radius:999px;
+  background:#EAF8F2;color:#167A5A;font-size:10px;font-weight:900
+}
+.featured .plan-saving{background:rgba(29,158,117,.15);color:#7DE0B9}
+.plan-cta{
+  display:block;margin-top:18px;padding:12px 13px;border-radius:13px;text-align:center;
+  font-size:12px;font-weight:850;text-decoration:none;transition:transform .16s ease,box-shadow .16s ease
+}
+.plan-cta:hover{transform:translateY(-1px)}
+.plan-cta-light{border:1px solid #E5DDD2;color:#171512;background:#fff}
+.plan-cta-featured{background:#fff;color:#171512;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.plan-disclosure{font-size:9.5px;line-height:1.5;color:#8C8278;text-align:center;margin-top:8px}
+.featured .plan-disclosure{color:#817A72}
+.pricing-trust{
+  margin-top:22px;padding:17px 18px;border:1px solid #E8DED1;border-radius:18px;
+  background:rgba(255,255,255,.72);display:flex;justify-content:center;gap:12px 18px;
+  flex-wrap:wrap;color:#6F655B;font-size:11px;font-weight:700
+}
+.pricing-note{margin-top:13px;color:#8A8075;font-size:10px;line-height:1.55}
+@media(max-width:760px){
+  .price-cards{grid-template-columns:1fr!important;gap:16px!important}
+  .price-card.featured{transform:none}
+  .billing-toggle{margin-top:24px;margin-bottom:26px}
+}
+
 </style>
 </head>
 <body>
@@ -1828,10 +1899,10 @@ body{
     <a href="#features" class="btn-secondary">See how it works</a>
   </div>
   <div class="hero-trust">
-    <div class="trust-item">🔒 Payments by Stripe</div>
-    <div class="trust-item">✓ 7-day free trial</div>
+    <div class="trust-item">🔒 Secure checkout</div>
+    <div class="trust-item">✓ Chef includes a 3-day free trial</div>
     <div class="trust-item">↩️ Cancel anytime</div>
-    <div class="trust-item">🌱 No card for trial</div>
+    <div class="trust-item">🌱 Explorer stays free</div>
   </div>
 </section>
 
@@ -2383,58 +2454,70 @@ body{
 <!-- PRICING PREVIEW -->
 <section class="pricing-preview reveal" id="pricing">
   <div class="pricing-inner">
-    <div class="section-eyebrow">Simple pricing</div>
-    <div class="section-title">One price. The whole world.</div>
-    <p style="font-size:15px;color:#666;margin-bottom:0">No hidden fees. No surprise charges. Cancel any time.</p>
+    <div class="section-eyebrow">Choose your WorldMeals experience</div>
+    <div class="section-title">Start free. Upgrade when you're ready for more.</div>
+    <p class="pricing-lead">Explore the world through food for free. When you want unlimited AI, smarter planning, and the complete WorldMeals experience, choose the plan that fits you.</p>
+
+    <div class="billing-toggle" role="group" aria-label="Billing period">
+      <button type="button" class="billing-option" id="billingMonthly" data-billing="monthly">Monthly</button>
+      <button type="button" class="billing-option active" id="billingAnnual" data-billing="annual">Annual <span class="billing-save">SAVE UP TO 38%</span></button>
+    </div>
+
     <div class="price-cards">
-      <div class="price-card">
-        <div style="font-size:24px;margin-bottom:8px">🌱</div>
+      <div class="price-card" data-plan="explorer">
+        <div class="plan-icon">🌱</div>
         <div class="price-name">Explorer</div>
+        <div class="plan-tagline">Discover WorldMeals free.</div>
         <div class="price-amount">Free</div>
         <div class="price-period" style="color:#888">Forever</div>
         <div class="price-feature" style="color:#666"><span>✓</span>Browse 1000+ dishes</div>
-        <div class="price-feature" style="color:#666"><span>✓</span>5 AI recipes/month</div>
-        <div class="price-feature" style="color:#666"><span>✓</span>Country & region filters</div>
-        <a href="#" style="display:block;margin-top:16px;padding:10px;border-radius:10px;border:1px solid #E5E5E0;text-align:center;font-size:13px;font-weight:700;color:#1a1a18;text-decoration:none">Get started free</a>
+        <div class="price-feature" style="color:#666"><span>✓</span><b>5 AI recipes total</b> on the free tier</div>
+        <div class="price-feature" style="color:#666"><span>✓</span>Country &amp; region filters</div>
+        <a href="app.html" class="plan-cta plan-cta-light">Continue with Explorer — Free</a>
+        <div class="plan-disclosure">Your Explorer access stays free. After 5 AI recipes, upgrade for more AI generations.</div>
       </div>
-      <div class="price-card featured" style="position:relative">
-        <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#22C55E;color:#fff;font-size:11px;font-weight:700;padding:3px 14px;border-radius:20px;white-space:nowrap">Most popular</div>
-        <div style="font-size:24px;margin-bottom:8px">👨‍🍳</div>
+
+      <div class="price-card featured" data-plan="chef">
+        <div class="plan-badge">⭐ MOST POPULAR</div>
+        <div class="plan-icon">👨‍🍳</div>
         <div class="price-name" style="color:#fff">Chef</div>
-        <div class="price-amount" style="color:#fff">$7.99</div>
-        <div class="price-period" style="color:#666">/month · 7-day free trial</div>
-        <div class="price-feature" style="color:#aaa"><span style="color:#22C55E">✓</span>Everything in Explorer</div>
-        <div class="price-feature" style="color:#aaa"><span style="color:#22C55E">✓</span>Unlimited AI chef</div>
-        <div class="price-feature" style="color:#aaa"><span style="color:#22C55E">✓</span>Spice substitutions</div>
-        <div class="price-feature" style="color:#aaa"><span style="color:#22C55E">✓</span>Weekly meal planner</div>
-        <div class="price-feature" style="color:#aaa"><span style="color:#22C55E">✓</span>World Tour Challenge</div>
-        <a href="#" style="display:block;margin-top:16px;padding:10px;border-radius:10px;background:#fff;text-align:center;font-size:13px;font-weight:700;color:#1a1a18;text-decoration:none">Start free trial →</a>
-        <div style="text-align:center;font-size:10px;color:#555;margin-top:6px">No card required</div>
+        <div class="plan-tagline">Unlimited AI. Less planning. Better meals.</div>
+        <div class="price-amount" id="chefPrice" style="color:#fff">$59.88</div>
+        <div class="price-period" id="chefPeriod" style="color:#AAA096">/year · $4.99/mo equivalent</div>
+        <div class="plan-saving" id="chefSaving" style="display:inline-block">SAVE 38%</div>
+        <div class="price-feature" style="color:#C8C0B8"><span style="color:#62D6A6">✓</span>Everything in Explorer</div>
+        <div class="price-feature" style="color:#C8C0B8"><span style="color:#62D6A6">✓</span>Unlimited AI Chef</div>
+        <div class="price-feature" style="color:#C8C0B8"><span style="color:#62D6A6">✓</span>Smart substitutions</div>
+        <div class="price-feature" style="color:#C8C0B8"><span style="color:#62D6A6">✓</span>Weekly meal planner</div>
+        <div class="price-feature" style="color:#C8C0B8"><span style="color:#62D6A6">✓</span>World Tour Challenge</div>
+        <a href="#" class="plan-cta plan-cta-featured" id="chefCta">Try Chef free for 3 days → then $59.88/yr</a>
+        <div class="plan-disclosure" id="chefDisclosure">3 days free, then $59.88/year. Cancel anytime. Subscription renews automatically unless canceled.</div>
       </div>
-      <div class="price-card">
-        <div style="font-size:24px;margin-bottom:8px">✈️</div>
+
+      <div class="price-card" data-plan="passport">
+        <div class="plan-icon">🌍</div>
         <div class="price-name">Passport</div>
-        <div class="price-amount">$14.99</div>
-        <div class="price-period" style="color:#888">/month</div>
+        <div class="plan-tagline">Unlock the complete WorldMeals experience.</div>
+        <div class="price-amount" id="passportPrice">$119.88</div>
+        <div class="price-period" id="passportPeriod" style="color:#888">/year · $9.99/mo equivalent</div>
+        <div class="plan-saving" id="passportSaving" style="display:inline-block">SAVE 33%</div>
         <div class="price-feature" style="color:#666"><span>✓</span>Everything in Chef</div>
-        <div class="price-feature" style="color:#666"><span>✓</span>Live chef classes</div>
-        <div class="price-feature" style="color:#666"><span>✓</span>Camera dish ID</div>
-        <div class="price-feature" style="color:#666"><span>✓</span>Family sharing (5)</div>
-        <a href="#" style="display:block;margin-top:16px;padding:10px;border-radius:10px;border:1px solid #E5E5E0;text-align:center;font-size:13px;font-weight:700;color:#1a1a18;text-decoration:none">Go Passport</a>
+        <div class="price-feature" style="color:#666"><span>✓</span>Camera Dish ID</div>
+        <div class="price-feature" style="color:#666"><span>✓</span>Premium WorldMeals tools</div>
+        <a href="#" class="plan-cta plan-cta-light" id="passportCta">Choose Passport → $119.88/yr</a>
+        <div class="plan-disclosure" id="passportDisclosure">$119.88/year. Cancel anytime. Subscription renews automatically unless canceled.</div>
       </div>
     </div>
-    <div style="background:#F9F9F7;border-radius:14px;padding:16px 20px;display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap">
-      <div style="font-size:13px;color:#666">🔒 All payments processed by <b style="color:#1a1a18">Stripe</b></div>
-      <div style="font-size:12px;color:#888">·</div>
-      <div style="font-size:13px;color:#666">🍎 Apple Pay supported</div>
-      <div style="font-size:12px;color:#888">·</div>
-      <div style="font-size:13px;color:#666">G Google Pay supported</div>
-      <div style="font-size:12px;color:#888">·</div>
-      <div style="font-size:13px;color:#666">↩️ 14-day refund guarantee</div>
+
+    <div class="pricing-trust">
+      <span>🔒 Secure checkout</span>
+      <span>↩️ Cancel anytime</span>
+      <span>🌱 Explorer stays free</span>
+      <span>✨ Clear pricing before purchase</span>
     </div>
+    <div class="pricing-note">On iPhone and iPad, paid subscriptions will use Apple's In-App Purchase flow. Prices and currency may be localized by the App Store.</div>
   </div>
 </section>
-
 
 <!-- WORLDMEALS PROMISE -->
 <section class="promise">
@@ -2470,7 +2553,7 @@ body{
   <h2>The world is waiting.<br/>Start exploring it tonight.</h2>
   <p>Discover authentic cuisine, cook with confidence, and connect with the world — one dish at a time.</p>
   <a href="#pricing" class="btn-primary" style="font-size:16px;padding:16px 32px;border-radius:16px">🍽 Start cooking the world</a>
-  <div style="margin-top:16px;font-size:12px;color:#444">7 days free · No card required · Cancel anytime</div>
+  <div style="margin-top:16px;font-size:12px;color:#444">Explorer stays free · Chef includes a 3-day trial · Cancel anytime</div>
 </section>
 
 <!-- FOOTER -->
@@ -2487,7 +2570,7 @@ body{
     <a href="/terms.html" class="footer-link">Terms</a>
     <a href="/contact.html" class="footer-link">Contact</a>
   </div>
-  <div class="footer-stripe">🔒 Payments secured by Stripe · We never see your card</div>
+  <div class="footer-stripe">🔒 Secure payments · Clear pricing · Cancel anytime</div>
 </footer>
 
  
@@ -2861,6 +2944,56 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
+</script>
+
+
+<script>
+(() => {
+  const monthly = document.getElementById('billingMonthly');
+  const annual = document.getElementById('billingAnnual');
+  const chefPrice = document.getElementById('chefPrice');
+  const chefPeriod = document.getElementById('chefPeriod');
+  const chefSaving = document.getElementById('chefSaving');
+  const chefCta = document.getElementById('chefCta');
+  const chefDisclosure = document.getElementById('chefDisclosure');
+  const passportPrice = document.getElementById('passportPrice');
+  const passportPeriod = document.getElementById('passportPeriod');
+  const passportSaving = document.getElementById('passportSaving');
+  const passportCta = document.getElementById('passportCta');
+  const passportDisclosure = document.getElementById('passportDisclosure');
+
+  if (!monthly || !annual) return;
+
+  const renderBilling = (mode) => {
+    const isAnnual = mode === 'annual';
+    monthly.classList.toggle('active', !isAnnual);
+    annual.classList.toggle('active', isAnnual);
+
+    chefPrice.textContent = isAnnual ? '$59.88' : '$7.99';
+    chefPeriod.textContent = isAnnual ? '/year · $4.99/mo equivalent' : '/month';
+    chefSaving.style.display = isAnnual ? 'inline-block' : 'none';
+    chefCta.textContent = isAnnual
+      ? 'Try Chef free for 3 days → then $59.88/yr'
+      : 'Try Chef free for 3 days → then $7.99/mo';
+    chefDisclosure.textContent = isAnnual
+      ? '3 days free, then $59.88/year. Cancel anytime. Subscription renews automatically unless canceled.'
+      : '3 days free, then $7.99/month. Cancel anytime. Subscription renews automatically unless canceled.';
+
+    passportPrice.textContent = isAnnual ? '$119.88' : '$14.99';
+    passportPeriod.textContent = isAnnual ? '/year · $9.99/mo equivalent' : '/month';
+    passportSaving.style.display = isAnnual ? 'inline-block' : 'none';
+    passportCta.textContent = isAnnual
+      ? 'Choose Passport → $119.88/yr'
+      : 'Choose Passport → $14.99/mo';
+    passportDisclosure.textContent = isAnnual
+      ? '$119.88/year. Cancel anytime. Subscription renews automatically unless canceled.'
+      : '$14.99/month. Cancel anytime. Subscription renews automatically unless canceled.';
+  };
+
+  monthly.addEventListener('click', () => renderBilling('monthly'));
+  annual.addEventListener('click', () => renderBilling('annual'));
+  renderBilling('annual');
+})();
 </script>
 
 </body>
