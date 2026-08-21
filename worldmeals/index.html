@@ -1872,6 +1872,49 @@ body{
   font-family:'Inter',system-ui,sans-serif;
 }
 
+
+/* =========================================================
+   WORLDMEALS APPLE IAP STATUS + RESTORE CONTROLS
+   ========================================================= */
+.iap-actions{
+  margin-top:14px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.restore-purchases{
+  display:none;
+  border:0;
+  background:transparent;
+  color:#675E55;
+  font:800 11px/1.2 'Inter',system-ui,sans-serif;
+  text-decoration:underline;
+  text-underline-offset:3px;
+  cursor:pointer;
+  padding:7px 10px;
+}
+.restore-purchases:hover{color:#171512}
+.restore-purchases.is-visible{display:inline-flex}
+.iap-status{
+  min-height:18px;
+  margin-top:8px;
+  color:#70675D;
+  font-size:11px;
+  font-weight:700;
+  line-height:1.45;
+  text-align:center;
+}
+.iap-status[data-state="success"]{color:#167A5A}
+.iap-status[data-state="error"]{color:#A33A2A}
+.iap-status[data-state="pending"]{color:#8A5B13}
+.plan-cta[disabled]{
+  opacity:.65;
+  cursor:wait;
+  transform:none!important;
+}
+
 </style>
 </head>
 <body>
@@ -2524,6 +2567,10 @@ body{
       <span>✨ Clear pricing before purchase</span>
     </div>
     <div class="pricing-note">On iPhone and iPad, paid subscriptions will use Apple's In-App Purchase flow. Prices and currency may be localized by the App Store.</div>
+    <div class="iap-actions">
+      <button type="button" class="restore-purchases" id="restorePurchases">Restore Purchases</button>
+    </div>
+    <div class="iap-status" id="iapStatus" aria-live="polite"></div>
   </div>
 </section>
 
@@ -2969,10 +3016,12 @@ if ('serviceWorker' in navigator) {
   const passportSaving = document.getElementById('passportSaving');
   const passportCta = document.getElementById('passportCta');
   const passportDisclosure = document.getElementById('passportDisclosure');
+  const restorePurchases = document.getElementById('restorePurchases');
+  const iapStatus = document.getElementById('iapStatus');
 
   if (!monthly || !annual) return;
 
-  let billingMode = 'annual';
+  let purchaseInProgress = false;
 
   const productIds = {
     chef: {
@@ -2985,14 +3034,91 @@ if ('serviceWorker' in navigator) {
     }
   };
 
+  const storageKeys = {
+    plan: 'worldmeals.subscription.plan',
+    productId: 'worldmeals.subscription.productId',
+    activeProductIds: 'worldmeals.subscription.activeProductIds',
+    status: 'worldmeals.subscription.status'
+  };
+
+  const nativeIAPBridge = () =>
+    window.webkit?.messageHandlers?.worldMealsIAP || null;
+
+  const isNativeAppleIAPAvailable = () =>
+    Boolean(nativeIAPBridge()?.postMessage);
+
+  const setStatus = (message = '', state = '') => {
+    if (!iapStatus) return;
+    iapStatus.textContent = message;
+    if (state) iapStatus.dataset.state = state;
+    else delete iapStatus.dataset.state;
+  };
+
+  const setPurchaseButtonsBusy = (busy) => {
+    purchaseInProgress = busy;
+    if (chefCta) chefCta.disabled = busy;
+    if (passportCta) passportCta.disabled = busy;
+  };
+
+  const saveEntitlement = ({
+    plan,
+    productId,
+    activeProductIds,
+    status
+  } = {}) => {
+    if (plan) {
+      localStorage.setItem(storageKeys.plan, plan);
+      document.documentElement.dataset.worldMealsPlan = plan;
+    }
+
+    if (productId) {
+      localStorage.setItem(storageKeys.productId, productId);
+    }
+
+    if (Array.isArray(activeProductIds)) {
+      localStorage.setItem(
+        storageKeys.activeProductIds,
+        JSON.stringify(activeProductIds)
+      );
+    }
+
+    if (status) {
+      localStorage.setItem(storageKeys.status, status);
+    }
+
+    let savedActiveProducts = [];
+    try {
+      savedActiveProducts = JSON.parse(
+        localStorage.getItem(storageKeys.activeProductIds) || '[]'
+      );
+    } catch {
+      savedActiveProducts = [];
+    }
+
+    const detail = {
+      plan: plan || localStorage.getItem(storageKeys.plan) || 'explorer',
+      productId: productId || localStorage.getItem(storageKeys.productId) || null,
+      activeProductIds: Array.isArray(activeProductIds)
+        ? activeProductIds
+        : savedActiveProducts,
+      status: status || localStorage.getItem(storageKeys.status) || null
+    };
+
+    window.WorldMealsSubscription = detail;
+
+    window.dispatchEvent(new CustomEvent('worldmeals:plan-changed', {
+      detail
+    }));
+
+    return detail;
+  };
+
   const renderBilling = (mode) => {
-    billingMode = mode;
     const isAnnual = mode === 'annual';
 
     monthly.classList.toggle('active', !isAnnual);
     annual.classList.toggle('active', isAnnual);
 
-    // Chef
     chefPrice.textContent = isAnnual ? '$59.99' : '$7.99';
     chefPeriod.textContent = isAnnual ? '/year · $5.00/mo equivalent' : '/month';
     chefSaving.textContent = 'SAVE 37%';
@@ -3007,7 +3133,6 @@ if ('serviceWorker' in navigator) {
       ? '3 days free, then $59.99/year. Cancel anytime. Subscription renews automatically unless canceled.'
       : '3 days free, then $7.99/month. Cancel anytime. Subscription renews automatically unless canceled.';
 
-    // Passport — no free trial
     passportPrice.textContent = isAnnual ? '$99.99' : '$14.99';
     passportPeriod.textContent = isAnnual ? '/year · $8.33/mo equivalent' : '/month';
     passportSaving.textContent = 'SAVE 44%';
@@ -3023,31 +3148,152 @@ if ('serviceWorker' in navigator) {
       : '$14.99/month. No free trial. Cancel anytime. Subscription renews automatically unless canceled.';
   };
 
-  const requestApplePurchase = (productId) => {
-    if (!productId) return;
+  const postNativeIAPMessage = (payload) => {
+    const bridge = nativeIAPBridge();
+    if (bridge?.postMessage) {
+      bridge.postMessage(payload);
+      return true;
+    }
+    return false;
+  };
 
-    // Preferred iOS WKWebView bridge.
-    const iosBridge = window.webkit?.messageHandlers?.worldMealsIAP;
-    if (iosBridge?.postMessage) {
-      iosBridge.postMessage({
-        action: 'purchase',
-        productId
-      });
+  const requestApplePurchase = (productId) => {
+    if (!productId || purchaseInProgress) return;
+
+    setPurchaseButtonsBusy(true);
+    setStatus('Opening Apple purchase…');
+
+    if (postNativeIAPMessage({
+      action: 'purchase',
+      productId
+    })) {
       return;
     }
 
-    // Optional generic bridge for other native wrappers.
     if (window.WorldMealsIAP?.purchase) {
       window.WorldMealsIAP.purchase(productId);
       return;
     }
 
-    // Safe fallback: expose the request without navigating or jumping to page top.
+    setPurchaseButtonsBusy(false);
+    setStatus(
+      'Apple subscriptions are available inside the WorldMeals iPhone and iPad app.',
+      'error'
+    );
+
     window.dispatchEvent(new CustomEvent('worldmeals:purchase', {
       detail: { productId }
     }));
-    console.warn('WorldMeals purchase bridge is not connected for product:', productId);
   };
+
+  const requestCurrentEntitlements = () => {
+    postNativeIAPMessage({ action: 'entitlements' });
+  };
+
+  const requestRestorePurchases = () => {
+    if (!isNativeAppleIAPAvailable()) {
+      setStatus(
+        'Restore Purchases is available inside the WorldMeals iPhone and iPad app.',
+        'error'
+      );
+      return;
+    }
+
+    setStatus('Restoring Apple purchases…');
+    postNativeIAPMessage({ action: 'restore' });
+  };
+
+  window.addEventListener('worldmeals:iap', (event) => {
+    const detail = event?.detail || {};
+    const status = detail.status || '';
+
+    switch (status) {
+      case 'loading':
+        setPurchaseButtonsBusy(true);
+        setStatus('Opening Apple purchase…');
+        break;
+
+      case 'pending':
+        setPurchaseButtonsBusy(false);
+        setStatus(
+          detail.message || 'Your purchase is pending approval.',
+          'pending'
+        );
+        break;
+
+      case 'cancelled':
+        setPurchaseButtonsBusy(false);
+        setStatus('Purchase cancelled.');
+        break;
+
+      case 'error':
+        setPurchaseButtonsBusy(false);
+        setStatus(
+          detail.message || 'The purchase could not be completed.',
+          'error'
+        );
+        break;
+
+      case 'success': {
+        setPurchaseButtonsBusy(false);
+
+        const saved = saveEntitlement({
+          plan: detail.plan,
+          productId: detail.productId,
+          status: 'active'
+        });
+
+        setStatus(
+          saved.plan === 'passport'
+            ? 'Passport unlocked. Welcome to the full WorldMeals experience.'
+            : 'Chef unlocked. Welcome to WorldMeals Chef.',
+          'success'
+        );
+
+        window.setTimeout(() => {
+          window.location.href = 'app.html';
+        }, 650);
+        break;
+      }
+
+      case 'updated':
+        saveEntitlement({
+          plan: detail.plan,
+          productId: detail.productId,
+          status: 'active'
+        });
+        break;
+
+      case 'entitlements': {
+        const saved = saveEntitlement({
+          plan: detail.plan || 'explorer',
+          activeProductIds: detail.activeProductIds || [],
+          status: detail.plan && detail.plan !== 'explorer'
+            ? 'active'
+            : 'explorer'
+        });
+
+        if (saved.plan !== 'explorer') {
+          setStatus(
+            `Active Apple plan: ${saved.plan === 'passport' ? 'Passport' : 'Chef'}.`,
+            'success'
+          );
+        }
+        break;
+      }
+
+      case 'restored':
+        setPurchaseButtonsBusy(false);
+        setStatus(
+          detail.message || 'Apple purchases restored.',
+          'success'
+        );
+        break;
+
+      default:
+        break;
+    }
+  });
 
   monthly.addEventListener('click', () => renderBilling('monthly'));
   annual.addEventListener('click', () => renderBilling('annual'));
@@ -3060,7 +3306,20 @@ if ('serviceWorker' in navigator) {
     requestApplePurchase(passportCta.dataset.productId);
   });
 
+  restorePurchases?.addEventListener('click', requestRestorePurchases);
+
+  if (isNativeAppleIAPAvailable()) {
+    restorePurchases?.classList.add('is-visible');
+  }
+
+  const savedPlan = localStorage.getItem(storageKeys.plan) || 'explorer';
+  saveEntitlement({
+    plan: savedPlan,
+    status: localStorage.getItem(storageKeys.status) || 'explorer'
+  });
+
   renderBilling('annual');
+  requestCurrentEntitlements();
 })();
 </script>
 
