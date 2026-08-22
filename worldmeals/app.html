@@ -1659,9 +1659,15 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
   </a>
   <div class="wm-nav-actions">
     <span class="wm-plan-chip" id="wmPlanChip">Explorer</span>
-    <button type="button" class="wm-nav-feedback" onclick="openWorldMealsFeedback('general')" aria-label="Send feedback">💬</button>
-    <button type="button" class="wm-nav-upgrade" id="wmUpgradeNavBtn" onclick="wmOpenUpgrade('WorldMeals Premium','chef')">✨ Upgrade</button>
     <div class="fav-count" id="favCount">❤️ 0</div>
+    <details class="wm-menu-wrap" id="wmMenu">
+      <summary class="wm-menu-button" aria-label="WorldMeals menu">☰</summary>
+      <div class="wm-menu-panel">
+        <button type="button" class="wm-menu-item" id="wmUpgradeMenuBtn" onclick="document.getElementById('wmMenu')?.removeAttribute('open');wmOpenUpgrade('WorldMeals Premium','chef')">✨ Upgrade</button>
+        <button type="button" class="wm-menu-item" id="wmManageMenuBtn" onclick="document.getElementById('wmMenu')?.removeAttribute('open');wmManageSubscription()">⚙️ Manage Subscription</button>
+        <button type="button" class="wm-menu-item" id="wmFeedbackMenuBtn" onclick="document.getElementById('wmMenu')?.removeAttribute('open');openWorldMealsFeedback('general')">💬 Share Feedback</button>
+      </div>
+    </details>
   </div>
 </nav>
 
@@ -1805,6 +1811,7 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
     </div>
   </div>
   <div class="grid" id="grid"></div>
+
 </div>
 
 <!-- PLANNER -->
@@ -2796,6 +2803,7 @@ function markCooked(){
 
   if(!countryWasAlreadyConquered){
     const conqueredMeal = currentMeal;
+    window.wmPendingFeedbackAfterCelebration = conqueredMeal;
     closeModal();
     window.setTimeout(() => showCountryCelebration(conqueredMeal), 180);
   }else{
@@ -2887,6 +2895,7 @@ function scanSendToChef(){
 }
 
 function showPage(name){
+  if(name==="browse" && typeof wmMaybeShowTrialReminderForDishes==="function" && wmMaybeShowTrialReminderForDishes()) return;
   if((name==="planner" || name==="tour") && !wmRequirePlan("chef", name==="planner" ? "Weekly Meal Planner" : "World Tour Challenge")) return;
   if(name==="scan" && !wmRequirePlan("passport","Camera & Fridge Scan")) return;
   const nextPage=document.getElementById("page-"+name);
@@ -3061,6 +3070,12 @@ function closeCountryCelebration(){
   document.getElementById("tourCelebration").classList.remove("open");
   document.querySelectorAll(".confetti-piece").forEach(el=>el.remove());
   showPage("tour");
+
+  const pendingFeedbackMeal = window.wmPendingFeedbackAfterCelebration;
+  if(pendingFeedbackMeal){
+    window.wmPendingFeedbackAfterCelebration = null;
+    window.setTimeout(()=>wmMaybeShowQuickFeedback(pendingFeedbackMeal),650);
+  }
 }
 
 function renderBadgeGallery(){
@@ -4112,11 +4127,12 @@ if ('serviceWorker' in navigator) {
 <style>
 .wm-nav-actions{display:flex;align-items:center;gap:7px}
 .wm-plan-chip{display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:6px 10px;border-radius:999px;background:#FFF7EA;border:1px solid #E8D3B8;color:#8A4B18;font-size:10px;font-weight:900;white-space:nowrap}
-.wm-nav-feedback,.wm-nav-upgrade{min-height:32px;border:1px solid #E8DDD0;background:#fff;border-radius:999px;color:#6B4B2C;font:850 11px Inter,system-ui,sans-serif;cursor:pointer;box-shadow:0 7px 16px rgba(83,55,29,.07)}
-.wm-nav-feedback{width:34px;padding:0;font-size:15px}.wm-nav-upgrade{padding:7px 11px;background:linear-gradient(135deg,#FFF7EA,#FFFFFF);color:#A85212}
-.wm-trial-banner{display:none;max-width:980px;margin:12px auto 0;padding:13px 14px;border:1px solid #EDC47A;border-radius:18px;background:linear-gradient(135deg,#FFF8E7,#FFFDF8);box-shadow:0 10px 26px rgba(122,77,23,.10);align-items:center;gap:12px}
-.wm-trial-banner.show{display:flex}.wm-trial-copy{flex:1;min-width:0}.wm-trial-title{font-size:13px;font-weight:900;color:#6E430F;margin-bottom:3px}.wm-trial-text{font-size:11px;color:#7B6650;line-height:1.5}
-.wm-trial-manage{flex:0 0 auto;border:0;border-radius:12px;padding:10px 12px;background:#251B13;color:#fff;font:850 11px Inter,system-ui,sans-serif;cursor:pointer}
+.wm-menu-wrap{position:relative}
+.wm-menu-button{list-style:none;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1px solid #E8DDD0;background:#fff;border-radius:12px;color:#F28C28;font:900 17px Inter,system-ui,sans-serif;cursor:pointer;box-shadow:0 7px 16px rgba(83,55,29,.07);user-select:none}
+.wm-menu-button::-webkit-details-marker{display:none}.wm-menu-button::marker{display:none;content:""}
+.wm-menu-panel{position:absolute;right:0;top:42px;z-index:120;min-width:205px;padding:7px;background:#FFFDF9;border:1px solid #E8DDD0;border-radius:16px;box-shadow:0 18px 45px rgba(45,33,23,.18)}
+.wm-menu-item{width:100%;border:0;background:transparent;border-radius:11px;padding:11px 12px;text-align:left;color:#3F3025;font:850 12px Inter,system-ui,sans-serif;cursor:pointer}.wm-menu-item:hover{background:#FFF5E8}
+.wm-trial-title{font-size:15px;font-weight:900;color:#6E430F;margin-bottom:7px;text-align:center}.wm-trial-text{font-size:12px;color:#7B6650;line-height:1.6;text-align:center}
 .wm-layer{display:none;position:fixed;inset:0;z-index:950;align-items:center;justify-content:center;padding:18px;background:rgba(31,22,14,.70);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
 .wm-layer.open{display:flex;animation:wmLayerFade .2s ease both}.wm-dialog{width:min(520px,100%);max-height:90vh;overflow:auto;position:relative;border-radius:30px;padding:26px 21px;background:radial-gradient(circle at 50% 0,rgba(245,166,35,.18),transparent 36%),linear-gradient(155deg,#FFFDF8,#FFF4E2);border:1px solid #EDD6B5;box-shadow:0 34px 90px rgba(0,0,0,.28)}.wm-dialog.wide{width:min(620px,100%)}
 .wm-close{position:absolute;right:14px;top:14px;width:34px;height:34px;border:0;border-radius:50%;background:rgba(31,26,20,.07);color:#46372B;font-weight:900;cursor:pointer}
@@ -4127,16 +4143,24 @@ if ('serviceWorker' in navigator) {
 .wm-plan-compare{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}.wm-plan-mini{background:#fff;border:1px solid #E8DDD0;border-radius:18px;padding:14px}.wm-plan-mini strong{display:block;font-size:15px;color:#2D2117;margin-bottom:5px}.wm-plan-mini span{display:block;font-size:11px;color:#77685A;line-height:1.5}.wm-ai-meter{text-align:center;font-size:11px;color:#7A6B5D;margin:8px 0 0;font-weight:800}
 .wm-quick-feedback{display:none;position:fixed;left:50%;bottom:106px;transform:translateX(-50%);z-index:780;width:min(390px,calc(100% - 24px));padding:12px 13px;border-radius:18px;background:#251B13;color:#fff;box-shadow:0 18px 44px rgba(31,22,14,.30);align-items:center;gap:10px}.wm-quick-feedback.show{display:flex;animation:wmQuickUp .22s ease both}.wm-quick-copy{flex:1;font-size:11px;line-height:1.45;font-weight:750}.wm-quick-btn{width:36px;height:36px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(255,255,255,.09);font-size:17px;cursor:pointer}
 @keyframes wmLayerFade{from{opacity:0}to{opacity:1}}@keyframes wmQuickUp{from{opacity:0;transform:translate(-50%,10px)}to{opacity:1;transform:translate(-50%,0)}}
-@media(max-width:620px){.wm-plan-chip{display:none}.wm-nav-upgrade{font-size:10px;padding:7px 9px}.wm-trial-banner{margin:10px 12px 0;align-items:flex-start}.wm-trial-manage{padding:9px 10px}.wm-actions,.wm-plan-compare{grid-template-columns:1fr}}
+.wm-actions.single{grid-template-columns:1fr}
+@media(max-width:620px){.wm-plan-chip{display:none}.wm-actions,.wm-plan-compare{grid-template-columns:1fr}}
 </style>
 
-<div class="wm-trial-banner" id="wmTrialBanner" role="status">
-  <div class="wm-trial-copy"><div class="wm-trial-title">Your WorldMeals Chef trial ends soon 🍽️</div><div class="wm-trial-text" id="wmTrialText"></div></div>
-  <button type="button" class="wm-trial-manage" onclick="wmManageSubscription()">Manage</button>
+<div class="wm-layer" id="wmTrialReminder" role="dialog" aria-modal="true" aria-labelledby="wmTrialReminderTitle">
+  <div class="wm-dialog">
+    <div class="wm-dialog-icon">⏰</div>
+    <h2 id="wmTrialReminderTitle">Your Chef trial ends tomorrow</h2>
+    <div class="wm-trial-text" id="wmTrialText"></div>
+    <div class="wm-actions">
+      <button type="button" class="wm-primary" onclick="wmContinueToDishesAfterTrialReminder()">Continue to Dishes →</button>
+      <button type="button" class="wm-secondary" onclick="wmManageFromTrialReminder()">Manage Subscription</button>
+    </div>
+  </div>
 </div>
 
 <div class="wm-layer" id="wmWelcome" role="dialog" aria-modal="true" aria-labelledby="wmWelcomeTitle">
-  <div class="wm-dialog"><div class="wm-dialog-icon" id="wmWelcomeIcon">🌍</div><h2 id="wmWelcomeTitle">Welcome to WorldMeals</h2><div class="wm-dialog-copy" id="wmWelcomeCopy"></div><div class="wm-highlight" id="wmWelcomeHighlight"></div><div class="wm-actions"><button type="button" class="wm-primary" onclick="wmFinishWelcome()">Start exploring →</button><button type="button" class="wm-secondary" onclick="openWorldMealsFeedback('welcome')">Share feedback 💬</button></div></div>
+  <div class="wm-dialog"><div class="wm-dialog-icon" id="wmWelcomeIcon">🌍</div><h2 id="wmWelcomeTitle">Welcome to WorldMeals</h2><div class="wm-dialog-copy" id="wmWelcomeCopy"></div><div class="wm-highlight" id="wmWelcomeHighlight"></div><div class="wm-actions single"><button type="button" class="wm-primary" onclick="wmFinishWelcome()">Start exploring →</button></div></div>
 </div>
 
 <div class="wm-layer" id="wmUpgrade" role="dialog" aria-modal="true" aria-labelledby="wmUpgradeTitle">
@@ -4162,25 +4186,127 @@ function wmRequirePlan(required,featureName){if(wmHasPlan(required))return true;
 function wmOpenUpgrade(featureName,requiredPlan="chef"){const title=document.getElementById("wmUpgradeTitle"),copy=document.getElementById("wmUpgradeCopy"),meter=document.getElementById("wmUpgradeAIMeter");if(title)title.textContent=`Unlock ${featureName||"more of WorldMeals"} ✨`;if(copy)copy.textContent=requiredPlan==="passport"?"This experience is included with WorldMeals Passport.":"This experience is included with WorldMeals Chef and Passport.";if(meter)meter.textContent=wmPlan()==="explorer"?`Explorer AI recipes remaining: ${wmExplorerAIRemaining()} of 5`:"";document.getElementById("wmUpgrade")?.classList.add("open")}
 function wmCloseUpgrade(){document.getElementById("wmUpgrade")?.classList.remove("open")}function wmGoToPricing(){window.location.href="index.html#pricing"}
 function wmPostNativeIAP(payload){const bridge=window.webkit?.messageHandlers?.worldMealsIAP;if(bridge?.postMessage){bridge.postMessage(payload);return true}return false}
-function wmApplyIAPDetail(detail={}){if(detail.plan)localStorage.setItem(WM_KEYS.plan,detail.plan);if(detail.productId)localStorage.setItem(WM_KEYS.productId,detail.productId);if(Array.isArray(detail.activeProductIds))localStorage.setItem(WM_KEYS.activeProducts,JSON.stringify(detail.activeProductIds));if(detail.status)localStorage.setItem(WM_KEYS.status,detail.status==="entitlements"?(detail.plan&&detail.plan!=="explorer"?"active":"explorer"):detail.status);if(typeof detail.isIntroductoryOffer==="boolean")localStorage.setItem(WM_KEYS.introductory,detail.isIntroductoryOffer?"1":"0");if(detail.trialEndDate)localStorage.setItem(WM_KEYS.trialEnd,detail.trialEndDate);else if(detail.isIntroductoryOffer===false||detail.plan==="explorer")localStorage.removeItem(WM_KEYS.trialEnd);if(detail.plan==="explorer"){localStorage.removeItem(WM_KEYS.productId);localStorage.removeItem(WM_KEYS.introductory)}wmRefreshMembershipUI();wmRenderTrialReminder();if(detail.status==="success"||detail.status==="entitlements")wmMaybeShowWelcome()}
-window.addEventListener("worldmeals:iap",event=>wmApplyIAPDetail(event?.detail||{}));window.addEventListener("worldmeals:plan-changed",event=>wmApplyIAPDetail(event?.detail||{}));
-function wmRefreshMembershipUI(){const plan=wmPlan(),chip=document.getElementById("wmPlanChip"),upgrade=document.getElementById("wmUpgradeNavBtn");if(chip)chip.textContent=plan==="passport"?"🌍 Passport":plan==="chef"?"👨‍🍳 Chef":`🌱 Explorer · ${wmExplorerAIRemaining()}/5 AI`;if(upgrade)upgrade.style.display=plan==="explorer"?"inline-flex":"none";[["planner","Planner","Planner 🔒","chef"],["tour","Tour","Tour 🔒","chef"],["scan","Scan","Scan 🔒","passport"]].forEach(([name,on,off,need])=>{const lb=document.getElementById("nb-"+name)?.querySelector(".lb");if(lb)lb.textContent=wmHasPlan(need)?on:off});const chefLb=document.getElementById("nb-chef")?.querySelector(".lb");if(chefLb)chefLb.textContent=wmHasPlan("chef")?"Chef":wmExplorerAIRemaining()>0?`Chef ${wmExplorerAIRemaining()}/5`:"Chef 🔒"}
-function wmWelcomeSeenKey(plan){return`wm_welcome_seen_v3_${plan}`}
-function wmMaybeShowWelcome(){const plan=wmPlan(),key=wmWelcomeSeenKey(plan);if(localStorage.getItem(key)==="1")return;const icon=document.getElementById("wmWelcomeIcon"),title=document.getElementById("wmWelcomeTitle"),copy=document.getElementById("wmWelcomeCopy"),highlight=document.getElementById("wmWelcomeHighlight"),intro=localStorage.getItem(WM_KEYS.introductory)==="1",productId=localStorage.getItem(WM_KEYS.productId),trialEnd=localStorage.getItem(WM_KEYS.trialEnd);if(plan==="passport"){icon.textContent="🌍";title.textContent="Welcome to WorldMeals Passport";copy.textContent="You’ve unlocked the complete WorldMeals experience—Chef features, Camera & Fridge Scan, and our premium tools.";highlight.textContent="Your Passport is active. Start exploring, cooking, scanning, and building your journey through world cuisine."}else if(plan==="chef"){icon.textContent="👨‍🍳";title.textContent="Welcome to WorldMeals Chef";copy.textContent="Unlimited AI recipes, smart substitutions, the weekly planner, and World Tour are ready for you.";if(intro&&trialEnd){const end=new Date(trialEnd),when=Number.isNaN(end.getTime())?"soon":end.toLocaleDateString(undefined,{month:"short",day:"numeric"});highlight.textContent=`Your 3-day Chef introductory trial is active and is scheduled to renew ${when} at ${WM_PRODUCTS[productId]?.price||"your App Store price"} unless canceled before the trial ends.`}else{highlight.textContent="Your Chef subscription is active. Apple manages your billing and subscription settings."}}else{icon.textContent="🌱";title.textContent="Welcome to WorldMeals";copy.textContent="Explore 1000+ dishes from around the world, save favorites, and start your culinary journey.";highlight.textContent=`Explorer includes 5 AI recipe experiences for the lifetime of the free tier. You have ${wmExplorerAIRemaining()} remaining. Upgrade only when you want more.`}document.getElementById("wmWelcome")?.classList.add("open")}
-function wmFinishWelcome(){localStorage.setItem(wmWelcomeSeenKey(wmPlan()),"1");document.getElementById("wmWelcome")?.classList.remove("open")}
-function wmRenderTrialReminder(){const banner=document.getElementById("wmTrialBanner"),text=document.getElementById("wmTrialText");if(!banner||!text)return;banner.classList.remove("show");const intro=localStorage.getItem(WM_KEYS.introductory)==="1",raw=localStorage.getItem(WM_KEYS.trialEnd),productId=localStorage.getItem(WM_KEYS.productId);if(wmPlan()!=="chef"||!intro||!raw)return;const end=new Date(raw),remaining=end.getTime()-Date.now(),oneDay=86400000;if(Number.isNaN(end.getTime())||remaining<=0||remaining>oneDay)return;const renewDate=end.toLocaleDateString(undefined,{weekday:"short",month:"short",day:"numeric"}),price=WM_PRODUCTS[productId]?.price||"your App Store price";text.textContent=`Your subscription is scheduled to renew at ${price} on ${renewDate} unless canceled before the trial ends.`;banner.classList.add("show")}
+function wmApplyIAPDetail(detail={}){
+  if(detail.plan)localStorage.setItem(WM_KEYS.plan,detail.plan);
+  if(detail.productId)localStorage.setItem(WM_KEYS.productId,detail.productId);
+  if(Array.isArray(detail.activeProductIds))localStorage.setItem(WM_KEYS.activeProducts,JSON.stringify(detail.activeProductIds));
+  if(detail.status)localStorage.setItem(WM_KEYS.status,detail.status==="entitlements"?(detail.plan&&detail.plan!=="explorer"?"active":"explorer"):detail.status);
+  if(typeof detail.isIntroductoryOffer==="boolean")localStorage.setItem(WM_KEYS.introductory,detail.isIntroductoryOffer?"1":"0");
+  if(detail.trialEndDate)localStorage.setItem(WM_KEYS.trialEnd,detail.trialEndDate);
+  else if(detail.isIntroductoryOffer===false||detail.plan==="explorer")localStorage.removeItem(WM_KEYS.trialEnd);
+  if(detail.plan==="explorer"){
+    localStorage.removeItem(WM_KEYS.productId);
+    localStorage.removeItem(WM_KEYS.introductory);
+  }
+  wmRefreshMembershipUI();
+
+  // Welcome is a post-purchase moment only. Entitlement refreshes, restores,
+  // and ordinary app launches never open the welcome dialog.
+  if(detail.status==="success" && (detail.plan==="chef" || detail.plan==="passport")){
+    wmShowSubscriptionWelcome(detail.plan);
+  }
+}
+window.addEventListener("worldmeals:iap",event=>wmApplyIAPDetail(event?.detail||{}));
+window.addEventListener("worldmeals:plan-changed",event=>wmApplyIAPDetail(event?.detail||{}));
+
+function wmRefreshMembershipUI(){
+  const plan=wmPlan(),chip=document.getElementById("wmPlanChip"),upgrade=document.getElementById("wmUpgradeMenuBtn"),manage=document.getElementById("wmManageMenuBtn");
+  if(chip)chip.textContent=plan==="passport"?"🌍 Passport":plan==="chef"?"👨‍🍳 Chef":`🌱 Explorer · ${wmExplorerAIRemaining()}/5 AI`;
+  if(upgrade)upgrade.style.display=plan==="explorer"?"block":"none";
+  if(manage)manage.style.display=plan==="explorer"?"none":"block";
+  [["planner","Planner","Planner 🔒","chef"],["tour","Tour","Tour 🔒","chef"],["scan","Scan","Scan 🔒","passport"]].forEach(([name,on,off,need])=>{
+    const lb=document.getElementById("nb-"+name)?.querySelector(".lb");
+    if(lb)lb.textContent=wmHasPlan(need)?on:off;
+  });
+  const chefLb=document.getElementById("nb-chef")?.querySelector(".lb");
+  if(chefLb)chefLb.textContent=wmHasPlan("chef")?"Chef":wmExplorerAIRemaining()>0?`Chef ${wmExplorerAIRemaining()}/5`:"Chef 🔒";
+}
+
+function wmShowSubscriptionWelcome(plan=wmPlan()){
+  if(plan!=="chef" && plan!=="passport")return;
+  const icon=document.getElementById("wmWelcomeIcon"),title=document.getElementById("wmWelcomeTitle"),copy=document.getElementById("wmWelcomeCopy"),highlight=document.getElementById("wmWelcomeHighlight"),intro=localStorage.getItem(WM_KEYS.introductory)==="1",productId=localStorage.getItem(WM_KEYS.productId),trialEnd=localStorage.getItem(WM_KEYS.trialEnd);
+  if(plan==="passport"){
+    icon.textContent="🌍";
+    title.textContent="Welcome to WorldMeals Passport";
+    copy.textContent="You’ve unlocked the complete WorldMeals experience—Chef features, Camera & Fridge Scan, and our premium tools.";
+    highlight.textContent="Your Passport is active. Start exploring, cooking, scanning, and building your journey through world cuisine.";
+  }else{
+    icon.textContent="👨‍🍳";
+    title.textContent="Welcome to WorldMeals Chef";
+    copy.textContent="Unlimited AI recipes, smart substitutions, the weekly planner, and World Tour are ready for you.";
+    if(intro&&trialEnd){
+      const end=new Date(trialEnd),when=Number.isNaN(end.getTime())?"soon":end.toLocaleDateString(undefined,{month:"short",day:"numeric"});
+      highlight.textContent=`Your 3-day Chef introductory trial is active and is scheduled to renew ${when} at ${WM_PRODUCTS[productId]?.price||"your App Store price"} unless canceled before the trial ends.`;
+    }else{
+      highlight.textContent="Your Chef subscription is active. Apple manages your billing and subscription settings.";
+    }
+  }
+  document.getElementById("wmWelcome")?.classList.add("open");
+}
+function wmFinishWelcome(){document.getElementById("wmWelcome")?.classList.remove("open")}
+
+function wmTrialReminderState(){
+  const intro=localStorage.getItem(WM_KEYS.introductory)==="1";
+  const raw=localStorage.getItem(WM_KEYS.trialEnd);
+  const productId=localStorage.getItem(WM_KEYS.productId);
+  if(wmPlan()!=="chef"||!intro||!raw)return null;
+  const end=new Date(raw),remaining=end.getTime()-Date.now(),oneDay=86400000;
+  if(Number.isNaN(end.getTime())||remaining<=0||remaining>oneDay)return null;
+  const seenKey=`wm_trial_reminder_seen_${raw}`;
+  if(localStorage.getItem(seenKey)==="1")return null;
+  return {raw,end,productId,seenKey};
+}
+function wmMaybeShowTrialReminderForDishes(){
+  const state=wmTrialReminderState();
+  if(!state)return false;
+  const text=document.getElementById("wmTrialText");
+  const renewDate=state.end.toLocaleDateString(undefined,{weekday:"short",month:"short",day:"numeric"});
+  const price=WM_PRODUCTS[state.productId]?.price||"your App Store price";
+  if(text)text.textContent=`Your WorldMeals Chef subscription is scheduled to renew at ${price} on ${renewDate} unless canceled before the trial ends.`;
+  document.getElementById("wmTrialReminder")?.classList.add("open");
+  return true;
+}
+function wmMarkTrialReminderSeen(){
+  const raw=localStorage.getItem(WM_KEYS.trialEnd);
+  if(raw)localStorage.setItem(`wm_trial_reminder_seen_${raw}`,"1");
+}
+function wmContinueToDishesAfterTrialReminder(){
+  wmMarkTrialReminderSeen();
+  document.getElementById("wmTrialReminder")?.classList.remove("open");
+  showPage("browse");
+}
+function wmManageFromTrialReminder(){
+  wmMarkTrialReminderSeen();
+  document.getElementById("wmTrialReminder")?.classList.remove("open");
+  wmManageSubscription();
+}
 function wmManageSubscription(){if(wmPostNativeIAP({action:"manageSubscriptions"}))return;if(typeof toast==="function")toast("Manage your subscription from your App Store account.")}
-function openWorldMealsFeedback(source="general",meal=null){wmFeedbackContext={source,mealId:meal?.id??null,mealName:meal?.name??null};const type=document.getElementById("wmFeedbackType");if(type){if(source==="recipe")type.value="recipe";else if(source==="chef")type.value="chef";else if(source==="scan")type.value="scan";else type.value="other"}document.getElementById("wmWelcome")?.classList.remove("open");document.getElementById("wmFeedback")?.classList.add("open");setTimeout(()=>document.getElementById("wmFeedbackMessage")?.focus(),100)}
+
+function openWorldMealsFeedback(source="general",meal=null){
+  wmFeedbackContext={source,mealId:meal?.id??null,mealName:meal?.name??null};
+  const type=document.getElementById("wmFeedbackType");
+  if(type){if(source==="recipe")type.value="recipe";else if(source==="chef")type.value="chef";else if(source==="scan")type.value="scan";else type.value="other"}
+  document.getElementById("wmWelcome")?.classList.remove("open");
+  document.getElementById("wmFeedback")?.classList.add("open");
+  // Queue retry begins only after the user deliberately opens Feedback.
+  void wmRetryFeedbackQueue();
+  setTimeout(()=>document.getElementById("wmFeedbackMessage")?.focus(),100);
+}
 function closeWorldMealsFeedback(){document.getElementById("wmFeedback")?.classList.remove("open")}
 function wmFeedbackPayload(extra={}){return{anonymous_id:typeof getAnonId==="function"?getAnonId():null,plan:wmPlan(),product_id:localStorage.getItem(WM_KEYS.productId)||null,type:document.getElementById("wmFeedbackType")?.value||"other",rating:document.getElementById("wmFeedbackRating")?.value?Number(document.getElementById("wmFeedbackRating").value):null,message:document.getElementById("wmFeedbackMessage")?.value.trim()||"",source:wmFeedbackContext.source,meal_id:wmFeedbackContext.mealId,meal_name:wmFeedbackContext.mealName,page:document.querySelector(".page.active")?.id||"unknown",client_time:new Date().toISOString(),...extra}}
 async function wmSendFeedbackPayload(payload){const res=await fetch("/api/feedback",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});if(!res.ok)throw new Error("Feedback endpoint unavailable");return true}
 function wmQueueFeedback(payload){let queue=[];try{queue=JSON.parse(localStorage.getItem("wm_feedback_queue")||"[]")}catch{queue=[]}queue.push(payload);localStorage.setItem("wm_feedback_queue",JSON.stringify(queue.slice(-25)))}
 async function wmRetryFeedbackQueue(){let queue=[];try{queue=JSON.parse(localStorage.getItem("wm_feedback_queue")||"[]")}catch{return}if(!queue.length)return;const remaining=[];for(const payload of queue.slice(0,5)){try{await wmSendFeedbackPayload(payload)}catch{remaining.push(payload)}}remaining.push(...queue.slice(5));localStorage.setItem("wm_feedback_queue",JSON.stringify(remaining.slice(-25)))}
-async function submitWorldMealsFeedback(){const status=document.getElementById("wmFeedbackStatus"),payload=wmFeedbackPayload();if(!payload.message){if(status)status.textContent="Please write a short message first.";return}if(status)status.textContent="Sending…";try{await wmSendFeedbackPayload(payload);if(status)status.textContent="Thank you ❤️ Your feedback was sent.";document.getElementById("wmFeedbackMessage").value="";document.getElementById("wmFeedbackRating").value="";setTimeout(()=>{closeWorldMealsFeedback();if(typeof toast==="function")toast("Thank you for helping WorldMeals grow ❤️")},700)}catch(error){console.warn("WorldMeals feedback queued:",error);wmQueueFeedback(payload);if(status)status.textContent="Saved safely on this device. WorldMeals will retry sending it automatically."}}
+async function submitWorldMealsFeedback(){const status=document.getElementById("wmFeedbackStatus"),payload=wmFeedbackPayload();if(!payload.message){if(status)status.textContent="Please write a short message first.";return}if(status)status.textContent="Sending…";try{await wmSendFeedbackPayload(payload);if(status)status.textContent="Thank you ❤️ Your feedback was sent.";document.getElementById("wmFeedbackMessage").value="";document.getElementById("wmFeedbackRating").value="";setTimeout(()=>{closeWorldMealsFeedback();if(typeof toast==="function")toast("Thank you for helping WorldMeals grow ❤️")},700)}catch(error){console.warn("WorldMeals feedback queued:",error);wmQueueFeedback(payload);if(status)status.textContent="Saved safely on this device. WorldMeals will retry when you open feedback again."}}
 function wmMaybeShowQuickFeedback(meal){if(!meal?.id||localStorage.getItem(`wm_quick_feedback_${meal.id}`)==="1")return;wmQuickFeedbackMeal=meal;const copy=document.getElementById("wmQuickFeedbackCopy");if(copy)copy.textContent=`How was ${meal.name}?`;document.getElementById("wmQuickFeedback")?.classList.add("show")}
 async function wmQuickFeedback(helpful){const meal=wmQuickFeedbackMeal;document.getElementById("wmQuickFeedback")?.classList.remove("show");if(!meal)return;localStorage.setItem(`wm_quick_feedback_${meal.id}`,"1");const payload={anonymous_id:typeof getAnonId==="function"?getAnonId():null,plan:wmPlan(),product_id:localStorage.getItem(WM_KEYS.productId)||null,type:"recipe",rating:helpful?5:2,message:helpful?"Quick feedback: helpful":"Quick feedback: needs improvement",source:"recipe_quick",meal_id:meal.id,meal_name:meal.name,page:document.querySelector(".page.active")?.id||"unknown",client_time:new Date().toISOString()};try{await wmSendFeedbackPayload(payload)}catch{wmQueueFeedback(payload)}if(helpful){if(typeof toast==="function")toast("Thank you! ❤️")}else{openWorldMealsFeedback("recipe",meal);const rating=document.getElementById("wmFeedbackRating");if(rating)rating.value="2"}wmQuickFeedbackMeal=null}
 function wmRequestEntitlements(){wmPostNativeIAP({action:"entitlements"})}
-function wmInitializeMemberExperience(){wmRefreshMembershipUI();wmRenderTrialReminder();wmRequestEntitlements();wmRetryFeedbackQueue();setTimeout(()=>{wmRefreshMembershipUI();wmRenderTrialReminder();wmMaybeShowWelcome()},900);setInterval(wmRenderTrialReminder,15*60*1000)}
+function wmInitializeMemberExperience(){
+  // Startup stays quiet: refresh local UI + request StoreKit entitlements only.
+  // No welcome popup, trial popup, feedback retry, or feedback API request runs here.
+  wmRefreshMembershipUI();
+  wmRequestEntitlements();
+}
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",wmInitializeMemberExperience,{once:true});else wmInitializeMemberExperience();
 </script>
 
