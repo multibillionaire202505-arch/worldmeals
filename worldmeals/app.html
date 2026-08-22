@@ -1665,7 +1665,7 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 <body>
 
 <nav>
-  <a href="index.html" class="back">← worldmeals.app</a>
+  <a href="index.html?stay=1" class="back">← worldmeals.app</a>
   <a href="index.html" class="logo" aria-label="WorldMeals home">
     <img src="/images/worldmeals-logo-horizontal.png" alt="WorldMeals" class="top-brand-logo">
   </a>
@@ -4196,7 +4196,7 @@ if ('serviceWorker' in navigator) {
 <div class="wm-quick-feedback" id="wmQuickFeedback"><div class="wm-quick-copy" id="wmQuickFeedbackCopy">How was this recipe?</div><button type="button" class="wm-quick-btn" onclick="wmQuickFeedback(true)" aria-label="Helpful">👍</button><button type="button" class="wm-quick-btn" onclick="wmQuickFeedback(false)" aria-label="Needs improvement">👎</button></div>
 
 <script>
-const WM_KEYS={plan:"worldmeals.subscription.plan",productId:"worldmeals.subscription.productId",activeProducts:"worldmeals.subscription.activeProductIds",status:"worldmeals.subscription.status",trialEnd:"worldmeals.subscription.trialEndDate",introductory:"worldmeals.subscription.isIntroductoryOffer",explorerAI:"wm_explorer_ai_used"};
+const WM_KEYS={plan:"worldmeals.subscription.plan",productId:"worldmeals.subscription.productId",activeProducts:"worldmeals.subscription.activeProductIds",status:"worldmeals.subscription.status",trialEnd:"worldmeals.subscription.trialEndDate",introductory:"worldmeals.subscription.isIntroductoryOffer",purchaseHandoff:"worldmeals.subscription.justPurchased",explorerAI:"wm_explorer_ai_used"};
 const WM_PRODUCTS={"app.worldmeals.chef.monthly":{plan:"chef",price:"$7.99/month"},"app.worldmeals.chef.annual":{plan:"chef",price:"$59.99/year"},"app.worldmeals.passport.monthly":{plan:"passport",price:"$14.99/month"},"app.worldmeals.passport.annual":{plan:"passport",price:"$99.99/year"}};
 let wmQuickFeedbackMeal=null;let wmFeedbackContext={source:"general",mealId:null,mealName:null};
 function wmPlan(){const p=localStorage.getItem(WM_KEYS.plan);return p==="passport"||p==="chef"?p:"explorer"}
@@ -4208,6 +4208,22 @@ function wmRequirePlan(required,featureName){if(wmHasPlan(required))return true;
 function wmOpenUpgrade(featureName,requiredPlan="chef"){const title=document.getElementById("wmUpgradeTitle"),copy=document.getElementById("wmUpgradeCopy"),meter=document.getElementById("wmUpgradeAIMeter");if(title)title.textContent=`Unlock ${featureName||"more of WorldMeals"} ✨`;if(copy)copy.textContent=requiredPlan==="passport"?"This experience is included with WorldMeals Passport.":"This experience is included with WorldMeals Chef and Passport.";if(meter)meter.textContent=wmPlan()==="explorer"?`Explorer AI recipes remaining: ${wmExplorerAIRemaining()} of 5`:"";document.getElementById("wmUpgrade")?.classList.add("open")}
 function wmCloseUpgrade(){document.getElementById("wmUpgrade")?.classList.remove("open")}function wmGoToPricing(){window.location.href="index.html#pricing"}
 function wmPostNativeIAP(payload){const bridge=window.webkit?.messageHandlers?.worldMealsIAP;if(bridge?.postMessage){bridge.postMessage(payload);return true}return false}
+function wmConsumePurchaseHandoff(plan){
+  const raw=localStorage.getItem(WM_KEYS.purchaseHandoff);
+  if(!raw)return false;
+  try{
+    const data=JSON.parse(raw);
+    const age=Date.now()-Number(data?.createdAt||0);
+    const validPlan=data?.plan===plan&&(plan==="chef"||plan==="passport");
+    const fresh=age>=0&&age<=15*60*1000;
+    if(validPlan&&fresh){
+      localStorage.removeItem(WM_KEYS.purchaseHandoff);
+      return true;
+    }
+    if(!fresh)localStorage.removeItem(WM_KEYS.purchaseHandoff);
+  }catch{localStorage.removeItem(WM_KEYS.purchaseHandoff)}
+  return false;
+}
 function wmApplyIAPDetail(detail={}){
   if(detail.plan)localStorage.setItem(WM_KEYS.plan,detail.plan);
   if(detail.productId)localStorage.setItem(WM_KEYS.productId,detail.productId);
@@ -4222,9 +4238,13 @@ function wmApplyIAPDetail(detail={}){
   }
   wmRefreshMembershipUI();
 
-  // Welcome is a post-purchase moment only. Entitlement refreshes, restores,
-  // and ordinary app launches never open the welcome dialog.
+  // Welcome is a post-purchase moment only. A purchase completed on index.html
+  // leaves a short-lived one-time marker. app.html waits for StoreKit's verified
+  // entitlement before consuming that marker and showing the welcome.
   if(detail.status==="success" && (detail.plan==="chef" || detail.plan==="passport")){
+    localStorage.removeItem(WM_KEYS.purchaseHandoff);
+    wmShowSubscriptionWelcome(detail.plan);
+  }else if(detail.status==="entitlements" && (detail.plan==="chef" || detail.plan==="passport") && wmConsumePurchaseHandoff(detail.plan)){
     wmShowSubscriptionWelcome(detail.plan);
   }
 }
