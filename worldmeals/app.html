@@ -2152,7 +2152,13 @@ const SPICE=["","Mild 🟢","Low 🟡","Medium 🟠","Hot 🔴","Fiery 🌶️"]
 const SCOL=["","#22C55E","#EAB308","#F97316","#EF4444","#9B1C1C"];
 const SLAB={spice:"🌶 Reduce spice",dairy:"🥛 Dairy-free",vegan:"🌱 Make vegan",gluten:"🌾 Gluten-free"};
 
-let favs=JSON.parse(localStorage.getItem("wm_favs")||"[]");
+function normalizeFavIds(values){
+  if(!Array.isArray(values)) return [];
+  return [...new Set(values.map(v=>Number(v)).filter(Number.isFinite))];
+}
+
+let favs=normalizeFavIds(JSON.parse(localStorage.getItem("wm_favs")||"[]"));
+localStorage.setItem("wm_favs",JSON.stringify(favs));
 let cooked=JSON.parse(localStorage.getItem("wm_cooked")||"[]");
 let plan=JSON.parse(localStorage.getItem("wm_plan")||"{}");
 let currentMeal=null;
@@ -2182,7 +2188,7 @@ async function loadFavsFromDB(){
     const res=await fetch("/api/saves?anonymous_id=eq."+getAnonId());
     const data=await res.json();
     if(Array.isArray(data)&&data.length>0){
-      favs=data.map(r=>r.meal_id);
+      favs=normalizeFavIds(data.map(r=>r.meal_id));
       localStorage.setItem("wm_favs",JSON.stringify(favs));
     }
   }catch(e){console.log("DB load failed, using localStorage");}
@@ -2713,6 +2719,9 @@ function renderGrid(){
 }
 
 function toggleFav(id){
+  id=Number(id);
+  if(!Number.isFinite(id)) return;
+  favs=normalizeFavIds(favs);
   const isAdding=!favs.includes(id);
   if(favs.includes(id)){favs=favs.filter(x=>x!==id);toast("💔 Removed");}
   else{favs.push(id);toast("❤️ "+MEALS.find(m=>m.id===id).name+" saved!");}
@@ -3223,7 +3232,8 @@ function renderTour(){
 }
 
 function renderSaved(){
-  const saved=MEALS.filter(m=>favs.includes(m.id));
+  favs=normalizeFavIds(favs);
+  const saved=MEALS.filter(m=>favs.includes(Number(m.id)));
   const el=document.getElementById("savedContent");
   if(!saved.length){
     el.innerHTML='<div class="saved-empty"><div style="font-size:40px;margin-bottom:12px">🤍</div><div style="font-size:14px;color:#888;margin-bottom:6px">No saved dishes yet</div><div style="font-size:12px">Tap the heart on any dish to save it here</div><button onclick="showPage(\'browse\')" style="margin-top:16px;padding:10px 20px;border-radius:20px;background:var(--text);color:#fff;border:none;font-size:13px;cursor:pointer;font-family:Inter,system-ui,sans-serif">Browse dishes →</button></div>';
