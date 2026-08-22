@@ -4206,7 +4206,7 @@ function wmRecordAIUse(source){if(wmPlan()!=="explorer")return;localStorage.setI
 function wmCanUseAI(featureName){if(wmHasPlan("chef"))return true;if(wmExplorerAIRemaining()>0)return true;wmOpenUpgrade(featureName||"More AI recipes","chef");return false}
 function wmRequirePlan(required,featureName){if(wmHasPlan(required))return true;wmOpenUpgrade(featureName||"Premium feature",required);return false}
 function wmOpenUpgrade(featureName,requiredPlan="chef"){const title=document.getElementById("wmUpgradeTitle"),copy=document.getElementById("wmUpgradeCopy"),meter=document.getElementById("wmUpgradeAIMeter");if(title)title.textContent=`Unlock ${featureName||"more of WorldMeals"} ✨`;if(copy)copy.textContent=requiredPlan==="passport"?"This experience is included with WorldMeals Passport.":"This experience is included with WorldMeals Chef and Passport.";if(meter)meter.textContent=wmPlan()==="explorer"?`Explorer AI recipes remaining: ${wmExplorerAIRemaining()} of 5`:"";document.getElementById("wmUpgrade")?.classList.add("open")}
-function wmCloseUpgrade(){document.getElementById("wmUpgrade")?.classList.remove("open")}function wmGoToPricing(){window.location.href="index.html#pricing"}
+function wmCloseUpgrade(){document.getElementById("wmUpgrade")?.classList.remove("open")}function wmGoToPricing(){window.location.href="index.html?stay=1#pricing"}
 function wmPostNativeIAP(payload){const bridge=window.webkit?.messageHandlers?.worldMealsIAP;if(bridge?.postMessage){bridge.postMessage(payload);return true}return false}
 function wmConsumePurchaseHandoff(plan){
   const raw=localStorage.getItem(WM_KEYS.purchaseHandoff);
