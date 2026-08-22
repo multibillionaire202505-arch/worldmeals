@@ -3158,7 +3158,10 @@ if ('serviceWorker' in navigator) {
     plan: 'worldmeals.subscription.plan',
     productId: 'worldmeals.subscription.productId',
     activeProductIds: 'worldmeals.subscription.activeProductIds',
-    status: 'worldmeals.subscription.status'
+    status: 'worldmeals.subscription.status',
+    trialEnd: 'worldmeals.subscription.trialEndDate',
+    introductory: 'worldmeals.subscription.isIntroductoryOffer',
+    purchaseHandoff: 'worldmeals.subscription.justPurchased'
   };
 
   const nativeIAPBridge = () =>
@@ -3184,7 +3187,9 @@ if ('serviceWorker' in navigator) {
     plan,
     productId,
     activeProductIds,
-    status
+    status,
+    trialEndDate,
+    isIntroductoryOffer
   } = {}) => {
     if (plan) {
       localStorage.setItem(storageKeys.plan, plan);
@@ -3204,6 +3209,23 @@ if ('serviceWorker' in navigator) {
 
     if (status) {
       localStorage.setItem(storageKeys.status, status);
+    }
+
+    if (trialEndDate) {
+      localStorage.setItem(storageKeys.trialEnd, trialEndDate);
+    }
+
+    if (typeof isIntroductoryOffer === 'boolean') {
+      localStorage.setItem(
+        storageKeys.introductory,
+        isIntroductoryOffer ? '1' : '0'
+      );
+    }
+
+    if (plan === 'explorer') {
+      localStorage.removeItem(storageKeys.productId);
+      localStorage.removeItem(storageKeys.trialEnd);
+      localStorage.removeItem(storageKeys.introductory);
     }
 
     let savedActiveProducts = [];
@@ -3360,8 +3382,22 @@ if ('serviceWorker' in navigator) {
         const saved = saveEntitlement({
           plan: detail.plan,
           productId: detail.productId,
-          status: 'active'
+          activeProductIds: detail.activeProductIds,
+          status: 'active',
+          trialEndDate: detail.trialEndDate,
+          isIntroductoryOffer: detail.isIntroductoryOffer
         });
+
+        // Hand off the just-completed purchase to app.html. app.html consumes
+        // this marker once, after StoreKit confirms the active entitlement,
+        // so the paid welcome appears exactly once after purchase.
+        if (saved.plan === 'chef' || saved.plan === 'passport') {
+          localStorage.setItem(storageKeys.purchaseHandoff, JSON.stringify({
+            plan: saved.plan,
+            productId: saved.productId,
+            createdAt: Date.now()
+          }));
+        }
 
         setStatus(
           saved.plan === 'passport'
@@ -3371,7 +3407,7 @@ if ('serviceWorker' in navigator) {
         );
 
         window.setTimeout(() => {
-          window.location.href = 'app.html';
+          window.location.replace('app.html');
         }, 650);
         break;
       }
@@ -3387,10 +3423,13 @@ if ('serviceWorker' in navigator) {
       case 'entitlements': {
         const saved = saveEntitlement({
           plan: detail.plan || 'explorer',
+          productId: detail.productId,
           activeProductIds: detail.activeProductIds || [],
           status: detail.plan && detail.plan !== 'explorer'
             ? 'active'
-            : 'explorer'
+            : 'explorer',
+          trialEndDate: detail.trialEndDate,
+          isIntroductoryOffer: detail.isIntroductoryOffer
         });
 
         if (saved.plan !== 'explorer') {
@@ -3398,6 +3437,15 @@ if ('serviceWorker' in navigator) {
             `Active Apple plan: ${saved.plan === 'passport' ? 'Passport' : 'Chef'}.`,
             'success'
           );
+
+          // In the native iPhone/iPad app, a StoreKit-verified paid member
+          // should enter WorldMeals directly instead of landing on Pricing.
+          // ?stay=1 is reserved for a paid member who deliberately taps the
+          // WorldMeals home/back link from inside app.html.
+          const stayOnLanding = new URLSearchParams(window.location.search).get('stay') === '1';
+          if (isNativeAppleIAPAvailable() && !stayOnLanding) {
+            window.setTimeout(() => window.location.replace('app.html'), 120);
+          }
         }
         break;
       }
