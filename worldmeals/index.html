@@ -2611,6 +2611,126 @@ body{
   <div style="margin-top:16px;font-size:12px;color:#444">Explorer · 5 AI recipes lifetime · Chef includes a 3-day trial · Cancel anytime</div>
 </section>
 
+
+
+<!-- OPTIONAL FEEDBACK — LANDING PAGE ONLY -->
+<section class="landing-feedback reveal" id="feedback" aria-labelledby="landingFeedbackTitle">
+  <div class="landing-feedback-inner">
+    <div class="landing-feedback-icon" aria-hidden="true">💬</div>
+    <div class="landing-feedback-copy">
+      <div class="landing-feedback-kicker">YOUR VOICE MATTERS</div>
+      <h2 id="landingFeedbackTitle">Help WorldMeals grow.</h2>
+      <p>Have an idea, found something we can improve, or simply love a feature? Share feedback whenever you want.</p>
+    </div>
+    <button type="button" class="landing-feedback-btn" id="openLandingFeedback">Share feedback →</button>
+  </div>
+</section>
+
+<div class="landing-feedback-modal" id="landingFeedbackModal" aria-hidden="true">
+  <div class="landing-feedback-backdrop" data-feedback-close></div>
+  <div class="landing-feedback-dialog" role="dialog" aria-modal="true" aria-labelledby="landingFeedbackDialogTitle">
+    <button type="button" class="landing-feedback-close" data-feedback-close aria-label="Close feedback">✕</button>
+    <div class="landing-feedback-dialog-icon">💬</div>
+    <h2 id="landingFeedbackDialogTitle">Help us improve WorldMeals</h2>
+    <p class="landing-feedback-dialog-copy">No account, email, or payment information is needed. Just tell us what would make WorldMeals better.</p>
+
+    <label for="landingFeedbackType">About</label>
+    <select id="landingFeedbackType">
+      <option value="recipe">🍽️ Recipe or dish</option>
+      <option value="chef">👨‍🍳 Chef AI</option>
+      <option value="scan">📷 Camera / Fridge Scan</option>
+      <option value="planner">📅 Planner</option>
+      <option value="tour">🏆 World Tour</option>
+      <option value="bug">⚠️ Something is not working</option>
+      <option value="idea">💡 Feature idea</option>
+      <option value="love">❤️ Something I love</option>
+      <option value="other" selected>💬 Other</option>
+    </select>
+
+    <label for="landingFeedbackRating">Rating (optional)</label>
+    <select id="landingFeedbackRating">
+      <option value="">No rating</option>
+      <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+      <option value="4">⭐⭐⭐⭐ Very good</option>
+      <option value="3">⭐⭐⭐ Okay</option>
+      <option value="2">⭐⭐ Needs work</option>
+      <option value="1">⭐ Poor</option>
+    </select>
+
+    <label for="landingFeedbackMessage">Your feedback</label>
+    <textarea id="landingFeedbackMessage" maxlength="3000" placeholder="Tell us what happened, what you loved, or what you want us to improve..."></textarea>
+
+    <div class="landing-feedback-dialog-actions">
+      <button type="button" class="landing-feedback-send" id="sendLandingFeedback">Send feedback →</button>
+      <button type="button" class="landing-feedback-later" data-feedback-close>Maybe later</button>
+    </div>
+    <div class="landing-feedback-status" id="landingFeedbackStatus" aria-live="polite"></div>
+  </div>
+</div>
+
+<style>
+  .landing-feedback{
+    padding:72px 24px;
+    background:linear-gradient(135deg,#FFF7EC 0%,#FFFDF9 56%,#EEF8F4 100%);
+    border-top:1px solid var(--wm-line);
+  }
+  .landing-feedback-inner{
+    width:min(100%,var(--launch-max,1180px));
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:auto minmax(0,1fr) auto;
+    gap:22px;
+    align-items:center;
+    padding:30px 32px;
+    border:1px solid rgba(217,106,22,.20);
+    border-radius:28px;
+    background:rgba(255,255,255,.84);
+    box-shadow:var(--launch-shadow,0 18px 48px rgba(48,34,21,.08));
+  }
+  .landing-feedback-icon{
+    width:58px;height:58px;border-radius:18px;
+    display:grid;place-items:center;font-size:26px;
+    background:#FFF1E3;border:1px solid rgba(217,106,22,.18);
+  }
+  .landing-feedback-kicker{font-size:10px;font-weight:900;letter-spacing:.14em;color:var(--wm-orange);margin-bottom:7px}
+  .landing-feedback-copy h2{margin:0 0 7px;font-size:clamp(24px,3vw,34px);letter-spacing:-.03em;color:var(--wm-ink)}
+  .landing-feedback-copy p{margin:0;max-width:650px;color:var(--wm-muted);font-size:14px;line-height:1.7}
+  .landing-feedback-btn,.landing-feedback-send{
+    border:0;border-radius:14px;padding:13px 18px;cursor:pointer;
+    background:var(--wm-orange);color:#fff;font:800 13px Inter,system-ui,sans-serif;
+    box-shadow:0 10px 24px rgba(217,106,22,.20);
+  }
+  .landing-feedback-modal{display:none;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;padding:20px}
+  .landing-feedback-modal.open{display:flex}
+  .landing-feedback-backdrop{position:absolute;inset:0;background:rgba(23,21,18,.56);backdrop-filter:blur(4px)}
+  .landing-feedback-dialog{
+    position:relative;z-index:1;width:min(520px,100%);max-height:min(760px,92vh);overflow:auto;
+    border-radius:26px;background:#FFFDF9;border:1px solid #E9DED0;padding:26px;
+    box-shadow:0 32px 90px rgba(31,22,14,.28);color:var(--wm-ink)
+  }
+  .landing-feedback-close{position:absolute;right:16px;top:16px;width:36px;height:36px;border:1px solid #E9DED0;border-radius:12px;background:#fff;cursor:pointer;color:#6B5D50;font-weight:800}
+  .landing-feedback-dialog-icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:#FFF1E3;font-size:22px;margin-bottom:12px}
+  .landing-feedback-dialog h2{margin:0 42px 7px 0;font-size:24px;letter-spacing:-.025em}
+  .landing-feedback-dialog-copy{margin:0 0 17px;color:var(--wm-muted);font-size:13px;line-height:1.65}
+  .landing-feedback-dialog label{display:block;margin:12px 0 6px;font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#77685A}
+  .landing-feedback-dialog select,.landing-feedback-dialog textarea{width:100%;box-sizing:border-box;border:1px solid #E6D7C7;border-radius:14px;background:#fff;padding:12px;color:#2E241B;font:500 13px Inter,system-ui,sans-serif;outline:none}
+  .landing-feedback-dialog textarea{min-height:120px;resize:vertical}
+  .landing-feedback-dialog select:focus,.landing-feedback-dialog textarea:focus{border-color:rgba(217,106,22,.55);box-shadow:0 0 0 3px rgba(217,106,22,.09)}
+  .landing-feedback-dialog-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+  .landing-feedback-later{border:1px solid #E4D8CB;border-radius:14px;padding:13px 18px;background:#fff;color:#5F5145;font:800 13px Inter,system-ui,sans-serif;cursor:pointer}
+  .landing-feedback-status{min-height:20px;margin-top:10px;text-align:center;color:#167A5A;font-size:12px;line-height:1.5}
+  @media(max-width:720px){
+    .landing-feedback{padding:54px 18px}
+    .landing-feedback-inner{grid-template-columns:auto 1fr;padding:24px 20px}
+    .landing-feedback-btn{grid-column:1/-1;width:100%}
+  }
+  @media(max-width:480px){
+    .landing-feedback-inner{grid-template-columns:1fr;text-align:center}
+    .landing-feedback-icon{margin:0 auto}
+    .landing-feedback-dialog-actions{grid-template-columns:1fr}
+  }
+</style>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">
@@ -3320,6 +3440,95 @@ if ('serviceWorker' in navigator) {
 
   renderBilling('annual');
   requestCurrentEntitlements();
+})();
+</script>
+
+
+<script>
+(() => {
+  const modal = document.getElementById('landingFeedbackModal');
+  const openBtn = document.getElementById('openLandingFeedback');
+  const sendBtn = document.getElementById('sendLandingFeedback');
+  const statusEl = document.getElementById('landingFeedbackStatus');
+  const messageEl = document.getElementById('landingFeedbackMessage');
+  const ratingEl = document.getElementById('landingFeedbackRating');
+  const typeEl = document.getElementById('landingFeedbackType');
+
+  const openFeedback = () => {
+    if (!modal) return;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    statusEl.textContent = '';
+    window.setTimeout(() => messageEl?.focus(), 100);
+  };
+
+  const closeFeedback = () => {
+    if (!modal) return;
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  const getAnonId = () => {
+    const key = 'worldmeals.anonymous_id';
+    let id = localStorage.getItem(key);
+    if (!id) {
+      id = (window.crypto?.randomUUID?.() || `wm-${Date.now()}-${Math.random().toString(36).slice(2)}`);
+      localStorage.setItem(key, id);
+    }
+    return id;
+  };
+
+  const sendFeedback = async () => {
+    const message = messageEl?.value.trim() || '';
+    if (!message) {
+      statusEl.textContent = 'Please write a short message first.';
+      return;
+    }
+
+    const payload = {
+      anonymous_id: getAnonId(),
+      plan: localStorage.getItem('worldmeals.subscription.plan') || 'explorer',
+      product_id: localStorage.getItem('worldmeals.subscription.productId') || null,
+      type: typeEl?.value || 'other',
+      rating: ratingEl?.value ? Number(ratingEl.value) : null,
+      message,
+      source: 'landing_page',
+      meal_id: null,
+      meal_name: null,
+      page: 'index',
+      client_time: new Date().toISOString()
+    };
+
+    sendBtn.disabled = true;
+    statusEl.textContent = 'Sending…';
+
+    try {
+      const response = await fetch('/api/feedback', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (!response.ok) throw new Error('Feedback endpoint unavailable');
+      statusEl.textContent = 'Thank you ❤️ Your feedback was sent.';
+      messageEl.value = '';
+      ratingEl.value = '';
+      window.setTimeout(closeFeedback, 850);
+    } catch (error) {
+      console.warn('WorldMeals landing feedback:', error);
+      statusEl.textContent = 'We could not send that right now. Please try again in a moment.';
+    } finally {
+      sendBtn.disabled = false;
+    }
+  };
+
+  openBtn?.addEventListener('click', openFeedback);
+  sendBtn?.addEventListener('click', sendFeedback);
+  document.querySelectorAll('[data-feedback-close]').forEach((el) => el.addEventListener('click', closeFeedback));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal?.classList.contains('open')) closeFeedback();
+  });
 })();
 </script>
 
