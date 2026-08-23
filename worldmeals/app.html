@@ -117,6 +117,8 @@ nav{background:rgba(255,253,248,.88);backdrop-filter:blur(18px);padding:14px 16p
 .planner-box,.chef-hero{background:rgba(255,255,255,.86);border:1px solid var(--border);border-radius:22px;padding:16px;margin-bottom:16px;box-shadow:var(--shadow)}
 .planner-box label{display:block;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:10px 0 6px;font-weight:900}
 .planner-box input,.planner-box select,textarea{width:100%;padding:12px 13px;border-radius:15px;border:1px solid var(--border);background:#fff;color:var(--text);font-family:Inter,system-ui,sans-serif;font-size:14px;outline:none}
+/* iPhone/WKWebView: keep Planner controls at 16px so iOS does not auto-zoom on focus. */
+@media (max-width:900px){.planner-box input,.planner-box select{font-size:16px!important}}
 .planner-box input:focus,.planner-box select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(196,122,44,.12)}
 .week-stats{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px}.week-stat{border-radius:18px;padding:13px;text-align:center;border:1px solid var(--border);box-shadow:0 8px 20px rgba(83,55,29,.06)}.week-stat.cal{background:#FFF4DD}.week-stat.bud{background:#EAF8EF}.week-val{font-size:22px;font-weight:900;color:var(--text)}
 .day-row{background:#fff;border-radius:18px;border:1px solid var(--border);padding:12px 13px;margin-bottom:9px;display:flex;align-items:center;gap:12px;box-shadow:0 6px 16px rgba(83,55,29,.05)}
