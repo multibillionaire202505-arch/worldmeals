@@ -31,7 +31,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',system-ui,sans-serif;background:radial-gradient(circle at top,#FFF7EA 0,#FAF7F0 42%,#F7F0E6 100%);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-nav{background:rgba(255,253,248,.88);backdrop-filter:blur(18px);padding:14px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(232,221,208,.85)}
+nav{background:rgba(255,253,248,.88);backdrop-filter:blur(18px);padding:14px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;overflow:visible;border-bottom:1px solid rgba(232,221,208,.85)}
 .logo{font-size:15px;font-weight:800;color:var(--text);display:flex;align-items:center;gap:8px;text-decoration:none;letter-spacing:-.4px}
 .back{font-size:12px;color:var(--muted);text-decoration:none;font-weight:600;flex:0 0 auto;margin-right:clamp(18px,3vw,42px)}
 .fav-count{background:var(--accent);color:#fff;border-radius:999px;font-size:11px;padding:4px 10px;font-weight:800;display:none;box-shadow:0 6px 16px rgba(196,122,44,.28)}
@@ -1656,9 +1656,9 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 .wm-nav-actions{display:flex;align-items:center;gap:7px;margin-left:auto;visibility:hidden;opacity:0}
 .wm-nav-actions.wm-ready{visibility:visible;opacity:1;transition:opacity .08s linear}
 .wm-plan-chip{display:inline-flex!important;align-items:center;justify-content:center;min-height:30px;padding:6px 10px;border-radius:999px;background:#FFF7EA;border:1px solid #E8D3B8;color:#8A4B18;font-size:10px!important;line-height:1.2;font-weight:900;white-space:nowrap}
-.wm-menu-wrap{position:relative;display:flex;align-items:center}
-.wm-menu-button{appearance:none;-webkit-appearance:none;width:34px;height:34px;padding:0;display:flex;align-items:center;justify-content:center;border:1px solid #E8DDD0;background:#fff;border-radius:12px;color:#F28C28;font:900 17px/1 Inter,system-ui,sans-serif;cursor:pointer;box-shadow:0 7px 16px rgba(83,55,29,.07);user-select:none}
-.wm-menu-panel{display:none;position:absolute;right:0;top:42px;z-index:120;min-width:205px;padding:7px;background:#FFFDF9;border:1px solid #E8DDD0;border-radius:16px;box-shadow:0 18px 45px rgba(45,33,23,.18)}
+.wm-menu-wrap{position:relative;display:flex;align-items:center;z-index:130}
+.wm-menu-button{appearance:none;-webkit-appearance:none;width:34px;height:34px;padding:0;display:flex;align-items:center;justify-content:center;border:1px solid #E8DDD0;background:#fff;border-radius:12px;color:#F28C28;font:900 17px/1 Inter,system-ui,sans-serif;cursor:pointer;box-shadow:0 7px 16px rgba(83,55,29,.07);user-select:none;position:relative;z-index:1002;pointer-events:auto;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.wm-menu-panel{display:none;position:absolute;right:0;top:42px;z-index:1003;min-width:205px;padding:7px;background:#FFFDF9;border:1px solid #E8DDD0;border-radius:16px;box-shadow:0 18px 45px rgba(45,33,23,.18)}
 .wm-menu-panel.open{display:block}
 .wm-menu-item{width:100%;border:0;background:transparent;border-radius:11px;padding:11px 12px;text-align:left;color:#3F3025;font:850 12px Inter,system-ui,sans-serif;cursor:pointer}
 .wm-menu-item:hover{background:#FFF5E8}
@@ -1675,7 +1675,7 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
     <span class="wm-plan-chip" id="wmPlanChip">🌱 Explorer · 5/5 AI</span>
     <div class="fav-count" id="favCount">❤️ 0</div>
     <div class="wm-menu-wrap" id="wmMenu">
-      <button type="button" class="wm-menu-button" id="wmMenuButton" aria-label="WorldMeals menu" aria-expanded="false" onclick="wmToggleMenu(event)">☰</button>
+      <button type="button" class="wm-menu-button" id="wmMenuButton" aria-label="WorldMeals menu" aria-expanded="false" >☰</button>
       <div class="wm-menu-panel" id="wmMenuPanel">
         <button type="button" class="wm-menu-item" id="wmUpgradeMenuBtn" onclick="wmCloseMenu();wmOpenUpgrade('WorldMeals Premium','chef')">✨ Upgrade</button>
         <button type="button" class="wm-menu-item" id="wmManageMenuBtn" onclick="wmCloseMenu();wmManageSubscription()">⚙️ Manage Subscription</button>
@@ -4151,10 +4151,10 @@ if ('serviceWorker' in navigator) {
 <style>
 .wm-nav-actions{display:flex;align-items:center;gap:7px}
 .wm-plan-chip{display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:6px 10px;border-radius:999px;background:#FFF7EA;border:1px solid #E8D3B8;color:#8A4B18;font-size:10px;font-weight:900;white-space:nowrap}
-.wm-menu-wrap{position:relative}
-.wm-menu-button{list-style:none;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1px solid #E8DDD0;background:#fff;border-radius:12px;color:#F28C28;font:900 17px Inter,system-ui,sans-serif;cursor:pointer;box-shadow:0 7px 16px rgba(83,55,29,.07);user-select:none}
+.wm-menu-wrap{position:relative;z-index:130}
+.wm-menu-button{list-style:none;position:relative;z-index:1002;pointer-events:auto;touch-action:manipulation;-webkit-tap-highlight-color:transparent;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1px solid #E8DDD0;background:#fff;border-radius:12px;color:#F28C28;font:900 17px Inter,system-ui,sans-serif;cursor:pointer;box-shadow:0 7px 16px rgba(83,55,29,.07);user-select:none}
 .wm-menu-button:focus-visible{outline:2px solid #F28C28;outline-offset:2px}
-.wm-menu-panel{display:none;position:absolute;right:0;top:42px;z-index:120;min-width:205px;padding:7px;background:#FFFDF9;border:1px solid #E8DDD0;border-radius:16px;box-shadow:0 18px 45px rgba(45,33,23,.18)}.wm-menu-panel.open{display:block}
+.wm-menu-panel{display:none;position:absolute;right:0;top:42px;z-index:1003;min-width:205px;padding:7px;background:#FFFDF9;border:1px solid #E8DDD0;border-radius:16px;box-shadow:0 18px 45px rgba(45,33,23,.18)}.wm-menu-panel.open{display:block}
 .wm-menu-item{width:100%;border:0;background:transparent;border-radius:11px;padding:11px 12px;text-align:left;color:#3F3025;font:850 12px Inter,system-ui,sans-serif;cursor:pointer}.wm-menu-item:hover{background:#FFF5E8}
 .wm-trial-title{font-size:15px;font-weight:900;color:#6E430F;margin-bottom:7px;text-align:center}.wm-trial-text{font-size:12px;color:#7B6650;line-height:1.6;text-align:center}
 .wm-layer{display:none;position:fixed;inset:0;z-index:950;align-items:center;justify-content:center;padding:18px;background:rgba(31,22,14,.70);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
@@ -4344,13 +4344,22 @@ async function wmRetryFeedbackQueue(){let queue=[];try{queue=JSON.parse(localSto
 async function submitWorldMealsFeedback(){const status=document.getElementById("wmFeedbackStatus"),payload=wmFeedbackPayload();if(!payload.message){if(status)status.textContent="Please write a short message first.";return}if(status)status.textContent="Sending…";try{await wmSendFeedbackPayload(payload);if(status)status.textContent="Thank you ❤️ Your feedback was sent.";document.getElementById("wmFeedbackMessage").value="";document.getElementById("wmFeedbackRating").value="";setTimeout(()=>{closeWorldMealsFeedback();if(typeof toast==="function")toast("Thank you for helping WorldMeals grow ❤️")},700)}catch(error){console.warn("WorldMeals feedback queued:",error);wmQueueFeedback(payload);if(status)status.textContent="Saved safely on this device. WorldMeals will retry when you open feedback again."}}
 function wmMaybeShowQuickFeedback(meal){if(!meal?.id||localStorage.getItem(`wm_quick_feedback_${meal.id}`)==="1")return;wmQuickFeedbackMeal=meal;const copy=document.getElementById("wmQuickFeedbackCopy");if(copy)copy.textContent=`How was ${meal.name}?`;document.getElementById("wmQuickFeedback")?.classList.add("show")}
 async function wmQuickFeedback(helpful){const meal=wmQuickFeedbackMeal;document.getElementById("wmQuickFeedback")?.classList.remove("show");if(!meal)return;localStorage.setItem(`wm_quick_feedback_${meal.id}`,"1");const payload={anonymous_id:typeof getAnonId==="function"?getAnonId():null,plan:wmPlan(),product_id:localStorage.getItem(WM_KEYS.productId)||null,type:"recipe",rating:helpful?5:2,message:helpful?"Quick feedback: helpful":"Quick feedback: needs improvement",source:"recipe_quick",meal_id:meal.id,meal_name:meal.name,page:document.querySelector(".page.active")?.id||"unknown",client_time:new Date().toISOString()};try{await wmSendFeedbackPayload(payload)}catch{wmQueueFeedback(payload)}if(helpful){if(typeof toast==="function")toast("Thank you! ❤️")}else{openWorldMealsFeedback("recipe",meal);const rating=document.getElementById("wmFeedbackRating");if(rating)rating.value="2"}wmQuickFeedbackMeal=null}
-function wmToggleMenu(event){
-  if(event)event.stopPropagation();
+function wmToggleMenu(){
   const panel=document.getElementById("wmMenuPanel"),button=document.getElementById("wmMenuButton");
   if(!panel)return;
   const open=!panel.classList.contains("open");
   panel.classList.toggle("open",open);
   if(button)button.setAttribute("aria-expanded",open?"true":"false");
+}
+function wmBindMenuButton(){
+  const button=document.getElementById("wmMenuButton");
+  if(!button||button.dataset.wmBound==="1")return;
+  button.dataset.wmBound="1";
+  button.addEventListener("click",function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    wmToggleMenu();
+  },false);
 }
 function wmCloseMenu(){
   document.getElementById("wmMenuPanel")?.classList.remove("open");
@@ -4362,6 +4371,7 @@ function wmInitializeMemberExperience(){
   // Startup stays quiet: refresh local UI + request StoreKit entitlements only.
   // No welcome popup, trial popup, feedback retry, or feedback API request runs here.
   wmRefreshMembershipUI();
+  wmBindMenuButton();
   // Reveal the header only after its plan label and menu styles are initialized.
   // This prevents the brief unstyled Explorer / hamburger flash during navigation from index.html.
   document.querySelector(".wm-nav-actions")?.classList.add("wm-ready");
