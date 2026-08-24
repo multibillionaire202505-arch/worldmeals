@@ -4194,6 +4194,16 @@ if ('serviceWorker' in navigator) {
   #wmFeedback .wm-feedback-form textarea{min-height:110px!important;resize:none!important}
   #wmFeedback .wm-actions{width:100%!important;min-width:0!important;grid-template-columns:1fr!important}
   #wmFeedback .wm-primary,#wmFeedback .wm-secondary{width:100%!important;box-sizing:border-box!important}
+
+  /* iOS/WKWebView: keep the feedback header inside the visible viewport while the keyboard is active. */
+  #wmFeedback.wm-keyboard-open{
+    top:var(--wm-vv-top,0px)!important;bottom:auto!important;height:var(--wm-vv-height,100dvh)!important;min-height:0!important;
+    align-items:flex-start!important;overflow-y:auto!important;overscroll-behavior:contain!important;
+    padding-top:max(10px,env(safe-area-inset-top))!important;padding-bottom:max(10px,env(safe-area-inset-bottom))!important;
+  }
+  #wmFeedback.wm-keyboard-open .wm-dialog{
+    max-height:calc(var(--wm-vv-height,100dvh) - 20px)!important;margin:0 auto!important;
+  }
 }
 </style>
 
@@ -4352,17 +4362,56 @@ function wmManageFromTrialReminder(){
 }
 function wmManageSubscription(){if(wmPostNativeIAP({action:"manageSubscriptions"}))return;if(typeof toast==="function")toast("Manage your subscription from your App Store account.")}
 
+let wmFeedbackViewportFixBound=false;
+function wmResetFeedbackViewport(){
+  const layer=document.getElementById("wmFeedback");
+  if(!layer)return;
+  layer.classList.remove("wm-keyboard-open");
+  layer.style.removeProperty("--wm-vv-top");
+  layer.style.removeProperty("--wm-vv-height");
+}
+function wmSyncFeedbackViewport(){
+  const layer=document.getElementById("wmFeedback"),vv=window.visualViewport;
+  if(!layer||!vv||!layer.classList.contains("open"))return;
+  const active=document.activeElement;
+  const editing=!!(active&&active.id==="wmFeedbackMessage"&&layer.contains(active));
+  if(!editing){wmResetFeedbackViewport();return}
+  layer.style.setProperty("--wm-vv-top",`${Math.max(0,Math.round(vv.offsetTop))}px`);
+  layer.style.setProperty("--wm-vv-height",`${Math.max(260,Math.round(vv.height))}px`);
+  layer.classList.add("wm-keyboard-open");
+}
+function wmScheduleFeedbackViewportSync(){
+  requestAnimationFrame(wmSyncFeedbackViewport);
+  setTimeout(wmSyncFeedbackViewport,80);
+  setTimeout(wmSyncFeedbackViewport,320);
+}
+function wmBindFeedbackViewportFix(){
+  if(wmFeedbackViewportFixBound)return;
+  const layer=document.getElementById("wmFeedback");
+  if(!layer)return;
+  wmFeedbackViewportFixBound=true;
+  layer.addEventListener("focusin",wmScheduleFeedbackViewportSync);
+  layer.addEventListener("focusout",()=>setTimeout(wmSyncFeedbackViewport,80));
+  if(window.visualViewport){
+    window.visualViewport.addEventListener("resize",wmScheduleFeedbackViewportSync);
+    window.visualViewport.addEventListener("scroll",wmScheduleFeedbackViewportSync);
+  }
+}
 function openWorldMealsFeedback(source="general",meal=null){
   wmFeedbackContext={source,mealId:meal?.id??null,mealName:meal?.name??null};
   const type=document.getElementById("wmFeedbackType");
   if(type){if(source==="recipe")type.value="recipe";else if(source==="chef")type.value="chef";else if(source==="scan")type.value="scan";else type.value="other"}
   document.getElementById("wmWelcome")?.classList.remove("open");
+  wmResetFeedbackViewport();
   document.getElementById("wmFeedback")?.classList.add("open");
   // Queue retry begins only after the user deliberately opens Feedback.
   void wmRetryFeedbackQueue();
   // Keep mobile viewport stable; user taps the field when ready instead of forcing focus/zoom.
 }
-function closeWorldMealsFeedback(){document.getElementById("wmFeedback")?.classList.remove("open")}
+function closeWorldMealsFeedback(){
+  document.getElementById("wmFeedback")?.classList.remove("open");
+  wmResetFeedbackViewport();
+}
 function wmFeedbackPayload(extra={}){return{anonymous_id:typeof getAnonId==="function"?getAnonId():null,plan:wmPlan(),product_id:localStorage.getItem(WM_KEYS.productId)||null,type:document.getElementById("wmFeedbackType")?.value||"other",rating:document.getElementById("wmFeedbackRating")?.value?Number(document.getElementById("wmFeedbackRating").value):null,message:document.getElementById("wmFeedbackMessage")?.value.trim()||"",source:wmFeedbackContext.source,meal_id:wmFeedbackContext.mealId,meal_name:wmFeedbackContext.mealName,page:document.querySelector(".page.active")?.id||"unknown",client_time:new Date().toISOString(),...extra}}
 async function wmSendFeedbackPayload(payload){const res=await fetch("/api/feedback",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});if(!res.ok)throw new Error("Feedback endpoint unavailable");return true}
 function wmQueueFeedback(payload){let queue=[];try{queue=JSON.parse(localStorage.getItem("wm_feedback_queue")||"[]")}catch{queue=[]}queue.push(payload);localStorage.setItem("wm_feedback_queue",JSON.stringify(queue.slice(-25)))}
@@ -4398,6 +4447,7 @@ function wmInitializeMemberExperience(){
   // No welcome popup, trial popup, feedback retry, or feedback API request runs here.
   wmRefreshMembershipUI();
   wmBindMenuButton();
+  wmBindFeedbackViewportFix();
   // Reveal the header only after its plan label and menu styles are initialized.
   // This prevents the brief unstyled Explorer / hamburger flash during navigation from index.html.
   document.querySelector(".wm-nav-actions")?.classList.add("wm-ready");
