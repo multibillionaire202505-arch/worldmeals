@@ -117,8 +117,8 @@ nav{background:rgba(255,253,248,.88);backdrop-filter:blur(18px);padding:14px 16p
 .planner-box,.chef-hero{background:rgba(255,255,255,.86);border:1px solid var(--border);border-radius:22px;padding:16px;margin-bottom:16px;box-shadow:var(--shadow)}
 .planner-box label{display:block;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:10px 0 6px;font-weight:900}
 .planner-box input,.planner-box select,textarea{width:100%;padding:12px 13px;border-radius:15px;border:1px solid var(--border);background:#fff;color:var(--text);font-family:Inter,system-ui,sans-serif;font-size:14px;outline:none}
-/* iPhone/WKWebView: keep Planner controls at 16px so iOS does not auto-zoom on focus. */
-@media (max-width:900px){.planner-box input,.planner-box select,#fridgeInput{font-size:16px!important}}
+/* iPhone/WKWebView: iOS zooms focused form controls whose text is below 16px. */
+@media (max-width:900px){input:not([type="range"]):not([type="checkbox"]):not([type="radio"]),select,textarea{font-size:16px!important}}
 .planner-box input:focus,.planner-box select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(196,122,44,.12)}
 .week-stats{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px}.week-stat{border-radius:18px;padding:13px;text-align:center;border:1px solid var(--border);box-shadow:0 8px 20px rgba(83,55,29,.06)}.week-stat.cal{background:#FFF4DD}.week-stat.bud{background:#EAF8EF}.week-val{font-size:22px;font-weight:900;color:var(--text)}
 .day-row{background:#fff;border-radius:18px;border:1px solid var(--border);padding:12px 13px;margin-bottom:9px;display:flex;align-items:center;gap:12px;box-shadow:0 6px 16px rgba(83,55,29,.05)}
@@ -194,7 +194,7 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 .scan-title{font-size:22px;font-weight:900;color:var(--text);letter-spacing:-.5px;margin-bottom:4px}
 .scan-sub{font-size:13px;color:var(--muted);line-height:1.6}
 .scan-card{background:rgba(255,255,255,.86);border:1px solid rgba(232,221,208,.95);border-radius:20px;padding:14px;margin-bottom:14px;box-shadow:var(--shadow)}
-.scan-upload{border:1.5px dashed #D8BFA2;background:#FFFDF8;border-radius:18px;padding:16px;text-align:center;cursor:pointer;display:block;transition:.18s}
+.scan-upload{width:100%;border:1.5px dashed #D8BFA2;background:#FFFDF8;border-radius:18px;padding:16px;text-align:center;cursor:pointer;display:block;transition:.18s;font-family:Inter,system-ui,sans-serif;color:inherit}
 .scan-upload:hover{transform:translateY(-1px);background:#FFF7ED}
 .scan-upload-icon{font-size:34px;margin-bottom:8px}
 .scan-upload-title{font-size:14px;font-weight:900;color:var(--text);margin-bottom:4px}
@@ -1938,11 +1938,11 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
   </div>
 
   <div class="scan-card">
-    <label class="scan-upload" for="fridgePhotoInput">
+    <button type="button" class="scan-upload" id="nativeFridgeScanButton" onclick="startFridgeScan()">
       <div class="scan-upload-icon">📸</div>
       <div class="scan-upload-title">Tap to scan your fridge</div>
-      <div class="scan-upload-sub">Use camera or upload a photo</div>
-    </label>
+      <div class="scan-upload-sub" id="nativeFridgeScanSubtitle">Native camera · on-device ingredient detection</div>
+    </button>
     <input id="fridgePhotoInput" type="file" accept="image/*" capture="environment" style="display:none" onchange="handleFridgePhoto(event)">
 
     <div class="scan-preview" id="scanPreview">
@@ -2875,6 +2875,20 @@ async function getRecipe(){
 }
 
 
+function startFridgeScan(){
+  if(!wmRequirePlan("passport","Camera & Fridge Scan")) return;
+
+  const nativeBridge=window.webkit?.messageHandlers?.worldMealsNative;
+  if(nativeBridge?.postMessage){
+    document.getElementById("nativeFridgeScanButton")?.setAttribute("aria-busy","true");
+    document.getElementById("scanResult").innerHTML=`<div class="scan-summary"><div class="scan-summary-title">Opening native scanner…</div><div class="scan-summary-sub">Choose the camera or a photo. Analysis happens on your device.</div></div>`;
+    nativeBridge.postMessage({action:"scanFridge"});
+    return;
+  }
+
+  document.getElementById("fridgePhotoInput")?.click();
+}
+
 function handleFridgePhoto(event){
   const file=event.target.files && event.target.files[0];
   if(!file) return;
@@ -2882,10 +2896,53 @@ function handleFridgePhoto(event){
   reader.onload=()=>{
     document.getElementById("scanPreviewImg").src=reader.result;
     document.getElementById("scanPreview").style.display="block";
-    document.getElementById("scanResult").innerHTML=`<div class="scan-summary"><div class="scan-summary-title">Photo added ✅</div><div class="scan-summary-sub">For this first version, confirm what you see in the ingredient box. In the next backend update, this photo can be sent to Vision AI for automatic ingredient detection.</div></div>`;
+    document.getElementById("scanResult").innerHTML=`<div class="scan-summary"><div class="scan-summary-title">Photo added ✅</div><div class="scan-summary-sub">Confirm the ingredients you see, then ask WorldMeals to find matching dishes.</div></div>`;
   };
   reader.readAsDataURL(file);
 }
+
+window.addEventListener("worldmeals:native-fridge-scan",event=>{
+  const detail=event?.detail||{};
+  const button=document.getElementById("nativeFridgeScanButton");
+  const result=document.getElementById("scanResult");
+  if(detail.status!=="analyzing")button?.removeAttribute("aria-busy");
+
+  if(detail.status==="analyzing"){
+    if(result)result.innerHTML=`<div class="scan-summary"><div class="scan-summary-title">Analyzing on your iPhone…</div><div class="scan-summary-sub">Apple Vision is identifying useful food clues. Your photo stays in the native scan flow.</div></div>`;
+    return;
+  }
+
+  if(detail.status==="cancelled"){
+    if(result)result.innerHTML="";
+    return;
+  }
+
+  if(detail.imageDataUrl){
+    document.getElementById("scanPreviewImg").src=detail.imageDataUrl;
+    document.getElementById("scanPreview").style.display="block";
+  }
+
+  if(detail.status==="error"){
+    if(result){
+      result.innerHTML=`<div class="scan-summary"><div class="scan-summary-title">Scan needs another try</div><div class="scan-summary-sub native-scan-message"></div></div>`;
+      const message=result.querySelector(".native-scan-message");
+      if(message)message.textContent=detail.message||"WorldMeals could not analyze that photo.";
+    }
+    return;
+  }
+
+  if(detail.status==="success"){
+    const ingredients=Array.isArray(detail.ingredients)
+      ? detail.ingredients.map(value=>String(value).trim()).filter(Boolean)
+      : [];
+    if(ingredients.length)document.getElementById("scanIngredients").value=ingredients.join(", ");
+    if(result){
+      result.innerHTML=`<div class="scan-summary"><div class="scan-summary-title">Native scan complete ✅</div><div class="scan-summary-sub native-scan-message"></div></div>`;
+      const message=result.querySelector(".native-scan-message");
+      if(message)message.textContent=detail.message||"Confirm the detected ingredients, then find matching meals.";
+    }
+  }
+});
 
 function addScanExample(text){
   document.getElementById("scanIngredients").value=text;
