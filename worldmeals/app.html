@@ -4505,6 +4505,10 @@ function wmInitializeMemberExperience(){
   wmRefreshMembershipUI();
   wmBindMenuButton();
   wmBindFeedbackViewportFix();
+  // Landing-page deep link: open the existing Chef AI tab when requested.
+  // This uses the app's existing showPage() navigation and does not change Chef logic.
+  const wmOpenPage=new URLSearchParams(window.location.search).get("open");
+  if(wmOpenPage==="chef") showPage("chef");
   // Reveal the header only after its plan label and menu styles are initialized.
   // This prevents the brief unstyled Explorer / hamburger flash during navigation from index.html.
   document.querySelector(".wm-nav-actions")?.classList.add("wm-ready");
