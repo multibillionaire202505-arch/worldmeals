@@ -1916,6 +1916,300 @@ body{
 }
 
 </style>
+<style>
+
+  /* =========================================================
+     WORLDMEALS MARKETING — PREMIUM VISUAL POLISH ONLY
+     Scoped to landing-page presentation. No app/IAP logic.
+     ========================================================= */
+  :root{
+    --wm-premium-espresso:#241A14;
+    --wm-premium-espresso-2:#3A281D;
+    --wm-premium-cream:#FFF9F1;
+    --wm-premium-line:rgba(117,84,50,.16);
+    --wm-premium-shadow:0 22px 52px rgba(54,36,22,.16);
+  }
+
+  html,body{max-width:100%;}
+  .hero,.hero-visual,.final-cta,.landing-feedback,.story-strip,.v3-section{max-width:100%;}
+  .hero{overflow:clip;}
+  .hero-visual>*,.hero-photo-stack,.landing-feedback-inner>*{min-width:0;}
+  .hero-photo-main img,.hero-photo-small img,.final-dishes img,.landing-feedback-photo img{max-width:100%;}
+  footer{
+    padding-left:max(24px,calc((100% - var(--launch-max,1180px))/2));
+    padding-right:max(24px,calc((100% - var(--launch-max,1180px))/2));
+  }
+
+  /* Signature hero actions */
+  .hero-ctas{gap:14px!important;}
+  .hero-ctas .btn-primary,
+  .final-cta .btn-primary{
+    position:relative;
+    isolation:isolate;
+    min-height:58px;
+    padding:0 27px!important;
+    border-radius:18px!important;
+    border:1px solid rgba(255,255,255,.08)!important;
+    background:
+      radial-gradient(circle at 22% 0%,rgba(255,255,255,.15),transparent 34%),
+      linear-gradient(135deg,var(--wm-premium-espresso),var(--wm-premium-espresso-2) 60%,#4A3020)!important;
+    color:#FFFDF9!important;
+    font-size:14px!important;
+    font-weight:850!important;
+    letter-spacing:-.015em!important;
+    box-shadow:
+      0 18px 34px rgba(36,26,20,.22),
+      0 5px 12px rgba(36,26,20,.13),
+      inset 0 1px 0 rgba(255,255,255,.16)!important;
+    transition:transform .22s ease,box-shadow .22s ease,filter .22s ease!important;
+  }
+  .hero-ctas .btn-primary::after,
+  .final-cta .btn-primary::after{
+    content:"→";
+    display:inline-flex;
+    width:25px;height:25px;
+    align-items:center;justify-content:center;
+    margin-left:3px;
+    border-radius:9px;
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.10);
+    font-size:13px;
+    transition:transform .22s ease,background .22s ease;
+  }
+  .hero-ctas .btn-primary:hover,
+  .final-cta .btn-primary:hover{
+    transform:translateY(-3px)!important;
+    filter:saturate(1.06);
+    box-shadow:0 25px 48px rgba(36,26,20,.28),0 7px 16px rgba(36,26,20,.15),inset 0 1px 0 rgba(255,255,255,.18)!important;
+  }
+  .hero-ctas .btn-primary:hover::after,
+  .final-cta .btn-primary:hover::after{transform:translateX(3px);background:rgba(255,255,255,.15);}
+
+  .hero-ctas .btn-secondary{
+    min-height:58px;
+    padding:0 25px!important;
+    border-radius:18px!important;
+    border:1px solid rgba(112,87,61,.18)!important;
+    background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,249,241,.90))!important;
+    color:#2A2019!important;
+    font-size:14px!important;
+    font-weight:820!important;
+    box-shadow:0 13px 30px rgba(58,41,24,.08),inset 0 1px 0 #fff!important;
+    transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease!important;
+  }
+  .hero-ctas .btn-secondary::before{
+    content:"▶";
+    display:inline-flex;
+    width:28px;height:28px;
+    align-items:center;justify-content:center;
+    border-radius:10px;
+    background:#F4EEE6;
+    color:#5A4232;
+    font-size:10px;
+    box-shadow:inset 0 1px 0 #fff;
+  }
+  .hero-ctas .btn-secondary:hover{
+    transform:translateY(-3px)!important;
+    border-color:rgba(22,122,90,.22)!important;
+    box-shadow:0 20px 38px rgba(58,41,24,.12),inset 0 1px 0 #fff!important;
+  }
+
+  /* More luxurious trust row */
+  .hero-trust{gap:9px!important;}
+  .trust-item{
+    min-height:34px;
+    padding:8px 12px!important;
+    border:1px solid rgba(117,84,50,.12)!important;
+    background:rgba(255,255,255,.72)!important;
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    box-shadow:0 8px 20px rgba(58,41,24,.045)!important;
+    color:#75695D!important;
+    line-height:1.25;
+  }
+
+  /* Editorial food grille */
+  .hero-visual{
+    gap:18px!important;
+    width:min(1140px,calc(100% - 38px))!important;
+    padding:7px;
+    border-radius:34px;
+    background:linear-gradient(145deg,rgba(255,255,255,.72),rgba(255,249,240,.40));
+    border:1px solid rgba(255,255,255,.82);
+    box-shadow:0 38px 90px rgba(57,39,24,.14);
+  }
+  .hero-photo-main,.hero-photo-small{
+    border-radius:26px!important;
+    border:1px solid rgba(255,255,255,.78)!important;
+    box-shadow:0 18px 42px rgba(50,34,20,.13)!important;
+  }
+  .hero-photo-main::before,.hero-photo-small::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:1;
+    pointer-events:none;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);
+    border-radius:inherit;
+  }
+  .photo-label{
+    bottom:14px!important;
+    left:14px!important;
+    padding:8px 12px!important;
+    background:rgba(26,20,15,.54)!important;
+    border:1px solid rgba(255,255,255,.20)!important;
+    box-shadow:0 8px 24px rgba(0,0,0,.16);
+  }
+
+  /* Final dish gallery becomes a premium miniature grille */
+  .final-dishes{
+    width:min(820px,100%);
+    margin:0 auto 42px!important;
+    display:grid!important;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:11px!important;
+    padding:12px;
+    border-radius:28px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.07);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
+  }
+  .final-dishes img{
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:1.18/1;
+    border-radius:17px!important;
+    border:1px solid rgba(255,255,255,.13)!important;
+    box-shadow:0 13px 28px rgba(0,0,0,.24)!important;
+    transition:transform .28s ease,box-shadow .28s ease,filter .28s ease!important;
+  }
+  .final-dishes img:nth-child(1),.final-dishes img:nth-child(6){aspect-ratio:1.05/1;}
+  .final-dishes img:hover{transform:translateY(-5px) scale(1.025)!important;box-shadow:0 20px 36px rgba(0,0,0,.31)!important;filter:saturate(1.06);}
+
+  /* Feedback story card with a real lifestyle image */
+  .landing-feedback{
+    padding:84px 24px!important;
+    background:
+      radial-gradient(circle at 12% 10%,rgba(230,163,74,.12),transparent 28%),
+      radial-gradient(circle at 90% 0%,rgba(29,158,117,.11),transparent 27%),
+      linear-gradient(135deg,#FFF8EE 0%,#FFFDF9 52%,#EFF8F4 100%)!important;
+  }
+  .landing-feedback-inner{
+    width:min(100%,1120px)!important;
+    grid-template-columns:240px minmax(0,1fr) auto!important;
+    gap:28px!important;
+    padding:13px 18px 13px 13px!important;
+    border-radius:32px!important;
+    border:1px solid rgba(117,84,50,.14)!important;
+    background:rgba(255,255,255,.78)!important;
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+    box-shadow:0 28px 72px rgba(58,41,24,.12),inset 0 1px 0 rgba(255,255,255,.90)!important;
+  }
+  .landing-feedback-photo{
+    position:relative;
+    height:172px;
+    overflow:hidden;
+    border-radius:23px;
+    background:#EEE5DA;
+    box-shadow:0 16px 34px rgba(54,36,22,.14);
+  }
+  .landing-feedback-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+  .landing-feedback-photo::after{
+    content:"";
+    position:absolute;inset:0;
+    background:linear-gradient(to top,rgba(24,18,14,.18),transparent 58%);
+    pointer-events:none;
+  }
+  .landing-feedback-icon{display:none!important;}
+  .landing-feedback-kicker{font-size:10px!important;letter-spacing:.17em!important;color:#B65B25!important;margin-bottom:9px!important;}
+  .landing-feedback-copy h2{font-size:clamp(27px,3vw,38px)!important;letter-spacing:-.04em!important;line-height:1.04;margin-bottom:10px!important;}
+  .landing-feedback-copy p{font-size:14px!important;line-height:1.72!important;max-width:580px!important;}
+  .landing-feedback-btn{
+    min-height:50px;
+    padding:0 18px!important;
+    white-space:nowrap;
+    border-radius:16px!important;
+    background:linear-gradient(135deg,#B95722,#D9782D)!important;
+    box-shadow:0 15px 30px rgba(185,87,34,.22),inset 0 1px 0 rgba(255,255,255,.18)!important;
+    transition:transform .2s ease,box-shadow .2s ease!important;
+  }
+  .landing-feedback-btn:hover{transform:translateY(-2px);box-shadow:0 20px 38px rgba(185,87,34,.27),inset 0 1px 0 rgba(255,255,255,.20)!important;}
+
+  @media(max-width:820px){
+    .landing-feedback-inner{grid-template-columns:190px minmax(0,1fr)!important;padding:12px!important;}
+    .landing-feedback-photo{height:160px;}
+    .landing-feedback-btn{grid-column:1/-1;width:100%;}
+  }
+  @media(max-width:680px){
+    .hero-ctas{max-width:390px!important;}
+    .hero-ctas .btn-primary,.hero-ctas .btn-secondary{min-height:56px;}
+    .hero-visual{width:calc(100% - 24px)!important;padding:6px;gap:10px!important;border-radius:26px;}
+    .hero-photo-main{border-radius:20px!important;}
+    .hero-photo-small{border-radius:18px!important;}
+    .final-dishes{grid-template-columns:repeat(5,minmax(0,1fr));gap:6px!important;padding:8px;border-radius:22px;}
+    .final-dishes img{border-radius:11px!important;}
+  }
+  @media(max-width:560px){
+    .landing-feedback{padding:58px 16px!important;}
+    .landing-feedback-inner{display:block!important;padding:10px 10px 14px!important;text-align:left!important;border-radius:26px!important;}
+    .landing-feedback-photo{height:205px;margin-bottom:20px;border-radius:20px;}
+    .landing-feedback-copy{padding:0 9px;}
+    .landing-feedback-btn{width:calc(100% - 18px)!important;margin:20px 9px 0;}
+  }
+  @media(max-width:430px){
+    .hero-visual{width:calc(100% - 20px)!important;}
+    .final-dishes{grid-template-columns:repeat(5,minmax(0,1fr));}
+    .final-dishes img{aspect-ratio:1/1!important;}
+  }
+
+  /* WorldMeals signature photographic micro-assets */
+  .time-greeting{
+    max-width:calc(100vw - 32px);
+    min-height:44px;
+    display:inline-flex!important;
+    align-items:center;
+    justify-content:center;
+    gap:10px!important;
+    padding:7px 15px 7px 8px!important;
+    overflow:hidden;
+    white-space:nowrap;
+    box-shadow:0 12px 30px rgba(45,31,20,.08),inset 0 1px 0 rgba(255,255,255,.92)!important;
+  }
+  .time-greeting-icon{
+    width:30px;
+    height:30px;
+    flex:0 0 30px;
+    display:block;
+    border-radius:50%;
+    object-fit:cover;
+    box-shadow:0 4px 12px rgba(36,26,20,.16),0 0 0 1px rgba(255,255,255,.82);
+  }
+  .time-greeting span{min-width:0;overflow:hidden;text-overflow:ellipsis;}
+
+  .wm-world-cta{gap:11px!important;max-width:100%;}
+  .wm-cta-globe-wrap{
+    width:32px;height:32px;flex:0 0 32px;
+    display:inline-flex;align-items:center;justify-content:center;
+    border-radius:50%;overflow:hidden;
+    background:rgba(255,255,255,.08);
+    box-shadow:0 5px 14px rgba(0,0,0,.22),0 0 0 1px rgba(255,255,255,.12);
+  }
+  .wm-cta-globe{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);}
+  .wm-world-cta>span:nth-child(2){min-width:0;}
+
+  @media(max-width:680px){
+    .time-greeting{font-size:12px!important;max-width:calc(100vw - 28px);padding-right:12px!important;gap:8px!important;}
+    .time-greeting-icon{width:27px;height:27px;flex-basis:27px;}
+    .wm-cta-globe-wrap{width:30px;height:30px;flex-basis:30px;}
+    .hero-ctas .wm-world-cta{padding-left:16px!important;padding-right:16px!important;}
+  }
+  @media(max-width:380px){
+    .time-greeting{font-size:11px!important;}
+    .time-greeting-icon{width:25px;height:25px;flex-basis:25px;}
+    .wm-world-cta{font-size:13px!important;}
+  }
+</style>
 </head>
 <body>
 
@@ -1939,14 +2233,20 @@ body{
 </nav>
 <!-- HERO -->
 <section class="hero">
-  <div class="time-greeting" id="timeGreeting">☀️ Welcome to WorldMeals</div>
+  <div class="time-greeting" id="timeGreeting">
+    <img id="timeGreetingIcon" class="time-greeting-icon" src="/images/time/afternoon-sun.png" alt="" aria-hidden="true">
+    <span id="timeGreetingText">Welcome to WorldMeals</span>
+  </div>
   <div class="daypart-note" id="mealPeriodNote">Showing dishes for your local time</div>
   <div class="hero-tag"><span></span> Now live · 1000+ authentic dishes · Global cuisines</div>
   <h1 id="heroHeadline">Stop cooking<br/>the same 5 meals.<br/>Eat the <em>whole world</em>.</h1>
   <p class="hero-sub" id="heroSubtitle">Discover authentic dishes from countries around the world, filtered by your budget, calories, spice level, and diet. With an AI chef that works around what's already in your fridge.</p>
   <div style="font-size:12px;color:#8A7F73;font-weight:700;letter-spacing:.02em;margin:-18px 0 28px">Built in America · Connecting people through food</div>
   <div class="hero-ctas">
-   <a href="app.html" class="btn-primary">🍽 Start cooking the world</a>
+   <a href="app.html" class="btn-primary wm-world-cta">
+      <span class="wm-cta-globe-wrap" aria-hidden="true"><img class="wm-cta-globe" src="/images/worldmeals-food-globe.png" alt=""></span>
+      <span>Start cooking the world</span>
+    </a>
     <a href="#features" class="btn-secondary">See how it works</a>
   </div>
   <div class="hero-trust">
@@ -2607,7 +2907,10 @@ body{
   </div>
   <h2>The world is waiting.<br/>Start exploring it tonight.</h2>
   <p>Discover authentic cuisine, cook with confidence, and connect with the world — one dish at a time.</p>
-  <a href="#pricing" class="btn-primary" style="font-size:16px;padding:16px 32px;border-radius:16px">🍽 Start cooking the world</a>
+  <a href="#pricing" class="btn-primary wm-world-cta" style="font-size:16px;padding:16px 32px;border-radius:16px">
+    <span class="wm-cta-globe-wrap" aria-hidden="true"><img class="wm-cta-globe" src="/images/worldmeals-food-globe.png" alt=""></span>
+    <span>Start cooking the world</span>
+  </a>
   <div style="margin-top:16px;font-size:12px;color:#444">Explorer · 5 AI recipes lifetime · Chef includes a 3-day trial · Cancel anytime</div>
 </section>
 
@@ -2616,6 +2919,9 @@ body{
 <!-- OPTIONAL FEEDBACK — LANDING PAGE ONLY -->
 <section class="landing-feedback reveal" id="feedback" aria-labelledby="landingFeedbackTitle">
   <div class="landing-feedback-inner">
+    <div class="landing-feedback-photo" aria-hidden="true">
+      <img src="/images/worldmeals-community-feedback.png" alt="" loading="lazy">
+    </div>
     <div class="landing-feedback-icon" aria-hidden="true">💬</div>
     <div class="landing-feedback-copy">
       <div class="landing-feedback-kicker">YOUR VOICE MATTERS</div>
@@ -2999,7 +3305,8 @@ body{
   const experiences = {
     breakfast: {
       bodyClass: "morning",
-      greeting: "🌅 Good morning · Breakfast around the world",
+      greeting: "Good morning · Enjoy breakfast around the world",
+      icon: "/images/time/morning-sun.png",
       note: "Showing warm breakfast dishes for your local morning",
       headline: "Start your morning<br>with a <em>world of breakfast</em>.",
       subtitle: "Discover comforting breakfast dishes from different cultures, chosen automatically for the time of day.",
@@ -3017,7 +3324,8 @@ body{
     },
     lunch: {
       bodyClass: "afternoon",
-      greeting: "☀️ Good afternoon · Lunch across the world",
+      greeting: "Good afternoon · Taste lunch around the world",
+      icon: "/images/time/afternoon-sun.png",
       note: "Showing fresh lunch dishes for your local afternoon",
       headline: "Take a delicious break.<br>Explore the <em>whole world</em>.",
       subtitle: "Enjoy vibrant lunches, street foods, and fresh dishes that fit your time, budget, and appetite.",
@@ -3035,7 +3343,8 @@ body{
     },
     dinner: {
       bodyClass: "evening",
-      greeting: "🌙 Good evening · Dinner around the world",
+      greeting: "Good evening · Savor dinner around the world",
+      icon: "/images/time/evening-moon.png",
       note: "Showing comforting dinner dishes for your local evening",
       headline: "Slow down tonight.<br>Cook something <em>unforgettable</em>.",
       subtitle: "Settle in with rich comfort foods, family dinners, and traditional evening dishes from around the world.",
@@ -3057,6 +3366,8 @@ body{
   document.body.dataset.daypart = experience.bodyClass;
 
   const greeting = document.getElementById("timeGreeting");
+  const greetingText = document.getElementById("timeGreetingText");
+  const greetingIcon = document.getElementById("timeGreetingIcon");
   const note = document.getElementById("mealPeriodNote");
   const headline = document.getElementById("heroHeadline");
   const subtitle = document.getElementById("heroSubtitle");
@@ -3067,7 +3378,11 @@ body{
   const sideLabelOne = document.getElementById("sideLabelOne");
   const sideLabelTwo = document.getElementById("sideLabelTwo");
 
-  greeting.textContent = experience.greeting;
+  if(greetingText) greetingText.textContent = experience.greeting;
+  if(greetingIcon){
+    greetingIcon.src = experience.icon;
+    greetingIcon.alt = "";
+  }
   note.textContent = experience.note;
   headline.innerHTML = experience.headline;
   subtitle.textContent = experience.subtitle;
