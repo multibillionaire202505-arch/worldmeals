@@ -55173,4 +55173,8429 @@ window.WORLD_MEALS_DATABASE = [
     "fiber": 2,
     "image": "/images/dishes/Pancakes.jpg"
   }
+  // WorldMeals — 100 new salads, protein bowls, and smoothies
+// IDs 1080–1179. Paste these objects before the final ]; of WORLD_MEALS_DATABASE.
+
+,{
+  "id": 1080,
+  "name": "Horiatiki Greek Salad",
+  "country": "Greece",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free-option",
+    "vegetarian"
+  ],
+  "desc": "A fresh Greece-inspired salad featuring tomatoes, cucumber, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Tomatoes",
+    "Cucumber",
+    "Red onion",
+    "Kalamata olives",
+    "Feta cheese",
+    "Extra-virgin olive oil",
+    "Dried oregano"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Feta cheese",
+        "to": "Dairy-free feta",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Horiatiki-Greek-Salad.jpg"
+}
+,{
+  "id": 1081,
+  "name": "Lebanese Fattoush",
+  "country": "Lebanon",
+  "region": "Middle East",
+  "emoji": "🥣",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "gluten-free-option",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh Lebanon-inspired salad featuring romaine lettuce, tomatoes, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Romaine lettuce",
+    "Tomatoes",
+    "Cucumber",
+    "Radish",
+    "Toasted pita",
+    "Sumac",
+    "Pomegranate molasses"
+  ],
+  "swaps": {
+    "gluten": [
+      {
+        "from": "Toasted pita",
+        "to": "Gluten-free flatbread",
+        "note": "Preserves the role of the original ingredient without gluten"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Lebanese-Fattoush.jpg"
+}
+,{
+  "id": 1082,
+  "name": "Persian Shirazi Salad",
+  "country": "Iran",
+  "region": "Middle East",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh Iran-inspired salad featuring cucumber, tomatoes, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Cucumber",
+    "Tomatoes",
+    "Red onion",
+    "Fresh mint",
+    "Parsley",
+    "Lime juice",
+    "Olive oil"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Olive oil",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the dish simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Persian-Shirazi-Salad.jpg"
+}
+,{
+  "id": 1083,
+  "name": "Thai Green Papaya Salad",
+  "country": "Thailand",
+  "region": "Asia",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 3,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Thailand-inspired salad featuring green papaya, cherry tomatoes, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Green papaya",
+    "Cherry tomatoes",
+    "Green beans",
+    "Peanuts",
+    "Lime juice",
+    "Fish sauce",
+    "Palm sugar"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Fish sauce",
+        "to": "Hearts of palm or marinated tofu",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Thai-Green-Papaya-Salad.jpg"
+}
+,{
+  "id": 1084,
+  "name": "Indonesian Gado-Gado",
+  "country": "Indonesia",
+  "region": "Asia",
+  "emoji": "🥣",
+  "cal": 320,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Indonesia-inspired salad featuring cabbage, green beans, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Cabbage",
+    "Green beans",
+    "Bean sprouts",
+    "Tofu",
+    "Tempeh",
+    "Boiled egg",
+    "Peanut sauce"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Boiled egg",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 14,
+  "carbs": 36,
+  "fat": 11,
+  "fiber": 8,
+  "image": "/images/dishes/Indonesian-Gado-Gado.jpg"
+}
+,{
+  "id": 1085,
+  "name": "East African Kachumbari",
+  "country": "East Africa",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "gluten-free",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh East Africa-inspired salad featuring tomatoes, red onion, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Tomatoes",
+    "Red onion",
+    "Cucumber",
+    "Cilantro",
+    "Lime juice",
+    "Fresh chili",
+    "Salt"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Fresh chili",
+        "to": "Sweet paprika or a mild herb sauce",
+        "note": "Keeps color and flavor while reducing the heat"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/East-African-Kachumbari.jpg"
+}
+,{
+  "id": 1086,
+  "name": "French Niçoise Salad",
+  "country": "France",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh France-inspired salad featuring tuna, eggs, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Tuna",
+    "Eggs",
+    "Tomatoes",
+    "Green beans",
+    "Baby potatoes",
+    "Niçoise olives",
+    "Anchovies"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Tuna",
+        "to": "Hearts of palm or marinated tofu",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/French-Niçoise-Salad.jpg"
+}
+,{
+  "id": 1087,
+  "name": "Chilean Tomato Onion Salad",
+  "country": "Chile",
+  "region": "Americas",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh Chile-inspired salad featuring tomatoes, white onion, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Tomatoes",
+    "White onion",
+    "Cilantro",
+    "Olive oil",
+    "Lemon juice",
+    "Salt",
+    "Black pepper"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Black pepper",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the dish simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Chilean-Tomato-Onion-Salad.jpg"
+}
+,{
+  "id": 1088,
+  "name": "Spanish Pipirrana",
+  "country": "Spain",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Spain-inspired salad featuring tomatoes, green pepper, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Tomatoes",
+    "Green pepper",
+    "Cucumber",
+    "Onion",
+    "Hard-boiled egg",
+    "Olive oil",
+    "Sherry vinegar"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Hard-boiled egg",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Spanish-Pipirrana.jpg"
+}
+,{
+  "id": 1089,
+  "name": "Turkish Shepherd Salad",
+  "country": "Turkey",
+  "region": "Middle East",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 2,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh Turkey-inspired salad featuring tomatoes, cucumber, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Tomatoes",
+    "Cucumber",
+    "Green pepper",
+    "Red onion",
+    "Parsley",
+    "Lemon juice",
+    "Olive oil"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Olive oil",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the dish simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Turkish-Shepherd-Salad.jpg"
+}
+,{
+  "id": 1090,
+  "name": "Israeli Chopped Salad",
+  "country": "Israel",
+  "region": "Middle East",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh Israel-inspired salad featuring tomatoes, cucumber, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Tomatoes",
+    "Cucumber",
+    "Red bell pepper",
+    "Red onion",
+    "Parsley",
+    "Lemon juice",
+    "Olive oil"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Olive oil",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the dish simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Israeli-Chopped-Salad.jpg"
+}
+,{
+  "id": 1091,
+  "name": "Moroccan Carrot Salad",
+  "country": "Morocco",
+  "region": "Africa",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 2,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh Morocco-inspired salad featuring carrots, parsley, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Carrots",
+    "Parsley",
+    "Cilantro",
+    "Lemon juice",
+    "Olive oil",
+    "Cumin",
+    "Paprika"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Paprika",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the dish simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Moroccan-Carrot-Salad.jpg"
+}
+,{
+  "id": 1092,
+  "name": "Tunisian Mechouia Salad",
+  "country": "Tunisia",
+  "region": "Africa",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 3,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Tunisia-inspired salad featuring roasted peppers, tomatoes, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Roasted peppers",
+    "Tomatoes",
+    "Onion",
+    "Garlic",
+    "Tuna",
+    "Hard-boiled egg",
+    "Olive oil"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Tuna",
+        "to": "Hearts of palm or marinated tofu",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Tunisian-Mechouia-Salad.jpg"
+}
+,{
+  "id": 1093,
+  "name": "Georgian Tomato Cucumber Salad",
+  "country": "Georgia",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh Georgia-inspired salad featuring tomatoes, cucumber, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Tomatoes",
+    "Cucumber",
+    "Red onion",
+    "Cilantro",
+    "Walnuts",
+    "Garlic",
+    "Red wine vinegar"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Red wine vinegar",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the dish simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Georgian-Tomato-Cucumber-Salad.jpg"
+}
+,{
+  "id": 1094,
+  "name": "Armenian Eetch Salad",
+  "country": "Armenia",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 320,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free-option",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh Armenia-inspired salad featuring fine bulgur, tomato paste, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Fine bulgur",
+    "Tomato paste",
+    "Tomatoes",
+    "Parsley",
+    "Green onions",
+    "Lemon juice",
+    "Olive oil"
+  ],
+  "swaps": {
+    "gluten": [
+      {
+        "from": "Fine bulgur",
+        "to": "Quinoa",
+        "note": "Preserves the role of the original ingredient without gluten"
+      }
+    ]
+  },
+  "protein": 14,
+  "carbs": 36,
+  "fat": 11,
+  "fiber": 8,
+  "image": "/images/dishes/Armenian-Eetch-Salad.jpg"
+}
+,{
+  "id": 1095,
+  "name": "Bulgarian Shopska Salad",
+  "country": "Bulgaria",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free-option",
+    "vegetarian"
+  ],
+  "desc": "A fresh Bulgaria-inspired salad featuring tomatoes, cucumber, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Tomatoes",
+    "Cucumber",
+    "Roasted pepper",
+    "Red onion",
+    "Sirene cheese",
+    "Parsley",
+    "Olive oil"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Sirene cheese",
+        "to": "Dairy-free feta",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Bulgarian-Shopska-Salad.jpg"
+}
+,{
+  "id": 1096,
+  "name": "Serbian Šopska Salad",
+  "country": "Serbia",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free-option",
+    "vegetarian"
+  ],
+  "desc": "A fresh Serbia-inspired salad featuring tomatoes, cucumber, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Tomatoes",
+    "Cucumber",
+    "Bell pepper",
+    "Onion",
+    "White brined cheese",
+    "Parsley",
+    "Sunflower oil"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "White brined cheese",
+        "to": "Dairy-free feta",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Serbian-Šopska-Salad.jpg"
+}
+,{
+  "id": 1097,
+  "name": "German Cucumber Salad",
+  "country": "Germany",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free-option",
+    "vegetarian"
+  ],
+  "desc": "A fresh Germany-inspired salad featuring cucumber, dill, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Cucumber",
+    "Dill",
+    "Red onion",
+    "Sour cream",
+    "White vinegar",
+    "Sugar",
+    "Black pepper"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Sour cream",
+        "to": "Plant-based yogurt",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/German-Cucumber-Salad.jpg"
+}
+,{
+  "id": 1098,
+  "name": "Polish Mizeria",
+  "country": "Poland",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "gluten-free",
+    "dairy-free-option",
+    "vegetarian"
+  ],
+  "desc": "A fresh Poland-inspired salad featuring cucumber, sour cream, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Cucumber",
+    "Sour cream",
+    "Fresh dill",
+    "Lemon juice",
+    "Sugar",
+    "Salt",
+    "Black pepper"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Sour cream",
+        "to": "Plant-based yogurt",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Polish-Mizeria.jpg"
+}
+,{
+  "id": 1099,
+  "name": "Russian Vinegret Salad",
+  "country": "Russia",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 320,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh Russia-inspired salad featuring beets, potatoes, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Beets",
+    "Potatoes",
+    "Carrots",
+    "Pickles",
+    "Sauerkraut",
+    "Green peas",
+    "Sunflower oil"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Sunflower oil",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the dish simple"
+      }
+    ]
+  },
+  "protein": 14,
+  "carbs": 36,
+  "fat": 11,
+  "fiber": 8,
+  "image": "/images/dishes/Russian-Vinegret-Salad.jpg"
+}
+,{
+  "id": 1100,
+  "name": "Vietnamese Green Mango Salad",
+  "country": "Vietnam",
+  "region": "Asia",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 2,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Vietnam-inspired salad featuring green mango, carrot, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Green mango",
+    "Carrot",
+    "Fresh herbs",
+    "Peanuts",
+    "Lime juice",
+    "Fish sauce",
+    "Chili"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Chili",
+        "to": "Sweet paprika or a mild herb sauce",
+        "note": "Keeps color and flavor while reducing the heat"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Fish sauce",
+        "to": "Hearts of palm or marinated tofu",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Vietnamese-Green-Mango-Salad.jpg"
+}
+,{
+  "id": 1101,
+  "name": "Cambodian Green Mango Salad",
+  "country": "Cambodia",
+  "region": "Asia",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Cambodia-inspired salad featuring green mango, carrot, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Green mango",
+    "Carrot",
+    "Cucumber",
+    "Fresh basil",
+    "Roasted peanuts",
+    "Lime juice",
+    "Fish sauce"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Fish sauce",
+        "to": "Hearts of palm or marinated tofu",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Cambodian-Green-Mango-Salad.jpg"
+}
+,{
+  "id": 1102,
+  "name": "Lao Larb Salad",
+  "country": "Laos",
+  "region": "Asia",
+  "emoji": "🥗",
+  "cal": 380,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Laos-inspired salad featuring ground chicken, mint, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Ground chicken",
+    "Mint",
+    "Cilantro",
+    "Shallots",
+    "Toasted rice powder",
+    "Lime juice",
+    "Fish sauce"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Ground chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 30,
+  "carbs": 25,
+  "fat": 16,
+  "fiber": 7,
+  "image": "/images/dishes/Lao-Larb-Salad.jpg"
+}
+,{
+  "id": 1103,
+  "name": "Burmese Tea Leaf Salad",
+  "country": "Myanmar",
+  "region": "Asia",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh Myanmar-inspired salad featuring fermented tea leaves, cabbage, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Fermented tea leaves",
+    "Cabbage",
+    "Tomatoes",
+    "Fried garlic",
+    "Peanuts",
+    "Sesame seeds",
+    "Lime juice"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Lime juice",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the dish simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Burmese-Tea-Leaf-Salad.jpg"
+}
+,{
+  "id": 1104,
+  "name": "Japanese Sunomono",
+  "country": "Japan",
+  "region": "Asia",
+  "emoji": "🥣",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "gluten-free-option",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh Japan-inspired salad featuring cucumber, rice vinegar, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Cucumber",
+    "Rice vinegar",
+    "Sugar",
+    "Soy sauce",
+    "Wakame",
+    "Sesame seeds",
+    "Salt"
+  ],
+  "swaps": {
+    "gluten": [
+      {
+        "from": "Soy sauce",
+        "to": "Tamari",
+        "note": "Preserves the role of the original ingredient without gluten"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Japanese-Sunomono.jpg"
+}
+,{
+  "id": 1105,
+  "name": "Korean Cucumber Salad",
+  "country": "South Korea",
+  "region": "Asia",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 3,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh South Korea-inspired salad featuring cucumber, gochugaru, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Cucumber",
+    "Gochugaru",
+    "Garlic",
+    "Rice vinegar",
+    "Sesame oil",
+    "Sesame seeds",
+    "Scallions"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Scallions",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the dish simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Korean-Cucumber-Salad.jpg"
+}
+,{
+  "id": 1106,
+  "name": "Chinese Smashed Cucumber Salad",
+  "country": "China",
+  "region": "Asia",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free-option",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh China-inspired salad featuring cucumber, garlic, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Cucumber",
+    "Garlic",
+    "Chinkiang vinegar",
+    "Soy sauce",
+    "Sesame oil",
+    "Chili crisp",
+    "Sesame seeds"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Chili crisp",
+        "to": "Sweet paprika or a mild herb sauce",
+        "note": "Keeps color and flavor while reducing the heat"
+      }
+    ],
+    "gluten": [
+      {
+        "from": "Soy sauce",
+        "to": "Tamari",
+        "note": "Preserves the role of the original ingredient without gluten"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Chinese-Smashed-Cucumber-Salad.jpg"
+}
+,{
+  "id": 1107,
+  "name": "Filipino Ensaladang Talong",
+  "country": "Philippines",
+  "region": "Asia",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Philippines-inspired salad featuring eggplant, tomatoes, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Eggplant",
+    "Tomatoes",
+    "Red onion",
+    "Cane vinegar",
+    "Salted egg",
+    "Cilantro",
+    "Black pepper"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Eggplant",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Filipino-Ensaladang-Talong.jpg"
+}
+,{
+  "id": 1108,
+  "name": "Indian Kachumber Salad",
+  "country": "India",
+  "region": "Asia",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 2,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh India-inspired salad featuring cucumber, tomatoes, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Cucumber",
+    "Tomatoes",
+    "Red onion",
+    "Cilantro",
+    "Lemon juice",
+    "Cumin",
+    "Chaat masala"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Chaat masala",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the dish simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Indian-Kachumber-Salad.jpg"
+}
+,{
+  "id": 1109,
+  "name": "Sri Lankan Coconut Sambol Salad",
+  "country": "Sri Lanka",
+  "region": "Asia",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Sri Lanka-inspired salad featuring fresh coconut, red onion, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Fresh coconut",
+    "Red onion",
+    "Lime juice",
+    "Chili flakes",
+    "Maldive fish",
+    "Salt",
+    "Curry leaves"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Chili flakes",
+        "to": "Sweet paprika or a mild herb sauce",
+        "note": "Keeps color and flavor while reducing the heat"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Maldive fish",
+        "to": "Hearts of palm or marinated tofu",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Sri-Lankan-Coconut-Sambol-Salad.jpg"
+}
+,{
+  "id": 1110,
+  "name": "Greek Chicken Weight-Loss Salad",
+  "country": "Greece",
+  "region": "Europe",
+  "emoji": "🍗",
+  "cal": 390,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "salad",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A lighter Greece-inspired meal with grilled chicken breast, fiber-rich vegetables, and bright seasoning for satisfying flavor without heaviness.",
+  "ingredients": [
+    "Grilled chicken breast",
+    "Romaine lettuce",
+    "Cucumber",
+    "Tomatoes",
+    "Red onion",
+    "Feta",
+    "Lemon-oregano dressing"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Feta",
+        "to": "Dairy-free feta",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Grilled chicken breast",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 32,
+  "carbs": 34,
+  "fat": 14,
+  "fiber": 9,
+  "image": "/images/dishes/Greek-Chicken-Weight-Loss-Salad.jpg"
+}
+,{
+  "id": 1111,
+  "name": "Mediterranean Tuna Salad",
+  "country": "Mediterranean",
+  "region": "Mediterranean",
+  "emoji": "🐟",
+  "cal": 380,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Mediterranean-inspired salad featuring tuna, cucumber, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Tuna",
+    "Cucumber",
+    "Cherry tomatoes",
+    "Chickpeas",
+    "Red onion",
+    "Parsley",
+    "Lemon-olive oil dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Tuna",
+        "to": "Hearts of palm or marinated tofu",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 30,
+  "carbs": 25,
+  "fat": 16,
+  "fiber": 7,
+  "image": "/images/dishes/Mediterranean-Tuna-Salad.jpg"
+}
+,{
+  "id": 1112,
+  "name": "Moroccan Lentil Weight-Loss Bowl",
+  "country": "Morocco",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 390,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 2,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A lighter Morocco-inspired meal with green lentils, fiber-rich vegetables, and bright seasoning for satisfying flavor without heaviness.",
+  "ingredients": [
+    "Green lentils",
+    "Roasted carrots",
+    "Cucumber",
+    "Tomatoes",
+    "Parsley",
+    "Harissa yogurt",
+    "Lemon"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Harissa yogurt",
+        "to": "Sweet paprika or a mild herb sauce",
+        "note": "Keeps color and flavor while reducing the heat"
+      }
+    ],
+    "dairy": [
+      {
+        "from": "Harissa yogurt",
+        "to": "Plant-based yogurt",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 32,
+  "carbs": 34,
+  "fat": 14,
+  "fiber": 9,
+  "image": "/images/dishes/Moroccan-Lentil-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1113,
+  "name": "Thai Chicken Lettuce Cups",
+  "country": "Thailand",
+  "region": "Asia",
+  "emoji": "🍗",
+  "cal": 380,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 3,
+  "tags": [
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "Fresh lettuce cups filled with savory ground chicken and crisp vegetables, finished with bright Thai-style lime and herbs.",
+  "ingredients": [
+    "Ground chicken",
+    "Butter lettuce",
+    "Carrot",
+    "Water chestnuts",
+    "Lime",
+    "Thai basil",
+    "Peanut-lime sauce"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Ground chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 30,
+  "carbs": 25,
+  "fat": 16,
+  "fiber": 7,
+  "image": "/images/dishes/Thai-Chicken-Lettuce-Cups.jpg"
+}
+,{
+  "id": 1114,
+  "name": "Vietnamese Shrimp Salad",
+  "country": "Vietnam",
+  "region": "Asia",
+  "emoji": "🐟",
+  "cal": 380,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 2,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Vietnam-inspired salad featuring shrimp, cabbage, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Shrimp",
+    "Cabbage",
+    "Carrot",
+    "Cucumber",
+    "Mint",
+    "Cilantro",
+    "Lime fish-sauce dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Shrimp",
+        "to": "Hearts of palm or marinated tofu",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 30,
+  "carbs": 25,
+  "fat": 16,
+  "fiber": 7,
+  "image": "/images/dishes/Vietnamese-Shrimp-Salad.jpg"
+}
+,{
+  "id": 1115,
+  "name": "Japanese Salmon Cucumber Bowl",
+  "country": "Japan",
+  "region": "Asia",
+  "emoji": "🐟",
+  "cal": 470,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A colorful Japan-inspired bowl combining salmon, cucumber, vegetables, and bold regional flavors.",
+  "ingredients": [
+    "Salmon",
+    "Cucumber",
+    "Edamame",
+    "Brown rice",
+    "Nori",
+    "Sesame seeds",
+    "Soy-ginger dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Salmon",
+        "to": "Hearts of palm or marinated tofu",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 32,
+  "carbs": 45,
+  "fat": 16,
+  "fiber": 9,
+  "image": "/images/dishes/Japanese-Salmon-Cucumber-Bowl.jpg"
+}
+,{
+  "id": 1116,
+  "name": "Korean Chicken Cabbage Bowl",
+  "country": "South Korea",
+  "region": "Asia",
+  "emoji": "🍗",
+  "cal": 470,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 3,
+  "tags": [
+    "bowl",
+    "gluten-free-option",
+    "dairy-free"
+  ],
+  "desc": "A colorful South Korea-inspired bowl combining grilled chicken, cabbage, vegetables, and bold regional flavors.",
+  "ingredients": [
+    "Grilled chicken",
+    "Cabbage",
+    "Carrot",
+    "Cucumber",
+    "Brown rice",
+    "Kimchi",
+    "Gochujang dressing"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Gochujang dressing",
+        "to": "Sweet paprika or a mild herb sauce",
+        "note": "Keeps color and flavor while reducing the heat"
+      }
+    ],
+    "gluten": [
+      {
+        "from": "Gochujang dressing",
+        "to": "Gluten-free alternative",
+        "note": "Preserves the role of the original ingredient without gluten"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 32,
+  "carbs": 45,
+  "fat": 16,
+  "fiber": 9,
+  "image": "/images/dishes/Korean-Chicken-Cabbage-Bowl.jpg"
+}
+,{
+  "id": 1117,
+  "name": "Mexican Grilled Chicken Salad",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🍗",
+  "cal": 380,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 2,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Mexico-inspired salad featuring grilled chicken, romaine lettuce, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Romaine lettuce",
+    "Black beans",
+    "Corn",
+    "Tomatoes",
+    "Avocado",
+    "Lime-cilantro dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 30,
+  "carbs": 25,
+  "fat": 16,
+  "fiber": 7,
+  "image": "/images/dishes/Mexican-Grilled-Chicken-Salad.jpg"
+}
+,{
+  "id": 1118,
+  "name": "Brazilian Hearts of Palm Salad",
+  "country": "Brazil",
+  "region": "Americas",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh Brazil-inspired salad featuring hearts of palm, tomatoes, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Hearts of palm",
+    "Tomatoes",
+    "Avocado",
+    "Red onion",
+    "Parsley",
+    "Lime juice",
+    "Olive oil"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Olive oil",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the dish simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Brazilian-Hearts-of-Palm-Salad.jpg"
+}
+,{
+  "id": 1119,
+  "name": "Peruvian Quinoa Salad",
+  "country": "Peru",
+  "region": "Americas",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh Peru-inspired salad featuring quinoa, corn, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Quinoa",
+    "Corn",
+    "Tomatoes",
+    "Avocado",
+    "Red onion",
+    "Cilantro",
+    "Lime dressing"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Lime dressing",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the dish simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Peruvian-Quinoa-Salad.jpg"
+}
+,{
+  "id": 1120,
+  "name": "Caribbean Mango Chicken Salad",
+  "country": "Caribbean",
+  "region": "Americas",
+  "emoji": "🍗",
+  "cal": 380,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Caribbean-inspired salad featuring grilled chicken, mango, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Mango",
+    "Mixed greens",
+    "Cucumber",
+    "Red pepper",
+    "Avocado",
+    "Lime dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 30,
+  "carbs": 25,
+  "fat": 16,
+  "fiber": 7,
+  "image": "/images/dishes/Caribbean-Mango-Chicken-Salad.jpg"
+}
+,{
+  "id": 1121,
+  "name": "Jamaican Jerk Chicken Salad",
+  "country": "Jamaica",
+  "region": "Americas",
+  "emoji": "🍗",
+  "cal": 380,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 3,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Jamaica-inspired salad featuring jerk chicken, romaine lettuce, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Jerk chicken",
+    "Romaine lettuce",
+    "Mango",
+    "Cabbage",
+    "Bell pepper",
+    "Avocado",
+    "Lime dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Jerk chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 30,
+  "carbs": 25,
+  "fat": 16,
+  "fiber": 7,
+  "image": "/images/dishes/Jamaican-Jerk-Chicken-Salad.jpg"
+}
+,{
+  "id": 1122,
+  "name": "Nigerian Grilled Chicken Vegetable Bowl",
+  "country": "Nigeria",
+  "region": "Africa",
+  "emoji": "🍗",
+  "cal": 470,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 3,
+  "tags": [
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A colorful Nigeria-inspired bowl combining grilled chicken, brown rice, vegetables, and bold regional flavors.",
+  "ingredients": [
+    "Grilled chicken",
+    "Brown rice",
+    "Cabbage",
+    "Carrots",
+    "Tomatoes",
+    "Cucumber",
+    "Pepper sauce"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Pepper sauce",
+        "to": "Sweet paprika or a mild herb sauce",
+        "note": "Keeps color and flavor while reducing the heat"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 32,
+  "carbs": 45,
+  "fat": 16,
+  "fiber": 9,
+  "image": "/images/dishes/Nigerian-Grilled-Chicken-Vegetable-Bowl.jpg"
+}
+,{
+  "id": 1123,
+  "name": "Ghanaian Bean and Vegetable Bowl",
+  "country": "Ghana",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 470,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "bowl",
+    "gluten-free",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A colorful Ghana-inspired bowl combining black-eyed peas, roasted plantain, vegetables, and bold regional flavors.",
+  "ingredients": [
+    "Black-eyed peas",
+    "Roasted plantain",
+    "Cabbage",
+    "Carrots",
+    "Tomatoes",
+    "Avocado",
+    "Shito"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Shito",
+        "to": "Sweet paprika or a mild herb sauce",
+        "note": "Keeps color and flavor while reducing the heat"
+      }
+    ]
+  },
+  "protein": 32,
+  "carbs": 45,
+  "fat": 16,
+  "fiber": 9,
+  "image": "/images/dishes/Ghanaian-Bean-and-Vegetable-Bowl.jpg"
+}
+,{
+  "id": 1124,
+  "name": "Ethiopian Lentil Salad",
+  "country": "Ethiopia",
+  "region": "Africa",
+  "emoji": "🥗",
+  "cal": 320,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 2,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh Ethiopia-inspired salad featuring green lentils, tomatoes, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Green lentils",
+    "Tomatoes",
+    "Cucumber",
+    "Red onion",
+    "Parsley",
+    "Lemon juice",
+    "Berbere"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Berbere",
+        "to": "Sweet paprika or a mild herb sauce",
+        "note": "Keeps color and flavor while reducing the heat"
+      }
+    ]
+  },
+  "protein": 14,
+  "carbs": 36,
+  "fat": 11,
+  "fiber": 8,
+  "image": "/images/dishes/Ethiopian-Lentil-Salad.jpg"
+}
+,{
+  "id": 1125,
+  "name": "Kenyan Avocado Tomato Salad",
+  "country": "Kenya",
+  "region": "Africa",
+  "emoji": "🥗",
+  "cal": 230,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh Kenya-inspired salad featuring avocado, tomatoes, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Avocado",
+    "Tomatoes",
+    "Red onion",
+    "Cilantro",
+    "Lime juice",
+    "Black pepper",
+    "Salt"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Salt",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the dish simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Kenyan-Avocado-Tomato-Salad.jpg"
+}
+,{
+  "id": 1126,
+  "name": "South African Chicken Slaw",
+  "country": "South Africa",
+  "region": "Africa",
+  "emoji": "🍗",
+  "cal": 380,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A fresh South Africa-inspired salad featuring grilled chicken, green cabbage, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Green cabbage",
+    "Purple cabbage",
+    "Carrots",
+    "Bell pepper",
+    "Cilantro",
+    "Light yogurt dressing"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Light yogurt dressing",
+        "to": "Plant-based yogurt",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 30,
+  "carbs": 25,
+  "fat": 16,
+  "fiber": 7,
+  "image": "/images/dishes/South-African-Chicken-Slaw.jpg"
+}
+,{
+  "id": 1127,
+  "name": "Egyptian Chickpea Salad",
+  "country": "Egypt",
+  "region": "Africa",
+  "emoji": "🥗",
+  "cal": 320,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh Egypt-inspired salad featuring chickpeas, tomatoes, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Chickpeas",
+    "Tomatoes",
+    "Cucumber",
+    "Red onion",
+    "Parsley",
+    "Lemon juice",
+    "Cumin"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Cumin",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the dish simple"
+      }
+    ]
+  },
+  "protein": 14,
+  "carbs": 36,
+  "fat": 11,
+  "fiber": 8,
+  "image": "/images/dishes/Egyptian-Chickpea-Salad.jpg"
+}
+,{
+  "id": 1128,
+  "name": "Turkish Lentil Salad",
+  "country": "Turkey",
+  "region": "Middle East",
+  "emoji": "🥗",
+  "cal": 320,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 2,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh Turkey-inspired salad featuring green lentils, red pepper, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Green lentils",
+    "Red pepper",
+    "Cucumber",
+    "Red onion",
+    "Parsley",
+    "Mint",
+    "Lemon dressing"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Lemon dressing",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the dish simple"
+      }
+    ]
+  },
+  "protein": 14,
+  "carbs": 36,
+  "fat": 11,
+  "fiber": 8,
+  "image": "/images/dishes/Turkish-Lentil-Salad.jpg"
+}
+,{
+  "id": 1129,
+  "name": "Lebanese Chickpea Parsley Salad",
+  "country": "Lebanon",
+  "region": "Middle East",
+  "emoji": "🥗",
+  "cal": 320,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "gluten-free",
+    "dairy-free",
+    "vegetarian"
+  ],
+  "desc": "A fresh Lebanon-inspired salad featuring chickpeas, parsley, and vibrant seasonings for a crisp, flavorful meal.",
+  "ingredients": [
+    "Chickpeas",
+    "Parsley",
+    "Tomatoes",
+    "Cucumber",
+    "Red onion",
+    "Lemon juice",
+    "Olive oil"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Olive oil",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the dish simple"
+      }
+    ]
+  },
+  "protein": 14,
+  "carbs": 36,
+  "fat": 11,
+  "fiber": 8,
+  "image": "/images/dishes/Lebanese-Chickpea-Parsley-Salad.jpg"
+}
+,{
+  "id": 1130,
+  "name": "Greek Chicken Quinoa Protein Bowl",
+  "country": "Greece",
+  "region": "Europe",
+  "emoji": "🍗",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A high-protein Greece-inspired bowl pairing grilled chicken with quinoa and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Quinoa",
+    "Cucumber",
+    "Tomatoes",
+    "Kalamata olives",
+    "Feta",
+    "Tzatziki"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Feta",
+        "to": "Dairy-free feta",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Greek-Chicken-Quinoa-Protein-Bowl.jpg"
+}
+,{
+  "id": 1131,
+  "name": "Turkish Chicken Bulgur Protein Bowl",
+  "country": "Turkey",
+  "region": "Middle East",
+  "emoji": "🍗",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 2,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free-option",
+    "dairy-free-option"
+  ],
+  "desc": "A high-protein Turkey-inspired bowl pairing grilled chicken with bulgur and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Bulgur",
+    "Chickpeas",
+    "Cucumber",
+    "Tomatoes",
+    "Red onion",
+    "Yogurt-herb sauce"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Yogurt-herb sauce",
+        "to": "Plant-based yogurt",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ],
+    "gluten": [
+      {
+        "from": "Bulgur",
+        "to": "Quinoa",
+        "note": "Preserves the role of the original ingredient without gluten"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Turkish-Chicken-Bulgur-Protein-Bowl.jpg"
+}
+,{
+  "id": 1132,
+  "name": "Japanese Salmon Rice Protein Bowl",
+  "country": "Japan",
+  "region": "Asia",
+  "emoji": "🐟",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A high-protein Japan-inspired bowl pairing salmon with brown rice and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Salmon",
+    "Brown rice",
+    "Edamame",
+    "Cucumber",
+    "Carrot",
+    "Nori",
+    "Sesame-soy dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Salmon",
+        "to": "Hearts of palm or marinated tofu",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 38,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Japanese-Salmon-Rice-Protein-Bowl.jpg"
+}
+,{
+  "id": 1133,
+  "name": "Korean Beef Rice Protein Bowl",
+  "country": "South Korea",
+  "region": "Asia",
+  "emoji": "🥩",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 3,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free-option",
+    "dairy-free"
+  ],
+  "desc": "A high-protein South Korea-inspired bowl pairing lean beef with brown rice and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Lean beef",
+    "Brown rice",
+    "Spinach",
+    "Carrot",
+    "Cucumber",
+    "Kimchi",
+    "Gochujang"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Gochujang",
+        "to": "Sweet paprika or a mild herb sauce",
+        "note": "Keeps color and flavor while reducing the heat"
+      }
+    ],
+    "gluten": [
+      {
+        "from": "Gochujang",
+        "to": "Gluten-free alternative",
+        "note": "Preserves the role of the original ingredient without gluten"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Lean beef",
+        "to": "Portobello mushrooms or lentils",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Korean-Beef-Rice-Protein-Bowl.jpg"
+}
+,{
+  "id": 1134,
+  "name": "Thai Chicken Peanut Protein Bowl",
+  "country": "Thailand",
+  "region": "Asia",
+  "emoji": "🍗",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 3,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A high-protein Thailand-inspired bowl pairing grilled chicken with brown rice and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Brown rice",
+    "Cabbage",
+    "Carrot",
+    "Cucumber",
+    "Peanuts",
+    "Peanut-lime sauce"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Thai-Chicken-Peanut-Protein-Bowl.jpg"
+}
+,{
+  "id": 1135,
+  "name": "Vietnamese Lemongrass Chicken Protein Bowl",
+  "country": "Vietnam",
+  "region": "Asia",
+  "emoji": "🍗",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 2,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A high-protein Vietnam-inspired bowl pairing lemongrass chicken with brown rice and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Lemongrass chicken",
+    "Brown rice",
+    "Cucumber",
+    "Carrot",
+    "Cabbage",
+    "Fresh herbs",
+    "Nuoc cham"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Lemongrass chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Vietnamese-Lemongrass-Chicken-Protein-Bowl.jpg"
+}
+,{
+  "id": 1136,
+  "name": "Indian Tandoori Chicken Protein Bowl",
+  "country": "India",
+  "region": "Asia",
+  "emoji": "🍗",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 3,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A high-protein India-inspired bowl pairing tandoori chicken with brown basmati rice and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Tandoori chicken",
+    "Brown basmati rice",
+    "Cucumber",
+    "Tomatoes",
+    "Chickpeas",
+    "Spinach",
+    "Mint yogurt"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Mint yogurt",
+        "to": "Plant-based yogurt",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Tandoori chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Indian-Tandoori-Chicken-Protein-Bowl.jpg"
+}
+,{
+  "id": 1137,
+  "name": "Pakistani Chicken Chickpea Protein Bowl",
+  "country": "Pakistan",
+  "region": "Asia",
+  "emoji": "🍗",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 2,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A high-protein Pakistan-inspired bowl pairing spiced chicken with chickpeas and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Spiced chicken",
+    "Chickpeas",
+    "Brown rice",
+    "Cucumber",
+    "Tomatoes",
+    "Red onion",
+    "Mint chutney"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Spiced chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Pakistani-Chicken-Chickpea-Protein-Bowl.jpg"
+}
+,{
+  "id": 1138,
+  "name": "Lebanese Chicken Hummus Protein Bowl",
+  "country": "Lebanon",
+  "region": "Middle East",
+  "emoji": "🍗",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A high-protein Lebanon-inspired bowl pairing grilled chicken with hummus and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Hummus",
+    "Quinoa",
+    "Cucumber",
+    "Tomatoes",
+    "Pickled turnips",
+    "Parsley"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Lebanese-Chicken-Hummus-Protein-Bowl.jpg"
+}
+,{
+  "id": 1139,
+  "name": "Moroccan Chicken Couscous Protein Bowl",
+  "country": "Morocco",
+  "region": "Africa",
+  "emoji": "🍗",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 2,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free-option",
+    "dairy-free"
+  ],
+  "desc": "A high-protein Morocco-inspired bowl pairing grilled chicken with whole-wheat couscous and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Whole-wheat couscous",
+    "Chickpeas",
+    "Carrots",
+    "Zucchini",
+    "Parsley",
+    "Chermoula"
+  ],
+  "swaps": {
+    "gluten": [
+      {
+        "from": "Whole-wheat couscous",
+        "to": "Quinoa",
+        "note": "Preserves the role of the original ingredient without gluten"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Moroccan-Chicken-Couscous-Protein-Bowl.jpg"
+}
+,{
+  "id": 1140,
+  "name": "Nigerian Chicken and Beans Protein Bowl",
+  "country": "Nigeria",
+  "region": "Africa",
+  "emoji": "🍗",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 3,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A high-protein Nigeria-inspired bowl pairing grilled chicken with black-eyed peas and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Black-eyed peas",
+    "Brown rice",
+    "Tomatoes",
+    "Cabbage",
+    "Plantain",
+    "Pepper sauce"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Pepper sauce",
+        "to": "Sweet paprika or a mild herb sauce",
+        "note": "Keeps color and flavor while reducing the heat"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Nigerian-Chicken-and-Beans-Protein-Bowl.jpg"
+}
+,{
+  "id": 1141,
+  "name": "Ghanaian Grilled Fish and Beans Bowl",
+  "country": "Ghana",
+  "region": "Africa",
+  "emoji": "🐟",
+  "cal": 230,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A colorful Ghana-inspired bowl combining grilled fish, black-eyed peas, vegetables, and bold regional flavors.",
+  "ingredients": [
+    "Grilled fish",
+    "Black-eyed peas",
+    "Brown rice",
+    "Tomatoes",
+    "Cabbage",
+    "Avocado",
+    "Shito"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Shito",
+        "to": "Sweet paprika or a mild herb sauce",
+        "note": "Keeps color and flavor while reducing the heat"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Grilled fish",
+        "to": "Hearts of palm or marinated tofu",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 22,
+  "fat": 13,
+  "fiber": 5,
+  "image": "/images/dishes/Ghanaian-Grilled-Fish-and-Beans-Bowl.jpg"
+}
+,{
+  "id": 1142,
+  "name": "Senegalese Chicken Rice Protein Bowl",
+  "country": "Senegal",
+  "region": "Africa",
+  "emoji": "🍗",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A high-protein Senegal-inspired bowl pairing grilled chicken with brown rice and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Brown rice",
+    "Carrots",
+    "Cabbage",
+    "Tomatoes",
+    "Green beans",
+    "Lemon-onion sauce"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Senegalese-Chicken-Rice-Protein-Bowl.jpg"
+}
+,{
+  "id": 1143,
+  "name": "Ethiopian Beef and Lentil Protein Bowl",
+  "country": "Ethiopia",
+  "region": "Africa",
+  "emoji": "🥩",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 2,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A high-protein Ethiopia-inspired bowl pairing lean beef with lentils and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Lean beef",
+    "Lentils",
+    "Brown rice",
+    "Collard greens",
+    "Tomatoes",
+    "Cabbage",
+    "Berbere sauce"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Berbere sauce",
+        "to": "Sweet paprika or a mild herb sauce",
+        "note": "Keeps color and flavor while reducing the heat"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Lean beef",
+        "to": "Portobello mushrooms or lentils",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Ethiopian-Beef-and-Lentil-Protein-Bowl.jpg"
+}
+,{
+  "id": 1144,
+  "name": "Kenyan Chicken Sweet Potato Protein Bowl",
+  "country": "Kenya",
+  "region": "Africa",
+  "emoji": "🍗",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A high-protein Kenya-inspired bowl pairing grilled chicken with roasted sweet potato and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Roasted sweet potato",
+    "Sukuma wiki",
+    "Tomatoes",
+    "Avocado",
+    "Brown rice",
+    "Lemon dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Kenyan-Chicken-Sweet-Potato-Protein-Bowl.jpg"
+}
+,{
+  "id": 1145,
+  "name": "South African Beef Protein Bowl",
+  "country": "South Africa",
+  "region": "Africa",
+  "emoji": "🥩",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A high-protein South Africa-inspired bowl pairing lean grilled beef with brown rice and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Lean grilled beef",
+    "Brown rice",
+    "Chakalaka",
+    "Cabbage",
+    "Tomatoes",
+    "Avocado",
+    "Herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Lean grilled beef",
+        "to": "Portobello mushrooms or lentils",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/South-African-Beef-Protein-Bowl.jpg"
+}
+,{
+  "id": 1146,
+  "name": "Mexican Chicken Black Bean Protein Bowl",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🍗",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 2,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A high-protein Mexico-inspired bowl pairing grilled chicken with black beans and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Black beans",
+    "Brown rice",
+    "Corn",
+    "Pico de gallo",
+    "Avocado",
+    "Lime"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Mexican-Chicken-Black-Bean-Protein-Bowl.jpg"
+}
+,{
+  "id": 1147,
+  "name": "Brazilian Beef Rice and Beans Protein Bowl",
+  "country": "Brazil",
+  "region": "Americas",
+  "emoji": "🥩",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free-option",
+    "dairy-free"
+  ],
+  "desc": "A high-protein Brazil-inspired bowl pairing lean beef with brown rice and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Lean beef",
+    "Brown rice",
+    "Black beans",
+    "Collard greens",
+    "Tomatoes",
+    "Orange salsa",
+    "Farofa"
+  ],
+  "swaps": {
+    "gluten": [
+      {
+        "from": "Farofa",
+        "to": "Gluten-free cassava farofa",
+        "note": "Preserves the role of the original ingredient without gluten"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Lean beef",
+        "to": "Portobello mushrooms or lentils",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Brazilian-Beef-Rice-and-Beans-Protein-Bowl.jpg"
+}
+,{
+  "id": 1148,
+  "name": "Peruvian Chicken Quinoa Protein Bowl",
+  "country": "Peru",
+  "region": "Americas",
+  "emoji": "🍗",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A high-protein Peru-inspired bowl pairing grilled chicken with quinoa and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Quinoa",
+    "Corn",
+    "Tomatoes",
+    "Avocado",
+    "Red onion",
+    "Aji-lime sauce"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Peruvian-Chicken-Quinoa-Protein-Bowl.jpg"
+}
+,{
+  "id": 1149,
+  "name": "Argentine Steak Chimichurri Protein Bowl",
+  "country": "Argentina",
+  "region": "Americas",
+  "emoji": "🥩",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A high-protein Argentina-inspired bowl pairing lean steak with quinoa and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Lean steak",
+    "Quinoa",
+    "Roasted peppers",
+    "Tomatoes",
+    "Black beans",
+    "Corn",
+    "Chimichurri"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Lean steak",
+        "to": "Portobello mushrooms or lentils",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Argentine-Steak-Chimichurri-Protein-Bowl.jpg"
+}
+,{
+  "id": 1150,
+  "name": "Jamaican Jerk Chicken Protein Bowl",
+  "country": "Jamaica",
+  "region": "Americas",
+  "emoji": "🍗",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 3,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A high-protein Jamaica-inspired bowl pairing jerk chicken with rice and peas and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Jerk chicken",
+    "Rice and peas",
+    "Cabbage slaw",
+    "Mango salsa",
+    "Avocado",
+    "Plantain",
+    "Lime"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Jerk chicken",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Jamaican-Jerk-Chicken-Protein-Bowl.jpg"
+}
+,{
+  "id": 1151,
+  "name": "Caribbean Salmon Sweet Potato Bowl",
+  "country": "Caribbean",
+  "region": "Americas",
+  "emoji": "🐟",
+  "cal": 470,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A colorful Caribbean-inspired bowl combining salmon, roasted sweet potato, vegetables, and bold regional flavors.",
+  "ingredients": [
+    "Salmon",
+    "Roasted sweet potato",
+    "Quinoa",
+    "Black beans",
+    "Cabbage slaw",
+    "Avocado",
+    "Mango salsa"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Salmon",
+        "to": "Hearts of palm or marinated tofu",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 32,
+  "carbs": 45,
+  "fat": 16,
+  "fiber": 9,
+  "image": "/images/dishes/Caribbean-Salmon-Sweet-Potato-Bowl.jpg"
+}
+,{
+  "id": 1152,
+  "name": "Greek Yogurt Berry Protein Bowl",
+  "country": "Greece",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A high-protein Greece-inspired bowl pairing greek yogurt with strawberries and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Greek yogurt",
+    "Strawberries",
+    "Blueberries",
+    "Raspberries",
+    "Granola",
+    "Chia seeds",
+    "Almonds"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based yogurt",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Greek-Yogurt-Berry-Protein-Bowl.jpg"
+}
+,{
+  "id": 1153,
+  "name": "Cottage Cheese Fruit Protein Bowl",
+  "country": "International",
+  "region": "International",
+  "emoji": "🥣",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "meal-prep",
+    "bowl",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A high-protein International-inspired bowl pairing cottage cheese with strawberries and colorful vegetables for a balanced meal.",
+  "ingredients": [
+    "Cottage cheese",
+    "Strawberries",
+    "Blueberries",
+    "Kiwi",
+    "Mango",
+    "Banana",
+    "Almonds"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Cottage cheese",
+        "to": "Dairy-free feta",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 52,
+  "fat": 18,
+  "fiber": 9,
+  "image": "/images/dishes/Cottage-Cheese-Fruit-Protein-Bowl.jpg"
+}
+,{
+  "id": 1154,
+  "name": "Mediterranean Egg and Chickpea Bowl",
+  "country": "Mediterranean",
+  "region": "Mediterranean",
+  "emoji": "🥚",
+  "cal": 430,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "bowl",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A colorful Mediterranean-inspired bowl combining eggs, chickpeas, vegetables, and bold regional flavors.",
+  "ingredients": [
+    "Eggs",
+    "Chickpeas",
+    "Cucumber",
+    "Tomatoes",
+    "Kalamata olives",
+    "Feta",
+    "Hummus"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Feta",
+        "to": "Dairy-free feta",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Eggs",
+        "to": "Grilled tofu or chickpeas",
+        "note": "Season with the same regional spices and dressing"
+      }
+    ]
+  },
+  "protein": 24,
+  "carbs": 36,
+  "fat": 21,
+  "fiber": 9,
+  "image": "/images/dishes/Mediterranean-Egg-and-Chickpea-Bowl.jpg"
+}
+,{
+  "id": 1155,
+  "name": "Brazilian Açaí Smoothie",
+  "country": "Brazil",
+  "region": "Americas",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Brazil-inspired blend built around frozen açaí and banana, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Frozen açaí",
+    "Banana",
+    "Blueberries",
+    "Unsweetened almond milk",
+    "Chia seeds",
+    "Honey",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Unsweetened almond milk",
+        "to": "Plant-based milk",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 48,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Brazilian-Açaí-Smoothie.jpg"
+}
+,{
+  "id": 1156,
+  "name": "Indian Mango Protein Lassi",
+  "country": "India",
+  "region": "Asia",
+  "emoji": "🥤",
+  "cal": 360,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 2,
+  "tags": [
+    "smoothie",
+    "high-protein",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy India-inspired blend built around mango and greek yogurt, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Mango",
+    "Greek yogurt",
+    "Milk",
+    "Protein powder",
+    "Cardamom",
+    "Saffron",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based yogurt",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 22,
+  "carbs": 45,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Indian-Mango-Protein-Lassi.jpg"
+}
+,{
+  "id": 1157,
+  "name": "Caribbean Pineapple Ginger Smoothie",
+  "country": "Caribbean",
+  "region": "Americas",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Caribbean-inspired blend built around pineapple and banana, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Pineapple",
+    "Banana",
+    "Fresh ginger",
+    "Coconut water",
+    "Lime juice",
+    "Greek yogurt",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based yogurt",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 48,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Caribbean-Pineapple-Ginger-Smoothie.jpg"
+}
+,{
+  "id": 1158,
+  "name": "Jamaican Mango Banana Smoothie",
+  "country": "Jamaica",
+  "region": "Americas",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Jamaica-inspired blend built around mango and banana, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Mango",
+    "Banana",
+    "Coconut milk",
+    "Greek yogurt",
+    "Nutmeg",
+    "Lime juice",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Coconut milk",
+        "to": "Plant-based milk",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 48,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Jamaican-Mango-Banana-Smoothie.jpg"
+}
+,{
+  "id": 1159,
+  "name": "Mexican Chocolate Banana Protein Smoothie",
+  "country": "Mexico",
+  "region": "Americas",
+  "emoji": "🥤",
+  "cal": 360,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 2,
+  "tags": [
+    "smoothie",
+    "high-protein",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Mexico-inspired blend built around banana and cocoa powder, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Banana",
+    "Cocoa powder",
+    "Protein powder",
+    "Milk",
+    "Cinnamon",
+    "Vanilla",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Milk",
+        "to": "Plant-based milk",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 22,
+  "carbs": 45,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Mexican-Chocolate-Banana-Protein-Smoothie.jpg"
+}
+,{
+  "id": 1160,
+  "name": "Greek Yogurt Berry Smoothie",
+  "country": "Greece",
+  "region": "Europe",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "high-protein",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Greece-inspired blend built around greek yogurt and mixed berries, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Greek yogurt",
+    "Mixed berries",
+    "Banana",
+    "Milk",
+    "Honey",
+    "Chia seeds",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based yogurt",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 15,
+  "carbs": 48,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Greek-Yogurt-Berry-Smoothie.jpg"
+}
+,{
+  "id": 1161,
+  "name": "Turkish Banana Tahini Smoothie",
+  "country": "Turkey",
+  "region": "Middle East",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 2,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Turkey-inspired blend built around banana and tahini, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Banana",
+    "Tahini",
+    "Greek yogurt",
+    "Milk",
+    "Cinnamon",
+    "Sesame seeds",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based yogurt",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 48,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Turkish-Banana-Tahini-Smoothie.jpg"
+}
+,{
+  "id": 1162,
+  "name": "Moroccan Date Almond Smoothie",
+  "country": "Morocco",
+  "region": "Africa",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 2,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Morocco-inspired blend built around dates and almonds, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Dates",
+    "Almonds",
+    "Banana",
+    "Milk",
+    "Cinnamon",
+    "Orange blossom water",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Milk",
+        "to": "Plant-based milk",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 48,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Moroccan-Date-Almond-Smoothie.jpg"
+}
+,{
+  "id": 1163,
+  "name": "Egyptian Banana Date Smoothie",
+  "country": "Egypt",
+  "region": "Africa",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Egypt-inspired blend built around banana and dates, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Banana",
+    "Dates",
+    "Milk",
+    "Tahini",
+    "Cinnamon",
+    "Vanilla",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Milk",
+        "to": "Plant-based milk",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 48,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Egyptian-Banana-Date-Smoothie.jpg"
+}
+,{
+  "id": 1164,
+  "name": "Nigerian Peanut Banana Smoothie",
+  "country": "Nigeria",
+  "region": "Africa",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 3,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Nigeria-inspired blend built around banana and peanut butter, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Banana",
+    "Peanut butter",
+    "Milk",
+    "Dates",
+    "Cinnamon",
+    "Ground peanuts",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Milk",
+        "to": "Plant-based milk",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 48,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Nigerian-Peanut-Banana-Smoothie.jpg"
+}
+,{
+  "id": 1165,
+  "name": "Ghanaian Pineapple Coconut Smoothie",
+  "country": "Ghana",
+  "region": "Africa",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Ghana-inspired blend built around pineapple and coconut milk, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Pineapple",
+    "Coconut milk",
+    "Banana",
+    "Lime juice",
+    "Ginger",
+    "Chia seeds",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Coconut milk",
+        "to": "Plant-based milk",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 48,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Ghanaian-Pineapple-Coconut-Smoothie.jpg"
+}
+,{
+  "id": 1166,
+  "name": "Kenyan Mango Passion Fruit Smoothie",
+  "country": "Kenya",
+  "region": "Africa",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Kenya-inspired blend built around mango and passion fruit, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Mango",
+    "Passion fruit",
+    "Banana",
+    "Greek yogurt",
+    "Milk",
+    "Honey",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based yogurt",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 48,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Kenyan-Mango-Passion-Fruit-Smoothie.jpg"
+}
+,{
+  "id": 1167,
+  "name": "Ethiopian Coffee Banana Smoothie",
+  "country": "Ethiopia",
+  "region": "Africa",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 2,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Ethiopia-inspired blend built around banana and chilled ethiopian coffee, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Banana",
+    "Chilled Ethiopian coffee",
+    "Milk",
+    "Greek yogurt",
+    "Cocoa powder",
+    "Honey",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Milk",
+        "to": "Plant-based milk",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 15,
+  "carbs": 48,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Ethiopian-Coffee-Banana-Smoothie.jpg"
+}
+,{
+  "id": 1168,
+  "name": "South African Berry Rooibos Smoothie",
+  "country": "South Africa",
+  "region": "Africa",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy South Africa-inspired blend built around mixed berries and chilled rooibos tea, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Mixed berries",
+    "Chilled rooibos tea",
+    "Banana",
+    "Greek yogurt",
+    "Honey",
+    "Chia seeds",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based yogurt",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 48,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/South-African-Berry-Rooibos-Smoothie.jpg"
+}
+,{
+  "id": 1169,
+  "name": "Senegalese Baobab Smoothie",
+  "country": "Senegal",
+  "region": "Africa",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Senegal-inspired blend built around baobab powder and banana, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Baobab powder",
+    "Banana",
+    "Milk",
+    "Greek yogurt",
+    "Honey",
+    "Vanilla",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Milk",
+        "to": "Plant-based milk",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 15,
+  "carbs": 48,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Senegalese-Baobab-Smoothie.jpg"
+}
+,{
+  "id": 1170,
+  "name": "Thai Mango Coconut Smoothie",
+  "country": "Thailand",
+  "region": "Asia",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 3,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Thailand-inspired blend built around mango and coconut milk, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Mango",
+    "Coconut milk",
+    "Banana",
+    "Lime juice",
+    "Greek yogurt",
+    "Chia seeds",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Coconut milk",
+        "to": "Plant-based milk",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 48,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Thai-Mango-Coconut-Smoothie.jpg"
+}
+,{
+  "id": 1171,
+  "name": "Vietnamese Dragon Fruit Smoothie",
+  "country": "Vietnam",
+  "region": "Asia",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 2,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Vietnam-inspired blend built around dragon fruit and banana, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Dragon fruit",
+    "Banana",
+    "Coconut water",
+    "Greek yogurt",
+    "Lime juice",
+    "Chia seeds",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based yogurt",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 48,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Vietnamese-Dragon-Fruit-Smoothie.jpg"
+}
+,{
+  "id": 1172,
+  "name": "Indonesian Avocado Smoothie",
+  "country": "Indonesia",
+  "region": "Asia",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Indonesia-inspired blend built around avocado and milk, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Avocado",
+    "Milk",
+    "Banana",
+    "Cocoa powder",
+    "Palm sugar",
+    "Coconut milk",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Milk",
+        "to": "Plant-based milk",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 48,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Indonesian-Avocado-Smoothie.jpg"
+}
+,{
+  "id": 1173,
+  "name": "Filipino Mango Coconut Smoothie",
+  "country": "Philippines",
+  "region": "Asia",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Philippines-inspired blend built around mango and coconut milk, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Mango",
+    "Coconut milk",
+    "Banana",
+    "Greek yogurt",
+    "Calamansi juice",
+    "Chia seeds",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Coconut milk",
+        "to": "Plant-based milk",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 48,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Filipino-Mango-Coconut-Smoothie.jpg"
+}
+,{
+  "id": 1174,
+  "name": "Japanese Matcha Banana Smoothie",
+  "country": "Japan",
+  "region": "Asia",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Japan-inspired blend built around banana and matcha powder, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Banana",
+    "Matcha powder",
+    "Milk",
+    "Greek yogurt",
+    "Honey",
+    "Sesame seeds",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Milk",
+        "to": "Plant-based milk",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 48,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Japanese-Matcha-Banana-Smoothie.jpg"
+}
+,{
+  "id": 1175,
+  "name": "Korean Strawberry Yogurt Smoothie",
+  "country": "South Korea",
+  "region": "Asia",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 3,
+  "tags": [
+    "smoothie",
+    "high-protein",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy South Korea-inspired blend built around strawberries and korean-style yogurt, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Strawberries",
+    "Korean-style yogurt",
+    "Milk",
+    "Banana",
+    "Honey",
+    "Sesame seeds",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Korean-style yogurt",
+        "to": "Plant-based yogurt",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 15,
+  "carbs": 48,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Korean-Strawberry-Yogurt-Smoothie.jpg"
+}
+,{
+  "id": 1176,
+  "name": "Chinese Mango Green Tea Smoothie",
+  "country": "China",
+  "region": "Asia",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy China-inspired blend built around mango and chilled green tea, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Mango",
+    "Chilled green tea",
+    "Banana",
+    "Greek yogurt",
+    "Honey",
+    "Lime juice",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based yogurt",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 48,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Chinese-Mango-Green-Tea-Smoothie.jpg"
+}
+,{
+  "id": 1177,
+  "name": "Peruvian Lucuma Protein Smoothie",
+  "country": "Peru",
+  "region": "Americas",
+  "emoji": "🥤",
+  "cal": 360,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "high-protein",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Peru-inspired blend built around lucuma powder and banana, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Lucuma powder",
+    "Banana",
+    "Protein powder",
+    "Milk",
+    "Greek yogurt",
+    "Cinnamon",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Milk",
+        "to": "Plant-based milk",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 22,
+  "carbs": 45,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Peruvian-Lucuma-Protein-Smoothie.jpg"
+}
+,{
+  "id": 1178,
+  "name": "Colombian Lulo Smoothie",
+  "country": "Colombia",
+  "region": "Americas",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Colombia-inspired blend built around lulo pulp and banana, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Lulo pulp",
+    "Banana",
+    "Milk",
+    "Greek yogurt",
+    "Honey",
+    "Lime juice",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Milk",
+        "to": "Plant-based milk",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 48,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Colombian-Lulo-Smoothie.jpg"
+}
+,{
+  "id": 1179,
+  "name": "Costa Rican Pineapple Papaya Smoothie",
+  "country": "Costa Rica",
+  "region": "Americas",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 3,
+  "tags": [
+    "smoothie",
+    "vegetarian",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A creamy Costa Rica-inspired blend built around pineapple and papaya, balanced for a refreshing, satisfying drink.",
+  "ingredients": [
+    "Pineapple",
+    "Papaya",
+    "Banana",
+    "Coconut water",
+    "Greek yogurt",
+    "Lime juice",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based yogurt",
+        "note": "Keeps the creamy element while making the dish dairy-free"
+      }
+    ]
+  },
+  "protein": 8,
+  "carbs": 48,
+  "fat": 5,
+  "fiber": 6,
+  "image": "/images/dishes/Costa-Rican-Pineapple-Papaya-Smoothie.jpg"
+}// WorldMeals — next 100 meals
+// IDs 1180–1279
+// Paste these objects before the final ]; of WORLD_MEALS_DATABASE.
+
+,{
+  "id": 1180,
+  "name": "Italian Grilled Chicken Caprese Weight Loss Bowl",
+  "country": "Italy",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 410,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A lighter Italy-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Mixed greens",
+    "Tomatoes",
+    "Fresh mozzarella",
+    "Basil",
+    "Mixed greens",
+    "Balsamic dressing"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Fresh mozzarella",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 34,
+  "fat": 13,
+  "fiber": 9,
+  "image": "/images/dishes/Italian-Grilled-Chicken-Caprese-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1181,
+  "name": "Spanish Grilled Shrimp Vegetable Weight Loss Bowl",
+  "country": "Spain",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 390,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Spain-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled shrimp",
+    "Mixed greens",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled shrimp",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 34,
+  "carbs": 30,
+  "fat": 14,
+  "fiber": 8,
+  "image": "/images/dishes/Spanish-Grilled-Shrimp-Vegetable-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1182,
+  "name": "Portuguese Cod and Greens Weight Loss Bowl",
+  "country": "Portugal",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 390,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Portugal-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Baked cod",
+    "Mixed greens",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Baked cod",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 34,
+  "carbs": 30,
+  "fat": 14,
+  "fiber": 8,
+  "image": "/images/dishes/Portuguese-Cod-and-Greens-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1183,
+  "name": "French Chicken Ratatouille Weight Loss Bowl",
+  "country": "France",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 410,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter France-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Mixed greens",
+    "Zucchini",
+    "Eggplant",
+    "Tomatoes",
+    "Bell pepper",
+    "Herbs de Provence"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 34,
+  "fat": 13,
+  "fiber": 9,
+  "image": "/images/dishes/French-Chicken-Ratatouille-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1184,
+  "name": "German Chicken Cabbage Weight Loss Bowl",
+  "country": "Germany",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 410,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Germany-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Mixed greens",
+    "Cabbage",
+    "Carrot",
+    "Cucumber",
+    "Parsley",
+    "Mustard vinaigrette"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 34,
+  "fat": 13,
+  "fiber": 9,
+  "image": "/images/dishes/German-Chicken-Cabbage-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1185,
+  "name": "Polish Chicken Beet Weight Loss Bowl",
+  "country": "Poland",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 410,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Poland-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Mixed greens",
+    "Beetroot",
+    "Cabbage",
+    "Cucumber",
+    "Dill",
+    "Lemon dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 34,
+  "fat": 13,
+  "fiber": 9,
+  "image": "/images/dishes/Polish-Chicken-Beet-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1186,
+  "name": "Croatian Grilled Fish Vegetable Weight Loss Bowl",
+  "country": "Croatia",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 390,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Croatia-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled fish",
+    "Mixed greens",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled fish",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 34,
+  "carbs": 30,
+  "fat": 14,
+  "fiber": 8,
+  "image": "/images/dishes/Croatian-Grilled-Fish-Vegetable-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1187,
+  "name": "Albanian Chicken Tomato Cucumber Weight Loss Bowl",
+  "country": "Albania",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 410,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Albania-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Mixed greens",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 34,
+  "fat": 13,
+  "fiber": 9,
+  "image": "/images/dishes/Albanian-Chicken-Tomato-Cucumber-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1188,
+  "name": "Romanian Chicken Roasted Pepper Weight Loss Bowl",
+  "country": "Romania",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 410,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Romania-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Mixed greens",
+    "Roasted peppers",
+    "Tomatoes",
+    "Cucumber",
+    "Parsley",
+    "Lemon dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 34,
+  "fat": 13,
+  "fiber": 9,
+  "image": "/images/dishes/Romanian-Chicken-Roasted-Pepper-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1189,
+  "name": "Hungarian Chicken Paprika Vegetable Weight Loss Bowl",
+  "country": "Hungary",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 410,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 3,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A lighter Hungary-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Mixed greens",
+    "Bell peppers",
+    "Zucchini",
+    "Tomatoes",
+    "Parsley",
+    "Paprika yogurt"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Paprika yogurt",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 34,
+  "fat": 13,
+  "fiber": 9,
+  "image": "/images/dishes/Hungarian-Chicken-Paprika-Vegetable-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1190,
+  "name": "Egyptian Grilled Chicken Chickpea Weight Loss Bowl",
+  "country": "Egypt",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 410,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Egypt-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Chickpeas",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 34,
+  "fat": 13,
+  "fiber": 9,
+  "image": "/images/dishes/Egyptian-Grilled-Chicken-Chickpea-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1191,
+  "name": "Tunisian Tuna Harissa Weight Loss Bowl",
+  "country": "Tunisia",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 390,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 3,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Tunisia-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Tuna",
+    "Mixed greens",
+    "Cucumber",
+    "Tomatoes",
+    "Greens",
+    "Parsley",
+    "Harissa-lemon dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Tuna",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ],
+    "spice": [
+      {
+        "from": "Harissa-lemon dressing",
+        "to": "Sweet paprika or mild herb seasoning",
+        "note": "Reduces heat while keeping the dish flavorful"
+      }
+    ]
+  },
+  "protein": 34,
+  "carbs": 30,
+  "fat": 14,
+  "fiber": 8,
+  "image": "/images/dishes/Tunisian-Tuna-Harissa-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1192,
+  "name": "Algerian Chicken Vegetable Weight Loss Bowl",
+  "country": "Algeria",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 410,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 2,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Algeria-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Mixed greens",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 34,
+  "fat": 13,
+  "fiber": 9,
+  "image": "/images/dishes/Algerian-Chicken-Vegetable-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1193,
+  "name": "Senegalese Grilled Fish Vegetable Weight Loss Bowl",
+  "country": "Senegal",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 390,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Senegal-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled fish",
+    "Mixed greens",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled fish",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 34,
+  "carbs": 30,
+  "fat": 14,
+  "fiber": 8,
+  "image": "/images/dishes/Senegalese-Grilled-Fish-Vegetable-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1194,
+  "name": "Ivorian Grilled Chicken Attieke Weight Loss Bowl",
+  "country": "Ivory Coast",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 410,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Ivory Coast-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Attiéké",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 34,
+  "fat": 13,
+  "fiber": 9,
+  "image": "/images/dishes/Ivorian-Grilled-Chicken-Attieke-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1195,
+  "name": "Cameroonian Chicken Plantain Weight Loss Bowl",
+  "country": "Cameroon",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 410,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Cameroon-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Roasted plantain",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 34,
+  "fat": 13,
+  "fiber": 9,
+  "image": "/images/dishes/Cameroonian-Chicken-Plantain-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1196,
+  "name": "Tanzanian Grilled Fish Greens Weight Loss Bowl",
+  "country": "Tanzania",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 390,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Tanzania-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled fish",
+    "Mixed greens",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled fish",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 34,
+  "carbs": 30,
+  "fat": 14,
+  "fiber": 8,
+  "image": "/images/dishes/Tanzanian-Grilled-Fish-Greens-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1197,
+  "name": "Ugandan Chicken Avocado Weight Loss Bowl",
+  "country": "Uganda",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 410,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Uganda-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Mixed greens",
+    "Avocado",
+    "Tomatoes",
+    "Cucumber",
+    "Greens",
+    "Lime dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 34,
+  "fat": 13,
+  "fiber": 9,
+  "image": "/images/dishes/Ugandan-Chicken-Avocado-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1198,
+  "name": "Rwandan Chicken Bean Weight Loss Bowl",
+  "country": "Rwanda",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 410,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Rwanda-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Mixed greens",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 34,
+  "fat": 13,
+  "fiber": 9,
+  "image": "/images/dishes/Rwandan-Chicken-Bean-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1199,
+  "name": "Zimbabwean Chicken Sweet Potato Weight Loss Bowl",
+  "country": "Zimbabwe",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 410,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Zimbabwe-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Roasted sweet potato",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 34,
+  "fat": 13,
+  "fiber": 9,
+  "image": "/images/dishes/Zimbabwean-Chicken-Sweet-Potato-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1200,
+  "name": "Indian Tandoori Chicken Weight Loss Bowl",
+  "country": "India",
+  "region": "Asia",
+  "emoji": "🥣",
+  "cal": 410,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 3,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter India-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Mixed greens",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 34,
+  "fat": 13,
+  "fiber": 9,
+  "image": "/images/dishes/Indian-Tandoori-Chicken-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1201,
+  "name": "Pakistani Chicken Chickpea Weight Loss Bowl",
+  "country": "Pakistan",
+  "region": "Asia",
+  "emoji": "🥣",
+  "cal": 410,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 2,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Pakistan-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Chickpeas",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 34,
+  "fat": 13,
+  "fiber": 9,
+  "image": "/images/dishes/Pakistani-Chicken-Chickpea-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1202,
+  "name": "Bangladeshi Fish Vegetable Weight Loss Bowl",
+  "country": "Bangladesh",
+  "region": "Asia",
+  "emoji": "🥣",
+  "cal": 390,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 2,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Bangladesh-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled fish",
+    "Mixed greens",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled fish",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 34,
+  "carbs": 30,
+  "fat": 14,
+  "fiber": 8,
+  "image": "/images/dishes/Bangladeshi-Fish-Vegetable-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1203,
+  "name": "Nepalese Chicken Lentil Weight Loss Bowl",
+  "country": "Nepal",
+  "region": "Asia",
+  "emoji": "🥣",
+  "cal": 410,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 1,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Nepal-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Lentils",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 34,
+  "fat": 13,
+  "fiber": 9,
+  "image": "/images/dishes/Nepalese-Chicken-Lentil-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1204,
+  "name": "Malaysian Chicken Cucumber Weight Loss Bowl",
+  "country": "Malaysia",
+  "region": "Asia",
+  "emoji": "🥣",
+  "cal": 410,
+  "budget": 8,
+  "time": "25 min",
+  "spice": 2,
+  "tags": [
+    "weight-loss",
+    "high-protein",
+    "bowl",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A lighter Malaysia-inspired bowl built with lean protein, vegetables, and bright regional flavors for a satisfying lower-calorie meal.",
+  "ingredients": [
+    "Grilled chicken",
+    "Mixed greens",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 36,
+  "carbs": 34,
+  "fat": 13,
+  "fiber": 9,
+  "image": "/images/dishes/Malaysian-Chicken-Cucumber-Weight-Loss-Bowl.jpg"
+}
+,{
+  "id": 1205,
+  "name": "Italian Chicken White Bean Protein Bowl",
+  "country": "Italy",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 560,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Italy-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Grilled chicken",
+    "White beans",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 43,
+  "carbs": 58,
+  "fat": 16,
+  "fiber": 10,
+  "image": "/images/dishes/Italian-Chicken-White-Bean-Protein-Bowl.jpg"
+}
+,{
+  "id": 1206,
+  "name": "Spanish Chicken Rice Protein Bowl",
+  "country": "Spain",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 560,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Spain-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Grilled chicken",
+    "Brown rice",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 43,
+  "carbs": 58,
+  "fat": 16,
+  "fiber": 10,
+  "image": "/images/dishes/Spanish-Chicken-Rice-Protein-Bowl.jpg"
+}
+,{
+  "id": 1207,
+  "name": "Portuguese Beef Rice and Beans Protein Bowl",
+  "country": "Portugal",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 590,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Portugal-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Lean beef",
+    "Brown rice",
+    "Beans",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Lean beef",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 44,
+  "carbs": 55,
+  "fat": 21,
+  "fiber": 9,
+  "image": "/images/dishes/Portuguese-Beef-Rice-and-Beans-Protein-Bowl.jpg"
+}
+,{
+  "id": 1208,
+  "name": "French Chicken Lentil Protein Bowl",
+  "country": "France",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 560,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein France-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Grilled chicken",
+    "Lentils",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 43,
+  "carbs": 58,
+  "fat": 16,
+  "fiber": 10,
+  "image": "/images/dishes/French-Chicken-Lentil-Protein-Bowl.jpg"
+}
+,{
+  "id": 1209,
+  "name": "German Beef Potato Protein Bowl",
+  "country": "Germany",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 590,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Germany-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Lean beef",
+    "Roasted potatoes",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Lean beef",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 44,
+  "carbs": 55,
+  "fat": 21,
+  "fiber": 9,
+  "image": "/images/dishes/German-Beef-Potato-Protein-Bowl.jpg"
+}
+,{
+  "id": 1210,
+  "name": "Polish Chicken Buckwheat Protein Bowl",
+  "country": "Poland",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 560,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Poland-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Grilled chicken",
+    "Buckwheat",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 43,
+  "carbs": 58,
+  "fat": 16,
+  "fiber": 10,
+  "image": "/images/dishes/Polish-Chicken-Buckwheat-Protein-Bowl.jpg"
+}
+,{
+  "id": 1211,
+  "name": "Hungarian Beef Rice Protein Bowl",
+  "country": "Hungary",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 590,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Hungary-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Lean beef",
+    "Brown rice",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Lean beef",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 44,
+  "carbs": 55,
+  "fat": 21,
+  "fiber": 9,
+  "image": "/images/dishes/Hungarian-Beef-Rice-Protein-Bowl.jpg"
+}
+,{
+  "id": 1212,
+  "name": "Croatian Chicken Rice and Beans Protein Bowl",
+  "country": "Croatia",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 560,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Croatia-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Grilled chicken",
+    "Brown rice",
+    "Beans",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 43,
+  "carbs": 58,
+  "fat": 16,
+  "fiber": 10,
+  "image": "/images/dishes/Croatian-Chicken-Rice-and-Beans-Protein-Bowl.jpg"
+}
+,{
+  "id": 1213,
+  "name": "Romanian Beef Polenta Protein Bowl",
+  "country": "Romania",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 590,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Romania-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Lean beef",
+    "Polenta",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Lean beef",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 44,
+  "carbs": 55,
+  "fat": 21,
+  "fiber": 9,
+  "image": "/images/dishes/Romanian-Beef-Polenta-Protein-Bowl.jpg"
+}
+,{
+  "id": 1214,
+  "name": "Georgian Chicken Walnut Protein Bowl",
+  "country": "Georgia",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 560,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Georgia-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Grilled chicken",
+    "Mixed greens",
+    "Walnuts",
+    "Cucumber",
+    "Tomatoes",
+    "Greens",
+    "Herb sauce"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 43,
+  "carbs": 58,
+  "fat": 16,
+  "fiber": 10,
+  "image": "/images/dishes/Georgian-Chicken-Walnut-Protein-Bowl.jpg"
+}
+,{
+  "id": 1215,
+  "name": "Armenian Beef Bulgur Protein Bowl",
+  "country": "Armenia",
+  "region": "Europe",
+  "emoji": "🥣",
+  "cal": 590,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free-option"
+  ],
+  "desc": "A high-protein Armenia-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Lean beef",
+    "Bulgur",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "gluten": [
+      {
+        "from": "Bulgur",
+        "to": "Quinoa or a gluten-free equivalent",
+        "note": "Keeps the bowl or salad structure without gluten"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Lean beef",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 44,
+  "carbs": 55,
+  "fat": 21,
+  "fiber": 9,
+  "image": "/images/dishes/Armenian-Beef-Bulgur-Protein-Bowl.jpg"
+}
+,{
+  "id": 1216,
+  "name": "Lebanese Chicken Lentil Protein Bowl",
+  "country": "Lebanon",
+  "region": "Middle East",
+  "emoji": "🥣",
+  "cal": 560,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Lebanon-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Grilled chicken",
+    "Lentils",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 43,
+  "carbs": 58,
+  "fat": 16,
+  "fiber": 10,
+  "image": "/images/dishes/Lebanese-Chicken-Lentil-Protein-Bowl.jpg"
+}
+,{
+  "id": 1217,
+  "name": "Egyptian Beef Rice and Chickpea Protein Bowl",
+  "country": "Egypt",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 590,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Egypt-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Lean beef",
+    "Brown rice",
+    "Chickpeas",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Lean beef",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 44,
+  "carbs": 55,
+  "fat": 21,
+  "fiber": 9,
+  "image": "/images/dishes/Egyptian-Beef-Rice-and-Chickpea-Protein-Bowl.jpg"
+}
+,{
+  "id": 1218,
+  "name": "Tunisian Chicken Couscous Protein Bowl",
+  "country": "Tunisia",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 560,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 2,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free-option"
+  ],
+  "desc": "A high-protein Tunisia-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Grilled chicken",
+    "Whole-wheat couscous",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "gluten": [
+      {
+        "from": "Whole-wheat couscous",
+        "to": "Quinoa or a gluten-free equivalent",
+        "note": "Keeps the bowl or salad structure without gluten"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 43,
+  "carbs": 58,
+  "fat": 16,
+  "fiber": 10,
+  "image": "/images/dishes/Tunisian-Chicken-Couscous-Protein-Bowl.jpg"
+}
+,{
+  "id": 1219,
+  "name": "Algerian Beef Couscous Protein Bowl",
+  "country": "Algeria",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 590,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 2,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free-option"
+  ],
+  "desc": "A high-protein Algeria-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Lean beef",
+    "Whole-wheat couscous",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "gluten": [
+      {
+        "from": "Whole-wheat couscous",
+        "to": "Quinoa or a gluten-free equivalent",
+        "note": "Keeps the bowl or salad structure without gluten"
+      }
+    ],
+    "vegan": [
+      {
+        "from": "Lean beef",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 44,
+  "carbs": 55,
+  "fat": 21,
+  "fiber": 9,
+  "image": "/images/dishes/Algerian-Beef-Couscous-Protein-Bowl.jpg"
+}
+,{
+  "id": 1220,
+  "name": "Ivorian Chicken Rice and Beans Protein Bowl",
+  "country": "Ivory Coast",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 560,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Ivory Coast-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Grilled chicken",
+    "Brown rice",
+    "Beans",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 43,
+  "carbs": 58,
+  "fat": 16,
+  "fiber": 10,
+  "image": "/images/dishes/Ivorian-Chicken-Rice-and-Beans-Protein-Bowl.jpg"
+}
+,{
+  "id": 1221,
+  "name": "Cameroonian Beef Plantain Protein Bowl",
+  "country": "Cameroon",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 590,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Cameroon-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Lean beef",
+    "Roasted plantain",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Lean beef",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 44,
+  "carbs": 55,
+  "fat": 21,
+  "fiber": 9,
+  "image": "/images/dishes/Cameroonian-Beef-Plantain-Protein-Bowl.jpg"
+}
+,{
+  "id": 1222,
+  "name": "Tanzanian Chicken Rice and Beans Protein Bowl",
+  "country": "Tanzania",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 560,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Tanzania-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Grilled chicken",
+    "Brown rice",
+    "Beans",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 43,
+  "carbs": 58,
+  "fat": 16,
+  "fiber": 10,
+  "image": "/images/dishes/Tanzanian-Chicken-Rice-and-Beans-Protein-Bowl.jpg"
+}
+,{
+  "id": 1223,
+  "name": "Ugandan Beef Sweet Potato Protein Bowl",
+  "country": "Uganda",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 590,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Uganda-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Lean beef",
+    "Roasted sweet potato",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Lean beef",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 44,
+  "carbs": 55,
+  "fat": 21,
+  "fiber": 9,
+  "image": "/images/dishes/Ugandan-Beef-Sweet-Potato-Protein-Bowl.jpg"
+}
+,{
+  "id": 1224,
+  "name": "Rwandan Chicken Lentil Protein Bowl",
+  "country": "Rwanda",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 560,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Rwanda-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Grilled chicken",
+    "Lentils",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 43,
+  "carbs": 58,
+  "fat": 16,
+  "fiber": 10,
+  "image": "/images/dishes/Rwandan-Chicken-Lentil-Protein-Bowl.jpg"
+}
+,{
+  "id": 1225,
+  "name": "Zimbabwean Beef Sadza Protein Bowl",
+  "country": "Zimbabwe",
+  "region": "Africa",
+  "emoji": "🥣",
+  "cal": 590,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Zimbabwe-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Lean beef",
+    "Sadza",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Lean beef",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 44,
+  "carbs": 55,
+  "fat": 21,
+  "fiber": 9,
+  "image": "/images/dishes/Zimbabwean-Beef-Sadza-Protein-Bowl.jpg"
+}
+,{
+  "id": 1226,
+  "name": "Indian Tandoori Chicken Rice Protein Bowl",
+  "country": "India",
+  "region": "Asia",
+  "emoji": "🥣",
+  "cal": 560,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 3,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein India-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Grilled chicken",
+    "Brown rice",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 43,
+  "carbs": 58,
+  "fat": 16,
+  "fiber": 10,
+  "image": "/images/dishes/Indian-Tandoori-Chicken-Rice-Protein-Bowl.jpg"
+}
+,{
+  "id": 1227,
+  "name": "Pakistani Beef Chickpea Protein Bowl",
+  "country": "Pakistan",
+  "region": "Asia",
+  "emoji": "🥣",
+  "cal": 590,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 2,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Pakistan-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Lean beef",
+    "Chickpeas",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Lean beef",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 44,
+  "carbs": 55,
+  "fat": 21,
+  "fiber": 9,
+  "image": "/images/dishes/Pakistani-Beef-Chickpea-Protein-Bowl.jpg"
+}
+,{
+  "id": 1228,
+  "name": "Bangladeshi Fish Rice and Lentil Protein Bowl",
+  "country": "Bangladesh",
+  "region": "Asia",
+  "emoji": "🥣",
+  "cal": 540,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 2,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Bangladesh-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Grilled fish",
+    "Brown rice",
+    "Lentils",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled fish",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 40,
+  "carbs": 56,
+  "fat": 17,
+  "fiber": 10,
+  "image": "/images/dishes/Bangladeshi-Fish-Rice-and-Lentil-Protein-Bowl.jpg"
+}
+,{
+  "id": 1229,
+  "name": "Nepalese Chicken Dal Protein Bowl",
+  "country": "Nepal",
+  "region": "Asia",
+  "emoji": "🥣",
+  "cal": 560,
+  "budget": 10,
+  "time": "30 min",
+  "spice": 1,
+  "tags": [
+    "high-protein",
+    "muscle-gain",
+    "meal-prep",
+    "bowl",
+    "gluten-free"
+  ],
+  "desc": "A high-protein Nepal-inspired bowl combining a substantial protein source, wholesome carbohydrates, vegetables, and regional seasonings.",
+  "ingredients": [
+    "Grilled chicken",
+    "Dal",
+    "Tomatoes",
+    "Cucumber",
+    "Leafy greens",
+    "Fresh herbs",
+    "Lemon-herb dressing"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Grilled chicken",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 43,
+  "carbs": 58,
+  "fat": 16,
+  "fiber": 10,
+  "image": "/images/dishes/Nepalese-Chicken-Dal-Protein-Bowl.jpg"
+}
+,{
+  "id": 1230,
+  "name": "Italian Panzanella Salad",
+  "country": "Italy",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 240,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free-option",
+    "dairy-free"
+  ],
+  "desc": "A fresh Italy-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Tomatoes",
+    "Cucumber",
+    "Day-old bread",
+    "Red onion",
+    "Basil",
+    "Olive oil",
+    "Red wine vinegar"
+  ],
+  "swaps": {
+    "gluten": [
+      {
+        "from": "Day-old bread",
+        "to": "Quinoa or a gluten-free equivalent",
+        "note": "Keeps the bowl or salad structure without gluten"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 25,
+  "fat": 13,
+  "fiber": 6,
+  "image": "/images/dishes/Italian-Panzanella-Salad.jpg"
+}
+,{
+  "id": 1231,
+  "name": "Portuguese Tomato Onion Salad",
+  "country": "Portugal",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 240,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Portugal-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Tomatoes",
+    "Onion",
+    "Parsley",
+    "Olive oil",
+    "Red wine vinegar",
+    "Salt",
+    "Black pepper"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Black pepper",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the recipe simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 25,
+  "fat": 13,
+  "fiber": 6,
+  "image": "/images/dishes/Portuguese-Tomato-Onion-Salad.jpg"
+}
+,{
+  "id": 1232,
+  "name": "French Lentil Salad",
+  "country": "France",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 330,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh France-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Green lentils",
+    "Tomatoes",
+    "Cucumber",
+    "Red onion",
+    "Parsley",
+    "Lemon juice",
+    "Olive oil"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Olive oil",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the recipe simple"
+      }
+    ]
+  },
+  "protein": 15,
+  "carbs": 40,
+  "fat": 12,
+  "fiber": 10,
+  "image": "/images/dishes/French-Lentil-Salad.jpg"
+}
+,{
+  "id": 1233,
+  "name": "German Potato Cucumber Salad",
+  "country": "Germany",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 240,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Germany-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Potatoes",
+    "Cucumber",
+    "Dill",
+    "Red onion",
+    "Mustard",
+    "Vinegar",
+    "Olive oil"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Olive oil",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the recipe simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 25,
+  "fat": 13,
+  "fiber": 6,
+  "image": "/images/dishes/German-Potato-Cucumber-Salad.jpg"
+}
+,{
+  "id": 1234,
+  "name": "Polish Beetroot Apple Salad",
+  "country": "Poland",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 240,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A fresh Poland-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Beetroot",
+    "Apple",
+    "Carrot",
+    "Red onion",
+    "Parsley",
+    "Lemon juice",
+    "Yogurt dressing"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Yogurt dressing",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 25,
+  "fat": 13,
+  "fiber": 6,
+  "image": "/images/dishes/Polish-Beetroot-Apple-Salad.jpg"
+}
+,{
+  "id": 1235,
+  "name": "Hungarian Cucumber Paprika Salad",
+  "country": "Hungary",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 240,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 3,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A fresh Hungary-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Cucumber",
+    "Sweet paprika",
+    "Red onion",
+    "Dill",
+    "Sour cream",
+    "Vinegar",
+    "Salt"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Sour cream",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 25,
+  "fat": 13,
+  "fiber": 6,
+  "image": "/images/dishes/Hungarian-Cucumber-Paprika-Salad.jpg"
+}
+,{
+  "id": 1236,
+  "name": "Romanian Roasted Pepper Salad",
+  "country": "Romania",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 240,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Romania-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Roasted bell peppers",
+    "Tomatoes",
+    "Garlic",
+    "Parsley",
+    "Olive oil",
+    "Vinegar",
+    "Salt"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Salt",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the recipe simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 25,
+  "fat": 13,
+  "fiber": 6,
+  "image": "/images/dishes/Romanian-Roasted-Pepper-Salad.jpg"
+}
+,{
+  "id": 1237,
+  "name": "Croatian Octopus Salad",
+  "country": "Croatia",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 300,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Croatia-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Cooked octopus",
+    "Potatoes",
+    "Tomatoes",
+    "Red onion",
+    "Parsley",
+    "Olive oil",
+    "Lemon juice"
+  ],
+  "swaps": {
+    "vegan": [
+      {
+        "from": "Cooked octopus",
+        "to": "Grilled tofu, lentils, or chickpeas",
+        "note": "Season with the same herbs and spices to preserve the regional flavor"
+      }
+    ]
+  },
+  "protein": 25,
+  "carbs": 24,
+  "fat": 12,
+  "fiber": 5,
+  "image": "/images/dishes/Croatian-Octopus-Salad.jpg"
+}
+,{
+  "id": 1238,
+  "name": "Albanian Tomato Cucumber Olive Salad",
+  "country": "Albania",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 240,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Albania-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Tomatoes",
+    "Cucumber",
+    "Olives",
+    "Red onion",
+    "Parsley",
+    "Olive oil",
+    "Lemon juice"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Lemon juice",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the recipe simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 25,
+  "fat": 13,
+  "fiber": 6,
+  "image": "/images/dishes/Albanian-Tomato-Cucumber-Olive-Salad.jpg"
+}
+,{
+  "id": 1239,
+  "name": "Macedonian Shopska Salad",
+  "country": "North Macedonia",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 240,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A fresh North Macedonia-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Tomatoes",
+    "Cucumber",
+    "Bell pepper",
+    "Red onion",
+    "White brined cheese",
+    "Parsley",
+    "Olive oil"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "White brined cheese",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 25,
+  "fat": 13,
+  "fiber": 6,
+  "image": "/images/dishes/Macedonian-Shopska-Salad.jpg"
+}
+,{
+  "id": 1240,
+  "name": "Georgian Beet Walnut Salad",
+  "country": "Georgia",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 240,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Georgia-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Beetroot",
+    "Walnuts",
+    "Garlic",
+    "Cilantro",
+    "Red wine vinegar",
+    "Olive oil",
+    "Salt"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Salt",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the recipe simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 25,
+  "fat": 13,
+  "fiber": 6,
+  "image": "/images/dishes/Georgian-Beet-Walnut-Salad.jpg"
+}
+,{
+  "id": 1241,
+  "name": "Armenian Tomato Herb Salad",
+  "country": "Armenia",
+  "region": "Europe",
+  "emoji": "🥗",
+  "cal": 240,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Armenia-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Tomatoes",
+    "Cucumber",
+    "Parsley",
+    "Cilantro",
+    "Green onion",
+    "Lemon juice",
+    "Olive oil"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Olive oil",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the recipe simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 25,
+  "fat": 13,
+  "fiber": 6,
+  "image": "/images/dishes/Armenian-Tomato-Herb-Salad.jpg"
+}
+,{
+  "id": 1242,
+  "name": "Egyptian Balata Salad",
+  "country": "Egypt",
+  "region": "Africa",
+  "emoji": "🥗",
+  "cal": 240,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Egypt-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Tomatoes",
+    "Cucumber",
+    "Red onion",
+    "Parsley",
+    "Lemon juice",
+    "Cumin",
+    "Olive oil"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Olive oil",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the recipe simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 25,
+  "fat": 13,
+  "fiber": 6,
+  "image": "/images/dishes/Egyptian-Balata-Salad.jpg"
+}
+,{
+  "id": 1243,
+  "name": "Algerian Roasted Pepper Tomato Salad",
+  "country": "Algeria",
+  "region": "Africa",
+  "emoji": "🥗",
+  "cal": 240,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 2,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Algeria-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Roasted bell peppers",
+    "Tomatoes",
+    "Garlic",
+    "Parsley",
+    "Olive oil",
+    "Vinegar",
+    "Salt"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Salt",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the recipe simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 25,
+  "fat": 13,
+  "fiber": 6,
+  "image": "/images/dishes/Algerian-Roasted-Pepper-Tomato-Salad.jpg"
+}
+,{
+  "id": 1244,
+  "name": "Senegalese Black Eyed Pea Salad",
+  "country": "Senegal",
+  "region": "Africa",
+  "emoji": "🥗",
+  "cal": 240,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Senegal-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Black-eyed peas",
+    "Tomatoes",
+    "Cucumber",
+    "Red onion",
+    "Parsley",
+    "Lemon juice",
+    "Olive oil"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Olive oil",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the recipe simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 25,
+  "fat": 13,
+  "fiber": 6,
+  "image": "/images/dishes/Senegalese-Black-Eyed-Pea-Salad.jpg"
+}
+,{
+  "id": 1245,
+  "name": "Ivorian Avocado Tomato Salad",
+  "country": "Ivory Coast",
+  "region": "Africa",
+  "emoji": "🥗",
+  "cal": 240,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Ivory Coast-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Avocado",
+    "Tomatoes",
+    "Red onion",
+    "Cucumber",
+    "Parsley",
+    "Lime juice",
+    "Olive oil"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Olive oil",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the recipe simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 25,
+  "fat": 13,
+  "fiber": 6,
+  "image": "/images/dishes/Ivorian-Avocado-Tomato-Salad.jpg"
+}
+,{
+  "id": 1246,
+  "name": "Cameroonian Bean Avocado Salad",
+  "country": "Cameroon",
+  "region": "Africa",
+  "emoji": "🥗",
+  "cal": 330,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Cameroon-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Beans",
+    "Avocado",
+    "Tomatoes",
+    "Cucumber",
+    "Red onion",
+    "Lime juice",
+    "Parsley"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Parsley",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the recipe simple"
+      }
+    ]
+  },
+  "protein": 15,
+  "carbs": 40,
+  "fat": 12,
+  "fiber": 10,
+  "image": "/images/dishes/Cameroonian-Bean-Avocado-Salad.jpg"
+}
+,{
+  "id": 1247,
+  "name": "Kenyan Corn Bean Kachumbari Salad",
+  "country": "Kenya",
+  "region": "Africa",
+  "emoji": "🥗",
+  "cal": 330,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Kenya-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Corn",
+    "Beans",
+    "Tomatoes",
+    "Red onion",
+    "Cucumber",
+    "Cilantro",
+    "Lime juice"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Lime juice",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the recipe simple"
+      }
+    ]
+  },
+  "protein": 15,
+  "carbs": 40,
+  "fat": 12,
+  "fiber": 10,
+  "image": "/images/dishes/Kenyan-Corn-Bean-Kachumbari-Salad.jpg"
+}
+,{
+  "id": 1248,
+  "name": "Tanzanian Mango Cucumber Salad",
+  "country": "Tanzania",
+  "region": "Africa",
+  "emoji": "🥗",
+  "cal": 240,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Tanzania-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Mango",
+    "Cucumber",
+    "Red onion",
+    "Tomatoes",
+    "Cilantro",
+    "Lime juice",
+    "Chili"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Chili",
+        "to": "Sweet paprika or mild herb seasoning",
+        "note": "Reduces heat while keeping the dish flavorful"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 25,
+  "fat": 13,
+  "fiber": 6,
+  "image": "/images/dishes/Tanzanian-Mango-Cucumber-Salad.jpg"
+}
+,{
+  "id": 1249,
+  "name": "Ugandan Avocado Bean Salad",
+  "country": "Uganda",
+  "region": "Africa",
+  "emoji": "🥗",
+  "cal": 330,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Uganda-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Avocado",
+    "Beans",
+    "Tomatoes",
+    "Cucumber",
+    "Red onion",
+    "Lime juice",
+    "Parsley"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Parsley",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the recipe simple"
+      }
+    ]
+  },
+  "protein": 15,
+  "carbs": 40,
+  "fat": 12,
+  "fiber": 10,
+  "image": "/images/dishes/Ugandan-Avocado-Bean-Salad.jpg"
+}
+,{
+  "id": 1250,
+  "name": "Rwandan Tomato Avocado Salad",
+  "country": "Rwanda",
+  "region": "Africa",
+  "emoji": "🥗",
+  "cal": 240,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Rwanda-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Tomatoes",
+    "Avocado",
+    "Red onion",
+    "Cucumber",
+    "Parsley",
+    "Lemon juice",
+    "Olive oil"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Olive oil",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the recipe simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 25,
+  "fat": 13,
+  "fiber": 6,
+  "image": "/images/dishes/Rwandan-Tomato-Avocado-Salad.jpg"
+}
+,{
+  "id": 1251,
+  "name": "South African Beetroot Salad",
+  "country": "South Africa",
+  "region": "Africa",
+  "emoji": "🥗",
+  "cal": 240,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh South Africa-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Beetroot",
+    "Apple",
+    "Red onion",
+    "Parsley",
+    "Vinegar",
+    "Olive oil",
+    "Black pepper"
+  ],
+  "swaps": {
+    "flavor": [
+      {
+        "from": "Black pepper",
+        "to": "Fresh lemon or lime juice",
+        "note": "Adds brightness while keeping the recipe simple"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 25,
+  "fat": 13,
+  "fiber": 6,
+  "image": "/images/dishes/South-African-Beetroot-Salad.jpg"
+}
+,{
+  "id": 1252,
+  "name": "Indian Sprouted Mung Salad",
+  "country": "India",
+  "region": "Asia",
+  "emoji": "🥗",
+  "cal": 330,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 2,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh India-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Sprouted mung beans",
+    "Cucumber",
+    "Tomatoes",
+    "Red onion",
+    "Cilantro",
+    "Lemon juice",
+    "Chaat masala"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Chaat masala",
+        "to": "Sweet paprika or mild herb seasoning",
+        "note": "Reduces heat while keeping the dish flavorful"
+      }
+    ]
+  },
+  "protein": 15,
+  "carbs": 40,
+  "fat": 12,
+  "fiber": 10,
+  "image": "/images/dishes/Indian-Sprouted-Mung-Salad.jpg"
+}
+,{
+  "id": 1253,
+  "name": "Pakistani Chickpea Chaat Salad",
+  "country": "Pakistan",
+  "region": "Asia",
+  "emoji": "🥗",
+  "cal": 330,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 3,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Pakistan-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Chickpeas",
+    "Tomatoes",
+    "Cucumber",
+    "Red onion",
+    "Cilantro",
+    "Tamarind chutney",
+    "Chaat masala"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Chaat masala",
+        "to": "Sweet paprika or mild herb seasoning",
+        "note": "Reduces heat while keeping the dish flavorful"
+      }
+    ]
+  },
+  "protein": 15,
+  "carbs": 40,
+  "fat": 12,
+  "fiber": 10,
+  "image": "/images/dishes/Pakistani-Chickpea-Chaat-Salad.jpg"
+}
+,{
+  "id": 1254,
+  "name": "Nepalese Cucumber Sesame Salad",
+  "country": "Nepal",
+  "region": "Asia",
+  "emoji": "🥗",
+  "cal": 240,
+  "budget": 6,
+  "time": "15 min",
+  "spice": 1,
+  "tags": [
+    "salad",
+    "fresh",
+    "gluten-free",
+    "dairy-free"
+  ],
+  "desc": "A fresh Nepal-inspired salad with crisp produce, herbs, and a simple dressing that highlights traditional flavor combinations.",
+  "ingredients": [
+    "Cucumber",
+    "Sesame seeds",
+    "Cilantro",
+    "Green chili",
+    "Lemon juice",
+    "Sesame oil",
+    "Salt"
+  ],
+  "swaps": {
+    "spice": [
+      {
+        "from": "Green chili",
+        "to": "Sweet paprika or mild herb seasoning",
+        "note": "Reduces heat while keeping the dish flavorful"
+      }
+    ]
+  },
+  "protein": 7,
+  "carbs": 25,
+  "fat": 13,
+  "fiber": 6,
+  "image": "/images/dishes/Nepalese-Cucumber-Sesame-Salad.jpg"
+}
+,{
+  "id": 1255,
+  "name": "Italian Strawberry Ricotta Protein Smoothie",
+  "country": "Italy",
+  "region": "Europe",
+  "emoji": "🥤",
+  "cal": 360,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Italy-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Strawberries",
+    "Ricotta cheese",
+    "Greek yogurt",
+    "Milk",
+    "Honey",
+    "Vanilla",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Ricotta cheese",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 24,
+  "carbs": 46,
+  "fat": 9,
+  "fiber": 6,
+  "image": "/images/dishes/Italian-Strawberry-Ricotta-Protein-Smoothie.jpg"
+}
+,{
+  "id": 1256,
+  "name": "Spanish Orange Almond Smoothie",
+  "country": "Spain",
+  "region": "Europe",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Spain-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Orange",
+    "Almond butter",
+    "Banana",
+    "Almond milk",
+    "Cinnamon",
+    "Honey",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Almond milk",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Spanish-Orange-Almond-Smoothie.jpg"
+}
+,{
+  "id": 1257,
+  "name": "Portuguese Berry Yogurt Smoothie",
+  "country": "Portugal",
+  "region": "Europe",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Portugal-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Mixed berries",
+    "Greek yogurt",
+    "Milk",
+    "Banana",
+    "Honey",
+    "Chia seeds",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Portuguese-Berry-Yogurt-Smoothie.jpg"
+}
+,{
+  "id": 1258,
+  "name": "French Peach Yogurt Smoothie",
+  "country": "France",
+  "region": "Europe",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing France-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Peaches",
+    "Greek yogurt",
+    "Milk",
+    "Honey",
+    "Vanilla",
+    "Chia seeds",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/French-Peach-Yogurt-Smoothie.jpg"
+}
+,{
+  "id": 1259,
+  "name": "German Apple Cinnamon Protein Smoothie",
+  "country": "Germany",
+  "region": "Europe",
+  "emoji": "🥤",
+  "cal": 360,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Germany-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Apple",
+    "Protein powder",
+    "Greek yogurt",
+    "Milk",
+    "Cinnamon",
+    "Oats",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 24,
+  "carbs": 46,
+  "fat": 9,
+  "fiber": 6,
+  "image": "/images/dishes/German-Apple-Cinnamon-Protein-Smoothie.jpg"
+}
+,{
+  "id": 1260,
+  "name": "Polish Blueberry Kefir Smoothie",
+  "country": "Poland",
+  "region": "Europe",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Poland-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Blueberries",
+    "Kefir",
+    "Banana",
+    "Honey",
+    "Flaxseed",
+    "Milk",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Kefir",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Polish-Blueberry-Kefir-Smoothie.jpg"
+}
+,{
+  "id": 1261,
+  "name": "Romanian Cherry Yogurt Smoothie",
+  "country": "Romania",
+  "region": "Europe",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Romania-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Cherries",
+    "Greek yogurt",
+    "Milk",
+    "Banana",
+    "Honey",
+    "Vanilla",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Romanian-Cherry-Yogurt-Smoothie.jpg"
+}
+,{
+  "id": 1262,
+  "name": "Hungarian Sour Cherry Smoothie",
+  "country": "Hungary",
+  "region": "Europe",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Hungary-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Sour cherries",
+    "Banana",
+    "Greek yogurt",
+    "Milk",
+    "Honey",
+    "Cinnamon",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Hungarian-Sour-Cherry-Smoothie.jpg"
+}
+,{
+  "id": 1263,
+  "name": "Croatian Fig Yogurt Smoothie",
+  "country": "Croatia",
+  "region": "Europe",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Croatia-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Fresh figs",
+    "Greek yogurt",
+    "Milk",
+    "Banana",
+    "Honey",
+    "Walnuts",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Croatian-Fig-Yogurt-Smoothie.jpg"
+}
+,{
+  "id": 1264,
+  "name": "Albanian Peach Honey Smoothie",
+  "country": "Albania",
+  "region": "Europe",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Albania-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Peaches",
+    "Greek yogurt",
+    "Milk",
+    "Honey",
+    "Banana",
+    "Cinnamon",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Albanian-Peach-Honey-Smoothie.jpg"
+}
+,{
+  "id": 1265,
+  "name": "Georgian Pomegranate Walnut Smoothie",
+  "country": "Georgia",
+  "region": "Europe",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Georgia-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Pomegranate arils",
+    "Walnuts",
+    "Banana",
+    "Greek yogurt",
+    "Milk",
+    "Honey",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Georgian-Pomegranate-Walnut-Smoothie.jpg"
+}
+,{
+  "id": 1266,
+  "name": "Armenian Apricot Yogurt Smoothie",
+  "country": "Armenia",
+  "region": "Europe",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Armenia-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Apricots",
+    "Greek yogurt",
+    "Milk",
+    "Banana",
+    "Honey",
+    "Cinnamon",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Armenian-Apricot-Yogurt-Smoothie.jpg"
+}
+,{
+  "id": 1267,
+  "name": "Lebanese Strawberry Rose Smoothie",
+  "country": "Lebanon",
+  "region": "Middle East",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Lebanon-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Strawberries",
+    "Greek yogurt",
+    "Milk",
+    "Rose water",
+    "Honey",
+    "Banana",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Lebanese-Strawberry-Rose-Smoothie.jpg"
+}
+,{
+  "id": 1268,
+  "name": "Tunisian Date Orange Smoothie",
+  "country": "Tunisia",
+  "region": "Africa",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 2,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Tunisia-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Dates",
+    "Orange",
+    "Greek yogurt",
+    "Milk",
+    "Cinnamon",
+    "Honey",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Tunisian-Date-Orange-Smoothie.jpg"
+}
+,{
+  "id": 1269,
+  "name": "Algerian Fig Almond Smoothie",
+  "country": "Algeria",
+  "region": "Africa",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 2,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Algeria-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Figs",
+    "Almond butter",
+    "Banana",
+    "Almond milk",
+    "Cinnamon",
+    "Honey",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Almond milk",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Algerian-Fig-Almond-Smoothie.jpg"
+}
+,{
+  "id": 1270,
+  "name": "Ivorian Pineapple Ginger Smoothie",
+  "country": "Ivory Coast",
+  "region": "Africa",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Ivory Coast-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Pineapple",
+    "Banana",
+    "Fresh ginger",
+    "Coconut water",
+    "Greek yogurt",
+    "Lime juice",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Ivorian-Pineapple-Ginger-Smoothie.jpg"
+}
+,{
+  "id": 1271,
+  "name": "Cameroonian Papaya Banana Smoothie",
+  "country": "Cameroon",
+  "region": "Africa",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Cameroon-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Papaya",
+    "Banana",
+    "Greek yogurt",
+    "Milk",
+    "Honey",
+    "Ginger",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Cameroonian-Papaya-Banana-Smoothie.jpg"
+}
+,{
+  "id": 1272,
+  "name": "Tanzanian Mango Baobab Smoothie",
+  "country": "Tanzania",
+  "region": "Africa",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Tanzania-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Mango",
+    "Baobab powder",
+    "Banana",
+    "Greek yogurt",
+    "Milk",
+    "Honey",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Tanzanian-Mango-Baobab-Smoothie.jpg"
+}
+,{
+  "id": 1273,
+  "name": "Ugandan Pineapple Avocado Smoothie",
+  "country": "Uganda",
+  "region": "Africa",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Uganda-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Pineapple",
+    "Avocado",
+    "Banana",
+    "Coconut water",
+    "Lime juice",
+    "Greek yogurt",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Ugandan-Pineapple-Avocado-Smoothie.jpg"
+}
+,{
+  "id": 1274,
+  "name": "Rwandan Passion Fruit Banana Smoothie",
+  "country": "Rwanda",
+  "region": "Africa",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Rwanda-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Passion fruit",
+    "Banana",
+    "Greek yogurt",
+    "Milk",
+    "Honey",
+    "Chia seeds",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Rwandan-Passion-Fruit-Banana-Smoothie.jpg"
+}
+,{
+  "id": 1275,
+  "name": "Zimbabwean Mango Peanut Smoothie",
+  "country": "Zimbabwe",
+  "region": "Africa",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Zimbabwe-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Mango",
+    "Peanut butter",
+    "Banana",
+    "Milk",
+    "Greek yogurt",
+    "Honey",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Milk",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Zimbabwean-Mango-Peanut-Smoothie.jpg"
+}
+,{
+  "id": 1276,
+  "name": "Pakistani Mango Yogurt Protein Smoothie",
+  "country": "Pakistan",
+  "region": "Asia",
+  "emoji": "🥤",
+  "cal": 360,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 2,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Pakistan-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Mango",
+    "Greek yogurt",
+    "Protein powder",
+    "Milk",
+    "Cardamom",
+    "Honey",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 24,
+  "carbs": 46,
+  "fat": 9,
+  "fiber": 6,
+  "image": "/images/dishes/Pakistani-Mango-Yogurt-Protein-Smoothie.jpg"
+}
+,{
+  "id": 1277,
+  "name": "Bangladeshi Banana Date Smoothie",
+  "country": "Bangladesh",
+  "region": "Asia",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 2,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Bangladesh-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Banana",
+    "Dates",
+    "Milk",
+    "Greek yogurt",
+    "Cinnamon",
+    "Honey",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Milk",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Bangladeshi-Banana-Date-Smoothie.jpg"
+}
+,{
+  "id": 1278,
+  "name": "Nepalese Banana Yogurt Protein Smoothie",
+  "country": "Nepal",
+  "region": "Asia",
+  "emoji": "🥤",
+  "cal": 360,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 1,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Nepal-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Banana",
+    "Greek yogurt",
+    "Protein powder",
+    "Milk",
+    "Honey",
+    "Cinnamon",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Greek yogurt",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 24,
+  "carbs": 46,
+  "fat": 9,
+  "fiber": 6,
+  "image": "/images/dishes/Nepalese-Banana-Yogurt-Protein-Smoothie.jpg"
+}
+,{
+  "id": 1279,
+  "name": "Malaysian Pandan Coconut Smoothie",
+  "country": "Malaysia",
+  "region": "Asia",
+  "emoji": "🥤",
+  "cal": 290,
+  "budget": 5,
+  "time": "5 min",
+  "spice": 2,
+  "tags": [
+    "smoothie",
+    "gluten-free",
+    "dairy-free-option"
+  ],
+  "desc": "A refreshing Malaysia-inspired smoothie blending fruit with creamy or protein-rich ingredients for an easy drink or snack.",
+  "ingredients": [
+    "Pandan extract",
+    "Coconut milk",
+    "Banana",
+    "Greek yogurt",
+    "Palm sugar",
+    "Chia seeds",
+    "Ice"
+  ],
+  "swaps": {
+    "dairy": [
+      {
+        "from": "Coconut milk",
+        "to": "Plant-based alternative",
+        "note": "Use an unsweetened option with a similar texture"
+      }
+    ]
+  },
+  "protein": 10,
+  "carbs": 45,
+  "fat": 8,
+  "fiber": 6,
+  "image": "/images/dishes/Malaysian-Pandan-Coconut-Smoothie.jpg"
+}
 ];
