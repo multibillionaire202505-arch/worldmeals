@@ -2229,6 +2229,11 @@ body{
 .nav-cta.wm-start-control img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}
 .nav-cta.wm-start-control:hover{transform:translateY(-2px) scale(1.03);filter:brightness(1.04);box-shadow:0 10px 24px rgba(20,120,55,.18)!important}
 .wm-tour-start{display:inline-flex!important;align-items:center!important;gap:14px!important;background:transparent!important;color:#171512!important;padding:0!important;box-shadow:none!important;border:0!important;text-decoration:none!important;font-weight:850!important}
+.wm-map-start{display:inline-flex!important;align-items:center!important;gap:14px!important;background:transparent!important;color:#171512!important;padding:0!important;box-shadow:none!important;border:0!important;text-decoration:none!important;font-weight:850!important}
+.wm-map-start img{width:64px;height:64px;object-fit:cover;border-radius:50%;display:block;box-shadow:0 12px 28px rgba(20,120,55,.20)}
+.wm-map-start span{font-size:16px;border-bottom:1px solid rgba(23,21,18,.22);padding-bottom:4px}
+.wm-map-start:hover{transform:translateY(-2px)!important;background:transparent!important}
+
 .wm-tour-start img{width:64px;height:64px;object-fit:cover;border-radius:50%;box-shadow:0 12px 28px rgba(20,120,55,.20)}
 .wm-tour-start span{font-size:16px;border-bottom:1px solid rgba(23,21,18,.22);padding-bottom:4px}
 .testi-card .wm-photo-icon{width:92px;height:92px;margin-bottom:18px;border-radius:24px;overflow:hidden;background:#f5f0e8;box-shadow:0 10px 24px rgba(50,38,24,.12)}
@@ -2251,6 +2256,7 @@ body{
   .wm-live-line{margin:0 0 28px!important;width:auto;text-align:left;font-size:10.5px!important}
   .nav-cta.wm-start-control{width:46px;height:46px;min-width:46px}
   .wm-tour-start img{width:58px;height:58px}
+  .wm-map-start img{width:58px;height:58px}
   .wm-action-start img{width:58px;height:58px}
   .wm-plan-photo{width:60px!important;height:60px!important}
   .testi-card .wm-photo-icon{width:104px;height:104px;border-radius:26px}
@@ -2677,7 +2683,7 @@ body{
         </div>
       </div>
 
-      <a class="map-open" id="mapOpen" href="app.html">Explore United States →</a>
+      <a class="map-open wm-map-start" id="mapOpen" href="app.html?country=United%20States"><img src="/images/worldmeals-start-button.png" alt="Start"><span id="mapOpenLabel">Start exploring USA →</span></a>
       <div class="map-hint">Tap another flag on the globe to change countries.</div>
     </div>
   </div>
@@ -2784,7 +2790,7 @@ body{
       <div class="v3-kicker">World Tour</div>
       <div class="v3-title">Cook your way<br><em>around the world.</em></div>
       <div class="v3-sub">Every dish becomes a new destination. Track the countries you explore, collect culinary stamps, and build a personal journey through world cuisine.</div>
-      <a class="v3-cta wm-tour-start" href="app.html"><img src="/images/worldmeals-start-button.png" alt="Start"><span>Your World Tour →</span></a>
+      <a class="v3-cta wm-tour-start" href="app.html?open=tour"><img src="/images/worldmeals-start-button.png" alt="Start"><span>Your World Tour →</span></a>
     </div>
   </div>
 </section>
@@ -3317,6 +3323,7 @@ body{
   const note = document.getElementById("mapNote");
   const dishes = document.getElementById("mapDishes");
   const open = document.getElementById("mapOpen");
+  const openLabel = document.getElementById("mapOpenLabel");
 
   pins.forEach((pin) => {
     pin.addEventListener("click", () => {
@@ -3329,7 +3336,9 @@ body{
       flag.textContent = data.flag;
       country.textContent = data.name;
       note.textContent = data.note;
-      open.textContent = `Explore ${data.name} →`;
+      const countryParam = encodeURIComponent(data.name);
+      open.href = `app.html?country=${countryParam}`;
+      if (openLabel) openLabel.textContent = data.name === "United States" ? "Start exploring USA →" : `Start exploring ${data.name} →`;
 
       dishes.innerHTML = data.dishes.map(([name, image]) => `
         <div class="map-dish">
