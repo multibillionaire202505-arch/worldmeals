@@ -2268,6 +2268,48 @@ body{
   .nav-cta.wm-start-control{width:42px;height:42px;min-width:42px}
 }
 </style>
+
+<style>
+/* =========================================
+   IOS HORIZONTAL STABILITY
+   Prevent whole-page side-to-side bouncing
+   while preserving intentional carousels.
+   ========================================= */
+html,
+body {
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden !important;
+  overscroll-behavior-x:none;
+}
+
+body {
+  position:relative;
+}
+
+main,
+section,
+header,
+footer,
+nav {
+  max-width:100%;
+}
+
+img,
+video,
+svg,
+canvas {
+  max-width:100%;
+}
+
+.discovery-row,
+.personas-row,
+.app-filters {
+  max-width:100%;
+  overscroll-behavior-x:contain;
+}
+</style>
+
 </head>
 <body>
 
@@ -3066,13 +3108,34 @@ body{
     background:var(--wm-orange);color:#fff;font:800 13px Inter,system-ui,sans-serif;
     box-shadow:0 10px 24px rgba(217,106,22,.20);
   }
-  .landing-feedback-modal{display:none;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;padding:20px}
+  .landing-feedback-modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    align-items:flex-start;
+    justify-content:center;
+    padding:
+      calc(env(safe-area-inset-top, 0px) + 24px)
+      20px
+      calc(env(safe-area-inset-bottom, 0px) + 24px);
+    overflow-y:auto;
+    overflow-x:hidden;
+  }
   .landing-feedback-modal.open{display:flex}
   .landing-feedback-backdrop{position:absolute;inset:0;background:rgba(23,21,18,.56);backdrop-filter:blur(4px)}
   .landing-feedback-dialog{
-    position:relative;z-index:1;width:min(520px,100%);max-height:min(760px,92vh);overflow:auto;
-    border-radius:26px;background:#FFFDF9;border:1px solid #E9DED0;padding:26px;
-    box-shadow:0 32px 90px rgba(31,22,14,.28);color:var(--wm-ink)
+    position:relative;
+    z-index:1;
+    width:min(520px,100%);
+    max-height:none;
+    overflow:visible;
+    border-radius:26px;
+    background:#FFFDF9;
+    border:1px solid #E9DED0;
+    padding:26px;
+    box-shadow:0 32px 90px rgba(31,22,14,.28);
+    color:var(--wm-ink)
   }
   .landing-feedback-close{position:absolute;right:16px;top:16px;width:36px;height:36px;border:1px solid #E9DED0;border-radius:12px;background:#fff;cursor:pointer;color:#6B5D50;font-weight:800}
   .landing-feedback-dialog-icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:#FFF1E3;font-size:22px;margin-bottom:12px}
