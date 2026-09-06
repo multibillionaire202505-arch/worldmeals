@@ -4337,9 +4337,16 @@ function wmConsumePurchaseHandoff(plan){
   return false;
 }
 function wmApplyIAPDetail(detail={}){
-  if(detail.plan)localStorage.setItem(WM_KEYS.plan,detail.plan);
-  if(detail.productId)localStorage.setItem(WM_KEYS.productId,detail.productId);
-  if(Array.isArray(detail.activeProductIds))localStorage.setItem(WM_KEYS.activeProducts,JSON.stringify(detail.activeProductIds));
+  // Only verified StoreKit states are allowed to change membership access.
+  // Loading/pending describe purchase intent and must never unlock a paid plan.
+  const verifiedPlanStatuses=new Set(["success","entitlements","updated"]);
+  const canApplyPlan=verifiedPlanStatuses.has(detail.status);
+
+  if(canApplyPlan && (detail.plan==="passport" || detail.plan==="chef" || detail.plan==="explorer")){
+    localStorage.setItem(WM_KEYS.plan,detail.plan);
+  }
+  if(detail.productId && canApplyPlan)localStorage.setItem(WM_KEYS.productId,detail.productId);
+  if(Array.isArray(detail.activeProductIds) && detail.status==="entitlements")localStorage.setItem(WM_KEYS.activeProducts,JSON.stringify(detail.activeProductIds));
   if(detail.status)localStorage.setItem(WM_KEYS.status,detail.status==="entitlements"?(detail.plan&&detail.plan!=="explorer"?"active":"explorer"):detail.status);
   if(typeof detail.isIntroductoryOffer==="boolean")localStorage.setItem(WM_KEYS.introductory,detail.isIntroductoryOffer?"1":"0");
   if(detail.trialEndDate)localStorage.setItem(WM_KEYS.trialEnd,detail.trialEndDate);
