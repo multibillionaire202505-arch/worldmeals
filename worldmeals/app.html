@@ -2695,7 +2695,7 @@ function renderGrid(){
   });
 
   currentRenderedMeals = filtered;
-  document.getElementById("countLbl").innerHTML=`<strong>${filtered.length.toLocaleString()}+</strong> dishes found`;
+  document.getElementById("countLbl").innerHTML=`<strong>${filtered.length.toLocaleString()}${filtered.length === 1 ? "" : "+"}</strong> ${filtered.length === 1 ? "dish" : "dishes"} found`;
   const g=document.getElementById("grid");
 
   if(!filtered.length){
