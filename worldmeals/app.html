@@ -4253,6 +4253,12 @@ if ('serviceWorker' in navigator) {
 .wm-highlight{padding:12px 13px;border:1px solid #EBCB93;border-radius:17px;background:#FFF8E9;color:#6C4A20;font-size:12px;line-height:1.58;margin:13px 0}
 .wm-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.wm-primary,.wm-secondary{border-radius:15px;padding:13px;border:none;cursor:pointer;font:900 13px Inter,system-ui,sans-serif}.wm-primary{background:linear-gradient(135deg,#C47A2C,#E2A35A);color:#fff;box-shadow:0 10px 22px rgba(196,122,44,.20)}.wm-secondary{background:#fff;color:#6B4B2C;border:1px solid #E5D4C0}
 .wm-feedback-form label{display:block;font-size:10px;font-weight:900;color:#77685A;text-transform:uppercase;letter-spacing:.07em;margin:10px 0 5px}.wm-feedback-form select,.wm-feedback-form textarea{width:100%;max-width:100%;border:1px solid #E6D7C7;border-radius:14px;padding:12px;background:#fff;color:#2E241B;font:500 13px Inter,system-ui,sans-serif;outline:none}.wm-feedback-form textarea{min-height:120px;resize:vertical}.wm-feedback-status{min-height:18px;margin-top:8px;text-align:center;font-size:11px;color:#2F8F5B;line-height:1.4}
+
+.wm-feedback-status[data-state="success"]{color:#167A5A}
+.wm-feedback-status[data-state="error"]{color:#A33A2A}
+.wm-feedback-status[data-state="pending"]{color:#6F6257}
+.wm-feedback-status[data-state="saved"]{color:#8A5B13}
+
 .wm-plan-compare{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}.wm-plan-mini{background:#fff;border:1px solid #E8DDD0;border-radius:18px;padding:14px}.wm-plan-mini strong{display:block;font-size:15px;color:#2D2117;margin-bottom:5px}.wm-plan-mini span{display:block;font-size:11px;color:#77685A;line-height:1.5}.wm-ai-meter{text-align:center;font-size:11px;color:#7A6B5D;margin:8px 0 0;font-weight:800}
 .wm-quick-feedback{display:none;position:fixed;left:50%;bottom:106px;transform:translateX(-50%);z-index:780;width:min(390px,calc(100% - 24px));padding:12px 13px;border-radius:18px;background:#251B13;color:#fff;box-shadow:0 18px 44px rgba(31,22,14,.30);align-items:center;gap:10px}.wm-quick-feedback.show{display:flex;animation:wmQuickUp .22s ease both}.wm-quick-copy{flex:1;font-size:11px;line-height:1.45;font-weight:750}.wm-quick-btn{width:36px;height:36px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(255,255,255,.09);font-size:17px;cursor:pointer}
 @keyframes wmLayerFade{from{opacity:0}to{opacity:1}}@keyframes wmQuickUp{from{opacity:0;transform:translate(-50%,10px)}to{opacity:1;transform:translate(-50%,0)}}
@@ -4533,7 +4539,25 @@ function wmFeedbackPayload(extra={}){return{anonymous_id:typeof getAnonId==="fun
 async function wmSendFeedbackPayload(payload){const res=await fetch("/api/feedback",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});if(!res.ok)throw new Error("Feedback endpoint unavailable");return true}
 function wmQueueFeedback(payload){let queue=[];try{queue=JSON.parse(localStorage.getItem("wm_feedback_queue")||"[]")}catch{queue=[]}queue.push(payload);localStorage.setItem("wm_feedback_queue",JSON.stringify(queue.slice(-25)))}
 async function wmRetryFeedbackQueue(){let queue=[];try{queue=JSON.parse(localStorage.getItem("wm_feedback_queue")||"[]")}catch{return}if(!queue.length)return;const remaining=[];for(const payload of queue.slice(0,5)){try{await wmSendFeedbackPayload(payload)}catch{remaining.push(payload)}}remaining.push(...queue.slice(5));localStorage.setItem("wm_feedback_queue",JSON.stringify(remaining.slice(-25)))}
-async function submitWorldMealsFeedback(){const status=document.getElementById("wmFeedbackStatus"),payload=wmFeedbackPayload();if(!payload.message){if(status)status.textContent="Please write a short message first.";return}if(status)status.textContent="Sending…";try{await wmSendFeedbackPayload(payload);if(status)status.textContent="Thank you ❤️ Your feedback was sent.";document.getElementById("wmFeedbackMessage").value="";document.getElementById("wmFeedbackRating").value="";setTimeout(()=>{closeWorldMealsFeedback();if(typeof toast==="function")toast("Thank you for helping WorldMeals grow ❤️")},700)}catch(error){console.warn("WorldMeals feedback queued:",error);wmQueueFeedback(payload);if(status)status.textContent="Saved safely on this device. WorldMeals will retry when you open feedback again."}}
+async function submitWorldMealsFeedback(){
+  const status=document.getElementById("wmFeedbackStatus"),payload=wmFeedbackPayload();
+  if(!payload.message){
+    if(status){status.dataset.state="error";status.textContent="Please write a short message first."}
+    return;
+  }
+  if(status){status.dataset.state="pending";status.textContent="Sending…"}
+  try{
+    await wmSendFeedbackPayload(payload);
+    if(status){status.dataset.state="success";status.textContent="Thank you ❤️ Your feedback was sent."}
+    document.getElementById("wmFeedbackMessage").value="";
+    document.getElementById("wmFeedbackRating").value="";
+    setTimeout(()=>{closeWorldMealsFeedback();if(typeof toast==="function")toast("Thank you for helping WorldMeals grow ❤️")},700)
+  }catch(error){
+    console.warn("WorldMeals feedback queued:",error);
+    wmQueueFeedback(payload);
+    if(status){status.dataset.state="saved";status.textContent="Saved safely on this device. WorldMeals will retry when you open feedback again."}
+  }
+}
 function wmMaybeShowQuickFeedback(meal){if(!meal?.id||localStorage.getItem(`wm_quick_feedback_${meal.id}`)==="1")return;wmQuickFeedbackMeal=meal;const copy=document.getElementById("wmQuickFeedbackCopy");if(copy)copy.textContent=`How was ${meal.name}?`;document.getElementById("wmQuickFeedback")?.classList.add("show")}
 async function wmQuickFeedback(helpful){const meal=wmQuickFeedbackMeal;document.getElementById("wmQuickFeedback")?.classList.remove("show");if(!meal)return;localStorage.setItem(`wm_quick_feedback_${meal.id}`,"1");const payload={anonymous_id:typeof getAnonId==="function"?getAnonId():null,plan:wmPlan(),product_id:localStorage.getItem(WM_KEYS.productId)||null,type:"recipe",rating:helpful?5:2,message:helpful?"Quick feedback: helpful":"Quick feedback: needs improvement",source:"recipe_quick",meal_id:meal.id,meal_name:meal.name,page:document.querySelector(".page.active")?.id||"unknown",client_time:new Date().toISOString()};try{await wmSendFeedbackPayload(payload)}catch{wmQueueFeedback(payload)}if(helpful){if(typeof toast==="function")toast("Thank you! ❤️")}else{openWorldMealsFeedback("recipe",meal);const rating=document.getElementById("wmFeedbackRating");if(rating)rating.value="2"}wmQuickFeedbackMeal=null}
 function wmToggleMenu(){
