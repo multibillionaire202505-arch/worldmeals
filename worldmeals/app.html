@@ -4619,5 +4619,252 @@ function wmInitializeMemberExperience(){
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",wmInitializeMemberExperience,{once:true});else wmInitializeMemberExperience();
 </script>
 
+<!-- WORLDMEALS STYLED DROPDOWNS: every <select> opens a cream/orange panel instead of the plain browser list.
+     Your existing onchange handlers (renderGrid, syncTimeSelect, ...) keep working unchanged.
+     Add data-native to any <select> you want to keep as a normal browser dropdown. -->
+<style>
+/* WORLDMEALS PREMIUM SELECTORS — presentation only; existing select values/events stay unchanged */
+.wmp-backdrop{position:fixed;inset:0;background:rgba(42,29,18,.46);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;z-index:5000;padding:18px;animation:wmpFade .16s ease}
+.wmp-sheet{position:relative;background:linear-gradient(180deg,#FFFDF8 0%,#FFF8EE 100%);border:1px solid rgba(243,217,184,.95);border-radius:28px;width:100%;max-width:460px;max-height:min(82vh,720px);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 28px 80px rgba(60,30,0,.30),inset 0 1px 0 rgba(255,255,255,.95);font-family:'Inter',system-ui,sans-serif;animation:wmpPop .20s cubic-bezier(.2,.8,.2,1)}
+.wmp-sheet::before{content:"";width:42px;height:5px;border-radius:999px;background:#E6C9A7;align-self:center;margin:10px 0 2px;flex:0 0 auto}
+.wmp-title{font-size:19px;font-weight:800;letter-spacing:-.35px;color:#2B2118;padding:10px 20px 8px}
+.wmp-search{margin:2px 16px 8px;padding:13px 15px;border:1px solid #EED3B2;border-radius:16px;background:#fff;font:inherit;font-size:15px;color:#2B2118;outline:none;box-shadow:0 5px 14px rgba(83,55,29,.05)}
+.wmp-search::placeholder{color:#A08C78}.wmp-search:focus{border-color:#F28C28;box-shadow:0 0 0 4px rgba(242,140,40,.12)}
+.wmp-list{overflow-y:auto;padding:4px 14px 18px;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#E2C6A7 transparent}
+.wmp-group{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8B6B4C;padding:16px 8px 5px}
+.wmp-opt{display:flex;align-items:center;gap:13px;width:100%;min-height:58px;text-align:left;background:rgba(255,255,255,.72);border:1px solid #F0E2D2;border-radius:17px;padding:13px 14px;margin:7px 0;font:inherit;font-size:16px;font-weight:600;color:#3A2A1A;cursor:pointer;box-shadow:0 5px 14px rgba(83,55,29,.045);transition:transform .16s ease,background .16s ease,border-color .16s ease,box-shadow .16s ease;-webkit-tap-highlight-color:transparent}
+.wmp-opt:hover,.wmp-opt:focus-visible{background:#FFF3E3;border-color:#F0C58F;outline:none;transform:translateY(-1px);box-shadow:0 9px 20px rgba(83,55,29,.08)}
+.wmp-opt:active{transform:scale(.99)}
+.wmp-opt.sel{background:linear-gradient(135deg,#FFF0DC,#FDE3C4);border-color:#F2B66E;color:#7E3E08;box-shadow:0 8px 20px rgba(242,140,40,.13)}
+.wmp-opt:disabled{opacity:.45;cursor:default;transform:none}
+.wmp-ico{width:30px;height:30px;flex:0 0 30px;display:grid;place-items:center;text-align:center;font-size:21px;line-height:1;background:#FFF7EC;border-radius:10px}
+.wmp-opt.sel .wmp-ico{background:rgba(255,255,255,.58)}
+.wmp-txt{flex:1;line-height:1.25}.wmp-radio{width:23px;height:23px;flex:0 0 23px;border:2px solid #9A8877;border-radius:50%;position:relative;background:#FFFDF8;transition:border-color .16s ease,box-shadow .16s ease}
+.wmp-opt.sel .wmp-radio{border-color:#F28C28;box-shadow:0 0 0 3px rgba(242,140,40,.10)}
+.wmp-opt.sel .wmp-radio::after{content:"";position:absolute;inset:4px;border-radius:50%;background:#F28C28;box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+.wmp-empty{padding:28px 20px;text-align:center;color:#9A816A;font-size:14px;font-weight:600}
+@keyframes wmpFade{from{opacity:0}to{opacity:1}}@keyframes wmpPop{from{transform:translateY(10px) scale(.98);opacity:0}to{transform:none;opacity:1}}
+@media(max-width:600px){.wmp-backdrop{align-items:flex-end;padding:0}.wmp-sheet{max-width:none;max-height:86dvh;border-radius:28px 28px 0 0;border-bottom:0;animation:wmpSlide .24s cubic-bezier(.2,.8,.2,1)}.wmp-title{font-size:20px;padding-left:18px}.wmp-list{padding-left:12px;padding-right:12px;padding-bottom:max(18px,env(safe-area-inset-bottom))}.wmp-opt{min-height:60px;border-radius:16px;margin:6px 0}@keyframes wmpSlide{from{transform:translateY(100%)}to{transform:none}}}
+@media(prefers-reduced-motion:reduce){.wmp-backdrop,.wmp-sheet{animation:none}.wmp-opt{transition:none}}
+
+/* WORLDMEALS PREMIUM SELECTORS — V2 MICRO POLISH
+   Presentation only: spacing, scrolling, touch comfort and visual consistency. */
+.wmp-sheet{isolation:isolate}
+.wmp-title{
+  position:sticky;top:0;z-index:3;
+  background:linear-gradient(180deg,rgba(255,253,248,.98),rgba(255,253,248,.94));
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+}
+.wmp-list{scroll-padding-top:10px;scroll-padding-bottom:18px}
+.wmp-list::-webkit-scrollbar{width:5px}
+.wmp-list::-webkit-scrollbar-thumb{background:#E2C6A7;border-radius:999px}
+.wmp-group{position:relative;color:#765638}
+.wmp-group::after{content:"";position:absolute;left:8px;right:8px;bottom:0;height:1px;background:linear-gradient(90deg,#EED7BC,transparent)}
+.wmp-opt{will-change:transform}
+.wmp-opt.sel{font-weight:700}
+.wmp-radio{box-shadow:inset 0 0 0 1px rgba(255,255,255,.65)}
+.wmp-opt.sel .wmp-radio::after{inset:4px}
+
+@media(max-width:600px){
+  .wmp-sheet{max-height:min(88dvh,760px);border-radius:30px 30px 0 0}
+  .wmp-sheet::before{width:44px;height:5px;margin-top:9px;background:#DDBD98}
+  .wmp-title{padding:9px 18px 10px;font-size:19px}
+  .wmp-search{margin:2px 12px 7px;min-height:48px;border-radius:15px}
+  .wmp-list{padding:2px 12px max(20px,env(safe-area-inset-bottom))}
+  .wmp-group{padding:14px 7px 5px;font-size:10px}
+  .wmp-opt{min-height:56px;padding:11px 12px;border-radius:16px;gap:11px;margin:6px 0;font-size:15px}
+  .wmp-ico{width:29px;height:29px;flex-basis:29px;font-size:20px}
+  .wmp-radio{width:22px;height:22px;flex-basis:22px}
+}
+
+@media(max-width:380px){
+  .wmp-sheet{max-height:90dvh}
+  .wmp-opt{min-height:53px;padding-top:9px;padding-bottom:9px}
+  .wmp-title{font-size:18px}
+}
+
+</style>
+<script>
+(function(){
+  // Icon per dropdown (filter boxes also fall back to their CSS ::before emoji).
+  const ICONS={regionFilter:"🌍",countryFilter:"🏳️",dietFilter:"🥗",proteinQuickFilter:"💪",timeQuickFilter:"⏱️",
+    spiceQuickFilter:"🌶️",calQuickFilter:"🔥",budgetQuickFilter:"💰",sortFilter:"↕️",peopleCount:"👥",
+    plannerDiet:"🥗",plannerSpice:"🌶️",plannerGoal:"🎯"};
+  // A leading emoji like 🔥, ⚖️ or 👨‍🍳 (plus its modifiers), followed by a space.
+  const LEAD_EMOJI=/^\s*\p{Extended_Pictographic}(?:️|‍\p{Extended_Pictographic}|\p{Emoji_Modifier})*\s+/u;
+  let touchY=null, lastOpen=0;
+
+  function iconFor(sel){
+    if(sel.dataset.icon) return sel.dataset.icon;
+    if(ICONS[sel.id]) return ICONS[sel.id];
+    const g=sel.closest(".filter-group");
+    if(g){const c=getComputedStyle(g,"::before").content; if(c&&c!=="none"&&c!=="normal") return c.replace(/^["']|["']$/g,"");}
+    return "";
+  }
+  function titleFor(sel){
+    if(sel.id){const l=document.querySelector('label[for="'+sel.id+'"]'); if(l) return l.textContent.trim();}
+    const g=sel.closest(".filter-group, .sort-wrap");
+    if(g){const l=g.querySelector("label"); if(l) return l.textContent.trim(); if(g.classList.contains("sort-wrap")) return "Sort by";}
+    let p=sel.previousElementSibling; if(p&&p.tagName==="LABEL") return p.textContent.trim();
+    return "";
+  }
+
+  function open(sel){
+    if(document.querySelector(".wmp-backdrop")) return;
+    lastOpen=Date.now();
+    const icon=iconFor(sel);
+    const bd=document.createElement("div"); bd.className="wmp-backdrop";
+    const sh=document.createElement("div"); sh.className="wmp-sheet";
+    sh.setAttribute("role","dialog"); sh.setAttribute("aria-modal","true");
+    const title=titleFor(sel);
+    if(title){const t=document.createElement("div");t.className="wmp-title";t.textContent=title;sh.appendChild(t);}
+    const options=Array.from(sel.options).filter(o=>!o.hidden);
+    let search=null;
+    if(options.length>12){
+      search=document.createElement("input"); search.type="search"; search.className="wmp-search";
+      search.placeholder="Search "+(title?title.toLowerCase():"")+"…"; sh.appendChild(search);
+    }
+    const list=document.createElement("div"); list.className="wmp-list"; list.setAttribute("role","listbox"); sh.appendChild(list);
+
+    const rows=[]; let lastGroup=null;
+    options.forEach(o=>{
+      const grp=o.parentElement.tagName==="OPTGROUP"?o.parentElement:null;
+      if(grp&&grp!==lastGroup){const h=document.createElement("div");h.className="wmp-group";h.textContent=grp.label;list.appendChild(h);rows.push({h,grp});}
+      lastGroup=grp;
+      const b=document.createElement("button"); b.type="button";
+      b.className="wmp-opt"+(o.index===sel.selectedIndex?" sel":""); b.disabled=o.disabled; b.setAttribute("role","option");
+      let label=o.textContent.trim(), rowIcon=icon;
+      const m=label.match(LEAD_EMOJI);
+      if(m){ rowIcon=m[0].trim(); label=label.slice(m[0].length).trim(); }   // "🔥 Lose Weight" → icon 🔥 + text
+      if(rowIcon){const i=document.createElement("span");i.className="wmp-ico";i.textContent=rowIcon;b.appendChild(i);}
+      const tx=document.createElement("span"); tx.className="wmp-txt"; tx.textContent=label; b.appendChild(tx);
+      const r=document.createElement("span"); r.className="wmp-radio"; b.appendChild(r);
+      b.addEventListener("click",()=>{
+        if(sel.selectedIndex!==o.index){
+          sel.selectedIndex=o.index;
+          sel.dispatchEvent(new Event("input",{bubbles:true}));
+          sel.dispatchEvent(new Event("change",{bubbles:true}));
+        }
+        close();
+      });
+      list.appendChild(b); rows.push({b,grp,text:label.toLowerCase()});
+    });
+
+    const empty=document.createElement("div"); empty.className="wmp-empty"; empty.textContent="No matches";
+    if(search) search.addEventListener("input",()=>{
+      const q=search.value.trim().toLowerCase(); let shown=0; const live=new Set();
+      rows.forEach(r=>{ if(r.b){const ok=!q||r.text.includes(q); r.b.style.display=ok?"":"none"; if(ok){shown++; if(r.grp) live.add(r.grp);}} });
+      rows.forEach(r=>{ if(r.h) r.h.style.display=(!q||live.has(r.grp))?"":"none"; });
+      if(!shown) list.appendChild(empty); else empty.remove();
+    });
+
+    const prevOverflow=document.body.style.overflow;
+    function onKey(e){ if(e.key==="Escape") close(); }
+    let closed=false;
+    function close(fromBack){
+      if(closed) return; closed=true;
+      document.removeEventListener("keydown",onKey); window.removeEventListener("popstate",onBack); stopKeyboardFit();
+      sh.style.transform=""; sh.style.transition=""; bd.style.backgroundColor=""; bd.style.backdropFilter=""; bd.style.webkitBackdropFilter="";
+      bd.remove(); document.body.style.overflow=prevOverflow; try{sel.focus({preventScroll:true});}catch(_){sel.focus();}
+      if(!fromBack && history.state && history.state.wmpPicker) history.back();   // drop our back-button entry
+    }
+    // Android back button / browser back closes the sheet instead of leaving the page.
+    function onBack(){ close(true); }
+    try{ history.pushState(Object.assign({},history.state,{wmpPicker:1}),""); window.addEventListener("popstate",onBack); }catch(_){}
+    bd.addEventListener("click",e=>{ if(e.target===bd) close(); });
+    document.addEventListener("keydown",onKey);
+    bd.appendChild(sh); document.body.appendChild(bd); document.body.style.overflow="hidden";
+    // iPhone keyboard fix: iOS slides the keyboard OVER the page instead of resizing it,
+    // so lift the sheet above the keyboard (and shrink it to fit) while the keyboard is open.
+    // On Android the keyboard already resizes the page, so this measures 0 and changes nothing.
+    const vv=window.visualViewport;
+    function fitKeyboard(){
+      if(!vv) return;
+      const kb=Math.max(0,Math.round(window.innerHeight-vv.height-vv.offsetTop));
+      if(kb>80){ bd.style.paddingBottom=kb+"px"; sh.style.maxHeight=Math.max(220,Math.round(vv.height-24))+"px"; }
+      else { bd.style.paddingBottom=""; sh.style.maxHeight=""; }
+    }
+    function stopKeyboardFit(){ if(vv){ vv.removeEventListener("resize",fitKeyboard); vv.removeEventListener("scroll",fitKeyboard); } }
+    if(vv){ vv.addEventListener("resize",fitKeyboard); vv.addEventListener("scroll",fitKeyboard); fitKeyboard(); }
+    // iPhone: stop the page behind from scrolling when someone drags on the dark background.
+    bd.addEventListener("touchmove",e=>{ if(e.target===bd&&e.cancelable) e.preventDefault(); },{passive:false});
+    // Premium mobile swipe-to-dismiss. Header/handle drags immediately; list drags only
+    // after a clear downward pull while the list is already at the very top.
+    let startY=null, lastY=null, startT=0, lastT=0, dragY=0, dragging=false, fromList=false;
+    const reduceMotion=matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const resetDrag=(animate=true)=>{
+      sh.style.transition=animate&&!reduceMotion?"transform .22s cubic-bezier(.2,.8,.2,1)":"none";
+      bd.style.transition=animate&&!reduceMotion?"background-color .22s ease, backdrop-filter .22s ease":"none";
+      sh.style.transform=""; bd.style.backgroundColor=""; bd.style.backdropFilter=""; bd.style.webkitBackdropFilter="";
+      startY=lastY=null; startT=lastT=0; dragY=0; dragging=false; fromList=false;
+    };
+    sh.addEventListener("touchstart",e=>{
+      if(e.touches.length!==1||e.target.closest(".wmp-search")){ resetDrag(false); return; }
+      const y=e.touches[0].clientY, rect=sh.getBoundingClientRect();
+      const inList=!!e.target.closest(".wmp-list");
+      const inHeader=!!e.target.closest(".wmp-title") || y<=rect.top+54; // includes visual handle zone
+      if(!inHeader && !(inList&&list.scrollTop<=0)){ resetDrag(false); return; }
+      startY=lastY=y; startT=lastT=performance.now(); fromList=inList; dragging=inHeader; dragY=0;
+    },{passive:true});
+    sh.addEventListener("touchmove",e=>{
+      if(startY===null||e.touches.length!==1) return;
+      const y=e.touches[0].clientY, raw=y-startY;
+      if(raw<=0){ if(dragging) resetDrag(true); return; }
+      // A list-originated gesture must prove it is a downward pull, not ordinary scrolling/tapping.
+      if(fromList&&!dragging){
+        if(list.scrollTop>0){ resetDrag(false); return; }
+        if(raw<12) return;
+        dragging=true;
+      }
+      if(!dragging) return;
+      const now=performance.now(); lastY=y; lastT=now;
+      // Resistance after 180px keeps the sheet attached to the finger without feeling weightless.
+      dragY=raw<=180?raw:180+(raw-180)*.35;
+      sh.style.transition="none"; bd.style.transition="none";
+      sh.style.transform="translate3d(0,"+dragY+"px,0)";
+      const p=Math.min(raw/360,1), alpha=(.46*(1-p*.72)).toFixed(3);
+      bd.style.backgroundColor="rgba(42,29,18,"+alpha+")";
+      const blur=Math.max(2,8*(1-p)).toFixed(1)+"px"; bd.style.backdropFilter="blur("+blur+")"; bd.style.webkitBackdropFilter="blur("+blur+")";
+      if(e.cancelable) e.preventDefault();
+    },{passive:false});
+    sh.addEventListener("touchend",e=>{
+      if(startY===null){ resetDrag(false); return; }
+      const endY=e.changedTouches&&e.changedTouches[0]?e.changedTouches[0].clientY:lastY;
+      const elapsed=Math.max(performance.now()-startT,1), raw=Math.max(0,endY-startY), velocity=raw/elapsed;
+      const dismiss=dragging&&(raw>110||(raw>42&&velocity>.55));
+      startY=null;
+      if(dismiss){
+        sh.style.transition=reduceMotion?"none":"transform .20s cubic-bezier(.4,0,1,1)";
+        bd.style.transition=reduceMotion?"none":"background-color .20s ease, backdrop-filter .20s ease";
+        sh.style.transform="translate3d(0,105%,0)"; bd.style.backgroundColor="rgba(42,29,18,0)";
+        bd.style.backdropFilter="blur(0)"; bd.style.webkitBackdropFilter="blur(0)";
+        setTimeout(()=>close(),reduceMotion?0:190);
+      }else resetDrag(true);
+    },{passive:true});
+    sh.addEventListener("touchcancel",()=>resetDrag(true),{passive:true});
+    const cur=list.querySelector(".wmp-opt.sel"); if(cur) cur.scrollIntoView({block:"center"});
+    if(search&&matchMedia("(pointer:fine)").matches) search.focus();
+  }
+
+  function usable(sel){ return sel && !sel.multiple && !sel.disabled && !sel.hasAttribute("data-native"); }
+  document.addEventListener("touchstart",e=>{ touchY=e.touches[0].clientY; },{capture:true,passive:true});
+  function intercept(e){
+    const sel=e.target.closest&&e.target.closest("select"); if(!usable(sel)) return;
+    if(e.type==="touchend"){ const t=e.changedTouches[0]; if(touchY!==null&&Math.abs(t.clientY-touchY)>10) return; }
+    e.preventDefault();
+    if(e.type==="click") return;                       // already opened on mousedown / touchend
+    if(Date.now()-lastOpen<500) return;               // avoid double-open from touch + mouse
+    open(sel);
+  }
+  document.addEventListener("mousedown",intercept,true);
+  document.addEventListener("touchend",intercept,true);
+  document.addEventListener("click",intercept,true);
+  document.addEventListener("keydown",e=>{
+    const sel=e.target; if(!(sel instanceof HTMLSelectElement)||!usable(sel)) return;
+    if(e.key==="Enter"||e.key===" "||(e.altKey&&e.key==="ArrowDown")){ e.preventDefault(); open(sel); }
+  },true);
+})();
+</script>
+
 </body>
 </html>
