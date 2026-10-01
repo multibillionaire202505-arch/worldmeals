@@ -4736,6 +4736,16 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
       let label=o.textContent.trim(), rowIcon=icon;
       const m=label.match(LEAD_EMOJI);
       if(m){ rowIcon=m[0].trim(); label=label.slice(m[0].length).trim(); }   // "🔥 Lose Weight" → icon 🔥 + text
+      // Diet presentation polish only: give dietary preferences their own visual identity.
+      // Select values and existing input/change behavior remain untouched.
+      if(sel.id==="dietFilter" || sel.id==="plannerDiet"){
+        const dietIcons={
+          "dairy-free":"🥛", "dairy-free-option":"🥛",
+          "gluten-free":"🌾", "gluten-free-option":"🌾",
+          "vegan":"🌱", "vegan-option":"🌱"
+        };
+        if(dietIcons[o.value]) rowIcon=dietIcons[o.value];
+      }
       if(rowIcon){const i=document.createElement("span");i.className="wmp-ico";i.textContent=rowIcon;b.appendChild(i);}
       const tx=document.createElement("span"); tx.className="wmp-txt"; tx.textContent=label; b.appendChild(tx);
       const r=document.createElement("span"); r.className="wmp-radio"; b.appendChild(r);
