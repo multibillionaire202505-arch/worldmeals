@@ -1670,16 +1670,42 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 
 
 /* WORLDMEALS CRITICAL HEADER — keep menu stable across Safari/Chrome/WKWebView */
-.wm-nav-actions{display:flex;align-items:center;gap:7px;margin-left:auto;visibility:hidden;opacity:0}
+.wm-nav-actions{display:flex;align-items:center;gap:7px;margin-left:auto;visibility:hidden;opacity:0;position:relative}
 .wm-nav-actions.wm-ready{visibility:visible;opacity:1;transition:opacity .08s linear}
 .wm-plan-chip{display:inline-flex!important;align-items:center;justify-content:center;min-height:30px;padding:6px 10px;border-radius:999px;background:#FFF7EA;border:1px solid #E8D3B8;color:#8A4B18;font-size:10px!important;line-height:1.2;font-weight:900;white-space:nowrap}
 .wm-plan-chip{cursor:pointer}
-.wm-ai-credit-popover{display:none;position:absolute;right:0;top:40px;z-index:1004;width:min(300px,calc(100vw - 28px));padding:16px;background:#FFFDF9;border:1px solid #E8DDD0;border-radius:18px;box-shadow:0 18px 45px rgba(45,33,23,.18);color:#3F3025}
-.wm-ai-credit-popover.open{display:block}
-.wm-ai-credit-popover h3{margin:0 0 8px;font-size:16px;font-weight:900;color:#3F3025}
-.wm-ai-credit-popover p{margin:0 0 8px;font-size:12px;line-height:1.55;color:#6F6257}
-.wm-ai-credit-popover p:last-child{margin-bottom:0}
-.wm-ai-credit-remaining{font-weight:900;color:#167A5A}
+.wm-ai-chat-credit{margin:14px 0 4px;padding:14px 15px;background:linear-gradient(145deg,#FFFDF9,#FFF7EA);border:1px solid #E8D5BE;border-radius:18px;box-shadow:0 10px 26px rgba(83,55,29,.10);color:#3F3025;text-align:left}
+.wm-ai-chat-credit.done{background:linear-gradient(145deg,#F7FDF9,#EEF9F2);border-color:#BFE3CC}
+.wm-ai-chat-credit-title{font-size:14px;font-weight:900;margin-bottom:6px;color:#3F3025}
+.wm-ai-chat-credit-copy{font-size:12px;line-height:1.55;color:#6F6257;margin-top:3px}
+.wm-ai-chat-credit-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:11px}
+.wm-ai-chat-credit-actions button{border:0;border-radius:12px;padding:10px 12px;font:900 12px Inter,system-ui,sans-serif;cursor:pointer}
+.wm-ai-chat-continue{background:#F28C28;color:#fff;box-shadow:0 7px 16px rgba(242,140,40,.18)}
+.wm-ai-chat-upgrade{background:#FFF3E4;color:#8A4B18;border:1px solid #F1D1AD!important}
+.wm-ai-credit-popover{display:none;position:absolute;right:34px;top:calc(100% + 11px);z-index:1004;width:min(272px,calc(100vw - 20px));padding:14px 15px 13px;background:linear-gradient(180deg,rgba(255,255,255,.98) 0,rgba(255,255,255,.62) 15%,rgba(255,255,255,.06) 41%),linear-gradient(116deg,rgba(255,255,255,0) 25%,rgba(255,255,255,.98) 39%,rgba(255,255,255,.48) 48%,rgba(255,255,255,0) 59%),linear-gradient(116deg,rgba(255,255,255,0) 60%,rgba(255,255,255,.82) 66%,rgba(255,255,255,.12) 70%,rgba(255,255,255,0) 74%),linear-gradient(160deg,rgba(255,254,251,.92) 0%,rgba(250,238,223,.90) 50%,rgba(241,221,197,.88) 100%);-webkit-backdrop-filter:blur(18px) saturate(1.16);backdrop-filter:blur(18px) saturate(1.16);border:1px solid rgba(255,255,255,.98);border-radius:26px;box-shadow:0 18px 44px rgba(45,33,23,.16),0 2px 6px rgba(45,33,23,.06),inset 0 1px 0 #fff,inset 0 0 0 1px rgba(255,255,255,.68),inset 0 -10px 18px rgba(196,122,44,.07),inset 12px 0 24px rgba(255,255,255,.10);color:#3F3025;transform-origin:80% 0;isolation:isolate}
+.wm-ai-credit-popover::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;background:linear-gradient(105deg,rgba(255,255,255,0) 40%,rgba(255,255,255,.9) 50%,rgba(255,255,255,0) 60%) no-repeat;background-size:260% 100%;background-position:160% 0}
+.wm-ai-credit-popover.open::before{animation:wmCreditShimmer 1.1s .15s ease-out both}
+@keyframes wmCreditShimmer{from{background-position:160% 0}to{background-position:-60% 0}}
+.wm-ai-credit-popover::after{content:"";position:absolute;right:var(--wm-tip-right,38px);top:-7px;width:12px;height:12px;background:#FFFFFF;border-left:1px solid rgba(232,213,190,.75);border-top:1px solid rgba(232,213,190,.75);border-top-left-radius:3px;transform:rotate(45deg);pointer-events:none}
+.wm-ai-credit-popover.open{display:block;animation:wmCreditBubbleIn .18s cubic-bezier(.2,.8,.2,1) both}
+@keyframes wmCreditBubbleIn{from{opacity:0;transform:translateY(-5px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+.wm-ai-credit-popover h3{margin:0 0 7px;font-size:14px;font-weight:900;color:#3F3025;letter-spacing:-.15px}
+.wm-ai-credit-popover p{margin:0 0 4px;font-size:12px;line-height:1.4;color:rgba(63,48,37,.78)}
+.wm-ai-credit-popover p:last-of-type{margin-bottom:8px}
+.wm-ai-credit-popover strong{color:#3F3025}
+.wm-ai-credit-popover .wm-ai-credit-remaining strong{color:inherit}
+.wm-ai-credit-popover p.wm-ai-credit-remaining{display:inline-flex;align-items:center;margin:2px 0 7px;padding:5px 8px;border-radius:999px;background:rgba(231,245,236,.46);border:1px solid rgba(47,143,91,.13);font-size:12px;font-weight:900;color:#167A5A}
+.wm-ai-credit-popover p.wm-ai-credit-status{font-weight:800;color:#8A4B18}
+.wm-ai-credit-upgrade{width:auto;display:inline-flex;align-items:center;justify-content:center;vertical-align:baseline;margin:3px 1px 0;padding:7px 11px;border:1px solid rgba(196,122,44,.18);border-radius:999px;background:rgba(255,247,234,.46);color:#8A4B18;font:900 12px Inter,system-ui,sans-serif;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.68);transition:transform .16s ease,box-shadow .16s ease}
+.wm-ai-credit-upgrade:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(83,55,29,.10),inset 0 1px 0 rgba(255,255,255,.92)}
+.wm-plan-chip.wm-ai-low{background:#FFF1F0;border-color:#F3B4AE;color:#B42318}
+.wm-ai-credit-popover p.wm-ai-credit-remaining.wm-ai-low{color:#B42318;background:rgba(255,236,234,.75);border-color:rgba(180,35,24,.18)}
+.wm-ai-credit-popover p.wm-ai-credit-warn{color:#B42318;font-weight:800;margin:0 0 7px}
+.wm-ai-chat-credit-warn{margin-top:8px;padding:8px 10px;border-radius:12px;background:#FFF1F0;border:1px solid #F3B4AE;color:#B42318;font-size:12px;font-weight:800;line-height:1.4}
+.wm-ai-credit-popover p.wm-ai-credit-chef-line{margin-bottom:8px}
+.wm-ai-credit-popover .wm-ai-credit-upgrade{width:100%;min-height:44px;margin:2px 0 0}
+@media(max-width:520px){.wm-ai-credit-popover{right:10px;width:min(268px,calc(100vw - 16px))}.wm-ai-credit-popover::after{right:var(--wm-tip-right,48px)}}
+@media(prefers-reduced-motion:reduce){.wm-ai-credit-popover.open,.wm-ai-credit-popover.open::before{animation:none}}
 
 .wm-menu-wrap{position:relative;display:flex;align-items:center;z-index:130}
 .wm-menu-button{appearance:none;-webkit-appearance:none;width:34px;height:34px;padding:0;display:flex;align-items:center;justify-content:center;border:1px solid #E8DDD0;background:#fff;border-radius:12px;color:#F28C28;font:900 17px/1 Inter,system-ui,sans-serif;cursor:pointer;box-shadow:0 7px 16px rgba(83,55,29,.07);user-select:none;position:relative;z-index:1002;pointer-events:auto;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
@@ -1700,10 +1726,12 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
     <span class="wm-plan-chip" id="wmPlanChip" role="button" tabindex="0" aria-expanded="false" aria-controls="wmAICreditPopover">🌱 Explorer · 5/5 AI</span>
     <div class="wm-ai-credit-popover" id="wmAICreditPopover" role="dialog" aria-label="AI Credits">
       <h3>✨ AI Credits</h3>
+      <p class="wm-ai-credit-status" id="wmAICreditStatus" hidden>Your AI recipe is ready.</p>
       <p>Explorer includes <strong>5 AI recipes total.</strong></p>
       <p>Each AI recipe uses <strong>1 credit.</strong></p>
-      <p class="wm-ai-credit-remaining" id="wmAICreditRemaining">You have 5 of 5 remaining.</p>
-      <p>Want unlimited AI recipes? Upgrade to <strong>Chef</strong>.</p>
+      <p class="wm-ai-credit-remaining" id="wmAICreditRemaining">You have&nbsp;<strong>5 of 5 remaining.</strong></p>
+      <p class="wm-ai-credit-chef-line">Want unlimited AI recipes? Upgrade to <strong>Chef</strong>.</p>
+      <button type="button" class="wm-ai-credit-upgrade" onclick="wmCloseAICredits();wmOpenUpgrade('Unlimited AI recipes','chef')">Upgrade to Chef ✨</button>
     </div>
     <div class="fav-count" id="favCount">❤️ 0</div>
     <div class="wm-menu-wrap" id="wmMenu">
@@ -2887,11 +2915,12 @@ function searchRecipe(){
 
 async function getRecipe(){
   if(!currentMeal)return;
-  if(!wmCanUseAI("AI Full Recipe")) return;
   const btn=document.getElementById("recipeBtn");
   const res=document.getElementById("recipeResult");
-  btn.disabled=true;btn.textContent="Generating recipe…";
   res.innerHTML="";
+  if(!await wmConfirmAIUse(res,"AI Full Recipe")) return;
+  const wmAIUsedBefore=wmExplorerAIUsed();
+  btn.disabled=true;btn.textContent="Generating recipe…";
   try{
     const r=await fetch("/api/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({model:"claude-sonnet-4-6",max_tokens:1000,messages:[{role:"user",content:"Give me a full step-by-step recipe for "+currentMeal.name+" from "+currentMeal.country+". Respond ONLY with valid JSON, no markdown: {\"steps\":[\"step 1\",\"step 2\",\"step 3\",\"step 4\",\"step 5\"],\"tip\":\"one chef tip\"}"}]})});
     const d=await r.json();
@@ -2903,6 +2932,7 @@ async function getRecipe(){
     wmRecordAIUse("recipe");
     res.innerHTML='<div style="background:#F9F9F7;border-radius:12px;padding:12px;margin-top:4px"><div style="font-size:10px;font-weight:600;color:#888;letter-spacing:0.05em;margin-bottom:8px">RECIPE STEPS</div>'+data.steps.map((s,i)=>`<div class="step-row"><div class="step-num">${i+1}</div><div class="step-text">${s}</div></div>`).join("")+(data.tip?`<div class="tip-box"><div style="font-size:10px;font-weight:600;color:#166534;margin-bottom:2px">💡 CHEF TIP</div><div style="font-size:12px;color:#166534">${data.tip}</div></div>`:"")+`</div>`;
   }catch(e){console.error(e);res.innerHTML='<div style="padding:10px;background:#FEE2E2;border-radius:10px;color:#991B1B;font-size:12px">'+e.message+'</div>';}
+  wmShowAICreditNote(res,wmAIUsedBefore);
   btn.disabled=false;btn.textContent="📖 Get full recipe";
 }
 
@@ -3663,7 +3693,6 @@ function chefDifficulty(meal,steps=[]){
 }
 
 async function runChef(){
-  if(!wmCanUseAI("Chef AI")) return;
   const input=document.getElementById("fridgeInput").value.trim();
   if(!input){ toast("Type a few ingredients first"); return; }
 
@@ -3681,14 +3710,19 @@ async function runChef(){
     return;
   }
 
+  btn.disabled=false;
+  btn.textContent="✨ Find meals I can cook";
+  if(!await wmConfirmAIUse(result,"Chef AI")) return;
+  const wmAIUsedBefore=wmExplorerAIUsed();
+  btn.disabled=true;
+  btn.textContent="Preparing your chef guide…";
+
   /* WorldMeals chooses the verified database winner first.
      Chef AI explains and teaches; it cannot switch dishes. */
   const selected=matches[0];
   const meal=selected.meal;
 
   try{
-    btn.textContent="Preparing your chef guide…";
-
     const verifiedPayload={
       mealId:meal.id,
       name:meal.name,
@@ -3826,6 +3860,7 @@ Schema:
       </div>`;
   }
 
+  wmShowAICreditNote(result,wmAIUsedBefore);
   btn.disabled=false;
   btn.textContent="✨ Find meals I can cook";
 }
@@ -4335,8 +4370,52 @@ let wmQuickFeedbackMeal=null;let wmFeedbackContext={source:"general",mealId:null
 function wmPlan(){const p=localStorage.getItem(WM_KEYS.plan);return p==="passport"||p==="chef"?p:"explorer"}
 function wmPlanRank(p){return p==="passport"?2:p==="chef"?1:0}function wmHasPlan(required){return wmPlanRank(wmPlan())>=wmPlanRank(required)}
 function wmExplorerAIUsed(){return Math.max(0,Number(localStorage.getItem(WM_KEYS.explorerAI)||0))}function wmExplorerAIRemaining(){return Math.max(0,5-wmExplorerAIUsed())}
-function wmRecordAIUse(source){if(wmPlan()!=="explorer")return;localStorage.setItem(WM_KEYS.explorerAI,String(Math.min(5,wmExplorerAIUsed()+1)));wmRefreshMembershipUI()}
+function wmRecordAIUse(source){
+  if(wmPlan()!=="explorer")return;
+  localStorage.setItem(WM_KEYS.explorerAI,String(Math.min(5,wmExplorerAIUsed()+1)));
+  wmRefreshMembershipUI();
+}
 function wmCanUseAI(featureName){if(wmHasPlan("chef"))return true;if(wmExplorerAIRemaining()>0)return true;wmOpenUpgrade(featureName||"More AI recipes","chef");return false}
+
+function wmConfirmAIUse(container,featureName){
+  if(wmHasPlan("chef"))return Promise.resolve(true);
+  const left=wmExplorerAIRemaining();
+  if(!container)return Promise.resolve(wmCanUseAI(featureName));
+
+  return new Promise(resolve=>{
+    container.querySelectorAll(".wm-ai-chat-credit").forEach(el=>el.remove());
+    const box=document.createElement("div");
+    box.className="wm-ai-chat-credit";
+
+    if(left<=0){
+      box.innerHTML=`<div class="wm-ai-chat-credit-title">✨ AI Credits</div>
+        <div class="wm-ai-chat-credit-copy">You have used all <strong>5 of 5</strong> Explorer AI recipes.</div>
+        <div class="wm-ai-chat-credit-copy">Upgrade to Chef for unlimited AI recipes.</div>
+        <div class="wm-ai-chat-credit-actions"><button type="button" class="wm-ai-chat-upgrade">Upgrade to Chef ✨</button></div>`;
+      container.appendChild(box);
+      box.scrollIntoView({behavior:"smooth",block:"nearest"});
+      box.querySelector(".wm-ai-chat-upgrade")?.addEventListener("click",()=>wmOpenUpgrade(featureName||"Unlimited AI recipes","chef"));
+      resolve(false);
+      return;
+    }
+
+    const after=left-1;
+    box.innerHTML=`<div class="wm-ai-chat-credit-title">✨ AI Credits</div>
+      <div class="wm-ai-chat-credit-copy">You have&nbsp;<strong>${left} of 5</strong> AI recipe${left===1?"":"s"} remaining.</div>
+      ${left===1?'<div class="wm-ai-chat-credit-warn">⚠️ This is your last free AI recipe.</div>':''}
+      <div class="wm-ai-chat-credit-copy">This request uses <strong>1 AI credit</strong>. After it is created, you will have <strong>${after} of 5</strong> remaining.</div>
+      <div class="wm-ai-chat-credit-actions">
+        <button type="button" class="wm-ai-chat-continue">Continue with AI</button>
+        <button type="button" class="wm-ai-chat-upgrade">Upgrade to Chef ✨</button>
+      </div>`;
+    container.appendChild(box);
+    box.scrollIntoView({behavior:"smooth",block:"nearest"});
+    let settled=false;
+    const finish=value=>{if(settled)return;settled=true;box.remove();resolve(value)};
+    box.querySelector(".wm-ai-chat-continue")?.addEventListener("click",()=>finish(true));
+    box.querySelector(".wm-ai-chat-upgrade")?.addEventListener("click",()=>{finish(false);wmOpenUpgrade(featureName||"Unlimited AI recipes","chef")});
+  });
+}
 function wmRequirePlan(required,featureName){if(wmHasPlan(required))return true;wmOpenUpgrade(featureName||"Premium feature",required);return false}
 function wmOpenUpgrade(featureName,requiredPlan="chef"){const title=document.getElementById("wmUpgradeTitle"),copy=document.getElementById("wmUpgradeCopy"),meter=document.getElementById("wmUpgradeAIMeter");if(title)title.textContent=`Unlock ${featureName||"more of WorldMeals"} ✨`;if(copy)copy.textContent=requiredPlan==="passport"?"This experience is included with WorldMeals Passport.":"This experience is included with WorldMeals Chef and Passport.";if(meter)meter.textContent=wmPlan()==="explorer"?`Explorer AI recipes remaining: ${wmExplorerAIRemaining()} of 5`:"";document.getElementById("wmUpgrade")?.classList.add("open")}
 function wmCloseUpgrade(){document.getElementById("wmUpgrade")?.classList.remove("open")}function wmGoToPricing(){window.location.href="index.html?stay=1#pricing"}
@@ -4395,7 +4474,12 @@ function wmRefreshMembershipUI(){
   const plan=wmPlan(),chip=document.getElementById("wmPlanChip"),upgrade=document.getElementById("wmUpgradeMenuBtn"),manage=document.getElementById("wmManageMenuBtn");
   if(chip)chip.textContent=plan==="passport"?"🌍 Passport":plan==="chef"?"👨‍🍳 Chef":`🌱 Explorer · ${wmExplorerAIRemaining()}/5 AI`;
   const aiRemaining=document.getElementById("wmAICreditRemaining");
-  if(aiRemaining)aiRemaining.textContent=`You have ${wmExplorerAIRemaining()} of 5 remaining.`;
+  if(aiRemaining)aiRemaining.innerHTML=`You have&nbsp;<strong>${wmExplorerAIRemaining()} of 5 remaining.</strong>`;
+  {const wmLeft=wmExplorerAIRemaining(),wmLow=plan!=="passport"&&plan!=="chef"&&wmLeft<=1;
+   chip?.classList.toggle("wm-ai-low",wmLow);aiRemaining?.classList.toggle("wm-ai-low",wmLow);
+   const pop=document.getElementById("wmAICreditPopover");let w=document.getElementById("wmAICreditWarn");
+   if(pop&&!w){w=document.createElement("p");w.id="wmAICreditWarn";w.className="wm-ai-credit-warn";aiRemaining?.insertAdjacentElement("afterend",w);}
+   if(w){w.hidden=!wmLow;w.textContent=wmLeft===1?"⚠️ This is your last free AI recipe.":"⚠️ You’ve used all your free AI recipes.";}}
   if(upgrade)upgrade.style.display=plan==="explorer"?"block":"none";
   if(manage)manage.style.display=plan==="explorer"?"none":"block";
   [["planner","Planner","Planner 🔒","chef"],["tour","Tour","Tour 🔒","chef"],["scan","Scan","Scan 🔒","passport"]].forEach(([name,on,off,need])=>{
@@ -4406,13 +4490,55 @@ function wmRefreshMembershipUI(){
   if(chefLb)chefLb.textContent=wmHasPlan("chef")?"Chef":wmExplorerAIRemaining()>0?`Chef ${wmExplorerAIRemaining()}/5`:"Chef 🔒";
 }
 
+
+// After an AI request finishes: confirm the new Explorer credit count, or reassure the
+// user that no credit was used if the request failed. Same card style as the confirm step.
+function wmShowAICreditNote(container,usedBefore){
+  try{
+    if(!container||wmPlan()!=="explorer")return;
+    container.querySelectorAll(".wm-ai-credit-note").forEach(el=>el.remove());
+    const used=wmExplorerAIUsed()>usedBefore, left=wmExplorerAIRemaining();
+    const note=document.createElement("div");
+    note.className="wm-ai-chat-credit wm-ai-credit-note"+(used?" done":"");
+    if(used&&left>0){
+      note.innerHTML=`<div class="wm-ai-chat-credit-title">✅ AI recipe created</div>
+        <div class="wm-ai-chat-credit-copy">1 AI credit used. You now have <strong>${left} of 5</strong> AI recipe${left===1?"":"s"} remaining.</div>`;
+    }else if(used){
+      note.innerHTML=`<div class="wm-ai-chat-credit-title">✅ AI recipe created</div>
+        <div class="wm-ai-chat-credit-copy">That was your last free AI recipe. You have used all <strong>5 of 5</strong>.</div>
+        <div class="wm-ai-chat-credit-actions"><button type="button" class="wm-ai-chat-upgrade">Upgrade to Chef ✨</button></div>`;
+      note.querySelector(".wm-ai-chat-upgrade")?.addEventListener("click",()=>wmOpenUpgrade("Unlimited AI recipes","chef"));
+    }else{
+      note.innerHTML=`<div class="wm-ai-chat-credit-title">No credit used</div>
+        <div class="wm-ai-chat-credit-copy">The AI request didn’t finish, so your credit was kept. You still have <strong>${left} of 5</strong> AI recipe${left===1?"":"s"} remaining.</div>`;
+    }
+    container.appendChild(note);
+  }catch(_){}
+}
+function wmCloseAICredits(){
+  const chip=document.getElementById("wmPlanChip"),pop=document.getElementById("wmAICreditPopover"),status=document.getElementById("wmAICreditStatus");
+  pop?.classList.remove("open");
+  chip?.setAttribute("aria-expanded","false");
+  if(status)status.hidden=true;
+}
+function wmShowAICreditResult(){
+  if(wmPlan()!=="explorer")return;
+  const chip=document.getElementById("wmPlanChip"),pop=document.getElementById("wmAICreditPopover"),status=document.getElementById("wmAICreditStatus"),remaining=document.getElementById("wmAICreditRemaining");
+  if(!chip||!pop)return;
+  const left=wmExplorerAIRemaining();
+  if(status){status.hidden=false;status.textContent=left>0?"✨ AI recipe created!":"✨ AI recipe created — you’ve used all 5 Explorer AI recipes."}
+  if(remaining)remaining.innerHTML=`You have&nbsp;<strong>${left} of 5 remaining.</strong>`;
+  pop.classList.add("open");
+  chip.setAttribute("aria-expanded","true");
+}
 function wmToggleAICredits(){
   if(wmPlan()!=="explorer")return;
-  const chip=document.getElementById("wmPlanChip"),pop=document.getElementById("wmAICreditPopover");
+  const chip=document.getElementById("wmPlanChip"),pop=document.getElementById("wmAICreditPopover"),status=document.getElementById("wmAICreditStatus");
   if(!chip||!pop)return;
   const open=!pop.classList.contains("open");
   pop.classList.toggle("open",open);
   chip.setAttribute("aria-expanded",open?"true":"false");
+  if(status)status.hidden=true;
 }
 document.addEventListener("click",event=>{
   const chip=document.getElementById("wmPlanChip"),pop=document.getElementById("wmAICreditPopover");
@@ -4683,6 +4809,9 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
   .wmp-title{font-size:18px}
 }
 
+
+/* WORLDMEALS V17 — AI credit bubble CSS lives in one block near the top (search "wm-ai-credit-popover"); no !important needed. */
+
 </style>
 <script>
 (function(){
@@ -4876,5 +5005,19 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 })();
 </script>
 
+<script>
+(function(){
+  const pop=document.getElementById("wmAICreditPopover"), chip=document.getElementById("wmPlanChip");
+  if(!pop||!chip) return;
+  function aim(){
+    if(!pop.classList.contains("open")) return;
+    const p=pop.getBoundingClientRect(), c=chip.getBoundingClientRect();
+    const r=Math.round(p.right-(c.left+c.width/2)-6);              // 6 = half the 12px pointer
+    pop.style.setProperty("--wm-tip-right",Math.max(14,Math.min(p.width-26,r))+"px");
+  }
+  new MutationObserver(aim).observe(pop,{attributes:true,attributeFilter:["class"]});
+  window.addEventListener("resize",aim);
+})();
+</script>
 </body>
 </html>
