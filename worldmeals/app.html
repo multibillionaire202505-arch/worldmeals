@@ -5019,5 +5019,24 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
   window.addEventListener("resize",aim);
 })();
 </script>
+<script>
+/* AI Credits bubble: close it when the user touches or clicks anywhere outside it (works on iPhone,
+   Android and desktop, even on parts of the page that stop normal clicks), or presses Esc. */
+(function(){
+  function closeBubble(){
+    const pop=document.getElementById("wmAICreditPopover"), chip=document.getElementById("wmPlanChip");
+    if(!pop||!pop.classList.contains("open")) return;
+    if(typeof wmCloseAICredits==="function") wmCloseAICredits();
+    else { pop.classList.remove("open"); chip&&chip.setAttribute("aria-expanded","false"); }
+  }
+  document.addEventListener("pointerdown",e=>{
+    const pop=document.getElementById("wmAICreditPopover"), chip=document.getElementById("wmPlanChip");
+    if(!pop||!pop.classList.contains("open")) return;
+    if(pop.contains(e.target)||(chip&&chip.contains(e.target))) return;   // inside the bubble or on the chip: leave it
+    closeBubble();
+  },true);
+  document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeBubble(); });
+})();
+</script>
 </body>
 </html>
