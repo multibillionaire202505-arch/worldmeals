@@ -25,9 +25,42 @@
   };
   var RANK = { explorer: 0, chef: 1, passport: 2 };
 
-  // Never run in the iPhone/iPad app (Apple StoreKit bridge) or where Play Billing can't exist.
+  var PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=app.worldmeals.android';
+
+  // Never run in the iPhone/iPad app (Apple StoreKit bridge).
   if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.worldMealsIAP) return;
-  if (!('getDigitalGoodsService' in window) || !window.PaymentRequest) return;
+
+  // Android phone/tablet WITHOUT Google Play Billing (e.g. the website opened in Chrome, or installed
+  // from the website instead of the Play Store). Instead of the Apple-only message, point the person
+  // to the WorldMeals app on Google Play. Desktop and iPhone browsers are not affected.
+  function androidWebFallback() {
+    if (!/Android/i.test(navigator.userAgent || '')) return;
+    window.WorldMealsIAP = {
+      provider: 'android-web',
+      purchase: function () {
+        // index.html marks the buttons busy before calling us; an "error" event releases them.
+        window.dispatchEvent(new CustomEvent('worldmeals:iap', { detail: { status: 'error', message: ' ' } }));
+        var el = document.getElementById('iapStatus');
+        if (!el) { window.location.href = PLAY_STORE_URL; return; }
+        el.dataset.state = 'error';
+        el.textContent = 'On Android, subscriptions are available in the WorldMeals app from Google Play. ';
+        var a = document.createElement('a');
+        a.href = PLAY_STORE_URL;
+        a.textContent = 'Get it on Google Play →';
+        a.style.fontWeight = '800';
+        a.style.textDecoration = 'underline';
+        el.appendChild(a);
+      }
+    };
+    // app.html's "Manage subscription" otherwise shows an App Store message.
+    if (typeof window.wmManageSubscription === 'function') {
+      window.wmManageSubscription = function () {
+        window.location.href = 'https://play.google.com/store/account/subscriptions?package=app.worldmeals.android';
+      };
+    }
+  }
+
+  if (!('getDigitalGoodsService' in window) || !window.PaymentRequest) { androidWebFallback(); return; }
 
   var ENTITLEMENT_KEY = 'worldmeals.subscription.entitlement';
   function keepEntitlement(token) {
@@ -60,7 +93,7 @@
   var servicePromise = window.getDigitalGoodsService(PLAY_BILLING).catch(function () { return null; });
 
   servicePromise.then(function (service) {
-    if (!service) return; // not inside the Android app: leave everything as it is
+    if (!service) { androidWebFallback(); return; } // not the Play Store app: show the Google Play link on Android
 
     var busy = false;
 
