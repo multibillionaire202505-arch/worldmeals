@@ -29,6 +29,11 @@
   if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.worldMealsIAP) return;
   if (!('getDigitalGoodsService' in window) || !window.PaymentRequest) return;
 
+  var ENTITLEMENT_KEY = 'worldmeals.subscription.entitlement';
+  function keepEntitlement(token) {
+    try { if (token) localStorage.setItem(ENTITLEMENT_KEY, token); else localStorage.removeItem(ENTITLEMENT_KEY); } catch (e) {}
+  }
+
   function emit(detail) {
     window.dispatchEvent(new CustomEvent('worldmeals:iap', { detail: detail }));
     // index.html's status line was written for Apple; reword it for Google Play.
@@ -49,7 +54,7 @@
     var data = {};
     try { data = await res.json(); } catch (e) {}
     if (!res.ok) throw new Error(data.error || 'Could not confirm the purchase with Google Play.');
-    return data; // { active, plan, productId, expiryTime, isTrial }
+    return data; // { active, pending, plan, productId, expiryTime, isTrial, entitlement }
   }
 
   var servicePromise = window.getDigitalGoodsService(PLAY_BILLING).catch(function () { return null; });
@@ -75,8 +80,15 @@
         var token = response.details && response.details.purchaseToken;
         if (!token) throw new Error('Google Play did not return a purchase.');
         var result = await verify(productId, token);
+        if (result.pending) {
+          await response.complete('unknown');
+          response = null;
+          emit({ status: 'pending', message: 'Your payment is pending. Your plan unlocks as soon as Google Play confirms it.' });
+          return;
+        }
         if (!result.active) throw new Error('Google Play could not confirm an active subscription.');
         await response.complete('success');
+        keepEntitlement(result.entitlement);
         emit({
           status: 'success',
           plan: result.plan,
@@ -99,7 +111,7 @@
     async function refreshEntitlements() {
       var purchases;
       try { purchases = await service.listPurchases(); } catch (e) { return; } // keep current plan if Play is unreachable
-      var best = { plan: 'explorer', productId: null, isTrial: false, expiryTime: null }, active = [];
+      var best = { plan: 'explorer', productId: null, isTrial: false, expiryTime: null, entitlement: null }, active = [];
       for (var i = 0; i < purchases.length; i++) {
         var p = purchases[i];
         if (!PLANS[p.itemId]) continue;
@@ -111,6 +123,7 @@
           }
         } catch (e) { return; } // server unreachable: don't change the plan
       }
+      keepEntitlement(best.entitlement);
       emit({
         status: 'entitlements',
         plan: best.plan,
@@ -122,6 +135,18 @@
     }
 
     window.WorldMealsIAP = { purchase: purchase, restore: refreshEntitlements, provider: 'google-play' };
+
+    // app.html's "Manage subscription" falls back to an App Store message when there is no Apple
+    // bridge. On Android, open Google Play's subscription page for WorldMeals instead.
+    if (typeof window.wmManageSubscription === 'function') {
+      window.wmManageSubscription = function () {
+        var pid = '';
+        try { pid = localStorage.getItem('worldmeals.subscription.productId') || ''; } catch (e) {}
+        var url = 'https://play.google.com/store/account/subscriptions?package=app.worldmeals.android' +
+          (PLANS[pid] ? '&sku=' + encodeURIComponent(pid) : '');
+        window.location.href = url;
+      };
+    }
 
     // On index.html, Restore Purchases is hidden unless Apple is present; show it for Google Play too.
     var restoreBtn = document.getElementById('restorePurchases');
