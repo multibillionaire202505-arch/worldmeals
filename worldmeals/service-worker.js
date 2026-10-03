@@ -1,4 +1,4 @@
-const CACHE_NAME = "worldmeals-v1";
+const CACHE_NAME = "worldmeals-v2";
 
 const APP_SHELL = [
   "/",
@@ -51,4 +51,3 @@ self.addEventListener("fetch", event => {
       )
   );
 });
-
