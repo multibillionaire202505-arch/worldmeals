@@ -5038,6 +5038,50 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
   document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeBubble(); });
 })();
 </script>
+<script>
+/* AI credits — server sync. Adds the app's ID (and, for verified Google Play subscribers, the server-signed plan pass) to every /api/chat request so the server can count
+   Explorer credits, keeps the on-screen count matched to the server's, and opens the upgrade
+   screen if the server says all 5 free AI recipes are used. */
+(function(){
+  const LIMIT=5;
+  function wmAIId(){ return (window.wmDeviceId&&/^dev_[A-Za-z0-9-]{16,64}$/.test(window.wmDeviceId))?window.wmDeviceId:getAnonId(); }
+  function setUsedFromServer(remaining){
+    if(typeof wmPlan!=="function"||wmPlan()!=="explorer") return;
+    const used=Math.max(0,Math.min(LIMIT,LIMIT-Number(remaining)));
+    localStorage.setItem(WM_KEYS.explorerAI,String(used));
+    if(typeof wmRefreshMembershipUI==="function") wmRefreshMembershipUI();
+  }
+  const nativeFetch=window.fetch.bind(window);
+  window.fetch=async function(input,init){
+    const url=typeof input==="string"?input:(input&&input.url)||"";
+    if(!/^\/api\/chat(\?|$)/.test(url.replace(location.origin,""))) return nativeFetch(input,init);
+    init=Object.assign({},init); const h=new Headers(init.headers||{});
+    h.set("X-WM-Id",wmAIId()); h.set("X-WM-Plan",typeof wmPlan==="function"?wmPlan():"explorer");
+    try{ const pass=localStorage.getItem("worldmeals.subscription.entitlement"); if(pass) h.set("X-WM-Entitlement",pass); }catch(e){}   // server-signed verified plan (Google Play)
+    init.headers=h;
+    const res=await nativeFetch(input,init);
+    const rem=res.headers.get("X-WM-AI-Remaining");
+    if(rem!==null){
+      if(res.ok) window.__wmAIServerRemaining=Number(rem);   // applied when the app records the use
+      else setUsedFromServer(rem);
+    }
+    if(res.status===402){ setUsedFromServer(0); if(typeof wmOpenUpgrade==="function") setTimeout(()=>wmOpenUpgrade("Unlimited AI recipes","chef"),300); }
+    return res;
+  };
+  // When the app records a successful AI recipe, trust the server's count if it sent one.
+  if(typeof wmRecordAIUse==="function"){
+    const localRecord=wmRecordAIUse;
+    window.wmRecordAIUse=function(source){
+      if(typeof window.__wmAIServerRemaining==="number"){ const r=window.__wmAIServerRemaining; delete window.__wmAIServerRemaining; setUsedFromServer(r); return; }
+      return localRecord(source);
+    };
+  }
+  // On start, match the on-screen count to the server's.
+  if(typeof wmPlan==="function"&&wmPlan()==="explorer"){
+    window.fetch("/api/chat",{method:"GET"}).then(r=>r.ok?r.json():null).then(d=>{ if(d&&typeof d.remaining==="number") setUsedFromServer(d.remaining); }).catch(()=>{});
+  }
+})();
+</script>
 <!-- Google Play Billing (Android app only; does nothing on iPhone or the website) -->
 <script src="/play-billing.js" defer></script>
 </body>
