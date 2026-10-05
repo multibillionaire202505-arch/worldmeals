@@ -3781,7 +3781,7 @@ window.WORLD_KIDS_MEALS = [
     "carbs": 20,
     "fat": 9,
     "fiber": 3,
-    "image": "/images/dishes/Kids/mild-shakshuka-with-bread.jpg"
+    "image": "/images/dishes/Kids/Mild-shakshuka-with-bread.jpg"
   },
   {
     "id": 9079,
