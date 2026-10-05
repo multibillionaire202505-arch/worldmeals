@@ -1737,6 +1737,7 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
     <div class="wm-menu-wrap" id="wmMenu">
       <button type="button" class="wm-menu-button" id="wmMenuButton" aria-label="WorldMeals menu" aria-expanded="false" >☰</button>
       <div class="wm-menu-panel" id="wmMenuPanel">
+        <button type="button" class="wm-menu-item" id="wmKidsMenuBtn" onclick="wmCloseMenu();showPage('kids')">🧒 Kids Meals</button>
         <button type="button" class="wm-menu-item" id="wmUpgradeMenuBtn" onclick="wmCloseMenu();wmOpenUpgrade('WorldMeals Premium','chef')">✨ Upgrade</button>
         <button type="button" class="wm-menu-item" id="wmManageMenuBtn" onclick="wmCloseMenu();wmManageSubscription()">⚙️ Manage Subscription</button>
         <button type="button" class="wm-menu-item" id="wmFeedbackMenuBtn" onclick="wmCloseMenu();openWorldMealsFeedback('general')">💬 Share Feedback</button>
@@ -2034,6 +2035,137 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
   <div id="savedContent"></div>
 </div>
 
+<!-- KIDS MEALS PAGE (Chef and above) -->
+<style>
+/* WORLDMEALS KIDS — scoped to #page-kids only */
+#page-kids .wk-head{text-align:center;margin:2px 0 12px}
+#page-kids .wk-title{font:900 28px/1.1 Inter,system-ui,sans-serif;color:#2B1D12;letter-spacing:-.02em}
+#page-kids .wk-title span{color:#E07B24}
+#page-kids .wk-tag{font-size:13px;color:#6B5A4A;margin-top:4px}
+#page-kids .wk-hero{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:801/280;margin-bottom:14px;background:linear-gradient(135deg,#FFE7B8,#FFD38A 55%,#F6B26B);box-shadow:0 10px 24px rgba(120,70,20,.14)}
+#page-kids .wk-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+#page-kids .wk-hero-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;font:900 20px/1.25 Inter,system-ui,sans-serif;color:#5A3510}
+#page-kids .wk-card{background:#FFFCF7;border:1px solid #F3E6D6;border-radius:22px;padding:14px 12px 12px;margin-bottom:12px;box-shadow:0 6px 16px rgba(120,70,20,.06)}
+#page-kids .wk-step{display:flex;align-items:center;gap:10px;margin:0 2px 12px;font:850 17px/1.2 Inter,system-ui,sans-serif;color:#2B1D12}
+#page-kids .wk-num{width:34px;height:34px;flex:0 0 34px;border-radius:50%;background:linear-gradient(180deg,#F08A2C,#D96A12);color:#fff;font:900 16px/34px Inter,system-ui,sans-serif;text-align:center;box-shadow:0 4px 10px rgba(217,106,18,.3)}
+#page-kids .wk-grid{display:grid;gap:8px}
+#page-kids .wk-ages{grid-template-columns:repeat(5,1fr)}
+#page-kids .wk-meals{grid-template-columns:repeat(4,1fr)}
+#page-kids .wk-chips{grid-template-columns:repeat(3,1fr)}
+#page-kids .wk-sub{font-size:13px;color:#6B5A4A;margin:0 2px 12px 46px}
+#page-kids .wk-search{display:flex;align-items:center;gap:8px;border:1.5px solid #E9DCCB;background:#fff;border-radius:16px;padding:0 10px 0 14px;height:50px}
+#page-kids .wk-search:focus-within{border-color:#E9893A;box-shadow:0 0 0 3px rgba(233,137,58,.12)}
+#page-kids .wk-search input{flex:1;border:0;outline:0;background:transparent;font:500 15px Inter,system-ui,sans-serif;color:#2B1D12;min-width:0}
+#page-kids .wk-search-ic{font-size:17px;opacity:.75}
+#page-kids .wk-search-chev{border:0;background:none;color:#C4651A;font:900 20px/1 Inter,system-ui,sans-serif;cursor:pointer;padding:4px 6px}
+#page-kids .wk-clist{margin-top:8px;border:1px solid #F0E3D2;border-radius:16px;background:#fff;max-height:260px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+#page-kids .wk-crow{display:flex;align-items:center;gap:12px;width:100%;border:0;border-bottom:1px solid #F6EEE3;background:none;padding:12px 14px;text-align:left;font:700 14px Inter,system-ui,sans-serif;color:#2B1D12;cursor:pointer}
+#page-kids .wk-crow:last-child{border-bottom:0}
+#page-kids .wk-crow span{font-size:20px}
+#page-kids .wk-crow small{margin-left:auto;color:#9A8572;font-weight:600}
+#page-kids .wk-csel{display:flex;align-items:center;gap:12px;margin-top:10px;padding:12px 14px;border-radius:16px;background:#EAF4FD;border:1px solid #CFE3F6}
+#page-kids .wk-csel .fl{font-size:28px;line-height:1}
+#page-kids .wk-csel b{display:block;font:800 15px Inter,system-ui,sans-serif;color:#2B1D12}
+#page-kids .wk-csel small{color:#5E6B78;font-size:12.5px}
+#page-kids .wk-csel .rd{margin-left:auto;width:20px;height:20px;border-radius:50%;border:2px solid #2F80ED;position:relative;flex:0 0 20px}
+#page-kids .wk-csel .rd::after{content:"";position:absolute;inset:3px;border-radius:50%;background:#2F80ED}
+#page-kids .wk-opt{appearance:none;border:1.5px solid transparent;background:#FBF3E8;border-radius:16px;padding:10px 4px;font:700 12.5px/1.2 Inter,system-ui,sans-serif;color:#3A2A1A;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:5px;-webkit-tap-highlight-color:transparent;transition:background .15s,border-color .15s,transform .1s}
+#page-kids .wk-opt:active{transform:scale(.97)}
+#page-kids .wk-opt .ic{font-size:26px;line-height:1}
+#page-kids .wk-opt small{font-weight:600;color:#6B5A4A;font-size:12px}
+#page-kids .wk-chips .wk-opt{flex-direction:row;justify-content:center;gap:6px;padding:10px 6px;border-radius:999px;font-size:12px}
+#page-kids .wk-chips .wk-opt .ic{font-size:17px}
+#page-kids .wk-opt.diet{background:#EEF6EC}
+#page-kids .wk-opt.avoid{background:#FCEDEE}
+#page-kids .wk-opt.on{background:#FFF1E2;border-color:#E9893A;color:#9A4A0C;box-shadow:0 4px 12px rgba(233,137,58,.18)}
+#page-kids .wk-opt.on small{color:#B4601A}
+#page-kids .wk-find{width:100%;border:0;border-radius:20px;padding:17px 16px;margin:4px 0 16px;background:linear-gradient(180deg,#EE8A30,#D4680F);color:#fff;font:850 18px/1 Inter,system-ui,sans-serif;cursor:pointer;box-shadow:0 10px 22px rgba(212,104,15,.28)}
+#page-kids #kidsResults{scroll-margin-top:96px}
+#page-kids .wk-results-head{display:flex;justify-content:space-between;align-items:center;margin:4px 2px 10px;font:800 15px Inter,system-ui,sans-serif;color:#2B1D12}
+#page-kids .wk-results-head button{border:0;background:none;color:#C4651A;font:800 13px Inter,system-ui,sans-serif;cursor:pointer}
+@media(max-width:380px){#page-kids .wk-opt{font-size:11.5px}#page-kids .wk-chips .wk-opt{font-size:11px;padding:9px 4px}#page-kids .wk-title{font-size:25px}}
+</style>
+<div class="page" id="page-kids">
+  <div class="wk-head">
+    <div class="wk-title">🌍 WorldMeals <span>Kids</span></div>
+    <div class="wk-tag">Meals they'll love. Choices you control.</div>
+  </div>
+  <div class="wk-hero">
+    <div class="wk-hero-text">Good Food · Brighter Days · Happier Kids 💛</div>
+    <img src="/images/kids/kids-hero.jpg" alt="Happy kids enjoying WorldMeals dishes" onerror="this.remove()">
+  </div>
+
+  <div class="wk-card">
+    <div class="wk-step"><span class="wk-num">1</span>Who are we cooking for?</div>
+    <div class="wk-grid wk-ages" data-wk-group="age" data-wk-single="1">
+      <button type="button" class="wk-opt" data-v="6-12m"><span class="ic">👶</span>6–12<small>months</small></button>
+      <button type="button" class="wk-opt" data-v="1-2y"><span class="ic">🧒</span>1–2<small>years</small></button>
+      <button type="button" class="wk-opt" data-v="3-5y"><span class="ic">🧒</span>3–5<small>years</small></button>
+      <button type="button" class="wk-opt" data-v="6-8y"><span class="ic">👦</span>6–8<small>years</small></button>
+      <button type="button" class="wk-opt" data-v="9-12y"><span class="ic">🧑</span>9–12<small>years</small></button>
+    </div>
+  </div>
+
+  <div class="wk-card">
+    <div class="wk-step"><span class="wk-num">2</span>What are we cooking?</div>
+    <div class="wk-grid wk-meals" data-wk-group="meal" data-wk-single="1">
+      <button type="button" class="wk-opt" data-v="breakfast"><span class="ic">☀️</span>Breakfast</button>
+      <button type="button" class="wk-opt" data-v="lunch"><span class="ic">🥪</span>Lunch</button>
+      <button type="button" class="wk-opt" data-v="dinner"><span class="ic">🍽️</span>Dinner</button>
+      <button type="button" class="wk-opt" data-v="snack"><span class="ic">🍓</span>Snacks</button>
+    </div>
+  </div>
+
+  <div class="wk-card">
+    <div class="wk-step"><span class="wk-num">3</span>Make it work for my child</div>
+    <div class="wk-grid wk-chips" data-wk-group="fit">
+      <button type="button" class="wk-opt" data-v="toddler-friendly"><span class="ic">🧸</span>Toddler-Friendly</button>
+      <button type="button" class="wk-opt" data-v="picky-friendly"><span class="ic">🙂</span>Picky-Eater</button>
+      <button type="button" class="wk-opt" data-v="very-picky"><span class="ic">😟</span>Very Picky</button>
+      <button type="button" class="wk-opt" data-v="sensory-friendly"><span class="ic">🧩</span>Sensory-Friendly</button>
+      <button type="button" class="wk-opt" data-v="hidden-veggies"><span class="ic">🥦</span>Hidden Veggies</button>
+      <button type="button" class="wk-opt" data-v="lunchbox"><span class="ic">🍱</span>Lunchbox</button>
+      <button type="button" class="wk-opt diet" data-v="vegetarian"><span class="ic">🌿</span>Vegetarian</button>
+      <button type="button" class="wk-opt diet" data-v="vegan"><span class="ic">🌱</span>Vegan</button>
+      <button type="button" class="wk-opt diet" data-v="gluten-free"><span class="ic">🌾</span>Gluten-Free</button>
+      <button type="button" class="wk-opt diet" data-v="dairy-free"><span class="ic">🥛</span>Dairy-Free</button>
+      <button type="button" class="wk-opt diet" data-v="egg-free"><span class="ic">🥚</span>Egg-Free</button>
+      <button type="button" class="wk-opt diet" data-v="nut-free"><span class="ic">🥜</span>Nut-Free</button>
+    </div>
+  </div>
+
+  <div class="wk-card">
+    <div class="wk-step"><span class="wk-num">4</span>My child won't eat…</div>
+    <div class="wk-grid wk-chips" data-wk-group="avoid">
+      <button type="button" class="wk-opt avoid" data-v="vegetables"><span class="ic">🚫</span>Vegetables</button>
+      <button type="button" class="wk-opt avoid" data-v="meat"><span class="ic">🚫</span>Meat</button>
+      <button type="button" class="wk-opt avoid" data-v="fish"><span class="ic">🚫</span>Fish</button>
+      <button type="button" class="wk-opt avoid" data-v="eggs"><span class="ic">🚫</span>Eggs</button>
+      <button type="button" class="wk-opt avoid" data-v="dairy"><span class="ic">🚫</span>Dairy</button>
+      <button type="button" class="wk-opt avoid" data-v="mushrooms"><span class="ic">🚫</span>Mushrooms</button>
+    </div>
+  </div>
+
+  <div class="wk-card">
+    <div class="wk-step" style="margin-bottom:2px"><span class="wk-num">5</span>Choose a country (optional)</div>
+    <div class="wk-sub">Explore kids' meals from a specific country or keep it global.</div>
+    <div class="wk-search">
+      <span class="wk-search-ic">🔍</span>
+      <input id="kidsCountrySearch" type="search" autocomplete="off" placeholder="Search for a country…" oninput="wmKidsCountryList(true)" onfocus="wmKidsCountryList(true)">
+      <button type="button" class="wk-search-chev" aria-label="Show countries" onclick="wmKidsCountryList()">⌄</button>
+    </div>
+    <div class="wk-clist" id="kidsCountryList" hidden></div>
+    <div class="wk-csel" id="kidsCountrySel"></div>
+  </div>
+
+  <button type="button" class="wk-find" onclick="renderKids(true)">🔍 Find meals for my child</button>
+
+  <div id="kidsResults" hidden>
+    <div class="wk-results-head"><span id="kidsCountLbl"></span><button type="button" onclick="wmKidsClear()">↻ Start over</button></div>
+    <div class="grid" id="kidsGrid"></div>
+  </div>
+</div>
+
 <!-- DISH MODAL -->
 <div class="overlay" id="dishOverlay" onclick="if(event.target===this)closeModal()">
   <div class="modal">
@@ -2105,10 +2237,12 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
   <button type="button" class="nav-btn" id="nb-tour" aria-label="World food tour" onclick="showPage('tour')"><span class="ic" aria-hidden="true">🏆</span><span class="lb">Tour</span></button>
   <button type="button" class="nav-btn" id="nb-chef" aria-label="Chef AI" onclick="showPage('chef')"><span class="ic" aria-hidden="true">👨‍🍳</span><span class="lb">Chef</span></button>
   <button type="button" class="nav-btn" id="nb-scan" aria-label="Scan your fridge" onclick="showPage('scan')"><span class="ic" aria-hidden="true">📷</span><span class="lb">Scan</span></button>
+  <button type="button" class="nav-btn" id="nb-kids" aria-label="Kids meals" onclick="showPage('kids')"><span class="ic" aria-hidden="true">🧒</span><span class="lb">Kids</span></button>
   <button type="button" class="nav-btn" id="nb-saved" aria-label="Saved dishes" onclick="showPage('saved')"><span class="ic" aria-hidden="true">❤️</span><span class="lb">Saved</span></button>
 </div>
 
 <script src="meals.js"></script>
+<script src="kids-meals.js"></script>
 <script>
 
 /* ==========================================================
@@ -2214,6 +2348,114 @@ requestAnimationFrame(refreshPremiumFaders);
 </script>
 <script>
 const MEALS = window.WORLD_MEALS_DATABASE || [];
+/* WORLDMEALS KIDS MEALS (Chef and above) — kids dishes live in kids-meals.js and have their own
+   Kids page, so Browse, Tour, Planner picker and Chef AI stay exactly as they are. Id lookups
+   (recipe modal, saved, planner) fall back to kids dishes so a kids recipe opens like any dish. */
+const KIDS_MEALS = window.WORLD_KIDS_MEALS || [];
+MEALS.find = function(fn){ return Array.prototype.find.call(this, fn) || Array.prototype.find.call(KIDS_MEALS, fn); };
+// Kids page choices: tap to select (age and meal type pick one; the others can be combined).
+const wmKids={age:new Set(),meal:new Set(),fit:new Set(),avoid:new Set()};
+let wmKidsCountry="all";
+// Step 5: country search. Lists only countries that have kids dishes, so it fills itself as dishes are added.
+function wmKidsCountries(){ return [...new Set(KIDS_MEALS.map(m=>m.country).filter(Boolean))].sort(); }
+function wmKidsShowSelected(){
+  const box=document.getElementById("kidsCountrySel"); if(!box) return;
+  box.innerHTML = wmKidsCountry==="all"
+    ? '<span class="fl">🌍</span><div><b>Any country</b><small>Show kids meals from around the world</small></div><span class="rd"></span>'
+    : `<span class="fl">${wmKidsFlag(wmKidsCountry)}</span><div><b>${escapeAttr(wmKidsCountry)}</b><small>Show kids meals from ${escapeAttr(wmKidsCountry)}</small></div><span class="rd"></span>`;
+}
+function wmKidsCountryList(open){
+  const list=document.getElementById("kidsCountryList"), q=(document.getElementById("kidsCountrySearch")?.value||"").trim().toLowerCase();
+  if(!list) return;
+  if(open===undefined) open=list.hidden;
+  if(!open){ list.hidden=true; return; }
+  const counts={}; KIDS_MEALS.forEach(m=>counts[m.country]=(counts[m.country]||0)+1);
+  const rows=wmKidsCountries().filter(c=>!q||c.toLowerCase().includes(q));
+  list.innerHTML=(q?"":'<button type="button" class="wk-crow" data-c="all"><span>🌍</span>Any country</button>')
+    +rows.map(c=>`<button type="button" class="wk-crow" data-c="${escapeAttr(c)}"><span>${wmKidsFlag(c)}</span>${escapeAttr(c)}<small>${counts[c]} ${counts[c]===1?"dish":"dishes"}</small></button>`).join("")
+    +(rows.length||!q?"":'<div class="wk-crow" style="cursor:default;color:#9A8572">No kids dishes from that country yet</div>');
+  list.hidden=false;
+}
+function wmKidsPickCountry(c){
+  wmKidsCountry=c||"all";
+  const inp=document.getElementById("kidsCountrySearch"); if(inp){ inp.value=""; inp.blur(); }
+  document.getElementById("kidsCountryList").hidden=true;
+  wmKidsShowSelected();
+  if(!document.getElementById("kidsResults").hidden) renderKids(false);
+}
+document.addEventListener("click",e=>{
+  const row=e.target.closest&&e.target.closest("#page-kids .wk-crow[data-c]");
+  if(row){ wmKidsPickCountry(row.dataset.c); return; }
+  if(!(e.target.closest&&e.target.closest("#page-kids .wk-search, #page-kids .wk-clist"))){ const l=document.getElementById("kidsCountryList"); if(l) l.hidden=true; }
+});
+// Flags for kids countries the shared countryFlag() list doesn't cover (kids page only).
+const WM_KIDS_FLAGS={"United Kingdom":"🇬🇧","Cameroon":"🇨🇲","Mali":"🇲🇱","Greece":"🇬🇷","Norway":"🇳🇴","Poland":"🇵🇱","Portugal":"🇵🇹","Sweden":"🇸🇪","Singapore":"🇸🇬","Argentina":"🇦🇷","Costa Rica":"🇨🇷","Syria":"🇸🇾","Chile":"🇨🇱","New Zealand":"🇳🇿","Australia":"🇦🇺","Egypt":"🇪🇬","Kenya":"🇰🇪","Senegal":"🇸🇳","Cuba":"🇨🇺","Haiti":"🇭🇹","Puerto Rico":"🇵🇷","Russia":"🇷🇺","Ukraine":"🇺🇦","Ireland":"🇮🇪","Netherlands":"🇳🇱","Belgium":"🇧🇪","Switzerland":"🇨🇭","Austria":"🇦🇹","Denmark":"🇩🇰","Finland":"🇫🇮","Iran":"🇮🇷","Israel":"🇮🇱","Jordan":"🇯🇴","Pakistan":"🇵🇰","Bangladesh":"🇧🇩","Sri Lanka":"🇱🇰","Hawaii":"🌺"};
+const wmKidsFlag=c=>WM_KIDS_FLAGS[c]||countryFlag(c);
+
+document.addEventListener("click",e=>{
+  const btn=e.target.closest&&e.target.closest("#page-kids .wk-opt"); if(!btn) return;
+  const box=btn.closest("[data-wk-group]"), key=box.dataset.wkGroup, v=btn.dataset.v, set=wmKids[key];
+  if(box.dataset.wkSingle){ const was=set.has(v); set.clear(); box.querySelectorAll(".wk-opt").forEach(b=>b.classList.remove("on")); if(!was){set.add(v);btn.classList.add("on");} }
+  else { if(set.has(v)){set.delete(v);btn.classList.remove("on");}else{set.add(v);btn.classList.add("on");} }
+  if(!document.getElementById("kidsResults").hidden) renderKids(false);
+});
+function wmKidsClear(){
+  Object.values(wmKids).forEach(s=>s.clear());
+  document.querySelectorAll("#page-kids .wk-opt.on").forEach(b=>b.classList.remove("on"));
+  wmKidsCountry="all"; wmKidsShowSelected();
+  document.getElementById("kidsResults").hidden=true;
+  document.getElementById("page-kids").scrollIntoView({behavior:"smooth",block:"start"});
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+function renderKids(scroll){
+  const res=document.getElementById("kidsResults"), g=document.getElementById("kidsGrid"), lbl=document.getElementById("kidsCountLbl");
+  if(!g) return;
+  if(scroll===undefined){ wmKidsShowSelected(); return; } // opening the page shows the choices first
+  const has=(m,t)=>(m.tags||[]).includes(t);
+  const fitOk=(m,f)=>{
+    if(f==="picky-friendly") return has(m,"picky")||has(m,"little-picky")||has(m,"very-picky");
+    if(f==="vegetarian") return has(m,"vegetarian")||has(m,"vegan");
+    if(f==="egg-free") return has(m,"no-eggs");
+    if(f==="nut-free") return !has(m,"peanuts")&&!has(m,"nuts");
+    return has(m,f);
+  };
+  const list=KIDS_MEALS.filter(m=>{
+    for(const a of wmKids.age) if(!has(m,"kids-"+a)) return false;
+    for(const t of wmKids.meal) if(!has(m,t)) return false;
+    for(const f of wmKids.fit) if(!fitOk(m,f)) return false;
+    for(const x of wmKids.avoid) if(!has(m,"no-"+x)) return false;
+    if(wmKidsCountry!=="all"&&m.country!==wmKidsCountry) return false;
+    return true;
+  });
+  res.hidden=false;
+  lbl.textContent=`${list.length} ${list.length===1?"meal":"meals"} for your child`;
+  const note=wmKids.fit.has("sensory-friendly")
+    ?'<div class="empty" style="grid-column:1/-1;padding:14px 16px">🧩 Sensory-friendly dishes keep one steady texture and simple flavors. If eating is very limited or causing worry, a pediatrician or feeding therapist can help.</div>':"";
+  if(!list.length){
+    g.innerHTML='<div class="empty">🧒 More kids dishes for these choices are coming soon.<br><br>Try another age or remove a choice.</div>';
+  }else{
+  g.innerHTML=note+list.map(m=>`
+    <div class="card" onclick="openModal(${m.id})">
+      <div class="card-img">${foodImageHTML(m)}</div>
+      <button class="fav-btn" onclick="event.stopPropagation();toggleFav(${m.id})">${favs.includes(m.id)?"❤️":"🤍"}</button>
+      <div class="card-body">
+        <div class="card-name">${m.name}</div>
+        <div class="card-country">
+          <span>${wmKidsFlag(m.country)} ${m.country}</span>
+          <span class="card-rating">⭐ ${mealRating(m)}</span>
+        </div>
+        <div class="metric-row">
+          <div class="metric"><b>💪 ${mealProtein(m)}g</b>Protein</div>
+          <div class="metric"><b>🔥 ${m.cal}</b>Calories</div>
+          <div class="metric"><b>⏱ ${m.time}</b>Cook Time</div>
+          <div class="metric"><b>💵 $${m.budget}</b>Budget</div>
+        </div>
+        <button class="view-recipe-btn" onclick="event.stopPropagation();openModal(${m.id})">View Recipe</button>
+      </div>
+    </div>`).join("");
+  }
+  if(scroll) res.scrollIntoView({behavior:"smooth",block:"start"});
+}
 
 // Clear old AI/Unsplash photo cache so local dish photos stay correct.
 // After this update works, you may leave this line or remove it later.
@@ -3040,6 +3282,7 @@ function showPage(name){
   if(name==="browse" && typeof wmMaybeShowTrialReminderForDishes==="function" && wmMaybeShowTrialReminderForDishes()) return;
   if((name==="planner" || name==="tour") && !wmRequirePlan("chef", name==="planner" ? "Weekly Meal Planner" : "World Tour Challenge")) return;
   if(name==="scan" && !wmRequirePlan("passport","Camera & Fridge Scan")) return;
+  if(name==="kids" && !wmRequirePlan("chef","Kids meals")) return;
   const nextPage=document.getElementById("page-"+name);
   const nextTab=document.getElementById("nb-"+name);
   if(!nextPage||!nextTab)return;
@@ -3065,6 +3308,7 @@ function showPage(name){
   if(name==="planner")renderPlanner();
   if(name==="tour")renderTour();
   if(name==="saved")renderSaved();
+  if(name==="kids")renderKids();
 
   window.scrollTo({top:0,behavior:"smooth"});
 }
@@ -3366,7 +3610,7 @@ function renderTour(){
 
 function renderSaved(){
   favs=normalizeFavIds(favs);
-  const saved=MEALS.filter(m=>favs.includes(Number(m.id)));
+  const saved=[...MEALS,...KIDS_MEALS].filter(m=>favs.includes(Number(m.id)));
   const el=document.getElementById("savedContent");
   if(!saved.length){
     el.innerHTML='<div class="saved-empty"><div style="font-size:40px;margin-bottom:12px">🤍</div><div style="font-size:14px;color:#888;margin-bottom:6px">No saved dishes yet</div><div style="font-size:12px">Tap the heart on any dish to save it here</div><button onclick="showPage(\'browse\')" style="margin-top:16px;padding:10px 20px;border-radius:20px;background:var(--text);color:#fff;border:none;font-size:13px;cursor:pointer;font-family:Inter,system-ui,sans-serif">Browse dishes →</button></div>';
@@ -4482,7 +4726,7 @@ function wmRefreshMembershipUI(){
    if(w){w.hidden=!wmLow;w.textContent=wmLeft===1?"⚠️ This is your last free AI recipe.":"⚠️ You’ve used all your free AI recipes.";}}
   if(upgrade)upgrade.style.display=plan==="explorer"?"block":"none";
   if(manage)manage.style.display=plan==="explorer"?"none":"block";
-  [["planner","Planner","Planner 🔒","chef"],["tour","Tour","Tour 🔒","chef"],["scan","Scan","Scan 🔒","passport"]].forEach(([name,on,off,need])=>{
+  [["planner","Planner","Planner 🔒","chef"],["tour","Tour","Tour 🔒","chef"],["scan","Scan","Scan 🔒","passport"],["kids","Kids","Kids 🔒","chef"]].forEach(([name,on,off,need])=>{
     const lb=document.getElementById("nb-"+name)?.querySelector(".lb");
     if(lb)lb.textContent=wmHasPlan(need)?on:off;
   });
