@@ -3894,5 +3894,2084 @@ window.WORLD_KIDS_MEALS = [
     "fat": 9,
     "fiber": 3,
     "image": "/images/dishes/salmon-and-pea-pasta.jpg"
+  },
+  {
+    "id": 9041,
+    "name": "Soft Onigiri Rice Balls",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🍙",
+    "cal": 150,
+    "budget": 3,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "dairy-free",
+      "gluten-free",
+      "fish",
+      "no-meat",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "no-vegetables",
+      "lunch",
+      "snack",
+      "toddler-friendly",
+      "picky",
+      "sensory-friendly",
+      "lunchbox"
+    ],
+    "desc": "Mini, extra-soft rice balls, plain or filled with flaked salmon. Shape them small and slightly flat for little hands. Use fresh cooked salmon (never salted), check for bones, and skip nori sheets under age 2. Toddler tip: cut into small, soft pieces; little or no added salt. Sensory tip: one steady texture; serve it the same way each time.",
+    "ingredients": [
+      "Short-grain rice",
+      "Fresh salmon fillet (optional)",
+      "Water"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Fish",
+          "to": "Mashed chickpeas or tofu",
+          "note": "Same soft texture, plant protein"
+        }
+      ],
+      "fish": [
+        {
+          "from": "Salmon filling",
+          "to": "Plain rice only",
+          "note": "Perfect for very picky eaters"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 22,
+    "fat": 3,
+    "fiber": 1,
+    "image": "/images/dishes/soft-onigiri-rice-balls.jpg"
+  },
+  {
+    "id": 9042,
+    "name": "Mini Pasta Stars with Hidden-Veggie Sauce",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "⭐",
+    "cal": 210,
+    "budget": 2,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegan",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "picky",
+      "hidden-veggies",
+      "lunchbox"
+    ],
+    "desc": "Tiny pasta stars in a smooth tomato sauce with carrot and pepper blended right in. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Star pasta",
+      "Tomatoes",
+      "Carrot",
+      "Red bell pepper",
+      "Olive oil",
+      "Basil"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread or flour",
+          "to": "Gluten-free pasta, bread or flour",
+          "note": "Cook GF pasta until extra soft"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 36,
+    "fat": 5,
+    "fiber": 4,
+    "image": "/images/dishes/mini-pasta-stars-with-hidden-veggie-sauce.jpg"
+  },
+  {
+    "id": 9043,
+    "name": "Bean & Cheese Quesadilla Triangles",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🫓",
+    "cal": 230,
+    "budget": 2,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "lunch",
+      "snack",
+      "toddler-friendly",
+      "picky",
+      "lunchbox"
+    ],
+    "desc": "Soft, melty triangles that are easy to hold. Let them cool so the cheese isn't too hot. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Small flour tortilla",
+      "Refried beans (no salt)",
+      "Mild cheddar"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cheese",
+          "to": "Dairy-free cheese or mashed avocado",
+          "note": "Keeps it creamy without dairy"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread or flour",
+          "to": "Gluten-free pasta, bread or flour",
+          "note": "Cook GF pasta until extra soft"
+        }
+      ]
+    },
+    "protein": 10,
+    "carbs": 26,
+    "fat": 9,
+    "fiber": 5,
+    "image": "/images/dishes/bean-and-cheese-quesadilla-triangles.jpg"
+  },
+  {
+    "id": 9044,
+    "name": "Mild Chicken & Sweet Potato Korma",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍛",
+    "cal": 240,
+    "budget": 3,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "dairy-free",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "dinner",
+      "toddler-friendly",
+      "little-picky",
+      "hidden-veggies"
+    ],
+    "desc": "Creamy, gentle curry with no chili. Sweet potato melts into the sauce. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Chicken thigh",
+      "Sweet potato",
+      "Coconut milk",
+      "Onion",
+      "Garlic",
+      "Mild garam masala"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or turkey",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ]
+    },
+    "protein": 15,
+    "carbs": 20,
+    "fat": 11,
+    "fiber": 3,
+    "image": "/images/dishes/mild-chicken-and-sweet-potato-korma.jpg"
+  },
+  {
+    "id": 9045,
+    "name": "Veggie Omelette Muffins",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🧁",
+    "cal": 120,
+    "budget": 2,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "breakfast",
+      "snack",
+      "toddler-friendly",
+      "picky",
+      "lunchbox"
+    ],
+    "desc": "Fluffy mini egg muffins with finely chopped veg. Bake until fully set. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Eggs",
+      "Baby spinach",
+      "Red bell pepper",
+      "Mild cheese"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cheese",
+          "to": "Dairy-free cheese or mashed avocado",
+          "note": "Keeps it creamy without dairy"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 3,
+    "fat": 8,
+    "fiber": 1,
+    "image": "/images/dishes/veggie-omelette-muffins.jpg"
+  },
+  {
+    "id": 9046,
+    "name": "Mild Jollof Rice",
+    "country": "Ghana",
+    "region": "Africa",
+    "emoji": "🍚",
+    "cal": 220,
+    "budget": 2,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegan",
+      "dairy-free",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "little-picky",
+      "hidden-veggies"
+    ],
+    "desc": "West Africa's favorite rice, made mild for toddlers: all the flavor, none of the heat. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Long-grain rice",
+      "Tomatoes",
+      "Red bell pepper",
+      "Onion",
+      "Carrot",
+      "Peas",
+      "Low-salt vegetable stock"
+    ],
+    "swaps": {},
+    "protein": 5,
+    "carbs": 42,
+    "fat": 4,
+    "fiber": 3,
+    "image": "/images/dishes/mild-jollof-rice.jpg"
+  },
+  {
+    "id": 9047,
+    "name": "Greek Chicken & Rice Soup",
+    "country": "Greece",
+    "region": "Mediterranean",
+    "emoji": "🍲",
+    "cal": 190,
+    "budget": 2,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "dairy-free",
+      "gluten-free",
+      "eggs",
+      "no-fish",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "picky"
+    ],
+    "desc": "Avgolemono-style: silky lemon-egg broth with soft rice and shredded chicken. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Chicken breast",
+      "Rice",
+      "Carrot",
+      "Egg",
+      "Lemon juice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or turkey",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ]
+    },
+    "protein": 16,
+    "carbs": 18,
+    "fat": 5,
+    "fiber": 1,
+    "image": "/images/dishes/greek-chicken-and-rice-soup.jpg"
+  },
+  {
+    "id": 9048,
+    "name": "Banana Oat Pancakes with Yogurt Dip",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥞",
+    "cal": 200,
+    "budget": 1,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "snack",
+      "toddler-friendly",
+      "very-picky",
+      "lunchbox"
+    ],
+    "desc": "Naturally sweet pancakes with a creamy yogurt dip. Cut into strips. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Rolled oats",
+      "Ripe banana",
+      "Egg",
+      "Plain yogurt"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Choose a fortified, no-sugar one"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Oats",
+          "to": "Certified gluten-free oats",
+          "note": "Same texture"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 30,
+    "fat": 6,
+    "fiber": 3,
+    "image": "/images/dishes/banana-oat-pancakes-with-yogurt-dip.jpg"
+  },
+  {
+    "id": 9049,
+    "name": "Cheesy Broccoli Rice Bites",
+    "country": "Canada",
+    "region": "Americas",
+    "emoji": "🥦",
+    "cal": 150,
+    "budget": 2,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "lunch",
+      "snack",
+      "toddler-friendly",
+      "picky",
+      "hidden-veggies",
+      "lunchbox"
+    ],
+    "desc": "Soft baked bites with broccoli hidden inside. Great warm or cold. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Cooked rice",
+      "Broccoli",
+      "Mild cheddar",
+      "Egg"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cheese",
+          "to": "Dairy-free cheese or mashed avocado",
+          "note": "Keeps it creamy without dairy"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 16,
+    "fat": 6,
+    "fiber": 1,
+    "image": "/images/dishes/cheesy-broccoli-rice-bites.jpg"
+  },
+  {
+    "id": 9050,
+    "name": "Soft Scrambled Eggs with Toast Fingers",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🍳",
+    "cal": 210,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "toddler-friendly",
+      "very-picky",
+      "sensory-friendly"
+    ],
+    "desc": "Creamy, fully cooked scrambled eggs with soft toast fingers for dipping. Toddler tip: cut into small, soft pieces; little or no added salt. Sensory tip: one steady texture; serve it the same way each time.",
+    "ingredients": [
+      "Eggs",
+      "Unsalted butter",
+      "Wholemeal bread"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Same richness, dairy-free"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread or flour",
+          "to": "Gluten-free pasta, bread or flour",
+          "note": "Cook GF pasta until extra soft"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 16,
+    "fat": 11,
+    "fiber": 2,
+    "image": "/images/dishes/soft-scrambled-eggs-with-toast-fingers.jpg"
+  },
+  {
+    "id": 9051,
+    "name": "Mild Chicken Satay Strips",
+    "country": "Indonesia",
+    "region": "Asia",
+    "emoji": "🍢",
+    "cal": 220,
+    "budget": 3,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "dairy-free",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "no-vegetables",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "little-picky",
+      "lunchbox"
+    ],
+    "desc": "Tender chicken strips with a creamy, nut-free satay dip made from sunflower seed butter. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Chicken breast",
+      "Sunflower seed butter",
+      "Coconut milk",
+      "Lime juice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or turkey",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ]
+    },
+    "protein": 18,
+    "carbs": 6,
+    "fat": 13,
+    "fiber": 1,
+    "image": "/images/dishes/mild-chicken-satay-strips.jpg"
+  },
+  {
+    "id": 9052,
+    "name": "Mini Swedish Meatballs",
+    "country": "Sweden",
+    "region": "Europe",
+    "emoji": "🧆",
+    "cal": 230,
+    "budget": 3,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-fish",
+      "no-dairy",
+      "no-mushrooms",
+      "dinner",
+      "toddler-friendly",
+      "picky",
+      "hidden-veggies",
+      "lunchbox"
+    ],
+    "desc": "Small, soft meatballs with grated carrot hidden inside. Cut in halves for little ones. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Ground turkey",
+      "Breadcrumbs",
+      "Egg",
+      "Grated carrot",
+      "Low-salt gravy"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or turkey",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread or flour",
+          "to": "Gluten-free pasta, bread or flour",
+          "note": "Cook GF pasta until extra soft"
+        }
+      ]
+    },
+    "protein": 16,
+    "carbs": 12,
+    "fat": 12,
+    "fiber": 1,
+    "image": "/images/dishes/mini-swedish-meatballs.jpg"
+  },
+  {
+    "id": 9053,
+    "name": "Mild Beans & Plantain",
+    "country": "Nigeria",
+    "region": "Africa",
+    "emoji": "🍌",
+    "cal": 230,
+    "budget": 1,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegan",
+      "dairy-free",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "little-picky"
+    ],
+    "desc": "A gentle version of Nigerian ewa: soft beans with sweet plantain. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Black-eyed peas",
+      "Ripe plantain",
+      "Tomatoes",
+      "Onion",
+      "Palm oil (a little)"
+    ],
+    "swaps": {},
+    "protein": 9,
+    "carbs": 38,
+    "fat": 5,
+    "fiber": 8,
+    "image": "/images/dishes/mild-beans-and-plantain.jpg"
+  },
+  {
+    "id": 9054,
+    "name": "Coconut Lentil Dal with Rice",
+    "country": "Sri Lanka",
+    "region": "Asia",
+    "emoji": "🍛",
+    "cal": 220,
+    "budget": 1,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegan",
+      "dairy-free",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "little-picky",
+      "hidden-veggies"
+    ],
+    "desc": "Creamy, golden dal with carrot blended in, served over soft rice. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Red lentils",
+      "Coconut milk",
+      "White rice",
+      "Carrot",
+      "Turmeric"
+    ],
+    "swaps": {},
+    "protein": 9,
+    "carbs": 30,
+    "fat": 7,
+    "fiber": 5,
+    "image": "/images/dishes/coconut-lentil-dal-with-rice.jpg"
+  },
+  {
+    "id": 9055,
+    "name": "Mac & Cheese with Hidden Cauliflower",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🧀",
+    "cal": 260,
+    "budget": 2,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "very-picky",
+      "hidden-veggies",
+      "sensory-friendly"
+    ],
+    "desc": "The classic comfort dish, with cauliflower blended into the cheese sauce. Toddler tip: cut into small, soft pieces; little or no added salt. Sensory tip: one steady texture; serve it the same way each time.",
+    "ingredients": [
+      "Macaroni",
+      "Cauliflower",
+      "Whole milk",
+      "Mild cheddar"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Milk, cheese or yogurt",
+          "to": "Unsweetened fortified soy or oat alternative",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread or flour",
+          "to": "Gluten-free pasta, bread or flour",
+          "note": "Cook GF pasta until extra soft"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 32,
+    "fat": 10,
+    "fiber": 2,
+    "image": "/images/dishes/mac-and-cheese-with-hidden-cauliflower.jpg"
+  },
+  {
+    "id": 9056,
+    "name": "Soft Fish Tacos",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🌮",
+    "cal": 210,
+    "budget": 3,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "fish",
+      "no-meat",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "dinner",
+      "toddler-friendly",
+      "little-picky"
+    ],
+    "desc": "Flaky white fish and creamy avocado in soft tortillas. Check carefully for bones. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Small soft tortillas",
+      "Mild white fish",
+      "Ripe avocado",
+      "Plain yogurt"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Fish",
+          "to": "Mashed chickpeas or tofu",
+          "note": "Same soft texture, plant protein"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Choose a fortified, no-sugar one"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread or flour",
+          "to": "Gluten-free pasta, bread or flour",
+          "note": "Cook GF pasta until extra soft"
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 20,
+    "fat": 8,
+    "fiber": 3,
+    "image": "/images/dishes/soft-fish-tacos.jpg"
+  },
+  {
+    "id": 9057,
+    "name": "Chicken & Ginger Congee",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🥣",
+    "cal": 170,
+    "budget": 2,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "dairy-free",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "breakfast",
+      "dinner",
+      "toddler-friendly",
+      "picky",
+      "sensory-friendly"
+    ],
+    "desc": "Silky rice porridge with tender shredded chicken. Easy to eat and comforting. Toddler tip: cut into small, soft pieces; little or no added salt. Sensory tip: one steady texture; serve it the same way each time.",
+    "ingredients": [
+      "White rice",
+      "Chicken thigh",
+      "Ginger (one slice, removed)",
+      "Carrot"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or turkey",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ]
+    },
+    "protein": 11,
+    "carbs": 22,
+    "fat": 4,
+    "fiber": 1,
+    "image": "/images/dishes/chicken-and-ginger-congee.jpg"
+  },
+  {
+    "id": 9058,
+    "name": "Couscous with Chickpeas & Raisins",
+    "country": "Morocco",
+    "region": "Africa",
+    "emoji": "🍲",
+    "cal": 210,
+    "budget": 1,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegan",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "toddler-friendly",
+      "little-picky",
+      "lunchbox"
+    ],
+    "desc": "Sweet, fluffy couscous. Chop raisins small to avoid choking. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Couscous",
+      "Chickpeas",
+      "Raisins (chopped)",
+      "Carrot",
+      "Cinnamon (a pinch)"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread or flour",
+          "to": "Gluten-free pasta, bread or flour",
+          "note": "Cook GF pasta until extra soft"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 38,
+    "fat": 3,
+    "fiber": 6,
+    "image": "/images/dishes/couscous-with-chickpeas-and-raisins.jpg"
+  },
+  {
+    "id": 9059,
+    "name": "Hummus Pita Fingers with Soft Carrots",
+    "country": "Lebanon",
+    "region": "Middle East",
+    "emoji": "🫓",
+    "cal": 190,
+    "budget": 1,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegan",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "sesame",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "snack",
+      "toddler-friendly",
+      "picky",
+      "lunchbox"
+    ],
+    "desc": "Pita strips with creamy hummus and soft steamed carrots for dipping. Contains sesame. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Pita bread",
+      "Hummus",
+      "Steamed carrot sticks"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread or flour",
+          "to": "Gluten-free pasta, bread or flour",
+          "note": "Cook GF pasta until extra soft"
+        }
+      ],
+      "sesame": [
+        {
+          "from": "Sesame / tahini",
+          "to": "Olive oil",
+          "note": "Sesame-free, still tasty"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 26,
+    "fat": 7,
+    "fiber": 5,
+    "image": "/images/dishes/hummus-pita-fingers-with-soft-carrots.jpg"
+  },
+  {
+    "id": 9060,
+    "name": "Mini Spanakopita Triangles",
+    "country": "Greece",
+    "region": "Mediterranean",
+    "emoji": "🥟",
+    "cal": 180,
+    "budget": 3,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "lunch",
+      "snack",
+      "toddler-friendly",
+      "little-picky",
+      "lunchbox"
+    ],
+    "desc": "Flaky little pies with spinach and mild ricotta. Cool before serving. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Filo pastry",
+      "Spinach",
+      "Ricotta",
+      "Egg"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cheese",
+          "to": "Dairy-free cheese or mashed avocado",
+          "note": "Keeps it creamy without dairy"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 16,
+    "fat": 9,
+    "fiber": 2,
+    "image": "/images/dishes/mini-spanakopita-triangles.jpg"
+  },
+  {
+    "id": 9061,
+    "name": "Soft Gnocchi with Butter & Peas",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "🥔",
+    "cal": 230,
+    "budget": 2,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "dinner",
+      "toddler-friendly",
+      "picky"
+    ],
+    "desc": "Pillowy gnocchi tossed in butter with sweet peas. Cut in halves. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Potato gnocchi",
+      "Peas",
+      "Unsalted butter",
+      "Parmesan (a little)"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Same richness, dairy-free"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread or flour",
+          "to": "Gluten-free pasta, bread or flour",
+          "note": "Cook GF pasta until extra soft"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 36,
+    "fat": 7,
+    "fiber": 3,
+    "image": "/images/dishes/soft-gnocchi-with-butter-and-peas.jpg"
+  },
+  {
+    "id": 9062,
+    "name": "Mild Thai Fried Rice",
+    "country": "Thailand",
+    "region": "Asia",
+    "emoji": "🍚",
+    "cal": 230,
+    "budget": 2,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "dairy-free",
+      "gluten-free",
+      "eggs",
+      "no-fish",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "picky",
+      "hidden-veggies",
+      "lunchbox"
+    ],
+    "desc": "Khao pad made gentle: no fish sauce or chili, lots of colorful veg. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Cooked rice",
+      "Egg",
+      "Peas",
+      "Carrot",
+      "Chicken breast"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or turkey",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 30,
+    "fat": 6,
+    "fiber": 2,
+    "image": "/images/dishes/mild-thai-fried-rice.jpg"
+  },
+  {
+    "id": 9063,
+    "name": "Quinoa & Veggie Patties",
+    "country": "Peru",
+    "region": "South America",
+    "emoji": "🥮",
+    "cal": 170,
+    "budget": 2,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "snack",
+      "toddler-friendly",
+      "little-picky",
+      "hidden-veggies",
+      "lunchbox"
+    ],
+    "desc": "Soft patties with grated veg mixed in. Easy finger food. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Quinoa",
+      "Carrot",
+      "Zucchini",
+      "Egg",
+      "Flour"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread or flour",
+          "to": "Gluten-free pasta, bread or flour",
+          "note": "Cook GF pasta until extra soft"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 22,
+    "fat": 5,
+    "fiber": 3,
+    "image": "/images/dishes/quinoa-and-veggie-patties.jpg"
+  },
+  {
+    "id": 9064,
+    "name": "Skyr Berry Bowl",
+    "country": "Iceland",
+    "region": "Europe",
+    "emoji": "🫐",
+    "cal": 160,
+    "budget": 2,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "snack",
+      "toddler-friendly",
+      "picky"
+    ],
+    "desc": "Thick, protein-rich yogurt with mashed berries. Always quarter or mash berries for toddlers. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Plain skyr or Greek yogurt",
+      "Berries (mashed or quartered)",
+      "Rolled oats"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Choose a fortified, no-sugar one"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Oats",
+          "to": "Certified gluten-free oats",
+          "note": "Same texture"
+        }
+      ]
+    },
+    "protein": 11,
+    "carbs": 18,
+    "fat": 3,
+    "fiber": 3,
+    "image": "/images/dishes/skyr-berry-bowl.jpg"
+  },
+  {
+    "id": 9065,
+    "name": "Mild Chakalaka Beans",
+    "country": "South Africa",
+    "region": "Africa",
+    "emoji": "🫘",
+    "cal": 180,
+    "budget": 1,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegan",
+      "dairy-free",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "little-picky",
+      "hidden-veggies"
+    ],
+    "desc": "A gentle, no-chili version of South Africa's veggie bean relish. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Low-sugar baked beans",
+      "Carrot",
+      "Bell pepper",
+      "Onion"
+    ],
+    "swaps": {},
+    "protein": 8,
+    "carbs": 28,
+    "fat": 2,
+    "fiber": 8,
+    "image": "/images/dishes/mild-chakalaka-beans.jpg"
+  },
+  {
+    "id": 9066,
+    "name": "Mini Fish Pie",
+    "country": "Ireland",
+    "region": "Europe",
+    "emoji": "🥧",
+    "cal": 230,
+    "budget": 3,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "fish",
+      "no-meat",
+      "no-eggs",
+      "no-mushrooms",
+      "dinner",
+      "toddler-friendly",
+      "picky",
+      "hidden-veggies"
+    ],
+    "desc": "Soft fish in a creamy sauce under fluffy mash. Check carefully for bones. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Mild white fish",
+      "Potato",
+      "Whole milk",
+      "Peas"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Fish",
+          "to": "Mashed chickpeas or tofu",
+          "note": "Same soft texture, plant protein"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk, cheese or yogurt",
+          "to": "Unsweetened fortified soy or oat alternative",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 15,
+    "carbs": 24,
+    "fat": 8,
+    "fiber": 3,
+    "image": "/images/dishes/mini-fish-pie.jpg"
+  },
+  {
+    "id": 9067,
+    "name": "Cheese Arepa Fingers",
+    "country": "Venezuela",
+    "region": "South America",
+    "emoji": "🫓",
+    "cal": 190,
+    "budget": 1,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "snack",
+      "toddler-friendly",
+      "picky",
+      "lunchbox"
+    ],
+    "desc": "Soft corn cakes with melted cheese, cut into fingers. No added salt. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Pre-cooked corn flour",
+      "Water",
+      "Mild white cheese"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cheese",
+          "to": "Dairy-free cheese or mashed avocado",
+          "note": "Keeps it creamy without dairy"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 26,
+    "fat": 6,
+    "fiber": 2,
+    "image": "/images/dishes/cheese-arepa-fingers.jpg"
+  },
+  {
+    "id": 9068,
+    "name": "Mild Chicken & Pumpkin Stew",
+    "country": "Brazil",
+    "region": "South America",
+    "emoji": "🎃",
+    "cal": 200,
+    "budget": 2,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "dairy-free",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "dinner",
+      "toddler-friendly",
+      "little-picky",
+      "hidden-veggies"
+    ],
+    "desc": "Brazilian-style stew where pumpkin melts into a sweet, mild sauce. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Chicken thigh",
+      "Pumpkin",
+      "Onion",
+      "Tomato"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or turkey",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ]
+    },
+    "protein": 15,
+    "carbs": 14,
+    "fat": 8,
+    "fiber": 3,
+    "image": "/images/dishes/mild-chicken-and-pumpkin-stew.jpg"
+  },
+  {
+    "id": 9069,
+    "name": "Avocado Toast Fingers",
+    "country": "Australia",
+    "region": "Oceania",
+    "emoji": "🥑",
+    "cal": 170,
+    "budget": 2,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegan",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "snack",
+      "toddler-friendly",
+      "very-picky"
+    ],
+    "desc": "Lightly toasted bread fingers with creamy mashed avocado. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Wholemeal bread",
+      "Ripe avocado",
+      "Lemon juice (a few drops)"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread or flour",
+          "to": "Gluten-free pasta, bread or flour",
+          "note": "Cook GF pasta until extra soft"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 16,
+    "fat": 10,
+    "fiber": 5,
+    "image": "/images/dishes/avocado-toast-fingers.jpg"
+  },
+  {
+    "id": 9070,
+    "name": "Mild Japchae Noodles",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🍜",
+    "cal": 230,
+    "budget": 3,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "dairy-free",
+      "gluten-free",
+      "sesame",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "dinner",
+      "toddler-friendly",
+      "adventurous"
+    ],
+    "desc": "Korea's glossy noodles, made mild and cut short for toddlers. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Sweet potato glass noodles",
+      "Lean beef",
+      "Spinach",
+      "Carrot",
+      "Sesame oil (a few drops)"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or turkey",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ],
+      "sesame": [
+        {
+          "from": "Sesame / tahini",
+          "to": "Olive oil",
+          "note": "Sesame-free, still tasty"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 34,
+    "fat": 6,
+    "fiber": 2,
+    "image": "/images/dishes/mild-japchae-noodles.jpg"
+  },
+  {
+    "id": 9071,
+    "name": "Red Lentil Soup",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "🥣",
+    "cal": 170,
+    "budget": 1,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegan",
+      "dairy-free",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "picky",
+      "hidden-veggies",
+      "sensory-friendly"
+    ],
+    "desc": "Turkey's velvety mercimek soup: smooth, gentle and full of plant protein. Toddler tip: cut into small, soft pieces; little or no added salt. Sensory tip: one steady texture; serve it the same way each time.",
+    "ingredients": [
+      "Red lentils",
+      "Carrot",
+      "Onion",
+      "Potato",
+      "Cumin (a pinch)"
+    ],
+    "swaps": {},
+    "protein": 9,
+    "carbs": 26,
+    "fat": 2,
+    "fiber": 6,
+    "image": "/images/dishes/red-lentil-soup.jpg"
+  },
+  {
+    "id": 9072,
+    "name": "Mango Coconut Chia Pudding",
+    "country": "Philippines",
+    "region": "Asia",
+    "emoji": "🥭",
+    "cal": 180,
+    "budget": 2,
+    "time": "10 min (+ 2 h chill)",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegan",
+      "dairy-free",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "snack",
+      "toddler-friendly",
+      "picky",
+      "sensory-friendly"
+    ],
+    "desc": "Creamy pudding that sets overnight, sweetened only with mango. Toddler tip: cut into small, soft pieces; little or no added salt. Sensory tip: one steady texture; serve it the same way each time.",
+    "ingredients": [
+      "Chia seeds",
+      "Coconut milk",
+      "Ripe mango"
+    ],
+    "swaps": {},
+    "protein": 4,
+    "carbs": 18,
+    "fat": 11,
+    "fiber": 7,
+    "image": "/images/dishes/mango-coconut-chia-pudding.jpg"
+  },
+  {
+    "id": 9073,
+    "name": "Cheesy Mamaliga",
+    "country": "Romania",
+    "region": "Europe",
+    "emoji": "🌽",
+    "cal": 200,
+    "budget": 1,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "dinner",
+      "toddler-friendly",
+      "very-picky",
+      "sensory-friendly"
+    ],
+    "desc": "Romanian soft polenta, creamy and smooth with melted cheese. Toddler tip: cut into small, soft pieces; little or no added salt. Sensory tip: one steady texture; serve it the same way each time.",
+    "ingredients": [
+      "Fine cornmeal",
+      "Whole milk",
+      "Mild cheese"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Milk, cheese or yogurt",
+          "to": "Unsweetened fortified soy or oat alternative",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 26,
+    "fat": 7,
+    "fiber": 2,
+    "image": "/images/dishes/cheesy-mamaliga.jpg"
+  },
+  {
+    "id": 9074,
+    "name": "Mild Rice & Peas with Chicken",
+    "country": "Jamaica",
+    "region": "Americas",
+    "emoji": "🍗",
+    "cal": 250,
+    "budget": 2,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "dairy-free",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "no-vegetables",
+      "dinner",
+      "toddler-friendly",
+      "little-picky"
+    ],
+    "desc": "Jamaica's Sunday classic, with no scotch bonnet. Shred chicken finely. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Rice",
+      "Kidney beans",
+      "Coconut milk",
+      "Chicken thigh",
+      "Thyme"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or turkey",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ]
+    },
+    "protein": 16,
+    "carbs": 32,
+    "fat": 8,
+    "fiber": 5,
+    "image": "/images/dishes/mild-rice-and-peas-with-chicken.jpg"
+  },
+  {
+    "id": 9075,
+    "name": "Apple Oat Muffins",
+    "country": "Germany",
+    "region": "Europe",
+    "emoji": "🧁",
+    "cal": 170,
+    "budget": 1,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "snack",
+      "toddler-friendly",
+      "very-picky",
+      "lunchbox"
+    ],
+    "desc": "Soft muffins sweetened with apple, no added sugar. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Rolled oats",
+      "Flour",
+      "Grated apple",
+      "Egg",
+      "Whole milk",
+      "Cinnamon"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Milk, cheese or yogurt",
+          "to": "Unsweetened fortified soy or oat alternative",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread or flour",
+          "to": "Gluten-free pasta, bread or flour",
+          "note": "Cook GF pasta until extra soft"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 26,
+    "fat": 5,
+    "fiber": 3,
+    "image": "/images/dishes/apple-oat-muffins.jpg"
+  },
+  {
+    "id": 9076,
+    "name": "Baked Tofu Veggie Nuggets",
+    "country": "Malaysia",
+    "region": "Asia",
+    "emoji": "🍥",
+    "cal": 160,
+    "budget": 2,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegan",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "soy",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "snack",
+      "dinner",
+      "toddler-friendly",
+      "picky",
+      "hidden-veggies",
+      "lunchbox"
+    ],
+    "desc": "Crispy outside, soft inside, with zucchini hidden in. Contains soy. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Firm tofu",
+      "Breadcrumbs",
+      "Grated zucchini",
+      "Flour"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread or flour",
+          "to": "Gluten-free pasta, bread or flour",
+          "note": "Cook GF pasta until extra soft"
+        }
+      ]
+    },
+    "protein": 10,
+    "carbs": 14,
+    "fat": 7,
+    "fiber": 2,
+    "image": "/images/dishes/baked-tofu-veggie-nuggets.jpg"
+  },
+  {
+    "id": 9077,
+    "name": "Pumpkin Hotcakes",
+    "country": "New Zealand",
+    "region": "Oceania",
+    "emoji": "🥞",
+    "cal": 180,
+    "budget": 1,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "breakfast",
+      "toddler-friendly",
+      "picky",
+      "hidden-veggies",
+      "lunchbox"
+    ],
+    "desc": "Fluffy orange pancakes with pumpkin mixed in. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Flour",
+      "Pumpkin purée",
+      "Egg",
+      "Whole milk"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Milk, cheese or yogurt",
+          "to": "Unsweetened fortified soy or oat alternative",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread or flour",
+          "to": "Gluten-free pasta, bread or flour",
+          "note": "Cook GF pasta until extra soft"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 26,
+    "fat": 5,
+    "fiber": 2,
+    "image": "/images/dishes/pumpkin-hotcakes.jpg"
+  },
+  {
+    "id": 9078,
+    "name": "Mild Shakshuka with Bread",
+    "country": "Tunisia",
+    "region": "Africa",
+    "emoji": "🍳",
+    "cal": 210,
+    "budget": 2,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-dairy",
+      "no-mushrooms",
+      "breakfast",
+      "dinner",
+      "toddler-friendly",
+      "adventurous"
+    ],
+    "desc": "Eggs cooked all the way through in a mild tomato-pepper sauce, with bread to dip. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Eggs",
+      "Tomatoes",
+      "Red bell pepper",
+      "Onion",
+      "Bread"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread or flour",
+          "to": "Gluten-free pasta, bread or flour",
+          "note": "Cook GF pasta until extra soft"
+        }
+      ]
+    },
+    "protein": 11,
+    "carbs": 20,
+    "fat": 9,
+    "fiber": 3,
+    "image": "/images/dishes/mild-shakshuka-with-bread.jpg"
+  },
+  {
+    "id": 9079,
+    "name": "Arroz con Leche",
+    "country": "Spain",
+    "region": "Europe",
+    "emoji": "🍮",
+    "cal": 190,
+    "budget": 1,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "snack",
+      "toddler-friendly",
+      "very-picky",
+      "sensory-friendly"
+    ],
+    "desc": "Creamy rice pudding sweetened with banana instead of sugar. Toddler tip: cut into small, soft pieces; little or no added salt. Sensory tip: one steady texture; serve it the same way each time.",
+    "ingredients": [
+      "White rice",
+      "Whole milk",
+      "Cinnamon stick (removed)",
+      "Ripe banana"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Milk, cheese or yogurt",
+          "to": "Unsweetened fortified soy or oat alternative",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 32,
+    "fat": 4,
+    "fiber": 1,
+    "image": "/images/dishes/arroz-con-leche.jpg"
+  },
+  {
+    "id": 9080,
+    "name": "Salmon & Pea Pasta",
+    "country": "Denmark",
+    "region": "Europe",
+    "emoji": "🐟",
+    "cal": 240,
+    "budget": 3,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "fish",
+      "no-meat",
+      "no-eggs",
+      "no-mushrooms",
+      "dinner",
+      "toddler-friendly",
+      "picky"
+    ],
+    "desc": "Soft pasta with flaked salmon and peas in a creamy sauce. Check carefully for bones. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Small pasta",
+      "Salmon fillet",
+      "Peas",
+      "Cream cheese"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Fish",
+          "to": "Mashed chickpeas or tofu",
+          "note": "Same soft texture, plant protein"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk, cheese or yogurt",
+          "to": "Unsweetened fortified soy or oat alternative",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread or flour",
+          "to": "Gluten-free pasta, bread or flour",
+          "note": "Cook GF pasta until extra soft"
+        }
+      ]
+    },
+    "protein": 15,
+    "carbs": 28,
+    "fat": 9,
+    "fiber": 3,
+    "image": "/images/dishes/salmon-and-pea-pasta.jpg"
   }
+]
 ];
