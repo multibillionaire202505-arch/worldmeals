@@ -486,7 +486,7 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 }
 @media(max-width:420px){
   .filter-row{
-    grid-template-columns:1fr !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
   }
   .slider-row{
     grid-template-columns:1fr !important;
@@ -5440,16 +5440,12 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 .mixer-fader::-webkit-slider-thumb{box-shadow:0 13px 18px rgba(31,26,20,.38),0 5px 6px rgba(31,26,20,.22),inset 0 3px 2px rgba(255,255,255,.28),inset 0 -3px 4px rgba(0,0,0,.28) !important}
 .mixer-fader::-moz-range-track{box-shadow:inset 0 5px 8px rgba(83,55,29,.34),0 2px 1px rgba(255,255,255,.95) !important}
 .mixer-fader::-moz-range-thumb{box-shadow:0 13px 18px rgba(31,26,20,.38),0 5px 6px rgba(31,26,20,.22),inset 0 3px 2px rgba(255,255,255,.28),inset 0 -3px 4px rgba(0,0,0,.28) !important}
-
-/* WORLDMEALS MIXER VALUE PILLS — raised above the mixer surface */
-.mixer-pill{
-  position:relative;
-  z-index:4;
-  color:#7A4316 !important;
-  background:linear-gradient(180deg,#FFFDF7 0%,#FFF0D7 68%,#F4D6AC 100%) !important;
-  border:1px solid rgba(255,255,255,.98) !important;
-  box-shadow:0 10px 14px rgba(120,70,20,.22),0 4px 5px rgba(120,70,20,.12),inset 0 2px 1px rgba(255,255,255,1),inset 0 -3px 4px rgba(120,70,20,.10) !important;
-  transform:translateY(-3px);
+/* PHONE: two compact filter boxes per row */
+@media(max-width:420px){
+  .filter-group{padding:10px 10px 8px 38px !important;min-height:64px;}
+  .filter-group::before{left:11px;font-size:18px !important;}
+  .filter-group::after{right:9px;font-size:15px;}
+  .filter-group select{font-size:13px !important;padding-right:16px !important;text-overflow:ellipsis;}
 }
 </style>
 </body>
