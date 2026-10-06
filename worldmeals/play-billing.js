@@ -97,6 +97,33 @@
 
     var busy = false;
 
+    // Decide deliberately which current subscription a new plan replaces.
+    // Only purchases the server confirms as ACTIVE count. Chef -> Passport replaces the active
+    // Chef plan (Passport -> Chef replaces Passport); a period change (monthly -> annual) replaces
+    // the same tier. Several candidates: the one paid up the longest. Returns null for a new
+    // subscriber. Throws if the current plans can't be checked, so we never risk a double charge.
+    async function pickSubscriptionToReplace(productId) {
+      var owned;
+      try { owned = (await service.listPurchases()).filter(function (p) { return PLANS[p.itemId]; }); }
+      catch (e) { throw new Error('Could not check your current Google Play plan. Please try again.'); }
+      if (!owned.length) return null;
+      var active = [];
+      for (var i = 0; i < owned.length; i++) {
+        var r;
+        try { r = await verify(owned[i].itemId, owned[i].purchaseToken); }
+        catch (e) { throw new Error('Could not check your current Google Play plan. Please try again.'); }
+        if (r && r.active) active.push({ itemId: owned[i].itemId, purchaseToken: owned[i].purchaseToken, plan: PLANS[owned[i].itemId], expiry: Date.parse(r.expiryTime || '') || 0 });
+      }
+      if (!active.length) return null;
+      var same = active.filter(function (p) { return p.itemId === productId; });
+      if (same.length) return same[0];
+      var target = PLANS[productId];
+      var otherTier = active.filter(function (p) { return p.plan !== target; });
+      var pool = otherTier.length ? otherTier : active;
+      pool.sort(function (a, b) { return b.expiry - a.expiry; });
+      return pool[0];
+    }
+
     // Called by index.html's plan buttons (only when there is no Apple bridge).
     async function purchase(productId) {
       if (busy) return;
@@ -105,8 +132,25 @@
       emit({ status: 'loading', productId: productId });
       var response = null;
       try {
+        // Switching plans (e.g. Chef -> Passport): ask Google Play to REPLACE the current
+        // WorldMeals subscription instead of starting a second one, so nobody pays twice.
+        var data = { sku: productId };
+        var old = await pickSubscriptionToReplace(productId);
+        if (old && old.itemId === productId) {
+          busy = false;
+          await refreshEntitlements();
+          emit({ status: 'error', message: 'You already have this plan on Google Play.' });
+          return;
+        }
+        if (old) {
+          data.oldSku = old.itemId;
+          data.purchaseToken = old.purchaseToken;
+          // Works for upgrades and downgrades: the switch happens now and Google credits
+          // the unused time of the old plan.
+          data.prorationMode = 'immediateWithTimeProration';
+        }
         var request = new PaymentRequest(
-          [{ supportedMethods: PLAY_BILLING, data: { sku: productId } }],
+          [{ supportedMethods: PLAY_BILLING, data: data }],
           { total: { label: 'Total', amount: { currency: 'USD', value: '0' } } }
         );
         response = await request.show();
