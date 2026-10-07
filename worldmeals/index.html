@@ -3977,6 +3977,34 @@ if ('serviceWorker' in navigator) {
 })();
 </script>
 
+<!-- Upgrade buttons open index.html#pricing: land exactly on the plans, even while images are still loading -->
+<script>
+(function () {
+  if (window.location.hash !== '#pricing') return;
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  var userMoved = false;
+  ['touchstart', 'wheel', 'keydown'].forEach(function (ev) {
+    window.addEventListener(ev, function () { userMoved = true; }, { once: true, passive: true });
+  });
+  function goToPricing() {
+    if (userMoved) return;
+    var el = document.getElementById('pricing');
+    if (!el) return;
+    el.classList.add('is-visible');
+    var nav = document.querySelector('nav');
+    var offset = (nav ? nav.offsetHeight : 0) + 8;
+    var top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: top, behavior: 'instant' });
+  }
+  goToPricing();
+  window.addEventListener('load', function () {
+    goToPricing();
+    setTimeout(goToPricing, 400);
+    setTimeout(goToPricing, 1200);
+  });
+})();
+</script>
+
 <!-- Google Play Billing (Android app only; does nothing on iPhone or the website) -->
 <script src="/play-billing.js" defer></script>
 </body>
