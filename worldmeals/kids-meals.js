@@ -8282,5 +8282,2196 @@ window.WORLD_KIDS_MEALS = [
     "fat": 6,
     "fiber": 4,
     "image": "/images/dishes/Kids/banana-cocoa-oat-muffins.jpg"
+  },
+  {
+    "id": 9161,
+    "name": "Homemade Pizza from Scratch",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "🍕",
+    "cal": 480,
+    "budget": 2,
+    "time": "60 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "dinner",
+      "picky",
+      "cook-together"
+    ],
+    "desc": "Kids knead the dough, stretch it and choose their toppings. A great first real recipe. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Pizza dough (flour, yeast, olive oil)",
+      "Tomato sauce",
+      "Mozzarella",
+      "Bell pepper",
+      "Sweetcorn"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cheese",
+          "to": "Dairy-free cheese",
+          "note": "Melts the same way"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread, flour or wraps",
+          "to": "Gluten-free versions",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 20,
+    "carbs": 62,
+    "fat": 16,
+    "fiber": 4,
+    "image": "/images/dishes/Kids/homemade-pizza-from-scratch.jpg"
+  },
+  {
+    "id": 9162,
+    "name": "Chicken Fajita Bowls",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🌯",
+    "cal": 460,
+    "budget": 3,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "dinner",
+      "little-picky",
+      "lunchbox",
+      "cook-together"
+    ],
+    "desc": "Sizzling peppers and chicken over rice and beans. Toppings go on the side. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Chicken breast",
+      "Bell peppers",
+      "Onion",
+      "Rice",
+      "Black beans",
+      "Mild fajita spices"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or pork",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ]
+    },
+    "protein": 32,
+    "carbs": 52,
+    "fat": 12,
+    "fiber": 8,
+    "image": "/images/dishes/Kids/chicken-fajita-bowls.jpg"
+  },
+  {
+    "id": 9163,
+    "name": "Teriyaki Salmon with Rice",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🐟",
+    "cal": 470,
+    "budget": 3,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "fish",
+      "sesame",
+      "soy",
+      "no-meat",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "dinner",
+      "little-picky"
+    ],
+    "desc": "Sticky, glossy salmon that wins over kids who say they don't like fish. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Salmon fillet",
+      "Low-sodium teriyaki sauce",
+      "Rice",
+      "Broccoli",
+      "Sesame seeds"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Fish",
+          "to": "Firm tofu or chickpeas",
+          "note": "Same mild flavor, plant protein"
+        }
+      ],
+      "soy": [
+        {
+          "from": "Soy sauce",
+          "to": "Coconut aminos",
+          "note": "Gluten- and soy-free, similar flavor"
+        }
+      ],
+      "sesame": [
+        {
+          "from": "Sesame oil / tahini",
+          "to": "Olive oil",
+          "note": "Sesame-free, still tasty"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 50,
+    "fat": 14,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/teriyaki-salmon-with-rice.jpg"
+  },
+  {
+    "id": 9164,
+    "name": "Vegetable Egg Fried Rice",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🍚",
+    "cal": 400,
+    "budget": 1,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "soy",
+      "no-meat",
+      "no-fish",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "picky",
+      "hidden-veggies",
+      "lunchbox",
+      "cook-together"
+    ],
+    "desc": "A fast, budget-friendly dinner. Kids can scramble the egg and toss the rice. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Day-old rice",
+      "Eggs",
+      "Peas",
+      "Carrot",
+      "Spring onion",
+      "Low-sodium soy sauce"
+    ],
+    "swaps": {
+      "soy": [
+        {
+          "from": "Soy sauce",
+          "to": "Coconut aminos",
+          "note": "Gluten- and soy-free, similar flavor"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 60,
+    "fat": 10,
+    "fiber": 4,
+    "image": "/images/dishes/Kids/vegetable-egg-fried-rice.jpg"
+  },
+  {
+    "id": 9165,
+    "name": "Huevos Rancheros",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🍳",
+    "cal": 420,
+    "budget": 2,
+    "time": "25 min",
+    "spice": 1,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "breakfast",
+      "adventurous",
+      "cook-together"
+    ],
+    "desc": "Mexico's ranch-style breakfast: fried eggs on tortillas with beans and mild salsa. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Corn tortillas",
+      "Eggs",
+      "Refried beans",
+      "Mild tomato salsa",
+      "Avocado",
+      "Mild cheese"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cheese",
+          "to": "Dairy-free cheese",
+          "note": "Melts the same way"
+        }
+      ]
+    },
+    "protein": 20,
+    "carbs": 40,
+    "fat": 20,
+    "fiber": 9,
+    "image": "/images/dishes/Kids/huevos-rancheros.jpg"
+  },
+  {
+    "id": 9166,
+    "name": "Mild Pad See Ew",
+    "country": "Thailand",
+    "region": "Asia",
+    "emoji": "🍜",
+    "cal": 480,
+    "budget": 2,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "soy",
+      "no-fish",
+      "no-dairy",
+      "no-mushrooms",
+      "dinner",
+      "little-picky"
+    ],
+    "desc": "Thailand's sweet, smoky stir-fried noodles with no chili at all. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Wide rice noodles",
+      "Chicken breast",
+      "Chinese broccoli",
+      "Egg",
+      "Sweet soy sauce"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or pork",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ],
+      "soy": [
+        {
+          "from": "Soy sauce",
+          "to": "Coconut aminos",
+          "note": "Gluten- and soy-free, similar flavor"
+        }
+      ]
+    },
+    "protein": 26,
+    "carbs": 62,
+    "fat": 12,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/mild-pad-see-ew.jpg"
+  },
+  {
+    "id": 9167,
+    "name": "Beef & Broccoli Stir-Fry",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🥦",
+    "cal": 450,
+    "budget": 3,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "soy",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "dinner",
+      "little-picky",
+      "lunchbox"
+    ],
+    "desc": "Tender beef and bright broccoli in a glossy sauce, faster than takeout. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Thinly sliced beef",
+      "Broccoli",
+      "Garlic",
+      "Low-sodium soy sauce",
+      "Rice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or pork",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ],
+      "soy": [
+        {
+          "from": "Soy sauce",
+          "to": "Coconut aminos",
+          "note": "Gluten- and soy-free, similar flavor"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 48,
+    "fat": 14,
+    "fiber": 4,
+    "image": "/images/dishes/Kids/beef-and-broccoli-stir-fry.jpg"
+  },
+  {
+    "id": 9168,
+    "name": "Mild Butter Chicken",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍛",
+    "cal": 500,
+    "budget": 3,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "dinner",
+      "picky",
+      "hidden-veggies"
+    ],
+    "desc": "Creamy, gentle tomato curry: often the dish that gets kids into Indian food. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Chicken thigh",
+      "Tomato purée",
+      "Butter",
+      "Cream",
+      "Garam masala (mild)",
+      "Rice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or pork",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Same richness, dairy-free"
+        },
+        {
+          "from": "Milk, cheese or yogurt",
+          "to": "Unsweetened fortified soy or oat alternative",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 50,
+    "fat": 20,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/mild-butter-chicken.jpg"
+  },
+  {
+    "id": 9169,
+    "name": "Chickpea & Spinach Curry",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🥘",
+    "cal": 380,
+    "budget": 1,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegan",
+      "dairy-free",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "adventurous",
+      "hidden-veggies"
+    ],
+    "desc": "A plant-based curry that's creamy, mild and ready in half an hour. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Chickpeas",
+      "Baby spinach",
+      "Tomatoes",
+      "Coconut milk",
+      "Mild curry powder",
+      "Rice"
+    ],
+    "swaps": {},
+    "protein": 14,
+    "carbs": 56,
+    "fat": 12,
+    "fiber": 11,
+    "image": "/images/dishes/Kids/chickpea-and-spinach-curry.jpg"
+  },
+  {
+    "id": 9170,
+    "name": "Mild Jollof Rice with Chicken",
+    "country": "Nigeria",
+    "region": "Africa",
+    "emoji": "🍗",
+    "cal": 480,
+    "budget": 2,
+    "time": "60 min",
+    "spice": 1,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "dinner",
+      "little-picky",
+      "hidden-veggies"
+    ],
+    "desc": "West Africa's famous party rice, made with sweet peppers instead of hot ones. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Rice",
+      "Tomatoes",
+      "Red bell pepper",
+      "Onion",
+      "Chicken drumsticks",
+      "Thyme"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or pork",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ]
+    },
+    "protein": 28,
+    "carbs": 62,
+    "fat": 12,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/mild-jollof-rice-with-chicken.jpg"
+  },
+  {
+    "id": 9171,
+    "name": "Mild Bobotie",
+    "country": "South Africa",
+    "region": "Africa",
+    "emoji": "🥧",
+    "cal": 450,
+    "budget": 2,
+    "time": "60 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "eggs",
+      "no-fish",
+      "no-mushrooms",
+      "dinner",
+      "adventurous"
+    ],
+    "desc": "South Africa's sweet-spiced baked mince with a golden egg topping. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Ground beef",
+      "Onion",
+      "Mild curry powder",
+      "Raisins",
+      "Egg",
+      "Milk",
+      "Yellow rice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or pork",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk, cheese or yogurt",
+          "to": "Unsweetened fortified soy or oat alternative",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ]
+    },
+    "protein": 28,
+    "carbs": 44,
+    "fat": 18,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/mild-bobotie.jpg"
+  },
+  {
+    "id": 9172,
+    "name": "Oven-Baked Fish & Chips",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🐟",
+    "cal": 470,
+    "budget": 2,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "fish",
+      "no-meat",
+      "no-dairy",
+      "no-mushrooms",
+      "dinner",
+      "picky",
+      "cook-together"
+    ],
+    "desc": "Crispy baked fish and chunky chips, lighter than the deep-fried kind. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "White fish fillets",
+      "Breadcrumbs",
+      "Egg",
+      "Potatoes",
+      "Peas"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Fish",
+          "to": "Firm tofu or chickpeas",
+          "note": "Same mild flavor, plant protein"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread, flour or wraps",
+          "to": "Gluten-free versions",
+          "note": "Check labels for hidden gluten"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ]
+    },
+    "protein": 28,
+    "carbs": 54,
+    "fat": 12,
+    "fiber": 6,
+    "image": "/images/dishes/Kids/oven-baked-fish-and-chips.jpg"
+  },
+  {
+    "id": 9173,
+    "name": "Chicken Caesar Wraps",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🌯",
+    "cal": 420,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-fish",
+      "no-mushrooms",
+      "lunch",
+      "little-picky",
+      "lunchbox",
+      "cook-together"
+    ],
+    "desc": "A quick lunchbox wrap kids can put together the night before. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Flour tortilla",
+      "Cooked chicken",
+      "Romaine lettuce",
+      "Parmesan",
+      "Light Caesar dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or pork",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Cheese",
+          "to": "Dairy-free cheese",
+          "note": "Melts the same way"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread, flour or wraps",
+          "to": "Gluten-free versions",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 32,
+    "fat": 16,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/chicken-caesar-wraps.jpg"
+  },
+  {
+    "id": 9174,
+    "name": "Homemade Chicken Ramen",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🍜",
+    "cal": 460,
+    "budget": 2,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "soy",
+      "no-fish",
+      "no-dairy",
+      "no-mushrooms",
+      "dinner",
+      "adventurous",
+      "cook-together"
+    ],
+    "desc": "A real bowl of ramen, made at home with less salt than the instant kind. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Ramen noodles",
+      "Low-sodium chicken broth",
+      "Chicken breast",
+      "Soft-boiled egg",
+      "Corn",
+      "Spring onion"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or pork",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread, flour or wraps",
+          "to": "Gluten-free versions",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 56,
+    "fat": 10,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/homemade-chicken-ramen.jpg"
+  },
+  {
+    "id": 9175,
+    "name": "Mild Bibimbap",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 480,
+    "budget": 2,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "gluten",
+      "eggs",
+      "sesame",
+      "soy",
+      "no-fish",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "adventurous",
+      "cook-together"
+    ],
+    "desc": "A colorful mixed rice bowl. Kids arrange the toppings and mix it all together. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Rice",
+      "Beef or tofu",
+      "Carrot",
+      "Spinach",
+      "Bean sprouts",
+      "Fried egg",
+      "Mild gochujang (optional)"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or pork",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ],
+      "sesame": [
+        {
+          "from": "Sesame oil / tahini",
+          "to": "Olive oil",
+          "note": "Sesame-free, still tasty"
+        }
+      ]
+    },
+    "protein": 26,
+    "carbs": 60,
+    "fat": 14,
+    "fiber": 5,
+    "image": "/images/dishes/Kids/mild-bibimbap.jpg"
+  },
+  {
+    "id": 9176,
+    "name": "Chicken & Vegetable Paella",
+    "country": "Spain",
+    "region": "Europe",
+    "emoji": "🥘",
+    "cal": 470,
+    "budget": 3,
+    "time": "50 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "dinner",
+      "little-picky",
+      "cook-together"
+    ],
+    "desc": "A family-style Spanish rice pan, made kid-friendly with chicken and veg. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Paella rice",
+      "Chicken thigh",
+      "Green beans",
+      "Red bell pepper",
+      "Peas",
+      "Saffron (a pinch)"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or pork",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ]
+    },
+    "protein": 28,
+    "carbs": 60,
+    "fat": 12,
+    "fiber": 4,
+    "image": "/images/dishes/Kids/chicken-and-vegetable-paella.jpg"
+  },
+  {
+    "id": 9177,
+    "name": "Mild Black Bean Feijoada",
+    "country": "Brazil",
+    "region": "South America",
+    "emoji": "🫘",
+    "cal": 480,
+    "budget": 2,
+    "time": "90 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "dinner",
+      "adventurous"
+    ],
+    "desc": "Brazil's hearty black bean stew, slow-cooked and served with rice and orange. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Black beans",
+      "Smoked sausage",
+      "Pork shoulder",
+      "Onion",
+      "Rice",
+      "Orange slices"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or pork",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 54,
+    "fat": 16,
+    "fiber": 13,
+    "image": "/images/dishes/Kids/mild-black-bean-feijoada.jpg"
+  },
+  {
+    "id": 9178,
+    "name": "Pão de Queijo Cheese Bread",
+    "country": "Brazil",
+    "region": "South America",
+    "emoji": "🧀",
+    "cal": 220,
+    "budget": 2,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "breakfast",
+      "very-picky",
+      "sensory-friendly",
+      "lunchbox",
+      "cook-together"
+    ],
+    "desc": "Chewy Brazilian cheese puffs. Naturally gluten-free and fun to roll. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby. Sensory tip: one steady texture; serve it the same way each time.",
+    "ingredients": [
+      "Tapioca flour",
+      "Milk",
+      "Egg",
+      "Parmesan",
+      "Olive oil"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cheese",
+          "to": "Dairy-free cheese",
+          "note": "Melts the same way"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 26,
+    "fat": 10,
+    "fiber": 0,
+    "image": "/images/dishes/Kids/pao-de-queijo-cheese-bread.jpg"
+  },
+  {
+    "id": 9179,
+    "name": "Potato & Cheese Börek Rolls",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "🥐",
+    "cal": 360,
+    "budget": 1,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "lunch",
+      "snack",
+      "picky",
+      "lunchbox",
+      "cook-together"
+    ],
+    "desc": "Crispy Turkish pastry rolls with a soft cheesy potato filling. Kids roll them up. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Filo or yufka pastry",
+      "Potato",
+      "White cheese",
+      "Egg",
+      "Parsley"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cheese",
+          "to": "Dairy-free cheese",
+          "note": "Melts the same way"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread, flour or wraps",
+          "to": "Gluten-free versions",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 40,
+    "fat": 16,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/potato-and-cheese-borek-rolls.jpg"
+  },
+  {
+    "id": 9180,
+    "name": "Spinach & Feta Spanakopita Triangles",
+    "country": "Greece",
+    "region": "Mediterranean",
+    "emoji": "🥬",
+    "cal": 320,
+    "budget": 2,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "lunch",
+      "snack",
+      "little-picky",
+      "hidden-veggies",
+      "lunchbox",
+      "cook-together"
+    ],
+    "desc": "Flaky triangles with spinach hidden inside. Kids brush and fold the filo. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Filo pastry",
+      "Spinach",
+      "Feta",
+      "Egg",
+      "Olive oil"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cheese",
+          "to": "Dairy-free cheese",
+          "note": "Melts the same way"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread, flour or wraps",
+          "to": "Gluten-free versions",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 26,
+    "fat": 18,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/spinach-and-feta-spanakopita-triangles.jpg"
+  },
+  {
+    "id": 9181,
+    "name": "Za'atar Manakish Flatbread",
+    "country": "Lebanon",
+    "region": "Middle East",
+    "emoji": "🫓",
+    "cal": 340,
+    "budget": 1,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegan",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "sesame",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "snack",
+      "adventurous",
+      "cook-together"
+    ],
+    "desc": "Lebanon's breakfast flatbread with a herby topping. Kids spread and bake. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Flatbread dough",
+      "Za'atar (thyme and sesame)",
+      "Olive oil",
+      "Labneh or cheese (optional)"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread, flour or wraps",
+          "to": "Gluten-free versions",
+          "note": "Check labels for hidden gluten"
+        }
+      ],
+      "sesame": [
+        {
+          "from": "Sesame oil / tahini",
+          "to": "Olive oil",
+          "note": "Sesame-free, still tasty"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 44,
+    "fat": 14,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/zaatar-manakish-flatbread.jpg"
+  },
+  {
+    "id": 9182,
+    "name": "Vegetable Couscous with Chickpeas",
+    "country": "Algeria",
+    "region": "Africa",
+    "emoji": "🍲",
+    "cal": 390,
+    "budget": 1,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegan",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "adventurous",
+      "hidden-veggies"
+    ],
+    "desc": "Fluffy couscous with a gently spiced vegetable stew poured over the top. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Couscous",
+      "Chickpeas",
+      "Carrot",
+      "Zucchini",
+      "Pumpkin",
+      "Cinnamon"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread, flour or wraps",
+          "to": "Gluten-free versions",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 66,
+    "fat": 6,
+    "fiber": 10,
+    "image": "/images/dishes/Kids/vegetable-couscous-with-chickpeas.jpg"
+  },
+  {
+    "id": 9183,
+    "name": "Mild Misir Wot with Injera",
+    "country": "Ethiopia",
+    "region": "Africa",
+    "emoji": "🍛",
+    "cal": 380,
+    "budget": 1,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegan",
+      "dairy-free",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "dinner",
+      "adventurous"
+    ],
+    "desc": "Ethiopia's red lentil stew made gentle. Eat it the traditional way, with your hands. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Red lentils",
+      "Onion",
+      "Tomato",
+      "Mild berbere spice",
+      "Injera or flatbread"
+    ],
+    "swaps": {},
+    "protein": 16,
+    "carbs": 58,
+    "fat": 6,
+    "fiber": 12,
+    "image": "/images/dishes/Kids/mild-misir-wot-with-injera.jpg"
+  },
+  {
+    "id": 9184,
+    "name": "Kenyan Chicken Pilau",
+    "country": "Kenya",
+    "region": "Africa",
+    "emoji": "🍚",
+    "cal": 470,
+    "budget": 2,
+    "time": "50 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "dinner",
+      "little-picky"
+    ],
+    "desc": "Fragrant spiced rice cooked with chicken, a Kenyan celebration dish. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Rice",
+      "Chicken thigh",
+      "Onion",
+      "Pilau spices (cumin, cardamom, cinnamon)",
+      "Potato"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or pork",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ]
+    },
+    "protein": 28,
+    "carbs": 62,
+    "fat": 12,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/kenyan-chicken-pilau.jpg"
+  },
+  {
+    "id": 9185,
+    "name": "Swedish Meatballs with Mash",
+    "country": "Sweden",
+    "region": "Europe",
+    "emoji": "🧆",
+    "cal": 500,
+    "budget": 2,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "dinner",
+      "picky",
+      "sensory-friendly",
+      "cook-together"
+    ],
+    "desc": "Little meatballs in creamy gravy with mash. Kids roll the meatballs. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby. Sensory tip: one steady texture; serve it the same way each time.",
+    "ingredients": [
+      "Ground beef and pork",
+      "Breadcrumbs",
+      "Egg",
+      "Potatoes",
+      "Cream gravy",
+      "Lingonberry jam"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or pork",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk, cheese or yogurt",
+          "to": "Unsweetened fortified soy or oat alternative",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread, flour or wraps",
+          "to": "Gluten-free versions",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 28,
+    "carbs": 46,
+    "fat": 22,
+    "fiber": 4,
+    "image": "/images/dishes/Kids/swedish-meatballs-with-mash.jpg"
+  },
+  {
+    "id": 9186,
+    "name": "Classic French Crêpes",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🥞",
+    "cal": 300,
+    "budget": 1,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "very-picky",
+      "cook-together"
+    ],
+    "desc": "Thin crêpes kids learn to flip. Fill with fruit, yogurt or a little chocolate spread. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Flour",
+      "Eggs",
+      "Milk",
+      "Butter",
+      "Banana or berries"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Milk, cheese or yogurt",
+          "to": "Unsweetened fortified soy or oat alternative",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread, flour or wraps",
+          "to": "Gluten-free versions",
+          "note": "Check labels for hidden gluten"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ]
+    },
+    "protein": 10,
+    "carbs": 40,
+    "fat": 10,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/classic-french-crepes.jpg"
+  },
+  {
+    "id": 9187,
+    "name": "Croque Monsieur",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🥪",
+    "cal": 440,
+    "budget": 2,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "lunch",
+      "picky",
+      "cook-together"
+    ],
+    "desc": "France's famous toasted ham and cheese sandwich, with a creamy topping. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Bread",
+      "Ham",
+      "Gruyère",
+      "Milk",
+      "Butter",
+      "Flour"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cheese",
+          "to": "Dairy-free cheese",
+          "note": "Melts the same way"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread, flour or wraps",
+          "to": "Gluten-free versions",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 24,
+    "carbs": 34,
+    "fat": 22,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/croque-monsieur.jpg"
+  },
+  {
+    "id": 9188,
+    "name": "Kaiserschmarrn",
+    "country": "Austria",
+    "region": "Europe",
+    "emoji": "🥞",
+    "cal": 380,
+    "budget": 1,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "picky",
+      "cook-together"
+    ],
+    "desc": "Austria's fluffy torn pancake, served with applesauce. Messy and fun. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Flour",
+      "Eggs",
+      "Milk",
+      "Raisins",
+      "Applesauce"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Milk, cheese or yogurt",
+          "to": "Unsweetened fortified soy or oat alternative",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread, flour or wraps",
+          "to": "Gluten-free versions",
+          "note": "Check labels for hidden gluten"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ]
+    },
+    "protein": 13,
+    "carbs": 52,
+    "fat": 12,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/kaiserschmarrn.jpg"
+  },
+  {
+    "id": 9189,
+    "name": "Syrniki Cottage Cheese Pancakes",
+    "country": "Ukraine",
+    "region": "Europe",
+    "emoji": "🥞",
+    "cal": 320,
+    "budget": 1,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "dairy",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "picky",
+      "cook-together"
+    ],
+    "desc": "Golden little pancakes made from cottage cheese: high in protein and lightly sweet. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Cottage cheese",
+      "Egg",
+      "Flour",
+      "Vanilla",
+      "Sour cream or berries"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread, flour or wraps",
+          "to": "Gluten-free versions",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 18,
+    "carbs": 30,
+    "fat": 12,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/syrniki-cottage-cheese-pancakes.jpg"
+  },
+  {
+    "id": 9190,
+    "name": "Overnight Oats Jars",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🫙",
+    "cal": 320,
+    "budget": 1,
+    "time": "5 min (+ overnight)",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "picky",
+      "lunchbox",
+      "cook-together"
+    ],
+    "desc": "Kids prep their own breakfast jars before bed, so mornings are easy. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Rolled oats",
+      "Milk",
+      "Plain yogurt",
+      "Chia seeds",
+      "Berries"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Milk, cheese or yogurt",
+          "to": "Unsweetened fortified soy or oat alternative",
+          "note": "Pick plain, no-sugar versions"
+        },
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Choose a fortified, no-sugar one"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Oats",
+          "to": "Certified gluten-free oats",
+          "note": "Same texture"
+        }
+      ]
+    },
+    "protein": 13,
+    "carbs": 44,
+    "fat": 9,
+    "fiber": 7,
+    "image": "/images/dishes/Kids/overnight-oats-jars.jpg"
+  },
+  {
+    "id": 9191,
+    "name": "Green Smoothie Bowl",
+    "country": "Australia",
+    "region": "Oceania",
+    "emoji": "🥝",
+    "cal": 280,
+    "budget": 2,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegan",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "breakfast",
+      "snack",
+      "little-picky",
+      "hidden-veggies",
+      "cook-together"
+    ],
+    "desc": "A bright green breakfast bowl. The spinach hides behind banana and mango. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Frozen banana",
+      "Baby spinach",
+      "Mango",
+      "Oat milk",
+      "Granola",
+      "Kiwi"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Oats",
+          "to": "Certified gluten-free oats",
+          "note": "Same texture"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 54,
+    "fat": 6,
+    "fiber": 7,
+    "image": "/images/dishes/Kids/green-smoothie-bowl.jpg"
+  },
+  {
+    "id": 9192,
+    "name": "Homemade Granola Bars",
+    "country": "Canada",
+    "region": "Americas",
+    "emoji": "🍫",
+    "cal": 210,
+    "budget": 1,
+    "time": "30 min (+ cooling)",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegan",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "picky",
+      "lunchbox",
+      "cook-together"
+    ],
+    "desc": "Nut-free bars kids can bake for the week's lunchboxes. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Rolled oats",
+      "Sunflower seed butter",
+      "Maple syrup",
+      "Dried cranberries",
+      "Pumpkin seeds"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Oats",
+          "to": "Certified gluten-free oats",
+          "note": "Same texture"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 28,
+    "fat": 9,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/homemade-granola-bars.jpg"
+  },
+  {
+    "id": 9193,
+    "name": "Baked Sweet Potato Fries with Yogurt Dip",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍠",
+    "cal": 260,
+    "budget": 1,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "snack",
+      "picky",
+      "sensory-friendly",
+      "lunchbox"
+    ],
+    "desc": "Crispy-edged oven fries with a cool dip. A side dish or an after-school snack. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby. Sensory tip: one steady texture; serve it the same way each time.",
+    "ingredients": [
+      "Sweet potatoes",
+      "Olive oil",
+      "Paprika (mild)",
+      "Plain yogurt",
+      "Lemon"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Choose a fortified, no-sugar one"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 40,
+    "fat": 8,
+    "fiber": 6,
+    "image": "/images/dishes/Kids/baked-sweet-potato-fries-with-yogurt-dip.jpg"
+  },
+  {
+    "id": 9194,
+    "name": "Hummus & Veggie Snack Box",
+    "country": "Jordan",
+    "region": "Middle East",
+    "emoji": "🥕",
+    "cal": 280,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegan",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "sesame",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "snack",
+      "lunch",
+      "little-picky",
+      "lunchbox",
+      "cook-together"
+    ],
+    "desc": "A build-your-own snack box for school or after sports. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Hummus",
+      "Carrot sticks",
+      "Cucumber",
+      "Bell pepper strips",
+      "Mini pita"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread, flour or wraps",
+          "to": "Gluten-free versions",
+          "note": "Check labels for hidden gluten"
+        }
+      ],
+      "sesame": [
+        {
+          "from": "Sesame oil / tahini",
+          "to": "Olive oil",
+          "note": "Sesame-free, still tasty"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 34,
+    "fat": 12,
+    "fiber": 8,
+    "image": "/images/dishes/Kids/hummus-and-veggie-snack-box.jpg"
+  },
+  {
+    "id": 9195,
+    "name": "Mild Chicken Adobo",
+    "country": "Philippines",
+    "region": "Asia",
+    "emoji": "🍗",
+    "cal": 460,
+    "budget": 2,
+    "time": "50 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "soy",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "no-vegetables",
+      "dinner",
+      "little-picky"
+    ],
+    "desc": "The Philippines' national dish: tender chicken in a tangy, savory sauce. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Chicken thigh",
+      "Low-sodium soy sauce",
+      "Vinegar",
+      "Garlic",
+      "Bay leaf",
+      "Rice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or pork",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ],
+      "soy": [
+        {
+          "from": "Soy sauce",
+          "to": "Coconut aminos",
+          "note": "Gluten- and soy-free, similar flavor"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 48,
+    "fat": 16,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/mild-chicken-adobo.jpg"
+  },
+  {
+    "id": 9196,
+    "name": "Mild Tom Kha Chicken Soup",
+    "country": "Thailand",
+    "region": "Asia",
+    "emoji": "🥥",
+    "cal": 380,
+    "budget": 2,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "lunch",
+      "dinner",
+      "adventurous"
+    ],
+    "desc": "Thailand's creamy coconut chicken soup, made mild and served with rice. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Chicken breast",
+      "Coconut milk",
+      "Low-sodium chicken broth",
+      "Lemongrass",
+      "Mushrooms",
+      "Lime",
+      "Rice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or pork",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ]
+    },
+    "protein": 26,
+    "carbs": 36,
+    "fat": 18,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/mild-tom-kha-chicken-soup.jpg"
+  },
+  {
+    "id": 9197,
+    "name": "Mild Mee Goreng",
+    "country": "Malaysia",
+    "region": "Asia",
+    "emoji": "🍝",
+    "cal": 480,
+    "budget": 2,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "soy",
+      "no-fish",
+      "no-dairy",
+      "no-mushrooms",
+      "dinner",
+      "little-picky",
+      "lunchbox"
+    ],
+    "desc": "Malaysia's sweet, savory fried noodles, made without the chili. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Yellow noodles",
+      "Chicken",
+      "Egg",
+      "Cabbage",
+      "Tomato",
+      "Sweet soy sauce"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or pork",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ],
+      "soy": [
+        {
+          "from": "Soy sauce",
+          "to": "Coconut aminos",
+          "note": "Gluten- and soy-free, similar flavor"
+        }
+      ]
+    },
+    "protein": 26,
+    "carbs": 60,
+    "fat": 14,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/mild-mee-goreng.jpg"
+  },
+  {
+    "id": 9198,
+    "name": "Chicken Satay with Peanut Sauce",
+    "country": "Indonesia",
+    "region": "Asia",
+    "emoji": "🍢",
+    "cal": 450,
+    "budget": 3,
+    "time": "35 min (+ marinating)",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "peanuts",
+      "soy",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "dinner",
+      "little-picky",
+      "cook-together"
+    ],
+    "desc": "Grilled chicken skewers with creamy peanut dipping sauce. Swap to sunflower butter for nut allergies. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Chicken thigh",
+      "Smooth peanut butter",
+      "Coconut milk",
+      "Low-sodium soy sauce",
+      "Cucumber",
+      "Rice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or pork",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Peanut butter",
+          "to": "Sunflower seed butter",
+          "note": "Nut-free and school-safe"
+        }
+      ],
+      "soy": [
+        {
+          "from": "Soy sauce",
+          "to": "Coconut aminos",
+          "note": "Gluten- and soy-free, similar flavor"
+        }
+      ]
+    },
+    "protein": 32,
+    "carbs": 40,
+    "fat": 20,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/chicken-satay-with-peanut-sauce.jpg"
+  },
+  {
+    "id": 9199,
+    "name": "Mild Curry Chicken Roti",
+    "country": "Trinidad and Tobago",
+    "region": "Americas",
+    "emoji": "🫓",
+    "cal": 500,
+    "budget": 2,
+    "time": "50 min",
+    "spice": 1,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "dinner",
+      "adventurous"
+    ],
+    "desc": "Caribbean curry chicken and potato wrapped in soft roti. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Chicken thigh",
+      "Potato",
+      "Mild curry powder",
+      "Roti flatbread"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or pork",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat pasta, bread, flour or wraps",
+          "to": "Gluten-free versions",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 52,
+    "fat": 18,
+    "fiber": 4,
+    "image": "/images/dishes/Kids/mild-curry-chicken-roti.jpg"
+  },
+  {
+    "id": 9200,
+    "name": "Pastel de Choclo",
+    "country": "Chile",
+    "region": "South America",
+    "emoji": "🌽",
+    "cal": 470,
+    "budget": 2,
+    "time": "60 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "eggs",
+      "no-fish",
+      "no-mushrooms",
+      "dinner",
+      "picky",
+      "hidden-veggies"
+    ],
+    "desc": "Chile's comforting bake: savory beef under a sweet, golden corn topping. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Ground beef",
+      "Onion",
+      "Sweetcorn",
+      "Milk",
+      "Basil",
+      "Hard-boiled egg"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken, beef or pork",
+          "to": "Chickpeas, lentils or tofu",
+          "note": "Keeps it protein- and iron-rich"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk, cheese or yogurt",
+          "to": "Unsweetened fortified soy or oat alternative",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 26,
+    "carbs": 46,
+    "fat": 20,
+    "fiber": 5,
+    "image": "/images/dishes/Kids/pastel-de-choclo.jpg"
   }
 ];
