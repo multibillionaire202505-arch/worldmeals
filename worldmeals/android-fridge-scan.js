@@ -101,7 +101,7 @@
       if (out.res.status === 403 && out.data.code === 'passport_required') out = await send(image, true);
       var res = out.res, data = out.data;
       if (!res.ok) {
-        if (data.code === 'passport_required') setStatus('Passport needed for Fridge Scan', data.error);
+        if (data.code === 'passport_required') setStatus('Passport needed for Fridge Scan', data.error + (data.reason ? ' (code: ' + data.reason + ')' : ''));
         else setStatus('Scan needs another try', (data.error || 'WorldMeals could not analyze that photo.') + ' You can also type your ingredients below.');
         return;
       }
