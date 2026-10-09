@@ -7,6 +7,8 @@
 // Needs one Vercel environment variable:
 //   GOOGLE_PLAY_SERVICE_ACCOUNT = the full JSON key of a Google Cloud service account that has been
 //   invited in Play Console (Users and permissions) with access to WorldMeals' orders/subscriptions.
+// Optional (already set in Vercel): ENTITLEMENT_SECRET = signs the "verified plan" pass the app sends
+//   to /api/chat and /api/android-scan, so paid features trust only plans this server verified.
 // Apple / StoreKit purchases are not involved here at all.
 
 export const config = { runtime: 'edge' };
@@ -30,6 +32,19 @@ const b64url = (input) => {
   for (const b of bytes) s += String.fromCharCode(b);
   return btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 };
+
+// Signed "verified plan" pass: base64url(payload).base64url(HMAC-SHA256(payload, ENTITLEMENT_SECRET)).
+// Valid for at most 24 hours (and never past the subscription's paid-up date); the app refreshes it
+// every time it opens.
+async function signEntitlement(plan, productId, expiryMs) {
+  const secret = process.env.ENTITLEMENT_SECRET;
+  if (!secret) return null;
+  const exp = Math.floor(Math.min(expiryMs, Date.now() + 24 * 3600 * 1000) / 1000);
+  const payload = b64url(JSON.stringify({ p: plan, pid: productId, src: 'play', exp }));
+  const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+  const sig = await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(payload));
+  return `${payload}.${b64url(sig)}`;
+}
 
 let cachedToken = null; // { value, expiresAt }
 
@@ -107,6 +122,7 @@ export default async function handler(req) {
 
     return json({
       active,
+      entitlement: active ? await signEntitlement(PLANS[productId], productId, expiry) : null,
       plan: active ? PLANS[productId] : 'explorer',
       productId,
       expiryTime: line.expiryTime || null,
