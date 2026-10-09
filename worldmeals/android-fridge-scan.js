@@ -25,6 +25,7 @@
     box.innerHTML = '<div class="scan-summary"><div class="scan-summary-title"></div><div class="scan-summary-sub"></div></div>';
     box.querySelector('.scan-summary-title').textContent = title;
     box.querySelector('.scan-summary-sub').textContent = sub || '';
+    if (box.scrollIntoView) box.scrollIntoView({ behavior: 'smooth', block: 'center' });   // keep the message on screen
   }
   function pending(action) {
     try {
@@ -37,6 +38,33 @@
   function appId() {
     if (window.wmDeviceId && /^dev_[A-Za-z0-9-]{16,64}$/.test(window.wmDeviceId)) return window.wmDeviceId;
     return typeof getAnonId === 'function' ? getAnonId() : '';
+  }
+
+  // The verified Google Play pass expires (at most 24 hours, and within minutes for Play test
+  // subscriptions). If it is missing or expired, ask Google Play for a fresh one before scanning.
+  function readPass() { try { return localStorage.getItem('worldmeals.subscription.entitlement') || ''; } catch (e) { return ''; } }
+  function passExpired(pass) {
+    try {
+      var data = JSON.parse(atob(pass.split('.')[0].replace(/-/g, '+').replace(/_/g, '/')));
+      return !(data.exp * 1000 > Date.now() + 30000);
+    } catch (e) { return true; }
+  }
+  async function freshPass(force) {
+    var pass = readPass();
+    if ((force || !pass || passExpired(pass)) && window.WorldMealsIAP && typeof window.WorldMealsIAP.restore === 'function') {
+      try { await window.WorldMealsIAP.restore(); } catch (e) {}
+      pass = readPass();
+    }
+    return pass;
+  }
+  async function send(image, force) {
+    var headers = { 'Content-Type': 'application/json', 'X-WM-Id': appId() };
+    var pass = await freshPass(force);
+    if (pass) headers['X-WM-Entitlement'] = pass;
+    var res = await fetch('/api/android-scan', { method: 'POST', headers: headers, body: JSON.stringify({ image: image }) });
+    var data = {};
+    try { data = await res.json(); } catch (e) {}
+    return { res: res, data: data };
   }
 
   // Shrink the photo on the phone so it uploads fast (and costs less to analyze).
@@ -68,11 +96,10 @@
       setStatus('Scanning your fridge… 🔍', 'WorldMeals is looking for ingredients in your photo. This takes a few seconds.');
       var image = await shrink(file);
       setStatus('Scanning your fridge… 🔍', 'WorldMeals is looking for ingredients in your photo. This takes a few seconds.');
-      var headers = { 'Content-Type': 'application/json', 'X-WM-Id': appId() };
-      try { var pass = localStorage.getItem('worldmeals.subscription.entitlement'); if (pass) headers['X-WM-Entitlement'] = pass; } catch (e) {}
-      var res = await fetch('/api/android-scan', { method: 'POST', headers: headers, body: JSON.stringify({ image: image }) });
-      var data = {};
-      try { data = await res.json(); } catch (e) {}
+      var out = await send(image, false);
+      // Pass refused: refresh it with Google Play once and try again.
+      if (out.res.status === 403 && out.data.code === 'passport_required') out = await send(image, true);
+      var res = out.res, data = out.data;
       if (!res.ok) {
         if (data.code === 'passport_required') setStatus('Passport needed for Fridge Scan', data.error);
         else setStatus('Scan needs another try', (data.error || 'WorldMeals could not analyze that photo.') + ' You can also type your ingredients below.');
