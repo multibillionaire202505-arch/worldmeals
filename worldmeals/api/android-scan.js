@@ -27,19 +27,23 @@ const REDIS_TOKEN = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_R
 const crypto = require("crypto");
 
 // Same signed pass as /api/chat: base64url(payload).base64url(HMAC-SHA256(payload, ENTITLEMENT_SECRET)).
-function verifiedPlan(token) {
+// Returns { plan } when valid, or { reason } saying why not (shown to the user as a short code).
+function checkPass(token) {
   const secret = process.env.ENTITLEMENT_SECRET;
-  if (!secret || typeof token !== "string" || token.length > 2000) return null;
+  if (!secret) return { reason: "server_secret_missing" };
+  if (typeof token !== "string" || !token) return { reason: "no_pass_sent" };
+  if (token.length > 2000) return { reason: "pass_too_long" };
   const [payload, sig] = token.split(".");
-  if (!payload || !sig) return null;
+  if (!payload || !sig) return { reason: "pass_bad_format" };
   try {
     const expected = crypto.createHmac("sha256", secret).update(payload).digest();
     const given = Buffer.from(sig, "base64url");
-    if (given.length !== expected.length || !crypto.timingSafeEqual(given, expected)) return null;
+    if (given.length !== expected.length || !crypto.timingSafeEqual(given, expected)) return { reason: "pass_bad_signature" };
     const data = JSON.parse(Buffer.from(payload, "base64url").toString("utf8"));
-    if (!["chef", "passport"].includes(data.p) || !(data.exp * 1000 > Date.now())) return null;
-    return data.p;
-  } catch { return null; }
+    if (!(data.exp * 1000 > Date.now())) return { reason: "pass_expired" };
+    if (data.p !== "passport") return { reason: "pass_plan_" + String(data.p).slice(0, 12) };
+    return { plan: data.p };
+  } catch { return { reason: "pass_unreadable" }; }
 }
 
 async function redis(commands) {
@@ -111,8 +115,9 @@ module.exports = async function handler(req, res) {
   }
 
   // ---- Passport only (verified by this server) ----
-  if (verifiedPlan(req.headers["x-wm-entitlement"]) !== "passport") {
-    return json(res, 403, { error: "Fridge Scan is part of Passport. Open the menu and tap Restore purchases, or upgrade to Passport.", code: "passport_required" });
+  const pass = checkPass(req.headers["x-wm-entitlement"]);
+  if (pass.plan !== "passport") {
+    return json(res, 403, { error: "Fridge Scan is part of Passport. Open the menu and tap Restore purchases, or upgrade to Passport.", code: "passport_required", reason: pass.reason });
   }
   const id = String(req.headers["x-wm-id"] || "");
   if (!ID_PATTERN.test(id)) return json(res, 400, { error: "Please update WorldMeals to use Fridge Scan." });
