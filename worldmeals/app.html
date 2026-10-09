@@ -5069,6 +5069,59 @@ function wmInitializeMemberExperience(){
 }
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",wmInitializeMemberExperience,{once:true});else wmInitializeMemberExperience();
 </script>
+<!-- ANDROID FRIDGE SCAN RECOVERY: Android only. Skipped entirely when the iPhone native scanner bridge exists.
+     If Android closes WorldMeals while the camera is open, the app reopens on Scan (not Browse) with a clear next step. -->
+<script>
+(function(){
+  if(window.webkit?.messageHandlers?.worldMealsNative) return;
+  const KEY="wm_scan_pending";
+  const MAX_AGE=10*60*1000;
+  const store={
+    set(){try{localStorage.setItem(KEY,String(Date.now()));}catch(e){}},
+    take(){let t=0;try{t=Number(localStorage.getItem(KEY))||0;localStorage.removeItem(KEY);}catch(e){}return t;},
+    clear(){try{localStorage.removeItem(KEY);}catch(e){}}
+  };
+  function setup(){
+    const camera=document.getElementById("fridgePhotoInput");
+    const scanButton=document.getElementById("nativeFridgeScanButton");
+    const subtitle=document.getElementById("nativeFridgeScanSubtitle");
+    if(!camera||!scanButton) return;
+    if(subtitle) subtitle.textContent="Take a photo, then confirm your ingredients";
+
+    // Gallery option: more reliable on phones that close apps while the camera is open.
+    const gallery=document.createElement("input");
+    gallery.type="file";gallery.accept="image/*";gallery.id="fridgeGalleryInput";gallery.style.display="none";
+    gallery.addEventListener("change",event=>{store.clear();handleFridgePhoto(event);});
+    const galleryButton=document.createElement("button");
+    galleryButton.type="button";galleryButton.className="scan-btn secondary";galleryButton.id="fridgeGalleryButton";
+    galleryButton.style.cssText="width:100%;margin-top:10px";
+    galleryButton.textContent="🖼️ Choose a photo from your gallery";
+    galleryButton.addEventListener("click",()=>{
+      if(!wmRequirePlan("passport","Camera & Fridge Scan")) return;
+      gallery.click();
+    });
+    scanButton.insertAdjacentElement("afterend",galleryButton);
+    galleryButton.insertAdjacentElement("afterend",gallery);
+
+    // Remember a scan is in progress before the camera opens.
+    camera.addEventListener("click",store.set);
+    camera.addEventListener("change",store.clear);
+    // Camera cancelled and the app stayed open: forget the pending scan.
+    document.addEventListener("visibilitychange",()=>{
+      if(document.visibilityState==="visible") setTimeout(store.clear,2000);
+    });
+
+    // App was restarted while the camera was open: reopen Scan instead of Browse.
+    const started=store.take();
+    if(!started||Date.now()-started>MAX_AGE) return;
+    showPage("scan");
+    const result=document.getElementById("scanResult");
+    if(result) result.innerHTML=`<div class="scan-summary"><div class="scan-summary-title">Your photo didn't come through 📷</div><div class="scan-summary-sub">Your phone closed WorldMeals while the camera was open. Tap "Choose a photo from your gallery" to pick the photo you just took, or type your ingredients below.</div></div>`;
+    if(typeof toast==="function") toast("📷 Photo didn't come through. Choose it from your gallery.");
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",setup,{once:true});else setup();
+})();
+</script>
 
 <!-- WORLDMEALS STYLED DROPDOWNS: every <select> opens a cream/orange panel instead of the plain browser list.
      Your existing onchange handlers (renderGrid, syncTimeSelect, ...) keep working unchanged.
