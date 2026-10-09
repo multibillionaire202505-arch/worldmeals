@@ -49,11 +49,21 @@
       return !(data.exp * 1000 > Date.now() + 30000);
     } catch (e) { return true; }
   }
+  var diag = '';   // short note on what Google Play said, shown only if Passport is refused
   async function freshPass(force) {
     var pass = readPass();
-    if ((force || !pass || passExpired(pass)) && window.WorldMealsIAP && typeof window.WorldMealsIAP.restore === 'function') {
-      try { await window.WorldMealsIAP.restore(); } catch (e) {}
-      pass = readPass();
+    if (force || !pass || passExpired(pass)) {
+      if (!(window.WorldMealsIAP && typeof window.WorldMealsIAP.restore === 'function')) {
+        diag = 'play_billing_not_ready';
+      } else {
+        var seen = [];
+        var listen = function (e) { var d = e.detail || {}; seen.push(d.status + (d.plan ? ':' + d.plan : '')); };
+        window.addEventListener('worldmeals:iap', listen);
+        try { await window.WorldMealsIAP.restore(); } catch (e) { seen.push('restore_error'); }
+        window.removeEventListener('worldmeals:iap', listen);
+        pass = readPass();
+        diag = (seen.length ? 'play=' + seen.join(',') : 'play=no_answer') + (pass ? ',pass_ok' : ',no_pass');
+      }
     }
     return pass;
   }
@@ -101,7 +111,7 @@
       if (out.res.status === 403 && out.data.code === 'passport_required') out = await send(image, true);
       var res = out.res, data = out.data;
       if (!res.ok) {
-        if (data.code === 'passport_required') setStatus('Passport needed for Fridge Scan', data.error + (data.reason ? ' (code: ' + data.reason + ')' : ''));
+        if (data.code === 'passport_required') setStatus('Passport needed for Fridge Scan', data.error + (data.reason ? ' (code: ' + data.reason + (diag ? ' · ' + diag : '') + ')' : ''));
         else setStatus('Scan needs another try', (data.error || 'WorldMeals could not analyze that photo.') + ' You can also type your ingredients below.');
         return;
       }
