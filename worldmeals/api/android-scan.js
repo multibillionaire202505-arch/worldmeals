@@ -100,8 +100,18 @@ function extractJson(text) {
   const cleaned = String(text || "").replace(/```json|```/gi, "").trim();
   const first = cleaned.indexOf("{");
   const last = cleaned.lastIndexOf("}");
-  if (first < 0 || last <= first) throw new Error("Vision model returned invalid JSON");
-  return JSON.parse(cleaned.slice(first, last + 1));
+  try {
+    if (first < 0 || last <= first) throw new Error("no JSON");
+    return JSON.parse(cleaned.slice(first, last + 1));
+  } catch {
+    // Answer was cut off or slightly malformed: keep every complete ingredient that came through.
+    const ingredients = [];
+    for (const m of cleaned.matchAll(/\{[^{}]*"name"\s*:[^{}]*\}/g)) {
+      try { ingredients.push(JSON.parse(m[0])); } catch {}
+    }
+    if (!ingredients.length) throw new Error("WorldMeals could not read the scan result. Please try again.");
+    return { ingredients };
+  }
 }
 
 module.exports = async function handler(req, res) {
@@ -160,6 +170,7 @@ Core rules:
 8. State may describe visible form only, such as "whole", "opened package", "cooked", "frozen", "sliced", or "container label visible".
 9. Do not diagnose spoilage. A useSoonNote may say "visually inspect leafy greens" but must not claim food is unsafe or expired.
 10. Return JSON only, with no markdown.
+11. List at most 30 ingredients. Keep quantity and state to a few words each.
 
 Schema:
 {
@@ -188,7 +199,7 @@ Schema:
       },
       body: JSON.stringify({
         model: process.env.ANTHROPIC_VISION_MODEL || "claude-sonnet-4-6",
-        max_tokens: 1400,
+        max_tokens: 3000,
         temperature: 0,
         messages: [{
           role: "user",
