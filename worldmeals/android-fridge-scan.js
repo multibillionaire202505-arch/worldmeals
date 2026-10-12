@@ -277,23 +277,54 @@
     if (typeof originalFind !== 'function' || typeof originalMatches !== 'function') return;
     window.scanFindMeals = function () {
       if (mode !== 'rescue') return originalFind.apply(this, arguments);
+      var self = this, args = arguments;
+      if (!String(($('scanIngredients') || {}).value || '').trim()) return originalFind.apply(this, arguments);
+      if (!rescueRunning) {
+        rescueRunning = true;
+        setStatus('🥬 Finding dishes to rescue your food…', 'One moment.');
+        setTimeout(function () {
+          try { rescueFind.apply(self, args); } finally { rescueRunning = false; }
+        }, 60);
+      }
+    };
+    var rescueRunning = false;
+    function rescueFind() {
       var input = ($('scanIngredients') || {}).value || '';
       var rescueText = rescueItems.length ? rescueItems.join(', ') : input;
       var rescueTokens = typeof tokenizeIngredients === 'function' ? tokenizeIngredients(rescueText) : [];
       var sorted = [];
       window.getChefMatches = function (text) {
-        // Look for dishes for the whole list AND for each rescue item on its own, so no item gets
-        // crowded out; then put dishes that use the most rescue items first.
+        // Fast path: only score dishes that mention a rescue item (scoring all 1000+ dishes is slow
+        // on phones), then put dishes that use the most rescue items first.
         var tokens = typeof tokenizeIngredients === 'function' ? tokenizeIngredients(text) : [];
+        var keys = [];
+        rescueTokens.forEach(function (tok) {
+          String(tok).toLowerCase().split(/\s+/).forEach(function (w) { if (w.length > 2 && keys.indexOf(w) === -1) keys.push(w); });
+        });
+        var meals = (typeof MEALS !== 'undefined' && Array.isArray(MEALS)) ? MEALS : [];
         var pool = {}, order = [];
-        [text].concat(rescueTokens).forEach(function (q) {
-          originalMatches(q).forEach(function (x) {
-            var id = x.meal && x.meal.id;
-            if (id == null || pool[id]) return;
-            var full = typeof mealMatchScore === 'function' ? mealMatchScore(x.meal, tokens) : x;
-            pool[id] = Object.assign({ meal: x.meal }, full);
-            order.push(id);
+        var quick = [];
+        meals.forEach(function (meal) {
+          var words = (meal.ingredients || []).join(' ').toLowerCase();
+          var n = 0;
+          keys.forEach(function (k) { if (words.indexOf(k) !== -1) n++; });
+          if (n) quick.push({ meal: meal, n: n, size: (meal.ingredients || []).length, words: words });
+        });
+        // Keep the most promising dishes (most rescue items, fewest other ingredients),
+        // plus the best few for EACH rescue item so none is left out.
+        quick.sort(function (a, b) { return b.n - a.n || a.size - b.size; });
+        var keep = quick.slice(0, 100);
+        keys.forEach(function (k) {
+          quick.filter(function (q) { return q.words.indexOf(k) !== -1; }).slice(0, 15).forEach(function (q) {
+            if (keep.indexOf(q) === -1) keep.push(q);
           });
+        });
+        keep.forEach(function (q) {
+          var meal = q.meal;
+          var full = mealMatchScore(meal, tokens);
+          if (!full.matched || !full.matched.length || full.confidence < 8) return;
+          pool[meal.id] = Object.assign({ meal: meal }, full);
+          order.push(meal.id);
         });
         var list = order.map(function (id, i) {
           var x = pool[id];
