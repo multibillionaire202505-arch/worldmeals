@@ -3423,7 +3423,8 @@ function renderPlanner(){
   }).join("");
 }
 
-function clearDay(day){delete plan[day];save();renderPlanner();}
+function refreshGroceryIfOpen(){const g=document.getElementById("groceryList");if(g&&g.innerHTML.trim()&&Object.keys(plan).length)generateGroceryList();}
+function clearDay(day){delete plan[day];save();renderPlanner();refreshGroceryIfOpen();}
 
 function openPicker(day){
   pickerDay=day;
@@ -3433,7 +3434,7 @@ function openPicker(day){
 }
 
 function assignDay(day,id){
-  plan[day]=id;save();closePicker();renderPlanner();
+  plan[day]=id;save();closePicker();renderPlanner();refreshGroceryIfOpen();
   toast("📅 "+MEALS.find(m=>m.id===id).name+" added to "+day);
 }
 
@@ -4302,6 +4303,8 @@ function generateSmartPlan(){
   DAYS.forEach((day,i)=>{plan[day]=selected[i].id;});
   save();
   renderPlanner();
+  localStorage.removeItem("wm_grocery_checked");
+  refreshGroceryIfOpen();
 
   const remaining=Math.max(0,budget-total);
   const summary=document.getElementById("plannerSummary");
@@ -4399,7 +4402,9 @@ function generateGroceryList(){
   const budget=Number(document.getElementById("weeklyBudget")?.value||0);
   const people=Number(document.getElementById("peopleCount")?.value||1);
   const mealCost=plannedMeals.reduce((s,m)=>s+((m.budget||0)*people),0);
-  const estimated=Math.max(mealCost,items.reduce((s,i)=>s+i.cost,0));
+  const itemSum=items.reduce((s,i)=>s+i.cost,0);
+  const estimated=Math.round(mealCost>0?mealCost:itemSum);
+  if(mealCost>0&&itemSum>0) items.forEach(i=>{i.cost=Math.max(1,Math.round(i.cost*estimated/itemSum));});
   const remaining=budget?budget-estimated:0;
 
   document.getElementById("groceryList").innerHTML=`
@@ -4413,7 +4418,7 @@ function generateGroceryList(){
 
       <div class="grocery-money">
         <div class="grocery-money-card"><div class="grocery-money-val">$${estimated}</div><div class="grocery-money-lbl">Estimated Grocery</div></div>
-        <div class="grocery-money-card ${budget && remaining>=0?'good':'warn'}"><div class="grocery-money-val">${budget?'$'+remaining:'—'}</div><div class="grocery-money-lbl">${budget?'Budget Remaining':'Add Budget'}</div></div>
+        <div class="grocery-money-card ${budget && remaining>=0?'good':'warn'}"><div class="grocery-money-val">${budget?'$'+Math.abs(remaining):'—'}</div><div class="grocery-money-lbl">${budget?(remaining>=0?'Budget Remaining':'Over Budget'):'Add Budget'}</div></div>
       </div>
 
       <div class="grocery-progress-wrap">
