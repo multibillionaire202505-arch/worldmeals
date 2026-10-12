@@ -5463,5 +5463,28 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
   .filter-group select{font-size:13px !important;padding-right:16px !important;text-overflow:ellipsis;}
 }
 </style>
+<!-- FASTER BROWSE: smoother filter sliders and search (no change to what the filters do) -->
+<style>
+/* The phone only draws the dish cards that are on screen; cards further down are drawn as you scroll. */
+#grid .card{content-visibility:auto;contain-intrinsic-size:auto 380px}
+</style>
+<script>
+(function(){
+  if(typeof window.renderGrid!=="function") return;
+  var realRenderGrid=window.renderGrid, timer=null;
+  // While a slider is moving or the user is typing, update the dish list once they pause (150 ms)
+  // instead of rebuilding 1,000+ cards on every tiny move. Every other call still updates right away.
+  window.renderGrid=function(){
+    var self=this, args=arguments, ev=window.event;
+    if(ev && ev.type==="input"){
+      clearTimeout(timer);
+      timer=setTimeout(function(){ timer=null; realRenderGrid.apply(self,args); },150);
+      return;
+    }
+    if(timer){ clearTimeout(timer); timer=null; }
+    return realRenderGrid.apply(this,arguments);
+  };
+})();
+</script>
 </body>
 </html>
