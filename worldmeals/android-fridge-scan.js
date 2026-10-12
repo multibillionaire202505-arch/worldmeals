@@ -143,8 +143,10 @@
       var box = $('scanIngredients');
       if (box) box.value = names.join(', ');
       if (mode === 'rescue') {
-        rescueItems = names.slice();
-        showRescue(data.ingredients);
+        var found = rescueList(data.ingredients);
+        rescueItems = found.food.map(function (x) { return x.name; });
+        if (box) box.value = rescueItems.join(', ');
+        showRescue(found);
         if (box && box.scrollIntoView) box.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
       }
@@ -280,15 +282,34 @@
       var rescueTokens = typeof tokenizeIngredients === 'function' ? tokenizeIngredients(rescueText) : [];
       var sorted = [];
       window.getChefMatches = function (text) {
-        var list = originalMatches(text).map(function (x, i) {
+        // Look for dishes for the whole list AND for each rescue item on its own, so no item gets
+        // crowded out; then put dishes that use the most rescue items first.
+        var tokens = typeof tokenizeIngredients === 'function' ? tokenizeIngredients(text) : [];
+        var pool = {}, order = [];
+        [text].concat(rescueTokens).forEach(function (q) {
+          originalMatches(q).forEach(function (x) {
+            var id = x.meal && x.meal.id;
+            if (id == null || pool[id]) return;
+            var full = typeof mealMatchScore === 'function' ? mealMatchScore(x.meal, tokens) : x;
+            pool[id] = Object.assign({ meal: x.meal }, full);
+            order.push(id);
+          });
+        });
+        var list = order.map(function (id, i) {
+          var x = pool[id];
           var hits = (x.matched || []).filter(function (t) { return rescueTokens.indexOf(t) !== -1; });
           return { x: x, i: i, hits: hits };
+        }).filter(function (r) { return r.hits.length; });
+        list.sort(function (a, b) { return b.hits.length - a.hits.length || b.x.score - a.x.score || a.i - b.i; });
+        var picked = [], used = {};
+        rescueTokens.forEach(function (t) {            // at least one dish for every rescue item
+          var r = list.find(function (r) { return r.hits.indexOf(t) !== -1; });
+          if (r && !used[r.x.meal.id]) { used[r.x.meal.id] = 1; picked.push(r); }
         });
-        var useful = list.filter(function (r) { return r.hits.length; });
-        if (useful.length) list = useful;
-        list.sort(function (a, b) { return b.hits.length - a.hits.length || a.i - b.i; });
-        sorted = list;
-        return list.map(function (r) { return r.x; });
+        list.forEach(function (r) { if (picked.length < 9 && !used[r.x.meal.id]) { used[r.x.meal.id] = 1; picked.push(r); } });
+        picked.sort(function (a, b) { return b.hits.length - a.hits.length || b.x.score - a.x.score; });
+        sorted = picked;
+        return picked.map(function (r) { return r.x; });
       };
       try { originalFind.apply(this, arguments); }
       finally { window.getChefMatches = originalMatches; }
@@ -311,20 +332,50 @@
     };
   }
 
-  function showRescue(ingredients) {
+  // Short, generic names match dishes better: "Pasta Sauce (Great Value, with Meat)" -> "tomato sauce",
+  // "Organic Reduced Fat Milk (Simply Nature)" -> "milk". Drinks are listed but not used to pick dishes.
+  var DRINK = /\b(juice|soda|water|sparkling|seltzer|cola|lemonade|kombucha|wine|beer|coffee|tea|energy drink|smoothie)\b/i;
+  var FILLER = /\b(organic|reduced[- ]fat|low[- ]fat|fat[- ]free|non[- ]fat|skim|whole|2%|1%|fresh|natural|store[- ]brand|great value|simply nature|kirkland|family size|large|small|medium|opened|leftover|cooked|dark)\b/gi;
+  function cleanName(raw) {
+    var n = String(raw || '').replace(/\([^)]*\)/g, ' ').replace(FILLER, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
+    if (/\b(pasta|spaghetti)\s+sauce\b/.test(n)) n = 'tomato sauce';
+    return n;
+  }
+  function cleanState(raw) {
+    return String(raw || '').split(',').map(function (s) { return s.trim(); })
+      .filter(function (s) { return s && !/label|visible|brand|photo|image/i.test(s); }).join(', ');
+  }
+  function rescueList(ingredients) {
+    var food = [], drinks = [], seen = {};
+    (Array.isArray(ingredients) ? ingredients : []).forEach(function (x) {
+      var raw = String(x.displayName || x.name || '').trim();
+      var name = cleanName(raw);
+      if (!name || seen[name]) return;
+      seen[name] = 1;
+      var item = { name: name, state: cleanState(x.state) };
+      (DRINK.test(raw) ? drinks : food).push(item);
+    });
+    return { food: food, drinks: drinks };
+  }
+
+  function showRescue(found) {
     var box = $('scanResult');
     if (!box) return;
-    var chips = (Array.isArray(ingredients) ? ingredients : []).map(function (x) {
-      var name = String(x.displayName || x.name || '').trim();
-      if (!name) return '';
-      var state = String(x.state || '').trim();
+    var chips = found.food.map(function (x) {
       return '<span class="scan-pill" style="display:inline-block;margin:0 6px 6px 0;background:#E8F7EF;border-color:#BFE3CF;color:#1F6B42">' +
-        esc(name) + (state ? ' · ' + esc(state) : '') + '</span>';
+        esc(x.name.charAt(0).toUpperCase() + x.name.slice(1)) + (x.state ? ' · ' + esc(x.state) : '') + '</span>';
     }).join('');
+    var drinkNote = found.drinks.length
+      ? '<div class="scan-summary-sub" style="margin-top:4px">🥤 Drinks to enjoy soon: ' + esc(found.drinks.map(function (d) { return d.name; }).join(', ')) + '</div>'
+      : '';
+    var title = found.food.length ? '🥬 Rescue these first (' + found.food.length + ')' : 'No food to rescue spotted yet';
+    var sub = found.food.length
+      ? 'Tap <b>Find Meals From This</b> to see dishes that use them. Add pantry basics you have (rice, eggs, oil…) for more ideas.'
+      : 'Try a closer photo of the food that needs to be used soon, or type it below.';
     box.innerHTML = '<div class="scan-summary" data-wm-scan="1">' +
-      '<div class="scan-summary-title">🥬 Rescue these first (' + rescueItems.length + ')</div>' +
-      '<div class="scan-summary-sub" style="margin-bottom:10px">Tap <b>Find Meals From This</b> to see dishes that use them. Add pantry basics you have (rice, eggs, oil…) for more ideas.</div>' +
-      '<div>' + chips + '</div></div>';
+      '<div class="scan-summary-title">' + title + '</div>' +
+      '<div class="scan-summary-sub" style="margin-bottom:10px">' + sub + '</div>' +
+      '<div>' + chips + '</div>' + drinkNote + '</div>';
     if (box.scrollIntoView) box.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
