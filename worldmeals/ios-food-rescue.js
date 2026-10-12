@@ -1,0 +1,326 @@
+/* WorldMeals — FOOD RESCUE for the iPHONE app.
+ * Runs ONLY on iPhone (when the native iPhone scanner bridge exists). On Android it stops on line 1
+ * (Android has its own Food Rescue in android-fridge-scan.js).
+ *
+ * What it does on iPhone:
+ *  - Adds two choices at the top of Scan: "Scan Fridge" (unchanged: the native Apple scanner) and
+ *    "Food Rescue".
+ *  - In Food Rescue, the scan button opens the iPhone camera / photo picker from the web page, sends the
+ *    photo to /api/scan-fridge (the existing server scan), and shows "Rescue these first" for food that
+ *    should be used soon (opened, cooked, wilting...). Dishes that use those items come first.
+ *  - The native iPhone code and the native scanner are NOT changed.
+ * To turn it off: remove the one <script src="/ios-food-rescue.js"> line in app.html.
+ */
+(function () {
+  if (!(window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.worldMealsNative)) return;
+
+  var MAX_SIDE = 1280;
+  var JPEG_QUALITY = 0.8;
+  var busy = false;
+  var MODE_KEY = 'wm_scan_mode_ios';
+  var mode = 'fridge';
+  var rescueItems = [];
+
+  function $(id) { return document.getElementById(id); }
+  function setStatus(title, sub) {
+    var box = $('scanResult');
+    if (!box) return;
+    box.innerHTML = '<div class="scan-summary" data-wm-scan="1"><div class="scan-summary-title"></div><div class="scan-summary-sub"></div></div>';
+    box.querySelector('.scan-summary-title').textContent = title;
+    box.querySelector('.scan-summary-sub').textContent = sub || '';
+    if (box.scrollIntoView) box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+  function shrink(file) {
+    return new Promise(function (resolve, reject) {
+      var url = URL.createObjectURL(file);
+      var img = new Image();
+      img.onload = function () {
+        var scale = Math.min(1, MAX_SIDE / Math.max(img.naturalWidth, img.naturalHeight));
+        var canvas = document.createElement('canvas');
+        canvas.width = Math.round(img.naturalWidth * scale);
+        canvas.height = Math.round(img.naturalHeight * scale);
+        canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+        URL.revokeObjectURL(url);
+        resolve(canvas.toDataURL('image/jpeg', JPEG_QUALITY));
+      };
+      img.onerror = function () { URL.revokeObjectURL(url); reject(new Error('This photo could not be opened.')); };
+      img.src = url;
+    });
+  }
+
+  async function analyze(file) {
+    if (!file || busy) return;
+    busy = true;
+    try {
+      setStatus('Scanning your food… 🔍', 'WorldMeals is looking at what needs to be rescued. This takes a few seconds.');
+      var image = await shrink(file);
+      var preview = $('scanPreviewImg'), wrap = $('scanPreview');
+      if (preview && wrap) { preview.src = image; wrap.style.display = 'block'; }
+      var res = await fetch('/api/scan-fridge', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ image: image }) });
+      var data = {};
+      try { data = await res.json(); } catch (e) {}
+      if (!res.ok) { setStatus('Scan needs another try', (data.error || 'WorldMeals could not analyze that photo.') + ' Try a closer photo of fewer items, or type them below.'); return; }
+      var found = rescueList(data.ingredients);
+      if (!found.food.length && !found.drinks.length) { setStatus('No food spotted yet', 'Try a brighter, closer photo, or type your ingredients below.'); return; }
+      rescueItems = (found.urgent.length ? found.urgent : found.food.filter(function (x) { return !x.unsafe; })).map(function (x) { return x.name; });
+      var box = $('scanIngredients');
+      if (box) box.value = found.food.filter(function (x) { return !x.unsafe; }).map(function (x) { return x.name; }).join(', ');
+      showRescue(found);
+    } catch (err) {
+      setStatus('Scan needs another try', 'Check your internet connection and try again, or type your ingredients below.');
+    } finally {
+      busy = false;
+    }
+  }
+
+  /* ===================== FOOD RESCUE ===================== */
+  var MODES = {
+    fridge: { kicker: '', title: '', icon: '📸', button: 'Tap to scan your fridge', sub: 'Take a photo and WorldMeals finds your ingredients' },
+    rescue: { kicker: '🥬 FOOD RESCUE', title: 'Rescue food before it goes to waste', icon: '🥬', button: 'Snap the food you want to rescue', sub: 'Wilting veggies, ripe fruit, leftovers, opened packs…' }
+  };
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function saveMode() { try { localStorage.setItem(MODE_KEY, mode); } catch (e) {} }
+  function takeMode() { var m = ''; try { m = localStorage.getItem(MODE_KEY) || ''; localStorage.removeItem(MODE_KEY); } catch (e) {} return m; }
+
+  function setMode(next) {
+    mode = next === 'rescue' ? 'rescue' : 'fridge';
+    var cfg = MODES[mode];
+    var kicker = document.querySelector('#page-scan .scan-kicker');
+    var title = document.querySelector('#page-scan .scan-title');
+    if (kicker) kicker.textContent = cfg.kicker || kicker.getAttribute('data-wm-orig');
+    if (title) title.textContent = cfg.title || title.getAttribute('data-wm-orig');
+    var icon = document.querySelector('#nativeFridgeScanButton .scan-upload-icon');
+    var btnTitle = document.querySelector('#nativeFridgeScanButton .scan-upload-title');
+    var sub = $('nativeFridgeScanSubtitle');
+    if (icon) icon.textContent = cfg.icon;
+    if (btnTitle) btnTitle.textContent = cfg.button;
+    if (sub) sub.textContent = cfg.sub;
+    ['fridge', 'rescue'].forEach(function (m) {
+      var b = $('wmMode-' + m);
+      if (!b) return;
+      var on = m === mode;
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      b.style.background = on ? '#167A5A' : '#FFF7ED';
+      b.style.color = on ? '#fff' : '#8A4B13';
+      b.style.borderColor = on ? '#167A5A' : '#E8D3B8';
+    });
+    if (mode === 'fridge') rescueItems = [];
+  }
+
+  function setupRescue(scanButton) {
+    var kicker = document.querySelector('#page-scan .scan-kicker');
+    var title = document.querySelector('#page-scan .scan-title');
+    if (kicker) kicker.setAttribute('data-wm-orig', kicker.textContent);
+    if (title) title.setAttribute('data-wm-orig', title.textContent);
+
+    var bar = document.createElement('div');
+    bar.id = 'wmScanModes';
+    bar.setAttribute('role', 'group');
+    bar.setAttribute('aria-label', 'Choose a scan');
+    bar.style.cssText = 'display:flex;gap:10px;margin-bottom:12px';
+    [['fridge', '📸 Scan Fridge'], ['rescue', '🥬 Food Rescue']].forEach(function (m) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.id = 'wmMode-' + m[0]; b.textContent = m[1];
+      b.style.cssText = 'flex:1;min-height:48px;border-radius:14px;border:1.5px solid #E8D3B8;font-family:inherit;font-size:14px;font-weight:900;line-height:1.2;cursor:pointer';
+      b.addEventListener('click', function () {
+        if (mode === m[0]) return;
+        setMode(m[0]);
+        var box = $('scanResult');
+        if (box && m[0] === 'rescue') setStatus('🥬 Food Rescue', 'Snap the food that needs to be used soon (or type it below). WorldMeals shows dishes that use it first, so nothing goes to waste.');
+        else if (box) box.innerHTML = '';
+      });
+      bar.appendChild(b);
+    });
+    scanButton.insertAdjacentElement('beforebegin', bar);
+    setMode('fridge');
+
+    // "Find Meals From This": in Food Rescue, dishes that use the rescue items come first.
+    var originalFind = window.scanFindMeals;
+    var originalMatches = window.getChefMatches;
+    if (typeof originalFind !== 'function' || typeof originalMatches !== 'function') return;
+    window.scanFindMeals = function () {
+      if (mode !== 'rescue') return originalFind.apply(this, arguments);
+      var self = this, args = arguments;
+      if (!String(($('scanIngredients') || {}).value || '').trim()) return originalFind.apply(this, arguments);
+      if (!rescueRunning) {
+        rescueRunning = true;
+        setStatus('🥬 Finding dishes to rescue your food…', 'One moment.');
+        setTimeout(function () {
+          try { rescueFind.apply(self, args); } finally { rescueRunning = false; }
+        }, 60);
+      }
+    };
+    var rescueRunning = false;
+    function rescueFind() {
+      var input = ($('scanIngredients') || {}).value || '';
+      var rescueText = rescueItems.length ? rescueItems.join(', ') : input;
+      var rescueTokens = typeof tokenizeIngredients === 'function' ? tokenizeIngredients(rescueText) : [];
+      var sorted = [];
+      window.getChefMatches = function (text) {
+        // Fast path: only score dishes that mention a rescue item (scoring all 1000+ dishes is slow
+        // on phones), then put dishes that use the most rescue items first.
+        var tokens = typeof tokenizeIngredients === 'function' ? tokenizeIngredients(text) : [];
+        var keys = [];
+        rescueTokens.forEach(function (tok) {
+          String(tok).toLowerCase().split(/\s+/).forEach(function (w) { if (w.length > 2 && keys.indexOf(w) === -1) keys.push(w); });
+        });
+        var meals = (typeof MEALS !== 'undefined' && Array.isArray(MEALS)) ? MEALS : [];
+        var pool = {}, order = [];
+        var quick = [];
+        meals.forEach(function (meal) {
+          var words = (meal.ingredients || []).join(' ').toLowerCase();
+          var n = 0;
+          keys.forEach(function (k) { if (words.indexOf(k) !== -1) n++; });
+          if (n) quick.push({ meal: meal, n: n, size: (meal.ingredients || []).length, words: words });
+        });
+        // Keep the most promising dishes (most rescue items, fewest other ingredients),
+        // plus the best few for EACH rescue item so none is left out.
+        quick.sort(function (a, b) { return b.n - a.n || a.size - b.size; });
+        var keep = quick.slice(0, 100);
+        keys.forEach(function (k) {
+          quick.filter(function (q) { return q.words.indexOf(k) !== -1; }).slice(0, 15).forEach(function (q) {
+            if (keep.indexOf(q) === -1) keep.push(q);
+          });
+        });
+        keep.forEach(function (q) {
+          var meal = q.meal;
+          var full = mealMatchScore(meal, tokens);
+          if (!full.matched || !full.matched.length || full.confidence < 8) return;
+          pool[meal.id] = Object.assign({ meal: meal }, full);
+          order.push(meal.id);
+        });
+        var list = order.map(function (id, i) {
+          var x = pool[id];
+          var hits = (x.matched || []).filter(function (t) { return rescueTokens.indexOf(t) !== -1; });
+          return { x: x, i: i, hits: hits };
+        }).filter(function (r) { return r.hits.length; });
+        list.sort(function (a, b) { return b.hits.length - a.hits.length || b.x.score - a.x.score || a.i - b.i; });
+        var picked = [], used = {};
+        rescueTokens.forEach(function (t) {            // at least one dish for every rescue item
+          var r = list.find(function (r) { return r.hits.indexOf(t) !== -1; });
+          if (r && !used[r.x.meal.id]) { used[r.x.meal.id] = 1; picked.push(r); }
+        });
+        list.forEach(function (r) { if (picked.length < 9 && !used[r.x.meal.id]) { used[r.x.meal.id] = 1; picked.push(r); } });
+        picked.sort(function (a, b) { return b.hits.length - a.hits.length || b.x.score - a.x.score; });
+        sorted = picked;
+        return picked.map(function (r) { return r.x; });
+      };
+      try { originalFind.apply(this, arguments); }
+      finally { window.getChefMatches = originalMatches; }
+      var box = $('scanResult');
+      var cards = box ? box.querySelectorAll('.chef-match-card') : [];
+      if (!cards.length) return;
+      cards.forEach(function (card, i) {
+        var r = sorted[i];
+        if (!r || !r.hits.length) return;
+        var tag = document.createElement('div');
+        tag.className = 'chef-missing';
+        tag.style.cssText = 'color:#1F6B42;background:#E8F7EF;margin-top:6px';
+        tag.textContent = '🥬 Rescues: ' + r.hits.slice(0, 3).join(', ');
+        (card.querySelector('.chef-match-body') || card).appendChild(tag);
+      });
+      var banner = document.createElement('div');
+      banner.className = 'scan-summary';
+      banner.innerHTML = '<div class="scan-summary-title">🥬 Food Rescue</div><div class="scan-summary-sub">Dishes that use your rescue items come first: <b>' + esc(rescueTokens.slice(0, 6).join(', ')) + '</b></div>';
+      box.insertBefore(banner, box.firstChild);
+    };
+  }
+
+  // Short, generic names match dishes better: "Pasta Sauce (Great Value, with Meat)" -> "tomato sauce",
+  // "Organic Reduced Fat Milk (Simply Nature)" -> "milk". Drinks are listed but not used to pick dishes.
+  var DRINK = /\b(juice|soda|water|sparkling|seltzer|cola|lemonade|kombucha|wine|beer|coffee|tea|energy drink|smoothie)\b/i;
+  var FILLER = /\b(organic|reduced[- ]fat|low[- ]fat|fat[- ]free|non[- ]fat|skim|whole|2%|1%|fresh|natural|store[- ]brand|great value|simply nature|kirkland|family size|large|small|medium|opened|leftover|cooked|dark)\b/gi;
+  function cleanName(raw) {
+    var n = String(raw || '').replace(/\([^)]*\)/g, ' ').replace(FILLER, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
+    if (/\b(pasta|spaghetti)\s+sauce\b/.test(n)) n = 'tomato sauce';
+    return n;
+  }
+  // Only states that mean "use soon" matter for Food Rescue ("in clear container" does not).
+  var AGING = /\b(opened|open|cut|sliced|halved|half[- ]used|partly used|wilting|wilted|limp|soft|overripe|very ripe|ripe|bruised|brown(?:ing|ed)?|spotted|wrinkled|sprouting|cooked|leftovers?|thawed|defrosted|expiring|near expiry|past date|mushy|stale|moldy|mould(?:y)?|mold|slimy|spoiled|rotten)\b/gi;
+  var UNSAFE = /mold|mould|slimy|spoiled|rotten/i;
+  function cleanState(raw) {
+    var words = String(raw || '').toLowerCase().match(AGING) || [];
+    var out = [];
+    words.forEach(function (w) { if (out.indexOf(w) === -1) out.push(w); });
+    return out.join(', ');
+  }
+  function rescueList(ingredients) {
+    var food = [], drinks = [], seen = {};
+    (Array.isArray(ingredients) ? ingredients : []).forEach(function (x) {
+      var raw = String(x.displayName || x.name || '').trim();
+      var name = cleanName(raw);
+      if (!name || seen[name]) return;
+      seen[name] = 1;
+      var state = cleanState(x.state);
+      var item = { name: name, state: state, urgent: !!state, unsafe: UNSAFE.test(state) };
+      (DRINK.test(raw) ? drinks : food).push(item);
+    });
+    food.sort(function (a, b) { return (b.urgent ? 1 : 0) - (a.urgent ? 1 : 0); });   // "use soon" first
+    var urgent = food.filter(function (x) { return x.urgent && !x.unsafe; });
+    return { food: food, drinks: drinks, urgent: urgent };
+  }
+
+  function chip(x, strong) {
+    var label = esc(x.name.charAt(0).toUpperCase() + x.name.slice(1)) + (x.state ? ' · ' + esc(x.state) : '');
+    if (x.unsafe) return '<span class="scan-pill" style="display:inline-block;margin:0 6px 6px 0;background:#FDECEA;border-color:#F3C2BC;color:#A33A2A">🚫 ' + label + ' · check before eating</span>';
+    if (strong) return '<span class="scan-pill" style="display:inline-block;margin:0 6px 6px 0;background:#FFF1E0;border-color:#F2C58F;color:#8A4B13">⚠️ ' + label + '</span>';
+    return '<span class="scan-pill" style="display:inline-block;margin:0 6px 6px 0;background:#E8F7EF;border-color:#BFE3CF;color:#1F6B42">' + label + '</span>';
+  }
+
+  function showRescue(found) {
+    var box = $('scanResult');
+    if (!box) return;
+    var urgentAll = found.food.filter(function (x) { return x.urgent; });
+    var others = found.food.filter(function (x) { return !x.urgent; });
+    var html = '';
+    if (urgentAll.length) {
+      html += '<div class="scan-summary-title">🥬 Rescue these first (' + found.urgent.length + ')</div>' +
+        '<div class="scan-summary-sub" style="margin-bottom:10px">These look like they should be used soon. Tap <b>Find Meals From This</b>: dishes that use them come first.</div>' +
+        '<div>' + urgentAll.map(function (x) { return chip(x, true); }).join('') + '</div>';
+      if (others.length) html += '<div class="scan-summary-sub" style="margin:8px 0 6px"><b>Also spotted (' + others.length + ')</b></div><div>' + others.map(function (x) { return chip(x, false); }).join('') + '</div>';
+    } else if (found.food.length) {
+      html += '<div class="scan-summary-title">🥬 Food Rescue: ' + found.food.length + ' items found</div>' +
+        '<div class="scan-summary-sub" style="margin-bottom:10px">Nothing looks old yet. 👍 Tip: snap only the food that needs to be used soon (opened, soft, leftovers) for better rescue ideas. You can still tap <b>Find Meals From This</b>.</div>' +
+        '<div>' + others.map(function (x) { return chip(x, false); }).join('') + '</div>';
+    } else {
+      html += '<div class="scan-summary-title">No food to rescue spotted yet</div>' +
+        '<div class="scan-summary-sub">Try a closer photo of the food that needs to be used soon, or type it below.</div>';
+    }
+    if (found.drinks.length) html += '<div class="scan-summary-sub" style="margin-top:4px">🥤 Drinks to enjoy soon: ' + esc(found.drinks.map(function (d) { return d.name; }).join(', ')) + '</div>';
+    box.innerHTML = '<div class="scan-summary" data-wm-scan="1">' + html + '</div>';
+    if (box.scrollIntoView) box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+
+  function setup() {
+    var scanButton = $('nativeFridgeScanButton');
+    if (!scanButton) return;
+    // Keep the iPhone's own Scan Fridge texts exactly as they are today.
+    var icon = scanButton.querySelector('.scan-upload-icon'), title = scanButton.querySelector('.scan-upload-title'), sub = $('nativeFridgeScanSubtitle');
+    MODES.fridge.icon = icon ? icon.textContent : MODES.fridge.icon;
+    MODES.fridge.button = title ? title.textContent : MODES.fridge.button;
+    MODES.fridge.sub = sub ? sub.textContent : MODES.fridge.sub;
+
+    var picker = document.createElement('input');
+    picker.type = 'file'; picker.accept = 'image/*'; picker.id = 'iosRescueInput'; picker.style.display = 'none';
+    picker.addEventListener('change', function (e) { analyze(e.target.files && e.target.files[0]); picker.value = ''; });
+    scanButton.insertAdjacentElement('afterend', picker);
+
+    // In Food Rescue, the scan button opens the photo picker instead of the native scanner.
+    // (Scan Fridge mode is untouched: the click goes to the native scanner as before.)
+    document.addEventListener('click', function (e) {
+      if (mode !== 'rescue') return;
+      var btn = e.target && e.target.closest ? e.target.closest('#nativeFridgeScanButton') : null;
+      if (!btn) return;
+      e.preventDefault();
+      e.stopPropagation();
+      if (typeof wmRequirePlan === 'function' && !wmRequirePlan('passport', 'Camera & Fridge Scan')) return;
+      picker.click();
+    }, true);
+
+    setupRescue(scanButton);
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', setup, { once: true });
+  else setup();
+})();
