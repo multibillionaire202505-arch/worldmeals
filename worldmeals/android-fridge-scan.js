@@ -144,8 +144,10 @@
       if (box) box.value = names.join(', ');
       if (mode === 'rescue') {
         var found = rescueList(data.ingredients);
-        rescueItems = found.food.map(function (x) { return x.name; });
-        if (box) box.value = rescueItems.join(', ');
+        // Dishes are ranked by the "use soon" items when there are any, otherwise by everything found.
+        rescueItems = (found.urgent.length ? found.urgent : found.food.filter(function (x) { return !x.unsafe; }))
+          .map(function (x) { return x.name; });
+        if (box) box.value = found.food.filter(function (x) { return !x.unsafe; }).map(function (x) { return x.name; }).join(', ');
         showRescue(found);
         if (box && box.scrollIntoView) box.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
@@ -372,9 +374,14 @@
     if (/\b(pasta|spaghetti)\s+sauce\b/.test(n)) n = 'tomato sauce';
     return n;
   }
+  // Only states that mean "use soon" matter for Food Rescue ("in clear container" does not).
+  var AGING = /\b(opened|open|cut|sliced|halved|half[- ]used|partly used|wilting|wilted|limp|soft|overripe|very ripe|ripe|bruised|brown(?:ing|ed)?|spotted|wrinkled|sprouting|cooked|leftovers?|thawed|defrosted|expiring|near expiry|past date|mushy|stale|moldy|mould(?:y)?|mold|slimy|spoiled|rotten)\b/gi;
+  var UNSAFE = /mold|mould|slimy|spoiled|rotten/i;
   function cleanState(raw) {
-    return String(raw || '').split(',').map(function (s) { return s.trim(); })
-      .filter(function (s) { return s && !/label|visible|brand|photo|image/i.test(s); }).join(', ');
+    var words = String(raw || '').toLowerCase().match(AGING) || [];
+    var out = [];
+    words.forEach(function (w) { if (out.indexOf(w) === -1) out.push(w); });
+    return out.join(', ');
   }
   function rescueList(ingredients) {
     var food = [], drinks = [], seen = {};
@@ -383,30 +390,43 @@
       var name = cleanName(raw);
       if (!name || seen[name]) return;
       seen[name] = 1;
-      var item = { name: name, state: cleanState(x.state) };
+      var state = cleanState(x.state);
+      var item = { name: name, state: state, urgent: !!state, unsafe: UNSAFE.test(state) };
       (DRINK.test(raw) ? drinks : food).push(item);
     });
-    return { food: food, drinks: drinks };
+    food.sort(function (a, b) { return (b.urgent ? 1 : 0) - (a.urgent ? 1 : 0); });   // "use soon" first
+    var urgent = food.filter(function (x) { return x.urgent && !x.unsafe; });
+    return { food: food, drinks: drinks, urgent: urgent };
+  }
+
+  function chip(x, strong) {
+    var label = esc(x.name.charAt(0).toUpperCase() + x.name.slice(1)) + (x.state ? ' · ' + esc(x.state) : '');
+    if (x.unsafe) return '<span class="scan-pill" style="display:inline-block;margin:0 6px 6px 0;background:#FDECEA;border-color:#F3C2BC;color:#A33A2A">🚫 ' + label + ' · check before eating</span>';
+    if (strong) return '<span class="scan-pill" style="display:inline-block;margin:0 6px 6px 0;background:#FFF1E0;border-color:#F2C58F;color:#8A4B13">⚠️ ' + label + '</span>';
+    return '<span class="scan-pill" style="display:inline-block;margin:0 6px 6px 0;background:#E8F7EF;border-color:#BFE3CF;color:#1F6B42">' + label + '</span>';
   }
 
   function showRescue(found) {
     var box = $('scanResult');
     if (!box) return;
-    var chips = found.food.map(function (x) {
-      return '<span class="scan-pill" style="display:inline-block;margin:0 6px 6px 0;background:#E8F7EF;border-color:#BFE3CF;color:#1F6B42">' +
-        esc(x.name.charAt(0).toUpperCase() + x.name.slice(1)) + (x.state ? ' · ' + esc(x.state) : '') + '</span>';
-    }).join('');
-    var drinkNote = found.drinks.length
-      ? '<div class="scan-summary-sub" style="margin-top:4px">🥤 Drinks to enjoy soon: ' + esc(found.drinks.map(function (d) { return d.name; }).join(', ')) + '</div>'
-      : '';
-    var title = found.food.length ? '🥬 Rescue these first (' + found.food.length + ')' : 'No food to rescue spotted yet';
-    var sub = found.food.length
-      ? 'Tap <b>Find Meals From This</b> to see dishes that use them. Add pantry basics you have (rice, eggs, oil…) for more ideas.'
-      : 'Try a closer photo of the food that needs to be used soon, or type it below.';
-    box.innerHTML = '<div class="scan-summary" data-wm-scan="1">' +
-      '<div class="scan-summary-title">' + title + '</div>' +
-      '<div class="scan-summary-sub" style="margin-bottom:10px">' + sub + '</div>' +
-      '<div>' + chips + '</div>' + drinkNote + '</div>';
+    var urgentAll = found.food.filter(function (x) { return x.urgent; });
+    var others = found.food.filter(function (x) { return !x.urgent; });
+    var html = '';
+    if (urgentAll.length) {
+      html += '<div class="scan-summary-title">🥬 Rescue these first (' + found.urgent.length + ')</div>' +
+        '<div class="scan-summary-sub" style="margin-bottom:10px">These look like they should be used soon. Tap <b>Find Meals From This</b>: dishes that use them come first.</div>' +
+        '<div>' + urgentAll.map(function (x) { return chip(x, true); }).join('') + '</div>';
+      if (others.length) html += '<div class="scan-summary-sub" style="margin:8px 0 6px"><b>Also spotted (' + others.length + ')</b></div><div>' + others.map(function (x) { return chip(x, false); }).join('') + '</div>';
+    } else if (found.food.length) {
+      html += '<div class="scan-summary-title">🥬 Food Rescue: ' + found.food.length + ' items found</div>' +
+        '<div class="scan-summary-sub" style="margin-bottom:10px">Nothing looks old yet. 👍 Tip: snap only the food that needs to be used soon (opened, soft, leftovers) for better rescue ideas. You can still tap <b>Find Meals From This</b>.</div>' +
+        '<div>' + others.map(function (x) { return chip(x, false); }).join('') + '</div>';
+    } else {
+      html += '<div class="scan-summary-title">No food to rescue spotted yet</div>' +
+        '<div class="scan-summary-sub">Try a closer photo of the food that needs to be used soon, or type it below.</div>';
+    }
+    if (found.drinks.length) html += '<div class="scan-summary-sub" style="margin-top:4px">🥤 Drinks to enjoy soon: ' + esc(found.drinks.map(function (d) { return d.name; }).join(', ')) + '</div>';
+    box.innerHTML = '<div class="scan-summary" data-wm-scan="1">' + html + '</div>';
     if (box.scrollIntoView) box.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
