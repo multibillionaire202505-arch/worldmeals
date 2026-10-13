@@ -24,13 +24,13 @@
   var rescueItems = [];
 
   function $(id) { return document.getElementById(id); }
-  function setStatus(title, sub) {
+  function setStatus(title, sub, stay) {
     var box = $('scanResult');
     if (!box) return;
     box.innerHTML = '<div class="scan-summary" data-wm-scan="1"><div class="scan-summary-title"></div><div class="scan-summary-sub"></div></div>';
     box.querySelector('.scan-summary-title').textContent = title;
     box.querySelector('.scan-summary-sub').textContent = sub || '';
-    if (box.scrollIntoView) box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (!stay && box.scrollIntoView) box.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
   function shrink(file) {
     return new Promise(function (resolve, reject) {
@@ -132,7 +132,7 @@
         if (mode === m[0]) return;
         setMode(m[0]);
         var box = $('scanResult');
-        if (box && m[0] === 'rescue') setStatus('🥬 Food Rescue', 'Snap the food that needs to be used soon (or type it below). WorldMeals shows dishes that use it first, so nothing goes to waste.');
+        if (box && m[0] === 'rescue') setStatus('🥬 Food Rescue', 'Snap the food that needs to be used soon (or type it below). WorldMeals shows dishes that use it first, so nothing goes to waste.', true);
         else if (box) box.innerHTML = '';
       });
       bar.appendChild(b);
@@ -222,7 +222,9 @@
       var self = this, args = arguments;
       if (!String(($('scanIngredients') || {}).value || '').trim()) return originalFind.apply(this, arguments);
       if (kidsOnly && !kidsAge) {
-        setStatus("🧒 Choose your child's age", 'Pick an age above to see kids dishes that are right for that age.');
+        setStatus("🧒 Choose your child's age", 'Pick an age above to see kids dishes that are right for that age.', true);
+        var ages = $('wmRescueAge');
+        if (ages && ages.scrollIntoView) ages.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
       }
       if (!rescueRunning) {
