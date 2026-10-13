@@ -19,6 +19,8 @@
   var busy = false;
   var MODE_KEY = 'wm_scan_mode_ios';
   var mode = 'fridge';
+  var kidsOnly = false;
+  var kidsAge = '';                // Kids dishes: '6-12m', '1-2y', '3-5y', '6-8y' or '9-12y'            // Food Rescue: true = search only the kids dishes
   var rescueItems = [];
 
   function $(id) { return document.getElementById(id); }
@@ -105,6 +107,10 @@
       b.style.borderColor = on ? '#167A5A' : '#E8D3B8';
     });
     if (mode === 'fridge') rescueItems = [];
+    var forBar = $('wmRescueFor');
+    if (forBar) forBar.style.display = mode === 'rescue' ? 'flex' : 'none';
+    var ageBar = $('wmRescueAge');
+    if (ageBar) ageBar.style.display = (mode === 'rescue' && kidsOnly) ? 'flex' : 'none';
   }
 
   function setupRescue(scanButton) {
@@ -132,6 +138,79 @@
       bar.appendChild(b);
     });
     scanButton.insertAdjacentElement('beforebegin', bar);
+
+    // Food Rescue only: parents choose who the dishes are for.
+    var forBar = document.createElement('div');
+    forBar.id = 'wmRescueFor';
+    forBar.setAttribute('role', 'group');
+    forBar.setAttribute('aria-label', 'Dishes for');
+    forBar.style.cssText = 'display:none;gap:8px;margin:-2px 0 12px';
+    function paintFor() {
+      [['adult', false], ['kids', true]].forEach(function (k) {
+        var b = $('wmFor-' + k[0]);
+        if (!b) return;
+        var on = kidsOnly === k[1];
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        b.style.background = on ? '#FFF1E0' : '#fff';
+        b.style.borderColor = on ? '#E8A04A' : '#E8D3B8';
+        b.style.color = on ? '#8A4B13' : '#7A6B5D';
+      });
+    }
+    [['adult', '🍽️ Grown-up dishes', false], ['kids', '🧒 Kids dishes', true]].forEach(function (k) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.id = 'wmFor-' + k[0]; b.textContent = k[1];
+      b.style.cssText = 'flex:1;min-height:42px;border-radius:999px;border:1.5px solid #E8D3B8;font-family:inherit;font-size:13px;font-weight:800;cursor:pointer;background:#fff';
+      b.addEventListener('click', function () {
+        if (kidsOnly === k[2]) return;
+        kidsOnly = k[2];
+        paintFor();
+        var ageBar = $('wmRescueAge');
+        if (ageBar) ageBar.style.display = kidsOnly ? 'flex' : 'none';
+        try { localStorage.setItem('wm_rescue_for_ios', kidsOnly ? 'kids' : 'adult'); } catch (e) {}
+        var box = $('scanResult');
+        if (box && box.querySelector('.chef-match-card') && typeof window.scanFindMeals === 'function') window.scanFindMeals();
+      });
+      forBar.appendChild(b);
+    });
+    try { kidsOnly = localStorage.getItem('wm_rescue_for_ios') === 'kids'; } catch (e) {}
+    bar.insertAdjacentElement('afterend', forBar);
+    paintFor();
+
+    // Kids dishes are organized by age; dishes for one age can be unsafe for a younger child,
+    // so parents pick the age and only that age's dishes are searched.
+    var AGES = [['6-12m', '👶 6–12 mo'], ['1-2y', '🧒 1–2 yrs'], ['3-5y', '🧒 3–5 yrs'], ['6-8y', '🧒 6–8 yrs'], ['9-12y', '🧑 9–12 yrs']];
+    var ageBar = document.createElement('div');
+    ageBar.id = 'wmRescueAge';
+    ageBar.setAttribute('role', 'group');
+    ageBar.setAttribute('aria-label', "Child's age");
+    ageBar.style.cssText = 'display:none;flex-wrap:wrap;gap:6px;margin:-4px 0 12px';
+    function paintAge() {
+      AGES.forEach(function (a) {
+        var b = $('wmAge-' + a[0]);
+        if (!b) return;
+        var on = kidsAge === a[0];
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        b.style.background = on ? '#167A5A' : '#fff';
+        b.style.borderColor = on ? '#167A5A' : '#E8D3B8';
+        b.style.color = on ? '#fff' : '#7A6B5D';
+      });
+    }
+    AGES.forEach(function (a) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.id = 'wmAge-' + a[0]; b.textContent = a[1];
+      b.style.cssText = 'flex:1 1 30%;min-height:38px;border-radius:999px;border:1.5px solid #E8D3B8;font-family:inherit;font-size:12.5px;font-weight:800;cursor:pointer;background:#fff;white-space:nowrap';
+      b.addEventListener('click', function () {
+        kidsAge = a[0];
+        paintAge();
+        try { localStorage.setItem('wm_rescue_for_ios_age', kidsAge); } catch (e) {}
+        var input = String(($('scanIngredients') || {}).value || '').trim();
+        if (input && typeof window.scanFindMeals === 'function') window.scanFindMeals();
+      });
+      ageBar.appendChild(b);
+    });
+    try { var savedAge = localStorage.getItem('wm_rescue_for_ios_age') || ''; if (AGES.some(function (a) { return a[0] === savedAge; })) kidsAge = savedAge; } catch (e) {}
+    forBar.insertAdjacentElement('afterend', ageBar);
+    paintAge();
     setMode('fridge');
 
     // "Find Meals From This": in Food Rescue, dishes that use the rescue items come first.
@@ -142,6 +221,10 @@
       if (mode !== 'rescue') return originalFind.apply(this, arguments);
       var self = this, args = arguments;
       if (!String(($('scanIngredients') || {}).value || '').trim()) return originalFind.apply(this, arguments);
+      if (kidsOnly && !kidsAge) {
+        setStatus("🧒 Choose your child's age", 'Pick an age above to see kids dishes that are right for that age.');
+        return;
+      }
       if (!rescueRunning) {
         rescueRunning = true;
         setStatus('🥬 Finding dishes to rescue your food…', 'One moment.');
@@ -164,7 +247,9 @@
         rescueTokens.forEach(function (tok) {
           String(tok).toLowerCase().split(/\s+/).forEach(function (w) { if (w.length > 2 && keys.indexOf(w) === -1) keys.push(w); });
         });
-        var meals = (typeof MEALS !== 'undefined' && Array.isArray(MEALS)) ? MEALS : [];
+        var kids = (typeof KIDS_MEALS !== 'undefined' && Array.isArray(KIDS_MEALS)) ? KIDS_MEALS : (window.WORLD_KIDS_MEALS || []);
+        if (kidsOnly) kids = kids.filter(function (m) { return (m.tags || []).indexOf('kids-' + kidsAge) !== -1; });
+        var meals = kidsOnly ? kids : ((typeof MEALS !== 'undefined' && Array.isArray(MEALS)) ? MEALS : []);
         var pool = {}, order = [];
         var quick = [];
         meals.forEach(function (meal) {
@@ -209,7 +294,13 @@
       finally { window.getChefMatches = originalMatches; }
       var box = $('scanResult');
       var cards = box ? box.querySelectorAll('.chef-match-card') : [];
-      if (!cards.length) return;
+      if (!cards.length) {
+        if (kidsOnly && box) {
+          var label = ($('wmAge-' + kidsAge) || {}).textContent || 'this age';
+          setStatus('No ' + label.replace(/^\S+\s/, '') + ' dishes use these items yet', 'Try another age, switch to Grown-up dishes, or add pantry basics you have (rice, eggs, oil…).');
+        }
+        return;
+      }
       cards.forEach(function (card, i) {
         var r = sorted[i];
         if (!r || !r.hits.length) return;
@@ -221,7 +312,7 @@
       });
       var banner = document.createElement('div');
       banner.className = 'scan-summary';
-      banner.innerHTML = '<div class="scan-summary-title">🥬 Food Rescue</div><div class="scan-summary-sub">Dishes that use your rescue items come first: <b>' + esc(rescueTokens.slice(0, 6).join(', ')) + '</b></div>';
+      banner.innerHTML = '<div class="scan-summary-title">🥬 Food Rescue' + (kidsOnly ? ' · ' + (($('wmAge-' + kidsAge) || {}).textContent || '🧒 Kids') : '') + '</div><div class="scan-summary-sub">' + (kidsOnly ? 'Kids dishes' : 'Dishes') + ' that use your rescue items come first: <b>' + esc(rescueTokens.slice(0, 6).join(', ')) + '</b></div>';
       box.insertBefore(banner, box.firstChild);
     };
   }
