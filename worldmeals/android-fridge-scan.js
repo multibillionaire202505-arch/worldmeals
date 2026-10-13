@@ -421,12 +421,25 @@
           return { x: x, i: i, hits: hits };
         }).filter(function (r) { return r.hits.length; });
         list.sort(function (a, b) { return b.hits.length - a.hits.length || b.x.score - a.x.score || a.i - b.i; });
+        // Variety: the many look-alike "<Country> Chicken ... Bowl" dishes, smoothies and salads would
+        // otherwise fill every spot, so keep at most 2 bowls, 1 smoothie and 2 salads.
+        var LIMIT = { bowl: 2, smoothie: 1, salad: 2 }, kinds = {};
+        function kindOf(meal) {
+          var n = String(meal.name || '');
+          if (/smoothie/i.test(n)) return 'smoothie';
+          if (/salad/i.test(n)) return 'salad';
+          if (/bowl\s*$/i.test(n) && (/weight[- ]loss|protein/i.test(n) || /^\S+(an|ese|ish|i|ic|ch)\s/i.test(n))) return 'bowl';
+          return '';
+        }
+        function fits(r) { var k = kindOf(r.x.meal); return !k || (kinds[k] || 0) < LIMIT[k]; }
+        function take(r) { var k = kindOf(r.x.meal); if (k) kinds[k] = (kinds[k] || 0) + 1; used[r.x.meal.id] = 1; picked.push(r); }
         var picked = [], used = {};
         rescueTokens.forEach(function (t) {            // at least one dish for every rescue item
-          var r = list.find(function (r) { return r.hits.indexOf(t) !== -1; });
-          if (r && !used[r.x.meal.id]) { used[r.x.meal.id] = 1; picked.push(r); }
+          var r = list.find(function (r) { return r.hits.indexOf(t) !== -1 && !used[r.x.meal.id] && fits(r); });
+          if (r) take(r);
         });
-        list.forEach(function (r) { if (picked.length < 9 && !used[r.x.meal.id]) { used[r.x.meal.id] = 1; picked.push(r); } });
+        list.forEach(function (r) { if (picked.length < 9 && !used[r.x.meal.id] && fits(r)) take(r); });
+        if (!picked.length) list.slice(0, 9).forEach(take);
         picked.sort(function (a, b) { return b.hits.length - a.hits.length || b.x.score - a.x.score; });
         sorted = picked;
         return picked.map(function (r) { return r.x; });
