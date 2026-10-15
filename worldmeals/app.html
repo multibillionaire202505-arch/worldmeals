@@ -2157,6 +2157,9 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 #page-kids .wk-opt.on small{color:#B4601A}
 #page-kids .wk-find{width:100%;border:0;border-radius:20px;padding:17px 16px;margin:4px 0 16px;background:linear-gradient(180deg,#EE8A30,#D4680F);color:#fff;font:850 18px/1 Inter,system-ui,sans-serif;cursor:pointer;box-shadow:0 10px 22px rgba(212,104,15,.28)}
 #page-kids #kidsResults{scroll-margin-top:96px}
+#page-kids .wk-dish-search{margin:0 0 14px}
+#page-kids #kidsSearchResults{margin:0 0 16px}
+#page-kids .wk-snote{font:600 12.5px Inter,system-ui,sans-serif;color:#7A6552;margin:-6px 2px 10px}
 #page-kids .wk-results-head{display:flex;justify-content:space-between;align-items:center;margin:4px 2px 10px;font:800 15px Inter,system-ui,sans-serif;color:#2B1D12}
 #page-kids .wk-results-head button{border:0;background:none;color:#C4651A;font:800 13px Inter,system-ui,sans-serif;cursor:pointer}
 @media(max-width:380px){#page-kids .wk-opt{font-size:11.5px}#page-kids .wk-chips .wk-opt{font-size:11px;padding:9px 4px}#page-kids .wk-title{font-size:25px}}
@@ -2168,6 +2171,16 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
   </div>
   <div class="wk-hero">
     <img src="/images/dishes/Kids/kids-hero.jpg" alt="Happy kids enjoying WorldMeals dishes" onerror="this.remove()">
+  </div>
+  <div class="wk-search wk-dish-search">
+    <span class="wk-search-ic">🔍</span>
+    <input id="kidsDishSearch" type="text" enterkeyhint="search" autocomplete="off" placeholder="Search kids dishes: name, country or ingredient" oninput="wmKidsSearch()">
+    <button type="button" class="wk-search-chev" id="kidsDishClear" aria-label="Clear search" onclick="wmKidsSearchClear()" hidden>✕</button>
+  </div>
+  <div id="kidsSearchResults" hidden>
+    <div class="wk-results-head"><span id="kidsSearchLbl"></span><button type="button" onclick="wmKidsSearchClear()">✕ Clear</button></div>
+    <div class="wk-snote" id="kidsSearchNote" hidden>Searching within your choices below.</div>
+    <div class="grid" id="kidsSearchGrid"></div>
   </div>
 
   <div class="wk-card">
@@ -2473,6 +2486,7 @@ document.addEventListener("click",e=>{
   if(box.dataset.wkSingle){ const was=set.has(v); set.clear(); box.querySelectorAll(".wk-opt").forEach(b=>b.classList.remove("on")); if(!was){set.add(v);btn.classList.add("on");} }
   else { if(set.has(v)){set.delete(v);btn.classList.remove("on");}else{set.add(v);btn.classList.add("on");} }
   if(!document.getElementById("kidsResults").hidden) renderKids(false);
+  if(wmKidsQuery()) wmKidsRenderSearch();
 });
 function wmKidsClear(){
   Object.values(wmKids).forEach(s=>s.clear());
@@ -2494,14 +2508,7 @@ function renderKids(scroll){
     if(f==="nut-free") return !has(m,"peanuts")&&!has(m,"nuts");
     return has(m,f);
   };
-  const list=KIDS_MEALS.filter(m=>{
-    for(const a of wmKids.age) if(!has(m,"kids-"+a)) return false;
-    for(const t of wmKids.meal) if(!has(m,t)) return false;
-    for(const f of wmKids.fit) if(!fitOk(m,f)) return false;
-    for(const x of wmKids.avoid) if(!has(m,"no-"+x)) return false;
-    if(wmKidsCountry!=="all"&&m.country!==wmKidsCountry) return false;
-    return true;
-  });
+  const list=wmKidsFilter(KIDS_MEALS,wmKidsQuery(),has,fitOk);
   res.hidden=false;
   lbl.textContent=`${list.length} ${list.length===1?"meal":"meals"} for your child`;
   const note=wmKids.fit.has("sensory-friendly")
@@ -2509,7 +2516,11 @@ function renderKids(scroll){
   if(!list.length){
     g.innerHTML='<div class="empty">🧒 More kids dishes for these choices are coming soon.<br><br>Try another age or remove a choice.</div>';
   }else{
-  g.innerHTML=note+list.map(m=>`
+  g.innerHTML=note+list.map(wmKidsCardHTML).join("");
+  }
+  if(scroll) res.scrollIntoView({behavior:"smooth",block:"start"});
+}
+function wmKidsCardHTML(m){ return `
     <div class="card" onclick="openModal(${m.id})">
       <div class="card-img">${foodImageHTML(m)}</div>
       <button class="fav-btn" onclick="event.stopPropagation();toggleFav(${m.id})">${favs.includes(m.id)?"❤️":"🤍"}</button>
@@ -2527,9 +2538,53 @@ function renderKids(scroll){
         </div>
         <button class="view-recipe-btn" onclick="event.stopPropagation();openModal(${m.id})">View Recipe</button>
       </div>
-    </div>`).join("");
-  }
-  if(scroll) res.scrollIntoView({behavior:"smooth",block:"start"});
+    </div>`; }
+/* KIDS DISH SEARCH — type a name, country or ingredient; stays within any choices already picked. */
+const wmKidsNorm=s=>String(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/&/g," and ");
+function wmKidsQuery(){ return wmKidsNorm(document.getElementById("kidsDishSearch")?.value).trim(); }
+function wmKidsHasChoices(){ return Object.values(wmKids).some(s=>s.size)||wmKidsCountry!=="all"; }
+function wmKidsFilter(src,q,has,fitOk){
+  const words=q?q.split(/\s+/).filter(Boolean):[];
+  return src.filter(m=>{
+    for(const a of wmKids.age) if(!has(m,"kids-"+a)) return false;
+    for(const t of wmKids.meal) if(!has(m,t)) return false;
+    for(const f of wmKids.fit) if(!fitOk(m,f)) return false;
+    for(const x of wmKids.avoid) if(!has(m,"no-"+x)) return false;
+    if(wmKidsCountry!=="all"&&m.country!==wmKidsCountry) return false;
+    if(words.length){
+      const hay=m._wmq||(m._wmq=wmKidsNorm([m.name,m.country,m.region,(m.ingredients||[]).join(" ")].join(" ")));
+      for(const w of words) if(!hay.includes(w)) return false;
+    }
+    return true;
+  });
+}
+let wmKidsSearchT=0;
+function wmKidsSearch(){ clearTimeout(wmKidsSearchT); wmKidsSearchT=setTimeout(wmKidsRenderSearch,150); }
+function wmKidsRenderSearch(){
+  const box=document.getElementById("kidsSearchResults"), g=document.getElementById("kidsSearchGrid");
+  if(!box||!g) return;
+  const q=wmKidsQuery();
+  document.getElementById("kidsDishClear").hidden=!q;
+  if(!q){ box.hidden=true; g.innerHTML=""; return; }
+  const has=(m,t)=>(m.tags||[]).includes(t);
+  const fitOk=(m,f)=>{
+    if(f==="picky-friendly") return has(m,"picky")||has(m,"little-picky")||has(m,"very-picky");
+    if(f==="vegetarian") return has(m,"vegetarian")||has(m,"vegan");
+    if(f==="egg-free") return has(m,"no-eggs");
+    if(f==="nut-free") return !has(m,"peanuts")&&!has(m,"nuts");
+    return has(m,f);
+  };
+  const list=wmKidsFilter(KIDS_MEALS,q,has,fitOk);
+  box.hidden=false;
+  document.getElementById("kidsSearchNote").hidden=!wmKidsHasChoices();
+  document.getElementById("kidsSearchLbl").textContent=`${list.length} ${list.length===1?"dish":"dishes"} found`;
+  g.innerHTML=list.length?list.map(wmKidsCardHTML).join("")
+    :'<div class="empty">🔍 No kids dish matches that yet.<br><br>Try another word, like a country or an ingredient.</div>';
+}
+function wmKidsSearchClear(){
+  const i=document.getElementById("kidsDishSearch"); if(i) i.value="";
+  wmKidsRenderSearch();
+  if(!document.getElementById("kidsResults").hidden) renderKids(false);
 }
 
 // Clear old AI/Unsplash photo cache so local dish photos stay correct.
