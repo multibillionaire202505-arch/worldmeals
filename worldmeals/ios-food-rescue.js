@@ -24,10 +24,28 @@
   var rescueItems = [];
 
   function $(id) { return document.getElementById(id); }
-  function setStatus(title, sub, stay) {
+  // Scan feedback colors: orange blinking while scanning, green when food is found, red blinking when it fails.
+  (function addScanToneStyle() {
+    if (document.getElementById('wmScanToneStyle')) return;
+    var st = document.createElement('style'); st.id = 'wmScanToneStyle';
+    st.textContent =
+      '#scanResult .scan-summary.wm-tone-scan{border:2px solid #F28C28;border-radius:22px;animation:wmScanPulse 1.1s ease-in-out infinite}' +
+      '#scanResult .scan-summary.wm-tone-scan .scan-summary-title{color:#D9630B;animation:wmScanBlink 1.1s ease-in-out infinite}' +
+      '@keyframes wmScanPulse{0%,100%{background:#FFF8EF;box-shadow:0 0 0 0 rgba(242,140,40,.45)}50%{background:#FFE7CC;box-shadow:0 0 0 8px rgba(242,140,40,0)}}' +
+      '@keyframes wmScanBlink{0%,100%{opacity:1}50%{opacity:.4}}' +
+      '#scanResult .scan-summary.wm-tone-ok{border:2px solid #2E9E5B;border-radius:22px;animation:wmScanOk .5s ease-in-out 2}' +
+      '#scanResult .scan-summary.wm-tone-ok .scan-summary-title{color:#1F7A45}' +
+      '@keyframes wmScanOk{50%{background:#D3F0DD;box-shadow:0 0 0 6px rgba(46,158,91,.18)}}' +
+      '#scanResult .scan-summary.wm-tone-fail{border:2px solid #E0453A;border-radius:22px;background:#FDEDEC;animation:wmScanFail .5s ease-in-out 5}' +
+      '#scanResult .scan-summary.wm-tone-fail .scan-summary-title{color:#C0392B}' +
+      '@keyframes wmScanFail{50%{background:#F8C6C1;box-shadow:0 0 0 6px rgba(224,69,58,.20)}}' +
+      '@media (prefers-reduced-motion:reduce){#scanResult .scan-summary,#scanResult .scan-summary-title{animation:none!important}}';
+    (document.head || document.documentElement).appendChild(st);
+  })();
+  function setStatus(title, sub, stay, tone) {
     var box = $('scanResult');
     if (!box) return;
-    box.innerHTML = '<div class="scan-summary" data-wm-scan="1"><div class="scan-summary-title"></div><div class="scan-summary-sub"></div></div>';
+    box.innerHTML = '<div class="scan-summary' + (tone ? ' wm-tone-' + tone : '') + '" data-wm-scan="1"><div class="scan-summary-title"></div><div class="scan-summary-sub"></div></div>';   // tone: 'scan' (orange), 'ok' (green), 'fail' (red)
     box.querySelector('.scan-summary-title').textContent = title;
     box.querySelector('.scan-summary-sub').textContent = sub || '';
     if (!stay && box.scrollIntoView) box.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -54,22 +72,22 @@
     if (!file || busy) return;
     busy = true;
     try {
-      setStatus('Scanning your food… 🔍', 'WorldMeals is looking at what needs to be rescued. This takes a few seconds.');
+      setStatus('Scanning your food… 🔍', 'WorldMeals is looking at what needs to be rescued. This takes a few seconds.', false, 'scan');
       var image = await shrink(file);
       var preview = $('scanPreviewImg'), wrap = $('scanPreview');
       if (preview && wrap) { preview.src = image; wrap.style.display = 'block'; }
       var res = await fetch('/api/scan-fridge', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ image: image }) });
       var data = {};
       try { data = await res.json(); } catch (e) {}
-      if (!res.ok) { setStatus('Scan needs another try', (data.error || 'WorldMeals could not analyze that photo.') + ' Try a closer photo of fewer items, or type them below.'); return; }
+      if (!res.ok) { setStatus('Scan needs another try', (data.error || 'WorldMeals could not analyze that photo.') + ' Try a closer photo of fewer items, or type them below.', false, 'fail'); return; }
       var found = rescueList(data.ingredients);
-      if (!found.food.length && !found.drinks.length) { setStatus('No food spotted yet', 'Try a brighter, closer photo, or type your ingredients below.'); return; }
+      if (!found.food.length && !found.drinks.length) { setStatus('No food spotted yet', 'Try a brighter, closer photo, or type your ingredients below.', false, 'fail'); return; }
       rescueItems = (found.urgent.length ? found.urgent : found.food.filter(function (x) { return !x.unsafe; })).map(function (x) { return x.name; });
       var box = $('scanIngredients');
       if (box) box.value = found.food.filter(function (x) { return !x.unsafe; }).map(function (x) { return x.name; }).join(', ');
       showRescue(found);
     } catch (err) {
-      setStatus('Scan needs another try', 'Check your internet connection and try again, or type your ingredients below.');
+      setStatus('Scan needs another try', 'Check your internet connection and try again, or type your ingredients below.', false, 'fail');
     } finally {
       busy = false;
     }
@@ -393,7 +411,7 @@
         '<div class="scan-summary-sub">Try a closer photo of the food that needs to be used soon, or type it below.</div>';
     }
     if (found.drinks.length) html += '<div class="scan-summary-sub" style="margin-top:4px">🥤 Drinks to enjoy soon: ' + esc(found.drinks.map(function (d) { return d.name; }).join(', ')) + '</div>';
-    box.innerHTML = '<div class="scan-summary" data-wm-scan="1">' + html + '</div>';
+    box.innerHTML = '<div class="scan-summary wm-tone-ok" data-wm-scan="1">' + html + '</div>';   // food found: green
     if (box.scrollIntoView) box.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
