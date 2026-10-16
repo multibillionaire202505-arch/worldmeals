@@ -1833,7 +1833,7 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
            class="main-brand-logo">
     </div>
     <div class="search-wrap">
-      <input class="search" id="searchInput" placeholder="Search dishes, ingredients or countries..." oninput="renderGrid();updateSearchClear()" onfocus="updateSearchClear()" onblur="setTimeout(updateSearchClear,120)">
+      <input class="search" id="searchInput" placeholder="Search a dish, food or country" oninput="renderGrid();updateSearchClear()" onfocus="updateSearchClear()" onblur="setTimeout(updateSearchClear,120)">
       <button type="button" class="search-clear" id="searchClearBtn" aria-label="Clear search" onclick="clearSearch()">✕</button>
     </div>
   </div>
@@ -5547,5 +5547,29 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
   };
 })();
 </script>
+<style>
+/* WORLDMEALS — ENGRAVED GLASS SEARCH BARS (same look as the Kids dish search) */
+.search-wrap .search,
+.wmp-search,
+#page-kids .wk-search:not(.wk-dish-search){
+  background:linear-gradient(180deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.22) 46%,rgba(255,255,255,0) 50%),linear-gradient(180deg,#E8D4BC 0%,#F2E3D0 40%,#FAF1E5 100%) !important;
+  border:1px solid rgba(255,255,255,.95) !important;
+  box-shadow:inset 0 7px 14px rgba(110,60,15,.30),inset 0 3px 4px rgba(110,60,15,.22),inset 0 -3px 4px rgba(255,255,255,.95),0 1px 0 rgba(255,255,255,.95) !important;
+}
+.search-wrap .search,.wmp-search,#page-kids .wk-search:not(.wk-dish-search) input{
+  font-weight:800 !important;color:#5A3E25 !important;text-shadow:0 1px 1px rgba(255,255,255,.9),0 -1px 1px rgba(90,50,20,.30);
+}
+.search-wrap .search::placeholder,.wmp-search::placeholder,#page-kids .wk-search:not(.wk-dish-search) input::placeholder{
+  color:rgba(112,74,40,.50) !important;font-weight:800 !important;text-shadow:0 1px 1px rgba(255,255,255,1),0 -1px 1px rgba(90,50,20,.38);
+}
+.search-wrap .search:focus,.wmp-search:focus,#page-kids .wk-search:not(.wk-dish-search):focus-within{
+  transform:none !important;
+  background:linear-gradient(180deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.22) 46%,rgba(255,255,255,0) 50%),linear-gradient(180deg,#E8D4BC 0%,#F2E3D0 40%,#FAF1E5 100%) !important;
+  border-color:#E9B27A !important;
+  box-shadow:inset 0 7px 14px rgba(110,60,15,.32),inset 0 3px 4px rgba(110,60,15,.24),inset 0 -3px 4px rgba(255,255,255,.95),0 0 0 3px rgba(233,137,58,.18) !important;
+}
+#page-kids .wk-search:not(.wk-dish-search){height:56px;border-radius:20px}
+.wmp-search{border-radius:18px !important}
+</style>
 </body>
 </html>
