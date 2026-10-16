@@ -73,6 +73,9 @@
     busy = true;
     try {
       setStatus('Scanning your food… 🔍', 'WorldMeals is looking at what needs to be rescued. This takes a few seconds.', false, 'scan');
+      var oldList = $('scanIngredients');   // new photo: clear the last scan's ingredients right away
+      if (oldList) oldList.value = '';
+      rescueItems = [];
       var image = await shrink(file);
       var preview = $('scanPreviewImg'), wrap = $('scanPreview');
       if (preview && wrap) { preview.src = image; wrap.style.display = 'block'; }
