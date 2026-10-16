@@ -2157,7 +2157,13 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 #page-kids .wk-opt.on small{color:#B4601A}
 #page-kids .wk-find{width:100%;border:0;border-radius:20px;padding:17px 16px;margin:4px 0 16px;background:linear-gradient(180deg,#EE8A30,#D4680F);color:#fff;font:850 18px/1 Inter,system-ui,sans-serif;cursor:pointer;box-shadow:0 10px 22px rgba(212,104,15,.28)}
 #page-kids #kidsResults{scroll-margin-top:96px}
-#page-kids .wk-dish-search{margin:0 0 14px}
+#page-kids .wk-dish-search{position:relative;margin:0 0 16px;height:58px;border-radius:22px;border:1px solid rgba(255,255,255,.95);background:linear-gradient(180deg,#E8D4BC 0%,#F2E3D0 40%,#FAF1E5 100%);box-shadow:inset 0 7px 14px rgba(110,60,15,.30),inset 0 3px 4px rgba(110,60,15,.22),inset 0 -3px 4px rgba(255,255,255,.95),0 1px 0 rgba(255,255,255,.95),0 -1px 0 rgba(120,70,20,.10)}
+#page-kids .wk-dish-search::after{content:"";position:absolute;inset:1px;border-radius:21px;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.22) 46%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%)}
+#page-kids .wk-dish-search>*{position:relative;z-index:0}
+#page-kids .wk-dish-search:focus-within{border-color:#E9B27A;box-shadow:inset 0 5px 10px rgba(120,70,20,.24),inset 0 2px 3px rgba(120,70,20,.18),inset 0 -2px 3px rgba(255,255,255,.95),0 0 0 3px rgba(233,137,58,.18)}
+#page-kids .wk-dish-search input{font:800 15.5px Inter,system-ui,sans-serif;color:#5A3E25;text-shadow:0 1px 1px rgba(255,255,255,.9),0 -1px 1px rgba(90,50,20,.30)}
+#page-kids .wk-dish-search input::placeholder{color:rgba(112,74,40,.50);text-shadow:0 1px 1px rgba(255,255,255,1),0 -1px 1px rgba(90,50,20,.38)}
+#page-kids .wk-dish-search .wk-search-ic{filter:drop-shadow(0 1px 0 rgba(255,255,255,.9));opacity:.7}
 #page-kids #kidsSearchResults{margin:0 0 16px}
 #page-kids .wk-snote{font:600 12.5px Inter,system-ui,sans-serif;color:#7A6552;margin:-6px 2px 10px}
 #page-kids .wk-results-head{display:flex;justify-content:space-between;align-items:center;margin:4px 2px 10px;font:800 15px Inter,system-ui,sans-serif;color:#2B1D12}
@@ -2174,7 +2180,7 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
   </div>
   <div class="wk-search wk-dish-search">
     <span class="wk-search-ic">🔍</span>
-    <input id="kidsDishSearch" type="text" enterkeyhint="search" autocomplete="off" placeholder="Search kids dishes: name, country or ingredient" oninput="wmKidsSearch()">
+    <input id="kidsDishSearch" type="text" enterkeyhint="search" autocomplete="off" placeholder="Search a dish, country or food" oninput="wmKidsSearch()">
     <button type="button" class="wk-search-chev" id="kidsDishClear" aria-label="Clear search" onclick="wmKidsSearchClear()" hidden>✕</button>
   </div>
   <div id="kidsSearchResults" hidden>
