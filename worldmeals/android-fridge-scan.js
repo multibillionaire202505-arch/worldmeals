@@ -142,6 +142,9 @@
     if (button) button.setAttribute('aria-busy', 'true');
     try {
       setStatus('Scanning your fridge… 🔍', 'WorldMeals is looking for ingredients in your photo. This takes a few seconds.', false, 'scan');
+      var oldList = $('scanIngredients');   // new photo: clear the last scan's ingredients right away
+      if (oldList) oldList.value = '';
+      rescueItems = [];
       var image = await shrink(file);
       setStatus('Scanning your fridge… 🔍', 'WorldMeals is looking for ingredients in your photo. This takes a few seconds.', false, 'scan');
       var out = await send(image, false);
