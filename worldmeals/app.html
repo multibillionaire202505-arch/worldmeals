@@ -1823,6 +1823,8 @@ html body .search-wrap .search-clear:hover,
 html body .search-wrap .search-clear:active{background:rgba(233,137,58,.12) !important;color:#C4651A !important}
 html body .wmp-search{border-radius:18px !important}
 </style>
+<style>html.wm-unlocking body::before{content:"\1F30D  Unlocking your plan\2026";position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;background:#FAF7F0;color:#1F1A14;font:800 18px Inter,system-ui,sans-serif}</style>
+<script>/* after a purchase from a locked feature, hide Browse until the plan is verified, then open the feature */(function(){try{var r=JSON.parse(localStorage.getItem("wm_return_page")||"null"),h=JSON.parse(localStorage.getItem("worldmeals.subscription.justPurchased")||"null"),n=Date.now();if(r&&h&&n-Number(r.at||0)<1800000&&n-Number(h.createdAt||0)<900000){document.documentElement.classList.add("wm-unlocking");setTimeout(function(){document.documentElement.classList.remove("wm-unlocking")},8000);}}catch(e){}})();</script>
 </head>
 <body>
 
@@ -1866,7 +1868,7 @@ html body .wmp-search{border-radius:18px !important}
            class="main-brand-logo">
     </div>
     <div class="search-wrap">
-      <input class="search" id="searchInput" placeholder="Search a dish, food or country" oninput="renderGrid();updateSearchClear()" onfocus="updateSearchClear()" onblur="setTimeout(updateSearchClear,120)">
+      <input class="search" id="searchInput" placeholder="Search a dish, food or country" oninput="updateSearchClear();clearTimeout(window.wmSearchT);window.wmSearchT=setTimeout(renderGrid,160)" onfocus="updateSearchClear()" onblur="setTimeout(updateSearchClear,120)">
       <button type="button" class="search-clear" id="searchClearBtn" aria-label="Clear search" onpointerdown="event.preventDefault();clearSearch()" onclick="clearSearch()">✕</button>
     </div>
   </div>
@@ -3185,7 +3187,7 @@ function renderGrid(){
     return;
   }
 
-  g.innerHTML=filtered.map(m=>`
+  const wmCard=m=>`
     <div class="card" onclick="openModal(${m.id})">
       <div class="card-img">${foodImageHTML(m)}</div>
       <button class="fav-btn" onclick="event.stopPropagation();toggleFav(${m.id})">${favs.includes(m.id)?"❤️":"🤍"}</button>
@@ -3204,9 +3206,13 @@ function renderGrid(){
         </div>
         <button class="view-recipe-btn" onclick="event.stopPropagation();openModal(${m.id})">View Recipe</button>
       </div>
-    </div>`).join("");
-
+    </div>`;
+  const wmTok=(window.wmGridTok=(window.wmGridTok||0)+1);
+  g.innerHTML=filtered.slice(0,40).map(wmCard).join("");
   scheduleMealPhotoLoad();
+  let wmAt=40;
+  const wmMore=()=>{if(wmTok!==window.wmGridTok||wmAt>=filtered.length)return;g.insertAdjacentHTML("beforeend",filtered.slice(wmAt,wmAt+80).map(wmCard).join(""));wmAt+=80;scheduleMealPhotoLoad();setTimeout(wmMore,30);};
+  setTimeout(wmMore,30);
 }
 
 function toggleFav(id){
@@ -4610,8 +4616,9 @@ function clearSearch(){
   if(!input) return;
   input.value="";
   updateSearchClear();
-  renderGrid();
+  clearTimeout(window.wmSearchT);
   input.focus();
+  setTimeout(renderGrid,0);
 }
 
 window.addEventListener("DOMContentLoaded", updateSearchClear);
@@ -4843,7 +4850,7 @@ function wmConfirmAIUse(container,featureName){
 function wmRequirePlan(required,featureName){if(wmHasPlan(required))return true;wmOpenUpgrade(featureName||"Premium feature",required);return false}
 function wmOpenUpgrade(featureName,requiredPlan="chef"){window.wmUpgradeFeature=featureName||"";const title=document.getElementById("wmUpgradeTitle"),copy=document.getElementById("wmUpgradeCopy"),meter=document.getElementById("wmUpgradeAIMeter");if(title)title.textContent=`Unlock ${featureName||"more of WorldMeals"} ✨`;if(copy)copy.textContent=requiredPlan==="passport"?"This experience is included with WorldMeals Passport.":"This experience is included with WorldMeals Chef and Passport.";if(meter)meter.textContent=wmPlan()==="explorer"?`Explorer AI recipes remaining: ${wmExplorerAIRemaining()} of 5`:"";document.getElementById("wmUpgrade")?.classList.add("open")}
 function wmCloseUpgrade(){document.getElementById("wmUpgrade")?.classList.remove("open")}function wmGoToPricing(){const p={"Camera & Fridge Scan":"scan","Weekly Meal Planner":"planner","World Tour Challenge":"tour","Kids meals":"kids"}[window.wmUpgradeFeature];try{if(p)localStorage.setItem("wm_return_page",JSON.stringify({page:p,at:Date.now()}));else localStorage.removeItem("wm_return_page")}catch(e){}window.location.href="index.html?stay=1#pricing"}
-function wmReturnToWantedPage(){/* after an upgrade, reopen the locked feature the user asked for (e.g. Fridge Scan) instead of Browse */let d=null;try{d=JSON.parse(localStorage.getItem("wm_return_page")||"null");localStorage.removeItem("wm_return_page")}catch(e){}if(!d||!d.page||Date.now()-Number(d.at||0)>30*60*1000)return;const need={scan:"passport",planner:"chef",tour:"chef",kids:"chef"}[d.page];if(need&&wmHasPlan(need))showPage(d.page)}
+function wmReturnToWantedPage(){/* after an upgrade, reopen the locked feature the user asked for (e.g. Fridge Scan) instead of Browse */let d=null;try{d=JSON.parse(localStorage.getItem("wm_return_page")||"null");localStorage.removeItem("wm_return_page")}catch(e){}if(!d||!d.page||Date.now()-Number(d.at||0)>30*60*1000)return;const need={scan:"passport",planner:"chef",tour:"chef",kids:"chef"}[d.page];if(need&&wmHasPlan(need))showPage(d.page);document.documentElement.classList.remove("wm-unlocking")}
 function wmPostNativeIAP(payload){const bridge=window.webkit?.messageHandlers?.worldMealsIAP;if(bridge?.postMessage){bridge.postMessage(payload);return true}return false}
 function wmConsumePurchaseHandoff(plan){
   const raw=localStorage.getItem(WM_KEYS.purchaseHandoff);
@@ -4893,6 +4900,7 @@ function wmApplyIAPDetail(detail={}){
     wmReturnToWantedPage();
     wmShowSubscriptionWelcome(detail.plan);
   }
+  if(detail.status==="entitlements"||detail.status==="success")document.documentElement.classList.remove("wm-unlocking");
 }
 window.addEventListener("worldmeals:iap",event=>wmApplyIAPDetail(event?.detail||{}));
 window.addEventListener("worldmeals:plan-changed",event=>wmApplyIAPDetail(event?.detail||{}));
