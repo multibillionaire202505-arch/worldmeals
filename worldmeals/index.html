@@ -6,6 +6,161 @@
 <meta name="description" content="Discover authentic dishes from Countries around the world, plan meals, explore global cuisines, and explore family-friendly dishes with WorldMeals Kids.">
 <title>World Meals — Every Dish. Every Country.</title>
 <link rel="manifest" href="/manifest.webmanifest">
+<style>
+/* Premium hero (step 1) */
+.hero .wm-daypart-hero{display:inline-flex!important;width:auto;max-width:100%;justify-content:center!important;gap:10px!important;margin:0 auto 22px!important;padding:6px 16px 6px 6px!important;border-radius:999px!important;background:rgba(255,253,249,.72)!important;border:1px solid rgba(120,90,50,.12)!important;box-shadow:0 6px 18px rgba(60,40,20,.06)!important}
+.hero .wm-daypart-hero .time-greeting-icon{width:34px!important;height:34px!important;min-width:34px!important;border-width:1px!important;box-shadow:none!important}
+.hero .wm-daypart-label{font-size:14px!important;line-height:1.3!important;font-weight:700!important;letter-spacing:0!important;text-align:left}
+.hero{text-align:center}
+.hero h1{letter-spacing:-.9px!important;line-height:1.06!important}
+.wm-kids-chip{display:inline-flex!important;align-items:center;gap:12px;margin-top:22px!important;padding:8px 14px 8px 8px;border-radius:999px;background:#fffdf9;border:1px solid rgba(120,90,50,.14);box-shadow:0 8px 22px rgba(60,40,20,.08);text-decoration:none!important;text-align:left;max-width:100%;transition:transform .2s ease,box-shadow .2s ease}
+.wm-kids-chip:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(60,40,20,.12)}
+.wm-kids-chip img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:0 0 44px}
+.wm-kids-chip-text{display:flex;flex-direction:column;gap:2px;min-width:0}
+.wm-kids-chip-top{font-size:15px;font-weight:800;letter-spacing:-.2px;line-height:1.2}
+.wm-kids-chip-new{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.08em;color:#fff;background:#D9701D;border-radius:999px;padding:2px 7px;vertical-align:2px;margin-right:2px}
+.wm-kc-w{color:#4E8F2A}.wm-kc-k{color:#D9701D}
+.wm-kids-chip-sub{font-size:12px;font-weight:600;color:#7d7266;line-height:1.3}
+.wm-kids-chip-arrow{width:30px;height:30px;flex:0 0 30px;border-radius:50%;display:grid;place-items:center;background:#F3EBDD;color:#3A2E22;font-weight:800;font-size:15px}
+.wm-nobr{white-space:nowrap}.wm-nobr em{white-space:normal}
+.wm-dj-line{margin:-6px 0 26px;font-size:14px;font-weight:700;color:#7A5A3A;letter-spacing:.01em}
+.wm-dj-line b{color:#D9701D;letter-spacing:.06em}
+.hero .wm-stores{margin:16px 0 14px}
+.wm-hero-facts{margin:4px auto 14px;max-width:560px;font-size:13px;line-height:1.7;color:#7d7266;font-weight:600}
+.wm-hero-facts i{font-style:normal;color:#c9a27a;margin:0 4px}
+.wm-start-control img,.wm-map-start img,.wm-action-start img,.wm-tour-start img{filter:hue-rotate(-80deg) saturate(.9) brightness(1.05)}
+.nav-cta.wm-start-control:hover{box-shadow:0 10px 24px rgba(217,112,29,.22)!important}
+@media(max-width:600px){
+ .hero{padding-top:92px!important;padding-bottom:40px!important}
+ .hero h1{font-size:clamp(32px,9.4vw,40px)!important;letter-spacing:-.6px!important;margin-bottom:16px!important}
+ .hero .wm-daypart-hero{margin-bottom:18px!important}
+ .hero-ctas{margin-bottom:6px!important;gap:10px!important}
+ .hero-ctas .btn-secondary{min-height:48px!important}
+ .wm-dj-line{margin:-4px 0 20px}
+ .hero .wm-daypart-label{font-size:13px!important}
+ .hero-sub{font-size:16px!important;line-height:1.6!important}
+}
+</style>
+<link rel="preload" as="image" href="/images/hero-table.jpg" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+/* ===== Premium hero (roadmap) ===== */
+.wm-hero2{position:relative;background:#F7E6CF;overflow:hidden;padding-top:200px}
+.wm-hero2-stage{position:relative;max-width:1600px;margin:0 auto;aspect-ratio:1672/940;max-height:860px;min-height:600px}
+.wm-hero2-visual{position:absolute;inset:0}
+.wm-hero2-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center;
+ -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 14%,#000 88%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 14%,#000 88%,transparent 100%)}
+.wm-hero2-phone{position:absolute;left:58.7%;bottom:57.5%;height:54%;aspect-ratio:600/1260;container-type:inline-size;transform:translateX(-50%) rotate(5deg);transform-origin:50% 100%}
+.wm-hero2-frame{width:100%;height:100%;box-sizing:border-box;border-radius:15cqw;padding:1.6cqw;background:linear-gradient(135deg,#ecebe7 0%,#a9a6a0 22%,#f7f6f2 46%,#8e8b85 70%,#d8d6d1 100%);box-shadow:0 .5cqw 0 rgba(255,255,255,.6) inset,0 12cqw 22cqw -3cqw rgba(70,40,15,.38),0 4cqw 7cqw rgba(70,40,15,.20)}
+.wm-hero2-phone::after{content:"";position:absolute;left:8%;right:8%;bottom:-3.5%;height:5%;border-radius:50%;background:radial-gradient(closest-side,rgba(60,35,15,.38),transparent);z-index:-1;filter:blur(2px)}
+.wm-hero2-bezel{position:relative;width:100%;height:100%;box-sizing:border-box;border-radius:13.6cqw;background:#050505;padding:3.4cqw;display:flex;flex-direction:column}
+.wm-hero2-status{position:absolute;left:3.4cqw;right:3.4cqw;top:3.4cqw;height:9cqw;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:0 7cqw 0 8cqw;font:700 4.1cqw/1 Inter,system-ui,sans-serif;color:#1d1a16;border-radius:10.5cqw 10.5cqw 0 0;background:#FBF5EC}
+.wm-st-ic{display:flex;gap:1.2cqw;align-items:flex-end}.wm-st-ic i{display:block;width:1.2cqw;background:#1d1a16;border-radius:.4cqw}.wm-st-ic i:nth-child(1){height:1.6cqw}.wm-st-ic i:nth-child(2){height:2.4cqw}.wm-st-ic i:nth-child(3){height:3.2cqw}.wm-st-ic i:nth-child(4){height:3.2cqw;width:5.4cqw;border-radius:.9cqw;margin-left:1.4cqw}
+.wm-hero2-island{position:absolute;top:5.4cqw;left:50%;transform:translateX(-50%);width:27cqw;height:7.6cqw;border-radius:5cqw;background:#050505;z-index:4}
+.wm-hero2-screen{flex:1 1 auto;border-radius:10.5cqw;overflow:hidden;background:#FBF5EC;padding-top:9cqw}
+.wm-hero2-screen{display:flex;flex-direction:column}
+.wm-hero2-screen>div{background-image:url(/images/app-screen-scroll.jpg);background-size:100% auto;background-repeat:no-repeat;width:100%}
+.wm-scr-top{aspect-ratio:540/101;background-position:50% 0;flex:0 0 auto;position:relative;z-index:1;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+.wm-scr-bot{aspect-ratio:540/96;background-position:50% 100%;flex:0 0 auto;position:relative;z-index:1}
+.wm-scr-mid{flex:1 1 auto;background-position:50% 4.86%}
+@media(prefers-reduced-motion:no-preference){.wm-scr-mid{animation:wmAppScroll 24s cubic-bezier(.45,.05,.25,1) infinite 1.2s}}
+@keyframes wmAppScroll{0%,10%{background-position:50% 4.86%}28%,38%{background-position:50% 32.2%}56%,66%{background-position:50% 59.5%}82%,90%{background-position:50% 95.4%}100%{background-position:50% 4.86%}}
+.wm-hero2-copy{position:absolute;left:0;top:-118px;bottom:0;width:min(47%,640px);padding:0 0 3% max(48px,6%);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;text-align:left;z-index:2}
+.wm-hero2 .wm-daypart-hero{display:inline-flex!important;align-items:center;gap:10px!important;margin:0 0 18px!important;padding:5px 14px 5px 5px!important;border-radius:999px!important;background:rgba(255,253,249,.78)!important;border:1px solid rgba(120,90,50,.12)!important;box-shadow:0 6px 18px rgba(60,40,20,.06)!important;justify-content:flex-start!important;max-width:100%}
+.wm-hero2 .wm-daypart-hero .time-greeting-icon{width:30px!important;height:30px!important;min-width:30px!important;border-radius:50%;object-fit:cover;border:1px solid #fff!important;box-shadow:none!important}
+.wm-hero2 .wm-daypart-label{font:700 13px/1.3 Inter,system-ui,sans-serif!important;color:#3A2E22!important;letter-spacing:0!important}
+.wm-hero2-eyebrow{margin:0 0 14px;font:600 12px/1.4 Inter,system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#6B5A48}
+.wm-hero2-eyebrow b{color:#D9701D;font-weight:800}
+.wm-hero2 h1{margin:0 0 18px;font-family:"DM Serif Display",Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(40px,4.3vw,66px);line-height:1.02;letter-spacing:-.02em;color:#14261B}
+.wm-hero2 h1 em{font-style:normal;color:#1E5B2C;background:none;-webkit-text-fill-color:currentColor}
+.wm-hero2 h1 em::after{display:none!important}
+.wm-hero2 h1 .wm-nobr{white-space:nowrap}
+.wm-hero2 h1 .wm-nobr::after{content:none}
+.wm-hero2 .hero-sub{margin:0 0 26px;max-width:470px;font:400 18px/1.55 Inter,system-ui,sans-serif;color:#3F362D;text-align:left}
+.wm-hero2-actions{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.wm-hero2 .wm-world-cta{margin:0}
+.wm-hero2-stores{margin:0!important;justify-content:flex-start!important}
+.wm-store-badge{flex-direction:row!important;align-items:center;gap:10px;padding:8px 16px 8px 12px!important;min-width:0!important;border-radius:11px!important;background:#000!important}
+.wm-store-badge svg{width:22px;height:22px;fill:#fff;flex:0 0 22px}
+.wm-store-badge span{display:flex;flex-direction:column;line-height:1.1}
+.wm-store-badge small{font-size:10px;font-weight:500}
+.wm-store-badge b{font-size:17px;font-weight:600;letter-spacing:-.2px}
+/* official badge images: when /images/badge-*.png exist they replace the drawn badges */
+.wm-store-badge:has(.wm-badge-img){background:none!important;padding:0!important;box-shadow:none!important}
+.wm-store-badge:has(.wm-badge-img)>svg,.wm-store-badge:has(.wm-badge-img)>span{display:none}
+.wm-badge-img{height:48px;width:auto;display:block}
+.wm-hero2-foot{margin:18px 0 0;font:500 13px/1.6 Inter,system-ui,sans-serif;letter-spacing:.04em;color:#6B5A48}
+.wm-hero2-foot i{font-style:normal;color:#C9A27A;margin:0 4px}
+.wm-hero2 .wm-kids-chip{margin-top:18px!important}
+@media(max-width:1180px){.wm-hero2 h1{font-size:clamp(36px,4.4vw,56px)}.wm-hero2 .hero-sub{font-size:16px}}
+@media(max-width:900px){
+ .wm-hero2{padding-top:84px}
+ .wm-hero2-stage{aspect-ratio:auto;max-height:none;min-height:0;display:flex;flex-direction:column;padding:0 20px 36px}
+ .wm-hero2-copy{display:contents}
+ .wm-hero2 .wm-daypart-hero{order:1;margin:10px 0 16px!important;align-self:flex-start}
+ .wm-hero2-eyebrow{order:2;letter-spacing:.08em;font-size:10.5px}
+ .wm-hero2 .wm-daypart-label{font-size:12px!important}
+ .wm-hero2 h1{order:3;font-size:clamp(36px,10.4vw,48px);margin-bottom:6px}
+ .wm-hero2-visual{order:4;position:relative;inset:auto;height:330px;margin:0 -20px 18px}
+ .wm-hero2-photo{object-position:70% 50%;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 22%,#000 82%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 22%,#000 82%,transparent 100%)}
+ .wm-hero2-phone{left:53%;bottom:5%;height:88%}
+ .wm-hero2 .hero-sub{order:5;font-size:16px;margin-bottom:22px}
+ .wm-hero2-actions{order:6;align-items:stretch;width:100%}
+ .wm-hero2 .wm-world-cta{justify-content:center}
+ .wm-hero2-stores{display:grid!important;grid-template-columns:1fr 1fr;gap:10px}
+ .wm-store-badge{justify-content:center}
+ .wm-hero2-foot{order:7;font-size:12px}
+ .wm-hero2 .wm-kids-chip{order:8;align-self:flex-start}
+ .wm-hero2 .daypart-note{order:9}
+}
+@media(prefers-reduced-motion:no-preference){.wm-hero2-phone{animation:wmPhoneIn .9s cubic-bezier(.2,.8,.2,1) both .15s}@keyframes wmPhoneIn{from{opacity:0;transform:translate(-50%,18px) rotate(5deg)}to{opacity:1;transform:translate(-50%,0) rotate(5deg)}}}
+</style>
+<!-- Tells Google and other search engines that WorldMeals is an iPhone and Android app -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "MobileApplication",
+   "name": "WorldMeals",
+   "url": "https://worldmeals.app/",
+   "description": "Discover authentic dishes from countries around the world, filtered by budget, calories, spice level and diet, with an AI chef, smart ingredient substitutions, a weekly meal planner and WorldMeals Kids.",
+   "applicationCategory": "FoodAndDrinkApplication",
+   "operatingSystem": "iOS",
+   "installUrl": "https://apps.apple.com/app/worldmeals/id6797013060",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "MobileApplication",
+   "name": "WorldMeals",
+   "url": "https://worldmeals.app/",
+   "description": "Discover authentic dishes from countries around the world, filtered by budget, calories, spice level and diet, with an AI chef, smart ingredient substitutions, a weekly meal planner and WorldMeals Kids.",
+   "applicationCategory": "FoodAndDrinkApplication",
+   "operatingSystem": "Android",
+   "installUrl": "https://play.google.com/store/apps/details?id=app.worldmeals.android",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "Organization",
+   "name": "WorldMeals",
+   "url": "https://worldmeals.app/",
+   "sameAs": [
+    "https://apps.apple.com/app/worldmeals/id6797013060",
+    "https://play.google.com/store/apps/details?id=app.worldmeals.android",
+    "https://www.tiktok.com/@worldmeals.app"
+   ]
+  }
+ ]
+}
+</script>
 <meta name="theme-color" content="#C47A2C">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -2319,7 +2474,300 @@ body{
 .wm-kids-label .wm-kids-brand-world,.wm-kids-label .wm-kids-brand-kids{display:inline;font-size:18px;font-weight:800;letter-spacing:-.45px;text-transform:none}
 .wm-kids-label .wm-kids-brand-tag{display:inline;font-size:10px;letter-spacing:.05em;color:#175b41;text-transform:uppercase}
 @media(max-width:380px){.wm-kids-label .wm-kids-brand-tag{display:block;margin-top:5px}}
-</style></head>
+</style>
+<style>
+/* App Store and Google Play buttons (hidden inside the apps) */
+.wm-stores{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:18px 0 20px}
+.wm-store{display:inline-flex;flex-direction:column;justify-content:center;min-width:150px;min-height:48px;padding:7px 18px;border-radius:12px;background:#1F1A14;color:#fff;text-decoration:none;line-height:1.15;box-shadow:0 6px 16px #1f1a1422}
+.wm-store small{font-size:10px;font-weight:600;opacity:.85}
+.wm-store b{font-size:17px;font-weight:800;letter-spacing:-.2px}
+.wm-store:hover{background:#3A2E22}
+.wm-store:focus-visible{outline:3px solid #d96a16;outline-offset:3px}
+.final-cta .wm-stores{justify-content:center;margin-top:22px}
+html.wm-in-app .wm-stores,html.wm-in-app .wm-store-link{display:none!important}
+</style>
+<script>/* hide store buttons when this page is opened inside the iPhone or Android app */(function(){try{var a=window.webkit&&window.webkit.messageHandlers&&window.webkit.messageHandlers.worldMealsIAP,b="getDigitalGoodsService" in window,c=document.referrer.indexOf("android-app://")===0,d=window.matchMedia&&matchMedia("(display-mode: standalone)").matches;if(a||b||c||d)sessionStorage.setItem("wm_in_app","1");if(sessionStorage.getItem("wm_in_app")==="1")document.documentElement.classList.add("wm-in-app");}catch(e){}})();</script>
+
+<style id="wm-editorial-corrections">
+/* Isolated entrance styling; original app assets and lower sections retained. */
+html{scroll-padding-top:100px}nav{background:rgba(255,251,243,.96)}
+.wm-hero2{padding-top:88px;background:#fbf7ee}
+.wm-hero2-stage{min-height:580px;max-height:none;aspect-ratio:1440/620}
+.wm-hero2-copy{top:0;bottom:0;left:0;width:48%;padding:36px 0 36px max(28px,5.5%);box-sizing:border-box;justify-content:center}
+.wm-hero2 .wm-kids-chip{display:none!important}
+/* Compact greeting uses the existing visitor-local-time message and icon. */
+.wm-hero2 #timeGreeting{display:inline-flex!important;order:0;align-self:flex-start;max-width:100%;margin:0 0 18px!important;padding:10px 16px 10px 10px!important;gap:12px!important;border:1px solid #d5dfd2!important;background:#fffdf7!important;box-shadow:none!important;border-radius:22px!important}
+.wm-hero2 #timeGreeting .wm-daypart-copy{min-width:0}
+.wm-hero2 #timeGreeting .wm-daypart-label{display:block;font-size:16px!important;line-height:1.45!important;font-weight:700!important;color:#163d29!important;white-space:normal}
+.wm-hero2 #timeGreeting .time-greeting-icon{width:36px!important;height:36px!important;min-width:36px!important;flex-shrink:0}
+@media(max-width:540px){.wm-hero2 #timeGreeting{margin-bottom:16px!important}.wm-hero2 #timeGreeting .wm-daypart-label{font-size:15px!important}}
+.wm-hero2-eyebrow{font-size:11px;letter-spacing:.24em;color:#244b36;margin-bottom:18px}
+.wm-hero2 h1{font-size:clamp(44px,5vw,76px);line-height:1.02;font-weight:400;color:#103b29;letter-spacing:-.045em;margin-bottom:22px}
+.wm-editorial-dot,.wm-editorial-kids h2 span{color:#e97622}
+.wm-hero2 .hero-sub{font-size:clamp(16px,1.5vw,21px);line-height:1.5;margin-bottom:28px;color:#363c34}
+.wm-hero2-photo{mask-image:linear-gradient(to right,transparent 27%,#000 57%);-webkit-mask-image:linear-gradient(to right,transparent 27%,#000 57%)}
+.wm-hero2-photo{object-position:right top}
+.wm-hero2-phone{left:58.7%;bottom:45.5%;height:52%;transform:translateX(-50%) rotate(5deg);animation:none!important;z-index:1}
+.wm-hero2-actions{gap:15px}.wm-hero2-stores{order:0;display:flex!important;flex-wrap:wrap;gap:12px}
+.wm-web-link{order:1;font:500 13px/1.5 Inter,system-ui,sans-serif;color:#24503b;text-underline-offset:4px}
+.wm-hero2-foot{font-size:11px;letter-spacing:.12em;margin-top:18px;color:#535a50}
+.wm-badge-img{max-width:100%;object-fit:contain}.wm-hero2 .wm-store-badge{min-height:48px}
+.nav-cta.wm-start-control img{filter:hue-rotate(-80deg) saturate(.9) brightness(1.05)}
+.wm-editorial-benefits{display:flex;justify-content:center;align-items:center;padding:22px 5%;background:#fffaf1;gap:0;border-top:1px solid #e6dfd1;border-bottom:1px solid #e6dfd1}
+.wm-editorial-benefits a{flex:1;text-align:center;text-decoration:none;color:#254432;font:400 18px/1.4 Georgia,serif;padding:0 20px}
+.wm-editorial-benefits a+a{border-left:1px solid #d7d0c2}.wm-editorial-benefits span{font:28px/1 Georgia,serif;vertical-align:middle;margin-right:12px}
+.wm-editorial-kids{background:#123b2b;color:#fffaf1;display:grid;grid-template-columns:1fr 1.2fr;gap:50px;padding:36px max(24px,6%);align-items:center}
+.wm-editorial-kids-brand{font-weight:700;font-size:17px;margin:0 0 12px;color:#b7d995}.wm-editorial-kids-brand span{color:#ff9b45}
+.wm-editorial-kids h2{font:400 clamp(32px,3.6vw,54px)/1.05 'DM Serif Display',Georgia,serif;letter-spacing:-.025em;margin:0 0 14px}
+.wm-editorial-kids p:not(.wm-editorial-kids-brand){font-size:15px;line-height:1.65;max-width:420px;color:#e1e9e2;margin:0 0 14px}
+.wm-editorial-kids a{color:#fffaf1;font-size:13px;text-underline-offset:5px}.wm-editorial-kids img{width:100%;height:250px;object-fit:cover;border-radius:18px}
+.footer-link{color:#bbb7ae}.wm-feedback-link{font:inherit;font-size:12px;border:0;padding:0;background:none;cursor:pointer}
+:focus-visible{outline:3px solid #e98a34;outline-offset:5px}
+@media(max-width:900px){
+.wm-hero2{padding-top:84px}.wm-hero2-stage{display:flex;min-height:0;aspect-ratio:auto;padding:28px 24px 32px}
+.wm-hero2-copy{display:contents}.wm-hero2-eyebrow{order:1;font-size:10px;margin-bottom:16px}
+.wm-hero2 h1{order:2;font-size:clamp(38px,7.6vw,64px);margin-bottom:18px}
+.wm-hero2 .hero-sub{order:3;font-size:17px;margin-bottom:20px}.wm-hero2-actions{order:4;align-items:flex-start}
+.wm-hero2-foot{order:5;margin-top:16px}.wm-hero2-visual{order:6;height:420px;margin:22px -24px -32px;flex:none}
+.wm-hero2-photo{object-position:72% center;mask-image:linear-gradient(to bottom,transparent,#000 18%);-webkit-mask-image:linear-gradient(to bottom,transparent,#000 18%)}
+.wm-hero2-phone{left:60%;bottom:5%;height:88%}.wm-hero2-stores{display:flex!important;gap:10px}.wm-store-badge{flex:0 1 auto}
+.wm-editorial-benefits{padding:16px 10px}.wm-editorial-benefits a{font-size:14px;padding:0 10px}.wm-editorial-benefits span{display:block;margin:0 0 7px}
+.wm-editorial-kids{gap:24px;padding:30px 24px}.wm-editorial-kids img{height:240px}
+}
+@media(max-width:540px){.wm-hero2-visual{height:350px}.wm-hero2-stores{width:100%}.wm-hero2-stores>a{max-width:calc(50% - 5px)}.wm-badge-img{height:43px}.wm-store-badge b{font-size:15px}.wm-store-badge small{font-size:9px}.wm-editorial-kids{grid-template-columns:1fr}.wm-editorial-kids img{height:210px}.wm-editorial-benefits a{font-size:12px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important}.wm-scr-mid{animation:none!important}}
+</style>
+
+<style id="wm-greeting-editorial">
+.wm-hero2 #timeGreeting{padding:0 0 0 14px!important;border:0!important;border-left:3px solid #df7b2c!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;gap:0!important;margin-bottom:24px!important}
+.wm-hero2 #timeGreeting .time-greeting-icon{display:none!important}
+.wm-hero2 #timeGreeting .wm-greeting-title{display:block;font-family:"DM Serif Display",Georgia,serif;font-size:30px;line-height:1.15;font-weight:400;letter-spacing:-.02em;color:#163d29}
+.wm-hero2 #timeGreeting .wm-greeting-detail{display:block;margin-top:6px;font-family:Inter,system-ui,sans-serif;font-size:14px;line-height:1.5;font-weight:500;letter-spacing:0;color:#4b574b}
+@media(max-width:540px){.wm-hero2 #timeGreeting .wm-greeting-title{font-size:27px}.wm-hero2 #timeGreeting .wm-greeting-detail{font-size:14px}}
+</style>
+<style id="wm-browser-button">
+.wm-hero2 .wm-web-link{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:48px;padding:13px 22px;box-sizing:border-box;border:1px solid #234c35;border-radius:12px;background:#173f2c;color:#fffdf7;font:600 14px/1.4 Inter,system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 12px rgba(23,63,44,.12);transition:background .18s ease,box-shadow .18s ease}
+.wm-hero2 .wm-web-link:hover{background:#24563d;box-shadow:0 6px 16px rgba(23,63,44,.18)}
+.wm-hero2 .wm-web-link:focus-visible{outline:3px solid #e58a3d;outline-offset:4px}
+.wm-hero2 .wm-web-link span{font-size:18px;line-height:1}
+@media(max-width:540px){.wm-hero2 .wm-web-link{width:100%}}
+@media(prefers-reduced-motion:reduce){.wm-hero2 .wm-web-link{transition:none}}
+</style>
+<style id="wm-phone-on-stone-mobile">
+/* Desktop: the scene wrapper is invisible to layout */
+.wm-hero2-scene{display:contents}
+/* Phone view: photo and phone share one box with the photo’s exact shape,
+   so the phone always stands on the stone at every screen width */
+@media(max-width:900px){
+ .wm-hero2{--sceneW:min(165vw,1100px)}
+ .wm-hero2 .wm-hero2-visual{position:relative!important;inset:auto!important;height:calc(var(--sceneW)*.5622)!important;margin:calc(var(--sceneW)*.235 + 18px) -24px -32px!important;overflow:visible!important;overflow-x:clip!important}
+ .wm-hero2 .wm-hero2-scene{display:block;position:absolute;top:0;left:50%;width:var(--sceneW);height:100%;transform:translateX(-58.6%)}
+ .wm-hero2 .wm-hero2-photo{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 16%,#000 86%,transparent 100%)!important;mask-image:linear-gradient(to bottom,transparent 0,#000 16%,#000 86%,transparent 100%)!important}
+ .wm-hero2 .wm-hero2-phone{left:58.6%!important;bottom:57.8%!important;height:83%!important;transform:translateX(-50%) rotate(5deg)!important}
+ .wm-hero2 .wm-hero2-stores{width:100%;justify-content:center!important}
+}
+</style>
+<style id="wm-kids-pics">
+.wm-editorial-kids{grid-template-columns:1fr 1.5fr!important}
+.wm-kids-pics{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.wm-kids-pics figure{margin:0;position:relative;border-radius:18px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.wm-editorial-kids .wm-kids-pics img{width:100%!important;height:260px!important;object-fit:cover;border-radius:0!important;display:block;transition:transform .6s ease}
+.wm-kids-pics figure:hover img{transform:scale(1.04)}
+.wm-kids-pics figcaption{position:absolute;left:12px;bottom:12px;padding:6px 12px;border-radius:999px;background:rgba(18,59,43,.82);color:#fffaf1;font:600 12px/1.3 Inter,system-ui,sans-serif;backdrop-filter:blur(4px)}
+@media(max-width:900px){.wm-editorial-kids{grid-template-columns:1fr!important}.wm-editorial-kids .wm-kids-pics img{height:200px!important}}
+@media(max-width:540px){.wm-kids-pics{gap:10px}.wm-editorial-kids .wm-kids-pics img{height:170px!important}.wm-kids-pics figcaption{font-size:11px;left:8px;bottom:8px;padding:5px 9px}}
+</style>
+<style id="wm-start-green">
+/* START: deep green disc with a thin gold ring (roadmap) */
+.wm-start-disc{width:54px;height:54px;flex:0 0 auto;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#2c6a47 0,#14402c 55%,#0c2c1e 100%);box-shadow:0 0 0 2px #C9A55A,0 0 0 4px rgba(201,165,90,.25),0 10px 22px rgba(18,59,43,.28),inset 0 1px 0 rgba(255,255,255,.18);transition:transform .2s ease,box-shadow .2s ease}
+.wm-start-disc svg{width:44%;height:44%;fill:#fffaf1;margin-left:6%}
+.nav-cta.wm-start-green{width:auto!important;height:auto!important;min-width:0!important;overflow:visible!important;display:inline-flex!important;align-items:center;gap:14px;border-radius:999px!important;text-decoration:none}
+.nav-cta.wm-start-green:hover{transform:none!important;filter:none!important;box-shadow:none!important}
+.nav-cta.wm-start-green:hover .wm-start-disc,.wm-map-start:hover .wm-start-disc,.wm-action-start:hover .wm-start-disc,.wm-tour-start:hover .wm-start-disc{transform:scale(1.06);box-shadow:0 0 0 2px #D8B66A,0 0 0 5px rgba(201,165,90,.3),0 14px 26px rgba(18,59,43,.32),inset 0 1px 0 rgba(255,255,255,.2)}
+.wm-start-word{font:700 14px/1 Inter,system-ui,sans-serif;letter-spacing:.24em;color:#14402c}
+.wm-map-start .wm-start-disc,.wm-action-start .wm-start-disc,.wm-tour-start .wm-start-disc{width:60px;height:60px}
+@media(max-width:900px){.nav-cta.wm-start-green .wm-start-disc{width:44px;height:44px}.wm-start-word{display:none}.wm-map-start .wm-start-disc,.wm-action-start .wm-start-disc,.wm-tour-start .wm-start-disc{width:54px;height:54px}}
+.wm-action-start .wm-start-disc{box-shadow:0 0 0 2px #C9A55A,0 0 0 4px rgba(201,165,90,.25),0 10px 22px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.18)}
+</style>
+<style id="wm-topbar">
+/* Premium top bar */
+nav{background:rgba(255,251,243,.74)!important;-webkit-backdrop-filter:blur(18px) saturate(1.25);backdrop-filter:blur(18px) saturate(1.25);border-bottom:1px solid rgba(120,90,50,.10)!important;box-shadow:0 1px 0 rgba(255,255,255,.6) inset}
+nav .nav-brand-image{height:38px!important;max-width:260px!important}
+nav .nav-links{gap:40px!important}
+nav .nav-link{position:relative;font:500 14.5px/1 Inter,system-ui,sans-serif!important;letter-spacing:.01em;color:#2E3A30!important;transform:none!important;padding:6px 0}
+nav .nav-link::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1.5px;background:#C9A55A;transform:scaleX(0);transform-origin:center;transition:transform .25s ease}
+nav .nav-link:hover{color:#14402c!important}
+nav .nav-link:hover::after,nav .nav-link:focus-visible::after{transform:scaleX(1)}
+@media(max-width:768px){nav .nav-brand-image{height:32px!important;max-width:200px!important}}
+</style>
+<style id="wm-pocket">
+.wm-pocket .section-title{font-family:"DM Serif Display",Georgia,serif!important;font-weight:400!important;letter-spacing:-.02em!important;font-size:clamp(34px,4vw,54px)!important;color:#14261B!important}
+.wm-pp-row{display:flex;justify-content:center;align-items:flex-end;gap:clamp(18px,3vw,44px);margin:44px auto 0;max-width:1000px;padding:0 16px}
+.wm-pp{container-type:inline-size;width:250px;flex:0 1 250px}
+.wm-pp-center{width:290px;flex-basis:290px;z-index:2}
+.wm-pp-left{transform:rotate(-4deg) translateY(10px)}.wm-pp-right{transform:rotate(4deg) translateY(10px)}
+.wm-pp-frame{border-radius:15cqw;padding:1.6cqw;background:linear-gradient(135deg,#ecebe7 0%,#a9a6a0 22%,#f7f6f2 46%,#8e8b85 70%,#d8d6d1 100%);box-shadow:0 .5cqw 0 rgba(255,255,255,.6) inset,0 12cqw 22cqw -3cqw rgba(70,40,15,.30),0 4cqw 7cqw rgba(70,40,15,.16)}
+.wm-pp-bezel{position:relative;border-radius:13.6cqw;background:#050505;padding:3.4cqw;aspect-ratio:540/1169}
+.wm-pp-bezel img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;border-radius:10.5cqw}
+.wm-pp-island{position:absolute;top:5.6cqw;left:50%;transform:translateX(-50%);width:27cqw;height:7.6cqw;border-radius:5cqw;background:#050505;z-index:2}
+.wm-pp-caps{display:flex;justify-content:center;gap:clamp(18px,3vw,44px);max-width:1000px;margin:28px auto 0;padding:0 16px}
+.wm-pp-caps span{width:250px;text-align:center;font:600 12px/1.4 Inter,system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#6B5A48}
+.wm-pp-caps span:nth-child(2){width:290px}
+@media(max-width:760px){
+ .wm-pp-row{gap:0;align-items:center;margin-top:34px}
+ .wm-pp{width:38%;flex-basis:38%}.wm-pp-center{width:46%;flex-basis:46%}
+ .wm-pp-left{transform:rotate(-6deg) translateX(14%)}.wm-pp-right{transform:rotate(6deg) translateX(-14%)}
+ .wm-pp-caps{display:none}
+}
+</style>
+<style id="wm-pocket4">
+.wm-pp4{max-width:1180px;gap:clamp(14px,2.2vw,32px)}
+.wm-pp4 .wm-pp{width:230px;flex-basis:230px}.wm-pp4 .wm-pp-center{width:262px;flex-basis:262px}
+.wm-pp4 .wm-pp-center{transform:rotate(-1.5deg)}.wm-pp4 .wm-pp-center2{transform:rotate(1.5deg)}
+.wm-pp4 .wm-pp-left{transform:rotate(-5deg) translateY(14px)}.wm-pp4 .wm-pp-right{transform:rotate(5deg) translateY(14px)}
+.wm-pp4caps{max-width:1180px;gap:clamp(14px,2.2vw,32px)}
+.wm-pp4caps span{width:230px}.wm-pp4caps span:nth-child(2),.wm-pp4caps span:nth-child(3){width:262px}
+@media(max-width:900px){
+ .wm-pp4{justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:10px 24px 34px;gap:18px;scrollbar-width:none}
+ .wm-pp4::-webkit-scrollbar{display:none}
+ .wm-pp4 .wm-pp,.wm-pp4 .wm-pp-center{width:62%;flex:0 0 62%;max-width:250px;transform:none!important;scroll-snap-align:center}
+ .wm-pp4caps{display:none}
+}
+</style>
+<style id="wm-pocket-mobile-labels">
+.wm-pp-label,.wm-pp-swipe{display:none}
+@media(max-width:900px){
+ .wm-pp-label{display:block;margin:16px 0 0;text-align:center;font:600 11px/1.4 Inter,system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#6B5A48}
+ .wm-pp-swipe{display:flex;justify-content:center;align-items:center;gap:8px;margin:2px 0 0;font:600 12px/1 Inter,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#1E5B2C}
+ .wm-pp-swipe span{display:inline-block;animation:wmSwipe 1.6s ease-in-out infinite}
+ @keyframes wmSwipe{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+}
+@media(prefers-reduced-motion:reduce){.wm-pp-swipe span{animation:none}}
+</style>
+<style id="wm-discover">
+#discover{background:#FBF7EE!important}
+#discover .v3-kicker{font:600 12px/1.4 Inter,system-ui,sans-serif!important;letter-spacing:.22em!important;color:#6B5A48!important;text-transform:uppercase}
+.wm-disc-title{font:400 clamp(36px,4.2vw,60px)/1.04 "DM Serif Display",Georgia,serif!important;letter-spacing:-.02em!important;color:#14261B!important}
+.wm-disc-title em{font-style:normal!important;color:#1E5B2C!important;background:none!important;-webkit-text-fill-color:#1E5B2C!important}
+.wm-disc-title span{color:#E97622}
+#discover .v3-sub{font:400 17px/1.65 Inter,system-ui,sans-serif!important;color:#3F362D!important;max-width:520px}
+#discover .discovery-row{background:none!important;box-shadow:none!important;padding:24px 18px 56px!important;margin:14px -18px -26px!important;scroll-padding-left:18px!important;scroll-snap-type:x mandatory;scroll-padding-left:2px;scrollbar-width:none;gap:22px!important}
+#discover .discovery-row::-webkit-scrollbar{display:none}
+.wm-disc-card{display:flex!important;flex-direction:column;text-decoration:none!important;color:inherit;scroll-snap-align:start;border-radius:22px!important;overflow:hidden;background:#fff!important;border:1px solid #EDE4D3!important;box-shadow:0 18px 40px -18px rgba(70,40,15,.22)!important;transition:transform .35s ease,box-shadow .35s ease}
+.wm-disc-card:hover{transform:translateY(-4px);box-shadow:0 28px 50px -18px rgba(70,40,15,.30)!important}
+.wm-disc-card .discovery-photo{height:250px!important;overflow:hidden}
+.wm-disc-card .discovery-photo::after{background:linear-gradient(to top,rgba(15,12,9,.28),transparent 45%)!important}
+.wm-disc-card .discovery-photo img{transition:transform .8s ease;-webkit-user-drag:none}
+.wm-disc-card:hover .discovery-photo img{transform:scale(1.05)}
+.wm-disc-country{background:rgba(255,250,241,.92)!important;color:#14402c!important;font:700 11px/1 Inter,system-ui,sans-serif!important;letter-spacing:.18em!important;text-transform:uppercase;padding:8px 12px!important;border-radius:999px!important;backdrop-filter:blur(6px)}
+.wm-disc-card .discovery-body{display:flex;flex-direction:column;flex:1;padding:22px 22px 20px!important}
+.wm-disc-card .discovery-name{font:400 25px/1.15 "DM Serif Display",Georgia,serif!important;color:#14261B!important;letter-spacing:-.01em;margin-bottom:8px}
+.wm-disc-card .discovery-copy{font:400 14px/1.6 Inter,system-ui,sans-serif!important;color:#5B5047!important}
+.wm-disc-card .discovery-chip{background:#F6F0E5!important;color:#4B4036!important;font:500 12px/1 Inter,system-ui,sans-serif!important;border:0!important;padding:7px 10px!important}
+.wm-disc-more{margin-top:auto;padding-top:16px;font:600 13px/1.3 Inter,system-ui,sans-serif;color:#1E5B2C}
+.wm-disc-more span{display:inline-block;transition:transform .25s ease}
+.wm-disc-card:hover .wm-disc-more span{transform:translateX(4px)}
+.wm-disc-card:focus-visible{outline:3px solid #E58A3D;outline-offset:3px}
+#discover .discovery-control{width:46px!important;height:46px!important;border-radius:50%!important;border:1px solid #D9CDB8!important;background:#FFFCF6!important;display:grid!important;place-items:center;box-shadow:none!important;cursor:pointer;transition:background .2s ease,border-color .2s ease}
+#discover .discovery-control svg{width:18px;height:18px;fill:none;stroke:#14402c;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#discover .discovery-control:hover{background:#14402c!important;border-color:#14402c!important}
+#discover .discovery-control:hover svg{stroke:#fffaf1}
+@media(max-width:700px){#discover .discovery-row .wm-disc-card{flex:0 0 82%!important;min-width:0!important;max-width:none!important}.wm-disc-card .discovery-photo{height:220px!important}}
+</style>
+<style id="wm-kids-premium">
+#kids{background:#FBF7EE!important;padding:100px max(24px,6%)!important}
+#kids .wm-kids-label{background:#fffdf9!important;border:1px solid #E6DCC9!important;padding:9px 16px!important}
+#kids h2{font:400 clamp(38px,4.4vw,62px)/1.04 "DM Serif Display",Georgia,serif!important;letter-spacing:-.02em!important;color:#14261B!important;margin-bottom:22px!important}
+#kids h2 em{font-style:normal!important;color:#1E5B2C!important}
+#kids h2 .wm-kd-dot{color:#E97622}
+#kids .wm-kids-copy{font:400 17px/1.7 Inter,system-ui,sans-serif!important;color:#3F362D!important}
+#kids .wm-kids-copy b{color:#14261B;font-weight:600}
+#kids .wm-kids-points{gap:14px!important;font:400 15px/1.6 Inter,system-ui,sans-serif!important;color:#3F362D!important}
+#kids .wm-kids-points li::before{content:""!important;display:inline-block;width:7px;height:7px;border-radius:50%;background:#C9A55A;margin:0 12px 2px 0;vertical-align:middle}
+#kids .wm-kids-points b{color:#14261B;font-weight:600}
+#kids .wm-kids-button{background:#14402c!important;color:#fffaf1!important;border-radius:14px!important;padding:16px 26px!important;font:600 15px/1 Inter,system-ui,sans-serif!important;box-shadow:0 14px 30px -12px rgba(20,64,44,.45)!important;border:0!important}
+#kids .wm-kids-button:hover{background:#1E5B2C!important}
+#kids .wm-kids-note{color:#6B5A48!important}
+#kids .wm-kids-note b{color:#1E5B2C}
+#kids .wm-kids-demo-label{font:600 11px/1.4 Inter,system-ui,sans-serif!important;letter-spacing:.2em!important;color:#6B5A48!important}
+#kids .wm-kids-phone{border:0!important;border-radius:15cqw!important;padding:1.6cqw!important;background:linear-gradient(135deg,#ecebe7 0%,#a9a6a0 22%,#f7f6f2 46%,#8e8b85 70%,#d8d6d1 100%)!important;box-shadow:0 .5cqw 0 rgba(255,255,255,.6) inset,0 12cqw 22cqw -3cqw rgba(70,40,15,.30),0 4cqw 7cqw rgba(70,40,15,.16)!important;overflow:visible!important;aspect-ratio:auto!important}
+#kids .wm-kids-screen{container-type:inline-size}
+#kids .wm-kids-phone::before{content:"";display:block}
+#kids .wm-kids-phone>img{border:3.4cqw solid #050505;border-radius:13.6cqw;margin-top:0!important;aspect-ratio:709/1381;object-fit:cover;object-position:50% 9.3%;box-sizing:border-box;background:#050505}
+#kids .wm-kids-screen figcaption{font:500 13px/1.5 Inter,system-ui,sans-serif!important;color:#3F362D!important}
+#kids .wm-kids-controls button{width:44px!important;height:44px!important;min-width:44px!important;padding:0!important;border-radius:50%!important;border:1px solid #D9CDB8!important;background:#FFFCF6!important;display:grid!important;place-items:center}
+#kids .wm-kids-controls button svg{width:18px;height:18px;fill:none;stroke:#14402c;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#kids .wm-kids-controls #kidsPause{width:auto!important;padding:0 18px!important;border-radius:999px!important;font:600 12px Inter,system-ui,sans-serif!important;color:#14402c!important;letter-spacing:.06em}
+#kids .wm-kids-controls button:hover{background:#14402c!important;border-color:#14402c!important;color:#fffaf1!important}
+#kids .wm-kids-controls button:hover svg{stroke:#fffaf1}
+#kids .wm-kids-swipe{font:600 11px/1.4 Inter,system-ui,sans-serif!important;letter-spacing:.16em;text-transform:uppercase;color:#1E5B2C!important}
+#kids .wm-kids-category{background:#fff!important;border:1px solid #EDE4D3!important;border-radius:20px!important;box-shadow:0 18px 40px -22px rgba(70,40,15,.25)!important;padding:26px 24px!important}
+#kids .wm-kids-category:nth-child(3n+2){background:#fff!important}
+#kids .wm-kd-ic{display:grid!important;place-items:center;width:52px;height:52px;border-radius:50%;background:#EEF5EC;margin-bottom:16px!important}
+#kids .wm-kd-ic svg{width:28px;height:28px;fill:none;stroke:#1E5B2C;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+#kids .wm-kids-category h3{font:400 23px/1.2 "DM Serif Display",Georgia,serif!important;color:#14261B!important;margin-bottom:8px!important}
+#kids .wm-kids-category p{font:400 14px/1.6 Inter,system-ui,sans-serif!important;color:#5B5047!important}
+#kids .wm-kids-demo{max-width:350px!important}
+#kids .wm-kids-screens{padding:18px 26px 54px!important;margin:0 -26px -30px!important;border-radius:0!important;scrollbar-width:none}
+#kids .wm-kids-screens::-webkit-scrollbar{display:none}
+#kids .wm-kids-phone{box-shadow:0 .5cqw 0 rgba(255,255,255,.6) inset,0 10cqw 18cqw -4cqw rgba(70,40,15,.28),0 3cqw 6cqw rgba(70,40,15,.14)!important}
+#kids .wm-kids-phone>img{border-width:3cqw}
+@media(max-width:800px){#kids{padding:64px 20px!important}}
+@media(max-width:800px){#kids .wm-kids-demo{max-width:300px!important}}
+</style>
+<style id="wm-ai-premium">
+.wm-ai{background:radial-gradient(ellipse at 85% 0%,rgba(201,165,90,.14),transparent 50%),#123B2B!important;color:#FFFAF1}
+.wm-ai .v3-kicker{font:600 12px/1.4 Inter,system-ui,sans-serif!important;letter-spacing:.22em!important;color:#C9A55A!important;text-transform:uppercase}
+.wm-ai-title{font:400 clamp(38px,4.4vw,62px)/1.04 "DM Serif Display",Georgia,serif!important;letter-spacing:-.02em!important;color:#FFFAF1!important}
+.wm-ai-title em{font-style:normal!important;color:#B7D995!important;background:none!important;-webkit-text-fill-color:#B7D995!important}
+.wm-ai-title span{color:#FF9B45}
+.wm-ai .v3-sub{color:#DDE7DF!important;font:400 17px/1.7 Inter,system-ui,sans-serif!important}
+.wm-ai .wm-action-start span:last-child{color:#FFFAF1!important;border-bottom-color:rgba(255,250,241,.35)!important}
+.wm-ai .chef-panel{background:rgba(255,250,241,.06)!important;border:1px solid rgba(201,165,90,.35)!important;border-radius:28px!important;box-shadow:0 40px 80px -30px rgba(0,0,0,.55)!important;backdrop-filter:blur(8px)}
+.wm-ai .chef-avatar{box-shadow:0 0 0 2px #C9A55A}
+.wm-ai .chef-name{font:400 22px/1.1 "DM Serif Display",Georgia,serif!important;color:#FFFAF1!important}
+.wm-ai .chef-status{display:flex;align-items:center;gap:7px;color:#B7C9BC!important}
+.wm-ai-live{width:7px;height:7px;border-radius:50%;background:#7BD389;box-shadow:0 0 0 3px rgba(123,211,137,.18)}
+.wm-ai .chef-bubble{background:#FFFAF1!important;color:#2E241B!important;border-radius:18px 18px 18px 6px!important;font:400 14.5px/1.55 Inter,system-ui,sans-serif!important}
+.wm-ai .wm-ai-me{background:#2C6A47!important;color:#FFFAF1!important;border-radius:18px 18px 6px 18px!important;margin-left:auto!important;max-width:78%;width:fit-content}
+.wm-ai-typing{display:flex;gap:5px;padding:14px 16px;width:fit-content;border-radius:18px 18px 18px 6px;background:rgba(255,250,241,.12);margin:10px 0}
+.wm-ai-typing i{width:7px;height:7px;border-radius:50%;background:#FFFAF1;opacity:.5;animation:wmDot 1s ease-in-out infinite}
+.wm-ai-typing i:nth-child(2){animation-delay:.15s}.wm-ai-typing i:nth-child(3){animation-delay:.3s}
+@keyframes wmDot{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(-4px);opacity:1}}
+.wm-ai-dishes{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.wm-ai-dish{display:flex;align-items:center;gap:12px;padding:8px;border-radius:14px;background:#fff;border:1px solid #EDE4D3;text-decoration:none;color:inherit;transition:transform .2s ease,border-color .2s ease}
+.wm-ai-dish:hover{transform:translateX(3px);border-color:#C9A55A}
+.wm-ai-dish img{width:52px;height:52px;border-radius:10px;object-fit:cover;flex:0 0 52px}
+.wm-ai-dish b{display:block;font:600 14px/1.3 Inter,system-ui,sans-serif;color:#14261B}
+.wm-ai-dish small{font:500 12px/1.3 Inter,system-ui,sans-serif;color:#7d7266}
+.wm-ai .chef-input{background:rgba(255,250,241,.08)!important;border:1px solid rgba(255,250,241,.18)!important;color:#B7C9BC!important}
+.wm-ai .chef-button{background:#C9A55A!important;color:#123B2B!important;display:grid!important;place-items:center}
+.wm-ai .chef-button svg{width:18px;height:18px;fill:none;stroke:#123B2B;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+/* chat plays in order when it comes into view */
+.wm-ai.wm-ai-anim .wm-ai-step{opacity:0;transform:translateY(8px)}
+.wm-ai.wm-ai-anim.wm-ai-play .wm-ai-me{animation:wmAiIn .5s ease .3s forwards}
+.wm-ai.wm-ai-anim.wm-ai-play .wm-ai-typing{animation:wmAiIn .3s ease 1.1s forwards,wmAiOut .3s ease 2.4s forwards}
+.wm-ai.wm-ai-anim.wm-ai-play .wm-ai-reply{animation:wmAiIn .55s ease 2.5s forwards}
+@keyframes wmAiIn{to{opacity:1;transform:none}}
+@keyframes wmAiOut{to{opacity:0;height:0;padding:0;margin:0}}
+.wm-ai:not(.wm-ai-anim) .wm-ai-typing{display:none}
+@media(prefers-reduced-motion:reduce){.wm-ai .wm-ai-step{opacity:1!important;transform:none!important;animation:none!important}.wm-ai .wm-ai-typing{display:none}}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded",function(){var sec=document.querySelector(".wm-ai");if(!sec||!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+sec.classList.add("wm-ai-anim");new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){sec.classList.add("wm-ai-play");o.disconnect();}})},{threshold:.35}).observe(sec.querySelector(".chef-panel"));});
+</script>
+<style id="wm-strip-icons">
+.wm-editorial-benefits span{display:inline-flex;vertical-align:middle;margin-right:12px}
+.wm-editorial-benefits span svg{width:30px;height:30px;fill:none;stroke:#254432;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:900px){.wm-editorial-benefits span{display:flex;justify-content:center;margin:0 0 7px}.wm-editorial-benefits span svg{width:28px;height:28px}}
+</style>
+<style id="wm-greeting-time-colors">
+body[data-daypart="morning"] .wm-hero2 #timeGreeting{border-left-color:#df7b2c!important}
+body[data-daypart="afternoon"] .wm-hero2 #timeGreeting{border-left-color:#bf941e!important}
+body[data-daypart="evening"] .wm-hero2 #timeGreeting{border-left-color:#8454ad!important}
+</style>
+</head>
 <body>
 
 <!-- NAV -->
@@ -2333,42 +2781,134 @@ body{
 
   <div class="nav-links">
     <a href="#discover" class="nav-link">Discover</a>
-    <a href="#features" class="nav-link">Features</a>
     <a href="#kids" class="nav-link">WorldMeals Kids</a>
-    <a href="#how" class="nav-link">How it works</a>
     <a href="#pricing" class="nav-link">Pricing</a>
   </div>
 
-  <a href="app.html" class="nav-cta wm-start-control" aria-label="Start WorldMeals"><img src="/images/worldmeals-start-button.png" alt="Start"></a>
+  <a href="app.html" class="nav-cta wm-start-control wm-start-green" aria-label="Start WorldMeals"><span class="wm-start-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><span class="wm-start-word">START</span></a>
 </nav>
 <!-- HERO -->
-<section class="hero">
-  <div class="wm-daypart-hero" id="timeGreeting">
+<section class="wm-hero2" aria-label="WorldMeals">
+  <div class="wm-hero2-stage">
+    <div class="wm-hero2-visual"><div class="wm-hero2-scene">
+    <img class="wm-hero2-photo" src="/images/hero-table.jpg" alt="Butter chicken, sushi rolls, street tacos and naan on a warm stone table" width="1672" height="940" fetchpriority="high" decoding="async">
+    <div class="wm-hero2-phone" aria-hidden="true">
+      <div class="wm-hero2-frame"><div class="wm-hero2-bezel"><div class="wm-hero2-status"><b>9:41</b><span class="wm-st-ic"><i></i><i></i><i></i><i></i></span></div><div class="wm-hero2-island"></div><div class="wm-hero2-screen"><div class="wm-scr-top"></div><div class="wm-scr-mid"></div><div class="wm-scr-bot"></div></div></div></div>
+    </div>
+    </div></div>
+    <div class="wm-hero2-copy">
+      <div class="wm-daypart-hero" id="timeGreeting">
     <img id="timeGreetingIcon" class="time-greeting-icon" src="/images/time/afternoon-sun.png" alt="" aria-hidden="true">
     <div class="wm-daypart-copy">
       <span class="wm-daypart-label" id="timeGreetingText">Good afternoon · Taste lunch around the world</span>
     </div>
   </div>
-  <div class="daypart-note wm-visually-hidden" id="mealPeriodNote">Showing dishes for your local time</div>
-  <div class="hero-tag wm-live-line"><span></span> Now live · 1000+ authentic dishes · Global cuisines</div>
-  <h1 id="heroHeadline">Stop cooking<br/>the same 5 meals.<br/>Eat the <em>whole world</em>.</h1>
-  <p class="hero-sub" id="heroSubtitle">Discover authentic dishes from countries around the world, filtered by your budget, calories, spice level, and diet. With an AI chef that works around what's already in your fridge.</p>
-  <div style="font-size:12px;color:#8A7F73;font-weight:700;letter-spacing:.02em;margin:-18px 0 28px">Built in America · Connecting people through food</div>
-  <div class="hero-ctas">
-   <a href="app.html" class="btn-primary wm-world-cta">
-      <span class="wm-cta-globe-wrap" aria-hidden="true"><img class="wm-cta-globe" src="/images/worldmeals-food-globe.png" alt=""></span>
-      <span>Start cooking the world</span>
-    </a>
-    <a href="#features" class="btn-secondary">See how it works</a>
+      <div class="daypart-note wm-visually-hidden" id="mealPeriodNote">Showing dishes for your local time</div>
+      <p class="wm-hero2-eyebrow">One app. A world of flavor.</p>
+      <h1 id="heroHeadline">Your next favorite<br>meal lives here<span class="wm-editorial-dot">.</span></h1>
+      <p class="hero-sub" id="heroSubtitle">Global dishes. Smarter meal planning.<br>Something delicious for every generation.</p>
+      <div class="wm-hero2-actions">
+        <a href="app.html" class="wm-web-link">Explore in your browser <span aria-hidden="true">→</span></a>
+        <div class="wm-stores wm-hero2-stores">
+          <a class="wm-store wm-store-badge" href="https://apps.apple.com/app/worldmeals/id6797013060" target="_blank" rel="noopener" aria-label="Download WorldMeals on the App Store"><img class="wm-badge-img" src="/images/badge-app-store.png" alt="" onerror="this.remove()"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
+          <a class="wm-store wm-store-badge" href="https://play.google.com/store/apps/details?id=app.worldmeals.android" target="_blank" rel="noopener" aria-label="Get WorldMeals on Google Play"><img class="wm-badge-img" src="/images/badge-google-play.png" alt="" onerror="this.remove()"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg><span><small>GET IT ON</small><b>Google Play</b></span></a>
+        </div>
+      </div>
+      <p class="wm-hero2-foot">For adults. For kids. For the love of food.</p>
+      <a class="wm-kids-hero-link wm-kids-chip" href="#kids" aria-label="New: WorldMeals Kids, meals for ages 6 months to 12 years">
+    <img src="/images/dishes/Kids/banana-oat-porridge.jpg" alt="" aria-hidden="true">
+    <span class="wm-kids-chip-text"><span class="wm-kids-chip-top"><span class="wm-kids-chip-new">NEW</span> <span class="wm-kc-w">WorldMeals</span> <span class="wm-kc-k">Kids</span></span><span class="wm-kids-chip-sub">Meals for ages 6 months–12 years</span></span>
+    <span class="wm-kids-chip-arrow" aria-hidden="true">→</span>
+  </a>
+    </div>
   </div>
-  <div class="hero-trust">
-    <div class="trust-item">🔒 Secure checkout</div>
-    <div class="trust-item">✓ Chef includes a 3-day free trial</div>
-    <div class="trust-item">↩️ Cancel anytime</div>
-    <div class="trust-item">🌱 Explorer · 5 AI recipes lifetime</div>
-  </div>
-  <a class="wm-kids-hero-link" href="#kids">Cooking for little ones? Discover WorldMeals Kids →</a>
 </section>
+
+<div class="wm-editorial-benefits" aria-label="Explore WorldMeals">
+<a href="#discover"><span aria-hidden="true"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="12"/><ellipse cx="16" cy="16" rx="5.2" ry="12"/><path d="M4 16h24M6 9.5h20M6 22.5h20"/></svg></span> Discover global dishes</a>
+<a href="#swaps"><span aria-hidden="true"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 11h17l-4-4M26 21H9l4 4"/></svg></span> Swap any ingredient</a>
+<a href="#chef"><span aria-hidden="true"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10 25h12v-6.5c2.6-.6 4.5-2.9 4.5-5.7 0-3.2-2.6-5.8-5.8-5.8-.5 0-1 .1-1.5.2C18.3 5.4 17.2 5 16 5s-2.3.4-3.2 2.2c-.5-.1-1-.2-1.5-.2-3.2 0-5.8 2.6-5.8 5.8 0 2.8 1.9 5.1 4.5 5.7V25z"/><path d="M10 21.5h12M10 25.5v1.5h12v-1.5"/></svg></span> Cook with Chef AI</a>
+<a href="#kids"><span aria-hidden="true"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="12"/><path d="M11 18.5c1.2 2 3 3 5 3s3.8-1 5-3"/><circle cx="12" cy="13" r=".8" fill="currentColor"/><circle cx="20" cy="13" r=".8" fill="currentColor"/></svg></span> Find family favorites</a>
+</div>
+<section class="wm-editorial-kids" aria-labelledby="wmKidsIntro">
+<div><p class="wm-editorial-kids-brand">WorldMeals <span>Kids</span></p><h2 id="wmKidsIntro">Small appetites.<br>Big discoveries<span>.</span></h2><p>Explore meals from around the world, with choices for your child’s age and preferences.</p><a href="#kids">Explore WorldMeals Kids <span aria-hidden="true">→</span></a></div>
+<div class="wm-kids-pics">
+<figure><img src="/images/dishes/Kids/mini-pita-pizza-faces.jpg" alt="Mini pita pizza faces from the WorldMeals Kids collection" loading="lazy" width="640" height="640"></figure>
+<figure><img src="/images/dishes/Kids/kyaraben-character-bento.jpg" alt="Panda character bento from the WorldMeals Kids collection" loading="lazy" width="640" height="640"></figure>
+</div>
+</section>
+<section class="wm-swap" id="swaps" aria-labelledby="wmSwapTitle">
+  <div class="wm-swap-inner">
+    <div class="wm-swap-copy">
+      <p class="wm-swap-eyebrow">Smart substitutions</p>
+      <h2 id="wmSwapTitle">Love the dish.<br>Change what’s <span class="wm-nowrap">in it<span>.</span></span></h2>
+      <p class="wm-swap-lead">Too spicy, no dairy, vegan, or missing an ingredient? WorldMeals adapts the recipe and keeps the flavor.</p>
+      <p class="wm-swap-stat"><b>5,400+</b> smart swaps across <b>1,280+</b> dishes</p>
+    </div>
+    <div class="wm-swap-demo">
+      <div class="wm-swap-photo"><img src="/images/dishes/Butter-Chicken.jpg" alt="Butter Chicken" loading="lazy" width="800" height="600"><span>Butter Chicken · India</span></div>
+      <div class="wm-swap-panel">
+        <div class="wm-swap-tabs" role="group" aria-label="Try a substitution">
+          <button type="button" data-k="spice">Less spicy</button>
+          <button type="button" data-k="dairy">Dairy-free</button>
+          <button type="button" data-k="vegan" class="on">Make it vegan</button>
+          <button type="button" data-k="local">Can’t find it?</button>
+          <button type="button" data-k="">Original</button>
+        </div>
+        <ul class="wm-swap-list" id="wmSwapList" aria-live="polite"></ul>
+        <p class="wm-swap-note" id="wmSwapNote"></p>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+(function(){var D={"ingredients":["Chicken","Tomatoes","Butter","Heavy cream","Garam masala","Kashmiri chili powder","Ginger","Garlic"],"swaps":{"spice":[{"from":"Garam masala","to":"Half the amount | Mild curry powder or mild salsa | A spoon of yogurt or coconut milk to soften","note":"Add heat at the table so everyone can choose"},{"from":"Kashmiri chili powder","to":"Half the amount | Sweet paprika | A mild curry powder or mild chili","note":"Add heat at the table so everyone can choose"}],"dairy":[{"from":"Butter","to":"Olive oil | Vegan butter | Coconut oil","note":"Use vegan butter for pastry and baking; oil is fine for cooking."},{"from":"Heavy cream","to":"Coconut cream | Cashew cream | Oat cream","note":"For sauces, use an unsweetened alternative and stir in gently."}],"vegan":[{"from":"Chicken","to":"Chickpeas | Firm tofu | Seitan","note":"Marinate the same way; seitan contains gluten"},{"from":"Butter","to":"Vegan butter | Olive oil","note":"Use vegan butter for pastry and baking; oil is fine for cooking."},{"from":"Heavy cream","to":"Coconut cream | Cashew cream","note":"For sauces, use an unsweetened alternative and stir in gently."}],"local":[{"from":"Garam masala","to":"Cumin + coriander + cinnamon + black pepper","note":"An approximation of the warm spice profile; it will not reproduce every regional blend."},{"from":"Kashmiri chili powder","to":"Another fresh chili of similar heat | Dried chili flakes (use less)","note":"Start with less; chilies vary a lot in heat."}]}};
+var list=document.getElementById("wmSwapList"),note=document.getElementById("wmSwapNote"),tabs=[].slice.call(document.querySelectorAll(".wm-swap-tabs button"));
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function show(k){tabs.forEach(function(b){b.classList.toggle("on",b.dataset.k===k);b.setAttribute("aria-pressed",String(b.dataset.k===k))});
+var sw={};(D.swaps[k]||[]).forEach(function(x){sw[x.from]=x});var notes=[];
+list.innerHTML=D.ingredients.map(function(i,n){var x=sw[i];if(!x)return '<li><span class="wm-sw-same">'+esc(i)+'</span></li>';
+if(notes.indexOf(x.note)<0)notes.push(x.note);
+return '<li class="wm-sw-changed" style="animation-delay:'+(n*40)+'ms"><span class="wm-sw-from">'+esc(i)+'</span><span class="wm-sw-arrow" aria-hidden="true">→</span><span class="wm-sw-opts">'+String(x.to).split(" | ").map(function(o){return '<span class="wm-sw-to">'+esc(o)+'</span>'}).join('<i>or</i>')+'</span>'+(x.note?'<span class="wm-sw-tip">'+esc(x.note)+'</span>':"")+'</li>'}).join("");
+note.textContent=k?"":"The original recipe, just as it’s made in India.";note.style.display=k?"none":"";}
+tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)})});show("vegan");})();
+</script>
+<style>
+.wm-swap{background:#FFFAF1;padding:96px max(24px,6%);border-bottom:1px solid #EDE4D3}
+.wm-swap-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.4fr;gap:56px;align-items:center}
+.wm-swap-eyebrow{margin:0 0 14px;font:600 12px/1.4 Inter,system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#6B5A48}
+.wm-swap h2{margin:0 0 18px;font:400 clamp(36px,4vw,58px)/1.04 "DM Serif Display",Georgia,serif;letter-spacing:-.02em;color:#14261B}
+.wm-swap h2 span span,.wm-swap h2>span:not(.wm-nowrap){color:#E97622}.wm-nowrap{white-space:nowrap}
+.wm-swap-lead{margin:0 0 22px;font:400 17px/1.65 Inter,system-ui,sans-serif;color:#3F362D;max-width:440px}
+.wm-swap-stat{margin:0;padding-top:18px;border-top:1px solid #E6DCC9;font:500 14px/1.5 Inter,system-ui,sans-serif;color:#5B5047}
+.wm-swap-stat b{font-family:"DM Serif Display",Georgia,serif;font-weight:400;font-size:24px;color:#1E5B2C;margin-right:2px}
+.wm-swap-demo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);min-width:0;background:#fff;border:1px solid #EDE4D3;border-radius:26px;overflow:hidden;box-shadow:0 30px 70px -20px rgba(70,40,15,.22)}
+.wm-swap-photo{position:relative;min-height:100%}
+.wm-swap-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.wm-swap-photo span{position:absolute;left:14px;bottom:14px;padding:6px 12px;border-radius:999px;background:rgba(20,38,27,.78);color:#fffaf1;font:600 12px Inter,system-ui,sans-serif;backdrop-filter:blur(4px)}
+.wm-swap-panel{padding:26px 26px 22px;min-width:0}.wm-swap-inner>*{min-width:0}
+.wm-swap-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.wm-swap-tabs button{min-height:40px;padding:8px 15px;border-radius:999px;border:1px solid #E2D7C4;background:#FFFCF6;color:#4B4036;font:600 13px Inter,system-ui,sans-serif;cursor:pointer;transition:all .2s ease}
+.wm-swap-tabs button:hover{border-color:#1E5B2C;color:#1E5B2C}
+.wm-swap-tabs button.on{background:#14402c;border-color:#14402c;color:#fffaf1}
+.wm-swap-tabs button:focus-visible{outline:3px solid #E58A3D;outline-offset:2px}
+.wm-swap-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.wm-swap-list li{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font:500 14px/1.4 Inter,system-ui,sans-serif;color:#3A2E22;padding-bottom:9px;border-bottom:1px solid #F3ECDF}
+.wm-swap-list li:last-child{border-bottom:0}
+.wm-sw-changed{animation:wmSwIn .45s cubic-bezier(.2,.8,.2,1) both}
+@keyframes wmSwIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}
+.wm-sw-from{color:#A0897A;text-decoration:line-through;text-decoration-color:#D9701D}
+.wm-sw-arrow{color:#C9A55A;font-weight:700}
+.wm-sw-opts{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px}
+.wm-sw-opts i{font-style:normal;font-size:12px;color:#9A8B7A}
+.wm-sw-to{padding:4px 10px;border-radius:999px;background:#EEF5EC;color:#1E5B2C;font-weight:700;font-size:13px}
+.wm-sw-tip{flex-basis:100%;font:400 12.5px/1.5 Inter,system-ui,sans-serif;color:#7d7266;font-style:italic;padding-left:2px}
+.wm-swap-note{margin:16px 0 0;font:400 13px/1.55 Inter,system-ui,sans-serif;color:#7d7266;font-style:italic}
+@media(max-width:980px){.wm-swap-inner{grid-template-columns:1fr;gap:34px}.wm-swap{padding:64px 20px}}
+@media(max-width:640px){.wm-swap-demo{grid-template-columns:minmax(0,1fr)}.wm-swap-photo{height:210px}.wm-swap-panel{padding:20px 18px}.wm-swap-tabs{flex-wrap:nowrap;overflow-x:auto;margin:0 -18px 18px;padding:0 18px;scrollbar-width:none}.wm-swap-tabs::-webkit-scrollbar{display:none}.wm-swap-tabs button{flex:0 0 auto}}
+@media(prefers-reduced-motion:reduce){.wm-sw-changed{animation:none}}
+</style>
+
 
 <section class="hero-visual reveal" aria-label="WorldMeals food photography">
   <div class="hero-photo-main">
@@ -2392,13 +2932,13 @@ body{
     <div class="marquee-item">🌍 Cuisines from around the world</div>
     <div class="marquee-item">🍽️ 1000+ authentic dishes</div>
     <div class="marquee-item">🤖 AI-powered cooking</div>
-    <div class="marquee-item">📸 Real food photography</div>
+    <div class="marquee-item">📸 Beautiful dish previews</div>
     <div class="marquee-item">❤️ Connecting people through food</div>
     <div class="marquee-item">🇺🇸 Built in America</div>
     <div class="marquee-item">🌍 Cuisines from around the world</div>
     <div class="marquee-item">🍽️ 1000+ authentic dishes</div>
     <div class="marquee-item">🤖 AI-powered cooking</div>
-    <div class="marquee-item">📸 Real food photography</div>
+    <div class="marquee-item">📸 Beautiful dish previews</div>
     <div class="marquee-item">❤️ Connecting people through food</div>
     <div class="marquee-item">🇺🇸 Built in America</div>
   </div>
@@ -2443,75 +2983,18 @@ body{
 </section>
 
 <!-- APP PREVIEW -->
-<section class="preview reveal" id="how">
+<section class="preview reveal wm-pocket" id="how">
   <div class="section-eyebrow">The app</div>
   <div class="section-title">The whole world in your pocket</div>
   <div class="section-sub">Browse, filter, plan, and cook in one seamless experience. Real dishes, smart filters, and a global kitchen designed to feel effortless.</div>
-  <div class="app-frame">
-    <div class="app-screen">
-      <div class="app-bar">
-        <img
-          src="/images/worldmeals-logo-horizontal.png"
-          alt="WorldMeals"
-          class="app-preview-brand">
-        <div style="margin-left:auto;font-size:10px;color:#777">❤️ 3</div>
-      </div>
-      <div class="app-search">🔍 Search dish or country…</div>
-      <div class="app-filters">
-        <div class="app-filter" style="background:#1a1a18;color:#fff">All regions</div>
-        <div class="app-filter" style="background:#F5F5F0;color:#555">Asia</div>
-        <div class="app-filter" style="background:#F5F5F0;color:#555">Europe</div>
-        <div class="app-filter" style="background:#F5F5F0;color:#555">Americas</div>
-        <div class="app-filter" style="background:#F5F5F0;color:#555">Africa</div>
-      </div>
-      <div class="app-grid">
-        <div class="app-card">
-          <div class="app-card-img"><img src="/images/dishes/Butter-Chicken.jpg" alt="Butter Chicken"></div>
-          <div class="app-card-body">
-            <div class="app-card-name">Butter Chicken</div>
-            <div class="app-card-country">📍 India</div>
-            <div class="app-card-tags">
-              <span class="app-tag" style="background:#FEF3C7;color:#92400E">580 kcal</span>
-              <span class="app-tag" style="background:#DCFCE7;color:#166534">$8</span>
-            </div>
-          </div>
-        </div>
-        <div class="app-card">
-          <div class="app-card-img"><img src="/images/dishes/Sushi.jpg" alt="Sushi"></div>
-          <div class="app-card-body">
-            <div class="app-card-name">Sushi</div>
-            <div class="app-card-country">📍 Japan</div>
-            <div class="app-card-tags">
-              <span class="app-tag" style="background:#FEF3C7;color:#92400E">320 kcal</span>
-              <span class="app-tag" style="background:#DCFCE7;color:#166534">$18</span>
-            </div>
-          </div>
-        </div>
-        <div class="app-card">
-          <div class="app-card-img"><img src="/images/dishes/Tacos-al-Pastor.jpg" alt="Tacos al Pastor"></div>
-          <div class="app-card-body">
-            <div class="app-card-name">Tacos al Pastor</div>
-            <div class="app-card-country">📍 Mexico</div>
-            <div class="app-card-tags">
-              <span class="app-tag" style="background:#FEF3C7;color:#92400E">420 kcal</span>
-              <span class="app-tag" style="background:#DCFCE7;color:#166534">$5</span>
-            </div>
-          </div>
-        </div>
-        <div class="app-card">
-          <div class="app-card-img"><img src="/images/dishes/Pad-Thai.jpg" alt="Pad Thai"></div>
-          <div class="app-card-body">
-            <div class="app-card-name">Pad Thai</div>
-            <div class="app-card-country">📍 Thailand</div>
-            <div class="app-card-tags">
-              <span class="app-tag" style="background:#FEF3C7;color:#92400E">490 kcal</span>
-              <span class="app-tag" style="background:#DCFCE7;color:#166534">$9</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="wm-pp-row wm-pp4">
+    <div class="wm-pp wm-pp-left"><div class="wm-pp-frame"><div class="wm-pp-bezel"><div class="wm-pp-island"></div><img src="/images/app-screen-kids.jpg" alt="WorldMeals Kids screen: choose an age and a meal" loading="lazy" width="540" height="1169"></div></div><p class="wm-pp-label">WorldMeals Kids</p></div>
+    <div class="wm-pp wm-pp-center"><div class="wm-pp-frame"><div class="wm-pp-bezel"><div class="wm-pp-island"></div><img src="/images/app-screen-recipe.jpg" alt="WorldMeals recipe screen for Butter Chicken" loading="lazy" width="540" height="1169"></div></div><p class="wm-pp-label">Every recipe, explained</p></div>
+    <div class="wm-pp wm-pp-center wm-pp-center2"><div class="wm-pp-frame"><div class="wm-pp-bezel"><div class="wm-pp-island"></div><img src="/images/app-screen-swaps.jpg" alt="WorldMeals smart substitutions: making Butter Chicken vegan" loading="lazy" width="540" height="1169"></div></div><p class="wm-pp-label">Smart substitutions</p></div>
+    <div class="wm-pp wm-pp-right"><div class="wm-pp-frame"><div class="wm-pp-bezel"><div class="wm-pp-island"></div><img src="/images/app-screen-scan.jpg" alt="WorldMeals Fridge Scan screen" loading="lazy" width="540" height="1169"></div></div><p class="wm-pp-label">Scan your fridge</p></div>
   </div>
+  <p class="wm-pp-swipe" aria-hidden="true">Swipe to explore <span>→</span></p>
+  <div class="wm-pp-caps wm-pp4caps"><span>WorldMeals Kids</span><span>Every recipe, explained</span><span>Smart substitutions</span><span>Scan your fridge</span></div>
 </section>
 
 
@@ -2519,14 +3002,14 @@ body{
 <section class="v3-section discovery" id="discover">
   <div class="v3-inner">
     <div class="v3-kicker">Global discovery</div>
-    <div class="v3-title">Travel the world<br><em>without leaving your kitchen.</em></div>
-    <div class="v3-sub">Explore beautifully curated cuisine collections from every corner of the globe. Start with a country, discover its iconic dishes, and cook your way across the world.</div>
+    <div class="v3-title wm-disc-title">Travel the world<br><em>without leaving your kitchen</em><span>.</span></div>
+    <div class="v3-sub">Start with a country, discover its iconic dishes, and cook your way across the world.</div>
 
     <div class="discovery-row">
-      <article class="discovery-card">
+      <a class="discovery-card wm-disc-card" href="app.html?country=Italy" aria-label="Explore Italy dishes in WorldMeals">
         <div class="discovery-photo">
-          <img src="/images/dishes/Pizza-Margherita.jpg" alt="Pizza Margherita">
-          <div class="discovery-flag">🇮🇹 Taste Italy</div>
+          <img src="/images/dishes/Pizza-Margherita.jpg" alt="Pizza Margherita" loading="lazy" draggable="false">
+          <div class="discovery-flag wm-disc-country">Italy</div>
         </div>
         <div class="discovery-body">
           <div class="discovery-name">Italian Classics</div>
@@ -2536,13 +3019,14 @@ body{
             <span class="discovery-chip">Pasta Carbonara</span>
             <span class="discovery-chip">Risotto</span>
           </div>
+        <span class="wm-disc-more">Explore Italy <span aria-hidden="true">→</span></span>
         </div>
-      </article>
+      </a>
 
-      <article class="discovery-card">
+      <a class="discovery-card wm-disc-card" href="app.html?country=Japan" aria-label="Explore Japan dishes in WorldMeals">
         <div class="discovery-photo">
-          <img src="/images/dishes/Sushi.jpg" alt="Sushi">
-          <div class="discovery-flag">🇯🇵 Explore Japan</div>
+          <img src="/images/dishes/Sushi.jpg" alt="Sushi" loading="lazy" draggable="false">
+          <div class="discovery-flag wm-disc-country">Japan</div>
         </div>
         <div class="discovery-body">
           <div class="discovery-name">Japanese Favorites</div>
@@ -2552,13 +3036,14 @@ body{
             <span class="discovery-chip">Ramen</span>
             <span class="discovery-chip">Tempura</span>
           </div>
+        <span class="wm-disc-more">Explore Japan <span aria-hidden="true">→</span></span>
         </div>
-      </article>
+      </a>
 
-      <article class="discovery-card">
+      <a class="discovery-card wm-disc-card" href="app.html?country=Mexico" aria-label="Explore Mexico dishes in WorldMeals">
         <div class="discovery-photo">
-          <img src="/images/dishes/Tacos-al-Pastor.jpg" alt="Tacos al Pastor">
-          <div class="discovery-flag">🇲🇽 Discover Mexico</div>
+          <img src="/images/dishes/Tacos-al-Pastor.jpg" alt="Tacos al Pastor" loading="lazy" draggable="false">
+          <div class="discovery-flag wm-disc-country">Mexico</div>
         </div>
         <div class="discovery-body">
           <div class="discovery-name">Mexican Street Food</div>
@@ -2568,13 +3053,14 @@ body{
             <span class="discovery-chip">Tamales</span>
             <span class="discovery-chip">Sopes</span>
           </div>
+        <span class="wm-disc-more">Explore Mexico <span aria-hidden="true">→</span></span>
         </div>
-      </article>
+      </a>
 
-      <article class="discovery-card">
+      <a class="discovery-card wm-disc-card" href="app.html?country=Ghana" aria-label="Explore Ghana dishes in WorldMeals">
         <div class="discovery-photo">
-          <img src="/images/dishes/Jollof-Rice.jpg" alt="Jollof Rice">
-          <div class="discovery-flag">🇬🇭 Discover Ghana</div>
+          <img src="/images/dishes/Jollof-Rice.jpg" alt="Jollof Rice" loading="lazy" draggable="false">
+          <div class="discovery-flag wm-disc-country">Ghana</div>
         </div>
         <div class="discovery-body">
           <div class="discovery-name">West African Favorites</div>
@@ -2584,13 +3070,14 @@ body{
             <span class="discovery-chip">Waakye</span>
             <span class="discovery-chip">Fufu &amp; Egusi Soup</span>
           </div>
+        <span class="wm-disc-more">Explore Ghana <span aria-hidden="true">→</span></span>
         </div>
-      </article>
+      </a>
 
-      <article class="discovery-card">
+      <a class="discovery-card wm-disc-card" href="app.html?country=United%20States" aria-label="Explore United States dishes in WorldMeals">
         <div class="discovery-photo">
-          <img src="/images/dishes/BBQ-Ribs.jpg" alt="BBQ Ribs">
-          <div class="discovery-flag">🇺🇸 Explore USA</div>
+          <img src="/images/dishes/BBQ-Ribs.jpg" alt="BBQ Ribs" loading="lazy" draggable="false">
+          <div class="discovery-flag wm-disc-country">USA</div>
         </div>
         <div class="discovery-body">
           <div class="discovery-name">American Regional Icons</div>
@@ -2600,13 +3087,14 @@ body{
             <span class="discovery-chip">Gumbo</span>
             <span class="discovery-chip">Lobster Roll</span>
           </div>
+        <span class="wm-disc-more">Explore the USA <span aria-hidden="true">→</span></span>
         </div>
-      </article>
+      </a>
 
-      <article class="discovery-card">
+      <a class="discovery-card wm-disc-card" href="app.html?country=Peru" aria-label="Explore Peru dishes in WorldMeals">
         <div class="discovery-photo">
-          <img src="/images/dishes/Ceviche.jpg" alt="Ceviche">
-          <div class="discovery-flag">🇵🇪 Taste Peru</div>
+          <img src="/images/dishes/Ceviche.jpg" alt="Ceviche" loading="lazy" draggable="false">
+          <div class="discovery-flag wm-disc-country">Peru</div>
         </div>
         <div class="discovery-body">
           <div class="discovery-name">Peruvian Essentials</div>
@@ -2616,13 +3104,14 @@ body{
             <span class="discovery-chip">Lomo Saltado</span>
             <span class="discovery-chip">Ají de Gallina</span>
           </div>
+        <span class="wm-disc-more">Explore Peru <span aria-hidden="true">→</span></span>
         </div>
-      </article>
+      </a>
     </div>
 
     <div class="discovery-controls" aria-label="Global discovery controls">
-      <button class="discovery-control" id="discoveryPrev" aria-label="Previous dishes">←</button>
-      <button class="discovery-control" id="discoveryNext" aria-label="Next dishes">→</button>
+      <button class="discovery-control" id="discoveryPrev" aria-label="Previous countries"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="discovery-control" id="discoveryNext" aria-label="Next countries"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
     </div>
   </div>
 </section>
@@ -2681,21 +3170,21 @@ body{
   <div class="wm-kids-inner">
     <div>
       <div class="wm-kids-label"><span class="wm-kids-brand-world">WorldMeals</span> <span class="wm-kids-brand-kids">Kids</span><span class="wm-kids-brand-tag"> · For little explorers</span></div>
-      <h2 id="wmKidsTitle">Big flavors.<br><em>Little explorers.</em></h2>
+      <h2 id="wmKidsTitle">Meals they’ll love.<br><em>Choices you control</em><span class="wm-kd-dot">.</span></h2>
       <p class="wm-kids-copy"><b>400 kids dishes from 154 countries</b>, sorted by age from <b>6 months to 12 years</b>. Breakfast, lunch, dinner and snacks your child will actually eat.</p>
       <ul class="wm-kids-points">
         <li><b>“My child won’t eat…”</b> Pick vegetables, meat, fish, eggs, dairy or mushrooms, and only meals that work show up.</li>
         <li>Toddler-friendly textures, hidden-veggie and picky-eater dishes.</li>
         <li>Introduce a new country, one little bite at a time.</li>
       </ul>
-      <a href="app.html" class="btn-primary wm-kids-button">Open WorldMeals &amp; explore Kids →</a>
+      <a href="app.html" class="btn-primary wm-kids-button">Explore WorldMeals Kids <span aria-hidden="true">→</span></a>
       <p class="wm-kids-note"><b>Included with Chef · try it free for 3 days.</b> Find the Kids collection inside WorldMeals. Choose dishes and textures suited to your child's age, needs, and allergies.</p>
     </div>
-    <div class="wm-kids-demo"><p class="wm-kids-demo-label">Take a look inside WorldMeals Kids</p><div class="wm-kids-screens" tabindex="0" role="region" aria-label="Five actual Kids app screenshots. Scroll horizontally or use arrow keys to explore."><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-1.jpg" loading="lazy" decoding="async" alt="Welcome to WorldMeals Kids — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>1 / 5 · Welcome to WorldMeals Kids</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-2.jpg" loading="lazy" decoding="async" alt="Choices that work for your child — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>2 / 5 · Choices that work for your child</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-3.jpg" loading="lazy" decoding="async" alt="Find meals from around the world — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>3 / 5 · Find meals from around the world</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-4.jpg" loading="lazy" decoding="async" alt="Choose an age and meal type — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>4 / 5 · Choose an age and meal type</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-5.jpg" loading="lazy" decoding="async" alt="Explore dishes and view recipes — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>5 / 5 · Explore dishes and view recipes</figcaption></figure></div><div class="wm-kids-controls" aria-label="Kids preview controls"><button type="button" id="kidsPrev" aria-label="Previous Kids screen">←</button><button type="button" id="kidsPause" aria-label="Pause automatic screen changes">Pause</button><button type="button" id="kidsNext" aria-label="Next Kids screen">→</button></div><p class="wm-kids-swipe">Swipe, scroll, or use the arrows to explore all 5 screens.</p></div>
+    <div class="wm-kids-demo"><p class="wm-kids-demo-label">Take a look inside WorldMeals Kids</p><div class="wm-kids-screens" tabindex="0" role="region" aria-label="Five actual Kids app screenshots. Scroll horizontally or use arrow keys to explore."><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-1.jpg" loading="lazy" decoding="async" alt="Welcome to WorldMeals Kids — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>1 / 5 · Welcome to WorldMeals Kids</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-2.jpg" loading="lazy" decoding="async" alt="Choices that work for your child — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>2 / 5 · Choices that work for your child</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-3.jpg" loading="lazy" decoding="async" alt="Find meals from around the world — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>3 / 5 · Find meals from around the world</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-4.jpg" loading="lazy" decoding="async" alt="Choose an age and meal type — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>4 / 5 · Choose an age and meal type</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-5.jpg" loading="lazy" decoding="async" alt="Explore dishes and view recipes — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>5 / 5 · Explore dishes and view recipes</figcaption></figure></div><div class="wm-kids-controls" aria-label="Kids preview controls"><button type="button" id="kidsPrev" aria-label="Previous Kids screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" id="kidsPause" aria-label="Pause automatic screen changes">Pause</button><button type="button" id="kidsNext" aria-label="Next Kids screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div><p class="wm-kids-swipe">Swipe to explore all 5 screens</p></div>
     <div class="wm-kids-categories" aria-label="WorldMeals Kids categories">
-      <article class="wm-kids-category"><span aria-hidden="true">🥦</span><h3>Picky eater?</h3><p>Hidden-veggie dishes and familiar flavors, with a little room for discovery.</p></article>
-      <article class="wm-kids-category"><span aria-hidden="true">🍼</span><h3>Little one?</h3><p>Soft, toddler-friendly textures, sorted by age from 6 months.</p></article>
-      <article class="wm-kids-category"><span aria-hidden="true">🚫</span><h3>Allergies?</h3><p>Dairy-free, egg-free and gluten-free choices. Always check every ingredient for your child.</p></article>
+      <article class="wm-kids-category"><span class="wm-kd-ic" aria-hidden="true"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 27v-9"/><path d="M16 18c-5 0-8.5-3-8.5-7 0-3 2.4-5.4 5.4-5.4 1 0 2 .3 2.8.8C16.6 4.6 18.3 3.5 20 3.5c3 0 5.4 2.4 5.4 5.4 0 .4 0 .8-.1 1.1 1.3.8 2.2 2.2 2.2 3.8 0 2.5-2 4.2-4.5 4.2H16z"/><path d="M11 27h10"/></svg></span><h3>Picky eater?</h3><p>Hidden-veggie dishes and familiar flavors, with a little room for discovery.</p></article>
+      <article class="wm-kids-category"><span class="wm-kd-ic" aria-hidden="true"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M12.5 4h7v3.5h-7z"/><path d="M12 7.5h8l1.5 4v14a2.5 2.5 0 0 1-2.5 2.5h-6a2.5 2.5 0 0 1-2.5-2.5v-14z"/><path d="M10.5 15h3M10.5 19h3M10.5 23h3"/></svg></span><h3>Little one?</h3><p>Soft, toddler-friendly textures, sorted by age from 6 months.</p></article>
+      <article class="wm-kids-category"><span class="wm-kd-ic" aria-hidden="true"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.5l10 4v7.5c0 6.3-4.2 11.2-10 13.5C10.2 26.2 6 21.3 6 15V7.5z"/><path d="M11.5 16l3.2 3.2 6-6.4"/></svg></span><h3>Allergies?</h3><p>Dairy-free, egg-free and gluten-free choices. Always check every ingredient for your child.</p></article>
     </div>
   </div>
 </section>
@@ -2761,20 +3250,20 @@ body{
         </div>
       </div>
 
-      <a class="map-open wm-map-start" id="mapOpen" href="app.html?country=United%20States"><img src="/images/worldmeals-start-button.png" alt="Start"><span id="mapOpenLabel">Start exploring USA →</span></a>
+      <a class="map-open wm-map-start" id="mapOpen" href="app.html?country=United%20States"><span class="wm-start-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><span id="mapOpenLabel">Start exploring USA →</span></a>
       <div class="map-hint">Tap another flag on the globe to change countries.</div>
     </div>
   </div>
 </section>
 
 <!-- CHEF AI -->
-<section class="v3-section ai-showcase">
+<section class="v3-section ai-showcase wm-ai" id="chef">
   <div class="v3-inner ai-grid">
     <div>
       <div class="v3-kicker">Meet Chef AI</div>
-      <div class="v3-title">Your personal chef.<br><em>Ready when you are.</em></div>
+      <div class="v3-title wm-ai-title">Your personal chef.<br><em>Ready when you are</em><span>.</span></div>
       <div class="v3-sub">Tell Chef AI what you have, what you can spend, and how much time you have. It helps you turn everyday ingredients into authentic dishes from around the world.</div>
-      <a class="v3-cta wm-action-start" href="app.html?open=chef"><img src="/images/worldmeals-start-button.png" alt="Start"><span>Ask Chef AI →</span></a>
+      <a class="v3-cta wm-action-start" href="app.html?open=chef"><span class="wm-start-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><span>Ask Chef AI →</span></a>
     </div>
 
     <div class="chef-panel">
@@ -2782,50 +3271,31 @@ body{
         <div class="chef-avatar wm-chef-avatar"><img src="/images/chef-ai.png" alt=""></div>
         <div>
           <div class="chef-name">Chef AI</div>
-          <div class="chef-status">Online · Ready to cook</div>
+          <div class="chef-status"><i class="wm-ai-live"></i>Ready to cook</div>
         </div>
       </div>
 
       <div class="chef-bubble">Tell me what ingredients you have, your budget, and how much time you want to spend cooking.</div>
-      <div class="chef-bubble" style="background:#EAF8F2;color:#175844;border-radius:18px 18px 6px 18px;margin-left:34px">Chicken, rice, tomatoes, and about 30 minutes.</div>
+      <div class="chef-bubble wm-ai-me wm-ai-step">Chicken, rice, tomatoes, and about 30 minutes.</div>
+      <div class="wm-ai-typing wm-ai-step" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="chef-bubble wm-ai-reply wm-ai-step">Great combo. Here are 3 dishes you can make tonight:
+        <div class="wm-ai-dishes">
+          <a class="wm-ai-dish" href="app.html?open=chef"><img src="/images/dishes/Senegalese-Chicken-Rice-Protein-Bowl.jpg" alt="" loading="lazy"><span><b>Senegalese Chicken Rice Bowl</b><small>Senegal · 30 min</small></span></a>
+          <a class="wm-ai-dish" href="app.html?open=chef"><img src="/images/dishes/Indian-Tandoori-Chicken-Protein-Bowl.jpg" alt="" loading="lazy"><span><b>Tandoori Chicken Bowl</b><small>India · 30 min</small></span></a>
+          <a class="wm-ai-dish" href="app.html?open=chef"><img src="/images/dishes/Spanish-Chicken-Rice-Protein-Bowl.jpg" alt="" loading="lazy"><span><b>Spanish Chicken Rice Bowl</b><small>Spain · 35 min</small></span></a>
+        </div>
+      </div>
 
       <div class="chef-input">
         <span>Type your ingredients...</span>
-        <button class="chef-button" aria-label="Send message">↑</button>
+        <button class="chef-button" aria-label="Send message" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
       </div>
     </div>
   </div>
 </section>
 
 <!-- SPICE SUBSTITUTION HIGHLIGHT -->
-<section class="spice reveal">
-  <div class="spice-inner">
-    <div>
-      <div class="section-eyebrow">Personalized for you</div>
-      <div class="section-title">Love a cuisine.<br/>Hate the spice.</div>
-      <p style="font-size:15px;color:#666;line-height:1.7;margin-bottom:20px">Many people avoid dishes they would otherwise enjoy because of one ingredient. Too spicy. Too much dairy. Can't eat gluten. World Meals fixes that instantly — for every single dish on the platform.</p>
-      <p style="font-size:13px;color:#888;line-height:1.6">Want Butter Chicken but can't handle heat? We swap the chili for sweet paprika. Same colour, same richness, zero fire. Want it dairy-free too? Coconut cream replaces the heavy cream perfectly. The dish keeps its original inspiration while adapting to your needs.</p>
-    </div>
-    <div class="spice-demo">
-      <div class="spice-dish-photo">
-        <img src="/images/dishes/Butter-Chicken.jpg" alt="Butter Chicken">
-      </div>
-      <div style="font-size:13px;font-weight:700;margin-bottom:14px">Butter Chicken — made for you</div>
-      <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
-        <button style="font-size:11px;padding:5px 12px;border-radius:20px;border:2px solid #92400E;background:#FEF3C7;color:#92400E;font-weight:600;cursor:pointer">🌶 Reduce spice</button>
-        <button style="font-size:11px;padding:5px 12px;border-radius:20px;border:1px solid #E5E5E0;background:#fff;color:#555;cursor:pointer">🥛 Dairy-free</button>
-        <button style="font-size:11px;padding:5px 12px;border-radius:20px;border:1px solid #E5E5E0;background:#fff;color:#555;cursor:pointer">🌱 Vegan</button>
-      </div>
-      <div class="swap-row">
-        <span class="swap-from">Chili powder</span>
-        <span class="swap-arrow">→</span>
-        <span class="swap-to">Sweet paprika</span>
-      </div>
-      <div style="font-size:11px;color:#888;margin-bottom:12px;padding:0 4px">💡 Same rich colour, zero heat — you won't miss a thing</div>
-      <div style="background:#F0FDF4;border-radius:10px;padding:10px 12px;font-size:12px;color:#166534">✓ Your personalised recipe is ready. Inspired by the original dish — thoughtfully adapted for you.</div>
-    </div>
-  </div>
-</section>
+
 
 
 <!-- WORLD TOUR -->
@@ -2868,7 +3338,7 @@ body{
       <div class="v3-kicker">World Tour</div>
       <div class="v3-title">Cook your way<br><em>around the world.</em></div>
       <div class="v3-sub">Every dish becomes a new destination. Track the countries you explore, collect culinary stamps, and build a personal journey through world cuisine.</div>
-      <a class="v3-cta wm-tour-start" href="app.html?open=tour"><img src="/images/worldmeals-start-button.png" alt="Start"><span>Your World Tour →</span></a>
+      <a class="v3-cta wm-tour-start" href="app.html?open=tour"><span class="wm-start-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><span>Your World Tour →</span></a>
     </div>
   </div>
 </section>
@@ -2909,8 +3379,8 @@ body{
 
       <div class="testi-card">
         <div class="feature-icon wm-photo-icon"><img src="/images/real-food-photography.png" alt=""></div>
-        <div class="feature-title">Real Food Photography</div>
-        <div class="feature-desc">Beautiful, authentic food images help you see exactly what you're about to cook.</div>
+        <div class="feature-title">Beautiful Dish Previews</div>
+        <div class="feature-desc">Beautiful dish previews give you an idea of what you're about to cook.</div>
       </div>
 
       <div class="testi-card">
@@ -3050,25 +3520,18 @@ body{
     <span>Start cooking the world</span>
   </a>
   <div style="margin-top:16px;font-size:12px;color:#444">Explorer · 5 AI recipes lifetime · Chef includes a 3-day trial · Cancel anytime</div>
+  <div class="wm-stores">
+    <a class="wm-store wm-store-badge" href="https://apps.apple.com/app/worldmeals/id6797013060" target="_blank" rel="noopener" aria-label="Download WorldMeals on the App Store"><img class="wm-badge-img" src="/images/badge-app-store.png" alt="" onerror="this.remove()"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
+    <a class="wm-store wm-store-badge" href="https://play.google.com/store/apps/details?id=app.worldmeals.android" target="_blank" rel="noopener" aria-label="Get WorldMeals on Google Play"><img class="wm-badge-img" src="/images/badge-google-play.png" alt="" onerror="this.remove()"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg><span><small>GET IT ON</small><b>Google Play</b></span></a>
+  </div>
 </section>
 
 
 
 <!-- OPTIONAL FEEDBACK — LANDING PAGE ONLY -->
-<section class="landing-feedback reveal" id="feedback" aria-labelledby="landingFeedbackTitle">
-  <div class="landing-feedback-inner">
-    <div class="landing-feedback-photo" aria-hidden="true">
-      <img src="/images/worldmeals-community-feedback.png" alt="" loading="lazy">
-    </div>
-    <div class="landing-feedback-icon" aria-hidden="true">💬</div>
-    <div class="landing-feedback-copy">
-      <div class="landing-feedback-kicker">YOUR VOICE MATTERS</div>
-      <h2 id="landingFeedbackTitle">Help WorldMeals grow.</h2>
-      <p>Have an idea, found something we can improve, or simply love a feature? Share feedback whenever you want.</p>
-    </div>
-    <button type="button" class="landing-feedback-btn" id="openLandingFeedback">Share feedback →</button>
-  </div>
-</section>
+
+
+
 
 <div class="landing-feedback-modal" id="landingFeedbackModal" aria-hidden="true">
   <div class="landing-feedback-backdrop" data-feedback-close></div>
@@ -3204,8 +3667,11 @@ body{
       alt="WorldMeals — Connecting People Through Food"
       class="footer-brand-image">
   </div>
-  <div class="footer-links">
+  <div class="footer-links" id="feedback">
+    <button type="button" class="footer-link wm-feedback-link" id="openLandingFeedback" aria-haspopup="dialog" aria-controls="landingFeedbackModal">Share feedback</button>
     <a href="#kids" class="footer-link">WorldMeals Kids</a>
+    <a href="https://apps.apple.com/app/worldmeals/id6797013060" class="footer-link wm-store-link" target="_blank" rel="noopener">App Store</a>
+    <a href="https://play.google.com/store/apps/details?id=app.worldmeals.android" class="footer-link wm-store-link" target="_blank" rel="noopener">Google Play</a>
     <a href="/about.html" class="footer-link">About</a>
     <a href="/privacy.html" class="footer-link">Privacy</a>
     <a href="/terms.html" class="footer-link">Terms</a>
@@ -3275,11 +3741,14 @@ body{
     }
   };
 
-  let autoplay = setInterval(() => move(1), 3200);
+  row.scrollLeft = 0;
+  let dragMoved = false;
+  row.addEventListener('click', (e) => { if (dragMoved) { e.preventDefault(); e.stopPropagation(); } }, true);
+  let autoplay = setInterval(() => move(1), 5200);
   const pause = () => clearInterval(autoplay);
   const resume = () => {
     clearInterval(autoplay);
-    autoplay = setInterval(() => move(1), 3200);
+    autoplay = setInterval(() => move(1), 5200);
   };
 
   row.addEventListener('mouseenter', pause);
@@ -3302,17 +3771,20 @@ body{
   let startScroll = 0;
 
   row.addEventListener('pointerdown', (event) => {
+    if (event.pointerType !== 'mouse') return;
+    dragMoved = false;
     isDown = true;
     pause();
     row.classList.add('is-dragging');
     startX = event.clientX;
     startScroll = row.scrollLeft;
-    row.setPointerCapture(event.pointerId);
   });
 
   row.addEventListener('pointermove', (event) => {
     if (!isDown) return;
+    if (!row.hasPointerCapture(event.pointerId) && Math.abs(event.clientX - startX) > 6) row.setPointerCapture(event.pointerId);
     const distance = event.clientX - startX;
+    if (Math.abs(distance) > 6) dragMoved = true;
     row.scrollLeft = startScroll - distance;
   });
 
@@ -3321,6 +3793,7 @@ body{
     isDown = false;
     row.classList.remove('is-dragging');
     try { row.releasePointerCapture(event.pointerId); } catch {}
+    setTimeout(() => { dragMoved = false; }, 0);
     resume();
   };
 
@@ -3541,14 +4014,22 @@ body{
   const sideLabelOne = document.getElementById("sideLabelOne");
   const sideLabelTwo = document.getElementById("sideLabelTwo");
 
-  if(greetingText) greetingText.textContent = experience.greeting;
+  if(greetingText) {
+    const parts = experience.greeting.split(' · ');
+    const title = document.createElement('span');
+    title.className = 'wm-greeting-title';
+    title.textContent = parts[0];
+    const detail = document.createElement('span');
+    detail.className = 'wm-greeting-detail';
+    detail.textContent = parts.slice(1).join(' · ');
+    greetingText.replaceChildren(title, detail);
+  }
   if(greetingIcon){
     greetingIcon.src = experience.icon;
     greetingIcon.alt = "";
   }
   note.textContent = experience.note;
-  headline.innerHTML = experience.headline;
-  subtitle.textContent = experience.subtitle;
+  // Keep the editorial promise consistent; local-time dish recommendations continue below.
 
   const fallback = "/images/dishes/Pizza-Margherita.jpg";
 
@@ -3980,19 +4461,25 @@ if ('serviceWorker' in navigator) {
   const ratingEl = document.getElementById('landingFeedbackRating');
   const typeEl = document.getElementById('landingFeedbackType');
 
+  let feedbackReturnFocus;
+  let feedbackPreviousOverflow = '';
   const openFeedback = () => {
     if (!modal) return;
+    feedbackReturnFocus = document.activeElement;
+    feedbackPreviousOverflow = document.body.style.overflow;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
     statusEl.textContent = '';
+    modal.querySelector('[data-feedback-close].landing-feedback-close')?.focus();
   };
 
   const closeFeedback = () => {
     if (!modal) return;
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
+    document.body.style.overflow = feedbackPreviousOverflow;
+    feedbackReturnFocus?.focus();
   };
 
   const getAnonId = () => {
@@ -4052,7 +4539,14 @@ if ('serviceWorker' in navigator) {
   sendBtn?.addEventListener('click', sendFeedback);
   document.querySelectorAll('[data-feedback-close]').forEach((el) => el.addEventListener('click', closeFeedback));
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && modal?.classList.contains('open')) closeFeedback();
+    if (!modal?.classList.contains('open')) return;
+    if (event.key === 'Escape') closeFeedback();
+    if (event.key === 'Tab') {
+      const items = [...modal.querySelectorAll('button:not([disabled]), select, textarea, a[href]')];
+      const first = items[0], last = items[items.length - 1];
+      if (event.shiftKey && document.activeElement === first) {event.preventDefault(); last?.focus();}
+      else if (!event.shiftKey && document.activeElement === last) {event.preventDefault(); first?.focus();}
+    }
   });
 })();
 </script>
