@@ -1,6 +1,31 @@
-// WorldMeals v4 database with manual local photos
-// All dish photos use /images/dishes/Filename.jpg
-// Upload each matching JPG file into public/images/dishes/.
+// WorldMeals database — reviewed 2026-10-17
+// All photos use existing /images/dishes/*.jpg paths; upload the matching assets.
+// Compatibility: existing IDs, names, order, image paths and meal field names retained.
+// Content pass: 767 dishes updated; 1710 repeated substitution entries corrected, plus dish-specific edits.
+// Nutrition values are inherited and unverified: serving sizes and source recipes are absent.
+// Budget values are inherited: currency and pricing basis are unspecified. Do not present as verified prices.
+// Ingredient lists are summaries, not complete measured recipes; quantities, yields and steps need recipe testing.
+// Photo files were not supplied with this database; file existence and the full gallery remain unchecked.
+// Sauce Graine now describes the selected beef-and-crab photo with foutou; inherited nutrition is not recalculated.
+// Repeated names retained as regional entries (review country and recipe before merging):
+// Mandi: 127 (Yemen), 962 (Saudi Arabia)
+// Maqluba: 129 (Palestine), 899 (Jordan)
+// Musakhan: 130 (Palestine), 900 (Jordan)
+// Harees: 145 (UAE), 947 (Oman)
+// Char Kway Teow: 160 (Malaysia), 970 (Singapore)
+// Hainanese Chicken Rice: 161 (Singapore), 401 (Malaysia)
+// Thukpa: 200 (Tibet), 428 (Nepal)
+// Plov: 207 (Uzbekistan), 795 (Azerbaijan)
+// Manti: 210 (Kazakhstan), 472 (Uzbekistan)
+// Churros: 228 (Spain), 8051 (Mexico)
+// Kleftiko: 530 (Greece), 860 (Cyprus)
+// Mamaliga: 628 (Romania), 924 (Moldova)
+// Rye Bread Soup: 689 (Lithuania), 908 (Latvia)
+// Potjiekos: 758 (South Africa), 931 (Namibia)
+// Vetkoek: 759 (South Africa), 828 (Botswana)
+// Pepperpot: 806 (Barbados), 882 (Guyana)
+// Riz Gras: 833 (Burkina Faso), 1008 (Ivory Coast)
+// Pad Thai egg-role reference: https://www.recipetineats.com/chicken-pad-thai/
 window.WORLD_MEALS_DATABASE = [
   {
     "id": 1,
@@ -51,36 +76,36 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Heavy cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Heavy cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "local": [
         {
           "from": "Garam masala",
           "to": "Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         },
         {
           "from": "Kashmiri chili powder",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -133,8 +158,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -190,8 +215,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Eggs",
-          "to": "Flax egg | Chickpea flour batter | Silken tofu",
-          "note": "Flax for baking; chickpea flour for omelettes"
+          "to": "Crumbled firm tofu | Omit the egg",
+          "note": "Stir-fry tofu separately, then fold into the noodles. This changes the traditional egg component."
         },
         {
           "from": "Fish sauce",
@@ -202,15 +227,15 @@ window.WORLD_MEALS_DATABASE = [
       "eggs": [
         {
           "from": "Eggs",
-          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water) | Chickpea flour + water | Silken tofu",
-          "note": "Flax for baking and binding; chickpea flour or tofu for omelettes"
+          "to": "Crumbled firm tofu | Omit the egg",
+          "note": "Stir-fry tofu separately, then fold into the noodles. This changes the traditional egg component."
         }
       ],
       "nuts": [
         {
           "from": "Peanuts",
-          "to": "Sunflower seed butter | Roasted chickpeas | Toasted pumpkin seeds",
-          "note": "Sunflower butter gives the same creamy, nutty taste"
+          "to": "Toasted pumpkin seeds | Toasted sunflower seeds",
+          "note": "Use chopped seeds as the finishing garnish; seed butter changes the sauce texture."
         }
       ],
       "local": [
@@ -226,8 +251,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chili flakes",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -381,19 +406,18 @@ window.WORLD_MEALS_DATABASE = [
     "country": "South Korea",
     "region": "Asia",
     "emoji": "🍲",
-    "cal": 540,
+    "cal": 640,
     "budget": 9,
     "time": "35 min",
     "spice": 2,
     "tags": [
-      "vegetarian",
-      "vegan-option",
       "dairy-free",
       "gluten",
-      "gluten-free-option",
-      "eggs"
+      "eggs",
+      "vegan-option",
+      "gluten-free-option"
     ],
-    "desc": "Korean rice bowl topped with seasoned vegetables, a fried egg and spicy gochujang.",
+    "desc": "Korean rice bowl topped with seasoned vegetables, beef, a fried egg and spicy gochujang.",
     "ingredients": [
       "Steamed rice",
       "Spinach",
@@ -402,7 +426,8 @@ window.WORLD_MEALS_DATABASE = [
       "Fried egg",
       "Gochujang",
       "Sesame oil",
-      "Bean sprouts"
+      "Bean sprouts",
+      "Ground beef"
     ],
     "swaps": {
       "spice": [
@@ -417,6 +442,11 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Fried egg",
           "to": "Tofu scramble | Avocado slices",
           "note": "It is a topping, so the dish still works without it"
+        },
+        {
+          "from": "Ground beef",
+          "to": "Brown lentils | Plant-based mince | Chopped mushrooms + walnuts",
+          "note": "Brown well and season the same way"
         }
       ],
       "gluten": [
@@ -441,9 +471,9 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "protein": 18,
+    "protein": 30,
     "carbs": 80,
-    "fat": 16,
+    "fat": 22,
     "fiber": 6,
     "image": "/images/dishes/Bibimbap.jpg"
   },
@@ -711,14 +741,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Honey",
           "to": "Maple syrup | Date syrup | Agave",
-          "note": "Same sweetness"
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
         }
       ],
       "local": [
         {
           "from": "Lamb shoulder",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         },
         {
           "from": "Saffron",
@@ -771,8 +801,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         },
         {
           "from": "Thin pancakes",
@@ -789,7 +819,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Five-spice powder",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -1295,7 +1325,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -1312,7 +1342,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -1531,7 +1561,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         },
         {
           "from": "Saffron",
@@ -1540,8 +1570,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -1600,8 +1630,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "local": [
@@ -1668,8 +1698,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "nuts": [
@@ -1682,8 +1712,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Dried chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -1759,8 +1789,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Red chili sauce",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -1806,7 +1836,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Chicken stock",
@@ -1823,7 +1853,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "local": [
@@ -2090,8 +2120,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -2271,8 +2301,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Kecap manis",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "eggs": [
@@ -2290,8 +2320,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -2399,8 +2429,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Ancho chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -2463,8 +2493,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Dried chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         },
         {
           "from": "Kaffir lime leaves",
@@ -2765,8 +2795,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -2824,7 +2854,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -2836,7 +2866,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -2952,8 +2982,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -3162,14 +3192,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -3242,7 +3272,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Sour cream",
@@ -3259,7 +3289,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Sour cream",
@@ -3428,8 +3458,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili powder",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         },
         {
           "from": "Jalapeño",
@@ -3588,8 +3618,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -3633,19 +3663,19 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Honey",
           "to": "Maple syrup | Date syrup | Agave",
-          "note": "Same sweetness"
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -3659,7 +3689,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Pistachios",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
@@ -3780,7 +3810,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         },
         {
           "from": "Scotch bonnet",
@@ -3830,7 +3860,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -3842,7 +3872,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -3913,7 +3943,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Heavy cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
@@ -3925,24 +3955,24 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Heavy cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "local": [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         },
         {
           "from": "Garam masala",
           "to": "Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         },
         {
           "from": "Kashmiri chili powder",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -3998,7 +4028,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Pine nuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -4044,8 +4074,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Red chili flakes",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -4104,8 +4134,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Sweet soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         },
         {
           "from": "Oyster sauce",
@@ -4133,17 +4163,19 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Egypt",
     "region": "Africa",
     "emoji": "🫘",
-    "cal": 420,
+    "cal": 490,
     "budget": 3,
     "time": "20 min",
     "spice": 0,
     "tags": [
-      "vegan",
+      "vegetarian",
       "dairy-free",
       "gluten",
+      "eggs",
+      "vegan-option",
       "gluten-free-option"
     ],
-    "desc": "Egyptian stewed fava beans with cumin, lemon, garlic and olive oil, eaten with bread.",
+    "desc": "Egyptian stewed fava beans with cumin, lemon, garlic and olive oil, served with bread and a boiled egg.",
     "ingredients": [
       "Fava beans",
       "Lemon juice",
@@ -4152,14 +4184,29 @@ window.WORLD_MEALS_DATABASE = [
       "Olive oil",
       "Parsley",
       "Tomatoes",
-      "Pita bread"
+      "Pita bread",
+      "Boiled egg"
     ],
     "swaps": {
+      "vegan": [
+        {
+          "from": "Boiled egg",
+          "to": "Tofu scramble | Avocado slices",
+          "note": "It is a topping, so the dish still works without it"
+        }
+      ],
       "gluten": [
         {
           "from": "Pita bread",
           "to": "Gluten-free bread or buns | Corn tortillas | Lettuce wraps",
           "note": "Toast gluten-free bread for the best texture"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Boiled egg",
+          "to": "Avocado slices | Tofu scramble | Skip it",
+          "note": "It is a topping, so the dish still works without it"
         }
       ],
       "local": [
@@ -4170,9 +4217,9 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "protein": 18,
+    "protein": 24,
     "carbs": 58,
-    "fat": 13,
+    "fat": 18,
     "fiber": 15,
     "image": "/images/dishes/Ful-Medames.jpg"
   },
@@ -4214,8 +4261,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -4526,7 +4573,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Honey",
           "to": "Maple syrup | Date syrup | Agave",
-          "note": "Same sweetness"
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
         }
       ]
     },
@@ -4584,8 +4631,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "eggs": [
@@ -5023,7 +5070,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         },
         {
           "from": "Ripe plantain",
@@ -5359,7 +5406,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Goat meat",
           "to": "Lamb | Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         }
       ]
     },
@@ -5406,7 +5453,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Pilau masala",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -5447,14 +5494,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ]
     },
@@ -5623,7 +5670,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         },
         {
           "from": "Scotch bonnet",
@@ -5762,7 +5809,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         },
         {
           "from": "Smoked fish",
@@ -5840,7 +5887,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         }
       ]
     },
@@ -5987,8 +6034,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -6127,8 +6174,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -6184,7 +6231,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -6239,14 +6286,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -6267,7 +6314,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Almonds",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -6340,7 +6387,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Harissa",
@@ -6651,19 +6698,20 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Ethiopia",
     "region": "Africa",
     "emoji": "🍲",
-    "cal": 480,
+    "cal": 560,
     "budget": 4,
     "time": "1 hr",
     "spice": 3,
     "tags": [
       "vegetarian",
-      "vegan-option",
       "dairy",
-      "dairy-free-option",
       "gluten",
+      "eggs",
+      "vegan-option",
+      "dairy-free-option",
       "gluten-free-option"
     ],
-    "desc": "Ethiopian red lentils stewed with berbere, garlic and ginger, served on injera.",
+    "desc": "Ethiopian red lentils stewed with berbere, garlic and ginger, topped with boiled eggs and served on injera.",
     "ingredients": [
       "Red lentils",
       "Berbere",
@@ -6671,7 +6719,8 @@ window.WORLD_MEALS_DATABASE = [
       "Garlic",
       "Ginger",
       "Niter kibbeh",
-      "Injera"
+      "Injera",
+      "Boiled eggs"
     ],
     "swaps": {
       "spice": [
@@ -6686,6 +6735,11 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Niter kibbeh",
           "to": "Coconut oil | Vegan butter",
           "note": "Warm whole spices in the oil for the same aroma"
+        },
+        {
+          "from": "Boiled eggs",
+          "to": "Tofu scramble | Avocado slices",
+          "note": "It is a topping, so the dish still works without it"
         }
       ],
       "dairy": [
@@ -6702,6 +6756,13 @@ window.WORLD_MEALS_DATABASE = [
           "note": "Teff injera is naturally gluten-free; ask for it at Ethiopian shops"
         }
       ],
+      "eggs": [
+        {
+          "from": "Boiled eggs",
+          "to": "Avocado slices | Tofu scramble | Skip it",
+          "note": "It is a topping, so the dish still works without it"
+        }
+      ],
       "local": [
         {
           "from": "Berbere",
@@ -6715,9 +6776,9 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "protein": 20,
+    "protein": 27,
     "carbs": 74,
-    "fat": 12,
+    "fat": 17,
     "fiber": 14,
     "image": "/images/dishes/Misir-Wat.jpg"
   },
@@ -6899,8 +6960,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Green chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -6947,12 +7008,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Goat meat",
           "to": "Lamb | Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         },
         {
           "from": "Xawaash spice",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -7072,7 +7133,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         }
       ]
     },
@@ -7138,7 +7199,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         }
       ]
     },
@@ -7191,8 +7252,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -7331,8 +7392,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -7440,12 +7501,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -7498,7 +7559,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         }
       ]
     },
@@ -7694,19 +7755,19 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Almonds",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Hawaij spice",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         },
         {
           "from": "Dried lime",
@@ -7780,14 +7841,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Almonds",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -7847,12 +7908,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Baharat",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         },
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -7908,7 +7969,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Pine nuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
@@ -7963,7 +8024,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -7975,7 +8036,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -7989,7 +8050,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Pistachios",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
@@ -8308,14 +8369,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -8420,7 +8481,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -8432,7 +8493,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -8446,12 +8507,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb doner",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         },
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -8547,7 +8608,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Walnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
@@ -8606,7 +8667,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -8618,7 +8679,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "local": [
@@ -8630,7 +8691,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -8696,7 +8757,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Walnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -8748,7 +8809,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Baharat",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -8816,7 +8877,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -8970,7 +9031,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Baharat",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         },
         {
           "from": "Dried lime",
@@ -9023,14 +9084,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Almonds",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -9078,7 +9139,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Almonds",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -9134,7 +9195,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Pine nuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -9183,7 +9244,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Walnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
@@ -9284,8 +9345,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chili oil",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -9407,8 +9468,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Kecap manis",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "nuts": [
@@ -9598,8 +9659,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "eggs": [
@@ -9612,8 +9673,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili sauce",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -9758,8 +9819,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "eggs": [
@@ -9813,15 +9874,15 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "local": [
         {
           "from": "Chili sauce",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -9891,8 +9952,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Red chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -9940,8 +10001,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Kecap manis",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "nuts": [
@@ -10002,8 +10063,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -10120,8 +10181,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "eggs": [
@@ -10492,8 +10553,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chili oil",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -10550,8 +10611,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -10617,8 +10678,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Sichuan chili broth",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -10683,15 +10744,15 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "local": [
         {
           "from": "Chili oil",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -10738,8 +10799,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -10887,8 +10948,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -10953,8 +11014,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "eggs": [
@@ -11163,8 +11224,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -11230,8 +11291,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "eggs": [
@@ -11416,12 +11477,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Garam masala",
           "to": "Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         },
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -11469,7 +11530,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
@@ -11481,7 +11542,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "local": [
@@ -11493,12 +11554,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Garam masala",
           "to": "Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         },
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -11565,17 +11626,17 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         },
         {
           "from": "Kashmiri chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -11637,8 +11698,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -11685,8 +11746,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -11736,14 +11797,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -11819,8 +11880,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -11888,12 +11949,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Garam masala",
           "to": "Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         },
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -12019,8 +12080,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -12087,13 +12148,13 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         },
         {
           "from": "Garam masala",
           "to": "Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -12266,8 +12327,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -12321,7 +12382,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -12333,14 +12394,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "local": [
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         },
         {
           "from": "Datshi cheese",
@@ -12417,8 +12478,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -12661,8 +12722,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -12709,7 +12770,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -12868,7 +12929,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -12880,7 +12941,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -12894,7 +12955,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -13198,7 +13259,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Pine nuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -13357,14 +13418,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ]
     },
@@ -13412,7 +13473,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Bacon",
@@ -13429,7 +13490,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Gruyère",
@@ -13672,7 +13733,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -13684,7 +13745,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -13871,8 +13932,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Guindilla chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -14374,7 +14435,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -14386,7 +14447,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -14482,7 +14543,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -14494,7 +14555,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -14551,7 +14612,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -14605,7 +14666,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -14617,7 +14678,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -14691,7 +14752,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb offal",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         }
       ]
     },
@@ -15046,14 +15107,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "gluten": [
@@ -15242,7 +15303,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Fish stock",
@@ -15254,7 +15315,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "local": [
@@ -15308,14 +15369,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ]
     },
@@ -15359,7 +15420,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Boiled egg",
@@ -15376,7 +15437,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -15447,12 +15508,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Fish stock",
@@ -15464,12 +15525,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ]
     },
@@ -15711,7 +15772,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -16106,7 +16167,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Honey",
           "to": "Maple syrup | Date syrup | Agave",
-          "note": "Same sweetness"
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
         },
         {
           "from": "Eggs",
@@ -16116,14 +16177,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -16307,7 +16368,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -16324,7 +16385,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -16393,7 +16454,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Egg",
@@ -16405,7 +16466,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -16611,7 +16672,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Sour cream",
@@ -16623,7 +16684,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Sour cream",
@@ -16693,7 +16754,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -16710,7 +16771,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -16823,7 +16884,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Walnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -16896,7 +16957,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -16955,7 +17016,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -16972,7 +17033,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -16998,7 +17059,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -17177,7 +17238,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Bacon",
@@ -17194,7 +17255,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "gluten": [
@@ -17267,14 +17328,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -17341,7 +17402,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -17358,7 +17419,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -17654,7 +17715,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Eggs",
@@ -17666,7 +17727,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -17728,7 +17789,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -17740,14 +17801,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "nuts": [
         {
           "from": "Walnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -17795,8 +17856,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -18102,14 +18163,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "eggs": [
@@ -18122,8 +18183,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili powder",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -18280,7 +18341,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 80,
     "fat": 10,
     "fiber": 11,
-    "image": "/images/dishes/Casamiento.jpg"
+    "image": "/images/dishes/Casamiento-v2.jpg"
   },
   {
     "id": 297,
@@ -18757,7 +18818,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Goat meat",
           "to": "Lamb | Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         },
         {
           "from": "Scotch bonnet",
@@ -19032,7 +19093,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -19044,7 +19105,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "local": [
@@ -19201,14 +19262,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ]
     },
@@ -19379,7 +19440,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Goat",
           "to": "Lamb | Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         }
       ]
     },
@@ -19513,8 +19574,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "local": [
@@ -19607,7 +19668,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Walnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
@@ -19973,7 +20034,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -19990,7 +20051,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "eggs": [
@@ -20306,7 +20367,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         }
       ]
     },
@@ -20565,7 +20626,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -20577,7 +20638,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ]
     },
@@ -20932,24 +20993,24 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -21052,14 +21113,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "eggs": [
@@ -21117,7 +21178,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -21166,14 +21227,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -21239,8 +21300,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -21412,8 +21473,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -21689,8 +21750,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -21749,8 +21810,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         },
         {
           "from": "Banana leaves",
@@ -21819,8 +21880,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -21873,8 +21934,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "eggs": [
@@ -21936,8 +21997,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Kecap manis",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "local": [
@@ -21948,8 +22009,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -22031,8 +22092,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -22234,8 +22295,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         },
         {
           "from": "Oyster sauce",
@@ -22365,8 +22426,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -22837,7 +22898,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Honey",
           "to": "Maple syrup | Date syrup | Agave",
-          "note": "Same sweetness"
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
         }
       ],
       "gluten": [
@@ -22848,15 +22909,15 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "local": [
         {
           "from": "Five-spice powder",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         },
         {
           "from": "Shaoxing wine",
@@ -22926,8 +22987,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         },
         {
           "from": "Oyster sauce",
@@ -23028,8 +23089,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -23780,8 +23841,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chili oil",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -23834,15 +23895,15 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "local": [
         {
           "from": "Five-spice powder",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -24059,12 +24120,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Chole masala",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         },
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -24128,7 +24189,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Garam masala",
           "to": "Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -24177,14 +24238,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "local": [
@@ -24195,8 +24256,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -24260,13 +24321,13 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         },
         {
           "from": "Garam masala",
           "to": "Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -24321,7 +24382,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Garam masala",
           "to": "Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -24383,12 +24444,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb trotters",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         },
         {
           "from": "Garam masala",
           "to": "Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -24643,8 +24704,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Dried chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -24703,8 +24764,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Red chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -24751,8 +24812,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "local": [
@@ -24763,8 +24824,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chili sauce",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -24828,8 +24889,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         },
         {
           "from": "Kaffir lime leaves",
@@ -24956,8 +25017,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -25129,7 +25190,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Eggs",
@@ -25141,7 +25202,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -25152,8 +25213,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "eggs": [
@@ -25364,8 +25425,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         },
         {
           "from": "Chinese crullers",
@@ -25424,8 +25485,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Sweet soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "eggs": [
@@ -25517,8 +25578,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chili paste",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -25653,8 +25714,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili flakes",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         },
         {
           "from": "Maldive fish",
@@ -25715,8 +25776,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -25773,7 +25834,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cashews",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
@@ -25828,7 +25889,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "/images/dishes/String-Hoppers.jpg"
+    "image": "/images/dishes/String-Hoppers-v2.jpg"
   },
   {
     "id": 419,
@@ -25883,8 +25944,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -25947,8 +26008,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -26002,8 +26063,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         },
         {
           "from": "Fried fish",
@@ -26068,12 +26129,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Garam masala",
           "to": "Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         },
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -26131,8 +26192,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -26201,7 +26262,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Garam masala",
           "to": "Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -26266,13 +26327,13 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         },
         {
           "from": "Chaat masala",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -26325,8 +26386,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -26533,8 +26594,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Dried red chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -26585,8 +26646,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -26788,8 +26849,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -27209,8 +27270,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -27310,8 +27371,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         },
         {
           "from": "Fish sauce",
@@ -27459,8 +27520,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Bird’s eye chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -27606,8 +27667,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         },
         {
           "from": "Padaek",
@@ -27726,8 +27787,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "nuts": [
@@ -27968,7 +28029,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "/images/dishes/Mont-Lin-Ma-Yar.jpg"
+    "image": "/images/dishes/Mont-Lin-Ma-Yar-v2.jpg"
   },
   {
     "id": 455,
@@ -28111,8 +28172,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -28158,7 +28219,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Goat meat",
           "to": "Lamb | Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         }
       ]
     },
@@ -28206,8 +28267,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -28262,7 +28323,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Mutton",
           "to": "Lamb | Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         }
       ]
     },
@@ -28322,7 +28383,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Mutton",
           "to": "Lamb | Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         }
       ]
     },
@@ -28438,8 +28499,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "local": [
@@ -28505,8 +28566,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "eggs": [
@@ -28530,7 +28591,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Five-spice powder",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -28642,8 +28703,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "nuts": [
@@ -28705,8 +28766,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "local": [
@@ -28822,8 +28883,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy paste",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "eggs": [
@@ -28873,7 +28934,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Egg",
@@ -28890,7 +28951,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk powder",
@@ -28969,7 +29030,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -29036,7 +29097,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -29084,7 +29145,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -29135,7 +29196,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "/images/dishes/Non-Bread.jpg"
+    "image": "/images/dishes/Non-Bread-v2.jpg"
   },
   {
     "id": 475,
@@ -29178,7 +29239,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -29391,12 +29452,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Lamb liver",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         }
       ]
     },
@@ -29449,8 +29510,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -29495,7 +29556,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -29507,14 +29568,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "local": [
         {
           "from": "Sour milk curds",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -29630,7 +29691,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -29689,7 +29750,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -29788,7 +29849,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -29859,12 +29920,12 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
-    "image": "/images/dishes/Ashlyan-Fu.jpg"
+    "image": "/images/dishes/Ashlyan-Fu-v2.jpg"
   },
   {
     "id": 488,
@@ -29919,7 +29980,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -29967,7 +30028,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -30130,14 +30191,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Almonds",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -30206,7 +30267,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -30274,7 +30335,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -30328,8 +30389,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -30390,12 +30451,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -30461,8 +30522,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -30538,12 +30599,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Pistachios",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         },
         {
           "from": "Almonds",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -30599,7 +30660,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -30665,7 +30726,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Pine nuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -30825,14 +30886,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -30998,14 +31059,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -31065,7 +31126,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Eggs",
@@ -31082,7 +31143,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -31649,14 +31710,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -31713,14 +31774,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Whipped cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
         {
           "from": "Whipped cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "gluten": [
@@ -31884,7 +31945,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Kefalotyri",
@@ -31901,7 +31962,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Kefalotyri",
@@ -32072,7 +32133,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Greek yogurt",
           "to": "Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -32132,7 +32193,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb shoulder",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         },
         {
           "from": "Kefalotyri",
@@ -32288,7 +32349,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -32300,7 +32361,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -32314,7 +32375,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         },
         {
           "from": "Pul biber",
@@ -32361,14 +32422,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ]
     },
@@ -32717,21 +32778,23 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Poland",
     "region": "Europe",
     "emoji": "🥘",
-    "cal": 220,
+    "cal": 260,
     "budget": 4,
     "time": "1.5 hrs",
     "spice": 0,
     "protein": 6,
     "carbs": 36,
-    "fat": 5,
+    "fat": 9,
     "fiber": 6,
     "tags": [
-      "vegan",
-      "dairy-free",
+      "vegetarian",
+      "dairy",
       "gluten",
+      "vegan-option",
+      "dairy-free-option",
       "gluten-free-option"
     ],
-    "desc": "Clear Polish beet soup, ruby red and tangy, often served with small dumplings.",
+    "desc": "Polish beet soup, ruby red and tangy, served with a spoon of sour cream and dill.",
     "ingredients": [
       "Beets",
       "Carrot",
@@ -32739,9 +32802,24 @@ window.WORLD_MEALS_DATABASE = [
       "Garlic",
       "Marjoram",
       "Vinegar",
-      "Uszka dumplings"
+      "Uszka dumplings",
+      "Sour cream"
     ],
     "swaps": {
+      "vegan": [
+        {
+          "from": "Sour cream",
+          "to": "Cashew sour cream | Dairy-free yogurt",
+          "note": "Stir in at the end, off the heat"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Sour cream",
+          "to": "Dairy-free yogurt | Cashew sour cream | Coconut yogurt + lemon",
+          "note": "Stir in at the end, off the heat"
+        }
+      ],
       "gluten": [
         {
           "from": "Uszka dumplings",
@@ -32871,7 +32949,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -32883,7 +32961,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -33085,14 +33163,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -33215,7 +33293,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -33227,7 +33305,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "eggs": [
@@ -33377,7 +33455,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -33389,7 +33467,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -33499,14 +33577,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -33561,7 +33639,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Eggs",
@@ -33573,7 +33651,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -33640,7 +33718,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -33652,7 +33730,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -33765,7 +33843,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -33782,7 +33860,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -33922,24 +34000,24 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ]
     },
@@ -33951,23 +34029,22 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Switzerland",
     "region": "Europe",
     "emoji": "🥘",
-    "cal": 720,
+    "cal": 820,
     "budget": 4,
     "time": "40 min",
     "spice": 0,
-    "protein": 26,
+    "protein": 32,
     "carbs": 76,
-    "fat": 34,
+    "fat": 42,
     "fiber": 4,
     "tags": [
-      "vegetarian",
-      "vegan-option",
       "dairy",
-      "dairy-free-option",
       "gluten",
+      "vegan-option",
+      "dairy-free-option",
       "gluten-free-option"
     ],
-    "desc": "Swiss alpine macaroni with potatoes, cheese, cream and fried onions, with applesauce.",
+    "desc": "Swiss alpine macaroni with potatoes, cheese, cream, bacon and fried onions, with applesauce.",
     "ingredients": [
       "Macaroni",
       "Potatoes",
@@ -33975,7 +34052,8 @@ window.WORLD_MEALS_DATABASE = [
       "Cream",
       "Onion",
       "Butter",
-      "Applesauce"
+      "Applesauce",
+      "Bacon"
     ],
     "swaps": {
       "vegan": [
@@ -33993,6 +34071,11 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
           "note": "Use vegan butter for baking"
+        },
+        {
+          "from": "Bacon",
+          "to": "Smoked tofu | Coconut bacon | Smoky king oyster mushrooms",
+          "note": "A little smoked paprika gives the smoky taste"
         }
       ],
       "dairy": [
@@ -34070,7 +34153,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Honey",
           "to": "Maple syrup | Date syrup | Agave",
-          "note": "Same sweetness"
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
         }
       ],
       "dairy": [
@@ -34096,14 +34179,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Hazelnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -34115,22 +34198,21 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Switzerland",
     "region": "Europe",
     "emoji": "🍲",
-    "cal": 340,
+    "cal": 420,
     "budget": 4,
     "time": "40 min",
     "spice": 0,
-    "protein": 8,
+    "protein": 13,
     "carbs": 36,
-    "fat": 18,
+    "fat": 25,
     "fiber": 4,
     "tags": [
-      "vegetarian",
-      "vegan-option",
       "dairy",
-      "dairy-free-option",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option",
+      "dairy-free-option"
     ],
-    "desc": "Creamy Swiss potato soup with leeks, onions and a little cheese.",
+    "desc": "Creamy Swiss potato soup with leeks, cheese and crispy bacon.",
     "ingredients": [
       "Potatoes",
       "Leeks",
@@ -34138,7 +34220,8 @@ window.WORLD_MEALS_DATABASE = [
       "Cream",
       "Butter",
       "Vegetable stock",
-      "Gruyère"
+      "Gruyère",
+      "Bacon"
     ],
     "swaps": {
       "vegan": [
@@ -34156,6 +34239,11 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Gruyère",
           "to": "Nutritional yeast | Vegan parmesan",
           "note": "Gives the salty, nutty finish"
+        },
+        {
+          "from": "Bacon",
+          "to": "Smoked tofu | Coconut bacon | Smoky king oyster mushrooms",
+          "note": "A little smoked paprika gives the smoky taste"
         }
       ],
       "dairy": [
@@ -34215,7 +34303,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Honey",
           "to": "Maple syrup | Date syrup | Agave",
-          "note": "Same sweetness"
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
         }
       ],
       "gluten": [
@@ -34229,7 +34317,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Almonds",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
@@ -34283,14 +34371,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "local": [
@@ -34404,7 +34492,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -34416,7 +34504,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -34477,7 +34565,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Egg yolk",
@@ -34489,7 +34577,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "eggs": [
@@ -34536,7 +34624,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Sausage",
@@ -34548,7 +34636,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ]
     },
@@ -34590,14 +34678,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -34616,30 +34704,30 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Belgium",
     "region": "Europe",
     "emoji": "🥘",
-    "cal": 380,
+    "cal": 460,
     "budget": 4,
     "time": "30 min",
     "spice": 0,
-    "protein": 14,
+    "protein": 22,
     "carbs": 28,
     "fat": 24,
     "fiber": 5,
     "tags": [
-      "vegetarian",
-      "vegan-option",
       "dairy",
-      "dairy-free-option",
       "gluten-free",
-      "eggs"
+      "eggs",
+      "vegan-option",
+      "dairy-free-option"
     ],
-    "desc": "White asparagus with egg, parsley and melted butter, Flemish style.",
+    "desc": "White asparagus with egg, parsley, melted butter and ham, Flemish style.",
     "ingredients": [
       "White asparagus",
       "Eggs",
       "Butter",
       "Parsley",
       "Nutmeg",
-      "Potatoes"
+      "Potatoes",
+      "Ham"
     ],
     "swaps": {
       "vegan": [
@@ -34652,6 +34740,11 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
           "note": "Use vegan butter for baking"
+        },
+        {
+          "from": "Ham",
+          "to": "Smoked tofu | Coconut bacon | Smoky king oyster mushrooms",
+          "note": "A little smoked paprika gives the smoky taste"
         }
       ],
       "dairy": [
@@ -34717,24 +34810,24 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -34791,7 +34884,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Smoked sausage",
@@ -34808,7 +34901,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ]
     },
@@ -34861,7 +34954,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Eggs",
@@ -34873,7 +34966,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -34932,7 +35025,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Braised beef",
@@ -34944,7 +35037,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ]
     },
@@ -34998,7 +35091,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -35010,7 +35103,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -35228,7 +35321,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Egg",
@@ -35240,7 +35333,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -35295,7 +35388,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -35307,7 +35400,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -35407,7 +35500,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -35419,7 +35512,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -35484,19 +35577,19 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "local": [
@@ -35562,14 +35655,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -35630,24 +35723,24 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -35721,14 +35814,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -35877,7 +35970,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -35889,7 +35982,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -35980,7 +36073,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -36105,7 +36198,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -36122,7 +36215,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -36171,24 +36264,24 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "gluten": [
@@ -36246,12 +36339,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Lamb meatballs",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         }
       ]
     },
@@ -36296,7 +36389,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -36308,7 +36401,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -36367,14 +36460,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "local": [
@@ -36434,7 +36527,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -36446,7 +36539,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -36542,14 +36635,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -36606,7 +36699,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Sour cream",
@@ -36623,7 +36716,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Sour cream",
@@ -36694,14 +36787,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "gluten": [
@@ -36759,7 +36852,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Pickled herring",
@@ -36781,7 +36874,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -36858,7 +36951,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -36870,7 +36963,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -36918,14 +37011,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "local": [
@@ -36977,7 +37070,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -36999,7 +37092,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -37030,7 +37123,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Almond paste",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -37152,7 +37245,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -37164,7 +37257,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -37225,7 +37318,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -37237,7 +37330,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -37301,7 +37394,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -37476,7 +37569,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -37493,7 +37586,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -37636,7 +37729,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -37928,7 +38021,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -37945,7 +38038,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -37971,7 +38064,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -37983,29 +38076,38 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Serbia",
     "region": "Europe",
     "emoji": "🥘",
-    "cal": 380,
+    "cal": 480,
     "budget": 4,
     "time": "2.5 hrs",
     "spice": 1,
-    "protein": 17,
+    "protein": 22,
     "carbs": 52,
-    "fat": 11,
+    "fat": 20,
     "fiber": 16,
     "tags": [
-      "vegan",
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
-    "desc": "Serbian baked beans layered with onions and paprika, a hearty fasting dish.",
+    "desc": "Serbian baked beans layered with onions, paprika and smoked bacon.",
     "ingredients": [
       "White beans",
       "Onion",
       "Paprika",
       "Garlic",
       "Bay leaves",
-      "Vegetable oil"
+      "Vegetable oil",
+      "Smoked bacon"
     ],
-    "swaps": {},
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Smoked bacon",
+          "to": "Smoked tofu | Coconut bacon | Smoky king oyster mushrooms",
+          "note": "A little smoked paprika gives the smoky taste"
+        }
+      ]
+    },
     "image": "/images/dishes/Prebranac.jpg"
   },
   {
@@ -38181,7 +38283,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -38246,29 +38348,30 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Romania",
     "region": "Europe",
     "emoji": "🥘",
-    "cal": 440,
+    "cal": 820,
     "budget": 4,
     "time": "40 min",
     "spice": 0,
-    "protein": 14,
+    "protein": 34,
     "carbs": 48,
-    "fat": 21,
+    "fat": 50,
     "fiber": 3,
     "tags": [
-      "vegetarian",
-      "vegan-option",
       "dairy",
-      "dairy-free-option",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option",
+      "dairy-free-option"
     ],
-    "desc": "Romanian polenta with sheep cheese and sour cream.",
+    "desc": "Romanian polenta with sheep cheese and sour cream, served with fried pork belly and sausages.",
     "ingredients": [
       "Cornmeal",
       "Water",
       "Butter",
       "Telemea cheese",
       "Sour cream",
-      "Salt"
+      "Salt",
+      "Pork belly",
+      "Sausages"
     ],
     "swaps": {
       "vegan": [
@@ -38286,6 +38389,11 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Sour cream",
           "to": "Cashew sour cream | Dairy-free yogurt",
           "note": "Stir in at the end, off the heat"
+        },
+        {
+          "from": "Pork belly",
+          "to": "Smoked tofu | Coconut bacon | Smoky king oyster mushrooms",
+          "note": "A little smoked paprika gives the smoky taste"
         }
       ],
       "dairy": [
@@ -38570,7 +38678,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -38582,7 +38690,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -38603,7 +38711,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Walnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -38756,14 +38864,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Walnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -38950,7 +39058,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -39000,12 +39108,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -39017,12 +39125,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ]
     },
@@ -39070,7 +39178,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Walnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -39111,7 +39219,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Walnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -39165,12 +39273,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Green chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -39216,7 +39324,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Walnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -39324,7 +39432,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Garlic yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -39369,14 +39477,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -39488,26 +39596,26 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Honey",
           "to": "Maple syrup | Date syrup | Agave",
-          "note": "Same sweetness"
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "nuts": [
         {
           "from": "Walnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -39608,7 +39716,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -39620,7 +39728,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -39641,7 +39749,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -39735,14 +39843,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "gluten": [
@@ -39901,7 +40009,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Egg",
@@ -39913,7 +40021,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "eggs": [
@@ -40019,7 +40127,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Eggs",
@@ -40036,7 +40144,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -40057,7 +40165,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Walnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -40194,7 +40302,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -40206,7 +40314,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -40653,7 +40761,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "/images/dishes/Demikat.jpg"
+    "image": "/images/dishes/Demikat-v2.jpg"
   },
   {
     "id": 667,
@@ -40697,14 +40805,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -40768,7 +40876,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Eggs",
@@ -40778,7 +40886,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Honey",
           "to": "Maple syrup | Date syrup | Agave",
-          "note": "Same sweetness"
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
         }
       ],
       "dairy": [
@@ -40790,7 +40898,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -40811,7 +40919,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Walnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -40954,7 +41062,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -40971,7 +41079,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -41065,7 +41173,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb sauce",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         }
       ]
     },
@@ -41171,7 +41279,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -41183,7 +41291,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -41197,7 +41305,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Walnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
@@ -41313,7 +41421,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -41325,7 +41433,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -41346,12 +41454,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -41404,7 +41512,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -41416,7 +41524,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -41672,7 +41780,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
@@ -41689,7 +41797,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "gluten": [
@@ -41751,7 +41859,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Eggs",
@@ -41768,7 +41876,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -41945,7 +42053,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Kefir",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -42062,7 +42170,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Ground mutton",
@@ -42084,7 +42192,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Kefir",
@@ -42110,7 +42218,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Kefir",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -42220,14 +42328,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Whipped cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
         {
           "from": "Whipped cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "gluten": [
@@ -42279,14 +42387,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -42354,7 +42462,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Sour cream",
@@ -42371,7 +42479,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Sour cream",
@@ -42460,7 +42568,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Kefir",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -42508,7 +42616,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -42520,7 +42628,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -42568,14 +42676,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Whipped cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
         {
           "from": "Whipped cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "gluten": [
@@ -42651,7 +42759,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Kefir",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -42699,7 +42807,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Bacon",
@@ -42721,7 +42829,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -42861,7 +42969,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -42878,7 +42986,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "eggs": [
@@ -43056,7 +43164,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -43068,7 +43176,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -43126,12 +43234,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Honey",
           "to": "Maple syrup | Date syrup | Agave",
-          "note": "Same sweetness"
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
         },
         {
           "from": "Whipped cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
@@ -43143,7 +43251,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Whipped cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "gluten": [
@@ -43157,7 +43265,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Kefir",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -43210,14 +43318,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -43400,7 +43508,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Sour cream",
@@ -43417,7 +43525,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Sour cream",
@@ -43543,7 +43651,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -43555,7 +43663,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -43620,12 +43728,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Honey",
           "to": "Maple syrup | Date syrup | Agave",
-          "note": "Same sweetness"
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
         },
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
@@ -43637,7 +43745,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "gluten": [
@@ -43651,7 +43759,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Skyr",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -43708,7 +43816,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -43720,7 +43828,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "local": [
@@ -43775,7 +43883,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Milk",
@@ -43792,7 +43900,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Milk",
@@ -43858,7 +43966,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -43903,14 +44011,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -43997,7 +44105,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb hot dogs",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         }
       ]
     },
@@ -44373,8 +44481,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -44466,14 +44574,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -44638,7 +44746,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "/images/dishes/Kolokotes.jpg"
+    "image": "/images/dishes/Kolokotes-v2.jpg"
   },
   {
     "id": 728,
@@ -44722,7 +44830,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -44734,7 +44842,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -44783,7 +44891,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Honey",
           "to": "Maple syrup | Date syrup | Agave",
-          "note": "Same sweetness"
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
         }
       ],
       "gluten": [
@@ -44849,7 +44957,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -44866,7 +44974,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -44939,7 +45047,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         },
         {
           "from": "Crayfish",
@@ -45013,7 +45121,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Goat meat",
           "to": "Lamb | Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         },
         {
           "from": "Scotch bonnet",
@@ -45040,32 +45148,46 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Nigeria",
     "region": "Africa",
     "emoji": "🥘",
-    "cal": 380,
+    "cal": 760,
     "budget": 4,
     "time": "40 min",
-    "spice": 0,
-    "protein": 4,
-    "carbs": 90,
-    "fat": 1,
-    "fiber": 6,
+    "spice": 1,
+    "protein": 34,
+    "carbs": 92,
+    "fat": 28,
+    "fiber": 9,
     "tags": [
-      "vegan",
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
-    "desc": "Smooth, stretchy swallow made from pounded yam, eaten with Nigerian soups.",
+    "desc": "Smooth, stretchy pounded yam served with egusi soup, beef and greens.",
     "ingredients": [
       "Yam",
       "Water",
-      "Pinch of salt",
-      "Soup to serve (egusi or okra)"
+      "Egusi soup",
+      "Beef",
+      "Spinach",
+      "Palm oil"
     ],
     "swaps": {
+      "vegan": [
+        {
+          "from": "Beef",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        }
+      ],
       "local": [
         {
           "from": "Yam",
           "to": "Potatoes | Sweet potatoes",
           "note": "Cook until tender; frozen yuca is common in Latin stores"
+        },
+        {
+          "from": "Palm oil",
+          "to": "Olive oil + a pinch of paprika | Annatto oil",
+          "note": "Paprika gives the red color"
         }
       ]
     },
@@ -45201,7 +45323,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         },
         {
           "from": "Smoked fish",
@@ -45323,7 +45445,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Goat meat",
           "to": "Lamb | Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         },
         {
           "from": "Scotch bonnet",
@@ -45400,8 +45522,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -45456,7 +45578,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -45586,8 +45708,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -45642,7 +45764,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -45698,12 +45820,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Ras el hanout",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -45758,7 +45880,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Ras el hanout",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         },
         {
           "from": "Saffron",
@@ -45842,14 +45964,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -45863,7 +45985,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb shoulder",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         },
         {
           "from": "Saffron",
@@ -45955,14 +46077,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -45976,7 +46098,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Almonds",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -46231,20 +46353,21 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Ethiopia",
     "region": "Africa",
     "emoji": "🥘",
-    "cal": 420,
+    "cal": 500,
     "budget": 4,
     "time": "25 min",
     "spice": 3,
-    "protein": 10,
+    "protein": 16,
     "carbs": 62,
     "fat": 14,
     "fiber": 7,
     "tags": [
       "vegetarian",
-      "vegan-option",
       "dairy",
-      "dairy-free-option",
       "gluten",
+      "eggs",
+      "vegan-option",
+      "dairy-free-option",
       "gluten-free-option"
     ],
     "desc": "Shredded injera tossed in spicy berbere sauce with spiced butter.",
@@ -46254,7 +46377,8 @@ window.WORLD_MEALS_DATABASE = [
       "Onion",
       "Tomatoes",
       "Niter kibbeh",
-      "Garlic"
+      "Garlic",
+      "Boiled eggs"
     ],
     "swaps": {
       "spice": [
@@ -46269,6 +46393,11 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Niter kibbeh",
           "to": "Coconut oil | Vegan butter",
           "note": "Warm whole spices in the oil for the same aroma"
+        },
+        {
+          "from": "Boiled eggs",
+          "to": "Tofu scramble | Avocado slices",
+          "note": "It is a topping, so the dish still works without it"
         }
       ],
       "dairy": [
@@ -46283,6 +46412,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Injera",
           "to": "100% teff injera | Gluten-free crêpes",
           "note": "Teff injera is naturally gluten-free; ask for it at Ethiopian shops"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Boiled eggs",
+          "to": "Avocado slices | Tofu scramble | Skip it",
+          "note": "It is a topping, so the dish still works without it"
         }
       ],
       "local": [
@@ -46378,7 +46514,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -46390,20 +46526,21 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Ethiopia",
     "region": "Africa",
     "emoji": "🥘",
-    "cal": 480,
+    "cal": 550,
     "budget": 4,
     "time": "30 min",
     "spice": 2,
-    "protein": 10,
+    "protein": 16,
     "carbs": 62,
     "fat": 21,
     "fiber": 3,
     "tags": [
       "vegetarian",
-      "vegan-option",
       "dairy",
-      "dairy-free-option",
       "gluten",
+      "eggs",
+      "vegan-option",
+      "dairy-free-option",
       "gluten-free-option"
     ],
     "desc": "Ethiopian shredded flatbread tossed in spiced butter and berbere, served with honey.",
@@ -46412,7 +46549,8 @@ window.WORLD_MEALS_DATABASE = [
       "Niter kibbeh",
       "Berbere",
       "Honey",
-      "Yogurt"
+      "Yogurt",
+      "Boiled eggs"
     ],
     "swaps": {
       "spice": [
@@ -46437,6 +46575,11 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Yogurt",
           "to": "Soy yogurt | Coconut yogurt",
           "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Boiled eggs",
+          "to": "Tofu scramble | Avocado slices",
+          "note": "It is a topping, so the dish still works without it"
         }
       ],
       "dairy": [
@@ -46456,6 +46599,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Wheat flour",
           "to": "Gluten-free flour blend | Rice flour | Cassava flour",
           "note": "Add 1/2 tsp xanthan gum for doughs that need to stretch"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Boiled eggs",
+          "to": "Avocado slices | Tofu scramble | Skip it",
+          "note": "It is a topping, so the dish still works without it"
         }
       ],
       "local": [
@@ -46566,12 +46716,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
@@ -46583,12 +46733,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "gluten": [
@@ -46649,7 +46799,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -46737,14 +46887,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ]
     },
@@ -46857,14 +47007,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "local": [
@@ -47010,8 +47160,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -47065,8 +47215,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -47078,22 +47228,21 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Tanzania",
     "region": "Africa",
     "emoji": "🍲",
-    "cal": 440,
+    "cal": 520,
     "budget": 4,
     "time": "40 min",
     "spice": 2,
-    "protein": 12,
+    "protein": 26,
     "carbs": 62,
     "fat": 16,
     "fiber": 7,
     "tags": [
-      "vegetarian",
-      "vegan-option",
       "dairy-free",
       "gluten-free",
-      "eggs"
+      "eggs",
+      "vegan-option"
     ],
-    "desc": "Zanzibar mix soup with mango-tamarind broth, potatoes, bhajias and chutney.",
+    "desc": "Zanzibar mix soup with mango-tamarind broth, chicken, potatoes, bhajias and chutney.",
     "ingredients": [
       "Potatoes",
       "Bhajias",
@@ -47101,7 +47250,8 @@ window.WORLD_MEALS_DATABASE = [
       "Tamarind",
       "Boiled egg",
       "Coconut chutney",
-      "Chickpea flour"
+      "Chickpea flour",
+      "Chicken"
     ],
     "swaps": {
       "spice": [
@@ -47116,6 +47266,11 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Boiled egg",
           "to": "Tofu scramble | Avocado slices",
           "note": "It is a topping, so the dish still works without it"
+        },
+        {
+          "from": "Chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
         }
       ],
       "eggs": [
@@ -47208,7 +47363,7 @@ window.WORLD_MEALS_DATABASE = [
       "Salt"
     ],
     "swaps": {},
-    "image": "/images/dishes/Wali-wa-Nazi.jpg"
+    "image": "/images/dishes/Wali-wa-Nazi-v2.jpg"
   },
   {
     "id": 772,
@@ -47410,27 +47565,37 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Uganda",
     "region": "Africa",
     "emoji": "🥘",
-    "cal": 380,
+    "cal": 620,
     "budget": 4,
     "time": "25 min",
     "spice": 0,
-    "protein": 10,
-    "carbs": 78,
-    "fat": 3,
-    "fiber": 8,
+    "protein": 30,
+    "carbs": 82,
+    "fat": 18,
+    "fiber": 7,
     "tags": [
-      "vegan",
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
-    "desc": "Stiff Ugandan maize-flour porridge, eaten by hand with beans or stew.",
+    "desc": "Stiff Ugandan maize porridge served with a tomato beef stew.",
     "ingredients": [
       "Maize flour",
       "Water",
       "Salt",
-      "Beans to serve"
+      "Beef stew",
+      "Tomatoes",
+      "Carrots"
     ],
-    "swaps": {},
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Beef stew",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        }
+      ]
+    },
     "image": "/images/dishes/Posho.jpg"
   },
   {
@@ -47521,8 +47686,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -47627,12 +47792,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Ras el hanout",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         },
         {
           "from": "Harissa",
@@ -47890,11 +48055,11 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         }
       ]
     },
-    "image": "/images/dishes/Kizaca.jpg"
+    "image": "/images/dishes/Kizaca-v2.jpg"
   },
   {
     "id": 792,
@@ -48058,7 +48223,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -48070,7 +48235,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -48129,28 +48294,28 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "nuts": [
         {
           "from": "Chestnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Saffron",
@@ -48254,7 +48419,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Yogurt",
@@ -48266,7 +48431,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Yogurt",
@@ -48290,7 +48455,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -48343,14 +48508,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Chestnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Saffron",
@@ -48662,7 +48827,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Bajan seasoning",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -49103,12 +49268,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -49213,12 +49378,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -49279,8 +49444,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -49333,8 +49498,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Green chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -49386,8 +49551,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Dried red chilies",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -49399,29 +49564,29 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Bhutan",
     "region": "Asia",
     "emoji": "🍚",
-    "cal": 480,
+    "cal": 600,
     "budget": 4,
     "time": "40 min",
     "spice": 4,
-    "protein": 16,
+    "protein": 36,
     "carbs": 72,
     "fat": 14,
     "fiber": 6,
     "tags": [
-      "vegetarian",
-      "vegan-option",
       "dairy",
-      "dairy-free-option",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option",
+      "dairy-free-option"
     ],
-    "desc": "Bhutanese red rice bowl with ema datshi chili cheese and vegetables.",
+    "desc": "Bhutanese red rice bowl with grilled chicken, vegetables and ema datshi chili cheese.",
     "ingredients": [
       "Bhutanese red rice",
       "Green chilies",
       "Datshi cheese",
       "Onion",
       "Tomatoes",
-      "Spinach"
+      "Spinach",
+      "Grilled chicken"
     ],
     "swaps": {
       "spice": [
@@ -49436,6 +49601,11 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Datshi cheese",
           "to": "Vegan mozzarella | Cashew cheese sauce",
           "note": "Choose a vegan cheese that melts"
+        },
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
         }
       ],
       "dairy": [
@@ -49787,7 +49957,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "/images/dishes/Bogobe.jpg"
+    "image": "/images/dishes/Bogobe-v2.jpg"
   },
   {
     "id": 828,
@@ -49795,29 +49965,37 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Botswana",
     "region": "Africa",
     "emoji": "🍗",
-    "cal": 340,
+    "cal": 560,
     "budget": 3,
     "time": "1.5 hrs",
     "spice": 0,
-    "protein": 6,
-    "carbs": 46,
-    "fat": 14,
+    "protein": 20,
+    "carbs": 50,
+    "fat": 30,
     "fiber": 2,
     "tags": [
-      "vegan",
       "dairy-free",
       "gluten",
+      "vegan-option",
       "gluten-free-option"
     ],
-    "desc": "Botswana fried dough cakes, golden outside and soft inside.",
+    "desc": "Botswana fried dough cakes, golden outside and soft inside, filled with curried mince.",
     "ingredients": [
       "Flour",
       "Yeast",
       "Sugar",
       "Water",
-      "Vegetable oil"
+      "Vegetable oil",
+      "Curried ground beef"
     ],
     "swaps": {
+      "vegan": [
+        {
+          "from": "Curried ground beef",
+          "to": "Brown lentils | Plant-based mince | Chopped mushrooms + walnuts",
+          "note": "Brown well and season the same way"
+        }
+      ],
       "gluten": [
         {
           "from": "Flour",
@@ -49834,28 +50012,37 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Botswana",
     "region": "Africa",
     "emoji": "🐟",
-    "cal": 160,
+    "cal": 520,
     "budget": 4,
     "time": "25 min",
     "spice": 1,
-    "protein": 6,
-    "carbs": 14,
-    "fat": 10,
-    "fiber": 7,
+    "protein": 30,
+    "carbs": 46,
+    "fat": 22,
+    "fiber": 8,
     "tags": [
-      "vegan",
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
-    "desc": "Botswana wild spinach greens cooked with onion and tomato.",
+    "desc": "Botswana wild spinach cooked with beef, onion and tomato, served with pap.",
     "ingredients": [
       "Wild spinach",
       "Onion",
       "Tomatoes",
       "Vegetable oil",
-      "Salt"
+      "Salt",
+      "Beef",
+      "Pap"
     ],
     "swaps": {
+      "vegan": [
+        {
+          "from": "Beef",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        }
+      ],
       "local": [
         {
           "from": "Wild spinach",
@@ -49920,7 +50107,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         },
         {
           "from": "Dried shrimp",
@@ -49929,8 +50116,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -49992,7 +50179,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cashews",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
@@ -50004,7 +50191,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         }
       ]
     },
@@ -50260,8 +50447,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -50311,12 +50498,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         },
         {
           "from": "Banana leaves",
@@ -50397,7 +50584,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         },
         {
           "from": "Crayfish",
@@ -50460,7 +50647,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         }
       ]
     },
@@ -50609,8 +50796,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -50878,8 +51065,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         },
         {
           "from": "Banana leaves",
@@ -50936,7 +51123,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         },
         {
           "from": "Smoked fish",
@@ -51006,7 +51193,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         }
       ]
     },
@@ -51234,7 +51421,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -51380,7 +51567,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -51392,7 +51579,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "eggs": [
@@ -51611,7 +51798,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -51623,7 +51810,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "local": [
@@ -51696,8 +51883,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -51743,7 +51930,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Honey",
           "to": "Maple syrup | Date syrup | Agave",
-          "note": "Same sweetness"
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
         }
       ],
       "dairy": [
@@ -52399,8 +52586,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "eggs": [
@@ -52419,30 +52606,46 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Haiti",
     "region": "Americas",
     "emoji": "🍚",
-    "cal": 480,
+    "cal": 820,
     "budget": 4,
     "time": "1 hr",
     "spice": 0,
-    "protein": 14,
-    "carbs": 82,
-    "fat": 10,
-    "fiber": 11,
+    "protein": 40,
+    "carbs": 110,
+    "fat": 24,
+    "fiber": 13,
     "tags": [
-      "vegan",
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
-    "desc": "Haitian rice cooked with red beans, garlic and thyme.",
+    "desc": "Haitian rice and red beans served with stewed chicken, fried plantain and pikliz.",
     "ingredients": [
       "Rice",
       "Red beans",
       "Garlic",
       "Thyme",
       "Onion",
-      "Clove",
-      "Vegetable oil"
+      "Stewed chicken",
+      "Fried plantain",
+      "Pikliz"
     ],
-    "swaps": {},
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Stewed chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ],
+      "local": [
+        {
+          "from": "Fried plantain",
+          "to": "Green bananas | Potatoes (for savory dishes)",
+          "note": "Ripe plantains: use firm sweet bananas"
+        }
+      ]
+    },
     "image": "/images/dishes/Diri-Kole.jpg"
   },
   {
@@ -52492,7 +52695,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Goat meat",
           "to": "Lamb | Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         },
         {
           "from": "Sour orange juice",
@@ -52802,7 +53005,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Eggs",
@@ -52819,7 +53022,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Buttermilk",
@@ -52886,21 +53089,21 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "nuts": [
         {
           "from": "Pistachios",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
@@ -53023,7 +53226,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Dried lime",
@@ -53033,7 +53236,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Baharat",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -53089,14 +53292,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Almonds",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
         {
           "from": "Baharat",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -53158,19 +53361,19 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Pine nuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
         {
           "from": "Baharat",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         },
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -53225,7 +53428,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Pine nuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
@@ -53244,35 +53447,52 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Jordan",
     "region": "Middle East",
     "emoji": "🥙",
-    "cal": 320,
+    "cal": 410,
     "budget": 4,
     "time": "20 min",
     "spice": 1,
-    "protein": 6,
+    "protein": 13,
     "carbs": 38,
-    "fat": 17,
+    "fat": 23,
     "fiber": 5,
     "tags": [
-      "vegan",
+      "vegetarian",
       "dairy-free",
       "gluten",
+      "eggs",
+      "vegan-option",
       "gluten-free-option"
     ],
-    "desc": "Jordanian tomatoes sautéed with garlic, chili and olive oil, scooped with bread.",
+    "desc": "Jordanian tomatoes sautéed with garlic, chili and olive oil, topped with a fried egg and scooped with bread.",
     "ingredients": [
       "Tomatoes",
       "Garlic",
       "Green chili",
       "Olive oil",
       "Salt",
-      "Pita bread"
+      "Pita bread",
+      "Fried egg"
     ],
     "swaps": {
+      "vegan": [
+        {
+          "from": "Fried egg",
+          "to": "Tofu scramble | Avocado slices",
+          "note": "It is a topping, so the dish still works without it"
+        }
+      ],
       "gluten": [
         {
           "from": "Pita bread",
           "to": "Gluten-free bread or buns | Corn tortillas | Lettuce wraps",
           "note": "Toast gluten-free bread for the best texture"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Fried egg",
+          "to": "Avocado slices | Tofu scramble | Skip it",
+          "note": "It is a topping, so the dish still works without it"
         }
       ],
       "local": [
@@ -53320,14 +53540,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Whipped cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
         {
           "from": "Whipped cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "gluten": [
@@ -53368,7 +53588,7 @@ window.WORLD_MEALS_DATABASE = [
       "Vegetable oil"
     ],
     "swaps": {},
-    "image": "/images/dishes/Mofo-Gasy.jpg"
+    "image": "/images/dishes/Mofo-Gasy-v2.jpg"
   },
   {
     "id": 912,
@@ -53416,34 +53636,48 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Malawi",
     "region": "Africa",
     "emoji": "🍲",
-    "cal": 420,
+    "cal": 480,
     "budget": 4,
     "time": "40 min",
     "spice": 0,
-    "protein": 14,
+    "protein": 24,
     "carbs": 80,
-    "fat": 5,
+    "fat": 7,
     "fiber": 11,
     "tags": [
-      "vegan",
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "fish",
+      "vegan-option"
     ],
-    "desc": "Malawi's maize porridge with a relish of greens, beans or fish.",
+    "desc": "Malawi's maize porridge with a relish of greens and small dried fish.",
     "ingredients": [
       "Maize flour",
       "Water",
       "Pumpkin leaves",
       "Tomatoes",
       "Onion",
-      "Beans"
+      "Beans",
+      "Dried fish"
     ],
     "swaps": {
+      "vegan": [
+        {
+          "from": "Dried fish",
+          "to": "Firm tofu | Hearts of palm | Banana blossom",
+          "note": "Wrap in nori or add seaweed for a fish flavor"
+        }
+      ],
       "local": [
         {
           "from": "Pumpkin leaves",
           "to": "Spinach | Collard greens | Kale",
           "note": "Frozen cassava leaves are sold in African stores"
+        },
+        {
+          "from": "Dried fish",
+          "to": "Tilapia | Cod | Any firm white fish",
+          "note": "Any firm, mild white fish works"
         }
       ]
     },
@@ -53529,8 +53763,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -53706,12 +53940,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -53875,8 +54109,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         },
         {
           "from": "Salted fish",
@@ -53939,8 +54173,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "eggs": [
@@ -54031,30 +54265,31 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Moldova",
     "region": "Europe",
     "emoji": "🍜",
-    "cal": 520,
+    "cal": 880,
     "budget": 4,
     "time": "40 min",
     "spice": 0,
-    "protein": 20,
+    "protein": 38,
     "carbs": 50,
-    "fat": 26,
+    "fat": 54,
     "fiber": 3,
     "tags": [
-      "vegetarian",
-      "vegan-option",
       "dairy",
-      "dairy-free-option",
       "gluten-free",
-      "eggs"
+      "eggs",
+      "vegan-option",
+      "dairy-free-option"
     ],
-    "desc": "Moldovan polenta with brânză cheese, sour cream and fried eggs.",
+    "desc": "Moldovan polenta with brânză cheese, sour cream and eggs, served with fried pork belly and sausages.",
     "ingredients": [
       "Cornmeal",
       "Water",
       "Butter",
       "Brânză cheese",
       "Sour cream",
-      "Eggs"
+      "Eggs",
+      "Pork belly",
+      "Sausages"
     ],
     "swaps": {
       "vegan": [
@@ -54388,8 +54623,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili salsa",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -54401,27 +54636,35 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Namibia",
     "region": "Africa",
     "emoji": "🍜",
-    "cal": 380,
+    "cal": 640,
     "budget": 4,
     "time": "30 min",
     "spice": 0,
-    "protein": 10,
-    "carbs": 76,
-    "fat": 4,
+    "protein": 30,
+    "carbs": 80,
+    "fat": 20,
     "fiber": 8,
     "tags": [
-      "vegan",
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
-    "desc": "Namibian stiff millet porridge eaten with meat or spinach.",
+    "desc": "Namibian stiff millet porridge served with a rich beef stew.",
     "ingredients": [
       "Mahangu millet flour",
       "Water",
       "Salt",
-      "Stewed spinach"
+      "Beef stew"
     ],
-    "swaps": {},
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Beef stew",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        }
+      ]
+    },
     "image": "/images/dishes/Oshifima.jpg"
   },
   {
@@ -54551,14 +54794,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -54612,7 +54855,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -54624,7 +54867,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -54641,29 +54884,69 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Nicaragua",
     "region": "Americas",
     "emoji": "🥘",
-    "cal": 460,
+    "cal": 680,
     "budget": 4,
     "time": "30 min",
     "spice": 0,
-    "protein": 14,
-    "carbs": 76,
-    "fat": 11,
+    "protein": 22,
+    "carbs": 96,
+    "fat": 24,
     "fiber": 11,
     "tags": [
-      "vegan",
-      "dairy-free",
-      "gluten-free"
+      "vegetarian",
+      "dairy",
+      "gluten-free",
+      "eggs",
+      "vegan-option",
+      "dairy-free-option"
     ],
-    "desc": "Nicaraguan fried rice and red beans with onion and peppers.",
+    "desc": "Nicaraguan fried rice and red beans with a fried egg, sour cream and fried plantain.",
     "ingredients": [
       "Rice",
       "Red beans",
       "Onion",
       "Bell pepper",
       "Garlic",
-      "Vegetable oil"
+      "Vegetable oil",
+      "Fried egg",
+      "Sour cream",
+      "Fried plantain"
     ],
-    "swaps": {},
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Fried egg",
+          "to": "Tofu scramble | Avocado slices",
+          "note": "It is a topping, so the dish still works without it"
+        },
+        {
+          "from": "Sour cream",
+          "to": "Cashew sour cream | Dairy-free yogurt",
+          "note": "Stir in at the end, off the heat"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Sour cream",
+          "to": "Dairy-free yogurt | Cashew sour cream | Coconut yogurt + lemon",
+          "note": "Stir in at the end, off the heat"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Fried egg",
+          "to": "Avocado slices | Tofu scramble | Skip it",
+          "note": "It is a topping, so the dish still works without it"
+        }
+      ],
+      "local": [
+        {
+          "from": "Fried plantain",
+          "to": "Green bananas | Potatoes (for savory dishes)",
+          "note": "Ripe plantains: use firm sweet bananas"
+        }
+      ]
+    },
     "image": "/images/dishes/Gallo-Pinto-Nica.jpg"
   },
   {
@@ -54757,8 +55040,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -54859,12 +55142,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -54915,12 +55198,12 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
-    "image": "/images/dishes/Dambou.jpg"
+    "image": "/images/dishes/Dambou-v2.jpg"
   },
   {
     "id": 941,
@@ -54976,8 +55259,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -55030,8 +55313,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -55086,12 +55369,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         },
         {
           "from": "Banana leaves",
@@ -55203,7 +55486,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Baharat",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -55502,7 +55785,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -55519,7 +55802,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "eggs": [
@@ -55590,7 +55873,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -55607,7 +55890,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "eggs": [
@@ -55790,14 +56073,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -55878,12 +56161,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Baharat",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -55935,7 +56218,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         }
       ]
     },
@@ -55981,7 +56264,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Goat meat",
           "to": "Lamb | Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         }
       ]
     },
@@ -56066,7 +56349,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         }
       ]
     },
@@ -56113,7 +56396,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Dried lime",
@@ -56195,7 +56478,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -56329,7 +56612,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         },
         {
           "from": "Smoked fish",
@@ -56603,8 +56886,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Dark soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "eggs": [
@@ -56698,7 +56981,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Honey",
           "to": "Maple syrup | Date syrup | Agave",
-          "note": "Same sweetness"
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
         }
       ],
       "gluten": [
@@ -56759,7 +57042,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Xawaash spice",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -56826,8 +57109,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili flakes",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -56839,20 +57122,21 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Sudan",
     "region": "Africa",
     "emoji": "🫘",
-    "cal": 480,
+    "cal": 550,
     "budget": 4,
     "time": "1 hr",
     "spice": 1,
-    "protein": 20,
+    "protein": 26,
     "carbs": 56,
-    "fat": 20,
+    "fat": 25,
     "fiber": 14,
     "tags": [
       "vegetarian",
-      "vegan-option",
       "dairy",
-      "dairy-free-option",
       "gluten",
+      "eggs",
+      "vegan-option",
+      "dairy-free-option",
       "gluten-free-option"
     ],
     "desc": "Sudanese mashed fava beans with sesame oil, cumin and feta.",
@@ -56863,7 +57147,8 @@ window.WORLD_MEALS_DATABASE = [
       "Feta",
       "Tomatoes",
       "Onion",
-      "Bread"
+      "Bread",
+      "Boiled eggs"
     ],
     "swaps": {
       "vegan": [
@@ -56871,6 +57156,11 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Feta",
           "to": "Crumbled firm tofu | Cashew ricotta",
           "note": "Add lemon and salt for the fresh, tangy taste"
+        },
+        {
+          "from": "Boiled eggs",
+          "to": "Tofu scramble | Avocado slices",
+          "note": "It is a topping, so the dish still works without it"
         }
       ],
       "dairy": [
@@ -56885,6 +57175,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Bread",
           "to": "Gluten-free bread or buns | Corn tortillas | Lettuce wraps",
           "note": "Toast gluten-free bread for the best texture"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Boiled eggs",
+          "to": "Avocado slices | Tofu scramble | Skip it",
+          "note": "It is a topping, so the dish still works without it"
         }
       ],
       "local": [
@@ -56908,27 +57205,37 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Sudan",
     "region": "Africa",
     "emoji": "🥘",
-    "cal": 300,
+    "cal": 560,
     "budget": 4,
     "time": "1 hr",
     "spice": 0,
-    "protein": 9,
-    "carbs": 64,
-    "fat": 2,
+    "protein": 28,
+    "carbs": 70,
+    "fat": 18,
     "fiber": 6,
     "tags": [
-      "vegan",
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
-    "desc": "Thin Sudanese fermented sorghum flatbread, eaten with stews.",
+    "desc": "Thin Sudanese fermented sorghum flatbread, served with a spiced beef stew.",
     "ingredients": [
       "Sorghum flour",
       "Water",
       "Salt",
-      "Stew to serve"
+      "Beef stew",
+      "Onion",
+      "Tomatoes"
     ],
-    "swaps": {},
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Beef stew",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        }
+      ]
+    },
     "image": "/images/dishes/Kisra.jpg"
   },
   {
@@ -57025,7 +57332,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -57080,12 +57387,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Raw lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         },
         {
           "from": "Seven spice",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -57134,7 +57441,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -57146,7 +57453,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -57160,14 +57467,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Pine nuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -57236,14 +57543,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Pine nuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -57295,8 +57602,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy paste",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "eggs": [
@@ -57367,7 +57674,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Qurut",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -57414,7 +57721,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -57461,7 +57768,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -57520,7 +57827,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -57734,7 +58041,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Honey",
           "to": "Maple syrup | Date syrup | Agave",
-          "note": "Same sweetness"
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
         }
       ],
       "gluten": [
@@ -57799,7 +58106,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -57853,7 +58160,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -57912,7 +58219,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -57958,7 +58265,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         }
       ]
     },
@@ -58006,13 +58313,13 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         },
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         }
       ]
     },
@@ -58066,8 +58373,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -58091,49 +58398,37 @@ window.WORLD_MEALS_DATABASE = [
       "vegan-option",
       "dairy-free",
       "gluten-free",
-      "fish"
+      "shellfish"
     ],
-    "desc": "Ivorian palm nut stew with smoked fish, beef and spices, served with rice.",
+    "desc": "Ivorian palm nut stew, shown here with beef and crab, green chilies and foutou on the side.",
     "ingredients": [
       "Palm nut cream",
-      "Smoked fish",
       "Beef",
+      "Crab",
       "Onion",
       "Garlic",
       "Ginger",
-      "Chili",
-      "Rice"
+      "Green chilies",
+      "Foutou (plantain and cassava)"
     ],
     "swaps": {
       "spice": [
         {
-          "from": "Chili",
-          "to": "Half the amount | Sweet paprika | Mild bell pepper",
-          "note": "Add heat at the table instead"
+          "from": "Green chilies",
+          "to": "Fewer green chilies | Omit the chilies",
+          "note": "Adjust to the heat of the chilies and personal preference."
         }
       ],
       "vegan": [
         {
-          "from": "Smoked fish",
-          "to": "Firm tofu | Hearts of palm | Banana blossom",
-          "note": "Wrap in nori or add seaweed for a fish flavor"
-        },
-        {
           "from": "Beef",
-          "to": "Portobello mushrooms | Seitan | Jackfruit",
-          "note": "Sear hard for a meaty, browned flavor"
-        }
-      ],
-      "local": [
-        {
-          "from": "Smoked fish",
-          "to": "Tilapia | Cod | Any firm white fish",
-          "note": "Any firm, mild white fish works"
+          "to": "Mushrooms",
+          "note": "Brown first, then simmer until tender; this creates a plant-based adaptation."
         },
         {
-          "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "from": "Crab",
+          "to": "Firm tofu",
+          "note": "Add near the end and simmer gently; the flavor differs from crab."
         }
       ]
     },
@@ -58149,23 +58444,32 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Ivory Coast",
     "region": "Africa",
     "emoji": "🍌",
-    "cal": 380,
+    "cal": 720,
     "budget": 3,
     "time": "45 min",
     "spice": 0,
     "tags": [
-      "vegan",
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "vegan-option"
     ],
-    "desc": "Ivorian pounded plantain and cassava, eaten with sauces and stews.",
+    "desc": "Ivorian pounded plantain and cassava, served with beef in a palm nut sauce.",
     "ingredients": [
       "Plantain",
       "Cassava",
       "Water",
-      "Salt"
+      "Salt",
+      "Beef",
+      "Palm nut sauce"
     ],
     "swaps": {
+      "vegan": [
+        {
+          "from": "Beef",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        }
+      ],
       "local": [
         {
           "from": "Plantain",
@@ -58180,9 +58484,9 @@ window.WORLD_MEALS_DATABASE = [
       ]
     },
     "image": "/images/dishes/Foutou-Banane.jpg",
-    "protein": 3,
-    "carbs": 92,
-    "fat": 1,
+    "protein": 30,
+    "carbs": 96,
+    "fat": 26,
     "fiber": 6
   },
   {
@@ -58229,8 +58533,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -58281,12 +58585,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         },
         {
           "from": "Fried fish",
@@ -58351,12 +58655,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -58403,7 +58707,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         }
       ]
     },
@@ -58419,23 +58723,40 @@ window.WORLD_MEALS_DATABASE = [
     "country": "Ivory Coast",
     "region": "Africa",
     "emoji": "🫓",
-    "cal": 340,
+    "cal": 560,
     "budget": 2,
     "time": "1 hr",
-    "spice": 0,
+    "spice": 2,
     "tags": [
-      "vegan",
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "fish",
+      "vegan-option"
     ],
-    "desc": "Ivorian steamed fermented cassava dough wrapped in leaves.",
+    "desc": "Ivorian steamed fermented cassava dough, served with grilled fish and a tomato pepper sauce.",
     "ingredients": [
       "Cassava",
       "Water",
       "Salt",
-      "Banana leaves"
+      "Banana leaves",
+      "Grilled fish",
+      "Tomato pepper sauce"
     ],
     "swaps": {
+      "spice": [
+        {
+          "from": "Tomato pepper sauce",
+          "to": "Half the amount | Sweet paprika | Mild bell pepper",
+          "note": "Add heat at the table instead"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Grilled fish",
+          "to": "Firm tofu | Hearts of palm | Banana blossom",
+          "note": "Wrap in nori or add seaweed for a fish flavor"
+        }
+      ],
       "local": [
         {
           "from": "Cassava",
@@ -58446,13 +58767,23 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Banana leaves",
           "to": "Parchment paper | Foil",
           "note": "Wrap tightly; banana leaves add a light aroma"
+        },
+        {
+          "from": "Grilled fish",
+          "to": "Tilapia | Cod | Any firm white fish",
+          "note": "Any firm, mild white fish works"
+        },
+        {
+          "from": "Tomato pepper sauce",
+          "to": "Thai red curry paste | Sriracha",
+          "note": "Store-bought pastes are a quick replacement for homemade ones"
         }
       ]
     },
     "image": "/images/dishes/Attoukpou.jpg",
-    "protein": 1,
-    "carbs": 82,
-    "fat": 1,
+    "protein": 32,
+    "carbs": 84,
+    "fat": 10,
     "fiber": 4
   },
   {
@@ -58504,8 +58835,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -59347,7 +59678,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Cheese",
@@ -59359,7 +59690,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Cheese",
@@ -59560,8 +59891,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili flakes",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -59607,7 +59938,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -59619,7 +59950,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ]
     },
@@ -59842,7 +60173,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -59854,7 +60185,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "eggs": [
@@ -59967,14 +60298,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "eggs": [
@@ -60092,7 +60423,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -60104,7 +60435,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -60156,14 +60487,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ]
     },
@@ -60219,7 +60550,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -60236,7 +60567,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -60289,7 +60620,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Gruyère cheese",
@@ -60299,14 +60630,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Gruyère cheese",
@@ -60316,7 +60647,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ]
     },
@@ -60363,7 +60694,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Egg yolk",
@@ -60375,7 +60706,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "eggs": [
@@ -60424,14 +60755,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -60485,7 +60816,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Gruyère cheese",
@@ -60502,7 +60833,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Gruyère cheese",
@@ -60571,12 +60902,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -60588,12 +60919,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ]
     },
@@ -60646,7 +60977,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -60658,7 +60989,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -60817,7 +61148,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -60834,7 +61165,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -60891,14 +61222,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -60969,7 +61300,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -60986,7 +61317,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -61047,24 +61378,24 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "gluten": [
@@ -61294,7 +61625,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Blue cheese dressing",
@@ -61306,7 +61637,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Blue cheese dressing",
@@ -61733,7 +62064,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Bacon",
@@ -61750,7 +62081,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ]
     },
@@ -61808,7 +62139,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream gravy",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
@@ -61820,7 +62151,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream gravy",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "gluten": [
@@ -61956,7 +62287,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -61968,7 +62299,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -62268,14 +62599,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -62296,7 +62627,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Pecans",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -62338,7 +62669,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -62350,7 +62681,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -62409,7 +62740,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Whipped cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Egg yolks",
@@ -62426,7 +62757,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Whipped cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "eggs": [
@@ -62484,7 +62815,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Whipped cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
@@ -62496,7 +62827,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Whipped cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "eggs": [
@@ -62623,7 +62954,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Eggs",
@@ -62635,7 +62966,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -62919,7 +63250,7 @@ window.WORLD_MEALS_DATABASE = [
     "carbs": 62,
     "fat": 20,
     "fiber": 9,
-    "image": "/images/dishes/Molletes.jpg"
+    "image": "/images/dishes/Molletes-v2.jpg"
   },
   {
     "id": 8039,
@@ -63187,21 +63518,21 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "nuts": [
         {
           "from": "Walnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ]
     },
@@ -63608,8 +63939,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chile powder",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -63652,14 +63983,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -64045,8 +64376,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "eggs": [
@@ -64108,7 +64439,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -64120,7 +64451,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -64143,10245 +64474,10289 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 18,
     "fiber": 2,
     "image": "/images/dishes/Pancakes.jpg"
-  }
-  // WorldMeals — 100 new salads, protein bowls, and smoothies
-// IDs 1080–1179. Paste these objects before the final ]; of WORLD_MEALS_DATABASE.
-
-,{
-  "id": 1082,
-  "name": "Persian Shirazi Salad",
-  "country": "Iran",
-  "region": "Middle East",
-  "emoji": "🥗",
-  "cal": 120,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Persian chopped cucumber, tomato and onion salad with dried mint and lime.",
-  "ingredients": [
-    "Cucumber",
-    "Tomatoes",
-    "Red onion",
-    "Fresh mint",
-    "Parsley",
-    "Lime juice",
-    "Olive oil"
-  ],
-  "swaps": {},
-  "protein": 2,
-  "carbs": 10,
-  "fat": 8,
-  "fiber": 2,
-  "image": "/images/dishes/Persian-Shirazi-Salad.jpg"
-}
-,{
-  "id": 1083,
-  "name": "Thai Green Papaya Salad",
-  "country": "Thailand",
-  "region": "Asia",
-  "emoji": "🥗",
-  "cal": 180,
-  "budget": 4,
-  "time": "15 min",
-  "spice": 3,
-  "tags": [
-    "salad",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "fish",
-    "nuts"
-  ],
-  "desc": "Thai green papaya salad with tomatoes, beans, peanuts, lime and fish sauce.",
-  "ingredients": [
-    "Green papaya",
-    "Cherry tomatoes",
-    "Long beans",
-    "Peanuts",
-    "Lime juice",
-    "Fish sauce",
-    "Palm sugar",
-    "Thai chilies"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Thai chilies",
-        "to": "Jalapeño, seeds removed | Half a chili | Green bell pepper",
-        "note": "Remove seeds and white ribs to cut the heat"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "Fish sauce",
-        "to": "Soy sauce + a pinch of seaweed | Vegan fish sauce | White miso thinned with lime",
-        "note": "Keeps the salty, savory depth"
-      }
-    ],
-    "nuts": [
-      {
-        "from": "Peanuts",
-        "to": "Sunflower seed butter | Roasted chickpeas | Toasted pumpkin seeds",
-        "note": "Sunflower butter gives the same creamy, nutty taste"
-      }
-    ],
-    "local": [
-      {
-        "from": "Fish sauce",
-        "to": "Anchovy paste | Soy sauce + lime",
-        "note": "Use a little less; these are very salty"
-      },
-      {
-        "from": "Palm sugar",
-        "to": "Brown sugar | Coconut sugar | Maple syrup",
-        "note": "Same deep, caramel sweetness"
-      },
-      {
-        "from": "Thai chilies",
-        "to": "Habanero | Jalapeño",
-        "note": "Habanero is as hot; jalapeño is milder"
-      }
-    ]
-  },
-  "protein": 5,
-  "carbs": 26,
-  "fat": 7,
-  "fiber": 6,
-  "image": "/images/dishes/Thai-Green-Papaya-Salad.jpg"
-}
-,{
-  "id": 1085,
-  "name": "East African Kachumbari",
-  "country": "Kenya",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 70,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 1,
-  "tags": [
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Fresh Kenyan tomato and onion salad with cilantro, lime and chili.",
-  "ingredients": [
-    "Tomatoes",
-    "Red onion",
-    "Cucumber",
-    "Cilantro",
-    "Lime juice",
-    "Fresh chili",
-    "Salt"
-  ],
-  "swaps": {
-    "local": [
-      {
-        "from": "Fresh chili",
-        "to": "Thai red curry paste | Sriracha",
-        "note": "Store-bought pastes are a quick replacement for homemade ones"
-      }
-    ]
-  },
-  "protein": 2,
-  "carbs": 14,
-  "fat": 1,
-  "fiber": 3,
-  "image": "/images/dishes/East-African-Kachumbari.jpg"
-}
-,{
-  "id": 1087,
-  "name": "Chilean Tomato Onion Salad",
-  "country": "Chile",
-  "region": "Americas",
-  "emoji": "🥗",
-  "cal": 120,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Chilean ensalada a la chilena of sliced tomatoes and soaked onion with cilantro.",
-  "ingredients": [
-    "Tomatoes",
-    "White onion",
-    "Cilantro",
-    "Olive oil",
-    "Lemon juice",
-    "Salt",
-    "Black pepper"
-  ],
-  "swaps": {},
-  "protein": 2,
-  "carbs": 10,
-  "fat": 8,
-  "fiber": 3,
-  "image": "/images/dishes/Chilean-Tomato-Onion-Salad.jpg"
-}
-,{
-  "id": 1088,
-  "name": "Spanish Pipirrana",
-  "country": "Spain",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 200,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "vegetarian",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "eggs"
-  ],
-  "desc": "Andalusian chopped salad of tomato, pepper, cucumber and onion with boiled egg.",
-  "ingredients": [
-    "Tomatoes",
-    "Green pepper",
-    "Cucumber",
-    "Onion",
-    "Boiled egg",
-    "Olive oil",
-    "Sherry vinegar"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Boiled egg",
-        "to": "Tofu scramble | Avocado slices",
-        "note": "It is a topping, so the dish still works without it"
-      }
-    ],
-    "eggs": [
-      {
-        "from": "Boiled egg",
-        "to": "Avocado slices | Tofu scramble | Skip it",
-        "note": "It is a topping, so the dish still works without it"
-      }
-    ]
-  },
-  "protein": 6,
-  "carbs": 12,
-  "fat": 15,
-  "fiber": 3,
-  "image": "/images/dishes/Spanish-Pipirrana.jpg"
-}
-,{
-  "id": 1089,
-  "name": "Turkish Shepherd Salad",
-  "country": "Turkey",
-  "region": "Middle East",
-  "emoji": "🥗",
-  "cal": 140,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Turkish shepherd's salad of finely chopped vegetables with lemon and olive oil.",
-  "ingredients": [
-    "Tomatoes",
-    "Cucumber",
-    "Green pepper",
-    "Red onion",
-    "Parsley",
-    "Lemon juice",
-    "Olive oil",
-    "Sumac"
-  ],
-  "swaps": {
-    "local": [
-      {
-        "from": "Sumac",
-        "to": "Lemon zest + a pinch of salt",
-        "note": "Same bright, sour taste"
-      }
-    ]
-  },
-  "protein": 2,
-  "carbs": 12,
-  "fat": 10,
-  "fiber": 3,
-  "image": "/images/dishes/Turkish-Shepherd-Salad.jpg"
-}
-,{
-  "id": 1090,
-  "name": "Israeli Chopped Salad",
-  "country": "Israel",
-  "region": "Middle East",
-  "emoji": "🥗",
-  "cal": 130,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Finely diced Israeli salad of tomato, cucumber, pepper and onion with lemon.",
-  "ingredients": [
-    "Tomatoes",
-    "Cucumber",
-    "Red bell pepper",
-    "Red onion",
-    "Parsley",
-    "Lemon juice",
-    "Olive oil"
-  ],
-  "swaps": {},
-  "protein": 2,
-  "carbs": 11,
-  "fat": 9,
-  "fiber": 3,
-  "image": "/images/dishes/Israeli-Chopped-Salad.jpg"
-}
-,{
-  "id": 1091,
-  "name": "Moroccan Carrot Salad",
-  "country": "Morocco",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 150,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 1,
-  "tags": [
-    "salad",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Moroccan grated carrot salad with cumin, paprika, lemon and herbs.",
-  "ingredients": [
-    "Carrots",
-    "Parsley",
-    "Cilantro",
-    "Lemon juice",
-    "Olive oil",
-    "Cumin",
-    "Paprika"
-  ],
-  "swaps": {},
-  "protein": 2,
-  "carbs": 16,
-  "fat": 9,
-  "fiber": 5,
-  "image": "/images/dishes/Moroccan-Carrot-Salad.jpg"
-}
-,{
-  "id": 1092,
-  "name": "Tunisian Mechouia Salad",
-  "country": "Tunisia",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 280,
-  "budget": 5,
-  "time": "40 min",
-  "spice": 2,
-  "tags": [
-    "salad",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "eggs",
-    "fish"
-  ],
-  "desc": "Tunisian grilled pepper and tomato salad with tuna and egg.",
-  "ingredients": [
-    "Roasted peppers",
-    "Tomatoes",
-    "Onion",
-    "Garlic",
-    "Tuna",
-    "Boiled egg",
-    "Olive oil",
-    "Harissa"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Harissa",
-        "to": "Tomato paste + sweet paprika | Half the amount",
-        "note": "Same color, milder"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "Tuna",
-        "to": "Marinated tofu | Watermelon tuna | Carrot lox",
-        "note": "Marinate in soy, seaweed and lemon for a sea flavor"
-      },
-      {
-        "from": "Boiled egg",
-        "to": "Tofu scramble | Avocado slices",
-        "note": "It is a topping, so the dish still works without it"
-      }
-    ],
-    "eggs": [
-      {
-        "from": "Boiled egg",
-        "to": "Avocado slices | Tofu scramble | Skip it",
-        "note": "It is a topping, so the dish still works without it"
-      }
-    ],
-    "local": [
-      {
-        "from": "Harissa",
-        "to": "Chili paste + cumin + garlic",
-        "note": "Add a spoon of tomato paste"
-      }
-    ]
-  },
-  "protein": 16,
-  "carbs": 14,
-  "fat": 18,
-  "fiber": 4,
-  "image": "/images/dishes/Tunisian-Mechouia-Salad.jpg"
-}
-,{
-  "id": 1093,
-  "name": "Georgian Tomato Cucumber Salad",
-  "country": "Georgia",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 220,
-  "budget": 4,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "vegan",
-    "dairy-free",
-    "gluten-free",
-    "nuts"
-  ],
-  "desc": "Georgian tomato and cucumber salad dressed with walnuts, garlic and cilantro.",
-  "ingredients": [
-    "Tomatoes",
-    "Cucumber",
-    "Red onion",
-    "Cilantro",
-    "Walnuts",
-    "Garlic",
-    "Red wine vinegar"
-  ],
-  "swaps": {
-    "nuts": [
-      {
-        "from": "Walnuts",
-        "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-        "note": "Seeds give the same crunch without nuts"
-      }
-    ]
-  },
-  "protein": 5,
-  "carbs": 12,
-  "fat": 17,
-  "fiber": 4,
-  "image": "/images/dishes/Georgian-Tomato-Cucumber-Salad.jpg"
-}
-,{
-  "id": 1094,
-  "name": "Armenian Eetch Salad",
-  "country": "Armenia",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 280,
-  "budget": 3,
-  "time": "30 min",
-  "spice": 1,
-  "tags": [
-    "salad",
-    "vegan",
-    "dairy-free",
-    "gluten",
-    "gluten-free-option"
-  ],
-  "desc": "Armenian bulgur salad with tomato paste, parsley and lemon.",
-  "ingredients": [
-    "Fine bulgur",
-    "Tomato paste",
-    "Tomatoes",
-    "Parsley",
-    "Green onions",
-    "Lemon juice",
-    "Olive oil"
-  ],
-  "swaps": {
-    "gluten": [
-      {
-        "from": "Fine bulgur",
-        "to": "Quinoa | Millet | Cauliflower rice",
-        "note": "Quinoa cooks in about 15 minutes"
-      }
-    ]
-  },
-  "protein": 6,
-  "carbs": 40,
-  "fat": 11,
-  "fiber": 8,
-  "image": "/images/dishes/Armenian-Eetch-Salad.jpg"
-}
-,{
-  "id": 1096,
-  "name": "Serbian Šopska Salad",
-  "country": "Serbia",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 260,
-  "budget": 4,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Serbian chopped salad of tomato, cucumber and pepper under grated white cheese.",
-  "ingredients": [
-    "Tomatoes",
-    "Cucumber",
-    "Bell pepper",
-    "Onion",
-    "White brined cheese",
-    "Parsley",
-    "Sunflower oil"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "White brined cheese",
-        "to": "Vegan mozzarella | Cashew cheese sauce",
-        "note": "Choose a vegan cheese that melts"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "White brined cheese",
-        "to": "Vegan mozzarella | Dairy-free cheddar | Cashew cheese sauce",
-        "note": "Choose a vegan cheese that melts"
-      }
-    ]
-  },
-  "protein": 9,
-  "carbs": 12,
-  "fat": 20,
-  "fiber": 3,
-  "image": "/images/dishes/Serbian-Šopska-Salad.jpg"
-}
-,{
-  "id": 1097,
-  "name": "German Cucumber Salad",
-  "country": "Germany",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 110,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "German creamy cucumber salad with dill and onion.",
-  "ingredients": [
-    "Cucumber",
-    "Dill",
-    "Red onion",
-    "Sour cream",
-    "White vinegar",
-    "Sugar",
-    "Black pepper"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Sour cream",
-        "to": "Cashew sour cream | Dairy-free yogurt",
-        "note": "Stir in at the end, off the heat"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Sour cream",
-        "to": "Dairy-free yogurt | Cashew sour cream | Coconut yogurt + lemon",
-        "note": "Stir in at the end, off the heat"
-      }
-    ]
-  },
-  "protein": 2,
-  "carbs": 10,
-  "fat": 7,
-  "fiber": 1,
-  "image": "/images/dishes/German-Cucumber-Salad.jpg"
-}
-,{
-  "id": 1098,
-  "name": "Polish Mizeria",
-  "country": "Poland",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 110,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Polish cucumber salad in sour cream with fresh dill.",
-  "ingredients": [
-    "Cucumber",
-    "Sour cream",
-    "Fresh dill",
-    "Lemon juice",
-    "Sugar",
-    "Salt",
-    "Black pepper"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Sour cream",
-        "to": "Cashew sour cream | Dairy-free yogurt",
-        "note": "Stir in at the end, off the heat"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Sour cream",
-        "to": "Dairy-free yogurt | Cashew sour cream | Coconut yogurt + lemon",
-        "note": "Stir in at the end, off the heat"
-      }
-    ]
-  },
-  "protein": 2,
-  "carbs": 9,
-  "fat": 7,
-  "fiber": 1,
-  "image": "/images/dishes/Polish-Mizeria.jpg"
-}
-,{
-  "id": 1100,
-  "name": "Vietnamese Green Mango Salad",
-  "country": "Vietnam",
-  "region": "Asia",
-  "emoji": "🥗",
-  "cal": 200,
-  "budget": 4,
-  "time": "15 min",
-  "spice": 2,
-  "tags": [
-    "salad",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "fish",
-    "nuts"
-  ],
-  "desc": "Vietnamese green mango salad with herbs, peanuts, lime and fish sauce.",
-  "ingredients": [
-    "Green mango",
-    "Carrot",
-    "Fresh herbs",
-    "Peanuts",
-    "Lime juice",
-    "Fish sauce",
-    "Chili"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Chili",
-        "to": "Half the amount | Sweet paprika | Mild bell pepper",
-        "note": "Add heat at the table instead"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "Fish sauce",
-        "to": "Soy sauce + a pinch of seaweed | Vegan fish sauce | White miso thinned with lime",
-        "note": "Keeps the salty, savory depth"
-      }
-    ],
-    "nuts": [
-      {
-        "from": "Peanuts",
-        "to": "Sunflower seed butter | Roasted chickpeas | Toasted pumpkin seeds",
-        "note": "Sunflower butter gives the same creamy, nutty taste"
-      }
-    ],
-    "local": [
-      {
-        "from": "Fish sauce",
-        "to": "Anchovy paste | Soy sauce + lime",
-        "note": "Use a little less; these are very salty"
-      },
-      {
-        "from": "Chili",
-        "to": "Thai red curry paste | Sriracha",
-        "note": "Store-bought pastes are a quick replacement for homemade ones"
-      }
-    ]
-  },
-  "protein": 5,
-  "carbs": 28,
-  "fat": 8,
-  "fiber": 5,
-  "image": "/images/dishes/Vietnamese-Green-Mango-Salad.jpg"
-}
-,{
-  "id": 1101,
-  "name": "Cambodian Green Mango Salad",
-  "country": "Cambodia",
-  "region": "Asia",
-  "emoji": "🥗",
-  "cal": 200,
-  "budget": 4,
-  "time": "15 min",
-  "spice": 1,
-  "tags": [
-    "salad",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "fish",
-    "nuts"
-  ],
-  "desc": "Cambodian tart green mango salad with basil, peanuts and fish sauce.",
-  "ingredients": [
-    "Green mango",
-    "Carrot",
-    "Cucumber",
-    "Fresh basil",
-    "Roasted peanuts",
-    "Lime juice",
-    "Fish sauce"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Fish sauce",
-        "to": "Soy sauce + a pinch of seaweed | Vegan fish sauce | White miso thinned with lime",
-        "note": "Keeps the salty, savory depth"
-      }
-    ],
-    "nuts": [
-      {
-        "from": "Roasted peanuts",
-        "to": "Sunflower seed butter | Roasted chickpeas | Toasted pumpkin seeds",
-        "note": "Sunflower butter gives the same creamy, nutty taste"
-      }
-    ],
-    "local": [
-      {
-        "from": "Fish sauce",
-        "to": "Anchovy paste | Soy sauce + lime",
-        "note": "Use a little less; these are very salty"
-      }
-    ]
-  },
-  "protein": 5,
-  "carbs": 28,
-  "fat": 8,
-  "fiber": 5,
-  "image": "/images/dishes/Cambodian-Green-Mango-Salad.jpg"
-}
-,{
-  "id": 1104,
-  "name": "Japanese Sunomono",
-  "country": "Japan",
-  "region": "Asia",
-  "emoji": "🥗",
-  "cal": 70,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "vegan",
-    "dairy-free",
-    "gluten",
-    "gluten-free-option"
-  ],
-  "desc": "Japanese sweet-sour cucumber and wakame salad with sesame.",
-  "ingredients": [
-    "Cucumber",
-    "Rice vinegar",
-    "Sugar",
-    "Soy sauce",
-    "Wakame",
-    "Sesame seeds",
-    "Salt"
-  ],
-  "swaps": {
-    "gluten": [
-      {
-        "from": "Soy sauce",
-        "to": "Tamari | Coconut aminos",
-        "note": "Tamari is the closest match"
-      }
-    ]
-  },
-  "protein": 2,
-  "carbs": 12,
-  "fat": 2,
-  "fiber": 2,
-  "image": "/images/dishes/Japanese-Sunomono.jpg"
-}
-,{
-  "id": 1105,
-  "name": "Korean Cucumber Salad",
-  "country": "South Korea",
-  "region": "Asia",
-  "emoji": "🥗",
-  "cal": 90,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 2,
-  "tags": [
-    "salad",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Korean spicy cucumber salad with gochugaru, garlic and sesame.",
-  "ingredients": [
-    "Cucumber",
-    "Gochugaru",
-    "Garlic",
-    "Rice vinegar",
-    "Sesame oil",
-    "Sesame seeds",
-    "Scallions"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Gochugaru",
-        "to": "Sweet paprika | Half the amount | Mild chili flakes",
-        "note": "All the color, much less heat"
-      }
-    ],
-    "local": [
-      {
-        "from": "Gochugaru",
-        "to": "Sweet paprika + chili flakes",
-        "note": "Mix 3 parts paprika to 1 part flakes"
-      }
-    ]
-  },
-  "protein": 2,
-  "carbs": 8,
-  "fat": 6,
-  "fiber": 2,
-  "image": "/images/dishes/Korean-Cucumber-Salad.jpg"
-}
-,{
-  "id": 1106,
-  "name": "Chinese Smashed Cucumber Salad",
-  "country": "China",
-  "region": "Asia",
-  "emoji": "🥗",
-  "cal": 110,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 2,
-  "tags": [
-    "salad",
-    "vegan",
-    "dairy-free",
-    "gluten",
-    "gluten-free-option"
-  ],
-  "desc": "Chinese smashed cucumber with garlic, black vinegar, soy and chili crisp.",
-  "ingredients": [
-    "Cucumber",
-    "Garlic",
-    "Chinkiang vinegar",
-    "Soy sauce",
-    "Sesame oil",
-    "Chili crisp",
-    "Sesame seeds"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Chili crisp",
-        "to": "Half the amount | Sweet paprika | A mild curry powder or mild chili",
-        "note": "Add heat at the table so everyone can choose"
-      }
-    ],
-    "gluten": [
-      {
-        "from": "Soy sauce",
-        "to": "Tamari | Coconut aminos",
-        "note": "Tamari is the closest match"
-      }
-    ],
-    "local": [
-      {
-        "from": "Chili crisp",
-        "to": "Thai red curry paste | Sriracha",
-        "note": "Store-bought pastes are a quick replacement for homemade ones"
-      }
-    ]
-  },
-  "protein": 2,
-  "carbs": 8,
-  "fat": 8,
-  "fiber": 2,
-  "image": "/images/dishes/Chinese-Smashed-Cucumber-Salad.jpg"
-}
-,{
-  "id": 1107,
-  "name": "Filipino Ensaladang Talong",
-  "country": "Philippines",
-  "region": "Asia",
-  "emoji": "🥗",
-  "cal": 150,
-  "budget": 3,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "vegetarian",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "eggs"
-  ],
-  "desc": "Filipino grilled eggplant salad with tomato, onion, vinegar and salted egg.",
-  "ingredients": [
-    "Eggplant",
-    "Tomatoes",
-    "Red onion",
-    "Cane vinegar",
-    "Salted egg",
-    "Cilantro",
-    "Black pepper"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Salted egg",
-        "to": "Flax egg | Chickpea flour batter | Silken tofu",
-        "note": "Flax for baking; chickpea flour for omelettes"
-      }
-    ],
-    "eggs": [
-      {
-        "from": "Salted egg",
-        "to": "Flax egg (1 tbsp ground flax + 3 tbsp water) | Chickpea flour + water | Silken tofu",
-        "note": "Flax for baking and binding; chickpea flour or tofu for omelettes"
-      }
-    ]
-  },
-  "protein": 6,
-  "carbs": 18,
-  "fat": 6,
-  "fiber": 7,
-  "image": "/images/dishes/Filipino-Ensaladang-Talong.jpg"
-}
-,{
-  "id": 1108,
-  "name": "Indian Kachumber Salad",
-  "country": "India",
-  "region": "Asia",
-  "emoji": "🥗",
-  "cal": 80,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 1,
-  "tags": [
-    "salad",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Indian chopped cucumber, tomato and onion salad with lemon and chaat masala.",
-  "ingredients": [
-    "Cucumber",
-    "Tomatoes",
-    "Red onion",
-    "Cilantro",
-    "Lemon juice",
-    "Cumin",
-    "Chaat masala",
-    "Green chili"
-  ],
-  "swaps": {
-    "local": [
-      {
-        "from": "Chaat masala",
-        "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-        "note": "Most spice blends can be made with these four"
-      },
-      {
-        "from": "Green chili",
-        "to": "Thai red curry paste | Sriracha",
-        "note": "Store-bought pastes are a quick replacement for homemade ones"
-      }
-    ]
-  },
-  "protein": 2,
-  "carbs": 14,
-  "fat": 2,
-  "fiber": 3,
-  "image": "/images/dishes/Indian-Kachumber-Salad.jpg"
-}
-,{
-  "id": 1109,
-  "name": "Sri Lankan Coconut Sambol Salad",
-  "country": "Sri Lanka",
-  "region": "Asia",
-  "emoji": "🥗",
-  "cal": 220,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 2,
-  "tags": [
-    "salad",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "fish"
-  ],
-  "desc": "Sri Lankan fresh coconut salad with red onion, lime and chili.",
-  "ingredients": [
-    "Fresh coconut",
-    "Red onion",
-    "Lime juice",
-    "Chili flakes",
-    "Maldive fish",
-    "Salt",
-    "Curry leaves"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Chili flakes",
-        "to": "Half the amount | Sweet paprika | Mild bell pepper",
-        "note": "Add heat at the table instead"
-      },
-      {
-        "from": "Curry leaves",
-        "to": "Half the amount | Mild curry powder or mild salsa | A spoon of yogurt or coconut milk to soften",
-        "note": "Add heat at the table so everyone can choose"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "Maldive fish",
-        "to": "Soy sauce + a pinch of seaweed | Vegan fish sauce | White miso thinned with lime",
-        "note": "Keeps the salty, savory depth"
-      }
-    ],
-    "local": [
-      {
-        "from": "Chili flakes",
-        "to": "Thai red curry paste | Sriracha",
-        "note": "Store-bought pastes are a quick replacement for homemade ones"
-      },
-      {
-        "from": "Maldive fish",
-        "to": "Fish sauce | Anchovy paste | Soy sauce + lime",
-        "note": "Use a little less; these are very salty"
-      },
-      {
-        "from": "Curry leaves",
-        "to": "Bay leaf + lime zest | Skip them",
-        "note": "Nothing tastes exactly the same; the dish is still good without them"
-      }
-    ]
-  },
-  "protein": 4,
-  "carbs": 10,
-  "fat": 19,
-  "fiber": 5,
-  "image": "/images/dishes/Sri-Lankan-Coconut-Sambol-Salad.jpg"
-}
-,{
-  "id": 1110,
-  "name": "Greek Chicken Weight-Loss Salad",
-  "country": "Greece",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 360,
-  "budget": 7,
-  "time": "20 min",
-  "spice": 0,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "salad",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Light Greek salad of grilled chicken, crisp vegetables and a little feta.",
-  "ingredients": [
-    "Grilled chicken breast",
-    "Romaine lettuce",
-    "Cucumber",
-    "Tomatoes",
-    "Red onion",
-    "Feta",
-    "Lemon-oregano dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken breast",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      },
-      {
-        "from": "Feta",
-        "to": "Crumbled firm tofu | Cashew ricotta",
-        "note": "Add lemon and salt for the fresh, tangy taste"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Feta",
-        "to": "Crumbled firm tofu | Vegan feta | Cashew ricotta",
-        "note": "Add lemon and salt for the fresh, tangy taste"
-      }
-    ],
-    "local": [
-      {
-        "from": "Feta",
-        "to": "Ricotta | Cottage cheese, drained",
-        "note": "Feta replaces salty white cheeses; ricotta replaces fresh curd cheeses"
-      }
-    ]
-  },
-  "protein": 38,
-  "carbs": 12,
-  "fat": 18,
-  "fiber": 4,
-  "image": "/images/dishes/Greek-Chicken-Weight-Loss-Salad.jpg"
-}
-,{
-  "id": 1111,
-  "name": "Mediterranean Tuna Salad",
-  "country": "Greece",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 380,
-  "budget": 6,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "fish"
-  ],
-  "desc": "Tuna salad with chickpeas, cucumber, tomatoes and a lemon-olive oil dressing.",
-  "ingredients": [
-    "Tuna",
-    "Cucumber",
-    "Cherry tomatoes",
-    "Chickpeas",
-    "Red onion",
-    "Parsley",
-    "Lemon-olive oil dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Tuna",
-        "to": "Marinated tofu | Watermelon tuna | Carrot lox",
-        "note": "Marinate in soy, seaweed and lemon for a sea flavor"
-      }
-    ]
-  },
-  "protein": 30,
-  "carbs": 28,
-  "fat": 16,
-  "fiber": 8,
-  "image": "/images/dishes/Mediterranean-Tuna-Salad.jpg"
-}
-,{
-  "id": 1112,
-  "name": "Moroccan Lentil Weight-Loss Bowl",
-  "country": "Morocco",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 380,
-  "budget": 6,
-  "time": "35 min",
-  "spice": 2,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Moroccan lentils with roasted carrots, vegetables and harissa yogurt.",
-  "ingredients": [
-    "Green lentils",
-    "Roasted carrots",
-    "Cucumber",
-    "Tomatoes",
-    "Parsley",
-    "Harissa yogurt",
-    "Lemon"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Harissa yogurt",
-        "to": "Tomato paste + sweet paprika | Half the amount",
-        "note": "Same color, milder"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "Harissa yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Harissa yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Harissa yogurt",
-        "to": "Greek yogurt | Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 20,
-  "carbs": 52,
-  "fat": 9,
-  "fiber": 15,
-  "image": "/images/dishes/Moroccan-Lentil-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1113,
-  "name": "Thai Chicken Lettuce Cups",
-  "country": "Thailand",
-  "region": "Asia",
-  "emoji": "🥬",
-  "cal": 340,
-  "budget": 7,
-  "time": "25 min",
-  "spice": 2,
-  "tags": [
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "nuts"
-  ],
-  "desc": "Thai minced chicken in crunchy lettuce cups with basil and peanut-lime sauce.",
-  "ingredients": [
-    "Ground chicken",
-    "Butter lettuce",
-    "Carrot",
-    "Water chestnuts",
-    "Lime",
-    "Thai basil",
-    "Peanut-lime sauce",
-    "Thai chilies"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Thai chilies",
-        "to": "Jalapeño, seeds removed | Half a chili | Green bell pepper",
-        "note": "Remove seeds and white ribs to cut the heat"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "Ground chicken",
-        "to": "Brown lentils | Plant-based mince | Chopped mushrooms + walnuts",
-        "note": "Brown well and season the same way"
-      }
-    ],
-    "nuts": [
-      {
-        "from": "Peanut-lime sauce",
-        "to": "Sunflower seed butter | Roasted chickpeas | Toasted pumpkin seeds",
-        "note": "Sunflower butter gives the same creamy, nutty taste"
-      }
-    ],
-    "local": [
-      {
-        "from": "Thai basil",
-        "to": "Basil + a few mint leaves | Cilantro",
-        "note": "Culantro and chadon beni: use cilantro; Thai basil: basil + mint"
-      },
-      {
-        "from": "Thai chilies",
-        "to": "Habanero | Jalapeño",
-        "note": "Habanero is as hot; jalapeño is milder"
-      }
-    ]
-  },
-  "protein": 28,
-  "carbs": 16,
-  "fat": 18,
-  "fiber": 3,
-  "image": "/images/dishes/Thai-Chicken-Lettuce-Cups.jpg"
-}
-,{
-  "id": 1114,
-  "name": "Vietnamese Shrimp Salad",
-  "country": "Vietnam",
-  "region": "Asia",
-  "emoji": "🥗",
-  "cal": 240,
-  "budget": 7,
-  "time": "20 min",
-  "spice": 1,
-  "tags": [
-    "salad",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "fish",
-    "shellfish"
-  ],
-  "desc": "Vietnamese shrimp salad with cabbage, herbs and lime fish-sauce dressing.",
-  "ingredients": [
-    "Shrimp",
-    "Cabbage",
-    "Carrot",
-    "Cucumber",
-    "Mint",
-    "Cilantro",
-    "Lime fish-sauce dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Shrimp",
-        "to": "King oyster mushrooms | Hearts of palm | Plant-based shrimp",
-        "note": "Slice mushroom stems into rounds and sear"
-      }
-    ]
-  },
-  "protein": 24,
-  "carbs": 18,
-  "fat": 7,
-  "fiber": 4,
-  "image": "/images/dishes/Vietnamese-Shrimp-Salad.jpg"
-}
-,{
-  "id": 1115,
-  "name": "Japanese Salmon Cucumber Bowl",
-  "country": "Japan",
-  "region": "Asia",
-  "emoji": "🥗",
-  "cal": 520,
-  "budget": 9,
-  "time": "25 min",
-  "spice": 0,
-  "tags": [
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten",
-    "fish"
-  ],
-  "desc": "Salmon over brown rice with cucumber, edamame and soy-ginger dressing.",
-  "ingredients": [
-    "Salmon",
-    "Cucumber",
-    "Edamame",
-    "Brown rice",
-    "Nori",
-    "Sesame seeds",
-    "Soy-ginger dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Salmon",
-        "to": "Marinated tofu | Watermelon tuna | Carrot lox",
-        "note": "Marinate in soy, seaweed and lemon for a sea flavor"
-      }
-    ]
-  },
-  "protein": 34,
-  "carbs": 48,
-  "fat": 20,
-  "fiber": 6,
-  "image": "/images/dishes/Japanese-Salmon-Cucumber-Bowl.jpg"
-}
-,{
-  "id": 1116,
-  "name": "Korean Chicken Cabbage Bowl",
-  "country": "South Korea",
-  "region": "Asia",
-  "emoji": "🥗",
-  "cal": 480,
-  "budget": 8,
-  "time": "25 min",
-  "spice": 2,
-  "tags": [
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten",
-    "gluten-free-option"
-  ],
-  "desc": "Grilled chicken with cabbage, brown rice, kimchi and gochujang dressing.",
-  "ingredients": [
-    "Grilled chicken",
-    "Cabbage",
-    "Carrot",
-    "Cucumber",
-    "Brown rice",
-    "Kimchi",
-    "Gochujang dressing"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Gochujang dressing",
-        "to": "Miso + sweet paprika | Half the amount",
-        "note": "Same savory depth, less heat"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ],
-    "gluten": [
-      {
-        "from": "Gochujang dressing",
-        "to": "Gluten-free gochujang | Gluten-free miso + chili flakes",
-        "note": "Many Korean pastes contain wheat"
-      }
-    ],
-    "local": [
-      {
-        "from": "Kimchi",
-        "to": "Sauerkraut + chili flakes + garlic",
-        "note": "Quick stand-in for cooking"
-      },
-      {
-        "from": "Gochujang dressing",
-        "to": "Miso + sriracha + a little honey | Red miso",
-        "note": "Mix to taste"
-      }
-    ]
-  },
-  "protein": 38,
-  "carbs": 52,
-  "fat": 12,
-  "fiber": 7,
-  "image": "/images/dishes/Korean-Chicken-Cabbage-Bowl.jpg"
-}
-,{
-  "id": 1117,
-  "name": "Mexican Grilled Chicken Salad",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🥗",
-  "cal": 480,
-  "budget": 7,
-  "time": "20 min",
-  "spice": 1,
-  "tags": [
-    "salad",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken salad with black beans, corn, avocado and lime-cilantro dressing.",
-  "ingredients": [
-    "Grilled chicken",
-    "Romaine lettuce",
-    "Black beans",
-    "Corn",
-    "Tomatoes",
-    "Avocado",
-    "Lime-cilantro dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 38,
-  "carbs": 32,
-  "fat": 22,
-  "fiber": 11,
-  "image": "/images/dishes/Mexican-Grilled-Chicken-Salad.jpg"
-}
-,{
-  "id": 1118,
-  "name": "Brazilian Hearts of Palm Salad",
-  "country": "Brazil",
-  "region": "Americas",
-  "emoji": "🥗",
-  "cal": 220,
-  "budget": 6,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Brazilian salad of hearts of palm, tomato and avocado with lime.",
-  "ingredients": [
-    "Hearts of palm",
-    "Tomatoes",
-    "Avocado",
-    "Red onion",
-    "Parsley",
-    "Lime juice",
-    "Olive oil"
-  ],
-  "swaps": {},
-  "protein": 4,
-  "carbs": 14,
-  "fat": 17,
-  "fiber": 7,
-  "image": "/images/dishes/Brazilian-Hearts-of-Palm-Salad.jpg"
-}
-,{
-  "id": 1119,
-  "name": "Peruvian Quinoa Salad",
-  "country": "Peru",
-  "region": "Americas",
-  "emoji": "🥗",
-  "cal": 380,
-  "budget": 5,
-  "time": "25 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Peruvian quinoa salad with corn, tomato, avocado and lime.",
-  "ingredients": [
-    "Quinoa",
-    "Corn",
-    "Tomatoes",
-    "Avocado",
-    "Red onion",
-    "Cilantro",
-    "Lime dressing"
-  ],
-  "swaps": {},
-  "protein": 10,
-  "carbs": 50,
-  "fat": 17,
-  "fiber": 9,
-  "image": "/images/dishes/Peruvian-Quinoa-Salad.jpg"
-}
-,{
-  "id": 1120,
-  "name": "Caribbean Mango Chicken Salad",
-  "country": "Jamaica",
-  "region": "Americas",
-  "emoji": "🥗",
-  "cal": 420,
-  "budget": 7,
-  "time": "20 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with mango, greens, avocado and lime dressing.",
-  "ingredients": [
-    "Grilled chicken",
-    "Mango",
-    "Mixed greens",
-    "Cucumber",
-    "Red pepper",
-    "Avocado",
-    "Lime dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 36,
-  "carbs": 28,
-  "fat": 19,
-  "fiber": 7,
-  "image": "/images/dishes/Caribbean-Mango-Chicken-Salad.jpg"
-}
-,{
-  "id": 1121,
-  "name": "Jamaican Jerk Chicken Salad",
-  "country": "Jamaica",
-  "region": "Americas",
-  "emoji": "🥗",
-  "cal": 440,
-  "budget": 8,
-  "time": "25 min",
-  "spice": 2,
-  "tags": [
-    "salad",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Jerk chicken over romaine with mango, cabbage, avocado and lime.",
-  "ingredients": [
-    "Jerk chicken",
-    "Romaine lettuce",
-    "Mango",
-    "Cabbage",
-    "Bell pepper",
-    "Avocado",
-    "Scotch bonnet",
-    "Lime dressing"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Scotch bonnet",
-        "to": "Jalapeño, seeds removed | Half a chili | Green bell pepper",
-        "note": "Remove seeds and white ribs to cut the heat"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "Jerk chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ],
-    "local": [
-      {
-        "from": "Scotch bonnet",
-        "to": "Habanero | Jalapeño",
-        "note": "Habanero is as hot; jalapeño is milder"
-      }
-    ]
-  },
-  "protein": 36,
-  "carbs": 28,
-  "fat": 21,
-  "fiber": 7,
-  "image": "/images/dishes/Jamaican-Jerk-Chicken-Salad.jpg"
-}
-,{
-  "id": 1122,
-  "name": "Nigerian Grilled Chicken Vegetable Bowl",
-  "country": "Nigeria",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 480,
-  "budget": 7,
-  "time": "25 min",
-  "spice": 2,
-  "tags": [
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with brown rice, vegetables and a Nigerian pepper sauce.",
-  "ingredients": [
-    "Grilled chicken",
-    "Brown rice",
-    "Cabbage",
-    "Carrots",
-    "Tomatoes",
-    "Cucumber",
-    "Scotch bonnet pepper sauce"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Scotch bonnet pepper sauce",
-        "to": "Jalapeño, seeds removed | Half a chili | Green bell pepper",
-        "note": "Remove seeds and white ribs to cut the heat"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ],
-    "local": [
-      {
-        "from": "Scotch bonnet pepper sauce",
-        "to": "Habanero | Jalapeño",
-        "note": "Habanero is as hot; jalapeño is milder"
-      }
-    ]
-  },
-  "protein": 40,
-  "carbs": 52,
-  "fat": 12,
-  "fiber": 6,
-  "image": "/images/dishes/Nigerian-Grilled-Chicken-Vegetable-Bowl.jpg"
-}
-,{
-  "id": 1123,
-  "name": "Ghanaian Bean and Vegetable Bowl",
-  "country": "Ghana",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 480,
-  "budget": 6,
-  "time": "30 min",
-  "spice": 2,
-  "tags": [
-    "bowl",
-    "dairy-free",
-    "gluten-free",
-    "fish"
-  ],
-  "desc": "Black-eyed peas with roasted plantain, vegetables, avocado and shito.",
-  "ingredients": [
-    "Black-eyed peas",
-    "Roasted plantain",
-    "Cabbage",
-    "Carrots",
-    "Tomatoes",
-    "Avocado",
-    "Shito"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Shito",
-        "to": "Half the amount | Sweet paprika | Mild bell pepper",
-        "note": "Add heat at the table instead"
-      }
-    ],
-    "local": [
-      {
-        "from": "Black-eyed peas",
-        "to": "Pinto beans | Green peas",
-        "note": "Canned beans save hours of soaking"
-      },
-      {
-        "from": "Roasted plantain",
-        "to": "Green bananas | Potatoes (for savory dishes)",
-        "note": "Ripe plantains: use firm sweet bananas"
-      },
-      {
-        "from": "Shito",
-        "to": "Thai red curry paste | Sriracha",
-        "note": "Store-bought pastes are a quick replacement for homemade ones"
-      }
-    ]
-  },
-  "protein": 16,
-  "carbs": 70,
-  "fat": 16,
-  "fiber": 16,
-  "image": "/images/dishes/Ghanaian-Bean-and-Vegetable-Bowl.jpg"
-}
-,{
-  "id": 1124,
-  "name": "Ethiopian Lentil Salad",
-  "country": "Ethiopia",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 320,
-  "budget": 5,
-  "time": "30 min",
-  "spice": 2,
-  "tags": [
-    "salad",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Ethiopian lentil salad with tomato, onion and a touch of berbere.",
-  "ingredients": [
-    "Green lentils",
-    "Tomatoes",
-    "Cucumber",
-    "Red onion",
-    "Parsley",
-    "Lemon juice",
-    "Berbere"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Berbere",
-        "to": "Sweet paprika | Half the amount",
-        "note": "Keeps the color with less heat"
-      }
-    ],
-    "local": [
-      {
-        "from": "Berbere",
-        "to": "Paprika + cayenne + ground fenugreek + cardamom",
-        "note": "Mix 4 parts paprika, 1 part cayenne, a pinch of the rest"
-      }
-    ]
-  },
-  "protein": 18,
-  "carbs": 46,
-  "fat": 7,
-  "fiber": 15,
-  "image": "/images/dishes/Ethiopian-Lentil-Salad.jpg"
-}
-,{
-  "id": 1125,
-  "name": "Kenyan Avocado Tomato Salad",
-  "country": "Kenya",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 240,
-  "budget": 4,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Kenyan avocado, tomato and onion salad with lime and cilantro.",
-  "ingredients": [
-    "Avocado",
-    "Tomatoes",
-    "Red onion",
-    "Cilantro",
-    "Lime juice",
-    "Black pepper",
-    "Salt"
-  ],
-  "swaps": {},
-  "protein": 3,
-  "carbs": 14,
-  "fat": 20,
-  "fiber": 9,
-  "image": "/images/dishes/Kenyan-Avocado-Tomato-Salad.jpg"
-}
-,{
-  "id": 1126,
-  "name": "South African Chicken Slaw",
-  "country": "South Africa",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 380,
-  "budget": 7,
-  "time": "20 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "South African grilled chicken with colorful cabbage slaw and light yogurt dressing.",
-  "ingredients": [
-    "Grilled chicken",
-    "Green cabbage",
-    "Purple cabbage",
-    "Carrots",
-    "Bell pepper",
-    "Cilantro",
-    "Light yogurt dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      },
-      {
-        "from": "Light yogurt dressing",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Light yogurt dressing",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Light yogurt dressing",
-        "to": "Greek yogurt | Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 38,
-  "carbs": 20,
-  "fat": 15,
-  "fiber": 6,
-  "image": "/images/dishes/South-African-Chicken-Slaw.jpg"
-}
-,{
-  "id": 1127,
-  "name": "Egyptian Chickpea Salad",
-  "country": "Egypt",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 320,
-  "budget": 4,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Egyptian chickpea salad with tomato, cucumber, parsley, lemon and cumin.",
-  "ingredients": [
-    "Chickpeas",
-    "Tomatoes",
-    "Cucumber",
-    "Red onion",
-    "Parsley",
-    "Lemon juice",
-    "Cumin",
-    "Olive oil"
-  ],
-  "swaps": {},
-  "protein": 12,
-  "carbs": 38,
-  "fat": 13,
-  "fiber": 10,
-  "image": "/images/dishes/Egyptian-Chickpea-Salad.jpg"
-}
-,{
-  "id": 1128,
-  "name": "Turkish Lentil Salad",
-  "country": "Turkey",
-  "region": "Middle East",
-  "emoji": "🥗",
-  "cal": 320,
-  "budget": 4,
-  "time": "30 min",
-  "spice": 1,
-  "tags": [
-    "salad",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Turkish lentil salad with red pepper, herbs and lemon dressing.",
-  "ingredients": [
-    "Green lentils",
-    "Red pepper",
-    "Cucumber",
-    "Red onion",
-    "Parsley",
-    "Mint",
-    "Lemon dressing",
-    "Pul biber"
-  ],
-  "swaps": {
-    "local": [
-      {
-        "from": "Pul biber",
-        "to": "Sweet paprika + chili flakes",
-        "note": "Mix 3 parts paprika to 1 part flakes"
-      }
-    ]
-  },
-  "protein": 18,
-  "carbs": 44,
-  "fat": 8,
-  "fiber": 14,
-  "image": "/images/dishes/Turkish-Lentil-Salad.jpg"
-}
-,{
-  "id": 1129,
-  "name": "Lebanese Chickpea Parsley Salad",
-  "country": "Lebanon",
-  "region": "Middle East",
-  "emoji": "🥗",
-  "cal": 320,
-  "budget": 4,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Lebanese chickpea and parsley salad with lemon and olive oil.",
-  "ingredients": [
-    "Chickpeas",
-    "Parsley",
-    "Tomatoes",
-    "Cucumber",
-    "Red onion",
-    "Lemon juice",
-    "Olive oil"
-  ],
-  "swaps": {},
-  "protein": 12,
-  "carbs": 36,
-  "fat": 14,
-  "fiber": 10,
-  "image": "/images/dishes/Lebanese-Chickpea-Parsley-Salad.jpg"
-}
-,{
-  "id": 1130,
-  "name": "Greek Chicken Quinoa Protein Bowl",
-  "country": "Greece",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 580,
-  "budget": 10,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Greek chicken bowl with quinoa, olives, feta and tzatziki.",
-  "ingredients": [
-    "Grilled chicken",
-    "Quinoa",
-    "Cucumber",
-    "Tomatoes",
-    "Kalamata olives",
-    "Feta",
-    "Tzatziki"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      },
-      {
-        "from": "Feta",
-        "to": "Crumbled firm tofu | Cashew ricotta",
-        "note": "Add lemon and salt for the fresh, tangy taste"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Feta",
-        "to": "Crumbled firm tofu | Vegan feta | Cashew ricotta",
-        "note": "Add lemon and salt for the fresh, tangy taste"
-      }
-    ],
-    "local": [
-      {
-        "from": "Feta",
-        "to": "Ricotta | Cottage cheese, drained",
-        "note": "Feta replaces salty white cheeses; ricotta replaces fresh curd cheeses"
-      }
-    ]
-  },
-  "protein": 46,
-  "carbs": 44,
-  "fat": 24,
-  "fiber": 7,
-  "image": "/images/dishes/Greek-Chicken-Quinoa-Protein-Bowl.jpg"
-}
-,{
-  "id": 1131,
-  "name": "Turkish Chicken Bulgur Protein Bowl",
-  "country": "Turkey",
-  "region": "Middle East",
-  "emoji": "🥗",
-  "cal": 600,
-  "budget": 10,
-  "time": "30 min",
-  "spice": 1,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten",
-    "gluten-free-option"
-  ],
-  "desc": "Turkish chicken bowl with bulgur, chickpeas and yogurt-herb sauce.",
-  "ingredients": [
-    "Grilled chicken",
-    "Bulgur",
-    "Chickpeas",
-    "Cucumber",
-    "Tomatoes",
-    "Red onion",
-    "Yogurt-herb sauce"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      },
-      {
-        "from": "Yogurt-herb sauce",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Yogurt-herb sauce",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "gluten": [
-      {
-        "from": "Bulgur",
-        "to": "Quinoa | Millet | Cauliflower rice",
-        "note": "Quinoa cooks in about 15 minutes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Yogurt-herb sauce",
-        "to": "Greek yogurt | Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 48,
-  "carbs": 58,
-  "fat": 18,
-  "fiber": 11,
-  "image": "/images/dishes/Turkish-Chicken-Bulgur-Protein-Bowl.jpg"
-}
-,{
-  "id": 1132,
-  "name": "Japanese Salmon Rice Protein Bowl",
-  "country": "Japan",
-  "region": "Asia",
-  "emoji": "🍣",
-  "cal": 620,
-  "budget": 11,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten",
-    "fish"
-  ],
-  "desc": "Salmon protein bowl with brown rice, edamame and sesame-soy dressing.",
-  "ingredients": [
-    "Salmon",
-    "Brown rice",
-    "Edamame",
-    "Cucumber",
-    "Carrot",
-    "Nori",
-    "Sesame-soy dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Salmon",
-        "to": "Marinated tofu | Watermelon tuna | Carrot lox",
-        "note": "Marinate in soy, seaweed and lemon for a sea flavor"
-      }
-    ]
-  },
-  "protein": 42,
-  "carbs": 56,
-  "fat": 24,
-  "fiber": 7,
-  "image": "/images/dishes/Japanese-Salmon-Rice-Protein-Bowl.jpg"
-}
-,{
-  "id": 1133,
-  "name": "Korean Beef Rice Protein Bowl",
-  "country": "South Korea",
-  "region": "Asia",
-  "emoji": "🥩",
-  "cal": 600,
-  "budget": 11,
-  "time": "30 min",
-  "spice": 2,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten",
-    "gluten-free-option"
-  ],
-  "desc": "Korean beef bowl with brown rice, spinach, kimchi and gochujang.",
-  "ingredients": [
-    "Lean beef",
-    "Brown rice",
-    "Spinach",
-    "Carrot",
-    "Cucumber",
-    "Kimchi",
-    "Gochujang"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Gochujang",
-        "to": "Miso + sweet paprika | Half the amount",
-        "note": "Same savory depth, less heat"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "Lean beef",
-        "to": "Portobello mushrooms | Seitan | Jackfruit",
-        "note": "Sear hard for a meaty, browned flavor"
-      }
-    ],
-    "gluten": [
-      {
-        "from": "Gochujang",
-        "to": "Gluten-free gochujang | Gluten-free miso + chili flakes",
-        "note": "Many Korean pastes contain wheat"
-      }
-    ],
-    "local": [
-      {
-        "from": "Kimchi",
-        "to": "Sauerkraut + chili flakes + garlic",
-        "note": "Quick stand-in for cooking"
-      },
-      {
-        "from": "Gochujang",
-        "to": "Miso + sriracha + a little honey | Red miso",
-        "note": "Mix to taste"
-      }
-    ]
-  },
-  "protein": 44,
-  "carbs": 62,
-  "fat": 18,
-  "fiber": 6,
-  "image": "/images/dishes/Korean-Beef-Rice-Protein-Bowl.jpg"
-}
-,{
-  "id": 1134,
-  "name": "Thai Chicken Peanut Protein Bowl",
-  "country": "Thailand",
-  "region": "Asia",
-  "emoji": "🥗",
-  "cal": 640,
-  "budget": 10,
-  "time": "30 min",
-  "spice": 2,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "nuts"
-  ],
-  "desc": "Thai chicken bowl with brown rice, crunchy vegetables and peanut-lime sauce.",
-  "ingredients": [
-    "Grilled chicken",
-    "Brown rice",
-    "Cabbage",
-    "Carrot",
-    "Cucumber",
-    "Peanuts",
-    "Peanut-lime sauce",
-    "Thai chilies"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Thai chilies",
-        "to": "Jalapeño, seeds removed | Half a chili | Green bell pepper",
-        "note": "Remove seeds and white ribs to cut the heat"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ],
-    "nuts": [
-      {
-        "from": "Peanuts",
-        "to": "Sunflower seed butter | Roasted chickpeas | Toasted pumpkin seeds",
-        "note": "Sunflower butter gives the same creamy, nutty taste"
-      },
-      {
-        "from": "Peanut-lime sauce",
-        "to": "Sunflower seed butter | Roasted chickpeas | Toasted pumpkin seeds",
-        "note": "Sunflower butter gives the same creamy, nutty taste"
-      }
-    ],
-    "local": [
-      {
-        "from": "Thai chilies",
-        "to": "Habanero | Jalapeño",
-        "note": "Habanero is as hot; jalapeño is milder"
-      }
-    ]
-  },
-  "protein": 46,
-  "carbs": 58,
-  "fat": 24,
-  "fiber": 7,
-  "image": "/images/dishes/Thai-Chicken-Peanut-Protein-Bowl.jpg"
-}
-,{
-  "id": 1135,
-  "name": "Vietnamese Lemongrass Chicken Protein Bowl",
-  "country": "Vietnam",
-  "region": "Asia",
-  "emoji": "🥗",
-  "cal": 560,
-  "budget": 10,
-  "time": "30 min",
-  "spice": 1,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "fish"
-  ],
-  "desc": "Vietnamese lemongrass chicken bowl with rice, herbs and nuoc cham.",
-  "ingredients": [
-    "Lemongrass chicken",
-    "Brown rice",
-    "Cucumber",
-    "Carrot",
-    "Cabbage",
-    "Fresh herbs",
-    "Nuoc cham"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Lemongrass chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ],
-    "local": [
-      {
-        "from": "Lemongrass chicken",
-        "to": "Lemon zest + a little ginger",
-        "note": "Zest of 1 lemon replaces 1 stalk"
-      }
-    ]
-  },
-  "protein": 44,
-  "carbs": 60,
-  "fat": 14,
-  "fiber": 5,
-  "image": "/images/dishes/Vietnamese-Lemongrass-Chicken-Protein-Bowl.jpg"
-}
-,{
-  "id": 1136,
-  "name": "Indian Tandoori Chicken Protein Bowl",
-  "country": "India",
-  "region": "Asia",
-  "emoji": "🍛",
-  "cal": 600,
-  "budget": 10,
-  "time": "30 min",
-  "spice": 1,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Tandoori chicken bowl with brown basmati, chickpeas, spinach and mint yogurt.",
-  "ingredients": [
-    "Tandoori chicken",
-    "Brown basmati rice",
-    "Cucumber",
-    "Tomatoes",
-    "Chickpeas",
-    "Spinach",
-    "Mint yogurt"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Tandoori chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      },
-      {
-        "from": "Mint yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Mint yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Mint yogurt",
-        "to": "Greek yogurt | Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 48,
-  "carbs": 60,
-  "fat": 16,
-  "fiber": 9,
-  "image": "/images/dishes/Indian-Tandoori-Chicken-Protein-Bowl.jpg"
-}
-,{
-  "id": 1137,
-  "name": "Pakistani Chicken Chickpea Protein Bowl",
-  "country": "Pakistan",
-  "region": "Asia",
-  "emoji": "🍛",
-  "cal": 600,
-  "budget": 10,
-  "time": "30 min",
-  "spice": 1,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Spiced chicken with chickpeas, brown rice and mint chutney.",
-  "ingredients": [
-    "Spiced chicken",
-    "Chickpeas",
-    "Brown rice",
-    "Cucumber",
-    "Tomatoes",
-    "Red onion",
-    "Mint chutney",
-    "Green chili"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Spiced chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ],
-    "local": [
-      {
-        "from": "Green chili",
-        "to": "Thai red curry paste | Sriracha",
-        "note": "Store-bought pastes are a quick replacement for homemade ones"
-      }
-    ]
-  },
-  "protein": 46,
-  "carbs": 64,
-  "fat": 16,
-  "fiber": 11,
-  "image": "/images/dishes/Pakistani-Chicken-Chickpea-Protein-Bowl.jpg"
-}
-,{
-  "id": 1138,
-  "name": "Lebanese Chicken Hummus Protein Bowl",
-  "country": "Lebanon",
-  "region": "Middle East",
-  "emoji": "🥗",
-  "cal": 600,
-  "budget": 10,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Lebanese chicken bowl with hummus, quinoa, pickled turnips and parsley.",
-  "ingredients": [
-    "Grilled chicken",
-    "Hummus",
-    "Quinoa",
-    "Cucumber",
-    "Tomatoes",
-    "Pickled turnips",
-    "Parsley"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 46,
-  "carbs": 50,
-  "fat": 22,
-  "fiber": 10,
-  "image": "/images/dishes/Lebanese-Chicken-Hummus-Protein-Bowl.jpg"
-}
-,{
-  "id": 1139,
-  "name": "Moroccan Chicken Couscous Protein Bowl",
-  "country": "Morocco",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 620,
-  "budget": 10,
-  "time": "30 min",
-  "spice": 1,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten",
-    "gluten-free-option"
-  ],
-  "desc": "Moroccan chicken bowl with couscous, chickpeas, vegetables and chermoula.",
-  "ingredients": [
-    "Grilled chicken",
-    "Whole-wheat couscous",
-    "Chickpeas",
-    "Carrots",
-    "Zucchini",
-    "Parsley",
-    "Chermoula"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ],
-    "gluten": [
-      {
-        "from": "Whole-wheat couscous",
-        "to": "Quinoa | Millet | Cauliflower rice",
-        "note": "Quinoa cooks in about 15 minutes"
-      }
-    ]
-  },
-  "protein": 46,
-  "carbs": 62,
-  "fat": 18,
-  "fiber": 11,
-  "image": "/images/dishes/Moroccan-Chicken-Couscous-Protein-Bowl.jpg"
-}
-,{
-  "id": 1140,
-  "name": "Nigerian Chicken and Beans Protein Bowl",
-  "country": "Nigeria",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 680,
-  "budget": 10,
-  "time": "30 min",
-  "spice": 2,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Nigerian chicken bowl with black-eyed peas, rice, plantain and pepper sauce.",
-  "ingredients": [
-    "Grilled chicken",
-    "Black-eyed peas",
-    "Brown rice",
-    "Tomatoes",
-    "Cabbage",
-    "Plantain",
-    "Scotch bonnet pepper sauce"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Scotch bonnet pepper sauce",
-        "to": "Jalapeño, seeds removed | Half a chili | Green bell pepper",
-        "note": "Remove seeds and white ribs to cut the heat"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ],
-    "local": [
-      {
-        "from": "Black-eyed peas",
-        "to": "Pinto beans | Green peas",
-        "note": "Canned beans save hours of soaking"
-      },
-      {
-        "from": "Plantain",
-        "to": "Green bananas | Potatoes (for savory dishes)",
-        "note": "Ripe plantains: use firm sweet bananas"
-      },
-      {
-        "from": "Scotch bonnet pepper sauce",
-        "to": "Habanero | Jalapeño",
-        "note": "Habanero is as hot; jalapeño is milder"
-      }
-    ]
-  },
-  "protein": 48,
-  "carbs": 80,
-  "fat": 16,
-  "fiber": 13,
-  "image": "/images/dishes/Nigerian-Chicken-and-Beans-Protein-Bowl.jpg"
-}
-,{
-  "id": 1141,
-  "name": "Ghanaian Grilled Fish and Beans Bowl",
-  "country": "Ghana",
-  "region": "Africa",
-  "emoji": "🐟",
-  "cal": 620,
-  "budget": 9,
-  "time": "30 min",
-  "spice": 2,
-  "tags": [
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "fish"
-  ],
-  "desc": "Ghanaian grilled fish with black-eyed peas, rice, avocado and shito.",
-  "ingredients": [
-    "Grilled fish",
-    "Black-eyed peas",
-    "Brown rice",
-    "Tomatoes",
-    "Cabbage",
-    "Avocado",
-    "Shito"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Shito",
-        "to": "Half the amount | Sweet paprika | Mild bell pepper",
-        "note": "Add heat at the table instead"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "Grilled fish",
-        "to": "Firm tofu | Hearts of palm | Banana blossom",
-        "note": "Wrap in nori or add seaweed for a fish flavor"
-      }
-    ],
-    "local": [
-      {
-        "from": "Grilled fish",
-        "to": "Tilapia | Cod | Any firm white fish",
-        "note": "Any firm, mild white fish works"
-      },
-      {
-        "from": "Black-eyed peas",
-        "to": "Pinto beans | Green peas",
-        "note": "Canned beans save hours of soaking"
-      },
-      {
-        "from": "Shito",
-        "to": "Thai red curry paste | Sriracha",
-        "note": "Store-bought pastes are a quick replacement for homemade ones"
-      }
-    ]
-  },
-  "protein": 42,
-  "carbs": 64,
-  "fat": 20,
-  "fiber": 13,
-  "image": "/images/dishes/Ghanaian-Grilled-Fish-and-Beans-Bowl.jpg"
-}
-,{
-  "id": 1142,
-  "name": "Senegalese Chicken Rice Protein Bowl",
-  "country": "Senegal",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 560,
-  "budget": 10,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Senegalese chicken bowl with brown rice, vegetables and lemon-onion sauce.",
-  "ingredients": [
-    "Grilled chicken",
-    "Brown rice",
-    "Carrots",
-    "Cabbage",
-    "Tomatoes",
-    "Green beans",
-    "Lemon-onion sauce"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 44,
-  "carbs": 62,
-  "fat": 14,
-  "fiber": 7,
-  "image": "/images/dishes/Senegalese-Chicken-Rice-Protein-Bowl.jpg"
-}
-,{
-  "id": 1143,
-  "name": "Ethiopian Beef and Lentil Protein Bowl",
-  "country": "Ethiopia",
-  "region": "Africa",
-  "emoji": "🥩",
-  "cal": 620,
-  "budget": 11,
-  "time": "30 min",
-  "spice": 2,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Ethiopian beef and lentil bowl with collard greens and berbere sauce.",
-  "ingredients": [
-    "Lean beef",
-    "Lentils",
-    "Brown rice",
-    "Collard greens",
-    "Tomatoes",
-    "Cabbage",
-    "Berbere sauce"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Berbere sauce",
-        "to": "Sweet paprika | Half the amount",
-        "note": "Keeps the color with less heat"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "Lean beef",
-        "to": "Portobello mushrooms | Seitan | Jackfruit",
-        "note": "Sear hard for a meaty, browned flavor"
-      },
-      {
-        "from": "Collard greens",
-        "to": "Vegetable shortening | Olive oil | Coconut oil",
-        "note": "Same richness without animal fat"
-      }
-    ],
-    "local": [
-      {
-        "from": "Collard greens",
-        "to": "Spinach | Kale",
-        "note": "Frozen cassava leaves are sold in African stores"
-      },
-      {
-        "from": "Berbere sauce",
-        "to": "Paprika + cayenne + ground fenugreek + cardamom",
-        "note": "Mix 4 parts paprika, 1 part cayenne, a pinch of the rest"
-      }
-    ]
-  },
-  "protein": 50,
-  "carbs": 62,
-  "fat": 16,
-  "fiber": 14,
-  "image": "/images/dishes/Ethiopian-Beef-and-Lentil-Protein-Bowl.jpg"
-}
-,{
-  "id": 1144,
-  "name": "Kenyan Chicken Sweet Potato Protein Bowl",
-  "country": "Kenya",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 620,
-  "budget": 10,
-  "time": "35 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Kenyan chicken bowl with roasted sweet potato, sukuma wiki and avocado.",
-  "ingredients": [
-    "Grilled chicken",
-    "Roasted sweet potato",
-    "Sukuma wiki",
-    "Tomatoes",
-    "Avocado",
-    "Brown rice",
-    "Lemon dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 44,
-  "carbs": 66,
-  "fat": 18,
-  "fiber": 11,
-  "image": "/images/dishes/Kenyan-Chicken-Sweet-Potato-Protein-Bowl.jpg"
-}
-,{
-  "id": 1145,
-  "name": "South African Beef Protein Bowl",
-  "country": "South Africa",
-  "region": "Africa",
-  "emoji": "🥩",
-  "cal": 640,
-  "budget": 11,
-  "time": "30 min",
-  "spice": 1,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "South African beef bowl with brown rice, chakalaka and avocado.",
-  "ingredients": [
-    "Lean grilled beef",
-    "Brown rice",
-    "Chakalaka",
-    "Cabbage",
-    "Tomatoes",
-    "Avocado",
-    "Herb dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Lean grilled beef",
-        "to": "Portobello mushrooms | Seitan | Jackfruit",
-        "note": "Sear hard for a meaty, browned flavor"
-      }
-    ]
-  },
-  "protein": 46,
-  "carbs": 62,
-  "fat": 22,
-  "fiber": 11,
-  "image": "/images/dishes/South-African-Beef-Protein-Bowl.jpg"
-}
-,{
-  "id": 1146,
-  "name": "Mexican Chicken Black Bean Protein Bowl",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🥗",
-  "cal": 660,
-  "budget": 10,
-  "time": "30 min",
-  "spice": 1,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Mexican chicken bowl with black beans, brown rice, corn, pico de gallo and avocado.",
-  "ingredients": [
-    "Grilled chicken",
-    "Black beans",
-    "Brown rice",
-    "Corn",
-    "Pico de gallo",
-    "Avocado",
-    "Lime",
-    "Jalapeño"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ],
-    "local": [
-      {
-        "from": "Jalapeño",
-        "to": "Thai red curry paste | Sriracha",
-        "note": "Store-bought pastes are a quick replacement for homemade ones"
-      }
-    ]
-  },
-  "protein": 48,
-  "carbs": 72,
-  "fat": 18,
-  "fiber": 15,
-  "image": "/images/dishes/Mexican-Chicken-Black-Bean-Protein-Bowl.jpg"
-}
-,{
-  "id": 1147,
-  "name": "Brazilian Beef Rice and Beans Protein Bowl",
-  "country": "Brazil",
-  "region": "Americas",
-  "emoji": "🥩",
-  "cal": 680,
-  "budget": 11,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Brazilian beef bowl with brown rice, black beans, collards and farofa.",
-  "ingredients": [
-    "Lean beef",
-    "Brown rice",
-    "Black beans",
-    "Collard greens",
-    "Tomatoes",
-    "Orange salsa",
-    "Farofa"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Lean beef",
-        "to": "Portobello mushrooms | Seitan | Jackfruit",
-        "note": "Sear hard for a meaty, browned flavor"
-      },
-      {
-        "from": "Collard greens",
-        "to": "Vegetable shortening | Olive oil | Coconut oil",
-        "note": "Same richness without animal fat"
-      }
-    ],
-    "local": [
-      {
-        "from": "Collard greens",
-        "to": "Spinach | Kale",
-        "note": "Frozen cassava leaves are sold in African stores"
-      }
-    ]
-  },
-  "protein": 48,
-  "carbs": 76,
-  "fat": 18,
-  "fiber": 14,
-  "image": "/images/dishes/Brazilian-Beef-Rice-and-Beans-Protein-Bowl.jpg"
-}
-,{
-  "id": 1148,
-  "name": "Peruvian Chicken Quinoa Protein Bowl",
-  "country": "Peru",
-  "region": "Americas",
-  "emoji": "🥗",
-  "cal": 600,
-  "budget": 10,
-  "time": "30 min",
-  "spice": 1,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Peruvian chicken bowl with quinoa, corn, avocado and ají-lime sauce.",
-  "ingredients": [
-    "Grilled chicken",
-    "Quinoa",
-    "Corn",
-    "Tomatoes",
-    "Avocado",
-    "Red onion",
-    "Ají-lime sauce"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 46,
-  "carbs": 52,
-  "fat": 22,
-  "fiber": 9,
-  "image": "/images/dishes/Peruvian-Chicken-Quinoa-Protein-Bowl.jpg"
-}
-,{
-  "id": 1149,
-  "name": "Argentine Steak Chimichurri Protein Bowl",
-  "country": "Argentina",
-  "region": "Americas",
-  "emoji": "🥩",
-  "cal": 660,
-  "budget": 12,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Argentine steak bowl with quinoa, peppers, black beans and chimichurri.",
-  "ingredients": [
-    "Lean steak",
-    "Quinoa",
-    "Roasted peppers",
-    "Tomatoes",
-    "Black beans",
-    "Corn",
-    "Chimichurri"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Lean steak",
-        "to": "Portobello mushrooms | Seitan | Jackfruit",
-        "note": "Sear hard for a meaty, browned flavor"
-      }
-    ]
-  },
-  "protein": 48,
-  "carbs": 56,
-  "fat": 26,
-  "fiber": 12,
-  "image": "/images/dishes/Argentine-Steak-Chimichurri-Protein-Bowl.jpg"
-}
-,{
-  "id": 1150,
-  "name": "Jamaican Jerk Chicken Protein Bowl",
-  "country": "Jamaica",
-  "region": "Americas",
-  "emoji": "🥗",
-  "cal": 720,
-  "budget": 10,
-  "time": "35 min",
-  "spice": 2,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Jerk chicken with rice and peas, slaw, mango salsa, avocado and plantain.",
-  "ingredients": [
-    "Jerk chicken",
-    "Rice and peas",
-    "Cabbage slaw",
-    "Mango salsa",
-    "Avocado",
-    "Plantain",
-    "Scotch bonnet"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Scotch bonnet",
-        "to": "Jalapeño, seeds removed | Half a chili | Green bell pepper",
-        "note": "Remove seeds and white ribs to cut the heat"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "Jerk chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ],
-    "local": [
-      {
-        "from": "Plantain",
-        "to": "Green bananas | Potatoes (for savory dishes)",
-        "note": "Ripe plantains: use firm sweet bananas"
-      },
-      {
-        "from": "Scotch bonnet",
-        "to": "Habanero | Jalapeño",
-        "note": "Habanero is as hot; jalapeño is milder"
-      }
-    ]
-  },
-  "protein": 46,
-  "carbs": 86,
-  "fat": 20,
-  "fiber": 12,
-  "image": "/images/dishes/Jamaican-Jerk-Chicken-Protein-Bowl.jpg"
-}
-,{
-  "id": 1151,
-  "name": "Caribbean Salmon Sweet Potato Bowl",
-  "country": "Jamaica",
-  "region": "Americas",
-  "emoji": "🐟",
-  "cal": 680,
-  "budget": 10,
-  "time": "35 min",
-  "spice": 0,
-  "tags": [
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "fish"
-  ],
-  "desc": "Salmon with roasted sweet potato, quinoa, black beans and mango salsa.",
-  "ingredients": [
-    "Salmon",
-    "Roasted sweet potato",
-    "Quinoa",
-    "Black beans",
-    "Cabbage slaw",
-    "Avocado",
-    "Mango salsa"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Salmon",
-        "to": "Marinated tofu | Watermelon tuna | Carrot lox",
-        "note": "Marinate in soy, seaweed and lemon for a sea flavor"
-      }
-    ]
-  },
-  "protein": 42,
-  "carbs": 66,
-  "fat": 26,
-  "fiber": 14,
-  "image": "/images/dishes/Caribbean-Salmon-Sweet-Potato-Bowl.jpg"
-}
-,{
-  "id": 1152,
-  "name": "Greek Yogurt Berry Protein Bowl",
-  "country": "Greece",
-  "region": "Europe",
-  "emoji": "🥣",
-  "cal": 420,
-  "budget": 6,
-  "time": "10 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten",
-    "nuts"
-  ],
-  "desc": "Thick Greek yogurt with fresh berries, granola, chia and almonds.",
-  "ingredients": [
-    "Greek yogurt",
-    "Strawberries",
-    "Blueberries",
-    "Raspberries",
-    "Granola",
-    "Chia seeds",
-    "Almonds"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "nuts": [
-      {
-        "from": "Almonds",
-        "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-        "note": "Seeds give the same crunch without nuts"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 26,
-  "carbs": 44,
-  "fat": 16,
-  "fiber": 9,
-  "image": "/images/dishes/Greek-Yogurt-Berry-Protein-Bowl.jpg"
-}
-,{
-  "id": 1153,
-  "name": "Cottage Cheese Fruit Protein Bowl",
-  "country": "United States",
-  "region": "Americas",
-  "emoji": "🥣",
-  "cal": 380,
-  "budget": 6,
-  "time": "10 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "meal-prep",
-    "bowl",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free",
-    "nuts"
-  ],
-  "desc": "Cottage cheese with fresh fruit and almonds, high in protein.",
-  "ingredients": [
-    "Cottage cheese",
-    "Strawberries",
-    "Blueberries",
-    "Kiwi",
-    "Mango",
-    "Banana",
-    "Almonds"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Cottage cheese",
-        "to": "Crumbled firm tofu | Cashew ricotta",
-        "note": "Add lemon and salt for the fresh, tangy taste"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Cottage cheese",
-        "to": "Crumbled firm tofu | Vegan feta | Cashew ricotta",
-        "note": "Add lemon and salt for the fresh, tangy taste"
-      }
-    ],
-    "nuts": [
-      {
-        "from": "Almonds",
-        "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-        "note": "Seeds give the same crunch without nuts"
-      }
-    ],
-    "local": [
-      {
-        "from": "Cottage cheese",
-        "to": "Feta | Ricotta | Cottage cheese, drained",
-        "note": "Feta replaces salty white cheeses; ricotta replaces fresh curd cheeses"
-      }
-    ]
-  },
-  "protein": 28,
-  "carbs": 42,
-  "fat": 12,
-  "fiber": 7,
-  "image": "/images/dishes/Cottage-Cheese-Fruit-Protein-Bowl.jpg"
-}
-,{
-  "id": 1154,
-  "name": "Mediterranean Egg and Chickpea Bowl",
-  "country": "Greece",
-  "region": "Europe",
-  "emoji": "🥚",
-  "cal": 480,
-  "budget": 7,
-  "time": "20 min",
-  "spice": 0,
-  "tags": [
-    "bowl",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free",
-    "eggs"
-  ],
-  "desc": "Boiled eggs with chickpeas, vegetables, olives, feta and hummus.",
-  "ingredients": [
-    "Boiled eggs",
-    "Chickpeas",
-    "Cucumber",
-    "Tomatoes",
-    "Kalamata olives",
-    "Feta",
-    "Hummus"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Boiled eggs",
-        "to": "Tofu scramble | Avocado slices",
-        "note": "It is a topping, so the dish still works without it"
-      },
-      {
-        "from": "Feta",
-        "to": "Crumbled firm tofu | Cashew ricotta",
-        "note": "Add lemon and salt for the fresh, tangy taste"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Feta",
-        "to": "Crumbled firm tofu | Vegan feta | Cashew ricotta",
-        "note": "Add lemon and salt for the fresh, tangy taste"
-      }
-    ],
-    "eggs": [
-      {
-        "from": "Boiled eggs",
-        "to": "Avocado slices | Tofu scramble | Skip it",
-        "note": "It is a topping, so the dish still works without it"
-      }
-    ],
-    "local": [
-      {
-        "from": "Feta",
-        "to": "Ricotta | Cottage cheese, drained",
-        "note": "Feta replaces salty white cheeses; ricotta replaces fresh curd cheeses"
-      }
-    ]
-  },
-  "protein": 26,
-  "carbs": 34,
-  "fat": 27,
-  "fiber": 10,
-  "image": "/images/dishes/Mediterranean-Egg-and-Chickpea-Bowl.jpg"
-}
-,{
-  "id": 1155,
-  "name": "Brazilian Açaí Smoothie",
-  "country": "Brazil",
-  "region": "Americas",
-  "emoji": "🥤",
-  "cal": 280,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "nuts"
-  ],
-  "desc": "Brazilian açaí smoothie with banana, blueberries and chia.",
-  "ingredients": [
-    "Frozen açaí",
-    "Banana",
-    "Blueberries",
-    "Unsweetened almond milk",
-    "Chia seeds",
-    "Honey"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "nuts": [
-      {
-        "from": "Unsweetened almond milk",
-        "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-        "note": "Seeds give the same crunch without nuts"
-      }
-    ]
-  },
-  "protein": 4,
-  "carbs": 48,
-  "fat": 9,
-  "fiber": 10,
-  "image": "/images/dishes/Brazilian-Açaí-Smoothie.jpg"
-}
-,{
-  "id": 1156,
-  "name": "Indian Mango Protein Lassi",
-  "country": "India",
-  "region": "Asia",
-  "emoji": "🥤",
-  "cal": 340,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "high-protein",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Indian mango lassi boosted with Greek yogurt and protein, scented with cardamom.",
-  "ingredients": [
-    "Mango",
-    "Greek yogurt",
-    "Milk",
-    "Protein powder",
-    "Cardamom",
-    "Saffron"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      },
-      {
-        "from": "Saffron",
-        "to": "A pinch of turmeric",
-        "note": "Gives the golden color (not the same aroma)"
-      }
-    ]
-  },
-  "protein": 28,
-  "carbs": 46,
-  "fat": 5,
-  "fiber": 2,
-  "image": "/images/dishes/Indian-Mango-Protein-Lassi.jpg"
-}
-,{
-  "id": 1157,
-  "name": "Caribbean Pineapple Ginger Smoothie",
-  "country": "Jamaica",
-  "region": "Americas",
-  "emoji": "🥤",
-  "cal": 240,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Pineapple, banana and ginger smoothie with coconut water and yogurt.",
-  "ingredients": [
-    "Pineapple",
-    "Banana",
-    "Fresh ginger",
-    "Coconut water",
-    "Lime juice",
-    "Greek yogurt"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 8,
-  "carbs": 50,
-  "fat": 2,
-  "fiber": 4,
-  "image": "/images/dishes/Caribbean-Pineapple-Ginger-Smoothie.jpg"
-}
-,{
-  "id": 1158,
-  "name": "Jamaican Mango Banana Smoothie",
-  "country": "Jamaica",
-  "region": "Americas",
-  "emoji": "🥤",
-  "cal": 320,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Jamaican mango banana smoothie with coconut milk, yogurt and nutmeg.",
-  "ingredients": [
-    "Mango",
-    "Banana",
-    "Coconut milk",
-    "Greek yogurt",
-    "Nutmeg",
-    "Lime juice"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 8,
-  "carbs": 52,
-  "fat": 10,
-  "fiber": 4,
-  "image": "/images/dishes/Jamaican-Mango-Banana-Smoothie.jpg"
-}
-,{
-  "id": 1159,
-  "name": "Mexican Chocolate Banana Protein Smoothie",
-  "country": "Mexico",
-  "region": "Americas",
-  "emoji": "🥤",
-  "cal": 340,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "high-protein",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Chocolate banana protein smoothie with cinnamon, Mexican style.",
-  "ingredients": [
-    "Banana",
-    "Cocoa powder",
-    "Protein powder",
-    "Milk",
-    "Cinnamon",
-    "Vanilla"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ]
-  },
-  "protein": 30,
-  "carbs": 44,
-  "fat": 6,
-  "fiber": 5,
-  "image": "/images/dishes/Mexican-Chocolate-Banana-Protein-Smoothie.jpg"
-}
-,{
-  "id": 1160,
-  "name": "Greek Yogurt Berry Smoothie",
-  "country": "Greece",
-  "region": "Europe",
-  "emoji": "🥤",
-  "cal": 320,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "high-protein",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Greek yogurt and mixed berry smoothie with banana and chia.",
-  "ingredients": [
-    "Greek yogurt",
-    "Mixed berries",
-    "Banana",
-    "Milk",
-    "Honey",
-    "Chia seeds"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 18,
-  "carbs": 52,
-  "fat": 6,
-  "fiber": 7,
-  "image": "/images/dishes/Greek-Yogurt-Berry-Smoothie.jpg"
-}
-,{
-  "id": 1161,
-  "name": "Turkish Banana Tahini Smoothie",
-  "country": "Turkey",
-  "region": "Middle East",
-  "emoji": "🥤",
-  "cal": 380,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Turkish banana smoothie with tahini, yogurt and cinnamon.",
-  "ingredients": [
-    "Banana",
-    "Tahini",
-    "Greek yogurt",
-    "Milk",
-    "Cinnamon",
-    "Sesame seeds"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 16,
-  "carbs": 46,
-  "fat": 16,
-  "fiber": 5,
-  "image": "/images/dishes/Turkish-Banana-Tahini-Smoothie.jpg"
-}
-,{
-  "id": 1162,
-  "name": "Moroccan Date Almond Smoothie",
-  "country": "Morocco",
-  "region": "Africa",
-  "emoji": "🥤",
-  "cal": 420,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free",
-    "nuts"
-  ],
-  "desc": "Moroccan date and almond smoothie with orange blossom water.",
-  "ingredients": [
-    "Dates",
-    "Almonds",
-    "Banana",
-    "Milk",
-    "Cinnamon",
-    "Orange blossom water"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "nuts": [
-      {
-        "from": "Almonds",
-        "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-        "note": "Seeds give the same crunch without nuts"
-      }
-    ],
-    "local": [
-      {
-        "from": "Orange blossom water",
-        "to": "Vanilla + orange zest",
-        "note": "Use just a little"
-      }
-    ]
-  },
-  "protein": 12,
-  "carbs": 62,
-  "fat": 15,
-  "fiber": 7,
-  "image": "/images/dishes/Moroccan-Date-Almond-Smoothie.jpg"
-}
-,{
-  "id": 1163,
-  "name": "Egyptian Banana Date Smoothie",
-  "country": "Egypt",
-  "region": "Africa",
-  "emoji": "🥤",
-  "cal": 400,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Egyptian banana and date smoothie with tahini and cinnamon.",
-  "ingredients": [
-    "Banana",
-    "Dates",
-    "Milk",
-    "Tahini",
-    "Cinnamon",
-    "Vanilla"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ]
-  },
-  "protein": 11,
-  "carbs": 64,
-  "fat": 12,
-  "fiber": 7,
-  "image": "/images/dishes/Egyptian-Banana-Date-Smoothie.jpg"
-}
-,{
-  "id": 1164,
-  "name": "Nigerian Peanut Banana Smoothie",
-  "country": "Nigeria",
-  "region": "Africa",
-  "emoji": "🥤",
-  "cal": 480,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free",
-    "nuts"
-  ],
-  "desc": "Nigerian peanut butter, banana and date smoothie.",
-  "ingredients": [
-    "Banana",
-    "Peanut butter",
-    "Milk",
-    "Dates",
-    "Cinnamon",
-    "Ground peanuts"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "nuts": [
-      {
-        "from": "Peanut butter",
-        "to": "Sunflower seed butter | Roasted chickpeas | Toasted pumpkin seeds",
-        "note": "Sunflower butter gives the same creamy, nutty taste"
-      },
-      {
-        "from": "Ground peanuts",
-        "to": "Sunflower seed butter | Roasted chickpeas | Toasted pumpkin seeds",
-        "note": "Sunflower butter gives the same creamy, nutty taste"
-      }
-    ]
-  },
-  "protein": 16,
-  "carbs": 58,
-  "fat": 22,
-  "fiber": 7,
-  "image": "/images/dishes/Nigerian-Peanut-Banana-Smoothie.jpg"
-}
-,{
-  "id": 1165,
-  "name": "Ghanaian Pineapple Coconut Smoothie",
-  "country": "Ghana",
-  "region": "Africa",
-  "emoji": "🥤",
-  "cal": 320,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Ghanaian pineapple coconut smoothie with ginger and lime.",
-  "ingredients": [
-    "Pineapple",
-    "Coconut milk",
-    "Banana",
-    "Lime juice",
-    "Ginger",
-    "Chia seeds"
-  ],
-  "swaps": {},
-  "protein": 4,
-  "carbs": 46,
-  "fat": 15,
-  "fiber": 6,
-  "image": "/images/dishes/Ghanaian-Pineapple-Coconut-Smoothie.jpg"
-}
-,{
-  "id": 1166,
-  "name": "Kenyan Mango Passion Fruit Smoothie",
-  "country": "Kenya",
-  "region": "Africa",
-  "emoji": "🥤",
-  "cal": 320,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Kenyan mango and passion fruit smoothie with banana and yogurt.",
-  "ingredients": [
-    "Mango",
-    "Passion fruit",
-    "Banana",
-    "Greek yogurt",
-    "Milk",
-    "Honey"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 11,
-  "carbs": 62,
-  "fat": 4,
-  "fiber": 6,
-  "image": "/images/dishes/Kenyan-Mango-Passion-Fruit-Smoothie.jpg"
-}
-,{
-  "id": 1167,
-  "name": "Ethiopian Coffee Banana Smoothie",
-  "country": "Ethiopia",
-  "region": "Africa",
-  "emoji": "🥤",
-  "cal": 300,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Iced Ethiopian coffee blended with banana, yogurt and a touch of cocoa.",
-  "ingredients": [
-    "Banana",
-    "Chilled Ethiopian coffee",
-    "Milk",
-    "Greek yogurt",
-    "Cocoa powder",
-    "Honey"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 14,
-  "carbs": 50,
-  "fat": 6,
-  "fiber": 4,
-  "image": "/images/dishes/Ethiopian-Coffee-Banana-Smoothie.jpg"
-}
-,{
-  "id": 1168,
-  "name": "South African Berry Rooibos Smoothie",
-  "country": "South Africa",
-  "region": "Africa",
-  "emoji": "🥤",
-  "cal": 280,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "South African berry smoothie made with chilled rooibos tea.",
-  "ingredients": [
-    "Mixed berries",
-    "Chilled rooibos tea",
-    "Banana",
-    "Greek yogurt",
-    "Honey",
-    "Chia seeds"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 11,
-  "carbs": 50,
-  "fat": 5,
-  "fiber": 8,
-  "image": "/images/dishes/South-African-Berry-Rooibos-Smoothie.jpg"
-}
-,{
-  "id": 1169,
-  "name": "Senegalese Baobab Smoothie",
-  "country": "Senegal",
-  "region": "Africa",
-  "emoji": "🥤",
-  "cal": 300,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Tangy baobab fruit powder smoothie with banana and yogurt.",
-  "ingredients": [
-    "Baobab powder",
-    "Banana",
-    "Milk",
-    "Greek yogurt",
-    "Honey",
-    "Vanilla"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 12,
-  "carbs": 54,
-  "fat": 5,
-  "fiber": 7,
-  "image": "/images/dishes/Senegalese-Baobab-Smoothie.jpg"
-}
-,{
-  "id": 1170,
-  "name": "Thai Mango Coconut Smoothie",
-  "country": "Thailand",
-  "region": "Asia",
-  "emoji": "🥤",
-  "cal": 340,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Thai mango coconut smoothie with lime and chia.",
-  "ingredients": [
-    "Mango",
-    "Coconut milk",
-    "Banana",
-    "Lime juice",
-    "Greek yogurt",
-    "Chia seeds"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 8,
-  "carbs": 52,
-  "fat": 13,
-  "fiber": 6,
-  "image": "/images/dishes/Thai-Mango-Coconut-Smoothie.jpg"
-}
-,{
-  "id": 1171,
-  "name": "Vietnamese Dragon Fruit Smoothie",
-  "country": "Vietnam",
-  "region": "Asia",
-  "emoji": "🥤",
-  "cal": 240,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Bright pink dragon fruit smoothie with banana and coconut water.",
-  "ingredients": [
-    "Dragon fruit",
-    "Banana",
-    "Coconut water",
-    "Greek yogurt",
-    "Lime juice",
-    "Chia seeds"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 8,
-  "carbs": 46,
-  "fat": 4,
-  "fiber": 7,
-  "image": "/images/dishes/Vietnamese-Dragon-Fruit-Smoothie.jpg"
-}
-,{
-  "id": 1172,
-  "name": "Indonesian Avocado Smoothie",
-  "country": "Indonesia",
-  "region": "Asia",
-  "emoji": "🥤",
-  "cal": 420,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Indonesian avocado shake with chocolate and palm sugar.",
-  "ingredients": [
-    "Avocado",
-    "Milk",
-    "Banana",
-    "Cocoa powder",
-    "Palm sugar",
-    "Coconut milk"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Palm sugar",
-        "to": "Brown sugar | Coconut sugar | Maple syrup",
-        "note": "Same deep, caramel sweetness"
-      }
-    ]
-  },
-  "protein": 8,
-  "carbs": 46,
-  "fat": 25,
-  "fiber": 9,
-  "image": "/images/dishes/Indonesian-Avocado-Smoothie.jpg"
-}
-,{
-  "id": 1173,
-  "name": "Filipino Mango Coconut Smoothie",
-  "country": "Philippines",
-  "region": "Asia",
-  "emoji": "🥤",
-  "cal": 330,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Filipino mango coconut smoothie with calamansi.",
-  "ingredients": [
-    "Mango",
-    "Coconut milk",
-    "Banana",
-    "Greek yogurt",
-    "Calamansi juice",
-    "Chia seeds"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      },
-      {
-        "from": "Calamansi juice",
-        "to": "Orange juice + lime juice (1:1)",
-        "note": "Same sweet-sour citrus taste"
-      }
-    ]
-  },
-  "protein": 8,
-  "carbs": 52,
-  "fat": 12,
-  "fiber": 6,
-  "image": "/images/dishes/Filipino-Mango-Coconut-Smoothie.jpg"
-}
-,{
-  "id": 1174,
-  "name": "Japanese Matcha Banana Smoothie",
-  "country": "Japan",
-  "region": "Asia",
-  "emoji": "🥤",
-  "cal": 300,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Japanese matcha banana smoothie with yogurt and sesame.",
-  "ingredients": [
-    "Banana",
-    "Matcha powder",
-    "Milk",
-    "Greek yogurt",
-    "Honey",
-    "Sesame seeds"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 14,
-  "carbs": 48,
-  "fat": 7,
-  "fiber": 4,
-  "image": "/images/dishes/Japanese-Matcha-Banana-Smoothie.jpg"
-}
-,{
-  "id": 1175,
-  "name": "Korean Strawberry Yogurt Smoothie",
-  "country": "South Korea",
-  "region": "Asia",
-  "emoji": "🥤",
-  "cal": 280,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "high-protein",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Korean strawberry yogurt smoothie, light and creamy.",
-  "ingredients": [
-    "Strawberries",
-    "Korean-style yogurt",
-    "Milk",
-    "Banana",
-    "Honey",
-    "Sesame seeds"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Korean-style yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Korean-style yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Korean-style yogurt",
-        "to": "Greek yogurt | Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 10,
-  "carbs": 50,
-  "fat": 5,
-  "fiber": 5,
-  "image": "/images/dishes/Korean-Strawberry-Yogurt-Smoothie.jpg"
-}
-,{
-  "id": 1176,
-  "name": "Chinese Mango Green Tea Smoothie",
-  "country": "China",
-  "region": "Asia",
-  "emoji": "🥤",
-  "cal": 260,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Mango smoothie made with chilled green tea and yogurt.",
-  "ingredients": [
-    "Mango",
-    "Chilled green tea",
-    "Banana",
-    "Greek yogurt",
-    "Honey",
-    "Lime juice"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 8,
-  "carbs": 54,
-  "fat": 2,
-  "fiber": 5,
-  "image": "/images/dishes/Chinese-Mango-Green-Tea-Smoothie.jpg"
-}
-,{
-  "id": 1177,
-  "name": "Peruvian Lucuma Protein Smoothie",
-  "country": "Peru",
-  "region": "Americas",
-  "emoji": "🥤",
-  "cal": 360,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "high-protein",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Peruvian lucuma protein smoothie with a caramel-like taste.",
-  "ingredients": [
-    "Lucuma powder",
-    "Banana",
-    "Protein powder",
-    "Milk",
-    "Greek yogurt",
-    "Cinnamon"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 30,
-  "carbs": 50,
-  "fat": 5,
-  "fiber": 5,
-  "image": "/images/dishes/Peruvian-Lucuma-Protein-Smoothie.jpg"
-}
-,{
-  "id": 1178,
-  "name": "Colombian Lulo Smoothie",
-  "country": "Colombia",
-  "region": "Americas",
-  "emoji": "🥤",
-  "cal": 270,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Colombian tangy lulo fruit smoothie with banana and yogurt.",
-  "ingredients": [
-    "Lulo pulp",
-    "Banana",
-    "Milk",
-    "Greek yogurt",
-    "Honey",
-    "Lime juice"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 10,
-  "carbs": 50,
-  "fat": 4,
-  "fiber": 5,
-  "image": "/images/dishes/Colombian-Lulo-Smoothie.jpg"
-}
-,{
-  "id": 1179,
-  "name": "Costa Rican Pineapple Papaya Smoothie",
-  "country": "Costa Rica",
-  "region": "Americas",
-  "emoji": "🥤",
-  "cal": 250,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Tropical pineapple papaya smoothie with coconut water and lime.",
-  "ingredients": [
-    "Pineapple",
-    "Papaya",
-    "Banana",
-    "Coconut water",
-    "Greek yogurt",
-    "Lime juice"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 8,
-  "carbs": 52,
-  "fat": 2,
-  "fiber": 6,
-  "image": "/images/dishes/Costa-Rican-Pineapple-Papaya-Smoothie.jpg"
-}// WorldMeals — next 100 meals
-// IDs 1180–1279
-// Paste these objects before the final ]; of WORLD_MEALS_DATABASE.
-
-,{
-  "id": 1180,
-  "name": "Italian Grilled Chicken Caprese Weight Loss Bowl",
-  "country": "Italy",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 420,
-  "budget": 8,
-  "time": "25 min",
-  "spice": 0,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Light caprese bowl of grilled chicken, tomatoes, fresh mozzarella, basil and balsamic.",
-  "ingredients": [
-    "Grilled chicken",
-    "Mixed greens",
-    "Tomatoes",
-    "Fresh mozzarella",
-    "Basil",
-    "Balsamic dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      },
-      {
-        "from": "Fresh mozzarella",
-        "to": "Vegan mozzarella | Cashew cheese sauce",
-        "note": "Choose a vegan cheese that melts"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Fresh mozzarella",
-        "to": "Vegan mozzarella | Dairy-free cheddar | Cashew cheese sauce",
-        "note": "Choose a vegan cheese that melts"
-      }
-    ]
-  },
-  "protein": 42,
-  "carbs": 12,
-  "fat": 22,
-  "fiber": 3,
-  "image": "/images/dishes/Italian-Grilled-Chicken-Caprese-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1181,
-  "name": "Spanish Grilled Shrimp Vegetable Weight Loss Bowl",
-  "country": "Spain",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 320,
-  "budget": 9,
-  "time": "25 min",
-  "spice": 0,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "shellfish"
-  ],
-  "desc": "Grilled shrimp over greens with tomatoes, cucumber and smoked paprika lemon dressing.",
-  "ingredients": [
-    "Grilled shrimp",
-    "Mixed greens",
-    "Tomatoes",
-    "Cucumber",
-    "Roasted peppers",
-    "Smoked paprika",
-    "Lemon-olive oil dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled shrimp",
-        "to": "King oyster mushrooms | Hearts of palm | Plant-based shrimp",
-        "note": "Slice mushroom stems into rounds and sear"
-      }
-    ]
-  },
-  "protein": 32,
-  "carbs": 14,
-  "fat": 15,
-  "fiber": 4,
-  "image": "/images/dishes/Spanish-Grilled-Shrimp-Vegetable-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1182,
-  "name": "Portuguese Cod and Greens Weight Loss Bowl",
-  "country": "Portugal",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 340,
-  "budget": 9,
-  "time": "25 min",
-  "spice": 0,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "fish"
-  ],
-  "desc": "Baked cod with greens, tomatoes, olives and lemon, Portuguese style.",
-  "ingredients": [
-    "Baked cod",
-    "Mixed greens",
-    "Tomatoes",
-    "Cucumber",
-    "Olives",
-    "Parsley",
-    "Lemon-olive oil dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Baked cod",
-        "to": "Firm tofu | Hearts of palm | Banana blossom",
-        "note": "Wrap in nori or add seaweed for a fish flavor"
-      }
-    ],
-    "local": [
-      {
-        "from": "Baked cod",
-        "to": "Tilapia | Any firm white fish",
-        "note": "Any firm, mild white fish works"
-      }
-    ]
-  },
-  "protein": 34,
-  "carbs": 12,
-  "fat": 17,
-  "fiber": 4,
-  "image": "/images/dishes/Portuguese-Cod-and-Greens-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1183,
-  "name": "French Chicken Ratatouille Weight Loss Bowl",
-  "country": "France",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 380,
-  "budget": 8,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with ratatouille vegetables and herbes de Provence.",
-  "ingredients": [
-    "Grilled chicken",
-    "Zucchini",
-    "Eggplant",
-    "Tomatoes",
-    "Bell pepper",
-    "Herbes de Provence",
-    "Olive oil"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 40,
-  "carbs": 18,
-  "fat": 16,
-  "fiber": 6,
-  "image": "/images/dishes/French-Chicken-Ratatouille-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1184,
-  "name": "German Chicken Cabbage Weight Loss Bowl",
-  "country": "Germany",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 360,
-  "budget": 8,
-  "time": "25 min",
-  "spice": 0,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with crunchy cabbage, carrot and mustard vinaigrette.",
-  "ingredients": [
-    "Grilled chicken",
-    "Cabbage",
-    "Carrot",
-    "Cucumber",
-    "Parsley",
-    "Mustard vinaigrette"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 40,
-  "carbs": 16,
-  "fat": 15,
-  "fiber": 5,
-  "image": "/images/dishes/German-Chicken-Cabbage-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1185,
-  "name": "Polish Chicken Beet Weight Loss Bowl",
-  "country": "Poland",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 360,
-  "budget": 8,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with roasted beetroot, cabbage, dill and lemon.",
-  "ingredients": [
-    "Grilled chicken",
-    "Beetroot",
-    "Cabbage",
-    "Cucumber",
-    "Dill",
-    "Lemon dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 40,
-  "carbs": 20,
-  "fat": 13,
-  "fiber": 6,
-  "image": "/images/dishes/Polish-Chicken-Beet-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1186,
-  "name": "Croatian Grilled Fish Vegetable Weight Loss Bowl",
-  "country": "Croatia",
-  "region": "Europe",
-  "emoji": "🥣",
-  "cal": 360,
-  "budget": 9,
-  "time": "25 min",
-  "spice": 0,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "fish"
-  ],
-  "desc": "Grilled white fish over a light bowl of greens, tomatoes, cucumber and lemon, Croatian style.",
-  "ingredients": [
-    "Grilled white fish",
-    "Mixed greens",
-    "Tomatoes",
-    "Cucumber",
-    "Olive oil",
-    "Lemon",
-    "Parsley"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled white fish",
-        "to": "Firm tofu | Hearts of palm | Banana blossom",
-        "note": "Wrap in nori or add seaweed for a fish flavor"
-      }
-    ],
-    "local": [
-      {
-        "from": "Grilled white fish",
-        "to": "Tilapia | Cod | Any firm white fish",
-        "note": "Any firm, mild white fish works"
-      }
-    ]
-  },
-  "protein": 36,
-  "carbs": 14,
-  "fat": 17,
-  "fiber": 4,
-  "image": "/images/dishes/Croatian-Grilled-Fish-Vegetable-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1187,
-  "name": "Albanian Chicken Tomato Cucumber Weight Loss Bowl",
-  "country": "Albania",
-  "region": "Europe",
-  "emoji": "🥣",
-  "cal": 380,
-  "budget": 7,
-  "time": "25 min",
-  "spice": 0,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with tomatoes, cucumber, peppers and a little yogurt, Albanian style.",
-  "ingredients": [
-    "Grilled chicken",
-    "Tomatoes",
-    "Cucumber",
-    "Bell pepper",
-    "Red onion",
-    "Yogurt",
-    "Olive oil"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      },
-      {
-        "from": "Yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Yogurt",
-        "to": "Greek yogurt | Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 40,
-  "carbs": 16,
-  "fat": 17,
-  "fiber": 4,
-  "image": "/images/dishes/Albanian-Chicken-Tomato-Cucumber-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1188,
-  "name": "Romanian Chicken Roasted Pepper Weight Loss Bowl",
-  "country": "Romania",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 350,
-  "budget": 8,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with roasted peppers, tomatoes and parsley.",
-  "ingredients": [
-    "Grilled chicken",
-    "Roasted peppers",
-    "Tomatoes",
-    "Cucumber",
-    "Parsley",
-    "Lemon dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 40,
-  "carbs": 16,
-  "fat": 14,
-  "fiber": 5,
-  "image": "/images/dishes/Romanian-Chicken-Roasted-Pepper-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1189,
-  "name": "Hungarian Chicken Paprika Vegetable Weight Loss Bowl",
-  "country": "Hungary",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 370,
-  "budget": 8,
-  "time": "30 min",
-  "spice": 1,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with peppers and zucchini in a light paprika yogurt.",
-  "ingredients": [
-    "Grilled chicken",
-    "Bell peppers",
-    "Zucchini",
-    "Tomatoes",
-    "Parsley",
-    "Paprika yogurt"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      },
-      {
-        "from": "Paprika yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Paprika yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Paprika yogurt",
-        "to": "Greek yogurt | Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 42,
-  "carbs": 18,
-  "fat": 14,
-  "fiber": 5,
-  "image": "/images/dishes/Hungarian-Chicken-Paprika-Vegetable-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1190,
-  "name": "Egyptian Grilled Chicken Chickpea Weight Loss Bowl",
-  "country": "Egypt",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 420,
-  "budget": 8,
-  "time": "25 min",
-  "spice": 0,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with chickpeas, tomato, cucumber, parsley and cumin-lemon dressing.",
-  "ingredients": [
-    "Grilled chicken",
-    "Chickpeas",
-    "Tomatoes",
-    "Cucumber",
-    "Parsley",
-    "Cumin-lemon dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 42,
-  "carbs": 28,
-  "fat": 15,
-  "fiber": 8,
-  "image": "/images/dishes/Egyptian-Grilled-Chicken-Chickpea-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1191,
-  "name": "Tunisian Tuna Harissa Weight Loss Bowl",
-  "country": "Tunisia",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 340,
-  "budget": 8,
-  "time": "20 min",
-  "spice": 2,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "fish"
-  ],
-  "desc": "Tuna with crisp vegetables and a spicy harissa-lemon dressing.",
-  "ingredients": [
-    "Tuna",
-    "Mixed greens",
-    "Cucumber",
-    "Tomatoes",
-    "Olives",
-    "Parsley",
-    "Harissa-lemon dressing"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Harissa-lemon dressing",
-        "to": "Tomato paste + sweet paprika | Half the amount",
-        "note": "Same color, milder"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "Tuna",
-        "to": "Marinated tofu | Watermelon tuna | Carrot lox",
-        "note": "Marinate in soy, seaweed and lemon for a sea flavor"
-      }
-    ],
-    "local": [
-      {
-        "from": "Harissa-lemon dressing",
-        "to": "Chili paste + cumin + garlic",
-        "note": "Add a spoon of tomato paste"
-      }
-    ]
-  },
-  "protein": 32,
-  "carbs": 12,
-  "fat": 18,
-  "fiber": 4,
-  "image": "/images/dishes/Tunisian-Tuna-Harissa-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1192,
-  "name": "Algerian Chicken Vegetable Weight Loss Bowl",
-  "country": "Algeria",
-  "region": "Africa",
-  "emoji": "🥣",
-  "cal": 380,
-  "budget": 7,
-  "time": "25 min",
-  "spice": 1,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Spiced grilled chicken with roasted zucchini, peppers and carrots, Algerian style.",
-  "ingredients": [
-    "Grilled chicken",
-    "Zucchini",
-    "Bell pepper",
-    "Carrot",
-    "Cumin",
-    "Paprika",
-    "Olive oil"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 40,
-  "carbs": 18,
-  "fat": 16,
-  "fiber": 5,
-  "image": "/images/dishes/Algerian-Chicken-Vegetable-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1193,
-  "name": "Senegalese Grilled Fish Vegetable Weight Loss Bowl",
-  "country": "Senegal",
-  "region": "Africa",
-  "emoji": "🥣",
-  "cal": 360,
-  "budget": 9,
-  "time": "25 min",
-  "spice": 1,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "fish"
-  ],
-  "desc": "Grilled fish with greens, tomatoes and a tangy onion-lemon dressing, Senegalese style.",
-  "ingredients": [
-    "Grilled white fish",
-    "Mixed greens",
-    "Tomatoes",
-    "Onion",
-    "Lemon",
-    "Mustard",
-    "Olive oil"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled white fish",
-        "to": "Firm tofu | Hearts of palm | Banana blossom",
-        "note": "Wrap in nori or add seaweed for a fish flavor"
-      }
-    ],
-    "local": [
-      {
-        "from": "Grilled white fish",
-        "to": "Tilapia | Cod | Any firm white fish",
-        "note": "Any firm, mild white fish works"
-      }
-    ]
-  },
-  "protein": 36,
-  "carbs": 14,
-  "fat": 17,
-  "fiber": 4,
-  "image": "/images/dishes/Senegalese-Grilled-Fish-Vegetable-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1194,
-  "name": "Ivorian Grilled Chicken Attieke Weight Loss Bowl",
-  "country": "Ivory Coast",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 440,
-  "budget": 8,
-  "time": "25 min",
-  "spice": 1,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with attiéké, tomatoes, cucumber and lime-onion dressing.",
-  "ingredients": [
-    "Grilled chicken",
-    "Attiéké",
-    "Tomatoes",
-    "Cucumber",
-    "Onion",
-    "Lime dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 40,
-  "carbs": 42,
-  "fat": 12,
-  "fiber": 4,
-  "image": "/images/dishes/Ivorian-Grilled-Chicken-Attieke-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1195,
-  "name": "Cameroonian Chicken Plantain Weight Loss Bowl",
-  "country": "Cameroon",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 450,
-  "budget": 8,
-  "time": "25 min",
-  "spice": 0,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with roasted plantain, tomatoes, cucumber and lime.",
-  "ingredients": [
-    "Grilled chicken",
-    "Roasted plantain",
-    "Tomatoes",
-    "Cucumber",
-    "Spinach",
-    "Lime dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ],
-    "local": [
-      {
-        "from": "Roasted plantain",
-        "to": "Green bananas | Potatoes (for savory dishes)",
-        "note": "Ripe plantains: use firm sweet bananas"
-      }
-    ]
-  },
-  "protein": 40,
-  "carbs": 44,
-  "fat": 12,
-  "fiber": 5,
-  "image": "/images/dishes/Cameroonian-Chicken-Plantain-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1196,
-  "name": "Tanzanian Grilled Fish Greens Weight Loss Bowl",
-  "country": "Tanzania",
-  "region": "Africa",
-  "emoji": "🥣",
-  "cal": 350,
-  "budget": 9,
-  "time": "25 min",
-  "spice": 1,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "fish"
-  ],
-  "desc": "Grilled fish with sautéed greens, tomatoes and lime, Tanzanian style.",
-  "ingredients": [
-    "Grilled white fish",
-    "Spinach",
-    "Kale",
-    "Tomatoes",
-    "Lime",
-    "Garlic",
-    "Olive oil"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled white fish",
-        "to": "Firm tofu | Hearts of palm | Banana blossom",
-        "note": "Wrap in nori or add seaweed for a fish flavor"
-      }
-    ],
-    "local": [
-      {
-        "from": "Grilled white fish",
-        "to": "Tilapia | Cod | Any firm white fish",
-        "note": "Any firm, mild white fish works"
-      }
-    ]
-  },
-  "protein": 36,
-  "carbs": 12,
-  "fat": 17,
-  "fiber": 5,
-  "image": "/images/dishes/Tanzanian-Grilled-Fish-Greens-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1197,
-  "name": "Ugandan Chicken Avocado Weight Loss Bowl",
-  "country": "Uganda",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 420,
-  "budget": 8,
-  "time": "20 min",
-  "spice": 0,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with avocado, tomato, cucumber and lime.",
-  "ingredients": [
-    "Grilled chicken",
-    "Mixed greens",
-    "Avocado",
-    "Tomatoes",
-    "Cucumber",
-    "Lime dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 40,
-  "carbs": 14,
-  "fat": 23,
-  "fiber": 8,
-  "image": "/images/dishes/Ugandan-Chicken-Avocado-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1198,
-  "name": "Rwandan Chicken Bean Weight Loss Bowl",
-  "country": "Rwanda",
-  "region": "Africa",
-  "emoji": "🥣",
-  "cal": 420,
-  "budget": 7,
-  "time": "25 min",
-  "spice": 0,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with red beans, greens and tomatoes, Rwandan style.",
-  "ingredients": [
-    "Grilled chicken",
-    "Red beans",
-    "Spinach",
-    "Tomatoes",
-    "Onion",
-    "Olive oil"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 42,
-  "carbs": 30,
-  "fat": 13,
-  "fiber": 10,
-  "image": "/images/dishes/Rwandan-Chicken-Bean-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1199,
-  "name": "Zimbabwean Chicken Sweet Potato Weight Loss Bowl",
-  "country": "Zimbabwe",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 440,
-  "budget": 8,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with roasted sweet potato and greens.",
-  "ingredients": [
-    "Grilled chicken",
-    "Roasted sweet potato",
-    "Tomatoes",
-    "Cucumber",
-    "Spinach",
-    "Lemon dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 40,
-  "carbs": 42,
-  "fat": 11,
-  "fiber": 7,
-  "image": "/images/dishes/Zimbabwean-Chicken-Sweet-Potato-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1200,
-  "name": "Indian Tandoori Chicken Weight Loss Bowl",
-  "country": "India",
-  "region": "Asia",
-  "emoji": "🥣",
-  "cal": 380,
-  "budget": 7,
-  "time": "25 min",
-  "spice": 1,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Tandoori-spiced chicken with cucumber, tomato, onion and mint yogurt.",
-  "ingredients": [
-    "Tandoori chicken",
-    "Cucumber",
-    "Tomatoes",
-    "Red onion",
-    "Mint",
-    "Yogurt",
-    "Lemon"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Tandoori chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      },
-      {
-        "from": "Yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Yogurt",
-        "to": "Greek yogurt | Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 42,
-  "carbs": 14,
-  "fat": 17,
-  "fiber": 3,
-  "image": "/images/dishes/Indian-Tandoori-Chicken-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1201,
-  "name": "Pakistani Chicken Chickpea Weight Loss Bowl",
-  "country": "Pakistan",
-  "region": "Asia",
-  "emoji": "🥗",
-  "cal": 430,
-  "budget": 8,
-  "time": "25 min",
-  "spice": 1,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Spiced grilled chicken with chickpeas, cucumber, tomato and mint chutney.",
-  "ingredients": [
-    "Grilled chicken",
-    "Chickpeas",
-    "Tomatoes",
-    "Cucumber",
-    "Red onion",
-    "Mint chutney",
-    "Green chili"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ],
-    "local": [
-      {
-        "from": "Green chili",
-        "to": "Thai red curry paste | Sriracha",
-        "note": "Store-bought pastes are a quick replacement for homemade ones"
-      }
-    ]
-  },
-  "protein": 42,
-  "carbs": 30,
-  "fat": 14,
-  "fiber": 8,
-  "image": "/images/dishes/Pakistani-Chicken-Chickpea-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1202,
-  "name": "Bangladeshi Fish Vegetable Weight Loss Bowl",
-  "country": "Bangladesh",
-  "region": "Asia",
-  "emoji": "🥣",
-  "cal": 360,
-  "budget": 9,
-  "time": "25 min",
-  "spice": 2,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "fish"
-  ],
-  "desc": "Spiced fish with stir-fried vegetables, turmeric and mustard oil, Bangladeshi style.",
-  "ingredients": [
-    "White fish",
-    "Cauliflower",
-    "Green beans",
-    "Turmeric",
-    "Mustard oil",
-    "Green chili",
-    "Cilantro"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Green chili",
-        "to": "Half the amount | Sweet paprika | Mild bell pepper",
-        "note": "Add heat at the table instead"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "White fish",
-        "to": "Firm tofu | Hearts of palm | Banana blossom",
-        "note": "Wrap in nori or add seaweed for a fish flavor"
-      }
-    ],
-    "local": [
-      {
-        "from": "White fish",
-        "to": "Tilapia | Cod | Any firm white fish",
-        "note": "Any firm, mild white fish works"
-      },
-      {
-        "from": "Green chili",
-        "to": "Thai red curry paste | Sriracha",
-        "note": "Store-bought pastes are a quick replacement for homemade ones"
-      }
-    ]
-  },
-  "protein": 34,
-  "carbs": 16,
-  "fat": 18,
-  "fiber": 5,
-  "image": "/images/dishes/Bangladeshi-Fish-Vegetable-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1203,
-  "name": "Nepalese Chicken Lentil Weight Loss Bowl",
-  "country": "Nepal",
-  "region": "Asia",
-  "emoji": "🥣",
-  "cal": 420,
-  "budget": 7,
-  "time": "25 min",
-  "spice": 1,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with spiced lentils, spinach and tomato, Nepalese style.",
-  "ingredients": [
-    "Grilled chicken",
-    "Lentils",
-    "Spinach",
-    "Tomatoes",
-    "Turmeric",
-    "Cumin",
-    "Cilantro"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 44,
-  "carbs": 30,
-  "fat": 13,
-  "fiber": 10,
-  "image": "/images/dishes/Nepalese-Chicken-Lentil-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1204,
-  "name": "Malaysian Chicken Cucumber Weight Loss Bowl",
-  "country": "Malaysia",
-  "region": "Asia",
-  "emoji": "🥣",
-  "cal": 360,
-  "budget": 7,
-  "time": "25 min",
-  "spice": 1,
-  "tags": [
-    "weight-loss",
-    "high-protein",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Lemongrass grilled chicken with cucumber, herbs and lime, Malaysian style.",
-  "ingredients": [
-    "Grilled chicken",
-    "Cucumber",
-    "Lemongrass",
-    "Mint",
-    "Cilantro",
-    "Lime",
-    "Chili"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ],
-    "local": [
-      {
-        "from": "Lemongrass",
-        "to": "Lemon zest + a little ginger",
-        "note": "Zest of 1 lemon replaces 1 stalk"
-      },
-      {
-        "from": "Chili",
-        "to": "Thai red curry paste | Sriracha",
-        "note": "Store-bought pastes are a quick replacement for homemade ones"
-      }
-    ]
-  },
-  "protein": 40,
-  "carbs": 10,
-  "fat": 17,
-  "fiber": 3,
-  "image": "/images/dishes/Malaysian-Chicken-Cucumber-Weight-Loss-Bowl.jpg"
-}
-,{
-  "id": 1205,
-  "name": "Italian Chicken White Bean Protein Bowl",
-  "country": "Italy",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 560,
-  "budget": 10,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with cannellini beans, tomatoes, rocket and basil.",
-  "ingredients": [
-    "Grilled chicken",
-    "Cannellini beans",
-    "Tomatoes",
-    "Arugula",
-    "Basil",
-    "Red onion",
-    "Olive oil"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 50,
-  "carbs": 42,
-  "fat": 20,
-  "fiber": 11,
-  "image": "/images/dishes/Italian-Chicken-White-Bean-Protein-Bowl.jpg"
-}
-,{
-  "id": 1206,
-  "name": "Spanish Chicken Rice Protein Bowl",
-  "country": "Spain",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 580,
-  "budget": 10,
-  "time": "35 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with saffron brown rice, peppers and smoked paprika.",
-  "ingredients": [
-    "Grilled chicken",
-    "Brown rice",
-    "Roasted peppers",
-    "Tomatoes",
-    "Saffron",
-    "Smoked paprika",
-    "Olive oil"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ],
-    "local": [
-      {
-        "from": "Saffron",
-        "to": "A pinch of turmeric",
-        "note": "Gives the golden color (not the same aroma)"
-      }
-    ]
-  },
-  "protein": 48,
-  "carbs": 60,
-  "fat": 15,
-  "fiber": 5,
-  "image": "/images/dishes/Spanish-Chicken-Rice-Protein-Bowl.jpg"
-}
-,{
-  "id": 1207,
-  "name": "Portuguese Beef Rice and Beans Protein Bowl",
-  "country": "Portugal",
-  "region": "Europe",
-  "emoji": "🥩",
-  "cal": 640,
-  "budget": 11,
-  "time": "35 min",
-  "spice": 1,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Lean beef with brown rice, beans and piri piri tomatoes.",
-  "ingredients": [
-    "Lean beef",
-    "Brown rice",
-    "Red beans",
-    "Tomatoes",
-    "Onion",
-    "Parsley",
-    "Piri piri sauce"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Lean beef",
-        "to": "Portobello mushrooms | Seitan | Jackfruit",
-        "note": "Sear hard for a meaty, browned flavor"
-      }
-    ]
-  },
-  "protein": 48,
-  "carbs": 66,
-  "fat": 18,
-  "fiber": 11,
-  "image": "/images/dishes/Portuguese-Beef-Rice-and-Beans-Protein-Bowl.jpg"
-}
-,{
-  "id": 1208,
-  "name": "French Chicken Lentil Protein Bowl",
-  "country": "France",
-  "region": "Europe",
-  "emoji": "🥣",
-  "cal": 540,
-  "budget": 7,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Herbed chicken with French green lentils, Dijon vinaigrette and greens.",
-  "ingredients": [
-    "Chicken breast",
-    "Green lentils",
-    "Dijon mustard",
-    "Shallots",
-    "Mixed greens",
-    "Olive oil",
-    "Parsley"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Chicken breast",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 50,
-  "carbs": 38,
-  "fat": 20,
-  "fiber": 11,
-  "image": "/images/dishes/French-Chicken-Lentil-Protein-Bowl.jpg"
-}
-,{
-  "id": 1209,
-  "name": "German Beef Potato Protein Bowl",
-  "country": "Germany",
-  "region": "Europe",
-  "emoji": "🥩",
-  "cal": 600,
-  "budget": 11,
-  "time": "35 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Lean beef with roasted potatoes, cucumber salad and mustard.",
-  "ingredients": [
-    "Lean beef",
-    "Roasted potatoes",
-    "Cucumber",
-    "Dill",
-    "Red onion",
-    "Mustard",
-    "Olive oil"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Lean beef",
-        "to": "Portobello mushrooms | Seitan | Jackfruit",
-        "note": "Sear hard for a meaty, browned flavor"
-      }
-    ]
-  },
-  "protein": 46,
-  "carbs": 50,
-  "fat": 22,
-  "fiber": 6,
-  "image": "/images/dishes/German-Beef-Potato-Protein-Bowl.jpg"
-}
-,{
-  "id": 1210,
-  "name": "Polish Chicken Buckwheat Protein Bowl",
-  "country": "Poland",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 560,
-  "budget": 10,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with toasted buckwheat, beetroot and dill.",
-  "ingredients": [
-    "Grilled chicken",
-    "Buckwheat",
-    "Beetroot",
-    "Cucumber",
-    "Dill",
-    "Lemon dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 50,
-  "carbs": 56,
-  "fat": 13,
-  "fiber": 9,
-  "image": "/images/dishes/Polish-Chicken-Buckwheat-Protein-Bowl.jpg"
-}
-,{
-  "id": 1211,
-  "name": "Hungarian Beef Rice Protein Bowl",
-  "country": "Hungary",
-  "region": "Europe",
-  "emoji": "🥩",
-  "cal": 620,
-  "budget": 11,
-  "time": "35 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Lean beef with brown rice and a sweet paprika pepper sauce.",
-  "ingredients": [
-    "Lean beef",
-    "Brown rice",
-    "Bell peppers",
-    "Tomatoes",
-    "Onion",
-    "Sweet paprika",
-    "Olive oil"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Lean beef",
-        "to": "Portobello mushrooms | Seitan | Jackfruit",
-        "note": "Sear hard for a meaty, browned flavor"
-      }
-    ]
-  },
-  "protein": 46,
-  "carbs": 62,
-  "fat": 18,
-  "fiber": 6,
-  "image": "/images/dishes/Hungarian-Beef-Rice-Protein-Bowl.jpg"
-}
-,{
-  "id": 1212,
-  "name": "Croatian Chicken Rice and Beans Protein Bowl",
-  "country": "Croatia",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 600,
-  "budget": 10,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with brown rice, beans, tomatoes and parsley.",
-  "ingredients": [
-    "Grilled chicken",
-    "Brown rice",
-    "Kidney beans",
-    "Tomatoes",
-    "Cucumber",
-    "Parsley",
-    "Olive oil"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 50,
-  "carbs": 64,
-  "fat": 13,
-  "fiber": 11,
-  "image": "/images/dishes/Croatian-Chicken-Rice-and-Beans-Protein-Bowl.jpg"
-}
-,{
-  "id": 1213,
-  "name": "Romanian Beef Polenta Protein Bowl",
-  "country": "Romania",
-  "region": "Europe",
-  "emoji": "🥩",
-  "cal": 600,
-  "budget": 11,
-  "time": "35 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Lean beef with soft polenta, tomatoes and a cucumber salad.",
-  "ingredients": [
-    "Lean beef",
-    "Polenta",
-    "Tomatoes",
-    "Cucumber",
-    "Parsley",
-    "Garlic",
-    "Olive oil"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Lean beef",
-        "to": "Portobello mushrooms | Seitan | Jackfruit",
-        "note": "Sear hard for a meaty, browned flavor"
-      }
-    ]
-  },
-  "protein": 44,
-  "carbs": 58,
-  "fat": 20,
-  "fiber": 5,
-  "image": "/images/dishes/Romanian-Beef-Polenta-Protein-Bowl.jpg"
-}
-,{
-  "id": 1214,
-  "name": "Georgian Chicken Walnut Protein Bowl",
-  "country": "Georgia",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 540,
-  "budget": 10,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "nuts"
-  ],
-  "desc": "Grilled chicken with walnut-herb sauce, greens and tomatoes.",
-  "ingredients": [
-    "Grilled chicken",
-    "Mixed greens",
-    "Walnuts",
-    "Cucumber",
-    "Tomatoes",
-    "Cilantro",
-    "Garlic"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ],
-    "nuts": [
-      {
-        "from": "Walnuts",
-        "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-        "note": "Seeds give the same crunch without nuts"
-      }
-    ]
-  },
-  "protein": 46,
-  "carbs": 14,
-  "fat": 33,
-  "fiber": 5,
-  "image": "/images/dishes/Georgian-Chicken-Walnut-Protein-Bowl.jpg"
-}
-,{
-  "id": 1215,
-  "name": "Armenian Beef Bulgur Protein Bowl",
-  "country": "Armenia",
-  "region": "Europe",
-  "emoji": "🥩",
-  "cal": 600,
-  "budget": 11,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten",
-    "gluten-free-option"
-  ],
-  "desc": "Lean beef with herbed bulgur, tomatoes and cucumber.",
-  "ingredients": [
-    "Lean beef",
-    "Bulgur",
-    "Tomatoes",
-    "Cucumber",
-    "Parsley",
-    "Mint",
-    "Lemon juice"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Lean beef",
-        "to": "Portobello mushrooms | Seitan | Jackfruit",
-        "note": "Sear hard for a meaty, browned flavor"
-      }
-    ],
-    "gluten": [
-      {
-        "from": "Bulgur",
-        "to": "Quinoa | Millet | Cauliflower rice",
-        "note": "Quinoa cooks in about 15 minutes"
-      }
-    ]
-  },
-  "protein": 46,
-  "carbs": 56,
-  "fat": 20,
-  "fiber": 10,
-  "image": "/images/dishes/Armenian-Beef-Bulgur-Protein-Bowl.jpg"
-}
-,{
-  "id": 1216,
-  "name": "Lebanese Chicken Lentil Protein Bowl",
-  "country": "Lebanon",
-  "region": "Middle East",
-  "emoji": "🥣",
-  "cal": 540,
-  "budget": 7,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Lemon garlic chicken with spiced lentils, parsley and tomatoes, Lebanese style.",
-  "ingredients": [
-    "Chicken breast",
-    "Lentils",
-    "Parsley",
-    "Tomatoes",
-    "Lemon",
-    "Garlic",
-    "Olive oil"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Chicken breast",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 50,
-  "carbs": 38,
-  "fat": 20,
-  "fiber": 11,
-  "image": "/images/dishes/Lebanese-Chicken-Lentil-Protein-Bowl.jpg"
-}
-,{
-  "id": 1217,
-  "name": "Egyptian Beef Rice and Chickpea Protein Bowl",
-  "country": "Egypt",
-  "region": "Africa",
-  "emoji": "🥩",
-  "cal": 640,
-  "budget": 11,
-  "time": "35 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Lean beef with brown rice, chickpeas and cumin tomatoes.",
-  "ingredients": [
-    "Lean beef",
-    "Brown rice",
-    "Chickpeas",
-    "Tomatoes",
-    "Cucumber",
-    "Cumin",
-    "Parsley"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Lean beef",
-        "to": "Portobello mushrooms | Seitan | Jackfruit",
-        "note": "Sear hard for a meaty, browned flavor"
-      }
-    ]
-  },
-  "protein": 48,
-  "carbs": 66,
-  "fat": 18,
-  "fiber": 11,
-  "image": "/images/dishes/Egyptian-Beef-Rice-and-Chickpea-Protein-Bowl.jpg"
-}
-,{
-  "id": 1218,
-  "name": "Tunisian Chicken Couscous Protein Bowl",
-  "country": "Tunisia",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 600,
-  "budget": 10,
-  "time": "30 min",
-  "spice": 2,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten",
-    "gluten-free-option"
-  ],
-  "desc": "Grilled chicken with whole-wheat couscous, vegetables and harissa.",
-  "ingredients": [
-    "Grilled chicken",
-    "Whole-wheat couscous",
-    "Tomatoes",
-    "Cucumber",
-    "Chickpeas",
-    "Parsley",
-    "Harissa"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Harissa",
-        "to": "Tomato paste + sweet paprika | Half the amount",
-        "note": "Same color, milder"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ],
-    "gluten": [
-      {
-        "from": "Whole-wheat couscous",
-        "to": "Quinoa | Millet | Cauliflower rice",
-        "note": "Quinoa cooks in about 15 minutes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Harissa",
-        "to": "Chili paste + cumin + garlic",
-        "note": "Add a spoon of tomato paste"
-      }
-    ]
-  },
-  "protein": 48,
-  "carbs": 60,
-  "fat": 16,
-  "fiber": 9,
-  "image": "/images/dishes/Tunisian-Chicken-Couscous-Protein-Bowl.jpg"
-}
-,{
-  "id": 1219,
-  "name": "Algerian Beef Couscous Protein Bowl",
-  "country": "Algeria",
-  "region": "Africa",
-  "emoji": "🥩",
-  "cal": 620,
-  "budget": 11,
-  "time": "35 min",
-  "spice": 1,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten",
-    "gluten-free-option"
-  ],
-  "desc": "Lean beef with whole-wheat couscous, roasted vegetables and cumin.",
-  "ingredients": [
-    "Lean beef",
-    "Whole-wheat couscous",
-    "Zucchini",
-    "Carrots",
-    "Tomatoes",
-    "Cumin",
-    "Parsley"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Lean beef",
-        "to": "Portobello mushrooms | Seitan | Jackfruit",
-        "note": "Sear hard for a meaty, browned flavor"
-      }
-    ],
-    "gluten": [
-      {
-        "from": "Whole-wheat couscous",
-        "to": "Quinoa | Millet | Cauliflower rice",
-        "note": "Quinoa cooks in about 15 minutes"
-      }
-    ]
-  },
-  "protein": 46,
-  "carbs": 60,
-  "fat": 20,
-  "fiber": 9,
-  "image": "/images/dishes/Algerian-Beef-Couscous-Protein-Bowl.jpg"
-}
-,{
-  "id": 1220,
-  "name": "Ivorian Chicken Rice and Beans Protein Bowl",
-  "country": "Ivory Coast",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 600,
-  "budget": 10,
-  "time": "30 min",
-  "spice": 1,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with brown rice, red beans and fresh tomato-onion relish.",
-  "ingredients": [
-    "Grilled chicken",
-    "Brown rice",
-    "Red beans",
-    "Tomatoes",
-    "Onion",
-    "Cucumber",
-    "Chili"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ],
-    "local": [
-      {
-        "from": "Chili",
-        "to": "Thai red curry paste | Sriracha",
-        "note": "Store-bought pastes are a quick replacement for homemade ones"
-      }
-    ]
-  },
-  "protein": 50,
-  "carbs": 66,
-  "fat": 12,
-  "fiber": 11,
-  "image": "/images/dishes/Ivorian-Chicken-Rice-and-Beans-Protein-Bowl.jpg"
-}
-,{
-  "id": 1221,
-  "name": "Cameroonian Beef Plantain Protein Bowl",
-  "country": "Cameroon",
-  "region": "Africa",
-  "emoji": "🥩",
-  "cal": 620,
-  "budget": 11,
-  "time": "35 min",
-  "spice": 1,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Lean beef with roasted plantain, tomatoes and greens.",
-  "ingredients": [
-    "Lean beef",
-    "Roasted plantain",
-    "Tomatoes",
-    "Spinach",
-    "Onion",
-    "Chili"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Lean beef",
-        "to": "Portobello mushrooms | Seitan | Jackfruit",
-        "note": "Sear hard for a meaty, browned flavor"
-      }
-    ],
-    "local": [
-      {
-        "from": "Roasted plantain",
-        "to": "Green bananas | Potatoes (for savory dishes)",
-        "note": "Ripe plantains: use firm sweet bananas"
-      },
-      {
-        "from": "Chili",
-        "to": "Thai red curry paste | Sriracha",
-        "note": "Store-bought pastes are a quick replacement for homemade ones"
-      }
-    ]
-  },
-  "protein": 44,
-  "carbs": 62,
-  "fat": 20,
-  "fiber": 6,
-  "image": "/images/dishes/Cameroonian-Beef-Plantain-Protein-Bowl.jpg"
-}
-,{
-  "id": 1222,
-  "name": "Tanzanian Chicken Rice and Beans Protein Bowl",
-  "country": "Tanzania",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 640,
-  "budget": 10,
-  "time": "30 min",
-  "spice": 1,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with coconut brown rice, beans and kachumbari.",
-  "ingredients": [
-    "Grilled chicken",
-    "Brown rice",
-    "Kidney beans",
-    "Coconut milk",
-    "Tomatoes",
-    "Onion",
-    "Cilantro"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 50,
-  "carbs": 66,
-  "fat": 18,
-  "fiber": 11,
-  "image": "/images/dishes/Tanzanian-Chicken-Rice-and-Beans-Protein-Bowl.jpg"
-}
-,{
-  "id": 1223,
-  "name": "Ugandan Beef Sweet Potato Protein Bowl",
-  "country": "Uganda",
-  "region": "Africa",
-  "emoji": "🥩",
-  "cal": 600,
-  "budget": 11,
-  "time": "35 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Lean beef with roasted sweet potato, greens and tomatoes.",
-  "ingredients": [
-    "Lean beef",
-    "Roasted sweet potato",
-    "Tomatoes",
-    "Collard greens",
-    "Onion",
-    "Lemon dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Lean beef",
-        "to": "Portobello mushrooms | Seitan | Jackfruit",
-        "note": "Sear hard for a meaty, browned flavor"
-      },
-      {
-        "from": "Collard greens",
-        "to": "Vegetable shortening | Olive oil | Coconut oil",
-        "note": "Same richness without animal fat"
-      }
-    ],
-    "local": [
-      {
-        "from": "Collard greens",
-        "to": "Spinach | Kale",
-        "note": "Frozen cassava leaves are sold in African stores"
-      }
-    ]
-  },
-  "protein": 44,
-  "carbs": 58,
-  "fat": 20,
-  "fiber": 8,
-  "image": "/images/dishes/Ugandan-Beef-Sweet-Potato-Protein-Bowl.jpg"
-}
-,{
-  "id": 1224,
-  "name": "Rwandan Chicken Lentil Protein Bowl",
-  "country": "Rwanda",
-  "region": "Africa",
-  "emoji": "🥣",
-  "cal": 540,
-  "budget": 7,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with lentils, greens and a tomato-onion relish, Rwandan style.",
-  "ingredients": [
-    "Chicken breast",
-    "Lentils",
-    "Spinach",
-    "Tomatoes",
-    "Onion",
-    "Olive oil"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Chicken breast",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 50,
-  "carbs": 38,
-  "fat": 20,
-  "fiber": 11,
-  "image": "/images/dishes/Rwandan-Chicken-Lentil-Protein-Bowl.jpg"
-}
-,{
-  "id": 1225,
-  "name": "Zimbabwean Beef Sadza Protein Bowl",
-  "country": "Zimbabwe",
-  "region": "Africa",
-  "emoji": "🥩",
-  "cal": 620,
-  "budget": 11,
-  "time": "35 min",
-  "spice": 0,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Lean beef with sadza, tomato relish and greens.",
-  "ingredients": [
-    "Lean beef",
-    "Sadza",
-    "Tomatoes",
-    "Collard greens",
-    "Onion",
-    "Vegetable oil"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Lean beef",
-        "to": "Portobello mushrooms | Seitan | Jackfruit",
-        "note": "Sear hard for a meaty, browned flavor"
-      },
-      {
-        "from": "Collard greens",
-        "to": "Vegetable shortening | Olive oil | Coconut oil",
-        "note": "Same richness without animal fat"
-      }
-    ],
-    "local": [
-      {
-        "from": "Collard greens",
-        "to": "Spinach | Kale",
-        "note": "Frozen cassava leaves are sold in African stores"
-      }
-    ]
-  },
-  "protein": 44,
-  "carbs": 64,
-  "fat": 18,
-  "fiber": 6,
-  "image": "/images/dishes/Zimbabwean-Beef-Sadza-Protein-Bowl.jpg"
-}
-,{
-  "id": 1226,
-  "name": "Indian Tandoori Chicken Rice Protein Bowl",
-  "country": "India",
-  "region": "Asia",
-  "emoji": "🍛",
-  "cal": 600,
-  "budget": 10,
-  "time": "35 min",
-  "spice": 2,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Tandoori chicken over brown rice with tomato, cucumber and mint yogurt.",
-  "ingredients": [
-    "Tandoori chicken",
-    "Brown rice",
-    "Tomatoes",
-    "Cucumber",
-    "Red onion",
-    "Mint yogurt",
-    "Kashmiri chili"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Kashmiri chili",
-        "to": "Half the amount | Sweet paprika | A mild curry powder or mild chili",
-        "note": "Add heat at the table so everyone can choose"
-      }
-    ],
-    "vegan": [
-      {
-        "from": "Tandoori chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      },
-      {
-        "from": "Mint yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Mint yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Mint yogurt",
-        "to": "Greek yogurt | Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      },
-      {
-        "from": "Kashmiri chili",
-        "to": "Thai red curry paste | Sriracha",
-        "note": "Store-bought pastes are a quick replacement for homemade ones"
-      }
-    ]
-  },
-  "protein": 50,
-  "carbs": 60,
-  "fat": 15,
-  "fiber": 5,
-  "image": "/images/dishes/Indian-Tandoori-Chicken-Rice-Protein-Bowl.jpg"
-}
-,{
-  "id": 1227,
-  "name": "Pakistani Beef Chickpea Protein Bowl",
-  "country": "Pakistan",
-  "region": "Asia",
-  "emoji": "🥩",
-  "cal": 620,
-  "budget": 11,
-  "time": "35 min",
-  "spice": 1,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Spiced lean beef with chickpeas, tomatoes and cucumber raita.",
-  "ingredients": [
-    "Lean beef",
-    "Chickpeas",
-    "Tomatoes",
-    "Cucumber",
-    "Yogurt",
-    "Garam masala",
-    "Cilantro"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Lean beef",
-        "to": "Portobello mushrooms | Seitan | Jackfruit",
-        "note": "Sear hard for a meaty, browned flavor"
-      },
-      {
-        "from": "Yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Yogurt",
-        "to": "Greek yogurt | Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      },
-      {
-        "from": "Garam masala",
-        "to": "Cumin + coriander + cinnamon + black pepper",
-        "note": "Most spice blends can be made with these four"
-      }
-    ]
-  },
-  "protein": 50,
-  "carbs": 42,
-  "fat": 25,
-  "fiber": 10,
-  "image": "/images/dishes/Pakistani-Beef-Chickpea-Protein-Bowl.jpg"
-}
-,{
-  "id": 1228,
-  "name": "Bangladeshi Fish Rice and Lentil Protein Bowl",
-  "country": "Bangladesh",
-  "region": "Asia",
-  "emoji": "🐟",
-  "cal": 600,
-  "budget": 10,
-  "time": "35 min",
-  "spice": 1,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "fish"
-  ],
-  "desc": "Grilled fish with brown rice, turmeric lentils and tomatoes.",
-  "ingredients": [
-    "Grilled fish",
-    "Brown rice",
-    "Lentils",
-    "Tomatoes",
-    "Cucumber",
-    "Turmeric",
-    "Cilantro"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled fish",
-        "to": "Firm tofu | Hearts of palm | Banana blossom",
-        "note": "Wrap in nori or add seaweed for a fish flavor"
-      }
-    ],
-    "local": [
-      {
-        "from": "Grilled fish",
-        "to": "Tilapia | Cod | Any firm white fish",
-        "note": "Any firm, mild white fish works"
-      }
-    ]
-  },
-  "protein": 46,
-  "carbs": 70,
-  "fat": 12,
-  "fiber": 12,
-  "image": "/images/dishes/Bangladeshi-Fish-Rice-and-Lentil-Protein-Bowl.jpg"
-}
-,{
-  "id": 1229,
-  "name": "Nepalese Chicken Dal Protein Bowl",
-  "country": "Nepal",
-  "region": "Asia",
-  "emoji": "🥗",
-  "cal": 560,
-  "budget": 10,
-  "time": "35 min",
-  "spice": 1,
-  "tags": [
-    "high-protein",
-    "muscle-gain",
-    "meal-prep",
-    "bowl",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Grilled chicken with lentil dal, tomatoes and cucumber.",
-  "ingredients": [
-    "Grilled chicken",
-    "Lentil dal",
-    "Tomatoes",
-    "Cucumber",
-    "Spinach",
-    "Cumin",
-    "Cilantro"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Grilled chicken",
-        "to": "Chickpeas | Firm tofu | Seitan",
-        "note": "Marinate the same way; seitan contains gluten"
-      }
-    ]
-  },
-  "protein": 52,
-  "carbs": 44,
-  "fat": 17,
-  "fiber": 12,
-  "image": "/images/dishes/Nepalese-Chicken-Dal-Protein-Bowl.jpg"
-}
-,{
-  "id": 1230,
-  "name": "Italian Panzanella Salad",
-  "country": "Italy",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 300,
-  "budget": 4,
-  "time": "20 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten",
-    "gluten-free-option"
-  ],
-  "desc": "Tuscan bread salad of ripe tomatoes, cucumber, onion and basil.",
-  "ingredients": [
-    "Tomatoes",
-    "Cucumber",
-    "Day-old bread",
-    "Red onion",
-    "Basil",
-    "Olive oil",
-    "Red wine vinegar"
-  ],
-  "swaps": {
-    "gluten": [
-      {
-        "from": "Day-old bread",
-        "to": "Gluten-free bread or buns | Corn tortillas | Lettuce wraps",
-        "note": "Toast gluten-free bread for the best texture"
-      }
-    ]
-  },
-  "protein": 6,
-  "carbs": 36,
-  "fat": 15,
-  "fiber": 4,
-  "image": "/images/dishes/Italian-Panzanella-Salad.jpg"
-}
-,{
-  "id": 1231,
-  "name": "Portuguese Tomato Onion Salad",
-  "country": "Portugal",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 130,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Portuguese tomato and onion salad with parsley and olive oil.",
-  "ingredients": [
-    "Tomatoes",
-    "Onion",
-    "Parsley",
-    "Olive oil",
-    "Red wine vinegar",
-    "Salt",
-    "Black pepper"
-  ],
-  "swaps": {},
-  "protein": 2,
-  "carbs": 10,
-  "fat": 9,
-  "fiber": 3,
-  "image": "/images/dishes/Portuguese-Tomato-Onion-Salad.jpg"
-}
-,{
-  "id": 1232,
-  "name": "French Lentil Salad",
-  "country": "France",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 320,
-  "budget": 4,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "French green lentil salad with vegetables, parsley and lemon.",
-  "ingredients": [
-    "Green lentils",
-    "Tomatoes",
-    "Cucumber",
-    "Red onion",
-    "Parsley",
-    "Lemon juice",
-    "Olive oil"
-  ],
-  "swaps": {},
-  "protein": 16,
-  "carbs": 42,
-  "fat": 10,
-  "fiber": 14,
-  "image": "/images/dishes/French-Lentil-Salad.jpg"
-}
-,{
-  "id": 1233,
-  "name": "German Potato Cucumber Salad",
-  "country": "Germany",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 240,
-  "budget": 4,
-  "time": "30 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "German potato and cucumber salad with dill and mustard.",
-  "ingredients": [
-    "Potatoes",
-    "Cucumber",
-    "Dill",
-    "Red onion",
-    "Mustard",
-    "Vinegar",
-    "Olive oil"
-  ],
-  "swaps": {},
-  "protein": 4,
-  "carbs": 32,
-  "fat": 11,
-  "fiber": 4,
-  "image": "/images/dishes/German-Potato-Cucumber-Salad.jpg"
-}
-,{
-  "id": 1234,
-  "name": "Polish Beetroot Apple Salad",
-  "country": "Poland",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 180,
-  "budget": 4,
-  "time": "20 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Polish beetroot and apple salad with carrot and yogurt dressing.",
-  "ingredients": [
-    "Beetroot",
-    "Apple",
-    "Carrot",
-    "Red onion",
-    "Parsley",
-    "Lemon juice",
-    "Yogurt dressing"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Yogurt dressing",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Yogurt dressing",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Yogurt dressing",
-        "to": "Greek yogurt | Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 5,
-  "carbs": 30,
-  "fat": 5,
-  "fiber": 6,
-  "image": "/images/dishes/Polish-Beetroot-Apple-Salad.jpg"
-}
-,{
-  "id": 1235,
-  "name": "Hungarian Cucumber Paprika Salad",
-  "country": "Hungary",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 110,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Hungarian cucumber salad with sweet paprika, dill and sour cream.",
-  "ingredients": [
-    "Cucumber",
-    "Sweet paprika",
-    "Red onion",
-    "Dill",
-    "Sour cream",
-    "Vinegar",
-    "Salt"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Sour cream",
-        "to": "Cashew sour cream | Dairy-free yogurt",
-        "note": "Stir in at the end, off the heat"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Sour cream",
-        "to": "Dairy-free yogurt | Cashew sour cream | Coconut yogurt + lemon",
-        "note": "Stir in at the end, off the heat"
-      }
-    ]
-  },
-  "protein": 2,
-  "carbs": 9,
-  "fat": 7,
-  "fiber": 2,
-  "image": "/images/dishes/Hungarian-Cucumber-Paprika-Salad.jpg"
-}
-,{
-  "id": 1236,
-  "name": "Romanian Roasted Pepper Salad",
-  "country": "Romania",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 160,
-  "budget": 4,
-  "time": "40 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Romanian roasted pepper salad with garlic, parsley and vinegar.",
-  "ingredients": [
-    "Roasted bell peppers",
-    "Tomatoes",
-    "Garlic",
-    "Parsley",
-    "Olive oil",
-    "Vinegar",
-    "Salt"
-  ],
-  "swaps": {},
-  "protein": 2,
-  "carbs": 14,
-  "fat": 11,
-  "fiber": 4,
-  "image": "/images/dishes/Romanian-Roasted-Pepper-Salad.jpg"
-}
-,{
-  "id": 1237,
-  "name": "Croatian Octopus Salad",
-  "country": "Croatia",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 360,
-  "budget": 9,
-  "time": "1.5 hrs",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "shellfish"
-  ],
-  "desc": "Croatian octopus salad with potatoes, tomatoes, onion and lemon.",
-  "ingredients": [
-    "Cooked octopus",
-    "Potatoes",
-    "Tomatoes",
-    "Red onion",
-    "Parsley",
-    "Olive oil",
-    "Lemon juice"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Cooked octopus",
-        "to": "Oyster mushrooms | King oyster mushrooms | Hearts of palm",
-        "note": "A little seaweed adds the taste of the sea"
-      }
-    ],
-    "local": [
-      {
-        "from": "Cooked octopus",
-        "to": "Clams | Calamari | Mussels",
-        "note": "Use frozen seafood if fresh is hard to find"
-      }
-    ]
-  },
-  "protein": 28,
-  "carbs": 26,
-  "fat": 16,
-  "fiber": 3,
-  "image": "/images/dishes/Croatian-Octopus-Salad.jpg"
-}
-,{
-  "id": 1238,
-  "name": "Albanian Tomato Cucumber Olive Salad",
-  "country": "Albania",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 160,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Albanian tomato, cucumber and olive salad with parsley.",
-  "ingredients": [
-    "Tomatoes",
-    "Cucumber",
-    "Olives",
-    "Red onion",
-    "Parsley",
-    "Olive oil",
-    "Lemon juice"
-  ],
-  "swaps": {},
-  "protein": 2,
-  "carbs": 10,
-  "fat": 13,
-  "fiber": 3,
-  "image": "/images/dishes/Albanian-Tomato-Cucumber-Olive-Salad.jpg"
-}
-,{
-  "id": 1239,
-  "name": "Macedonian Shopska Salad",
-  "country": "North Macedonia",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 260,
-  "budget": 4,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Macedonian chopped salad under grated white brined cheese.",
-  "ingredients": [
-    "Tomatoes",
-    "Cucumber",
-    "Bell pepper",
-    "Red onion",
-    "White brined cheese",
-    "Parsley",
-    "Olive oil"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "White brined cheese",
-        "to": "Vegan mozzarella | Cashew cheese sauce",
-        "note": "Choose a vegan cheese that melts"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "White brined cheese",
-        "to": "Vegan mozzarella | Dairy-free cheddar | Cashew cheese sauce",
-        "note": "Choose a vegan cheese that melts"
-      }
-    ]
-  },
-  "protein": 9,
-  "carbs": 12,
-  "fat": 20,
-  "fiber": 3,
-  "image": "/images/dishes/Macedonian-Shopska-Salad.jpg"
-}
-,{
-  "id": 1240,
-  "name": "Georgian Beet Walnut Salad",
-  "country": "Georgia",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 260,
-  "budget": 4,
-  "time": "1 hr",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free",
-    "nuts"
-  ],
-  "desc": "Georgian beetroot salad with walnuts, garlic and cilantro.",
-  "ingredients": [
-    "Beetroot",
-    "Walnuts",
-    "Garlic",
-    "Cilantro",
-    "Red wine vinegar",
-    "Olive oil",
-    "Salt"
-  ],
-  "swaps": {
-    "nuts": [
-      {
-        "from": "Walnuts",
-        "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-        "note": "Seeds give the same crunch without nuts"
-      }
-    ]
-  },
-  "protein": 5,
-  "carbs": 18,
-  "fat": 19,
-  "fiber": 5,
-  "image": "/images/dishes/Georgian-Beet-Walnut-Salad.jpg"
-}
-,{
-  "id": 1241,
-  "name": "Armenian Tomato Herb Salad",
-  "country": "Armenia",
-  "region": "Europe",
-  "emoji": "🥗",
-  "cal": 120,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Armenian tomato and herb salad with lemon.",
-  "ingredients": [
-    "Tomatoes",
-    "Cucumber",
-    "Parsley",
-    "Cilantro",
-    "Green onion",
-    "Lemon juice",
-    "Olive oil"
-  ],
-  "swaps": {},
-  "protein": 2,
-  "carbs": 10,
-  "fat": 8,
-  "fiber": 3,
-  "image": "/images/dishes/Armenian-Tomato-Herb-Salad.jpg"
-}
-,{
-  "id": 1242,
-  "name": "Egyptian Balata Salad",
-  "country": "Egypt",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 120,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Egyptian chopped balady salad with cumin and lemon.",
-  "ingredients": [
-    "Tomatoes",
-    "Cucumber",
-    "Red onion",
-    "Parsley",
-    "Lemon juice",
-    "Cumin",
-    "Olive oil"
-  ],
-  "swaps": {},
-  "protein": 2,
-  "carbs": 10,
-  "fat": 8,
-  "fiber": 3,
-  "image": "/images/dishes/Egyptian-Balata-Salad.jpg"
-}
-,{
-  "id": 1243,
-  "name": "Algerian Roasted Pepper Tomato Salad",
-  "country": "Algeria",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 160,
-  "budget": 4,
-  "time": "40 min",
-  "spice": 1,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Algerian roasted pepper and tomato salad with garlic.",
-  "ingredients": [
-    "Roasted bell peppers",
-    "Tomatoes",
-    "Garlic",
-    "Parsley",
-    "Olive oil",
-    "Vinegar",
-    "Cumin"
-  ],
-  "swaps": {},
-  "protein": 2,
-  "carbs": 14,
-  "fat": 11,
-  "fiber": 4,
-  "image": "/images/dishes/Algerian-Roasted-Pepper-Tomato-Salad.jpg"
-}
-,{
-  "id": 1244,
-  "name": "Senegalese Black Eyed Pea Salad",
-  "country": "Senegal",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 300,
-  "budget": 4,
-  "time": "20 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Senegalese black-eyed pea salad with vegetables and lemon.",
-  "ingredients": [
-    "Black-eyed peas",
-    "Tomatoes",
-    "Cucumber",
-    "Red onion",
-    "Parsley",
-    "Lemon juice",
-    "Olive oil"
-  ],
-  "swaps": {
-    "local": [
-      {
-        "from": "Black-eyed peas",
-        "to": "Pinto beans | Green peas",
-        "note": "Canned beans save hours of soaking"
-      }
-    ]
-  },
-  "protein": 12,
-  "carbs": 38,
-  "fat": 11,
-  "fiber": 10,
-  "image": "/images/dishes/Senegalese-Black-Eyed-Pea-Salad.jpg"
-}
-,{
-  "id": 1245,
-  "name": "Ivorian Avocado Tomato Salad",
-  "country": "Ivory Coast",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 260,
-  "budget": 4,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Ivorian avocado and tomato salad with lime.",
-  "ingredients": [
-    "Avocado",
-    "Tomatoes",
-    "Red onion",
-    "Cucumber",
-    "Parsley",
-    "Lime juice",
-    "Olive oil"
-  ],
-  "swaps": {},
-  "protein": 3,
-  "carbs": 14,
-  "fat": 22,
-  "fiber": 9,
-  "image": "/images/dishes/Ivorian-Avocado-Tomato-Salad.jpg"
-}
-,{
-  "id": 1246,
-  "name": "Cameroonian Bean Avocado Salad",
-  "country": "Cameroon",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 320,
-  "budget": 4,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Cameroonian bean and avocado salad with lime.",
-  "ingredients": [
-    "Red beans",
-    "Avocado",
-    "Tomatoes",
-    "Cucumber",
-    "Red onion",
-    "Lime juice",
-    "Parsley"
-  ],
-  "swaps": {},
-  "protein": 11,
-  "carbs": 34,
-  "fat": 16,
-  "fiber": 13,
-  "image": "/images/dishes/Cameroonian-Bean-Avocado-Salad.jpg"
-}
-,{
-  "id": 1247,
-  "name": "Kenyan Corn Bean Kachumbari Salad",
-  "country": "Kenya",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 260,
-  "budget": 4,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Kenyan corn and bean kachumbari with lime and cilantro.",
-  "ingredients": [
-    "Corn",
-    "Red beans",
-    "Tomatoes",
-    "Red onion",
-    "Cucumber",
-    "Cilantro",
-    "Lime juice"
-  ],
-  "swaps": {},
-  "protein": 11,
-  "carbs": 46,
-  "fat": 3,
-  "fiber": 11,
-  "image": "/images/dishes/Kenyan-Corn-Bean-Kachumbari-Salad.jpg"
-}
-,{
-  "id": 1248,
-  "name": "Tanzanian Mango Cucumber Salad",
-  "country": "Tanzania",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 150,
-  "budget": 4,
-  "time": "15 min",
-  "spice": 1,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Tanzanian mango, cucumber and tomato salad with chili and lime.",
-  "ingredients": [
-    "Mango",
-    "Cucumber",
-    "Red onion",
-    "Tomatoes",
-    "Cilantro",
-    "Lime juice",
-    "Chili"
-  ],
-  "swaps": {
-    "local": [
-      {
-        "from": "Chili",
-        "to": "Thai red curry paste | Sriracha",
-        "note": "Store-bought pastes are a quick replacement for homemade ones"
-      }
-    ]
-  },
-  "protein": 2,
-  "carbs": 34,
-  "fat": 1,
-  "fiber": 5,
-  "image": "/images/dishes/Tanzanian-Mango-Cucumber-Salad.jpg"
-}
-,{
-  "id": 1249,
-  "name": "Ugandan Avocado Bean Salad",
-  "country": "Uganda",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 320,
-  "budget": 4,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Ugandan avocado and bean salad with lime.",
-  "ingredients": [
-    "Avocado",
-    "Red beans",
-    "Tomatoes",
-    "Cucumber",
-    "Red onion",
-    "Lime juice",
-    "Parsley"
-  ],
-  "swaps": {},
-  "protein": 11,
-  "carbs": 34,
-  "fat": 16,
-  "fiber": 13,
-  "image": "/images/dishes/Ugandan-Avocado-Bean-Salad.jpg"
-}
-,{
-  "id": 1250,
-  "name": "Rwandan Tomato Avocado Salad",
-  "country": "Rwanda",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 260,
-  "budget": 4,
-  "time": "15 min",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Rwandan tomato and avocado salad with lemon.",
-  "ingredients": [
-    "Tomatoes",
-    "Avocado",
-    "Red onion",
-    "Cucumber",
-    "Parsley",
-    "Lemon juice",
-    "Olive oil"
-  ],
-  "swaps": {},
-  "protein": 3,
-  "carbs": 14,
-  "fat": 22,
-  "fiber": 9,
-  "image": "/images/dishes/Rwandan-Tomato-Avocado-Salad.jpg"
-}
-,{
-  "id": 1251,
-  "name": "South African Beetroot Salad",
-  "country": "South Africa",
-  "region": "Africa",
-  "emoji": "🥗",
-  "cal": 170,
-  "budget": 4,
-  "time": "1 hr",
-  "spice": 0,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "South African beetroot and apple salad with vinegar.",
-  "ingredients": [
-    "Beetroot",
-    "Apple",
-    "Red onion",
-    "Parsley",
-    "Vinegar",
-    "Olive oil",
-    "Black pepper"
-  ],
-  "swaps": {},
-  "protein": 2,
-  "carbs": 24,
-  "fat": 8,
-  "fiber": 5,
-  "image": "/images/dishes/South-African-Beetroot-Salad.jpg"
-}
-,{
-  "id": 1252,
-  "name": "Indian Sprouted Mung Salad",
-  "country": "India",
-  "region": "Asia",
-  "emoji": "🥗",
-  "cal": 180,
-  "budget": 4,
-  "time": "15 min",
-  "spice": 1,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Indian sprouted mung bean salad with lemon and chaat masala.",
-  "ingredients": [
-    "Sprouted mung beans",
-    "Cucumber",
-    "Tomatoes",
-    "Red onion",
-    "Cilantro",
-    "Lemon juice",
-    "Chaat masala",
-    "Green chili"
-  ],
-  "swaps": {
-    "local": [
-      {
-        "from": "Chaat masala",
-        "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-        "note": "Most spice blends can be made with these four"
-      },
-      {
-        "from": "Green chili",
-        "to": "Thai red curry paste | Sriracha",
-        "note": "Store-bought pastes are a quick replacement for homemade ones"
-      }
-    ]
-  },
-  "protein": 11,
-  "carbs": 30,
-  "fat": 2,
-  "fiber": 8,
-  "image": "/images/dishes/Indian-Sprouted-Mung-Salad.jpg"
-}
-,{
-  "id": 1253,
-  "name": "Pakistani Chickpea Chaat Salad",
-  "country": "Pakistan",
-  "region": "Asia",
-  "emoji": "🥗",
-  "cal": 320,
-  "budget": 4,
-  "time": "15 min",
-  "spice": 2,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Pakistani chickpea chaat with tamarind chutney and chaat masala.",
-  "ingredients": [
-    "Chickpeas",
-    "Tomatoes",
-    "Cucumber",
-    "Red onion",
-    "Cilantro",
-    "Tamarind chutney",
-    "Chaat masala",
-    "Green chili"
-  ],
-  "swaps": {
-    "spice": [
-      {
-        "from": "Tamarind chutney",
-        "to": "Half the amount | Mild curry powder or mild salsa | A spoon of yogurt or coconut milk to soften",
-        "note": "Add heat at the table so everyone can choose"
-      },
-      {
-        "from": "Chaat masala",
-        "to": "Half the amount | Mild curry powder or mild salsa | A spoon of yogurt or coconut milk to soften",
-        "note": "Add heat at the table so everyone can choose"
-      },
-      {
-        "from": "Green chili",
-        "to": "Half the amount | Sweet paprika | Mild bell pepper",
-        "note": "Add heat at the table instead"
-      }
-    ],
-    "local": [
-      {
-        "from": "Tamarind chutney",
-        "to": "Lime juice + brown sugar | Pomegranate molasses",
-        "note": "Mix 1:1 to get the sweet-sour taste"
-      },
-      {
-        "from": "Chaat masala",
-        "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-        "note": "Most spice blends can be made with these four"
-      },
-      {
-        "from": "Green chili",
-        "to": "Thai red curry paste | Sriracha",
-        "note": "Store-bought pastes are a quick replacement for homemade ones"
-      }
-    ]
-  },
-  "protein": 12,
-  "carbs": 52,
-  "fat": 7,
-  "fiber": 11,
-  "image": "/images/dishes/Pakistani-Chickpea-Chaat-Salad.jpg"
-}
-,{
-  "id": 1254,
-  "name": "Nepalese Cucumber Sesame Salad",
-  "country": "Nepal",
-  "region": "Asia",
-  "emoji": "🥗",
-  "cal": 130,
-  "budget": 3,
-  "time": "15 min",
-  "spice": 1,
-  "tags": [
-    "salad",
-    "fresh",
-    "vegan",
-    "dairy-free",
-    "gluten-free"
-  ],
-  "desc": "Nepalese cucumber salad with toasted sesame and green chili.",
-  "ingredients": [
-    "Cucumber",
-    "Sesame seeds",
-    "Cilantro",
-    "Green chili",
-    "Lemon juice",
-    "Sesame oil",
-    "Salt"
-  ],
-  "swaps": {
-    "local": [
-      {
-        "from": "Green chili",
-        "to": "Thai red curry paste | Sriracha",
-        "note": "Store-bought pastes are a quick replacement for homemade ones"
-      }
-    ]
-  },
-  "protein": 3,
-  "carbs": 8,
-  "fat": 10,
-  "fiber": 3,
-  "image": "/images/dishes/Nepalese-Cucumber-Sesame-Salad.jpg"
-}
-,{
-  "id": 1255,
-  "name": "Italian Strawberry Ricotta Protein Smoothie",
-  "country": "Italy",
-  "region": "Europe",
-  "emoji": "🥤",
-  "cal": 320,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Italian strawberry and ricotta protein smoothie.",
-  "ingredients": [
-    "Strawberries",
-    "Ricotta cheese",
-    "Greek yogurt",
-    "Milk",
-    "Honey",
-    "Vanilla"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Ricotta cheese",
-        "to": "Crumbled firm tofu | Cashew ricotta",
-        "note": "Add lemon and salt for the fresh, tangy taste"
-      },
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Ricotta cheese",
-        "to": "Crumbled firm tofu | Vegan feta | Cashew ricotta",
-        "note": "Add lemon and salt for the fresh, tangy taste"
-      },
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Ricotta cheese",
-        "to": "Feta | Cottage cheese, drained",
-        "note": "Feta replaces salty white cheeses; ricotta replaces fresh curd cheeses"
-      },
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 20,
-  "carbs": 36,
-  "fat": 10,
-  "fiber": 3,
-  "image": "/images/dishes/Italian-Strawberry-Ricotta-Protein-Smoothie.jpg"
-}
-,{
-  "id": 1256,
-  "name": "Spanish Orange Almond Smoothie",
-  "country": "Spain",
-  "region": "Europe",
-  "emoji": "🥤",
-  "cal": 340,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "nuts"
-  ],
-  "desc": "Spanish orange and almond smoothie with banana.",
-  "ingredients": [
-    "Orange",
-    "Almond butter",
-    "Banana",
-    "Almond milk",
-    "Cinnamon",
-    "Honey"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "nuts": [
-      {
-        "from": "Almond butter",
-        "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-        "note": "Seeds give the same crunch without nuts"
-      },
-      {
-        "from": "Almond milk",
-        "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-        "note": "Seeds give the same crunch without nuts"
-      }
-    ]
-  },
-  "protein": 8,
-  "carbs": 50,
-  "fat": 14,
-  "fiber": 7,
-  "image": "/images/dishes/Spanish-Orange-Almond-Smoothie.jpg"
-}
-,{
-  "id": 1257,
-  "name": "Portuguese Berry Yogurt Smoothie",
-  "country": "Portugal",
-  "region": "Europe",
-  "emoji": "🥤",
-  "cal": 290,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Portuguese berry yogurt smoothie with chia.",
-  "ingredients": [
-    "Mixed berries",
-    "Greek yogurt",
-    "Milk",
-    "Banana",
-    "Honey",
-    "Chia seeds"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 14,
-  "carbs": 50,
-  "fat": 5,
-  "fiber": 8,
-  "image": "/images/dishes/Portuguese-Berry-Yogurt-Smoothie.jpg"
-}
-,{
-  "id": 1258,
-  "name": "French Peach Yogurt Smoothie",
-  "country": "France",
-  "region": "Europe",
-  "emoji": "🥤",
-  "cal": 280,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "French peach and yogurt smoothie with vanilla.",
-  "ingredients": [
-    "Peaches",
-    "Greek yogurt",
-    "Milk",
-    "Honey",
-    "Vanilla",
-    "Chia seeds"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 14,
-  "carbs": 46,
-  "fat": 5,
-  "fiber": 5,
-  "image": "/images/dishes/French-Peach-Yogurt-Smoothie.jpg"
-}
-,{
-  "id": 1259,
-  "name": "German Apple Cinnamon Protein Smoothie",
-  "country": "Germany",
-  "region": "Europe",
-  "emoji": "🥤",
-  "cal": 340,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten",
-    "gluten-free-option"
-  ],
-  "desc": "Apple cinnamon protein smoothie with yogurt and oats, like a liquid apple strudel.",
-  "ingredients": [
-    "Apple",
-    "Protein powder",
-    "Greek yogurt",
-    "Milk",
-    "Cinnamon",
-    "Oats"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "gluten": [
-      {
-        "from": "Oats",
-        "to": "Certified gluten-free oats | Quinoa flakes",
-        "note": "Regular oats are often cross-contaminated"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 30,
-  "carbs": 42,
-  "fat": 6,
-  "fiber": 5,
-  "image": "/images/dishes/German-Apple-Cinnamon-Protein-Smoothie.jpg"
-}
-,{
-  "id": 1260,
-  "name": "Polish Blueberry Kefir Smoothie",
-  "country": "Poland",
-  "region": "Europe",
-  "emoji": "🥤",
-  "cal": 280,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Polish blueberry kefir smoothie with banana and flaxseed.",
-  "ingredients": [
-    "Blueberries",
-    "Kefir",
-    "Banana",
-    "Honey",
-    "Flaxseed",
-    "Milk"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Kefir",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Kefir",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Kefir",
-        "to": "Greek yogurt | Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 11,
-  "carbs": 48,
-  "fat": 6,
-  "fiber": 6,
-  "image": "/images/dishes/Polish-Blueberry-Kefir-Smoothie.jpg"
-}
-,{
-  "id": 1261,
-  "name": "Romanian Cherry Yogurt Smoothie",
-  "country": "Romania",
-  "region": "Europe",
-  "emoji": "🥤",
-  "cal": 290,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Romanian cherry yogurt smoothie with vanilla.",
-  "ingredients": [
-    "Cherries",
-    "Greek yogurt",
-    "Milk",
-    "Banana",
-    "Honey",
-    "Vanilla"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 13,
-  "carbs": 52,
-  "fat": 4,
-  "fiber": 4,
-  "image": "/images/dishes/Romanian-Cherry-Yogurt-Smoothie.jpg"
-}
-,{
-  "id": 1262,
-  "name": "Hungarian Sour Cherry Smoothie",
-  "country": "Hungary",
-  "region": "Europe",
-  "emoji": "🥤",
-  "cal": 280,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Hungarian tart sour cherry smoothie with cinnamon.",
-  "ingredients": [
-    "Sour cherries",
-    "Banana",
-    "Greek yogurt",
-    "Milk",
-    "Honey",
-    "Cinnamon"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 12,
-  "carbs": 52,
-  "fat": 4,
-  "fiber": 4,
-  "image": "/images/dishes/Hungarian-Sour-Cherry-Smoothie.jpg"
-}
-,{
-  "id": 1263,
-  "name": "Croatian Fig Yogurt Smoothie",
-  "country": "Croatia",
-  "region": "Europe",
-  "emoji": "🥤",
-  "cal": 360,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free",
-    "nuts"
-  ],
-  "desc": "Croatian fresh fig smoothie with yogurt and walnuts.",
-  "ingredients": [
-    "Fresh figs",
-    "Greek yogurt",
-    "Milk",
-    "Banana",
-    "Honey",
-    "Walnuts"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "nuts": [
-      {
-        "from": "Walnuts",
-        "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-        "note": "Seeds give the same crunch without nuts"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 13,
-  "carbs": 56,
-  "fat": 11,
-  "fiber": 7,
-  "image": "/images/dishes/Croatian-Fig-Yogurt-Smoothie.jpg"
-}
-,{
-  "id": 1264,
-  "name": "Albanian Peach Honey Smoothie",
-  "country": "Albania",
-  "region": "Europe",
-  "emoji": "🥤",
-  "cal": 280,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Albanian peach and honey smoothie with cinnamon.",
-  "ingredients": [
-    "Peaches",
-    "Greek yogurt",
-    "Milk",
-    "Honey",
-    "Banana",
-    "Cinnamon"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 12,
-  "carbs": 52,
-  "fat": 4,
-  "fiber": 4,
-  "image": "/images/dishes/Albanian-Peach-Honey-Smoothie.jpg"
-}
-,{
-  "id": 1265,
-  "name": "Georgian Pomegranate Walnut Smoothie",
-  "country": "Georgia",
-  "region": "Europe",
-  "emoji": "🥤",
-  "cal": 380,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free",
-    "nuts"
-  ],
-  "desc": "Georgian pomegranate smoothie with walnuts and yogurt.",
-  "ingredients": [
-    "Pomegranate arils",
-    "Walnuts",
-    "Banana",
-    "Greek yogurt",
-    "Milk",
-    "Honey"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "nuts": [
-      {
-        "from": "Walnuts",
-        "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-        "note": "Seeds give the same crunch without nuts"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 13,
-  "carbs": 54,
-  "fat": 14,
-  "fiber": 6,
-  "image": "/images/dishes/Georgian-Pomegranate-Walnut-Smoothie.jpg"
-}
-,{
-  "id": 1266,
-  "name": "Armenian Apricot Yogurt Smoothie",
-  "country": "Armenia",
-  "region": "Europe",
-  "emoji": "🥤",
-  "cal": 280,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Armenian apricot yogurt smoothie with cinnamon.",
-  "ingredients": [
-    "Apricots",
-    "Greek yogurt",
-    "Milk",
-    "Banana",
-    "Honey",
-    "Cinnamon"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 12,
-  "carbs": 52,
-  "fat": 4,
-  "fiber": 5,
-  "image": "/images/dishes/Armenian-Apricot-Yogurt-Smoothie.jpg"
-}
-,{
-  "id": 1267,
-  "name": "Lebanese Strawberry Rose Smoothie",
-  "country": "Lebanon",
-  "region": "Middle East",
-  "emoji": "🥤",
-  "cal": 270,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Lebanese strawberry smoothie scented with rose water.",
-  "ingredients": [
-    "Strawberries",
-    "Greek yogurt",
-    "Milk",
-    "Rose water",
-    "Honey",
-    "Banana"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      },
-      {
-        "from": "Rose water",
-        "to": "Vanilla + orange zest",
-        "note": "Use just a little"
-      }
-    ]
-  },
-  "protein": 12,
-  "carbs": 48,
-  "fat": 4,
-  "fiber": 5,
-  "image": "/images/dishes/Lebanese-Strawberry-Rose-Smoothie.jpg"
-}
-,{
-  "id": 1268,
-  "name": "Tunisian Date Orange Smoothie",
-  "country": "Tunisia",
-  "region": "Africa",
-  "emoji": "🥤",
-  "cal": 330,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Tunisian date and orange smoothie with cinnamon.",
-  "ingredients": [
-    "Dates",
-    "Orange",
-    "Greek yogurt",
-    "Milk",
-    "Cinnamon",
-    "Honey"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 12,
-  "carbs": 64,
-  "fat": 4,
-  "fiber": 6,
-  "image": "/images/dishes/Tunisian-Date-Orange-Smoothie.jpg"
-}
-,{
-  "id": 1269,
-  "name": "Algerian Fig Almond Smoothie",
-  "country": "Algeria",
-  "region": "Africa",
-  "emoji": "🥤",
-  "cal": 360,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy-free",
-    "gluten-free",
-    "nuts"
-  ],
-  "desc": "Algerian fig and almond smoothie with banana.",
-  "ingredients": [
-    "Figs",
-    "Almond butter",
-    "Banana",
-    "Almond milk",
-    "Cinnamon",
-    "Honey"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "nuts": [
-      {
-        "from": "Almond butter",
-        "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-        "note": "Seeds give the same crunch without nuts"
-      },
-      {
-        "from": "Almond milk",
-        "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-        "note": "Seeds give the same crunch without nuts"
-      }
-    ]
-  },
-  "protein": 8,
-  "carbs": 56,
-  "fat": 14,
-  "fiber": 8,
-  "image": "/images/dishes/Algerian-Fig-Almond-Smoothie.jpg"
-}
-,{
-  "id": 1270,
-  "name": "Ivorian Pineapple Ginger Smoothie",
-  "country": "Ivory Coast",
-  "region": "Africa",
-  "emoji": "🥤",
-  "cal": 240,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Ivorian pineapple ginger smoothie with coconut water.",
-  "ingredients": [
-    "Pineapple",
-    "Banana",
-    "Fresh ginger",
-    "Coconut water",
-    "Greek yogurt",
-    "Lime juice"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 8,
-  "carbs": 50,
-  "fat": 2,
-  "fiber": 4,
-  "image": "/images/dishes/Ivorian-Pineapple-Ginger-Smoothie.jpg"
-}
-,{
-  "id": 1271,
-  "name": "Cameroonian Papaya Banana Smoothie",
-  "country": "Cameroon",
-  "region": "Africa",
-  "emoji": "🥤",
-  "cal": 270,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Cameroonian papaya banana smoothie with ginger.",
-  "ingredients": [
-    "Papaya",
-    "Banana",
-    "Greek yogurt",
-    "Milk",
-    "Honey",
-    "Ginger"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 11,
-  "carbs": 52,
-  "fat": 4,
-  "fiber": 5,
-  "image": "/images/dishes/Cameroonian-Papaya-Banana-Smoothie.jpg"
-}
-,{
-  "id": 1272,
-  "name": "Tanzanian Mango Baobab Smoothie",
-  "country": "Tanzania",
-  "region": "Africa",
-  "emoji": "🥤",
-  "cal": 320,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Tanzanian mango and baobab smoothie.",
-  "ingredients": [
-    "Mango",
-    "Baobab powder",
-    "Banana",
-    "Greek yogurt",
-    "Milk",
-    "Honey"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 11,
-  "carbs": 62,
-  "fat": 4,
-  "fiber": 8,
-  "image": "/images/dishes/Tanzanian-Mango-Baobab-Smoothie.jpg"
-}
-,{
-  "id": 1273,
-  "name": "Ugandan Pineapple Avocado Smoothie",
-  "country": "Uganda",
-  "region": "Africa",
-  "emoji": "🥤",
-  "cal": 320,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Ugandan pineapple and avocado smoothie with lime.",
-  "ingredients": [
-    "Pineapple",
-    "Avocado",
-    "Banana",
-    "Coconut water",
-    "Lime juice",
-    "Greek yogurt"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 8,
-  "carbs": 46,
-  "fat": 13,
-  "fiber": 8,
-  "image": "/images/dishes/Ugandan-Pineapple-Avocado-Smoothie.jpg"
-}
-,{
-  "id": 1274,
-  "name": "Rwandan Passion Fruit Banana Smoothie",
-  "country": "Rwanda",
-  "region": "Africa",
-  "emoji": "🥤",
-  "cal": 300,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Rwandan passion fruit and banana smoothie with chia.",
-  "ingredients": [
-    "Passion fruit",
-    "Banana",
-    "Greek yogurt",
-    "Milk",
-    "Honey",
-    "Chia seeds"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 12,
-  "carbs": 52,
-  "fat": 6,
-  "fiber": 9,
-  "image": "/images/dishes/Rwandan-Passion-Fruit-Banana-Smoothie.jpg"
-}
-,{
-  "id": 1275,
-  "name": "Zimbabwean Mango Peanut Smoothie",
-  "country": "Zimbabwe",
-  "region": "Africa",
-  "emoji": "🥤",
-  "cal": 420,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free",
-    "nuts"
-  ],
-  "desc": "Zimbabwean mango and peanut butter smoothie.",
-  "ingredients": [
-    "Mango",
-    "Peanut butter",
-    "Banana",
-    "Milk",
-    "Greek yogurt",
-    "Honey"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "nuts": [
-      {
-        "from": "Peanut butter",
-        "to": "Sunflower seed butter | Roasted chickpeas | Toasted pumpkin seeds",
-        "note": "Sunflower butter gives the same creamy, nutty taste"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 16,
-  "carbs": 58,
-  "fat": 15,
-  "fiber": 6,
-  "image": "/images/dishes/Zimbabwean-Mango-Peanut-Smoothie.jpg"
-}
-,{
-  "id": 1276,
-  "name": "Pakistani Mango Yogurt Protein Smoothie",
-  "country": "Pakistan",
-  "region": "Asia",
-  "emoji": "🥤",
-  "cal": 340,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Pakistani mango lassi-style protein smoothie with cardamom.",
-  "ingredients": [
-    "Mango",
-    "Greek yogurt",
-    "Protein powder",
-    "Milk",
-    "Cardamom",
-    "Honey"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 30,
-  "carbs": 46,
-  "fat": 4,
-  "fiber": 3,
-  "image": "/images/dishes/Pakistani-Mango-Yogurt-Protein-Smoothie.jpg"
-}
-,{
-  "id": 1277,
-  "name": "Bangladeshi Banana Date Smoothie",
-  "country": "Bangladesh",
-  "region": "Asia",
-  "emoji": "🥤",
-  "cal": 340,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Bangladeshi banana and date smoothie with cinnamon.",
-  "ingredients": [
-    "Banana",
-    "Dates",
-    "Milk",
-    "Greek yogurt",
-    "Cinnamon",
-    "Honey"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 12,
-  "carbs": 66,
-  "fat": 4,
-  "fiber": 6,
-  "image": "/images/dishes/Bangladeshi-Banana-Date-Smoothie.jpg"
-}
-,{
-  "id": 1278,
-  "name": "Nepalese Banana Yogurt Protein Smoothie",
-  "country": "Nepal",
-  "region": "Asia",
-  "emoji": "🥤",
-  "cal": 340,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Nepalese banana yogurt protein smoothie with cinnamon.",
-  "ingredients": [
-    "Banana",
-    "Greek yogurt",
-    "Protein powder",
-    "Milk",
-    "Honey",
-    "Cinnamon"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk",
-        "note": "Choose unsweetened"
-      },
-      {
-        "from": "Honey",
-        "to": "Maple syrup | Date syrup | Agave",
-        "note": "Same sweetness"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      },
-      {
-        "from": "Milk",
-        "to": "Oat milk | Soy milk | Almond milk",
-        "note": "Choose unsweetened"
-      }
-    ],
-    "local": [
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      }
-    ]
-  },
-  "protein": 32,
-  "carbs": 46,
-  "fat": 4,
-  "fiber": 4,
-  "image": "/images/dishes/Nepalese-Banana-Yogurt-Protein-Smoothie.jpg"
-}
-,{
-  "id": 1279,
-  "name": "Malaysian Pandan Coconut Smoothie",
-  "country": "Malaysia",
-  "region": "Asia",
-  "emoji": "🥤",
-  "cal": 340,
-  "budget": 5,
-  "time": "5 min",
-  "spice": 0,
-  "tags": [
-    "smoothie",
-    "vegetarian",
-    "vegan-option",
-    "dairy",
-    "dairy-free-option",
-    "gluten-free"
-  ],
-  "desc": "Malaysian pandan and coconut smoothie with palm sugar.",
-  "ingredients": [
-    "Pandan extract",
-    "Coconut milk",
-    "Banana",
-    "Greek yogurt",
-    "Palm sugar",
-    "Chia seeds"
-  ],
-  "swaps": {
-    "vegan": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "dairy": [
-      {
-        "from": "Greek yogurt",
-        "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
-        "note": "Plain and unsweetened for savory dishes"
-      }
-    ],
-    "local": [
-      {
-        "from": "Pandan extract",
-        "to": "Vanilla extract",
-        "note": "A few drops are enough"
-      },
-      {
-        "from": "Greek yogurt",
-        "to": "Plain yogurt",
-        "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
-      },
-      {
-        "from": "Palm sugar",
-        "to": "Brown sugar | Coconut sugar | Maple syrup",
-        "note": "Same deep, caramel sweetness"
-      }
-    ]
-  },
-  "protein": 7,
-  "carbs": 48,
-  "fat": 14,
-  "fiber": 6,
-  "image": "/images/dishes/Malaysian-Pandan-Coconut-Smoothie.jpg"
-},
+  },
+  {
+    "id": 1082,
+    "name": "Persian Shirazi Salad",
+    "country": "Iran",
+    "region": "Middle East",
+    "emoji": "🥗",
+    "cal": 120,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Persian chopped cucumber, tomato and onion salad with dried mint and lime.",
+    "ingredients": [
+      "Cucumber",
+      "Tomatoes",
+      "Red onion",
+      "Fresh mint",
+      "Parsley",
+      "Lime juice",
+      "Olive oil"
+    ],
+    "swaps": {},
+    "protein": 2,
+    "carbs": 10,
+    "fat": 8,
+    "fiber": 2,
+    "image": "/images/dishes/Persian-Shirazi-Salad.jpg"
+  },
+  {
+    "id": 1083,
+    "name": "Thai Green Papaya Salad",
+    "country": "Thailand",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 180,
+    "budget": 4,
+    "time": "15 min",
+    "spice": 3,
+    "tags": [
+      "salad",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "fish",
+      "nuts"
+    ],
+    "desc": "Thai green papaya salad with tomatoes, beans, peanuts, lime and fish sauce.",
+    "ingredients": [
+      "Green papaya",
+      "Cherry tomatoes",
+      "Long beans",
+      "Peanuts",
+      "Lime juice",
+      "Fish sauce",
+      "Palm sugar",
+      "Thai chilies"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Thai chilies",
+          "to": "Jalapeño, seeds removed | Half a chili | Green bell pepper",
+          "note": "Remove seeds and white ribs to cut the heat"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Fish sauce",
+          "to": "Soy sauce + a pinch of seaweed | Vegan fish sauce | White miso thinned with lime",
+          "note": "Keeps the salty, savory depth"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Peanuts",
+          "to": "Sunflower seed butter | Roasted chickpeas | Toasted pumpkin seeds",
+          "note": "Sunflower butter gives the same creamy, nutty taste"
+        }
+      ],
+      "local": [
+        {
+          "from": "Fish sauce",
+          "to": "Anchovy paste | Soy sauce + lime",
+          "note": "Use a little less; these are very salty"
+        },
+        {
+          "from": "Palm sugar",
+          "to": "Brown sugar | Coconut sugar | Maple syrup",
+          "note": "Same deep, caramel sweetness"
+        },
+        {
+          "from": "Thai chilies",
+          "to": "Habanero | Jalapeño",
+          "note": "Habanero is as hot; jalapeño is milder"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 26,
+    "fat": 7,
+    "fiber": 6,
+    "image": "/images/dishes/Thai-Green-Papaya-Salad.jpg"
+  },
+  {
+    "id": 1085,
+    "name": "East African Kachumbari",
+    "country": "Kenya",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 70,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 1,
+    "tags": [
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Fresh Kenyan tomato and onion salad with cilantro, lime and chili.",
+    "ingredients": [
+      "Tomatoes",
+      "Red onion",
+      "Cucumber",
+      "Cilantro",
+      "Lime juice",
+      "Fresh chili",
+      "Salt"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Fresh chili",
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 14,
+    "fat": 1,
+    "fiber": 3,
+    "image": "/images/dishes/East-African-Kachumbari.jpg"
+  },
+  {
+    "id": 1087,
+    "name": "Chilean Tomato Onion Salad",
+    "country": "Chile",
+    "region": "Americas",
+    "emoji": "🥗",
+    "cal": 120,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Chilean ensalada a la chilena of sliced tomatoes and soaked onion with cilantro.",
+    "ingredients": [
+      "Tomatoes",
+      "White onion",
+      "Cilantro",
+      "Olive oil",
+      "Lemon juice",
+      "Salt",
+      "Black pepper"
+    ],
+    "swaps": {},
+    "protein": 2,
+    "carbs": 10,
+    "fat": 8,
+    "fiber": 3,
+    "image": "/images/dishes/Chilean-Tomato-Onion-Salad.jpg"
+  },
+  {
+    "id": 1088,
+    "name": "Spanish Pipirrana",
+    "country": "Spain",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 200,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "eggs"
+    ],
+    "desc": "Andalusian chopped salad of tomato, pepper, cucumber and onion with boiled egg.",
+    "ingredients": [
+      "Tomatoes",
+      "Green pepper",
+      "Cucumber",
+      "Onion",
+      "Boiled egg",
+      "Olive oil",
+      "Sherry vinegar"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Boiled egg",
+          "to": "Tofu scramble | Avocado slices",
+          "note": "It is a topping, so the dish still works without it"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Boiled egg",
+          "to": "Avocado slices | Tofu scramble | Skip it",
+          "note": "It is a topping, so the dish still works without it"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 12,
+    "fat": 15,
+    "fiber": 3,
+    "image": "/images/dishes/Spanish-Pipirrana.jpg"
+  },
+  {
+    "id": 1089,
+    "name": "Turkish Shepherd Salad",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "🥗",
+    "cal": 140,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Turkish shepherd's salad of finely chopped vegetables with lemon and olive oil.",
+    "ingredients": [
+      "Tomatoes",
+      "Cucumber",
+      "Green pepper",
+      "Red onion",
+      "Parsley",
+      "Lemon juice",
+      "Olive oil",
+      "Sumac"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Sumac",
+          "to": "Lemon zest + a pinch of salt",
+          "note": "Same bright, sour taste"
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 12,
+    "fat": 10,
+    "fiber": 3,
+    "image": "/images/dishes/Turkish-Shepherd-Salad.jpg"
+  },
+  {
+    "id": 1090,
+    "name": "Israeli Chopped Salad",
+    "country": "Israel",
+    "region": "Middle East",
+    "emoji": "🥗",
+    "cal": 130,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Finely diced Israeli salad of tomato, cucumber, pepper and onion with lemon.",
+    "ingredients": [
+      "Tomatoes",
+      "Cucumber",
+      "Red bell pepper",
+      "Red onion",
+      "Parsley",
+      "Lemon juice",
+      "Olive oil"
+    ],
+    "swaps": {},
+    "protein": 2,
+    "carbs": 11,
+    "fat": 9,
+    "fiber": 3,
+    "image": "/images/dishes/Israeli-Chopped-Salad.jpg"
+  },
+  {
+    "id": 1091,
+    "name": "Moroccan Carrot Salad",
+    "country": "Morocco",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 150,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 1,
+    "tags": [
+      "salad",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Moroccan grated carrot salad with cumin, paprika, lemon and herbs.",
+    "ingredients": [
+      "Carrots",
+      "Parsley",
+      "Cilantro",
+      "Lemon juice",
+      "Olive oil",
+      "Cumin",
+      "Paprika"
+    ],
+    "swaps": {},
+    "protein": 2,
+    "carbs": 16,
+    "fat": 9,
+    "fiber": 5,
+    "image": "/images/dishes/Moroccan-Carrot-Salad.jpg"
+  },
+  {
+    "id": 1092,
+    "name": "Tunisian Mechouia Salad",
+    "country": "Tunisia",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 280,
+    "budget": 5,
+    "time": "40 min",
+    "spice": 2,
+    "tags": [
+      "salad",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "eggs",
+      "fish"
+    ],
+    "desc": "Tunisian grilled pepper and tomato salad with tuna and egg.",
+    "ingredients": [
+      "Roasted peppers",
+      "Tomatoes",
+      "Onion",
+      "Garlic",
+      "Tuna",
+      "Boiled egg",
+      "Olive oil",
+      "Harissa"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Harissa",
+          "to": "Tomato paste + sweet paprika | Half the amount",
+          "note": "Same color, milder"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Tuna",
+          "to": "Marinated tofu | Watermelon tuna | Carrot lox",
+          "note": "Marinate in soy, seaweed and lemon for a sea flavor"
+        },
+        {
+          "from": "Boiled egg",
+          "to": "Tofu scramble | Avocado slices",
+          "note": "It is a topping, so the dish still works without it"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Boiled egg",
+          "to": "Avocado slices | Tofu scramble | Skip it",
+          "note": "It is a topping, so the dish still works without it"
+        }
+      ],
+      "local": [
+        {
+          "from": "Harissa",
+          "to": "Chili paste + cumin + garlic",
+          "note": "Add a spoon of tomato paste"
+        }
+      ]
+    },
+    "protein": 16,
+    "carbs": 14,
+    "fat": 18,
+    "fiber": 4,
+    "image": "/images/dishes/Tunisian-Mechouia-Salad.jpg"
+  },
+  {
+    "id": 1093,
+    "name": "Georgian Tomato Cucumber Salad",
+    "country": "Georgia",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 220,
+    "budget": 4,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "vegan",
+      "dairy-free",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Georgian tomato and cucumber salad dressed with walnuts, garlic and cilantro.",
+    "ingredients": [
+      "Tomatoes",
+      "Cucumber",
+      "Red onion",
+      "Cilantro",
+      "Walnuts",
+      "Garlic",
+      "Red wine vinegar"
+    ],
+    "swaps": {
+      "nuts": [
+        {
+          "from": "Walnuts",
+          "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
+          "note": "For a crunchy garnish, use toasted seeds."
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 12,
+    "fat": 17,
+    "fiber": 4,
+    "image": "/images/dishes/Georgian-Tomato-Cucumber-Salad.jpg"
+  },
+  {
+    "id": 1094,
+    "name": "Armenian Eetch Salad",
+    "country": "Armenia",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 280,
+    "budget": 3,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "salad",
+      "vegan",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Armenian bulgur salad with tomato paste, parsley and lemon.",
+    "ingredients": [
+      "Fine bulgur",
+      "Tomato paste",
+      "Tomatoes",
+      "Parsley",
+      "Green onions",
+      "Lemon juice",
+      "Olive oil"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Fine bulgur",
+          "to": "Quinoa | Millet | Cauliflower rice",
+          "note": "Quinoa cooks in about 15 minutes"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 40,
+    "fat": 11,
+    "fiber": 8,
+    "image": "/images/dishes/Armenian-Eetch-Salad.jpg"
+  },
+  {
+    "id": 1096,
+    "name": "Serbian Šopska Salad",
+    "country": "Serbia",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 260,
+    "budget": 4,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Serbian chopped salad of tomato, cucumber and pepper under grated white cheese.",
+    "ingredients": [
+      "Tomatoes",
+      "Cucumber",
+      "Bell pepper",
+      "Onion",
+      "White brined cheese",
+      "Parsley",
+      "Sunflower oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "White brined cheese",
+          "to": "Vegan mozzarella | Cashew cheese sauce",
+          "note": "Choose a vegan cheese that melts"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "White brined cheese",
+          "to": "Vegan mozzarella | Dairy-free cheddar | Cashew cheese sauce",
+          "note": "Choose a vegan cheese that melts"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 12,
+    "fat": 20,
+    "fiber": 3,
+    "image": "/images/dishes/Serbian-Šopska-Salad.jpg"
+  },
+  {
+    "id": 1097,
+    "name": "German Cucumber Salad",
+    "country": "Germany",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 110,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "German creamy cucumber salad with dill and onion.",
+    "ingredients": [
+      "Cucumber",
+      "Dill",
+      "Red onion",
+      "Sour cream",
+      "White vinegar",
+      "Sugar",
+      "Black pepper"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Sour cream",
+          "to": "Cashew sour cream | Dairy-free yogurt",
+          "note": "Stir in at the end, off the heat"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Sour cream",
+          "to": "Dairy-free yogurt | Cashew sour cream | Coconut yogurt + lemon",
+          "note": "Stir in at the end, off the heat"
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 10,
+    "fat": 7,
+    "fiber": 1,
+    "image": "/images/dishes/German-Cucumber-Salad.jpg"
+  },
+  {
+    "id": 1098,
+    "name": "Polish Mizeria",
+    "country": "Poland",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 110,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Polish cucumber salad in sour cream with fresh dill.",
+    "ingredients": [
+      "Cucumber",
+      "Sour cream",
+      "Fresh dill",
+      "Lemon juice",
+      "Sugar",
+      "Salt",
+      "Black pepper"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Sour cream",
+          "to": "Cashew sour cream | Dairy-free yogurt",
+          "note": "Stir in at the end, off the heat"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Sour cream",
+          "to": "Dairy-free yogurt | Cashew sour cream | Coconut yogurt + lemon",
+          "note": "Stir in at the end, off the heat"
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 9,
+    "fat": 7,
+    "fiber": 1,
+    "image": "/images/dishes/Polish-Mizeria.jpg"
+  },
+  {
+    "id": 1100,
+    "name": "Vietnamese Green Mango Salad",
+    "country": "Vietnam",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 200,
+    "budget": 4,
+    "time": "15 min",
+    "spice": 2,
+    "tags": [
+      "salad",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "fish",
+      "nuts"
+    ],
+    "desc": "Vietnamese green mango salad with herbs, peanuts, lime and fish sauce.",
+    "ingredients": [
+      "Green mango",
+      "Carrot",
+      "Fresh herbs",
+      "Peanuts",
+      "Lime juice",
+      "Fish sauce",
+      "Chili"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Chili",
+          "to": "Half the amount | Sweet paprika | Mild bell pepper",
+          "note": "Add heat at the table instead"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Fish sauce",
+          "to": "Soy sauce + a pinch of seaweed | Vegan fish sauce | White miso thinned with lime",
+          "note": "Keeps the salty, savory depth"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Peanuts",
+          "to": "Sunflower seed butter | Roasted chickpeas | Toasted pumpkin seeds",
+          "note": "Sunflower butter gives the same creamy, nutty taste"
+        }
+      ],
+      "local": [
+        {
+          "from": "Fish sauce",
+          "to": "Anchovy paste | Soy sauce + lime",
+          "note": "Use a little less; these are very salty"
+        },
+        {
+          "from": "Chili",
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 28,
+    "fat": 8,
+    "fiber": 5,
+    "image": "/images/dishes/Vietnamese-Green-Mango-Salad.jpg"
+  },
+  {
+    "id": 1101,
+    "name": "Cambodian Green Mango Salad",
+    "country": "Cambodia",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 200,
+    "budget": 4,
+    "time": "15 min",
+    "spice": 1,
+    "tags": [
+      "salad",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "fish",
+      "nuts"
+    ],
+    "desc": "Cambodian tart green mango salad with basil, peanuts and fish sauce.",
+    "ingredients": [
+      "Green mango",
+      "Carrot",
+      "Cucumber",
+      "Fresh basil",
+      "Roasted peanuts",
+      "Lime juice",
+      "Fish sauce"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Fish sauce",
+          "to": "Soy sauce + a pinch of seaweed | Vegan fish sauce | White miso thinned with lime",
+          "note": "Keeps the salty, savory depth"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Roasted peanuts",
+          "to": "Sunflower seed butter | Roasted chickpeas | Toasted pumpkin seeds",
+          "note": "Sunflower butter gives the same creamy, nutty taste"
+        }
+      ],
+      "local": [
+        {
+          "from": "Fish sauce",
+          "to": "Anchovy paste | Soy sauce + lime",
+          "note": "Use a little less; these are very salty"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 28,
+    "fat": 8,
+    "fiber": 5,
+    "image": "/images/dishes/Cambodian-Green-Mango-Salad.jpg"
+  },
+  {
+    "id": 1104,
+    "name": "Japanese Sunomono",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 70,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "vegan",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Japanese sweet-sour cucumber and wakame salad with sesame.",
+    "ingredients": [
+      "Cucumber",
+      "Rice vinegar",
+      "Sugar",
+      "Soy sauce",
+      "Wakame",
+      "Sesame seeds",
+      "Salt"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 12,
+    "fat": 2,
+    "fiber": 2,
+    "image": "/images/dishes/Japanese-Sunomono.jpg"
+  },
+  {
+    "id": 1105,
+    "name": "Korean Cucumber Salad",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 90,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 2,
+    "tags": [
+      "salad",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Korean spicy cucumber salad with gochugaru, garlic and sesame.",
+    "ingredients": [
+      "Cucumber",
+      "Gochugaru",
+      "Garlic",
+      "Rice vinegar",
+      "Sesame oil",
+      "Sesame seeds",
+      "Scallions"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Gochugaru",
+          "to": "Sweet paprika | Half the amount | Mild chili flakes",
+          "note": "All the color, much less heat"
+        }
+      ],
+      "local": [
+        {
+          "from": "Gochugaru",
+          "to": "Sweet paprika + chili flakes",
+          "note": "Mix 3 parts paprika to 1 part flakes"
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 8,
+    "fat": 6,
+    "fiber": 2,
+    "image": "/images/dishes/Korean-Cucumber-Salad.jpg"
+  },
+  {
+    "id": 1106,
+    "name": "Chinese Smashed Cucumber Salad",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 110,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 2,
+    "tags": [
+      "salad",
+      "vegan",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Chinese smashed cucumber with garlic, black vinegar, soy and chili crisp.",
+    "ingredients": [
+      "Cucumber",
+      "Garlic",
+      "Chinkiang vinegar",
+      "Soy sauce",
+      "Sesame oil",
+      "Chili crisp",
+      "Sesame seeds"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Chili crisp",
+          "to": "Half the amount | Sweet paprika | A mild curry powder or mild chili",
+          "note": "Add heat at the table so everyone can choose"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
+        }
+      ],
+      "local": [
+        {
+          "from": "Chili crisp",
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 8,
+    "fat": 8,
+    "fiber": 2,
+    "image": "/images/dishes/Chinese-Smashed-Cucumber-Salad.jpg"
+  },
+  {
+    "id": 1107,
+    "name": "Filipino Ensaladang Talong",
+    "country": "Philippines",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 150,
+    "budget": 3,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "vegetarian",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "eggs"
+    ],
+    "desc": "Filipino grilled eggplant salad with tomato, onion, vinegar and salted egg.",
+    "ingredients": [
+      "Eggplant",
+      "Tomatoes",
+      "Red onion",
+      "Cane vinegar",
+      "Salted egg",
+      "Cilantro",
+      "Black pepper"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Salted egg",
+          "to": "Flax egg | Chickpea flour batter | Silken tofu",
+          "note": "Flax for baking; chickpea flour for omelettes"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Salted egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water) | Chickpea flour + water | Silken tofu",
+          "note": "Flax for baking and binding; chickpea flour or tofu for omelettes"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 18,
+    "fat": 6,
+    "fiber": 7,
+    "image": "/images/dishes/Filipino-Ensaladang-Talong.jpg"
+  },
+  {
+    "id": 1108,
+    "name": "Indian Kachumber Salad",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 80,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 1,
+    "tags": [
+      "salad",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Indian chopped cucumber, tomato and onion salad with lemon and chaat masala.",
+    "ingredients": [
+      "Cucumber",
+      "Tomatoes",
+      "Red onion",
+      "Cilantro",
+      "Lemon juice",
+      "Cumin",
+      "Chaat masala",
+      "Green chili"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Chaat masala",
+          "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
+        },
+        {
+          "from": "Green chili",
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 14,
+    "fat": 2,
+    "fiber": 3,
+    "image": "/images/dishes/Indian-Kachumber-Salad.jpg"
+  },
+  {
+    "id": 1109,
+    "name": "Sri Lankan Coconut Sambol Salad",
+    "country": "Sri Lanka",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 220,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 2,
+    "tags": [
+      "salad",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "fish"
+    ],
+    "desc": "Sri Lankan fresh coconut salad with red onion, lime and chili.",
+    "ingredients": [
+      "Fresh coconut",
+      "Red onion",
+      "Lime juice",
+      "Chili flakes",
+      "Maldive fish",
+      "Salt",
+      "Curry leaves"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Chili flakes",
+          "to": "Half the amount | Sweet paprika | Mild bell pepper",
+          "note": "Add heat at the table instead"
+        },
+        {
+          "from": "Curry leaves",
+          "to": "Half the amount | Mild curry powder or mild salsa | A spoon of yogurt or coconut milk to soften",
+          "note": "Add heat at the table so everyone can choose"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Maldive fish",
+          "to": "Soy sauce + a pinch of seaweed | Vegan fish sauce | White miso thinned with lime",
+          "note": "Keeps the salty, savory depth"
+        }
+      ],
+      "local": [
+        {
+          "from": "Chili flakes",
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
+        },
+        {
+          "from": "Maldive fish",
+          "to": "Fish sauce | Anchovy paste | Soy sauce + lime",
+          "note": "Use a little less; these are very salty"
+        },
+        {
+          "from": "Curry leaves",
+          "to": "Bay leaf + lime zest | Skip them",
+          "note": "Nothing tastes exactly the same; the dish is still good without them"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 10,
+    "fat": 19,
+    "fiber": 5,
+    "image": "/images/dishes/Sri-Lankan-Coconut-Sambol-Salad.jpg"
+  },
+  {
+    "id": 1110,
+    "name": "Greek Chicken Weight-Loss Salad",
+    "country": "Greece",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 360,
+    "budget": 7,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "salad",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Light Greek salad of grilled chicken, crisp vegetables and a little feta.",
+    "ingredients": [
+      "Grilled chicken breast",
+      "Romaine lettuce",
+      "Cucumber",
+      "Tomatoes",
+      "Red onion",
+      "Feta",
+      "Lemon-oregano dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken breast",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        },
+        {
+          "from": "Feta",
+          "to": "Crumbled firm tofu | Cashew ricotta",
+          "note": "Add lemon and salt for the fresh, tangy taste"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Feta",
+          "to": "Crumbled firm tofu | Vegan feta | Cashew ricotta",
+          "note": "Add lemon and salt for the fresh, tangy taste"
+        }
+      ],
+      "local": [
+        {
+          "from": "Feta",
+          "to": "Ricotta | Cottage cheese, drained",
+          "note": "Feta replaces salty white cheeses; ricotta replaces fresh curd cheeses"
+        }
+      ]
+    },
+    "protein": 38,
+    "carbs": 12,
+    "fat": 18,
+    "fiber": 4,
+    "image": "/images/dishes/Greek-Chicken-Weight-Loss-Salad.jpg"
+  },
+  {
+    "id": 1111,
+    "name": "Mediterranean Tuna Salad",
+    "country": "Greece",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 380,
+    "budget": 6,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "fish"
+    ],
+    "desc": "Tuna salad with chickpeas, cucumber, tomatoes and a lemon-olive oil dressing.",
+    "ingredients": [
+      "Tuna",
+      "Cucumber",
+      "Cherry tomatoes",
+      "Chickpeas",
+      "Red onion",
+      "Parsley",
+      "Lemon-olive oil dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Tuna",
+          "to": "Marinated tofu | Watermelon tuna | Carrot lox",
+          "note": "Marinate in soy, seaweed and lemon for a sea flavor"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 28,
+    "fat": 16,
+    "fiber": 8,
+    "image": "/images/dishes/Mediterranean-Tuna-Salad.jpg"
+  },
+  {
+    "id": 1112,
+    "name": "Moroccan Lentil Weight-Loss Bowl",
+    "country": "Morocco",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 380,
+    "budget": 6,
+    "time": "35 min",
+    "spice": 2,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Moroccan lentils with roasted carrots, vegetables and harissa yogurt.",
+    "ingredients": [
+      "Green lentils",
+      "Roasted carrots",
+      "Cucumber",
+      "Tomatoes",
+      "Parsley",
+      "Harissa yogurt",
+      "Lemon"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Harissa yogurt",
+          "to": "Tomato paste + sweet paprika | Half the amount",
+          "note": "Same color, milder"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Harissa yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Harissa yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Harissa yogurt",
+          "to": "Greek yogurt | Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 20,
+    "carbs": 52,
+    "fat": 9,
+    "fiber": 15,
+    "image": "/images/dishes/Moroccan-Lentil-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1113,
+    "name": "Thai Chicken Lettuce Cups",
+    "country": "Thailand",
+    "region": "Asia",
+    "emoji": "🥬",
+    "cal": 340,
+    "budget": 7,
+    "time": "25 min",
+    "spice": 2,
+    "tags": [
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Thai minced chicken in crunchy lettuce cups with basil and peanut-lime sauce.",
+    "ingredients": [
+      "Ground chicken",
+      "Butter lettuce",
+      "Carrot",
+      "Water chestnuts",
+      "Lime",
+      "Thai basil",
+      "Peanut-lime sauce",
+      "Thai chilies"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Thai chilies",
+          "to": "Jalapeño, seeds removed | Half a chili | Green bell pepper",
+          "note": "Remove seeds and white ribs to cut the heat"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Ground chicken",
+          "to": "Brown lentils | Plant-based mince | Chopped mushrooms + walnuts",
+          "note": "Brown well and season the same way"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Peanut-lime sauce",
+          "to": "Sunflower seed butter | Roasted chickpeas | Toasted pumpkin seeds",
+          "note": "Sunflower butter gives the same creamy, nutty taste"
+        }
+      ],
+      "local": [
+        {
+          "from": "Thai basil",
+          "to": "Basil + a few mint leaves | Cilantro",
+          "note": "Culantro and chadon beni: use cilantro; Thai basil: basil + mint"
+        },
+        {
+          "from": "Thai chilies",
+          "to": "Habanero | Jalapeño",
+          "note": "Habanero is as hot; jalapeño is milder"
+        }
+      ]
+    },
+    "protein": 28,
+    "carbs": 16,
+    "fat": 18,
+    "fiber": 3,
+    "image": "/images/dishes/Thai-Chicken-Lettuce-Cups.jpg"
+  },
+  {
+    "id": 1114,
+    "name": "Vietnamese Shrimp Salad",
+    "country": "Vietnam",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 240,
+    "budget": 7,
+    "time": "20 min",
+    "spice": 1,
+    "tags": [
+      "salad",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "fish",
+      "shellfish"
+    ],
+    "desc": "Vietnamese shrimp salad with cabbage, herbs and lime fish-sauce dressing.",
+    "ingredients": [
+      "Shrimp",
+      "Cabbage",
+      "Carrot",
+      "Cucumber",
+      "Mint",
+      "Cilantro",
+      "Lime fish-sauce dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Shrimp",
+          "to": "King oyster mushrooms | Hearts of palm | Plant-based shrimp",
+          "note": "Slice mushroom stems into rounds and sear"
+        }
+      ]
+    },
+    "protein": 24,
+    "carbs": 18,
+    "fat": 7,
+    "fiber": 4,
+    "image": "/images/dishes/Vietnamese-Shrimp-Salad.jpg"
+  },
+  {
+    "id": 1115,
+    "name": "Japanese Salmon Cucumber Bowl",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 520,
+    "budget": 9,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "fish"
+    ],
+    "desc": "Salmon over brown rice with cucumber, edamame and soy-ginger dressing.",
+    "ingredients": [
+      "Salmon",
+      "Cucumber",
+      "Edamame",
+      "Brown rice",
+      "Nori",
+      "Sesame seeds",
+      "Soy-ginger dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Salmon",
+          "to": "Marinated tofu | Watermelon tuna | Carrot lox",
+          "note": "Marinate in soy, seaweed and lemon for a sea flavor"
+        }
+      ]
+    },
+    "protein": 34,
+    "carbs": 48,
+    "fat": 20,
+    "fiber": 6,
+    "image": "/images/dishes/Japanese-Salmon-Cucumber-Bowl.jpg"
+  },
+  {
+    "id": 1116,
+    "name": "Korean Chicken Cabbage Bowl",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 480,
+    "budget": 8,
+    "time": "25 min",
+    "spice": 2,
+    "tags": [
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Grilled chicken with cabbage, brown rice, kimchi and gochujang dressing.",
+    "ingredients": [
+      "Grilled chicken",
+      "Cabbage",
+      "Carrot",
+      "Cucumber",
+      "Brown rice",
+      "Kimchi",
+      "Gochujang dressing"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Gochujang dressing",
+          "to": "Miso + sweet paprika | Half the amount",
+          "note": "Same savory depth, less heat"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Gochujang dressing",
+          "to": "Gluten-free gochujang | Gluten-free miso + chili flakes",
+          "note": "Many Korean pastes contain wheat"
+        }
+      ],
+      "local": [
+        {
+          "from": "Kimchi",
+          "to": "Sauerkraut + chili flakes + garlic",
+          "note": "Quick stand-in for cooking"
+        },
+        {
+          "from": "Gochujang dressing",
+          "to": "Miso + sriracha + a little honey | Red miso",
+          "note": "Mix to taste"
+        }
+      ]
+    },
+    "protein": 38,
+    "carbs": 52,
+    "fat": 12,
+    "fiber": 7,
+    "image": "/images/dishes/Korean-Chicken-Cabbage-Bowl.jpg"
+  },
+  {
+    "id": 1117,
+    "name": "Mexican Grilled Chicken Salad",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🥗",
+    "cal": 480,
+    "budget": 7,
+    "time": "20 min",
+    "spice": 1,
+    "tags": [
+      "salad",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken salad with black beans, corn, avocado and lime-cilantro dressing.",
+    "ingredients": [
+      "Grilled chicken",
+      "Romaine lettuce",
+      "Black beans",
+      "Corn",
+      "Tomatoes",
+      "Avocado",
+      "Lime-cilantro dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 38,
+    "carbs": 32,
+    "fat": 22,
+    "fiber": 11,
+    "image": "/images/dishes/Mexican-Grilled-Chicken-Salad.jpg"
+  },
+  {
+    "id": 1118,
+    "name": "Brazilian Hearts of Palm Salad",
+    "country": "Brazil",
+    "region": "Americas",
+    "emoji": "🥗",
+    "cal": 220,
+    "budget": 6,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Brazilian salad of hearts of palm, tomato and avocado with lime.",
+    "ingredients": [
+      "Hearts of palm",
+      "Tomatoes",
+      "Avocado",
+      "Red onion",
+      "Parsley",
+      "Lime juice",
+      "Olive oil"
+    ],
+    "swaps": {},
+    "protein": 4,
+    "carbs": 14,
+    "fat": 17,
+    "fiber": 7,
+    "image": "/images/dishes/Brazilian-Hearts-of-Palm-Salad.jpg"
+  },
+  {
+    "id": 1119,
+    "name": "Peruvian Quinoa Salad",
+    "country": "Peru",
+    "region": "Americas",
+    "emoji": "🥗",
+    "cal": 380,
+    "budget": 5,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Peruvian quinoa salad with corn, tomato, avocado and lime.",
+    "ingredients": [
+      "Quinoa",
+      "Corn",
+      "Tomatoes",
+      "Avocado",
+      "Red onion",
+      "Cilantro",
+      "Lime dressing"
+    ],
+    "swaps": {},
+    "protein": 10,
+    "carbs": 50,
+    "fat": 17,
+    "fiber": 9,
+    "image": "/images/dishes/Peruvian-Quinoa-Salad.jpg"
+  },
+  {
+    "id": 1120,
+    "name": "Caribbean Mango Chicken Salad",
+    "country": "Jamaica",
+    "region": "Americas",
+    "emoji": "🥗",
+    "cal": 420,
+    "budget": 7,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with mango, greens, avocado and lime dressing.",
+    "ingredients": [
+      "Grilled chicken",
+      "Mango",
+      "Mixed greens",
+      "Cucumber",
+      "Red pepper",
+      "Avocado",
+      "Lime dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 36,
+    "carbs": 28,
+    "fat": 19,
+    "fiber": 7,
+    "image": "/images/dishes/Caribbean-Mango-Chicken-Salad.jpg"
+  },
+  {
+    "id": 1121,
+    "name": "Jamaican Jerk Chicken Salad",
+    "country": "Jamaica",
+    "region": "Americas",
+    "emoji": "🥗",
+    "cal": 440,
+    "budget": 8,
+    "time": "25 min",
+    "spice": 2,
+    "tags": [
+      "salad",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Jerk chicken over romaine with mango, cabbage, avocado and lime.",
+    "ingredients": [
+      "Jerk chicken",
+      "Romaine lettuce",
+      "Mango",
+      "Cabbage",
+      "Bell pepper",
+      "Avocado",
+      "Scotch bonnet",
+      "Lime dressing"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Scotch bonnet",
+          "to": "Jalapeño, seeds removed | Half a chili | Green bell pepper",
+          "note": "Remove seeds and white ribs to cut the heat"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Jerk chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ],
+      "local": [
+        {
+          "from": "Scotch bonnet",
+          "to": "Habanero | Jalapeño",
+          "note": "Habanero is as hot; jalapeño is milder"
+        }
+      ]
+    },
+    "protein": 36,
+    "carbs": 28,
+    "fat": 21,
+    "fiber": 7,
+    "image": "/images/dishes/Jamaican-Jerk-Chicken-Salad.jpg"
+  },
+  {
+    "id": 1122,
+    "name": "Nigerian Grilled Chicken Vegetable Bowl",
+    "country": "Nigeria",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 480,
+    "budget": 7,
+    "time": "25 min",
+    "spice": 2,
+    "tags": [
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with brown rice, vegetables and a Nigerian pepper sauce.",
+    "ingredients": [
+      "Grilled chicken",
+      "Brown rice",
+      "Cabbage",
+      "Carrots",
+      "Tomatoes",
+      "Cucumber",
+      "Scotch bonnet pepper sauce"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Scotch bonnet pepper sauce",
+          "to": "Jalapeño, seeds removed | Half a chili | Green bell pepper",
+          "note": "Remove seeds and white ribs to cut the heat"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ],
+      "local": [
+        {
+          "from": "Scotch bonnet pepper sauce",
+          "to": "Habanero | Jalapeño",
+          "note": "Habanero is as hot; jalapeño is milder"
+        }
+      ]
+    },
+    "protein": 40,
+    "carbs": 52,
+    "fat": 12,
+    "fiber": 6,
+    "image": "/images/dishes/Nigerian-Grilled-Chicken-Vegetable-Bowl.jpg"
+  },
+  {
+    "id": 1123,
+    "name": "Ghanaian Bean and Vegetable Bowl",
+    "country": "Ghana",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 480,
+    "budget": 6,
+    "time": "30 min",
+    "spice": 2,
+    "tags": [
+      "bowl",
+      "dairy-free",
+      "gluten-free",
+      "fish"
+    ],
+    "desc": "Black-eyed peas with roasted plantain, vegetables, avocado and shito.",
+    "ingredients": [
+      "Black-eyed peas",
+      "Roasted plantain",
+      "Cabbage",
+      "Carrots",
+      "Tomatoes",
+      "Avocado",
+      "Shito"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Shito",
+          "to": "Half the amount | Sweet paprika | Mild bell pepper",
+          "note": "Add heat at the table instead"
+        }
+      ],
+      "local": [
+        {
+          "from": "Black-eyed peas",
+          "to": "Pinto beans | Green peas",
+          "note": "Canned beans save hours of soaking"
+        },
+        {
+          "from": "Roasted plantain",
+          "to": "Green bananas | Potatoes (for savory dishes)",
+          "note": "Ripe plantains: use firm sweet bananas"
+        },
+        {
+          "from": "Shito",
+          "to": "Thai red curry paste | Sriracha",
+          "note": "Store-bought pastes are a quick replacement for homemade ones"
+        }
+      ]
+    },
+    "protein": 16,
+    "carbs": 70,
+    "fat": 16,
+    "fiber": 16,
+    "image": "/images/dishes/Ghanaian-Bean-and-Vegetable-Bowl.jpg"
+  },
+  {
+    "id": 1124,
+    "name": "Ethiopian Lentil Salad",
+    "country": "Ethiopia",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 320,
+    "budget": 5,
+    "time": "30 min",
+    "spice": 2,
+    "tags": [
+      "salad",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Ethiopian lentil salad with tomato, onion and a touch of berbere.",
+    "ingredients": [
+      "Green lentils",
+      "Tomatoes",
+      "Cucumber",
+      "Red onion",
+      "Parsley",
+      "Lemon juice",
+      "Berbere"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Berbere",
+          "to": "Sweet paprika | Half the amount",
+          "note": "Keeps the color with less heat"
+        }
+      ],
+      "local": [
+        {
+          "from": "Berbere",
+          "to": "Paprika + cayenne + ground fenugreek + cardamom",
+          "note": "Mix 4 parts paprika, 1 part cayenne, a pinch of the rest"
+        }
+      ]
+    },
+    "protein": 18,
+    "carbs": 46,
+    "fat": 7,
+    "fiber": 15,
+    "image": "/images/dishes/Ethiopian-Lentil-Salad.jpg"
+  },
+  {
+    "id": 1125,
+    "name": "Kenyan Avocado Tomato Salad",
+    "country": "Kenya",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 240,
+    "budget": 4,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Kenyan avocado, tomato and onion salad with lime and cilantro.",
+    "ingredients": [
+      "Avocado",
+      "Tomatoes",
+      "Red onion",
+      "Cilantro",
+      "Lime juice",
+      "Black pepper",
+      "Salt"
+    ],
+    "swaps": {},
+    "protein": 3,
+    "carbs": 14,
+    "fat": 20,
+    "fiber": 9,
+    "image": "/images/dishes/Kenyan-Avocado-Tomato-Salad.jpg"
+  },
+  {
+    "id": 1126,
+    "name": "South African Chicken Slaw",
+    "country": "South Africa",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 380,
+    "budget": 7,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "South African grilled chicken with colorful cabbage slaw and light yogurt dressing.",
+    "ingredients": [
+      "Grilled chicken",
+      "Green cabbage",
+      "Purple cabbage",
+      "Carrots",
+      "Bell pepper",
+      "Cilantro",
+      "Light yogurt dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        },
+        {
+          "from": "Light yogurt dressing",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Light yogurt dressing",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Light yogurt dressing",
+          "to": "Greek yogurt | Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 38,
+    "carbs": 20,
+    "fat": 15,
+    "fiber": 6,
+    "image": "/images/dishes/South-African-Chicken-Slaw.jpg"
+  },
+  {
+    "id": 1127,
+    "name": "Egyptian Chickpea Salad",
+    "country": "Egypt",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 320,
+    "budget": 4,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Egyptian chickpea salad with tomato, cucumber, parsley, lemon and cumin.",
+    "ingredients": [
+      "Chickpeas",
+      "Tomatoes",
+      "Cucumber",
+      "Red onion",
+      "Parsley",
+      "Lemon juice",
+      "Cumin",
+      "Olive oil"
+    ],
+    "swaps": {},
+    "protein": 12,
+    "carbs": 38,
+    "fat": 13,
+    "fiber": 10,
+    "image": "/images/dishes/Egyptian-Chickpea-Salad.jpg"
+  },
+  {
+    "id": 1128,
+    "name": "Turkish Lentil Salad",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "🥗",
+    "cal": 320,
+    "budget": 4,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "salad",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Turkish lentil salad with red pepper, herbs and lemon dressing.",
+    "ingredients": [
+      "Green lentils",
+      "Red pepper",
+      "Cucumber",
+      "Red onion",
+      "Parsley",
+      "Mint",
+      "Lemon dressing",
+      "Pul biber"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Pul biber",
+          "to": "Sweet paprika + chili flakes",
+          "note": "Mix 3 parts paprika to 1 part flakes"
+        }
+      ]
+    },
+    "protein": 18,
+    "carbs": 44,
+    "fat": 8,
+    "fiber": 14,
+    "image": "/images/dishes/Turkish-Lentil-Salad.jpg"
+  },
+  {
+    "id": 1129,
+    "name": "Lebanese Chickpea Parsley Salad",
+    "country": "Lebanon",
+    "region": "Middle East",
+    "emoji": "🥗",
+    "cal": 320,
+    "budget": 4,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Lebanese chickpea and parsley salad with lemon and olive oil.",
+    "ingredients": [
+      "Chickpeas",
+      "Parsley",
+      "Tomatoes",
+      "Cucumber",
+      "Red onion",
+      "Lemon juice",
+      "Olive oil"
+    ],
+    "swaps": {},
+    "protein": 12,
+    "carbs": 36,
+    "fat": 14,
+    "fiber": 10,
+    "image": "/images/dishes/Lebanese-Chickpea-Parsley-Salad.jpg"
+  },
+  {
+    "id": 1130,
+    "name": "Greek Chicken Quinoa Protein Bowl",
+    "country": "Greece",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 580,
+    "budget": 10,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Greek chicken bowl with quinoa, olives, feta and tzatziki.",
+    "ingredients": [
+      "Grilled chicken",
+      "Quinoa",
+      "Cucumber",
+      "Tomatoes",
+      "Kalamata olives",
+      "Feta",
+      "Tzatziki"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        },
+        {
+          "from": "Feta",
+          "to": "Crumbled firm tofu | Cashew ricotta",
+          "note": "Add lemon and salt for the fresh, tangy taste"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Feta",
+          "to": "Crumbled firm tofu | Vegan feta | Cashew ricotta",
+          "note": "Add lemon and salt for the fresh, tangy taste"
+        }
+      ],
+      "local": [
+        {
+          "from": "Feta",
+          "to": "Ricotta | Cottage cheese, drained",
+          "note": "Feta replaces salty white cheeses; ricotta replaces fresh curd cheeses"
+        }
+      ]
+    },
+    "protein": 46,
+    "carbs": 44,
+    "fat": 24,
+    "fiber": 7,
+    "image": "/images/dishes/Greek-Chicken-Quinoa-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1131,
+    "name": "Turkish Chicken Bulgur Protein Bowl",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "🥗",
+    "cal": 600,
+    "budget": 10,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Turkish chicken bowl with bulgur, chickpeas and yogurt-herb sauce.",
+    "ingredients": [
+      "Grilled chicken",
+      "Bulgur",
+      "Chickpeas",
+      "Cucumber",
+      "Tomatoes",
+      "Red onion",
+      "Yogurt-herb sauce"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        },
+        {
+          "from": "Yogurt-herb sauce",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Yogurt-herb sauce",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Bulgur",
+          "to": "Quinoa | Millet | Cauliflower rice",
+          "note": "Quinoa cooks in about 15 minutes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Yogurt-herb sauce",
+          "to": "Greek yogurt | Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 48,
+    "carbs": 58,
+    "fat": 18,
+    "fiber": 11,
+    "image": "/images/dishes/Turkish-Chicken-Bulgur-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1132,
+    "name": "Japanese Salmon Rice Protein Bowl",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🍣",
+    "cal": 620,
+    "budget": 11,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "fish"
+    ],
+    "desc": "Salmon protein bowl with brown rice, edamame and sesame-soy dressing.",
+    "ingredients": [
+      "Salmon",
+      "Brown rice",
+      "Edamame",
+      "Cucumber",
+      "Carrot",
+      "Nori",
+      "Sesame-soy dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Salmon",
+          "to": "Marinated tofu | Watermelon tuna | Carrot lox",
+          "note": "Marinate in soy, seaweed and lemon for a sea flavor"
+        }
+      ]
+    },
+    "protein": 42,
+    "carbs": 56,
+    "fat": 24,
+    "fiber": 7,
+    "image": "/images/dishes/Japanese-Salmon-Rice-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1133,
+    "name": "Korean Beef Rice Protein Bowl",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🥩",
+    "cal": 600,
+    "budget": 11,
+    "time": "30 min",
+    "spice": 2,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Korean beef bowl with brown rice, spinach, kimchi and gochujang.",
+    "ingredients": [
+      "Lean beef",
+      "Brown rice",
+      "Spinach",
+      "Carrot",
+      "Cucumber",
+      "Kimchi",
+      "Gochujang"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Gochujang",
+          "to": "Miso + sweet paprika | Half the amount",
+          "note": "Same savory depth, less heat"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Lean beef",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Gochujang",
+          "to": "Gluten-free gochujang | Gluten-free miso + chili flakes",
+          "note": "Many Korean pastes contain wheat"
+        }
+      ],
+      "local": [
+        {
+          "from": "Kimchi",
+          "to": "Sauerkraut + chili flakes + garlic",
+          "note": "Quick stand-in for cooking"
+        },
+        {
+          "from": "Gochujang",
+          "to": "Miso + sriracha + a little honey | Red miso",
+          "note": "Mix to taste"
+        }
+      ]
+    },
+    "protein": 44,
+    "carbs": 62,
+    "fat": 18,
+    "fiber": 6,
+    "image": "/images/dishes/Korean-Beef-Rice-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1134,
+    "name": "Thai Chicken Peanut Protein Bowl",
+    "country": "Thailand",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 640,
+    "budget": 10,
+    "time": "30 min",
+    "spice": 2,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Thai chicken bowl with brown rice, crunchy vegetables and peanut-lime sauce.",
+    "ingredients": [
+      "Grilled chicken",
+      "Brown rice",
+      "Cabbage",
+      "Carrot",
+      "Cucumber",
+      "Peanuts",
+      "Peanut-lime sauce",
+      "Thai chilies"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Thai chilies",
+          "to": "Jalapeño, seeds removed | Half a chili | Green bell pepper",
+          "note": "Remove seeds and white ribs to cut the heat"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Peanuts",
+          "to": "Sunflower seed butter | Roasted chickpeas | Toasted pumpkin seeds",
+          "note": "Sunflower butter gives the same creamy, nutty taste"
+        },
+        {
+          "from": "Peanut-lime sauce",
+          "to": "Sunflower seed butter | Roasted chickpeas | Toasted pumpkin seeds",
+          "note": "Sunflower butter gives the same creamy, nutty taste"
+        }
+      ],
+      "local": [
+        {
+          "from": "Thai chilies",
+          "to": "Habanero | Jalapeño",
+          "note": "Habanero is as hot; jalapeño is milder"
+        }
+      ]
+    },
+    "protein": 46,
+    "carbs": 58,
+    "fat": 24,
+    "fiber": 7,
+    "image": "/images/dishes/Thai-Chicken-Peanut-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1135,
+    "name": "Vietnamese Lemongrass Chicken Protein Bowl",
+    "country": "Vietnam",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 560,
+    "budget": 10,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "fish"
+    ],
+    "desc": "Vietnamese lemongrass chicken bowl with rice, herbs and nuoc cham.",
+    "ingredients": [
+      "Lemongrass chicken",
+      "Brown rice",
+      "Cucumber",
+      "Carrot",
+      "Cabbage",
+      "Fresh herbs",
+      "Nuoc cham"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lemongrass chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ],
+      "local": [
+        {
+          "from": "Lemongrass chicken",
+          "to": "Lemon zest + a little ginger",
+          "note": "Zest of 1 lemon replaces 1 stalk"
+        }
+      ]
+    },
+    "protein": 44,
+    "carbs": 60,
+    "fat": 14,
+    "fiber": 5,
+    "image": "/images/dishes/Vietnamese-Lemongrass-Chicken-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1136,
+    "name": "Indian Tandoori Chicken Protein Bowl",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍛",
+    "cal": 600,
+    "budget": 10,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Tandoori chicken bowl with brown basmati, chickpeas, spinach and mint yogurt.",
+    "ingredients": [
+      "Tandoori chicken",
+      "Brown basmati rice",
+      "Cucumber",
+      "Tomatoes",
+      "Chickpeas",
+      "Spinach",
+      "Mint yogurt"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Tandoori chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        },
+        {
+          "from": "Mint yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Mint yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Mint yogurt",
+          "to": "Greek yogurt | Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 48,
+    "carbs": 60,
+    "fat": 16,
+    "fiber": 9,
+    "image": "/images/dishes/Indian-Tandoori-Chicken-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1137,
+    "name": "Pakistani Chicken Chickpea Protein Bowl",
+    "country": "Pakistan",
+    "region": "Asia",
+    "emoji": "🍛",
+    "cal": 600,
+    "budget": 10,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Spiced chicken with chickpeas, brown rice and mint chutney.",
+    "ingredients": [
+      "Spiced chicken",
+      "Chickpeas",
+      "Brown rice",
+      "Cucumber",
+      "Tomatoes",
+      "Red onion",
+      "Mint chutney",
+      "Green chili"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Spiced chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ],
+      "local": [
+        {
+          "from": "Green chili",
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
+        }
+      ]
+    },
+    "protein": 46,
+    "carbs": 64,
+    "fat": 16,
+    "fiber": 11,
+    "image": "/images/dishes/Pakistani-Chicken-Chickpea-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1138,
+    "name": "Lebanese Chicken Hummus Protein Bowl",
+    "country": "Lebanon",
+    "region": "Middle East",
+    "emoji": "🥗",
+    "cal": 600,
+    "budget": 10,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Lebanese chicken bowl with hummus, quinoa, pickled turnips and parsley.",
+    "ingredients": [
+      "Grilled chicken",
+      "Hummus",
+      "Quinoa",
+      "Cucumber",
+      "Tomatoes",
+      "Pickled turnips",
+      "Parsley"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 46,
+    "carbs": 50,
+    "fat": 22,
+    "fiber": 10,
+    "image": "/images/dishes/Lebanese-Chicken-Hummus-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1139,
+    "name": "Moroccan Chicken Couscous Protein Bowl",
+    "country": "Morocco",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 620,
+    "budget": 10,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Moroccan chicken bowl with couscous, chickpeas, vegetables and chermoula.",
+    "ingredients": [
+      "Grilled chicken",
+      "Whole-wheat couscous",
+      "Chickpeas",
+      "Carrots",
+      "Zucchini",
+      "Parsley",
+      "Chermoula"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Whole-wheat couscous",
+          "to": "Quinoa | Millet | Cauliflower rice",
+          "note": "Quinoa cooks in about 15 minutes"
+        }
+      ]
+    },
+    "protein": 46,
+    "carbs": 62,
+    "fat": 18,
+    "fiber": 11,
+    "image": "/images/dishes/Moroccan-Chicken-Couscous-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1140,
+    "name": "Nigerian Chicken and Beans Protein Bowl",
+    "country": "Nigeria",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 680,
+    "budget": 10,
+    "time": "30 min",
+    "spice": 2,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Nigerian chicken bowl with black-eyed peas, rice, plantain and pepper sauce.",
+    "ingredients": [
+      "Grilled chicken",
+      "Black-eyed peas",
+      "Brown rice",
+      "Tomatoes",
+      "Cabbage",
+      "Plantain",
+      "Scotch bonnet pepper sauce"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Scotch bonnet pepper sauce",
+          "to": "Jalapeño, seeds removed | Half a chili | Green bell pepper",
+          "note": "Remove seeds and white ribs to cut the heat"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ],
+      "local": [
+        {
+          "from": "Black-eyed peas",
+          "to": "Pinto beans | Green peas",
+          "note": "Canned beans save hours of soaking"
+        },
+        {
+          "from": "Plantain",
+          "to": "Green bananas | Potatoes (for savory dishes)",
+          "note": "Ripe plantains: use firm sweet bananas"
+        },
+        {
+          "from": "Scotch bonnet pepper sauce",
+          "to": "Habanero | Jalapeño",
+          "note": "Habanero is as hot; jalapeño is milder"
+        }
+      ]
+    },
+    "protein": 48,
+    "carbs": 80,
+    "fat": 16,
+    "fiber": 13,
+    "image": "/images/dishes/Nigerian-Chicken-and-Beans-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1141,
+    "name": "Ghanaian Grilled Fish and Beans Bowl",
+    "country": "Ghana",
+    "region": "Africa",
+    "emoji": "🐟",
+    "cal": 620,
+    "budget": 9,
+    "time": "30 min",
+    "spice": 2,
+    "tags": [
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "fish"
+    ],
+    "desc": "Ghanaian grilled fish with black-eyed peas, rice, avocado and shito.",
+    "ingredients": [
+      "Grilled fish",
+      "Black-eyed peas",
+      "Brown rice",
+      "Tomatoes",
+      "Cabbage",
+      "Avocado",
+      "Shito"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Shito",
+          "to": "Half the amount | Sweet paprika | Mild bell pepper",
+          "note": "Add heat at the table instead"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Grilled fish",
+          "to": "Firm tofu | Hearts of palm | Banana blossom",
+          "note": "Wrap in nori or add seaweed for a fish flavor"
+        }
+      ],
+      "local": [
+        {
+          "from": "Grilled fish",
+          "to": "Tilapia | Cod | Any firm white fish",
+          "note": "Any firm, mild white fish works"
+        },
+        {
+          "from": "Black-eyed peas",
+          "to": "Pinto beans | Green peas",
+          "note": "Canned beans save hours of soaking"
+        },
+        {
+          "from": "Shito",
+          "to": "Thai red curry paste | Sriracha",
+          "note": "Store-bought pastes are a quick replacement for homemade ones"
+        }
+      ]
+    },
+    "protein": 42,
+    "carbs": 64,
+    "fat": 20,
+    "fiber": 13,
+    "image": "/images/dishes/Ghanaian-Grilled-Fish-and-Beans-Bowl.jpg"
+  },
+  {
+    "id": 1142,
+    "name": "Senegalese Chicken Rice Protein Bowl",
+    "country": "Senegal",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 560,
+    "budget": 10,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Senegalese chicken bowl with brown rice, vegetables and lemon-onion sauce.",
+    "ingredients": [
+      "Grilled chicken",
+      "Brown rice",
+      "Carrots",
+      "Cabbage",
+      "Tomatoes",
+      "Green beans",
+      "Lemon-onion sauce"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 44,
+    "carbs": 62,
+    "fat": 14,
+    "fiber": 7,
+    "image": "/images/dishes/Senegalese-Chicken-Rice-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1143,
+    "name": "Ethiopian Beef and Lentil Protein Bowl",
+    "country": "Ethiopia",
+    "region": "Africa",
+    "emoji": "🥩",
+    "cal": 620,
+    "budget": 11,
+    "time": "30 min",
+    "spice": 2,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Ethiopian beef and lentil bowl with collard greens and berbere sauce.",
+    "ingredients": [
+      "Lean beef",
+      "Lentils",
+      "Brown rice",
+      "Collard greens",
+      "Tomatoes",
+      "Cabbage",
+      "Berbere sauce"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Berbere sauce",
+          "to": "Sweet paprika | Half the amount",
+          "note": "Keeps the color with less heat"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Lean beef",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        },
+        {
+          "from": "Collard greens",
+          "to": "Vegetable shortening | Olive oil | Coconut oil",
+          "note": "Same richness without animal fat"
+        }
+      ],
+      "local": [
+        {
+          "from": "Collard greens",
+          "to": "Spinach | Kale",
+          "note": "Frozen cassava leaves are sold in African stores"
+        },
+        {
+          "from": "Berbere sauce",
+          "to": "Paprika + cayenne + ground fenugreek + cardamom",
+          "note": "Mix 4 parts paprika, 1 part cayenne, a pinch of the rest"
+        }
+      ]
+    },
+    "protein": 50,
+    "carbs": 62,
+    "fat": 16,
+    "fiber": 14,
+    "image": "/images/dishes/Ethiopian-Beef-and-Lentil-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1144,
+    "name": "Kenyan Chicken Sweet Potato Protein Bowl",
+    "country": "Kenya",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 620,
+    "budget": 10,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Kenyan chicken bowl with roasted sweet potato, sukuma wiki and avocado.",
+    "ingredients": [
+      "Grilled chicken",
+      "Roasted sweet potato",
+      "Sukuma wiki",
+      "Tomatoes",
+      "Avocado",
+      "Brown rice",
+      "Lemon dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 44,
+    "carbs": 66,
+    "fat": 18,
+    "fiber": 11,
+    "image": "/images/dishes/Kenyan-Chicken-Sweet-Potato-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1145,
+    "name": "South African Beef Protein Bowl",
+    "country": "South Africa",
+    "region": "Africa",
+    "emoji": "🥩",
+    "cal": 640,
+    "budget": 11,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "South African beef bowl with brown rice, chakalaka and avocado.",
+    "ingredients": [
+      "Lean grilled beef",
+      "Brown rice",
+      "Chakalaka",
+      "Cabbage",
+      "Tomatoes",
+      "Avocado",
+      "Herb dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lean grilled beef",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        }
+      ]
+    },
+    "protein": 46,
+    "carbs": 62,
+    "fat": 22,
+    "fiber": 11,
+    "image": "/images/dishes/South-African-Beef-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1146,
+    "name": "Mexican Chicken Black Bean Protein Bowl",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🥗",
+    "cal": 660,
+    "budget": 10,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Mexican chicken bowl with black beans, brown rice, corn, pico de gallo and avocado.",
+    "ingredients": [
+      "Grilled chicken",
+      "Black beans",
+      "Brown rice",
+      "Corn",
+      "Pico de gallo",
+      "Avocado",
+      "Lime",
+      "Jalapeño"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ],
+      "local": [
+        {
+          "from": "Jalapeño",
+          "to": "Thai red curry paste | Sriracha",
+          "note": "Store-bought pastes are a quick replacement for homemade ones"
+        }
+      ]
+    },
+    "protein": 48,
+    "carbs": 72,
+    "fat": 18,
+    "fiber": 15,
+    "image": "/images/dishes/Mexican-Chicken-Black-Bean-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1147,
+    "name": "Brazilian Beef Rice and Beans Protein Bowl",
+    "country": "Brazil",
+    "region": "Americas",
+    "emoji": "🥩",
+    "cal": 680,
+    "budget": 11,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Brazilian beef bowl with brown rice, black beans, collards and farofa.",
+    "ingredients": [
+      "Lean beef",
+      "Brown rice",
+      "Black beans",
+      "Collard greens",
+      "Tomatoes",
+      "Orange salsa",
+      "Farofa"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lean beef",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        },
+        {
+          "from": "Collard greens",
+          "to": "Vegetable shortening | Olive oil | Coconut oil",
+          "note": "Same richness without animal fat"
+        }
+      ],
+      "local": [
+        {
+          "from": "Collard greens",
+          "to": "Spinach | Kale",
+          "note": "Frozen cassava leaves are sold in African stores"
+        }
+      ]
+    },
+    "protein": 48,
+    "carbs": 76,
+    "fat": 18,
+    "fiber": 14,
+    "image": "/images/dishes/Brazilian-Beef-Rice-and-Beans-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1148,
+    "name": "Peruvian Chicken Quinoa Protein Bowl",
+    "country": "Peru",
+    "region": "Americas",
+    "emoji": "🥗",
+    "cal": 600,
+    "budget": 10,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Peruvian chicken bowl with quinoa, corn, avocado and ají-lime sauce.",
+    "ingredients": [
+      "Grilled chicken",
+      "Quinoa",
+      "Corn",
+      "Tomatoes",
+      "Avocado",
+      "Red onion",
+      "Ají-lime sauce"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 46,
+    "carbs": 52,
+    "fat": 22,
+    "fiber": 9,
+    "image": "/images/dishes/Peruvian-Chicken-Quinoa-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1149,
+    "name": "Argentine Steak Chimichurri Protein Bowl",
+    "country": "Argentina",
+    "region": "Americas",
+    "emoji": "🥩",
+    "cal": 660,
+    "budget": 12,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Argentine steak bowl with quinoa, peppers, black beans and chimichurri.",
+    "ingredients": [
+      "Lean steak",
+      "Quinoa",
+      "Roasted peppers",
+      "Tomatoes",
+      "Black beans",
+      "Corn",
+      "Chimichurri"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lean steak",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        }
+      ]
+    },
+    "protein": 48,
+    "carbs": 56,
+    "fat": 26,
+    "fiber": 12,
+    "image": "/images/dishes/Argentine-Steak-Chimichurri-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1150,
+    "name": "Jamaican Jerk Chicken Protein Bowl",
+    "country": "Jamaica",
+    "region": "Americas",
+    "emoji": "🥗",
+    "cal": 720,
+    "budget": 10,
+    "time": "35 min",
+    "spice": 2,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Jerk chicken with rice and peas, slaw, mango salsa, avocado and plantain.",
+    "ingredients": [
+      "Jerk chicken",
+      "Rice and peas",
+      "Cabbage slaw",
+      "Mango salsa",
+      "Avocado",
+      "Plantain",
+      "Scotch bonnet"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Scotch bonnet",
+          "to": "Jalapeño, seeds removed | Half a chili | Green bell pepper",
+          "note": "Remove seeds and white ribs to cut the heat"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Jerk chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ],
+      "local": [
+        {
+          "from": "Plantain",
+          "to": "Green bananas | Potatoes (for savory dishes)",
+          "note": "Ripe plantains: use firm sweet bananas"
+        },
+        {
+          "from": "Scotch bonnet",
+          "to": "Habanero | Jalapeño",
+          "note": "Habanero is as hot; jalapeño is milder"
+        }
+      ]
+    },
+    "protein": 46,
+    "carbs": 86,
+    "fat": 20,
+    "fiber": 12,
+    "image": "/images/dishes/Jamaican-Jerk-Chicken-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1151,
+    "name": "Caribbean Salmon Sweet Potato Bowl",
+    "country": "Jamaica",
+    "region": "Americas",
+    "emoji": "🐟",
+    "cal": 680,
+    "budget": 10,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "fish"
+    ],
+    "desc": "Salmon with roasted sweet potato, quinoa, black beans and mango salsa.",
+    "ingredients": [
+      "Salmon",
+      "Roasted sweet potato",
+      "Quinoa",
+      "Black beans",
+      "Cabbage slaw",
+      "Avocado",
+      "Mango salsa"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Salmon",
+          "to": "Marinated tofu | Watermelon tuna | Carrot lox",
+          "note": "Marinate in soy, seaweed and lemon for a sea flavor"
+        }
+      ]
+    },
+    "protein": 42,
+    "carbs": 66,
+    "fat": 26,
+    "fiber": 14,
+    "image": "/images/dishes/Caribbean-Salmon-Sweet-Potato-Bowl.jpg"
+  },
+  {
+    "id": 1152,
+    "name": "Greek Yogurt Berry Protein Bowl",
+    "country": "Greece",
+    "region": "Europe",
+    "emoji": "🥣",
+    "cal": 420,
+    "budget": 6,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "nuts"
+    ],
+    "desc": "Thick Greek yogurt with fresh berries, granola, chia and almonds.",
+    "ingredients": [
+      "Greek yogurt",
+      "Strawberries",
+      "Blueberries",
+      "Raspberries",
+      "Granola",
+      "Chia seeds",
+      "Almonds"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Almonds",
+          "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
+          "note": "For a crunchy garnish, use toasted seeds."
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 26,
+    "carbs": 44,
+    "fat": 16,
+    "fiber": 9,
+    "image": "/images/dishes/Greek-Yogurt-Berry-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1153,
+    "name": "Cottage Cheese Fruit Protein Bowl",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥣",
+    "cal": 380,
+    "budget": 6,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "meal-prep",
+      "bowl",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Cottage cheese with fresh fruit and almonds, high in protein.",
+    "ingredients": [
+      "Cottage cheese",
+      "Strawberries",
+      "Blueberries",
+      "Kiwi",
+      "Mango",
+      "Banana",
+      "Almonds"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Cottage cheese",
+          "to": "Crumbled firm tofu | Cashew ricotta",
+          "note": "Add lemon and salt for the fresh, tangy taste"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Cottage cheese",
+          "to": "Crumbled firm tofu | Vegan feta | Cashew ricotta",
+          "note": "Add lemon and salt for the fresh, tangy taste"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Almonds",
+          "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
+          "note": "For a crunchy garnish, use toasted seeds."
+        }
+      ],
+      "local": [
+        {
+          "from": "Cottage cheese",
+          "to": "Feta | Ricotta | Cottage cheese, drained",
+          "note": "Feta replaces salty white cheeses; ricotta replaces fresh curd cheeses"
+        }
+      ]
+    },
+    "protein": 28,
+    "carbs": 42,
+    "fat": 12,
+    "fiber": 7,
+    "image": "/images/dishes/Cottage-Cheese-Fruit-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1154,
+    "name": "Mediterranean Egg and Chickpea Bowl",
+    "country": "Greece",
+    "region": "Europe",
+    "emoji": "🥚",
+    "cal": 480,
+    "budget": 7,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "bowl",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "eggs"
+    ],
+    "desc": "Boiled eggs with chickpeas, vegetables, olives, feta and hummus.",
+    "ingredients": [
+      "Boiled eggs",
+      "Chickpeas",
+      "Cucumber",
+      "Tomatoes",
+      "Kalamata olives",
+      "Feta",
+      "Hummus"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Boiled eggs",
+          "to": "Tofu scramble | Avocado slices",
+          "note": "It is a topping, so the dish still works without it"
+        },
+        {
+          "from": "Feta",
+          "to": "Crumbled firm tofu | Cashew ricotta",
+          "note": "Add lemon and salt for the fresh, tangy taste"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Feta",
+          "to": "Crumbled firm tofu | Vegan feta | Cashew ricotta",
+          "note": "Add lemon and salt for the fresh, tangy taste"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Boiled eggs",
+          "to": "Avocado slices | Tofu scramble | Skip it",
+          "note": "It is a topping, so the dish still works without it"
+        }
+      ],
+      "local": [
+        {
+          "from": "Feta",
+          "to": "Ricotta | Cottage cheese, drained",
+          "note": "Feta replaces salty white cheeses; ricotta replaces fresh curd cheeses"
+        }
+      ]
+    },
+    "protein": 26,
+    "carbs": 34,
+    "fat": 27,
+    "fiber": 10,
+    "image": "/images/dishes/Mediterranean-Egg-and-Chickpea-Bowl.jpg"
+  },
+  {
+    "id": 1155,
+    "name": "Brazilian Açaí Smoothie",
+    "country": "Brazil",
+    "region": "Americas",
+    "emoji": "🥤",
+    "cal": 280,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Brazilian açaí smoothie with banana, blueberries and chia.",
+    "ingredients": [
+      "Frozen açaí",
+      "Banana",
+      "Blueberries",
+      "Unsweetened almond milk",
+      "Chia seeds",
+      "Honey"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Unsweetened almond milk",
+          "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
+          "note": "For a crunchy garnish, use toasted seeds."
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 48,
+    "fat": 9,
+    "fiber": 10,
+    "image": "/images/dishes/Brazilian-Açaí-Smoothie.jpg"
+  },
+  {
+    "id": 1156,
+    "name": "Indian Mango Protein Lassi",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🥤",
+    "cal": 340,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "high-protein",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Indian mango lassi boosted with Greek yogurt and protein, scented with cardamom.",
+    "ingredients": [
+      "Mango",
+      "Greek yogurt",
+      "Milk",
+      "Protein powder",
+      "Cardamom",
+      "Saffron"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        },
+        {
+          "from": "Saffron",
+          "to": "A pinch of turmeric",
+          "note": "Gives the golden color (not the same aroma)"
+        }
+      ]
+    },
+    "protein": 28,
+    "carbs": 46,
+    "fat": 5,
+    "fiber": 2,
+    "image": "/images/dishes/Indian-Mango-Protein-Lassi.jpg"
+  },
+  {
+    "id": 1157,
+    "name": "Caribbean Pineapple Ginger Smoothie",
+    "country": "Jamaica",
+    "region": "Americas",
+    "emoji": "🥤",
+    "cal": 240,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Pineapple, banana and ginger smoothie with coconut water and yogurt.",
+    "ingredients": [
+      "Pineapple",
+      "Banana",
+      "Fresh ginger",
+      "Coconut water",
+      "Lime juice",
+      "Greek yogurt"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 50,
+    "fat": 2,
+    "fiber": 4,
+    "image": "/images/dishes/Caribbean-Pineapple-Ginger-Smoothie.jpg"
+  },
+  {
+    "id": 1158,
+    "name": "Jamaican Mango Banana Smoothie",
+    "country": "Jamaica",
+    "region": "Americas",
+    "emoji": "🥤",
+    "cal": 320,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Jamaican mango banana smoothie with coconut milk, yogurt and nutmeg.",
+    "ingredients": [
+      "Mango",
+      "Banana",
+      "Coconut milk",
+      "Greek yogurt",
+      "Nutmeg",
+      "Lime juice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 52,
+    "fat": 10,
+    "fiber": 4,
+    "image": "/images/dishes/Jamaican-Mango-Banana-Smoothie.jpg"
+  },
+  {
+    "id": 1159,
+    "name": "Mexican Chocolate Banana Protein Smoothie",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🥤",
+    "cal": 340,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "high-protein",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Chocolate banana protein smoothie with cinnamon, Mexican style.",
+    "ingredients": [
+      "Banana",
+      "Cocoa powder",
+      "Protein powder",
+      "Milk",
+      "Cinnamon",
+      "Vanilla"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 44,
+    "fat": 6,
+    "fiber": 5,
+    "image": "/images/dishes/Mexican-Chocolate-Banana-Protein-Smoothie.jpg"
+  },
+  {
+    "id": 1160,
+    "name": "Greek Yogurt Berry Smoothie",
+    "country": "Greece",
+    "region": "Europe",
+    "emoji": "🥤",
+    "cal": 320,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "high-protein",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Greek yogurt and mixed berry smoothie with banana and chia.",
+    "ingredients": [
+      "Greek yogurt",
+      "Mixed berries",
+      "Banana",
+      "Milk",
+      "Honey",
+      "Chia seeds"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 18,
+    "carbs": 52,
+    "fat": 6,
+    "fiber": 7,
+    "image": "/images/dishes/Greek-Yogurt-Berry-Smoothie.jpg"
+  },
+  {
+    "id": 1161,
+    "name": "Turkish Banana Tahini Smoothie",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "🥤",
+    "cal": 380,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Turkish banana smoothie with tahini, yogurt and cinnamon.",
+    "ingredients": [
+      "Banana",
+      "Tahini",
+      "Greek yogurt",
+      "Milk",
+      "Cinnamon",
+      "Sesame seeds"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 16,
+    "carbs": 46,
+    "fat": 16,
+    "fiber": 5,
+    "image": "/images/dishes/Turkish-Banana-Tahini-Smoothie.jpg"
+  },
+  {
+    "id": 1162,
+    "name": "Moroccan Date Almond Smoothie",
+    "country": "Morocco",
+    "region": "Africa",
+    "emoji": "🥤",
+    "cal": 420,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Moroccan date and almond smoothie with orange blossom water.",
+    "ingredients": [
+      "Dates",
+      "Almonds",
+      "Banana",
+      "Milk",
+      "Cinnamon",
+      "Orange blossom water"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Almonds",
+          "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
+          "note": "For a crunchy garnish, use toasted seeds."
+        }
+      ],
+      "local": [
+        {
+          "from": "Orange blossom water",
+          "to": "Vanilla + orange zest",
+          "note": "Use just a little"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 62,
+    "fat": 15,
+    "fiber": 7,
+    "image": "/images/dishes/Moroccan-Date-Almond-Smoothie.jpg"
+  },
+  {
+    "id": 1163,
+    "name": "Egyptian Banana Date Smoothie",
+    "country": "Egypt",
+    "region": "Africa",
+    "emoji": "🥤",
+    "cal": 400,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Egyptian banana and date smoothie with tahini and cinnamon.",
+    "ingredients": [
+      "Banana",
+      "Dates",
+      "Milk",
+      "Tahini",
+      "Cinnamon",
+      "Vanilla"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ]
+    },
+    "protein": 11,
+    "carbs": 64,
+    "fat": 12,
+    "fiber": 7,
+    "image": "/images/dishes/Egyptian-Banana-Date-Smoothie.jpg"
+  },
+  {
+    "id": 1164,
+    "name": "Nigerian Peanut Banana Smoothie",
+    "country": "Nigeria",
+    "region": "Africa",
+    "emoji": "🥤",
+    "cal": 480,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Nigerian peanut butter, banana and date smoothie.",
+    "ingredients": [
+      "Banana",
+      "Peanut butter",
+      "Milk",
+      "Dates",
+      "Cinnamon",
+      "Ground peanuts"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Peanut butter",
+          "to": "Sunflower seed butter | Roasted chickpeas | Toasted pumpkin seeds",
+          "note": "Sunflower butter gives the same creamy, nutty taste"
+        },
+        {
+          "from": "Ground peanuts",
+          "to": "Sunflower seed butter | Roasted chickpeas | Toasted pumpkin seeds",
+          "note": "Sunflower butter gives the same creamy, nutty taste"
+        }
+      ]
+    },
+    "protein": 16,
+    "carbs": 58,
+    "fat": 22,
+    "fiber": 7,
+    "image": "/images/dishes/Nigerian-Peanut-Banana-Smoothie.jpg"
+  },
+  {
+    "id": 1165,
+    "name": "Ghanaian Pineapple Coconut Smoothie",
+    "country": "Ghana",
+    "region": "Africa",
+    "emoji": "🥤",
+    "cal": 320,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Ghanaian pineapple coconut smoothie with ginger and lime.",
+    "ingredients": [
+      "Pineapple",
+      "Coconut milk",
+      "Banana",
+      "Lime juice",
+      "Ginger",
+      "Chia seeds"
+    ],
+    "swaps": {},
+    "protein": 4,
+    "carbs": 46,
+    "fat": 15,
+    "fiber": 6,
+    "image": "/images/dishes/Ghanaian-Pineapple-Coconut-Smoothie.jpg"
+  },
+  {
+    "id": 1166,
+    "name": "Kenyan Mango Passion Fruit Smoothie",
+    "country": "Kenya",
+    "region": "Africa",
+    "emoji": "🥤",
+    "cal": 320,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Kenyan mango and passion fruit smoothie with banana and yogurt.",
+    "ingredients": [
+      "Mango",
+      "Passion fruit",
+      "Banana",
+      "Greek yogurt",
+      "Milk",
+      "Honey"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 11,
+    "carbs": 62,
+    "fat": 4,
+    "fiber": 6,
+    "image": "/images/dishes/Kenyan-Mango-Passion-Fruit-Smoothie.jpg"
+  },
+  {
+    "id": 1167,
+    "name": "Ethiopian Coffee Banana Smoothie",
+    "country": "Ethiopia",
+    "region": "Africa",
+    "emoji": "🥤",
+    "cal": 300,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Iced Ethiopian coffee blended with banana, yogurt and a touch of cocoa.",
+    "ingredients": [
+      "Banana",
+      "Chilled Ethiopian coffee",
+      "Milk",
+      "Greek yogurt",
+      "Cocoa powder",
+      "Honey"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 50,
+    "fat": 6,
+    "fiber": 4,
+    "image": "/images/dishes/Ethiopian-Coffee-Banana-Smoothie.jpg"
+  },
+  {
+    "id": 1168,
+    "name": "South African Berry Rooibos Smoothie",
+    "country": "South Africa",
+    "region": "Africa",
+    "emoji": "🥤",
+    "cal": 280,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "South African berry smoothie made with chilled rooibos tea.",
+    "ingredients": [
+      "Mixed berries",
+      "Chilled rooibos tea",
+      "Banana",
+      "Greek yogurt",
+      "Honey",
+      "Chia seeds"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 11,
+    "carbs": 50,
+    "fat": 5,
+    "fiber": 8,
+    "image": "/images/dishes/South-African-Berry-Rooibos-Smoothie.jpg"
+  },
+  {
+    "id": 1169,
+    "name": "Senegalese Baobab Smoothie",
+    "country": "Senegal",
+    "region": "Africa",
+    "emoji": "🥤",
+    "cal": 300,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Tangy baobab fruit powder smoothie with banana and yogurt.",
+    "ingredients": [
+      "Baobab powder",
+      "Banana",
+      "Milk",
+      "Greek yogurt",
+      "Honey",
+      "Vanilla"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 54,
+    "fat": 5,
+    "fiber": 7,
+    "image": "/images/dishes/Senegalese-Baobab-Smoothie.jpg"
+  },
+  {
+    "id": 1170,
+    "name": "Thai Mango Coconut Smoothie",
+    "country": "Thailand",
+    "region": "Asia",
+    "emoji": "🥤",
+    "cal": 340,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Thai mango coconut smoothie with lime and chia.",
+    "ingredients": [
+      "Mango",
+      "Coconut milk",
+      "Banana",
+      "Lime juice",
+      "Greek yogurt",
+      "Chia seeds"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 52,
+    "fat": 13,
+    "fiber": 6,
+    "image": "/images/dishes/Thai-Mango-Coconut-Smoothie.jpg"
+  },
+  {
+    "id": 1171,
+    "name": "Vietnamese Dragon Fruit Smoothie",
+    "country": "Vietnam",
+    "region": "Asia",
+    "emoji": "🥤",
+    "cal": 240,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Bright pink dragon fruit smoothie with banana and coconut water.",
+    "ingredients": [
+      "Dragon fruit",
+      "Banana",
+      "Coconut water",
+      "Greek yogurt",
+      "Lime juice",
+      "Chia seeds"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 46,
+    "fat": 4,
+    "fiber": 7,
+    "image": "/images/dishes/Vietnamese-Dragon-Fruit-Smoothie.jpg"
+  },
+  {
+    "id": 1172,
+    "name": "Indonesian Avocado Smoothie",
+    "country": "Indonesia",
+    "region": "Asia",
+    "emoji": "🥤",
+    "cal": 420,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Indonesian avocado shake with chocolate and palm sugar.",
+    "ingredients": [
+      "Avocado",
+      "Milk",
+      "Banana",
+      "Cocoa powder",
+      "Palm sugar",
+      "Coconut milk"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Palm sugar",
+          "to": "Brown sugar | Coconut sugar | Maple syrup",
+          "note": "Same deep, caramel sweetness"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 46,
+    "fat": 25,
+    "fiber": 9,
+    "image": "/images/dishes/Indonesian-Avocado-Smoothie.jpg"
+  },
+  {
+    "id": 1173,
+    "name": "Filipino Mango Coconut Smoothie",
+    "country": "Philippines",
+    "region": "Asia",
+    "emoji": "🥤",
+    "cal": 330,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Filipino mango coconut smoothie with calamansi.",
+    "ingredients": [
+      "Mango",
+      "Coconut milk",
+      "Banana",
+      "Greek yogurt",
+      "Calamansi juice",
+      "Chia seeds"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        },
+        {
+          "from": "Calamansi juice",
+          "to": "Orange juice + lime juice (1:1)",
+          "note": "Same sweet-sour citrus taste"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 52,
+    "fat": 12,
+    "fiber": 6,
+    "image": "/images/dishes/Filipino-Mango-Coconut-Smoothie.jpg"
+  },
+  {
+    "id": 1174,
+    "name": "Japanese Matcha Banana Smoothie",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🥤",
+    "cal": 300,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Japanese matcha banana smoothie with yogurt and sesame.",
+    "ingredients": [
+      "Banana",
+      "Matcha powder",
+      "Milk",
+      "Greek yogurt",
+      "Honey",
+      "Sesame seeds"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 48,
+    "fat": 7,
+    "fiber": 4,
+    "image": "/images/dishes/Japanese-Matcha-Banana-Smoothie.jpg"
+  },
+  {
+    "id": 1175,
+    "name": "Korean Strawberry Yogurt Smoothie",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🥤",
+    "cal": 280,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "high-protein",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Korean strawberry yogurt smoothie, light and creamy.",
+    "ingredients": [
+      "Strawberries",
+      "Korean-style yogurt",
+      "Milk",
+      "Banana",
+      "Honey",
+      "Sesame seeds"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Korean-style yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Korean-style yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Korean-style yogurt",
+          "to": "Greek yogurt | Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 10,
+    "carbs": 50,
+    "fat": 5,
+    "fiber": 5,
+    "image": "/images/dishes/Korean-Strawberry-Yogurt-Smoothie.jpg"
+  },
+  {
+    "id": 1176,
+    "name": "Chinese Mango Green Tea Smoothie",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🥤",
+    "cal": 260,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Mango smoothie made with chilled green tea and yogurt.",
+    "ingredients": [
+      "Mango",
+      "Chilled green tea",
+      "Banana",
+      "Greek yogurt",
+      "Honey",
+      "Lime juice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 54,
+    "fat": 2,
+    "fiber": 5,
+    "image": "/images/dishes/Chinese-Mango-Green-Tea-Smoothie.jpg"
+  },
+  {
+    "id": 1177,
+    "name": "Peruvian Lucuma Protein Smoothie",
+    "country": "Peru",
+    "region": "Americas",
+    "emoji": "🥤",
+    "cal": 360,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "high-protein",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Peruvian lucuma protein smoothie with a caramel-like taste.",
+    "ingredients": [
+      "Lucuma powder",
+      "Banana",
+      "Protein powder",
+      "Milk",
+      "Greek yogurt",
+      "Cinnamon"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 50,
+    "fat": 5,
+    "fiber": 5,
+    "image": "/images/dishes/Peruvian-Lucuma-Protein-Smoothie.jpg"
+  },
+  {
+    "id": 1178,
+    "name": "Colombian Lulo Smoothie",
+    "country": "Colombia",
+    "region": "Americas",
+    "emoji": "🥤",
+    "cal": 270,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Colombian tangy lulo fruit smoothie with banana and yogurt.",
+    "ingredients": [
+      "Lulo pulp",
+      "Banana",
+      "Milk",
+      "Greek yogurt",
+      "Honey",
+      "Lime juice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 10,
+    "carbs": 50,
+    "fat": 4,
+    "fiber": 5,
+    "image": "/images/dishes/Colombian-Lulo-Smoothie.jpg"
+  },
+  {
+    "id": 1179,
+    "name": "Costa Rican Pineapple Papaya Smoothie",
+    "country": "Costa Rica",
+    "region": "Americas",
+    "emoji": "🥤",
+    "cal": 250,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Tropical pineapple papaya smoothie with coconut water and lime.",
+    "ingredients": [
+      "Pineapple",
+      "Papaya",
+      "Banana",
+      "Coconut water",
+      "Greek yogurt",
+      "Lime juice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 52,
+    "fat": 2,
+    "fiber": 6,
+    "image": "/images/dishes/Costa-Rican-Pineapple-Papaya-Smoothie.jpg"
+  },
+  {
+    "id": 1180,
+    "name": "Italian Grilled Chicken Caprese Weight Loss Bowl",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 420,
+    "budget": 8,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Light caprese bowl of grilled chicken, tomatoes, fresh mozzarella, basil and balsamic.",
+    "ingredients": [
+      "Grilled chicken",
+      "Mixed greens",
+      "Tomatoes",
+      "Fresh mozzarella",
+      "Basil",
+      "Balsamic dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        },
+        {
+          "from": "Fresh mozzarella",
+          "to": "Vegan mozzarella | Cashew cheese sauce",
+          "note": "Choose a vegan cheese that melts"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Fresh mozzarella",
+          "to": "Vegan mozzarella | Dairy-free cheddar | Cashew cheese sauce",
+          "note": "Choose a vegan cheese that melts"
+        }
+      ]
+    },
+    "protein": 42,
+    "carbs": 12,
+    "fat": 22,
+    "fiber": 3,
+    "image": "/images/dishes/Italian-Grilled-Chicken-Caprese-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1181,
+    "name": "Spanish Grilled Shrimp Vegetable Weight Loss Bowl",
+    "country": "Spain",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 320,
+    "budget": 9,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "shellfish"
+    ],
+    "desc": "Grilled shrimp over greens with tomatoes, cucumber and smoked paprika lemon dressing.",
+    "ingredients": [
+      "Grilled shrimp",
+      "Mixed greens",
+      "Tomatoes",
+      "Cucumber",
+      "Roasted peppers",
+      "Smoked paprika",
+      "Lemon-olive oil dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled shrimp",
+          "to": "King oyster mushrooms | Hearts of palm | Plant-based shrimp",
+          "note": "Slice mushroom stems into rounds and sear"
+        }
+      ]
+    },
+    "protein": 32,
+    "carbs": 14,
+    "fat": 15,
+    "fiber": 4,
+    "image": "/images/dishes/Spanish-Grilled-Shrimp-Vegetable-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1182,
+    "name": "Portuguese Cod and Greens Weight Loss Bowl",
+    "country": "Portugal",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 340,
+    "budget": 9,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "fish"
+    ],
+    "desc": "Baked cod with greens, tomatoes, olives and lemon, Portuguese style.",
+    "ingredients": [
+      "Baked cod",
+      "Mixed greens",
+      "Tomatoes",
+      "Cucumber",
+      "Olives",
+      "Parsley",
+      "Lemon-olive oil dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Baked cod",
+          "to": "Firm tofu | Hearts of palm | Banana blossom",
+          "note": "Wrap in nori or add seaweed for a fish flavor"
+        }
+      ],
+      "local": [
+        {
+          "from": "Baked cod",
+          "to": "Tilapia | Any firm white fish",
+          "note": "Any firm, mild white fish works"
+        }
+      ]
+    },
+    "protein": 34,
+    "carbs": 12,
+    "fat": 17,
+    "fiber": 4,
+    "image": "/images/dishes/Portuguese-Cod-and-Greens-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1183,
+    "name": "French Chicken Ratatouille Weight Loss Bowl",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 380,
+    "budget": 8,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with ratatouille vegetables and herbes de Provence.",
+    "ingredients": [
+      "Grilled chicken",
+      "Zucchini",
+      "Eggplant",
+      "Tomatoes",
+      "Bell pepper",
+      "Herbes de Provence",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 40,
+    "carbs": 18,
+    "fat": 16,
+    "fiber": 6,
+    "image": "/images/dishes/French-Chicken-Ratatouille-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1184,
+    "name": "German Chicken Cabbage Weight Loss Bowl",
+    "country": "Germany",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 360,
+    "budget": 8,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with crunchy cabbage, carrot and mustard vinaigrette.",
+    "ingredients": [
+      "Grilled chicken",
+      "Cabbage",
+      "Carrot",
+      "Cucumber",
+      "Parsley",
+      "Mustard vinaigrette"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 40,
+    "carbs": 16,
+    "fat": 15,
+    "fiber": 5,
+    "image": "/images/dishes/German-Chicken-Cabbage-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1185,
+    "name": "Polish Chicken Beet Weight Loss Bowl",
+    "country": "Poland",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 360,
+    "budget": 8,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with roasted beetroot, cabbage, dill and lemon.",
+    "ingredients": [
+      "Grilled chicken",
+      "Beetroot",
+      "Cabbage",
+      "Cucumber",
+      "Dill",
+      "Lemon dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 40,
+    "carbs": 20,
+    "fat": 13,
+    "fiber": 6,
+    "image": "/images/dishes/Polish-Chicken-Beet-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1186,
+    "name": "Croatian Grilled Fish Vegetable Weight Loss Bowl",
+    "country": "Croatia",
+    "region": "Europe",
+    "emoji": "🥣",
+    "cal": 360,
+    "budget": 9,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "fish"
+    ],
+    "desc": "Grilled white fish over a light bowl of greens, tomatoes, cucumber and lemon, Croatian style.",
+    "ingredients": [
+      "Grilled white fish",
+      "Mixed greens",
+      "Tomatoes",
+      "Cucumber",
+      "Olive oil",
+      "Lemon",
+      "Parsley"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled white fish",
+          "to": "Firm tofu | Hearts of palm | Banana blossom",
+          "note": "Wrap in nori or add seaweed for a fish flavor"
+        }
+      ],
+      "local": [
+        {
+          "from": "Grilled white fish",
+          "to": "Tilapia | Cod | Any firm white fish",
+          "note": "Any firm, mild white fish works"
+        }
+      ]
+    },
+    "protein": 36,
+    "carbs": 14,
+    "fat": 17,
+    "fiber": 4,
+    "image": "/images/dishes/Croatian-Grilled-Fish-Vegetable-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1187,
+    "name": "Albanian Chicken Tomato Cucumber Weight Loss Bowl",
+    "country": "Albania",
+    "region": "Europe",
+    "emoji": "🥣",
+    "cal": 380,
+    "budget": 7,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with tomatoes, cucumber, peppers and a little yogurt, Albanian style.",
+    "ingredients": [
+      "Grilled chicken",
+      "Tomatoes",
+      "Cucumber",
+      "Bell pepper",
+      "Red onion",
+      "Yogurt",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        },
+        {
+          "from": "Yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Yogurt",
+          "to": "Greek yogurt | Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 40,
+    "carbs": 16,
+    "fat": 17,
+    "fiber": 4,
+    "image": "/images/dishes/Albanian-Chicken-Tomato-Cucumber-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1188,
+    "name": "Romanian Chicken Roasted Pepper Weight Loss Bowl",
+    "country": "Romania",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 350,
+    "budget": 8,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with roasted peppers, tomatoes and parsley.",
+    "ingredients": [
+      "Grilled chicken",
+      "Roasted peppers",
+      "Tomatoes",
+      "Cucumber",
+      "Parsley",
+      "Lemon dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 40,
+    "carbs": 16,
+    "fat": 14,
+    "fiber": 5,
+    "image": "/images/dishes/Romanian-Chicken-Roasted-Pepper-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1189,
+    "name": "Hungarian Chicken Paprika Vegetable Weight Loss Bowl",
+    "country": "Hungary",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 370,
+    "budget": 8,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with peppers and zucchini in a light paprika yogurt.",
+    "ingredients": [
+      "Grilled chicken",
+      "Bell peppers",
+      "Zucchini",
+      "Tomatoes",
+      "Parsley",
+      "Paprika yogurt"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        },
+        {
+          "from": "Paprika yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Paprika yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Paprika yogurt",
+          "to": "Greek yogurt | Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 42,
+    "carbs": 18,
+    "fat": 14,
+    "fiber": 5,
+    "image": "/images/dishes/Hungarian-Chicken-Paprika-Vegetable-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1190,
+    "name": "Egyptian Grilled Chicken Chickpea Weight Loss Bowl",
+    "country": "Egypt",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 420,
+    "budget": 8,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with chickpeas, tomato, cucumber, parsley and cumin-lemon dressing.",
+    "ingredients": [
+      "Grilled chicken",
+      "Chickpeas",
+      "Tomatoes",
+      "Cucumber",
+      "Parsley",
+      "Cumin-lemon dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 42,
+    "carbs": 28,
+    "fat": 15,
+    "fiber": 8,
+    "image": "/images/dishes/Egyptian-Grilled-Chicken-Chickpea-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1191,
+    "name": "Tunisian Tuna Harissa Weight Loss Bowl",
+    "country": "Tunisia",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 340,
+    "budget": 8,
+    "time": "20 min",
+    "spice": 2,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "fish"
+    ],
+    "desc": "Tuna with crisp vegetables and a spicy harissa-lemon dressing.",
+    "ingredients": [
+      "Tuna",
+      "Mixed greens",
+      "Cucumber",
+      "Tomatoes",
+      "Olives",
+      "Parsley",
+      "Harissa-lemon dressing"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Harissa-lemon dressing",
+          "to": "Tomato paste + sweet paprika | Half the amount",
+          "note": "Same color, milder"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Tuna",
+          "to": "Marinated tofu | Watermelon tuna | Carrot lox",
+          "note": "Marinate in soy, seaweed and lemon for a sea flavor"
+        }
+      ],
+      "local": [
+        {
+          "from": "Harissa-lemon dressing",
+          "to": "Chili paste + cumin + garlic",
+          "note": "Add a spoon of tomato paste"
+        }
+      ]
+    },
+    "protein": 32,
+    "carbs": 12,
+    "fat": 18,
+    "fiber": 4,
+    "image": "/images/dishes/Tunisian-Tuna-Harissa-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1192,
+    "name": "Algerian Chicken Vegetable Weight Loss Bowl",
+    "country": "Algeria",
+    "region": "Africa",
+    "emoji": "🥣",
+    "cal": 380,
+    "budget": 7,
+    "time": "25 min",
+    "spice": 1,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Spiced grilled chicken with roasted zucchini, peppers and carrots, Algerian style.",
+    "ingredients": [
+      "Grilled chicken",
+      "Zucchini",
+      "Bell pepper",
+      "Carrot",
+      "Cumin",
+      "Paprika",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 40,
+    "carbs": 18,
+    "fat": 16,
+    "fiber": 5,
+    "image": "/images/dishes/Algerian-Chicken-Vegetable-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1193,
+    "name": "Senegalese Grilled Fish Vegetable Weight Loss Bowl",
+    "country": "Senegal",
+    "region": "Africa",
+    "emoji": "🥣",
+    "cal": 360,
+    "budget": 9,
+    "time": "25 min",
+    "spice": 1,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "fish"
+    ],
+    "desc": "Grilled fish with greens, tomatoes and a tangy onion-lemon dressing, Senegalese style.",
+    "ingredients": [
+      "Grilled white fish",
+      "Mixed greens",
+      "Tomatoes",
+      "Onion",
+      "Lemon",
+      "Mustard",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled white fish",
+          "to": "Firm tofu | Hearts of palm | Banana blossom",
+          "note": "Wrap in nori or add seaweed for a fish flavor"
+        }
+      ],
+      "local": [
+        {
+          "from": "Grilled white fish",
+          "to": "Tilapia | Cod | Any firm white fish",
+          "note": "Any firm, mild white fish works"
+        }
+      ]
+    },
+    "protein": 36,
+    "carbs": 14,
+    "fat": 17,
+    "fiber": 4,
+    "image": "/images/dishes/Senegalese-Grilled-Fish-Vegetable-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1194,
+    "name": "Ivorian Grilled Chicken Attieke Weight Loss Bowl",
+    "country": "Ivory Coast",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 440,
+    "budget": 8,
+    "time": "25 min",
+    "spice": 1,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with attiéké, tomatoes, cucumber and lime-onion dressing.",
+    "ingredients": [
+      "Grilled chicken",
+      "Attiéké",
+      "Tomatoes",
+      "Cucumber",
+      "Onion",
+      "Lime dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 40,
+    "carbs": 42,
+    "fat": 12,
+    "fiber": 4,
+    "image": "/images/dishes/Ivorian-Grilled-Chicken-Attieke-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1195,
+    "name": "Cameroonian Chicken Plantain Weight Loss Bowl",
+    "country": "Cameroon",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 450,
+    "budget": 8,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with roasted plantain, tomatoes, cucumber and lime.",
+    "ingredients": [
+      "Grilled chicken",
+      "Roasted plantain",
+      "Tomatoes",
+      "Cucumber",
+      "Spinach",
+      "Lime dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ],
+      "local": [
+        {
+          "from": "Roasted plantain",
+          "to": "Green bananas | Potatoes (for savory dishes)",
+          "note": "Ripe plantains: use firm sweet bananas"
+        }
+      ]
+    },
+    "protein": 40,
+    "carbs": 44,
+    "fat": 12,
+    "fiber": 5,
+    "image": "/images/dishes/Cameroonian-Chicken-Plantain-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1196,
+    "name": "Tanzanian Grilled Fish Greens Weight Loss Bowl",
+    "country": "Tanzania",
+    "region": "Africa",
+    "emoji": "🥣",
+    "cal": 350,
+    "budget": 9,
+    "time": "25 min",
+    "spice": 1,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "fish"
+    ],
+    "desc": "Grilled fish with sautéed greens, tomatoes and lime, Tanzanian style.",
+    "ingredients": [
+      "Grilled white fish",
+      "Spinach",
+      "Kale",
+      "Tomatoes",
+      "Lime",
+      "Garlic",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled white fish",
+          "to": "Firm tofu | Hearts of palm | Banana blossom",
+          "note": "Wrap in nori or add seaweed for a fish flavor"
+        }
+      ],
+      "local": [
+        {
+          "from": "Grilled white fish",
+          "to": "Tilapia | Cod | Any firm white fish",
+          "note": "Any firm, mild white fish works"
+        }
+      ]
+    },
+    "protein": 36,
+    "carbs": 12,
+    "fat": 17,
+    "fiber": 5,
+    "image": "/images/dishes/Tanzanian-Grilled-Fish-Greens-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1197,
+    "name": "Ugandan Chicken Avocado Weight Loss Bowl",
+    "country": "Uganda",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 420,
+    "budget": 8,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with avocado, tomato, cucumber and lime.",
+    "ingredients": [
+      "Grilled chicken",
+      "Mixed greens",
+      "Avocado",
+      "Tomatoes",
+      "Cucumber",
+      "Lime dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 40,
+    "carbs": 14,
+    "fat": 23,
+    "fiber": 8,
+    "image": "/images/dishes/Ugandan-Chicken-Avocado-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1198,
+    "name": "Rwandan Chicken Bean Weight Loss Bowl",
+    "country": "Rwanda",
+    "region": "Africa",
+    "emoji": "🥣",
+    "cal": 420,
+    "budget": 7,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with red beans, greens and tomatoes, Rwandan style.",
+    "ingredients": [
+      "Grilled chicken",
+      "Red beans",
+      "Spinach",
+      "Tomatoes",
+      "Onion",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 42,
+    "carbs": 30,
+    "fat": 13,
+    "fiber": 10,
+    "image": "/images/dishes/Rwandan-Chicken-Bean-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1199,
+    "name": "Zimbabwean Chicken Sweet Potato Weight Loss Bowl",
+    "country": "Zimbabwe",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 440,
+    "budget": 8,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with roasted sweet potato and greens.",
+    "ingredients": [
+      "Grilled chicken",
+      "Roasted sweet potato",
+      "Tomatoes",
+      "Cucumber",
+      "Spinach",
+      "Lemon dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 40,
+    "carbs": 42,
+    "fat": 11,
+    "fiber": 7,
+    "image": "/images/dishes/Zimbabwean-Chicken-Sweet-Potato-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1200,
+    "name": "Indian Tandoori Chicken Weight Loss Bowl",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🥣",
+    "cal": 380,
+    "budget": 7,
+    "time": "25 min",
+    "spice": 1,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Tandoori-spiced chicken with cucumber, tomato, onion and mint yogurt.",
+    "ingredients": [
+      "Tandoori chicken",
+      "Cucumber",
+      "Tomatoes",
+      "Red onion",
+      "Mint",
+      "Yogurt",
+      "Lemon"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Tandoori chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        },
+        {
+          "from": "Yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Yogurt",
+          "to": "Greek yogurt | Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 42,
+    "carbs": 14,
+    "fat": 17,
+    "fiber": 3,
+    "image": "/images/dishes/Indian-Tandoori-Chicken-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1201,
+    "name": "Pakistani Chicken Chickpea Weight Loss Bowl",
+    "country": "Pakistan",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 430,
+    "budget": 8,
+    "time": "25 min",
+    "spice": 1,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Spiced grilled chicken with chickpeas, cucumber, tomato and mint chutney.",
+    "ingredients": [
+      "Grilled chicken",
+      "Chickpeas",
+      "Tomatoes",
+      "Cucumber",
+      "Red onion",
+      "Mint chutney",
+      "Green chili"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ],
+      "local": [
+        {
+          "from": "Green chili",
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
+        }
+      ]
+    },
+    "protein": 42,
+    "carbs": 30,
+    "fat": 14,
+    "fiber": 8,
+    "image": "/images/dishes/Pakistani-Chicken-Chickpea-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1202,
+    "name": "Bangladeshi Fish Vegetable Weight Loss Bowl",
+    "country": "Bangladesh",
+    "region": "Asia",
+    "emoji": "🥣",
+    "cal": 360,
+    "budget": 9,
+    "time": "25 min",
+    "spice": 2,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "fish"
+    ],
+    "desc": "Spiced fish with stir-fried vegetables, turmeric and mustard oil, Bangladeshi style.",
+    "ingredients": [
+      "White fish",
+      "Cauliflower",
+      "Green beans",
+      "Turmeric",
+      "Mustard oil",
+      "Green chili",
+      "Cilantro"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Green chili",
+          "to": "Half the amount | Sweet paprika | Mild bell pepper",
+          "note": "Add heat at the table instead"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "White fish",
+          "to": "Firm tofu | Hearts of palm | Banana blossom",
+          "note": "Wrap in nori or add seaweed for a fish flavor"
+        }
+      ],
+      "local": [
+        {
+          "from": "White fish",
+          "to": "Tilapia | Cod | Any firm white fish",
+          "note": "Any firm, mild white fish works"
+        },
+        {
+          "from": "Green chili",
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
+        }
+      ]
+    },
+    "protein": 34,
+    "carbs": 16,
+    "fat": 18,
+    "fiber": 5,
+    "image": "/images/dishes/Bangladeshi-Fish-Vegetable-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1203,
+    "name": "Nepalese Chicken Lentil Weight Loss Bowl",
+    "country": "Nepal",
+    "region": "Asia",
+    "emoji": "🥣",
+    "cal": 420,
+    "budget": 7,
+    "time": "25 min",
+    "spice": 1,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with spiced lentils, spinach and tomato, Nepalese style.",
+    "ingredients": [
+      "Grilled chicken",
+      "Lentils",
+      "Spinach",
+      "Tomatoes",
+      "Turmeric",
+      "Cumin",
+      "Cilantro"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 44,
+    "carbs": 30,
+    "fat": 13,
+    "fiber": 10,
+    "image": "/images/dishes/Nepalese-Chicken-Lentil-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1204,
+    "name": "Malaysian Chicken Cucumber Weight Loss Bowl",
+    "country": "Malaysia",
+    "region": "Asia",
+    "emoji": "🥣",
+    "cal": 360,
+    "budget": 7,
+    "time": "25 min",
+    "spice": 1,
+    "tags": [
+      "weight-loss",
+      "high-protein",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Lemongrass grilled chicken with cucumber, herbs and lime, Malaysian style.",
+    "ingredients": [
+      "Grilled chicken",
+      "Cucumber",
+      "Lemongrass",
+      "Mint",
+      "Cilantro",
+      "Lime",
+      "Chili"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ],
+      "local": [
+        {
+          "from": "Lemongrass",
+          "to": "Lemon zest + a little ginger",
+          "note": "Zest of 1 lemon replaces 1 stalk"
+        },
+        {
+          "from": "Chili",
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
+        }
+      ]
+    },
+    "protein": 40,
+    "carbs": 10,
+    "fat": 17,
+    "fiber": 3,
+    "image": "/images/dishes/Malaysian-Chicken-Cucumber-Weight-Loss-Bowl.jpg"
+  },
+  {
+    "id": 1205,
+    "name": "Italian Chicken White Bean Protein Bowl",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 560,
+    "budget": 10,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with cannellini beans, tomatoes, rocket and basil.",
+    "ingredients": [
+      "Grilled chicken",
+      "Cannellini beans",
+      "Tomatoes",
+      "Arugula",
+      "Basil",
+      "Red onion",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 50,
+    "carbs": 42,
+    "fat": 20,
+    "fiber": 11,
+    "image": "/images/dishes/Italian-Chicken-White-Bean-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1206,
+    "name": "Spanish Chicken Rice Protein Bowl",
+    "country": "Spain",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 580,
+    "budget": 10,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with saffron brown rice, peppers and smoked paprika.",
+    "ingredients": [
+      "Grilled chicken",
+      "Brown rice",
+      "Roasted peppers",
+      "Tomatoes",
+      "Saffron",
+      "Smoked paprika",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ],
+      "local": [
+        {
+          "from": "Saffron",
+          "to": "A pinch of turmeric",
+          "note": "Gives the golden color (not the same aroma)"
+        }
+      ]
+    },
+    "protein": 48,
+    "carbs": 60,
+    "fat": 15,
+    "fiber": 5,
+    "image": "/images/dishes/Spanish-Chicken-Rice-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1207,
+    "name": "Portuguese Beef Rice and Beans Protein Bowl",
+    "country": "Portugal",
+    "region": "Europe",
+    "emoji": "🥩",
+    "cal": 640,
+    "budget": 11,
+    "time": "35 min",
+    "spice": 1,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Lean beef with brown rice, beans and piri piri tomatoes.",
+    "ingredients": [
+      "Lean beef",
+      "Brown rice",
+      "Red beans",
+      "Tomatoes",
+      "Onion",
+      "Parsley",
+      "Piri piri sauce"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lean beef",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        }
+      ]
+    },
+    "protein": 48,
+    "carbs": 66,
+    "fat": 18,
+    "fiber": 11,
+    "image": "/images/dishes/Portuguese-Beef-Rice-and-Beans-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1208,
+    "name": "French Chicken Lentil Protein Bowl",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🥣",
+    "cal": 540,
+    "budget": 7,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Herbed chicken with French green lentils, Dijon vinaigrette and greens.",
+    "ingredients": [
+      "Chicken breast",
+      "Green lentils",
+      "Dijon mustard",
+      "Shallots",
+      "Mixed greens",
+      "Olive oil",
+      "Parsley"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken breast",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 50,
+    "carbs": 38,
+    "fat": 20,
+    "fiber": 11,
+    "image": "/images/dishes/French-Chicken-Lentil-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1209,
+    "name": "German Beef Potato Protein Bowl",
+    "country": "Germany",
+    "region": "Europe",
+    "emoji": "🥩",
+    "cal": 600,
+    "budget": 11,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Lean beef with roasted potatoes, cucumber salad and mustard.",
+    "ingredients": [
+      "Lean beef",
+      "Roasted potatoes",
+      "Cucumber",
+      "Dill",
+      "Red onion",
+      "Mustard",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lean beef",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        }
+      ]
+    },
+    "protein": 46,
+    "carbs": 50,
+    "fat": 22,
+    "fiber": 6,
+    "image": "/images/dishes/German-Beef-Potato-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1210,
+    "name": "Polish Chicken Buckwheat Protein Bowl",
+    "country": "Poland",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 560,
+    "budget": 10,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with toasted buckwheat, beetroot and dill.",
+    "ingredients": [
+      "Grilled chicken",
+      "Buckwheat",
+      "Beetroot",
+      "Cucumber",
+      "Dill",
+      "Lemon dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 50,
+    "carbs": 56,
+    "fat": 13,
+    "fiber": 9,
+    "image": "/images/dishes/Polish-Chicken-Buckwheat-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1211,
+    "name": "Hungarian Beef Rice Protein Bowl",
+    "country": "Hungary",
+    "region": "Europe",
+    "emoji": "🥩",
+    "cal": 620,
+    "budget": 11,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Lean beef with brown rice and a sweet paprika pepper sauce.",
+    "ingredients": [
+      "Lean beef",
+      "Brown rice",
+      "Bell peppers",
+      "Tomatoes",
+      "Onion",
+      "Sweet paprika",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lean beef",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        }
+      ]
+    },
+    "protein": 46,
+    "carbs": 62,
+    "fat": 18,
+    "fiber": 6,
+    "image": "/images/dishes/Hungarian-Beef-Rice-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1212,
+    "name": "Croatian Chicken Rice and Beans Protein Bowl",
+    "country": "Croatia",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 600,
+    "budget": 10,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with brown rice, beans, tomatoes and parsley.",
+    "ingredients": [
+      "Grilled chicken",
+      "Brown rice",
+      "Kidney beans",
+      "Tomatoes",
+      "Cucumber",
+      "Parsley",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 50,
+    "carbs": 64,
+    "fat": 13,
+    "fiber": 11,
+    "image": "/images/dishes/Croatian-Chicken-Rice-and-Beans-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1213,
+    "name": "Romanian Beef Polenta Protein Bowl",
+    "country": "Romania",
+    "region": "Europe",
+    "emoji": "🥩",
+    "cal": 600,
+    "budget": 11,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Lean beef with soft polenta, tomatoes and a cucumber salad.",
+    "ingredients": [
+      "Lean beef",
+      "Polenta",
+      "Tomatoes",
+      "Cucumber",
+      "Parsley",
+      "Garlic",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lean beef",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        }
+      ]
+    },
+    "protein": 44,
+    "carbs": 58,
+    "fat": 20,
+    "fiber": 5,
+    "image": "/images/dishes/Romanian-Beef-Polenta-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1214,
+    "name": "Georgian Chicken Walnut Protein Bowl",
+    "country": "Georgia",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 540,
+    "budget": 10,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Grilled chicken with walnut-herb sauce, greens and tomatoes.",
+    "ingredients": [
+      "Grilled chicken",
+      "Mixed greens",
+      "Walnuts",
+      "Cucumber",
+      "Tomatoes",
+      "Cilantro",
+      "Garlic"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Walnuts",
+          "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
+          "note": "For a crunchy garnish, use toasted seeds."
+        }
+      ]
+    },
+    "protein": 46,
+    "carbs": 14,
+    "fat": 33,
+    "fiber": 5,
+    "image": "/images/dishes/Georgian-Chicken-Walnut-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1215,
+    "name": "Armenian Beef Bulgur Protein Bowl",
+    "country": "Armenia",
+    "region": "Europe",
+    "emoji": "🥩",
+    "cal": 600,
+    "budget": 11,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Lean beef with herbed bulgur, tomatoes and cucumber.",
+    "ingredients": [
+      "Lean beef",
+      "Bulgur",
+      "Tomatoes",
+      "Cucumber",
+      "Parsley",
+      "Mint",
+      "Lemon juice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lean beef",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Bulgur",
+          "to": "Quinoa | Millet | Cauliflower rice",
+          "note": "Quinoa cooks in about 15 minutes"
+        }
+      ]
+    },
+    "protein": 46,
+    "carbs": 56,
+    "fat": 20,
+    "fiber": 10,
+    "image": "/images/dishes/Armenian-Beef-Bulgur-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1216,
+    "name": "Lebanese Chicken Lentil Protein Bowl",
+    "country": "Lebanon",
+    "region": "Middle East",
+    "emoji": "🥣",
+    "cal": 540,
+    "budget": 7,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Lemon garlic chicken with spiced lentils, parsley and tomatoes, Lebanese style.",
+    "ingredients": [
+      "Chicken breast",
+      "Lentils",
+      "Parsley",
+      "Tomatoes",
+      "Lemon",
+      "Garlic",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken breast",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 50,
+    "carbs": 38,
+    "fat": 20,
+    "fiber": 11,
+    "image": "/images/dishes/Lebanese-Chicken-Lentil-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1217,
+    "name": "Egyptian Beef Rice and Chickpea Protein Bowl",
+    "country": "Egypt",
+    "region": "Africa",
+    "emoji": "🥩",
+    "cal": 640,
+    "budget": 11,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Lean beef with brown rice, chickpeas and cumin tomatoes.",
+    "ingredients": [
+      "Lean beef",
+      "Brown rice",
+      "Chickpeas",
+      "Tomatoes",
+      "Cucumber",
+      "Cumin",
+      "Parsley"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lean beef",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        }
+      ]
+    },
+    "protein": 48,
+    "carbs": 66,
+    "fat": 18,
+    "fiber": 11,
+    "image": "/images/dishes/Egyptian-Beef-Rice-and-Chickpea-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1218,
+    "name": "Tunisian Chicken Couscous Protein Bowl",
+    "country": "Tunisia",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 600,
+    "budget": 10,
+    "time": "30 min",
+    "spice": 2,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Grilled chicken with whole-wheat couscous, vegetables and harissa.",
+    "ingredients": [
+      "Grilled chicken",
+      "Whole-wheat couscous",
+      "Tomatoes",
+      "Cucumber",
+      "Chickpeas",
+      "Parsley",
+      "Harissa"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Harissa",
+          "to": "Tomato paste + sweet paprika | Half the amount",
+          "note": "Same color, milder"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Whole-wheat couscous",
+          "to": "Quinoa | Millet | Cauliflower rice",
+          "note": "Quinoa cooks in about 15 minutes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Harissa",
+          "to": "Chili paste + cumin + garlic",
+          "note": "Add a spoon of tomato paste"
+        }
+      ]
+    },
+    "protein": 48,
+    "carbs": 60,
+    "fat": 16,
+    "fiber": 9,
+    "image": "/images/dishes/Tunisian-Chicken-Couscous-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1219,
+    "name": "Algerian Beef Couscous Protein Bowl",
+    "country": "Algeria",
+    "region": "Africa",
+    "emoji": "🥩",
+    "cal": 620,
+    "budget": 11,
+    "time": "35 min",
+    "spice": 1,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Lean beef with whole-wheat couscous, roasted vegetables and cumin.",
+    "ingredients": [
+      "Lean beef",
+      "Whole-wheat couscous",
+      "Zucchini",
+      "Carrots",
+      "Tomatoes",
+      "Cumin",
+      "Parsley"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lean beef",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Whole-wheat couscous",
+          "to": "Quinoa | Millet | Cauliflower rice",
+          "note": "Quinoa cooks in about 15 minutes"
+        }
+      ]
+    },
+    "protein": 46,
+    "carbs": 60,
+    "fat": 20,
+    "fiber": 9,
+    "image": "/images/dishes/Algerian-Beef-Couscous-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1220,
+    "name": "Ivorian Chicken Rice and Beans Protein Bowl",
+    "country": "Ivory Coast",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 600,
+    "budget": 10,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with brown rice, red beans and fresh tomato-onion relish.",
+    "ingredients": [
+      "Grilled chicken",
+      "Brown rice",
+      "Red beans",
+      "Tomatoes",
+      "Onion",
+      "Cucumber",
+      "Chili"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ],
+      "local": [
+        {
+          "from": "Chili",
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
+        }
+      ]
+    },
+    "protein": 50,
+    "carbs": 66,
+    "fat": 12,
+    "fiber": 11,
+    "image": "/images/dishes/Ivorian-Chicken-Rice-and-Beans-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1221,
+    "name": "Cameroonian Beef Plantain Protein Bowl",
+    "country": "Cameroon",
+    "region": "Africa",
+    "emoji": "🥩",
+    "cal": 620,
+    "budget": 11,
+    "time": "35 min",
+    "spice": 1,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Lean beef with roasted plantain, tomatoes and greens.",
+    "ingredients": [
+      "Lean beef",
+      "Roasted plantain",
+      "Tomatoes",
+      "Spinach",
+      "Onion",
+      "Chili"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lean beef",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        }
+      ],
+      "local": [
+        {
+          "from": "Roasted plantain",
+          "to": "Green bananas | Potatoes (for savory dishes)",
+          "note": "Ripe plantains: use firm sweet bananas"
+        },
+        {
+          "from": "Chili",
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
+        }
+      ]
+    },
+    "protein": 44,
+    "carbs": 62,
+    "fat": 20,
+    "fiber": 6,
+    "image": "/images/dishes/Cameroonian-Beef-Plantain-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1222,
+    "name": "Tanzanian Chicken Rice and Beans Protein Bowl",
+    "country": "Tanzania",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 640,
+    "budget": 10,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with coconut brown rice, beans and kachumbari.",
+    "ingredients": [
+      "Grilled chicken",
+      "Brown rice",
+      "Kidney beans",
+      "Coconut milk",
+      "Tomatoes",
+      "Onion",
+      "Cilantro"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 50,
+    "carbs": 66,
+    "fat": 18,
+    "fiber": 11,
+    "image": "/images/dishes/Tanzanian-Chicken-Rice-and-Beans-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1223,
+    "name": "Ugandan Beef Sweet Potato Protein Bowl",
+    "country": "Uganda",
+    "region": "Africa",
+    "emoji": "🥩",
+    "cal": 600,
+    "budget": 11,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Lean beef with roasted sweet potato, greens and tomatoes.",
+    "ingredients": [
+      "Lean beef",
+      "Roasted sweet potato",
+      "Tomatoes",
+      "Collard greens",
+      "Onion",
+      "Lemon dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lean beef",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        },
+        {
+          "from": "Collard greens",
+          "to": "Vegetable shortening | Olive oil | Coconut oil",
+          "note": "Same richness without animal fat"
+        }
+      ],
+      "local": [
+        {
+          "from": "Collard greens",
+          "to": "Spinach | Kale",
+          "note": "Frozen cassava leaves are sold in African stores"
+        }
+      ]
+    },
+    "protein": 44,
+    "carbs": 58,
+    "fat": 20,
+    "fiber": 8,
+    "image": "/images/dishes/Ugandan-Beef-Sweet-Potato-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1224,
+    "name": "Rwandan Chicken Lentil Protein Bowl",
+    "country": "Rwanda",
+    "region": "Africa",
+    "emoji": "🥣",
+    "cal": 540,
+    "budget": 7,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with lentils, greens and a tomato-onion relish, Rwandan style.",
+    "ingredients": [
+      "Chicken breast",
+      "Lentils",
+      "Spinach",
+      "Tomatoes",
+      "Onion",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken breast",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 50,
+    "carbs": 38,
+    "fat": 20,
+    "fiber": 11,
+    "image": "/images/dishes/Rwandan-Chicken-Lentil-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1225,
+    "name": "Zimbabwean Beef Sadza Protein Bowl",
+    "country": "Zimbabwe",
+    "region": "Africa",
+    "emoji": "🥩",
+    "cal": 620,
+    "budget": 11,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Lean beef with sadza, tomato relish and greens.",
+    "ingredients": [
+      "Lean beef",
+      "Sadza",
+      "Tomatoes",
+      "Collard greens",
+      "Onion",
+      "Vegetable oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lean beef",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        },
+        {
+          "from": "Collard greens",
+          "to": "Vegetable shortening | Olive oil | Coconut oil",
+          "note": "Same richness without animal fat"
+        }
+      ],
+      "local": [
+        {
+          "from": "Collard greens",
+          "to": "Spinach | Kale",
+          "note": "Frozen cassava leaves are sold in African stores"
+        }
+      ]
+    },
+    "protein": 44,
+    "carbs": 64,
+    "fat": 18,
+    "fiber": 6,
+    "image": "/images/dishes/Zimbabwean-Beef-Sadza-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1226,
+    "name": "Indian Tandoori Chicken Rice Protein Bowl",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍛",
+    "cal": 600,
+    "budget": 10,
+    "time": "35 min",
+    "spice": 2,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Tandoori chicken over brown rice with tomato, cucumber and mint yogurt.",
+    "ingredients": [
+      "Tandoori chicken",
+      "Brown rice",
+      "Tomatoes",
+      "Cucumber",
+      "Red onion",
+      "Mint yogurt",
+      "Kashmiri chili"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Kashmiri chili",
+          "to": "Half the amount | Sweet paprika | A mild curry powder or mild chili",
+          "note": "Add heat at the table so everyone can choose"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Tandoori chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        },
+        {
+          "from": "Mint yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Mint yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Mint yogurt",
+          "to": "Greek yogurt | Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        },
+        {
+          "from": "Kashmiri chili",
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
+        }
+      ]
+    },
+    "protein": 50,
+    "carbs": 60,
+    "fat": 15,
+    "fiber": 5,
+    "image": "/images/dishes/Indian-Tandoori-Chicken-Rice-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1227,
+    "name": "Pakistani Beef Chickpea Protein Bowl",
+    "country": "Pakistan",
+    "region": "Asia",
+    "emoji": "🥩",
+    "cal": 620,
+    "budget": 11,
+    "time": "35 min",
+    "spice": 1,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Spiced lean beef with chickpeas, tomatoes and cucumber raita.",
+    "ingredients": [
+      "Lean beef",
+      "Chickpeas",
+      "Tomatoes",
+      "Cucumber",
+      "Yogurt",
+      "Garam masala",
+      "Cilantro"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lean beef",
+          "to": "Portobello mushrooms | Seitan | Jackfruit",
+          "note": "Sear hard for a meaty, browned flavor"
+        },
+        {
+          "from": "Yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Yogurt",
+          "to": "Greek yogurt | Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        },
+        {
+          "from": "Garam masala",
+          "to": "Cumin + coriander + cinnamon + black pepper",
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
+        }
+      ]
+    },
+    "protein": 50,
+    "carbs": 42,
+    "fat": 25,
+    "fiber": 10,
+    "image": "/images/dishes/Pakistani-Beef-Chickpea-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1228,
+    "name": "Bangladeshi Fish Rice and Lentil Protein Bowl",
+    "country": "Bangladesh",
+    "region": "Asia",
+    "emoji": "🐟",
+    "cal": 600,
+    "budget": 10,
+    "time": "35 min",
+    "spice": 1,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "fish"
+    ],
+    "desc": "Grilled fish with brown rice, turmeric lentils and tomatoes.",
+    "ingredients": [
+      "Grilled fish",
+      "Brown rice",
+      "Lentils",
+      "Tomatoes",
+      "Cucumber",
+      "Turmeric",
+      "Cilantro"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled fish",
+          "to": "Firm tofu | Hearts of palm | Banana blossom",
+          "note": "Wrap in nori or add seaweed for a fish flavor"
+        }
+      ],
+      "local": [
+        {
+          "from": "Grilled fish",
+          "to": "Tilapia | Cod | Any firm white fish",
+          "note": "Any firm, mild white fish works"
+        }
+      ]
+    },
+    "protein": 46,
+    "carbs": 70,
+    "fat": 12,
+    "fiber": 12,
+    "image": "/images/dishes/Bangladeshi-Fish-Rice-and-Lentil-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1229,
+    "name": "Nepalese Chicken Dal Protein Bowl",
+    "country": "Nepal",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 560,
+    "budget": 10,
+    "time": "35 min",
+    "spice": 1,
+    "tags": [
+      "high-protein",
+      "muscle-gain",
+      "meal-prep",
+      "bowl",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Grilled chicken with lentil dal, tomatoes and cucumber.",
+    "ingredients": [
+      "Grilled chicken",
+      "Lentil dal",
+      "Tomatoes",
+      "Cucumber",
+      "Spinach",
+      "Cumin",
+      "Cilantro"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Grilled chicken",
+          "to": "Chickpeas | Firm tofu | Seitan",
+          "note": "Marinate the same way; seitan contains gluten"
+        }
+      ]
+    },
+    "protein": 52,
+    "carbs": 44,
+    "fat": 17,
+    "fiber": 12,
+    "image": "/images/dishes/Nepalese-Chicken-Dal-Protein-Bowl.jpg"
+  },
+  {
+    "id": 1230,
+    "name": "Italian Panzanella Salad",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 300,
+    "budget": 4,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Tuscan bread salad of ripe tomatoes, cucumber, onion and basil.",
+    "ingredients": [
+      "Tomatoes",
+      "Cucumber",
+      "Day-old bread",
+      "Red onion",
+      "Basil",
+      "Olive oil",
+      "Red wine vinegar"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Day-old bread",
+          "to": "Gluten-free bread or buns | Corn tortillas | Lettuce wraps",
+          "note": "Toast gluten-free bread for the best texture"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 36,
+    "fat": 15,
+    "fiber": 4,
+    "image": "/images/dishes/Italian-Panzanella-Salad.jpg"
+  },
+  {
+    "id": 1231,
+    "name": "Portuguese Tomato Onion Salad",
+    "country": "Portugal",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 130,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Portuguese tomato and onion salad with parsley and olive oil.",
+    "ingredients": [
+      "Tomatoes",
+      "Onion",
+      "Parsley",
+      "Olive oil",
+      "Red wine vinegar",
+      "Salt",
+      "Black pepper"
+    ],
+    "swaps": {},
+    "protein": 2,
+    "carbs": 10,
+    "fat": 9,
+    "fiber": 3,
+    "image": "/images/dishes/Portuguese-Tomato-Onion-Salad.jpg"
+  },
+  {
+    "id": 1232,
+    "name": "French Lentil Salad",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 380,
+    "budget": 4,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegetarian",
+      "dairy",
+      "gluten-free",
+      "vegan-option",
+      "dairy-free-option"
+    ],
+    "desc": "French green lentil salad with vegetables, feta, parsley and lemon.",
+    "ingredients": [
+      "Green lentils",
+      "Tomatoes",
+      "Cucumber",
+      "Red onion",
+      "Parsley",
+      "Lemon juice",
+      "Olive oil",
+      "Feta"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Feta",
+          "to": "Crumbled firm tofu | Cashew ricotta",
+          "note": "Add lemon and salt for the fresh, tangy taste"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Feta",
+          "to": "Crumbled firm tofu | Vegan feta | Cashew ricotta",
+          "note": "Add lemon and salt for the fresh, tangy taste"
+        }
+      ],
+      "local": [
+        {
+          "from": "Feta",
+          "to": "Ricotta | Cottage cheese, drained",
+          "note": "Feta replaces salty white cheeses; ricotta replaces fresh curd cheeses"
+        }
+      ]
+    },
+    "protein": 19,
+    "carbs": 42,
+    "fat": 14,
+    "fiber": 14,
+    "image": "/images/dishes/French-Lentil-Salad.jpg"
+  },
+  {
+    "id": 1233,
+    "name": "German Potato Cucumber Salad",
+    "country": "Germany",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 240,
+    "budget": 4,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "German potato and cucumber salad with dill and mustard.",
+    "ingredients": [
+      "Potatoes",
+      "Cucumber",
+      "Dill",
+      "Red onion",
+      "Mustard",
+      "Vinegar",
+      "Olive oil"
+    ],
+    "swaps": {},
+    "protein": 4,
+    "carbs": 32,
+    "fat": 11,
+    "fiber": 4,
+    "image": "/images/dishes/German-Potato-Cucumber-Salad.jpg"
+  },
+  {
+    "id": 1234,
+    "name": "Polish Beetroot Apple Salad",
+    "country": "Poland",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 180,
+    "budget": 4,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Polish beetroot and apple salad with carrot and yogurt dressing.",
+    "ingredients": [
+      "Beetroot",
+      "Apple",
+      "Carrot",
+      "Red onion",
+      "Parsley",
+      "Lemon juice",
+      "Yogurt dressing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Yogurt dressing",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Yogurt dressing",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Yogurt dressing",
+          "to": "Greek yogurt | Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 30,
+    "fat": 5,
+    "fiber": 6,
+    "image": "/images/dishes/Polish-Beetroot-Apple-Salad.jpg"
+  },
+  {
+    "id": 1235,
+    "name": "Hungarian Cucumber Paprika Salad",
+    "country": "Hungary",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 110,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Hungarian cucumber salad with sweet paprika, dill and sour cream.",
+    "ingredients": [
+      "Cucumber",
+      "Sweet paprika",
+      "Red onion",
+      "Dill",
+      "Sour cream",
+      "Vinegar",
+      "Salt"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Sour cream",
+          "to": "Cashew sour cream | Dairy-free yogurt",
+          "note": "Stir in at the end, off the heat"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Sour cream",
+          "to": "Dairy-free yogurt | Cashew sour cream | Coconut yogurt + lemon",
+          "note": "Stir in at the end, off the heat"
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 9,
+    "fat": 7,
+    "fiber": 2,
+    "image": "/images/dishes/Hungarian-Cucumber-Paprika-Salad.jpg"
+  },
+  {
+    "id": 1236,
+    "name": "Romanian Roasted Pepper Salad",
+    "country": "Romania",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 160,
+    "budget": 4,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Romanian roasted pepper salad with garlic, parsley and vinegar.",
+    "ingredients": [
+      "Roasted bell peppers",
+      "Tomatoes",
+      "Garlic",
+      "Parsley",
+      "Olive oil",
+      "Vinegar",
+      "Salt"
+    ],
+    "swaps": {},
+    "protein": 2,
+    "carbs": 14,
+    "fat": 11,
+    "fiber": 4,
+    "image": "/images/dishes/Romanian-Roasted-Pepper-Salad.jpg"
+  },
+  {
+    "id": 1237,
+    "name": "Croatian Octopus Salad",
+    "country": "Croatia",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 360,
+    "budget": 9,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "shellfish"
+    ],
+    "desc": "Croatian octopus salad with potatoes, tomatoes, onion and lemon.",
+    "ingredients": [
+      "Cooked octopus",
+      "Potatoes",
+      "Tomatoes",
+      "Red onion",
+      "Parsley",
+      "Olive oil",
+      "Lemon juice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Cooked octopus",
+          "to": "Oyster mushrooms | King oyster mushrooms | Hearts of palm",
+          "note": "A little seaweed adds the taste of the sea"
+        }
+      ],
+      "local": [
+        {
+          "from": "Cooked octopus",
+          "to": "Clams | Calamari | Mussels",
+          "note": "Use frozen seafood if fresh is hard to find"
+        }
+      ]
+    },
+    "protein": 28,
+    "carbs": 26,
+    "fat": 16,
+    "fiber": 3,
+    "image": "/images/dishes/Croatian-Octopus-Salad.jpg"
+  },
+  {
+    "id": 1238,
+    "name": "Albanian Tomato Cucumber Olive Salad",
+    "country": "Albania",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 160,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Albanian tomato, cucumber and olive salad with parsley.",
+    "ingredients": [
+      "Tomatoes",
+      "Cucumber",
+      "Olives",
+      "Red onion",
+      "Parsley",
+      "Olive oil",
+      "Lemon juice"
+    ],
+    "swaps": {},
+    "protein": 2,
+    "carbs": 10,
+    "fat": 13,
+    "fiber": 3,
+    "image": "/images/dishes/Albanian-Tomato-Cucumber-Olive-Salad.jpg"
+  },
+  {
+    "id": 1239,
+    "name": "Macedonian Shopska Salad",
+    "country": "North Macedonia",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 260,
+    "budget": 4,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Macedonian chopped salad under grated white brined cheese.",
+    "ingredients": [
+      "Tomatoes",
+      "Cucumber",
+      "Bell pepper",
+      "Red onion",
+      "White brined cheese",
+      "Parsley",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "White brined cheese",
+          "to": "Vegan mozzarella | Cashew cheese sauce",
+          "note": "Choose a vegan cheese that melts"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "White brined cheese",
+          "to": "Vegan mozzarella | Dairy-free cheddar | Cashew cheese sauce",
+          "note": "Choose a vegan cheese that melts"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 12,
+    "fat": 20,
+    "fiber": 3,
+    "image": "/images/dishes/Macedonian-Shopska-Salad.jpg"
+  },
+  {
+    "id": 1240,
+    "name": "Georgian Beet Walnut Salad",
+    "country": "Georgia",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 260,
+    "budget": 4,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan",
+      "dairy-free",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Georgian beetroot salad with walnuts, garlic and cilantro.",
+    "ingredients": [
+      "Beetroot",
+      "Walnuts",
+      "Garlic",
+      "Cilantro",
+      "Red wine vinegar",
+      "Olive oil",
+      "Salt"
+    ],
+    "swaps": {
+      "nuts": [
+        {
+          "from": "Walnuts",
+          "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
+          "note": "For a crunchy garnish, use toasted seeds."
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 18,
+    "fat": 19,
+    "fiber": 5,
+    "image": "/images/dishes/Georgian-Beet-Walnut-Salad.jpg"
+  },
+  {
+    "id": 1241,
+    "name": "Armenian Tomato Herb Salad",
+    "country": "Armenia",
+    "region": "Europe",
+    "emoji": "🥗",
+    "cal": 120,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Armenian tomato and herb salad with lemon.",
+    "ingredients": [
+      "Tomatoes",
+      "Cucumber",
+      "Parsley",
+      "Cilantro",
+      "Green onion",
+      "Lemon juice",
+      "Olive oil"
+    ],
+    "swaps": {},
+    "protein": 2,
+    "carbs": 10,
+    "fat": 8,
+    "fiber": 3,
+    "image": "/images/dishes/Armenian-Tomato-Herb-Salad.jpg"
+  },
+  {
+    "id": 1242,
+    "name": "Egyptian Balata Salad",
+    "country": "Egypt",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 120,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Egyptian chopped balady salad with cumin and lemon.",
+    "ingredients": [
+      "Tomatoes",
+      "Cucumber",
+      "Red onion",
+      "Parsley",
+      "Lemon juice",
+      "Cumin",
+      "Olive oil"
+    ],
+    "swaps": {},
+    "protein": 2,
+    "carbs": 10,
+    "fat": 8,
+    "fiber": 3,
+    "image": "/images/dishes/Egyptian-Balata-Salad.jpg"
+  },
+  {
+    "id": 1243,
+    "name": "Algerian Roasted Pepper Tomato Salad",
+    "country": "Algeria",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 160,
+    "budget": 4,
+    "time": "40 min",
+    "spice": 1,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Algerian roasted pepper and tomato salad with garlic.",
+    "ingredients": [
+      "Roasted bell peppers",
+      "Tomatoes",
+      "Garlic",
+      "Parsley",
+      "Olive oil",
+      "Vinegar",
+      "Cumin"
+    ],
+    "swaps": {},
+    "protein": 2,
+    "carbs": 14,
+    "fat": 11,
+    "fiber": 4,
+    "image": "/images/dishes/Algerian-Roasted-Pepper-Tomato-Salad.jpg"
+  },
+  {
+    "id": 1244,
+    "name": "Senegalese Black Eyed Pea Salad",
+    "country": "Senegal",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 300,
+    "budget": 4,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Senegalese black-eyed pea salad with vegetables and lemon.",
+    "ingredients": [
+      "Black-eyed peas",
+      "Tomatoes",
+      "Cucumber",
+      "Red onion",
+      "Parsley",
+      "Lemon juice",
+      "Olive oil"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Black-eyed peas",
+          "to": "Pinto beans | Green peas",
+          "note": "Canned beans save hours of soaking"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 38,
+    "fat": 11,
+    "fiber": 10,
+    "image": "/images/dishes/Senegalese-Black-Eyed-Pea-Salad.jpg"
+  },
+  {
+    "id": 1245,
+    "name": "Ivorian Avocado Tomato Salad",
+    "country": "Ivory Coast",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 260,
+    "budget": 4,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Ivorian avocado and tomato salad with lime.",
+    "ingredients": [
+      "Avocado",
+      "Tomatoes",
+      "Red onion",
+      "Cucumber",
+      "Parsley",
+      "Lime juice",
+      "Olive oil"
+    ],
+    "swaps": {},
+    "protein": 3,
+    "carbs": 14,
+    "fat": 22,
+    "fiber": 9,
+    "image": "/images/dishes/Ivorian-Avocado-Tomato-Salad.jpg"
+  },
+  {
+    "id": 1246,
+    "name": "Cameroonian Bean Avocado Salad",
+    "country": "Cameroon",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 320,
+    "budget": 4,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Cameroonian bean and avocado salad with lime.",
+    "ingredients": [
+      "Red beans",
+      "Avocado",
+      "Tomatoes",
+      "Cucumber",
+      "Red onion",
+      "Lime juice",
+      "Parsley"
+    ],
+    "swaps": {},
+    "protein": 11,
+    "carbs": 34,
+    "fat": 16,
+    "fiber": 13,
+    "image": "/images/dishes/Cameroonian-Bean-Avocado-Salad.jpg"
+  },
+  {
+    "id": 1247,
+    "name": "Kenyan Corn Bean Kachumbari Salad",
+    "country": "Kenya",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 260,
+    "budget": 4,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Kenyan corn and bean kachumbari with lime and cilantro.",
+    "ingredients": [
+      "Corn",
+      "Red beans",
+      "Tomatoes",
+      "Red onion",
+      "Cucumber",
+      "Cilantro",
+      "Lime juice"
+    ],
+    "swaps": {},
+    "protein": 11,
+    "carbs": 46,
+    "fat": 3,
+    "fiber": 11,
+    "image": "/images/dishes/Kenyan-Corn-Bean-Kachumbari-Salad.jpg"
+  },
+  {
+    "id": 1248,
+    "name": "Tanzanian Mango Cucumber Salad",
+    "country": "Tanzania",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 150,
+    "budget": 4,
+    "time": "15 min",
+    "spice": 1,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Tanzanian mango, cucumber and tomato salad with chili and lime.",
+    "ingredients": [
+      "Mango",
+      "Cucumber",
+      "Red onion",
+      "Tomatoes",
+      "Cilantro",
+      "Lime juice",
+      "Chili"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Chili",
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 34,
+    "fat": 1,
+    "fiber": 5,
+    "image": "/images/dishes/Tanzanian-Mango-Cucumber-Salad.jpg"
+  },
+  {
+    "id": 1249,
+    "name": "Ugandan Avocado Bean Salad",
+    "country": "Uganda",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 320,
+    "budget": 4,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Ugandan avocado and bean salad with lime.",
+    "ingredients": [
+      "Avocado",
+      "Red beans",
+      "Tomatoes",
+      "Cucumber",
+      "Red onion",
+      "Lime juice",
+      "Parsley"
+    ],
+    "swaps": {},
+    "protein": 11,
+    "carbs": 34,
+    "fat": 16,
+    "fiber": 13,
+    "image": "/images/dishes/Ugandan-Avocado-Bean-Salad.jpg"
+  },
+  {
+    "id": 1250,
+    "name": "Rwandan Tomato Avocado Salad",
+    "country": "Rwanda",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 260,
+    "budget": 4,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Rwandan tomato and avocado salad with lemon.",
+    "ingredients": [
+      "Tomatoes",
+      "Avocado",
+      "Red onion",
+      "Cucumber",
+      "Parsley",
+      "Lemon juice",
+      "Olive oil"
+    ],
+    "swaps": {},
+    "protein": 3,
+    "carbs": 14,
+    "fat": 22,
+    "fiber": 9,
+    "image": "/images/dishes/Rwandan-Tomato-Avocado-Salad.jpg"
+  },
+  {
+    "id": 1251,
+    "name": "South African Beetroot Salad",
+    "country": "South Africa",
+    "region": "Africa",
+    "emoji": "🥗",
+    "cal": 230,
+    "budget": 4,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegetarian",
+      "dairy",
+      "gluten-free",
+      "vegan-option",
+      "dairy-free-option"
+    ],
+    "desc": "South African beetroot and apple salad with feta and vinegar.",
+    "ingredients": [
+      "Beetroot",
+      "Apple",
+      "Red onion",
+      "Parsley",
+      "Vinegar",
+      "Olive oil",
+      "Black pepper",
+      "Feta"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Feta",
+          "to": "Crumbled firm tofu | Cashew ricotta",
+          "note": "Add lemon and salt for the fresh, tangy taste"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Feta",
+          "to": "Crumbled firm tofu | Vegan feta | Cashew ricotta",
+          "note": "Add lemon and salt for the fresh, tangy taste"
+        }
+      ],
+      "local": [
+        {
+          "from": "Feta",
+          "to": "Ricotta | Cottage cheese, drained",
+          "note": "Feta replaces salty white cheeses; ricotta replaces fresh curd cheeses"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 24,
+    "fat": 12,
+    "fiber": 5,
+    "image": "/images/dishes/South-African-Beetroot-Salad.jpg"
+  },
+  {
+    "id": 1252,
+    "name": "Indian Sprouted Mung Salad",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 180,
+    "budget": 4,
+    "time": "15 min",
+    "spice": 1,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Indian sprouted mung bean salad with lemon and chaat masala.",
+    "ingredients": [
+      "Sprouted mung beans",
+      "Cucumber",
+      "Tomatoes",
+      "Red onion",
+      "Cilantro",
+      "Lemon juice",
+      "Chaat masala",
+      "Green chili"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Chaat masala",
+          "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
+        },
+        {
+          "from": "Green chili",
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
+        }
+      ]
+    },
+    "protein": 11,
+    "carbs": 30,
+    "fat": 2,
+    "fiber": 8,
+    "image": "/images/dishes/Indian-Sprouted-Mung-Salad.jpg"
+  },
+  {
+    "id": 1253,
+    "name": "Pakistani Chickpea Chaat Salad",
+    "country": "Pakistan",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 320,
+    "budget": 4,
+    "time": "15 min",
+    "spice": 2,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Pakistani chickpea chaat with tamarind chutney and chaat masala.",
+    "ingredients": [
+      "Chickpeas",
+      "Tomatoes",
+      "Cucumber",
+      "Red onion",
+      "Cilantro",
+      "Tamarind chutney",
+      "Chaat masala",
+      "Green chili"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Tamarind chutney",
+          "to": "Half the amount | Mild curry powder or mild salsa | A spoon of yogurt or coconut milk to soften",
+          "note": "Add heat at the table so everyone can choose"
+        },
+        {
+          "from": "Chaat masala",
+          "to": "Half the amount | Mild curry powder or mild salsa | A spoon of yogurt or coconut milk to soften",
+          "note": "Add heat at the table so everyone can choose"
+        },
+        {
+          "from": "Green chili",
+          "to": "Half the amount | Sweet paprika | Mild bell pepper",
+          "note": "Add heat at the table instead"
+        }
+      ],
+      "local": [
+        {
+          "from": "Tamarind chutney",
+          "to": "Lime juice + brown sugar | Pomegranate molasses",
+          "note": "Mix 1:1 to get the sweet-sour taste"
+        },
+        {
+          "from": "Chaat masala",
+          "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
+        },
+        {
+          "from": "Green chili",
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 52,
+    "fat": 7,
+    "fiber": 11,
+    "image": "/images/dishes/Pakistani-Chickpea-Chaat-Salad.jpg"
+  },
+  {
+    "id": 1254,
+    "name": "Nepalese Cucumber Sesame Salad",
+    "country": "Nepal",
+    "region": "Asia",
+    "emoji": "🥗",
+    "cal": 130,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 1,
+    "tags": [
+      "salad",
+      "fresh",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Nepalese cucumber salad with toasted sesame and green chili.",
+    "ingredients": [
+      "Cucumber",
+      "Sesame seeds",
+      "Cilantro",
+      "Green chili",
+      "Lemon juice",
+      "Sesame oil",
+      "Salt"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Green chili",
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
+        }
+      ]
+    },
+    "protein": 3,
+    "carbs": 8,
+    "fat": 10,
+    "fiber": 3,
+    "image": "/images/dishes/Nepalese-Cucumber-Sesame-Salad.jpg"
+  },
+  {
+    "id": 1255,
+    "name": "Italian Strawberry Ricotta Protein Smoothie",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "🥤",
+    "cal": 320,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Italian strawberry and ricotta protein smoothie.",
+    "ingredients": [
+      "Strawberries",
+      "Ricotta cheese",
+      "Greek yogurt",
+      "Milk",
+      "Honey",
+      "Vanilla"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Ricotta cheese",
+          "to": "Crumbled firm tofu | Cashew ricotta",
+          "note": "Add lemon and salt for the fresh, tangy taste"
+        },
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Ricotta cheese",
+          "to": "Crumbled firm tofu | Vegan feta | Cashew ricotta",
+          "note": "Add lemon and salt for the fresh, tangy taste"
+        },
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Ricotta cheese",
+          "to": "Feta | Cottage cheese, drained",
+          "note": "Feta replaces salty white cheeses; ricotta replaces fresh curd cheeses"
+        },
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 20,
+    "carbs": 36,
+    "fat": 10,
+    "fiber": 3,
+    "image": "/images/dishes/Italian-Strawberry-Ricotta-Protein-Smoothie.jpg"
+  },
+  {
+    "id": 1256,
+    "name": "Spanish Orange Almond Smoothie",
+    "country": "Spain",
+    "region": "Europe",
+    "emoji": "🥤",
+    "cal": 340,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Spanish orange and almond smoothie with banana.",
+    "ingredients": [
+      "Orange",
+      "Almond butter",
+      "Banana",
+      "Almond milk",
+      "Cinnamon",
+      "Honey"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Almond butter",
+          "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
+          "note": "For a crunchy garnish, use toasted seeds."
+        },
+        {
+          "from": "Almond milk",
+          "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
+          "note": "For a crunchy garnish, use toasted seeds."
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 50,
+    "fat": 14,
+    "fiber": 7,
+    "image": "/images/dishes/Spanish-Orange-Almond-Smoothie.jpg"
+  },
+  {
+    "id": 1257,
+    "name": "Portuguese Berry Yogurt Smoothie",
+    "country": "Portugal",
+    "region": "Europe",
+    "emoji": "🥤",
+    "cal": 290,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Portuguese berry yogurt smoothie with chia.",
+    "ingredients": [
+      "Mixed berries",
+      "Greek yogurt",
+      "Milk",
+      "Banana",
+      "Honey",
+      "Chia seeds"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 50,
+    "fat": 5,
+    "fiber": 8,
+    "image": "/images/dishes/Portuguese-Berry-Yogurt-Smoothie.jpg"
+  },
+  {
+    "id": 1258,
+    "name": "French Peach Yogurt Smoothie",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🥤",
+    "cal": 280,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "French peach and yogurt smoothie with vanilla.",
+    "ingredients": [
+      "Peaches",
+      "Greek yogurt",
+      "Milk",
+      "Honey",
+      "Vanilla",
+      "Chia seeds"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 46,
+    "fat": 5,
+    "fiber": 5,
+    "image": "/images/dishes/French-Peach-Yogurt-Smoothie.jpg"
+  },
+  {
+    "id": 1259,
+    "name": "German Apple Cinnamon Protein Smoothie",
+    "country": "Germany",
+    "region": "Europe",
+    "emoji": "🥤",
+    "cal": 340,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Apple cinnamon protein smoothie with yogurt and oats, like a liquid apple strudel.",
+    "ingredients": [
+      "Apple",
+      "Protein powder",
+      "Greek yogurt",
+      "Milk",
+      "Cinnamon",
+      "Oats"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Oats",
+          "to": "Certified gluten-free oats | Quinoa flakes",
+          "note": "Regular oats are often cross-contaminated"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 42,
+    "fat": 6,
+    "fiber": 5,
+    "image": "/images/dishes/German-Apple-Cinnamon-Protein-Smoothie.jpg"
+  },
+  {
+    "id": 1260,
+    "name": "Polish Blueberry Kefir Smoothie",
+    "country": "Poland",
+    "region": "Europe",
+    "emoji": "🥤",
+    "cal": 280,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Polish blueberry kefir smoothie with banana and flaxseed.",
+    "ingredients": [
+      "Blueberries",
+      "Kefir",
+      "Banana",
+      "Honey",
+      "Flaxseed",
+      "Milk"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Kefir",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Kefir",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Kefir",
+          "to": "Greek yogurt | Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 11,
+    "carbs": 48,
+    "fat": 6,
+    "fiber": 6,
+    "image": "/images/dishes/Polish-Blueberry-Kefir-Smoothie.jpg"
+  },
+  {
+    "id": 1261,
+    "name": "Romanian Cherry Yogurt Smoothie",
+    "country": "Romania",
+    "region": "Europe",
+    "emoji": "🥤",
+    "cal": 290,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Romanian cherry yogurt smoothie with vanilla.",
+    "ingredients": [
+      "Cherries",
+      "Greek yogurt",
+      "Milk",
+      "Banana",
+      "Honey",
+      "Vanilla"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 13,
+    "carbs": 52,
+    "fat": 4,
+    "fiber": 4,
+    "image": "/images/dishes/Romanian-Cherry-Yogurt-Smoothie.jpg"
+  },
+  {
+    "id": 1262,
+    "name": "Hungarian Sour Cherry Smoothie",
+    "country": "Hungary",
+    "region": "Europe",
+    "emoji": "🥤",
+    "cal": 280,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Hungarian tart sour cherry smoothie with cinnamon.",
+    "ingredients": [
+      "Sour cherries",
+      "Banana",
+      "Greek yogurt",
+      "Milk",
+      "Honey",
+      "Cinnamon"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 52,
+    "fat": 4,
+    "fiber": 4,
+    "image": "/images/dishes/Hungarian-Sour-Cherry-Smoothie.jpg"
+  },
+  {
+    "id": 1263,
+    "name": "Croatian Fig Yogurt Smoothie",
+    "country": "Croatia",
+    "region": "Europe",
+    "emoji": "🥤",
+    "cal": 360,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Croatian fresh fig smoothie with yogurt and walnuts.",
+    "ingredients": [
+      "Fresh figs",
+      "Greek yogurt",
+      "Milk",
+      "Banana",
+      "Honey",
+      "Walnuts"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Walnuts",
+          "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
+          "note": "For a crunchy garnish, use toasted seeds."
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 13,
+    "carbs": 56,
+    "fat": 11,
+    "fiber": 7,
+    "image": "/images/dishes/Croatian-Fig-Yogurt-Smoothie.jpg"
+  },
+  {
+    "id": 1264,
+    "name": "Albanian Peach Honey Smoothie",
+    "country": "Albania",
+    "region": "Europe",
+    "emoji": "🥤",
+    "cal": 280,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Albanian peach and honey smoothie with cinnamon.",
+    "ingredients": [
+      "Peaches",
+      "Greek yogurt",
+      "Milk",
+      "Honey",
+      "Banana",
+      "Cinnamon"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 52,
+    "fat": 4,
+    "fiber": 4,
+    "image": "/images/dishes/Albanian-Peach-Honey-Smoothie.jpg"
+  },
+  {
+    "id": 1265,
+    "name": "Georgian Pomegranate Walnut Smoothie",
+    "country": "Georgia",
+    "region": "Europe",
+    "emoji": "🥤",
+    "cal": 380,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Georgian pomegranate smoothie with walnuts and yogurt.",
+    "ingredients": [
+      "Pomegranate arils",
+      "Walnuts",
+      "Banana",
+      "Greek yogurt",
+      "Milk",
+      "Honey"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Walnuts",
+          "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
+          "note": "For a crunchy garnish, use toasted seeds."
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 13,
+    "carbs": 54,
+    "fat": 14,
+    "fiber": 6,
+    "image": "/images/dishes/Georgian-Pomegranate-Walnut-Smoothie.jpg"
+  },
+  {
+    "id": 1266,
+    "name": "Armenian Apricot Yogurt Smoothie",
+    "country": "Armenia",
+    "region": "Europe",
+    "emoji": "🥤",
+    "cal": 280,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Armenian apricot yogurt smoothie with cinnamon.",
+    "ingredients": [
+      "Apricots",
+      "Greek yogurt",
+      "Milk",
+      "Banana",
+      "Honey",
+      "Cinnamon"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 52,
+    "fat": 4,
+    "fiber": 5,
+    "image": "/images/dishes/Armenian-Apricot-Yogurt-Smoothie.jpg"
+  },
+  {
+    "id": 1267,
+    "name": "Lebanese Strawberry Rose Smoothie",
+    "country": "Lebanon",
+    "region": "Middle East",
+    "emoji": "🥤",
+    "cal": 270,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Lebanese strawberry smoothie scented with rose water.",
+    "ingredients": [
+      "Strawberries",
+      "Greek yogurt",
+      "Milk",
+      "Rose water",
+      "Honey",
+      "Banana"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        },
+        {
+          "from": "Rose water",
+          "to": "Vanilla + orange zest",
+          "note": "Use just a little"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 48,
+    "fat": 4,
+    "fiber": 5,
+    "image": "/images/dishes/Lebanese-Strawberry-Rose-Smoothie.jpg"
+  },
+  {
+    "id": 1268,
+    "name": "Tunisian Date Orange Smoothie",
+    "country": "Tunisia",
+    "region": "Africa",
+    "emoji": "🥤",
+    "cal": 330,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Tunisian date and orange smoothie with cinnamon.",
+    "ingredients": [
+      "Dates",
+      "Orange",
+      "Greek yogurt",
+      "Milk",
+      "Cinnamon",
+      "Honey"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 64,
+    "fat": 4,
+    "fiber": 6,
+    "image": "/images/dishes/Tunisian-Date-Orange-Smoothie.jpg"
+  },
+  {
+    "id": 1269,
+    "name": "Algerian Fig Almond Smoothie",
+    "country": "Algeria",
+    "region": "Africa",
+    "emoji": "🥤",
+    "cal": 360,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Algerian fig and almond smoothie with banana.",
+    "ingredients": [
+      "Figs",
+      "Almond butter",
+      "Banana",
+      "Almond milk",
+      "Cinnamon",
+      "Honey"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Almond butter",
+          "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
+          "note": "For a crunchy garnish, use toasted seeds."
+        },
+        {
+          "from": "Almond milk",
+          "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
+          "note": "For a crunchy garnish, use toasted seeds."
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 56,
+    "fat": 14,
+    "fiber": 8,
+    "image": "/images/dishes/Algerian-Fig-Almond-Smoothie.jpg"
+  },
+  {
+    "id": 1270,
+    "name": "Ivorian Pineapple Ginger Smoothie",
+    "country": "Ivory Coast",
+    "region": "Africa",
+    "emoji": "🥤",
+    "cal": 240,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Ivorian pineapple ginger smoothie with coconut water.",
+    "ingredients": [
+      "Pineapple",
+      "Banana",
+      "Fresh ginger",
+      "Coconut water",
+      "Greek yogurt",
+      "Lime juice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 50,
+    "fat": 2,
+    "fiber": 4,
+    "image": "/images/dishes/Ivorian-Pineapple-Ginger-Smoothie.jpg"
+  },
+  {
+    "id": 1271,
+    "name": "Cameroonian Papaya Banana Smoothie",
+    "country": "Cameroon",
+    "region": "Africa",
+    "emoji": "🥤",
+    "cal": 270,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Cameroonian papaya banana smoothie with ginger.",
+    "ingredients": [
+      "Papaya",
+      "Banana",
+      "Greek yogurt",
+      "Milk",
+      "Honey",
+      "Ginger"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 11,
+    "carbs": 52,
+    "fat": 4,
+    "fiber": 5,
+    "image": "/images/dishes/Cameroonian-Papaya-Banana-Smoothie.jpg"
+  },
+  {
+    "id": 1272,
+    "name": "Tanzanian Mango Baobab Smoothie",
+    "country": "Tanzania",
+    "region": "Africa",
+    "emoji": "🥤",
+    "cal": 320,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Tanzanian mango and baobab smoothie.",
+    "ingredients": [
+      "Mango",
+      "Baobab powder",
+      "Banana",
+      "Greek yogurt",
+      "Milk",
+      "Honey"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 11,
+    "carbs": 62,
+    "fat": 4,
+    "fiber": 8,
+    "image": "/images/dishes/Tanzanian-Mango-Baobab-Smoothie.jpg"
+  },
+  {
+    "id": 1273,
+    "name": "Ugandan Pineapple Avocado Smoothie",
+    "country": "Uganda",
+    "region": "Africa",
+    "emoji": "🥤",
+    "cal": 320,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Ugandan pineapple and avocado smoothie with lime.",
+    "ingredients": [
+      "Pineapple",
+      "Avocado",
+      "Banana",
+      "Coconut water",
+      "Lime juice",
+      "Greek yogurt"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 46,
+    "fat": 13,
+    "fiber": 8,
+    "image": "/images/dishes/Ugandan-Pineapple-Avocado-Smoothie.jpg"
+  },
+  {
+    "id": 1274,
+    "name": "Rwandan Passion Fruit Banana Smoothie",
+    "country": "Rwanda",
+    "region": "Africa",
+    "emoji": "🥤",
+    "cal": 300,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Rwandan passion fruit and banana smoothie with chia.",
+    "ingredients": [
+      "Passion fruit",
+      "Banana",
+      "Greek yogurt",
+      "Milk",
+      "Honey",
+      "Chia seeds"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 52,
+    "fat": 6,
+    "fiber": 9,
+    "image": "/images/dishes/Rwandan-Passion-Fruit-Banana-Smoothie.jpg"
+  },
+  {
+    "id": 1275,
+    "name": "Zimbabwean Mango Peanut Smoothie",
+    "country": "Zimbabwe",
+    "region": "Africa",
+    "emoji": "🥤",
+    "cal": 420,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Zimbabwean mango and peanut butter smoothie.",
+    "ingredients": [
+      "Mango",
+      "Peanut butter",
+      "Banana",
+      "Milk",
+      "Greek yogurt",
+      "Honey"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Peanut butter",
+          "to": "Sunflower seed butter | Roasted chickpeas | Toasted pumpkin seeds",
+          "note": "Sunflower butter gives the same creamy, nutty taste"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 16,
+    "carbs": 58,
+    "fat": 15,
+    "fiber": 6,
+    "image": "/images/dishes/Zimbabwean-Mango-Peanut-Smoothie.jpg"
+  },
+  {
+    "id": 1276,
+    "name": "Pakistani Mango Yogurt Protein Smoothie",
+    "country": "Pakistan",
+    "region": "Asia",
+    "emoji": "🥤",
+    "cal": 340,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Pakistani mango lassi-style protein smoothie with cardamom.",
+    "ingredients": [
+      "Mango",
+      "Greek yogurt",
+      "Protein powder",
+      "Milk",
+      "Cardamom",
+      "Honey"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 46,
+    "fat": 4,
+    "fiber": 3,
+    "image": "/images/dishes/Pakistani-Mango-Yogurt-Protein-Smoothie.jpg"
+  },
+  {
+    "id": 1277,
+    "name": "Bangladeshi Banana Date Smoothie",
+    "country": "Bangladesh",
+    "region": "Asia",
+    "emoji": "🥤",
+    "cal": 340,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Bangladeshi banana and date smoothie with cinnamon.",
+    "ingredients": [
+      "Banana",
+      "Dates",
+      "Milk",
+      "Greek yogurt",
+      "Cinnamon",
+      "Honey"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 66,
+    "fat": 4,
+    "fiber": 6,
+    "image": "/images/dishes/Bangladeshi-Banana-Date-Smoothie.jpg"
+  },
+  {
+    "id": 1278,
+    "name": "Nepalese Banana Yogurt Protein Smoothie",
+    "country": "Nepal",
+    "region": "Asia",
+    "emoji": "🥤",
+    "cal": 340,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Nepalese banana yogurt protein smoothie with cinnamon.",
+    "ingredients": [
+      "Banana",
+      "Greek yogurt",
+      "Protein powder",
+      "Milk",
+      "Honey",
+      "Cinnamon"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Choose unsweetened"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup | Date syrup | Agave",
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Choose unsweetened"
+        }
+      ],
+      "local": [
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        }
+      ]
+    },
+    "protein": 32,
+    "carbs": 46,
+    "fat": 4,
+    "fiber": 4,
+    "image": "/images/dishes/Nepalese-Banana-Yogurt-Protein-Smoothie.jpg"
+  },
+  {
+    "id": 1279,
+    "name": "Malaysian Pandan Coconut Smoothie",
+    "country": "Malaysia",
+    "region": "Asia",
+    "emoji": "🥤",
+    "cal": 340,
+    "budget": 5,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "smoothie",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Malaysian pandan and coconut smoothie with palm sugar.",
+    "ingredients": [
+      "Pandan extract",
+      "Coconut milk",
+      "Banana",
+      "Greek yogurt",
+      "Palm sugar",
+      "Chia seeds"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Soy yogurt | Coconut yogurt | Oat yogurt",
+          "note": "Plain and unsweetened for savory dishes"
+        }
+      ],
+      "local": [
+        {
+          "from": "Pandan extract",
+          "to": "Vanilla extract",
+          "note": "A few drops are enough"
+        },
+        {
+          "from": "Greek yogurt",
+          "to": "Plain yogurt",
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
+        },
+        {
+          "from": "Palm sugar",
+          "to": "Brown sugar | Coconut sugar | Maple syrup",
+          "note": "Same deep, caramel sweetness"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 48,
+    "fat": 14,
+    "fiber": 6,
+    "image": "/images/dishes/Malaysian-Pandan-Coconut-Smoothie.jpg"
+  },
   {
     "id": 8084,
     "name": "Loco Moco",
@@ -74578,8 +74953,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -74795,7 +75170,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Hawaij",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -74848,7 +75223,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Honey",
           "to": "Maple syrup | Date syrup | Agave",
-          "note": "Same sweetness"
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
         },
         {
           "from": "Milk",
@@ -75017,7 +75392,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Dried lime",
@@ -75027,7 +75402,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Baharat",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -75166,7 +75541,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -75178,7 +75553,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "local": [
@@ -75226,19 +75601,19 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Double cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Honey",
           "to": "Maple syrup | Date syrup | Agave",
-          "note": "Same sweetness"
+          "note": "Sweetness, flavor and water content vary; adjust the amount and other liquids to suit the recipe."
         }
       ],
       "dairy": [
         {
           "from": "Double cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "gluten": [
@@ -75524,14 +75899,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Whipped cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
         {
           "from": "Whipped cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "gluten": [
@@ -75807,14 +76182,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -75992,7 +76367,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Beef chuck suits a slow-cooked preparation; match the cut and cooking method to the dish."
         },
         {
           "from": "Dried lime",
@@ -76002,7 +76377,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Baharat",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -76117,7 +76492,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Garam masala",
           "to": "Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -76164,8 +76539,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -76212,7 +76587,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -76224,7 +76599,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -76327,14 +76702,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -76388,7 +76763,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -76405,7 +76780,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -76533,7 +76908,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Eggs",
@@ -76543,19 +76918,19 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "gluten": [
@@ -76620,21 +76995,21 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "local": [
         {
           "from": "Lamb neck",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         }
       ]
     },
@@ -76815,14 +77190,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -76879,14 +77254,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -76998,7 +77373,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Leg of lamb",
           "to": "Beef chuck",
-          "note": "Goat or mutton can be replaced with lamb"
+          "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         }
       ]
     },
@@ -77060,8 +77435,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -77263,7 +77638,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Ground beef",
@@ -77275,7 +77650,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -77550,8 +77925,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "local": [
@@ -77747,8 +78122,8 @@ window.WORLD_MEALS_DATABASE = [
       "gluten": [
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ],
       "eggs": [
@@ -77840,7 +78215,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -77857,7 +78232,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Milk",
@@ -77937,7 +78312,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Palm oil",
           "to": "Olive oil + a pinch of paprika | Annatto oil",
-          "note": "Paprika gives the red color"
+          "note": "Changes the characteristic flavor; added color does not reproduce palm oil’s taste."
         }
       ]
     },
@@ -78061,7 +78436,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Sour cream",
@@ -78078,7 +78453,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Sour cream",
@@ -78330,7 +78705,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Sour cream",
@@ -78347,7 +78722,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Sour cream",
@@ -78474,7 +78849,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -78491,7 +78866,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "local": [
@@ -78557,7 +78932,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -78574,7 +78949,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Sour cream",
@@ -78657,7 +79032,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -78669,7 +79044,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -78843,7 +79218,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Queso de mano",
@@ -78860,7 +79235,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Queso de mano",
@@ -78920,7 +79295,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Egg",
@@ -78937,7 +79312,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -79006,7 +79381,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Eggs",
@@ -79028,7 +79403,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -79158,7 +79533,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -79218,7 +79593,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Seven spice",
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -79287,7 +79662,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Pine nuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
@@ -79299,7 +79674,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
       ]
     },
@@ -79347,7 +79722,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -79359,7 +79734,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -79373,7 +79748,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Pistachios",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "note": "For a crunchy garnish, use toasted seeds."
         }
       ],
       "local": [
@@ -79518,8 +79893,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Chili flakes",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -79682,7 +80057,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         },
         {
           "from": "Egg yolks",
@@ -79699,7 +80074,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Cream",
           "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "note": "For sauces, use an unsweetened alternative and stir in gently."
         }
       ],
       "eggs": [
@@ -79956,7 +80331,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -79968,7 +80343,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -80019,7 +80394,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         },
         {
           "from": "Eggs",
@@ -80031,7 +80406,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -80120,8 +80495,8 @@ window.WORLD_MEALS_DATABASE = [
       "local": [
         {
           "from": "Chili powder",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -80167,7 +80542,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
@@ -80179,7 +80554,7 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "gluten": [
@@ -80399,12 +80774,12 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Garam masala",
           "to": "Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         },
         {
           "from": "Green chili",
-          "to": "Thai red curry paste | Sriracha",
-          "note": "Store-bought pastes are a quick replacement for homemade ones"
+          "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
+          "note": "Start with less; chilies vary a lot in heat."
         }
       ]
     },
@@ -80456,8 +80831,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Cream",
-          "to": "Coconut cream | Cashew cream",
-          "note": "Chill coconut cream to whip it"
+          "to": "Unsweetened oat cream | Coconut cream",
+          "note": "Stir into the sauce over gentle heat; coconut adds its own flavor."
         }
       ],
       "dairy": [
@@ -80468,27 +80843,27 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Cream",
-          "to": "Coconut cream | Cashew cream | Oat cream",
-          "note": "Chill coconut cream to whip it"
+          "to": "Unsweetened oat cream | Coconut cream",
+          "note": "Stir into the sauce over gentle heat; coconut adds its own flavor."
         }
       ],
       "nuts": [
         {
           "from": "Cashews",
-          "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
-          "note": "Seeds give the same crunch without nuts"
+          "to": "Soaked sunflower seeds, blended smooth",
+          "note": "Blend with a little water for the sauce; this is an adaptation and the flavor and thickness will differ."
         }
       ],
       "local": [
         {
           "from": "Yogurt",
           "to": "Greek yogurt | Plain yogurt",
-          "note": "Thick Greek yogurt replaces skyr, labneh or qurut"
+          "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         },
         {
           "from": "Garam masala",
           "to": "Cumin + coriander + cinnamon + black pepper",
-          "note": "Most spice blends can be made with these four"
+          "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
       ]
     },
@@ -80570,8 +80945,8 @@ window.WORLD_MEALS_DATABASE = [
         },
         {
           "from": "Soy sauce",
-          "to": "Tamari | Coconut aminos",
-          "note": "Tamari is the closest match"
+          "to": "Gluten-free tamari | Gluten-free coconut aminos",
+          "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
       ]
     },
@@ -80660,14 +81035,14 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Butter",
           "to": "Vegan butter | Olive oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "dairy": [
         {
           "from": "Butter",
           "to": "Olive oil | Vegan butter | Coconut oil",
-          "note": "Use vegan butter for baking"
+          "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
       ],
       "local": [
