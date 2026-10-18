@@ -58432,7 +58432,7 @@ window.WORLD_MEALS_DATABASE = [
         }
       ]
     },
-    "image": "/images/dishes/Sauce-Graine.jpg",
+    "image": "/images/dishes/Sauce-graine.jpg",
     "protein": 38,
     "carbs": 56,
     "fat": 38,
