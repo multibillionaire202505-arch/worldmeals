@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Discover authentic dishes from Countries around the world, plan meals, explore global cuisines, and cook with personalized guidance from WorldMeals.">
+<meta name="description" content="Discover authentic dishes from Countries around the world, plan meals, explore global cuisines, and explore family-friendly dishes with WorldMeals Kids.">
 <title>World Meals — Every Dish. Every Country.</title>
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#C47A2C">
@@ -2275,6 +2275,44 @@ body{
 .price-card[data-plan="explorer"] .plan-cta-light{background:#fff!important;color:#171512!important;border:2px solid #B9A58E!important}
 .price-card .plan-cta{font-size:14.5px!important;min-height:52px!important;padding:15px 14px!important;display:flex!important;align-items:center;justify-content:center}
 </style>
+<style>
+/* WorldMeals Kids */
+.wm-kids{padding:88px 24px;scroll-margin-top:100px;background:linear-gradient(135deg,#edf7ef,#fff5e6)}
+.wm-kids-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.wm-kids-label{display:inline-block;padding:7px 12px;border:1px solid #c7dfce;border-radius:999px;color:#175b41;background:#fffdf9;font-size:12px;font-weight:800;letter-spacing:.06em;margin-bottom:20px}
+.wm-kids h2{font-size:clamp(32px,4vw,48px);line-height:1.12;letter-spacing:-1.3px;margin-bottom:20px;color:#171512}
+.wm-kids h2 em{font-style:normal;color:#167a5a}
+.wm-kids-copy{font-size:16px;line-height:1.75;color:#5e6258;margin-bottom:22px}
+.wm-kids-points{list-style:none;display:grid;gap:12px;margin-bottom:26px;color:#304d3c;font-size:14px;line-height:1.6}
+.wm-kids-points li::before{content:'✓';font-weight:800;color:#167a5a;margin-right:9px}
+.wm-kids .wm-kids-button{background:#167a5a;color:white;display:inline-flex;width:auto;max-width:100%;justify-content:center;text-align:center}
+.wm-kids-note{font-size:12px;line-height:1.6;color:#5e6258;margin-top:13px}
+.wm-kids-categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.wm-kids-category{padding:23px 20px;border:1px solid #e1e4d6;border-radius:22px;background:#fffdf9;box-shadow:0 10px 24px #304c3910}
+.wm-kids-category:nth-child(3n+2){background:#fff7e9}
+.wm-kids-category span{display:block;font-size:29px;margin-bottom:12px}
+.wm-kids-category h3{font-size:15px;line-height:1.4;color:#244b37;margin-bottom:7px}
+.wm-kids-category p{font-size:12px;line-height:1.65;color:#626358}
+.wm-kids-hero-link{display:inline-block;margin-top:17px;color:#175b41;font-size:14px;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.wm-kids a:focus-visible{outline:3px solid #d96a16;outline-offset:5px}
+@media(max-width:800px){.wm-kids-inner{grid-template-columns:1fr;gap:32px}.wm-kids{padding:64px 20px}}
+@media(max-width:380px){.wm-kids-categories{grid-template-columns:1fr}.wm-kids-category{padding:20px}}
+</style>
+<style>
+/* Actual WorldMeals Kids screen previews */
+.wm-kids-demo{min-width:0;max-width:420px;width:100%;margin:auto}
+.wm-kids-demo-label{font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:#175b41;font-weight:800;margin-bottom:14px;text-align:center}
+.wm-kids-screens{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:24px;padding:5px 6px 18px;scrollbar-color:#167a5a #e0e8dc;scrollbar-width:thin;overscroll-behavior-x:contain;border-radius:30px}
+.wm-kids-screen{flex:0 0 100%;min-width:0;scroll-snap-align:center;margin:0}
+.wm-kids-phone{border:9px solid #25231f;border-radius:34px;overflow:hidden;background:#fffaf1;box-shadow:0 16px 28px #263c3620;aspect-ratio:709/1381}
+.wm-kids-phone img{display:block;width:100%;height:auto;margin-top:-9.3%}
+.wm-kids-screen figcaption{padding:15px 8px 0;text-align:center;color:#31543f;font-size:13px;line-height:1.6;font-weight:650}
+.wm-kids-swipe{text-align:center;font-size:12px;color:#5e6258;margin-top:10px}
+.wm-kids-categories{grid-column:1/-1;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:8px}
+@media(max-width:800px){.wm-kids-categories{grid-template-columns:repeat(2,minmax(0,1fr))}.wm-kids-demo{max-width:360px}}
+@media(max-width:380px){.wm-kids-categories{grid-template-columns:1fr}}
+</style>
+<style>.wm-kids-controls{display:flex;justify-content:center;gap:10px;margin-top:16px}.wm-kids-controls button{min-width:44px;min-height:44px;border:1px solid #b6cbb8;background:#fffdf9;color:#175b41;border-radius:12px;padding:8px 16px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}.wm-kids-controls button:focus-visible{outline:3px solid #d96a16;outline-offset:3px}</style><style>@media(max-width:800px){.wm-kids-categories{grid-template-columns:1fr}}</style>
 </head>
 <body>
 
@@ -2290,6 +2328,7 @@ body{
   <div class="nav-links">
     <a href="#discover" class="nav-link">Discover</a>
     <a href="#features" class="nav-link">Features</a>
+    <a href="#kids" class="nav-link">WorldMeals Kids</a>
     <a href="#how" class="nav-link">How it works</a>
     <a href="#pricing" class="nav-link">Pricing</a>
   </div>
@@ -2322,6 +2361,7 @@ body{
     <div class="trust-item">↩️ Cancel anytime</div>
     <div class="trust-item">🌱 Explorer · 5 AI recipes lifetime</div>
   </div>
+  <a class="wm-kids-hero-link" href="#kids">Cooking for little ones? Discover WorldMeals Kids →</a>
 </section>
 
 <section class="hero-visual reveal" aria-label="WorldMeals food photography">
@@ -2629,6 +2669,31 @@ body{
 
 
 
+
+<!-- WORLDMEALS KIDS -->
+<section class="wm-kids" id="kids" aria-labelledby="wmKidsTitle">
+  <div class="wm-kids-inner">
+    <div>
+      <div class="wm-kids-label">WORLDMEALS KIDS · FOR LITTLE EXPLORERS</div>
+      <h2 id="wmKidsTitle">Big flavors.<br><em>Little explorers.</em></h2>
+      <p class="wm-kids-copy"><b>400 kids dishes from 154 countries</b>, sorted by age from <b>6 months to 12 years</b>. Breakfast, lunch, dinner and snacks your child will actually eat.</p>
+      <ul class="wm-kids-points">
+        <li><b>“My child won’t eat…”</b> Pick vegetables, meat, fish, eggs, dairy or mushrooms, and only meals that work show up.</li>
+        <li>Toddler-friendly textures, hidden-veggie and picky-eater dishes.</li>
+        <li>Introduce a new country, one little bite at a time.</li>
+      </ul>
+      <a href="app.html" class="btn-primary wm-kids-button">Open WorldMeals &amp; explore Kids →</a>
+      <p class="wm-kids-note"><b>Included with Chef · try it free for 3 days.</b> Find the Kids collection inside WorldMeals. Choose dishes and textures suited to your child's age, needs, and allergies.</p>
+    </div>
+    <div class="wm-kids-demo"><p class="wm-kids-demo-label">Take a look inside WorldMeals Kids</p><div class="wm-kids-screens" tabindex="0" role="region" aria-label="Five actual Kids app screenshots. Scroll horizontally or use arrow keys to explore."><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-1.jpg" loading="lazy" decoding="async" alt="Welcome to WorldMeals Kids — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>1 / 5 · Welcome to WorldMeals Kids</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-2.jpg" loading="lazy" decoding="async" alt="Choices that work for your child — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>2 / 5 · Choices that work for your child</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-3.jpg" loading="lazy" decoding="async" alt="Find meals from around the world — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>3 / 5 · Find meals from around the world</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-4.jpg" loading="lazy" decoding="async" alt="Choose an age and meal type — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>4 / 5 · Choose an age and meal type</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-5.jpg" loading="lazy" decoding="async" alt="Explore dishes and view recipes — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>5 / 5 · Explore dishes and view recipes</figcaption></figure></div><div class="wm-kids-controls" aria-label="Kids preview controls"><button type="button" id="kidsPrev" aria-label="Previous Kids screen">←</button><button type="button" id="kidsPause" aria-label="Pause automatic screen changes">Pause</button><button type="button" id="kidsNext" aria-label="Next Kids screen">→</button></div><p class="wm-kids-swipe">Swipe, scroll, or use the arrows to explore all 5 screens.</p></div>
+    <div class="wm-kids-categories" aria-label="WorldMeals Kids categories">
+      <article class="wm-kids-category"><span aria-hidden="true">🥦</span><h3>Picky eater?</h3><p>Hidden-veggie dishes and familiar flavors, with a little room for discovery.</p></article>
+      <article class="wm-kids-category"><span aria-hidden="true">🍼</span><h3>Little one?</h3><p>Soft, toddler-friendly textures, sorted by age from 6 months.</p></article>
+      <article class="wm-kids-category"><span aria-hidden="true">🚫</span><h3>Allergies?</h3><p>Dairy-free, egg-free and gluten-free choices. Always check every ingredient for your child.</p></article>
+    </div>
+  </div>
+</section>
+
 <!-- INTERACTIVE WORLD MAP -->
 <section class="world-map-section" id="world-map">
   <div class="world-map-grid">
@@ -2908,6 +2973,7 @@ body{
         <div class="price-feature" style="color:#C8C0B8"><span style="color:#62D6A6">✓</span>Smart substitutions</div>
         <div class="price-feature" style="color:#C8C0B8"><span style="color:#62D6A6">✓</span>Weekly meal planner</div>
         <div class="price-feature" style="color:#C8C0B8"><span style="color:#62D6A6">✓</span>World Tour Challenge</div>
+        <div class="price-feature" style="color:#C8C0B8"><span style="color:#62D6A6">✓</span>Kids Meals (6 months–12 years)</div>
         <button type="button" class="plan-cta plan-cta-featured" id="chefCta" data-product-id="app.worldmeals.chef.annual">Try Chef free for 3 days → then $59.99/yr</button>
         <div class="plan-disclosure" id="chefDisclosure">3 days free, then $59.99/year. Cancel anytime. Subscription renews automatically unless canceled.</div>
       </div>
@@ -3133,6 +3199,7 @@ body{
       class="footer-brand-image">
   </div>
   <div class="footer-links">
+    <a href="#kids" class="footer-link">WorldMeals Kids</a>
     <a href="/about.html" class="footer-link">About</a>
     <a href="/privacy.html" class="footer-link">Privacy</a>
     <a href="/terms.html" class="footer-link">Terms</a>
@@ -4014,5 +4081,52 @@ if ('serviceWorker' in navigator) {
 
 <!-- Google Play Billing (Android app only; does nothing on iPhone or the website) -->
 <script src="/play-billing.js" defer></script>
+
+<script>
+(() => {
+  const track = document.querySelector('.wm-kids-screens');
+  if (!track) return;
+  const slides = Array.from(track.querySelectorAll('.wm-kids-screen'));
+  const pause = document.getElementById('kidsPause');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let paused = reduce.matches, hovering = false, focused = false, touching = false;
+  let visible = false, timer;
+  const index = () => slides.reduce((best, slide, i) =>
+    Math.abs(slide.getBoundingClientRect().left - track.getBoundingClientRect().left) <
+    Math.abs(slides[best].getBoundingClientRect().left - track.getBoundingClientRect().left) ? i : best, 0);
+  function move(direction) {
+    const target = slides[(index() + direction + slides.length) % slides.length];
+    track.scrollTo({left: target.getBoundingClientRect().left - slides[0].getBoundingClientRect().left,
+      behavior: reduce.matches ? 'instant' : 'smooth'});
+  }
+  function schedule() {
+    clearTimeout(timer);
+    if (!paused && !hovering && !focused && !touching && visible && !document.hidden)
+      timer = setTimeout(() => { move(1); schedule(); }, 5000);
+  }
+  function label() {
+    pause.textContent = paused ? 'Play' : 'Pause';
+    pause.setAttribute('aria-label', paused ? 'Start automatic screen changes' : 'Pause automatic screen changes');
+  }
+  pause.addEventListener('click', () => { paused = !paused; label(); schedule(); });
+  document.getElementById('kidsPrev').addEventListener('click', () => { move(-1); schedule(); });
+  document.getElementById('kidsNext').addEventListener('click', () => { move(1); schedule(); });
+  const demo = track.closest('.wm-kids-demo');
+  demo.addEventListener('mouseenter', () => { hovering = true; schedule(); });
+  demo.addEventListener('mouseleave', () => { hovering = false; schedule(); });
+  demo.addEventListener('focusin', () => { focused = true; schedule(); });
+  demo.addEventListener('focusout', () => { setTimeout(() => { focused = demo.contains(document.activeElement); schedule(); }, 0); });
+  track.addEventListener('pointerdown', () => { touching = true; schedule(); }, {passive:true});
+  window.addEventListener('pointerup', () => { if (touching) { touching = false; schedule(); } }, {passive:true});
+  track.addEventListener('scroll', schedule, {passive:true});
+  document.addEventListener('visibilitychange', schedule);
+  reduce.addEventListener('change', () => { paused = reduce.matches; label(); schedule(); });
+  if ('IntersectionObserver' in window) new IntersectionObserver(entries => {
+    visible = entries[0].isIntersecting; schedule();
+  }, {threshold:0.25}).observe(track);
+  else { visible = true; }
+  label(); schedule();
+})();
+</script>
 </body>
 </html>
