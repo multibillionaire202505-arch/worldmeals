@@ -2486,7 +2486,7 @@ body{
 .final-cta .wm-stores{justify-content:center;margin-top:22px}
 html.wm-in-app .wm-stores,html.wm-in-app .wm-store-link{display:none!important}
 </style>
-<script>/* hide store buttons when this page is opened inside the iPhone or Android app */(function(){try{var a=window.webkit&&window.webkit.messageHandlers&&window.webkit.messageHandlers.worldMealsIAP,b="getDigitalGoodsService" in window,c=document.referrer.indexOf("android-app://")===0,d=window.matchMedia&&matchMedia("(display-mode: standalone)").matches;if(a||b||c||d)sessionStorage.setItem("wm_in_app","1");if(sessionStorage.getItem("wm_in_app")==="1")document.documentElement.classList.add("wm-in-app");}catch(e){}})();</script>
+<script>/* hide store buttons when this page is opened inside the iPhone or Android app */(function(){try{var a=window.webkit&&window.webkit.messageHandlers&&window.webkit.messageHandlers.worldMealsIAP,b=false,c=document.referrer.indexOf("android-app://")===0,d=window.matchMedia&&matchMedia("(display-mode: standalone)").matches;if(a||b||c||d)sessionStorage.setItem("wm_in_app2","1");if(sessionStorage.getItem("wm_in_app2")==="1")document.documentElement.classList.add("wm-in-app");}catch(e){}})();</script>
 
 <style id="wm-editorial-corrections">
 /* Isolated entrance styling; original app assets and lower sections retained. */
@@ -2757,6 +2757,27 @@ nav .nav-link:hover::after,nav .nav-link:focus-visible::after{transform:scaleX(1
 document.addEventListener("DOMContentLoaded",function(){var sec=document.querySelector(".wm-ai");if(!sec||!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
 sec.classList.add("wm-ai-anim");new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){sec.classList.add("wm-ai-play");o.disconnect();}})},{threshold:.35}).observe(sec.querySelector(".chef-panel"));});
 </script>
+<style id="wm-map-premium">
+/* World Map: original globe, flags and panel kept; only the text is restyled */
+#world-map .v3-kicker{font:600 12px/1.4 Inter,system-ui,sans-serif!important;letter-spacing:.22em!important;color:#6B5A48!important;text-transform:uppercase}
+.wm-map-title{font:400 clamp(36px,4.2vw,60px)/1.04 "DM Serif Display",Georgia,serif!important;letter-spacing:-.02em!important;color:#14261B!important}
+.wm-map-title em{font-style:normal!important;color:#1E5B2C!important;background:none!important;-webkit-text-fill-color:#1E5B2C!important}
+.wm-map-title span{color:#E97622}
+#world-map .v3-sub{font:400 17px/1.65 Inter,system-ui,sans-serif!important;color:#3F362D!important}
+#world-map .map-country-name{font:400 34px/1.05 "DM Serif Display",Georgia,serif!important;color:#14261B!important;letter-spacing:-.01em}
+.wm-map-feat{margin-top:4px;font:600 11px/1.4 Inter,system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#C9A55A}
+#world-map .map-country-note{font:400 15px/1.6 Inter,system-ui,sans-serif!important;color:#5B5047!important}
+#world-map .map-dish div{font:600 13px/1.3 Inter,system-ui,sans-serif!important;color:#14261B!important}
+#world-map .map-hint{font:400 12.5px/1.5 Inter,system-ui,sans-serif!important;color:#8a7c6d!important}
+</style>
+<style id="wm-hero-slides">
+/* hero phone: app home screen first, then slides through how the app works */
+.wm-hero2-screen{padding-top:9cqw!important}
+.wm-hero2-screen>.wm-scr-track{display:flex;width:600%!important;height:100%;flex:1 1 auto;background:none!important;animation:wmScrSlides 23.4s cubic-bezier(.65,0,.35,1) infinite 1.5s}
+.wm-scr-track img{width:16.6667%;height:100%;object-fit:cover;object-position:top center;display:block;flex:0 0 auto}
+@keyframes wmScrSlides{0.00%,13.68%{transform:translateX(-0.0000%)}16.67%,30.34%{transform:translateX(-16.6667%)}33.33%,47.01%{transform:translateX(-33.3333%)}50.00%,63.68%{transform:translateX(-50.0000%)}66.67%,80.34%{transform:translateX(-66.6667%)}83.33%,97.01%{transform:translateX(-83.3333%)}100%{transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){.wm-scr-track{animation:none}}
+</style>
 <style id="wm-strip-icons">
 .wm-editorial-benefits span{display:inline-flex;vertical-align:middle;margin-right:12px}
 .wm-editorial-benefits span svg{width:30px;height:30px;fill:none;stroke:#254432;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
@@ -2793,7 +2814,7 @@ body[data-daypart="evening"] .wm-hero2 #timeGreeting{border-left-color:#8454ad!i
     <div class="wm-hero2-visual"><div class="wm-hero2-scene">
     <img class="wm-hero2-photo" src="/images/hero-table.jpg" alt="Butter chicken, sushi rolls, street tacos and naan on a warm stone table" width="1672" height="940" fetchpriority="high" decoding="async">
     <div class="wm-hero2-phone" aria-hidden="true">
-      <div class="wm-hero2-frame"><div class="wm-hero2-bezel"><div class="wm-hero2-status"><b>9:41</b><span class="wm-st-ic"><i></i><i></i><i></i><i></i></span></div><div class="wm-hero2-island"></div><div class="wm-hero2-screen"><div class="wm-scr-top"></div><div class="wm-scr-mid"></div><div class="wm-scr-bot"></div></div></div></div>
+      <div class="wm-hero2-frame"><div class="wm-hero2-bezel"><div class="wm-hero2-status"><b>9:41</b><span class="wm-st-ic"><i></i><i></i><i></i><i></i></span></div><div class="wm-hero2-island"></div><div class="wm-hero2-screen"><div class="wm-scr-track"><img src="/images/app-screen-home.jpg" alt="" decoding="async"><img src="/images/app-screen-browse.jpg" alt="" loading="lazy" decoding="async"><img src="/images/app-screen-sushi.jpg" alt="" loading="lazy" decoding="async"><img src="/images/app-screen-sushi-swaps.jpg" alt="" loading="lazy" decoding="async"><img src="/images/app-screen-scan.jpg" alt="" loading="lazy" decoding="async"><img src="/images/app-screen-kids.jpg" alt="" loading="lazy" decoding="async"></div></div></div></div>
     </div>
     </div></div>
     <div class="wm-hero2-copy">
@@ -3194,8 +3215,8 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
   <div class="world-map-grid">
     <div>
       <div class="v3-kicker">Interactive world map</div>
-      <div class="v3-title">Tap a country.<br><em>Meet its cuisine instantly.</em></div>
-      <div class="v3-sub">No searching. No complicated menus. Choose one of the featured countries on the globe and discover some of its iconic dishes in a single tap.</div>
+      <div class="v3-title wm-map-title">Tap a country.<br><em>Meet its cuisine</em><span>.</span></div>
+      <div class="v3-sub">Choose a country on the globe and see its iconic dishes in a single tap.</div>
 
       <div class="globe-wrap">
         <div class="globe" aria-label="Interactive cuisine globe">
@@ -3225,7 +3246,7 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
         <div class="map-country-flag" id="mapFlag">🇺🇸</div>
         <div>
           <div class="map-country-name" id="mapCountry">United States</div>
-          <div style="font-size:11px;color:#8B8177;font-weight:700">Featured cuisine</div>
+          <div class="wm-map-feat">Featured cuisine</div>
         </div>
       </div>
 
@@ -3251,7 +3272,7 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
       </div>
 
       <a class="map-open wm-map-start" id="mapOpen" href="app.html?country=United%20States"><span class="wm-start-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><span id="mapOpenLabel">Start exploring USA →</span></a>
-      <div class="map-hint">Tap another flag on the globe to change countries.</div>
+      <div class="map-hint">Tap another flag on the globe to switch countries.</div>
     </div>
   </div>
 </section>
