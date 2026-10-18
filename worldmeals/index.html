@@ -2313,7 +2313,13 @@ body{
 @media(max-width:380px){.wm-kids-categories{grid-template-columns:1fr}}
 </style>
 <style>.wm-kids-controls{display:flex;justify-content:center;gap:10px;margin-top:16px}.wm-kids-controls button{min-width:44px;min-height:44px;border:1px solid #b6cbb8;background:#fffdf9;color:#175b41;border-radius:12px;padding:8px 16px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}.wm-kids-controls button:focus-visible{outline:3px solid #d96a16;outline-offset:3px}</style><style>@media(max-width:800px){.wm-kids-categories{grid-template-columns:1fr}}</style>
-</head>
+<style>
+.wm-kids-label .wm-kids-brand-world{color:#69a83c}
+.wm-kids-label .wm-kids-brand-kids{color:#e47d20}
+.wm-kids-label .wm-kids-brand-world,.wm-kids-label .wm-kids-brand-kids{display:inline;font-size:18px;font-weight:800;letter-spacing:-.45px;text-transform:none}
+.wm-kids-label .wm-kids-brand-tag{display:inline;font-size:10px;letter-spacing:.05em;color:#175b41;text-transform:uppercase}
+@media(max-width:380px){.wm-kids-label .wm-kids-brand-tag{display:block;margin-top:5px}}
+</style></head>
 <body>
 
 <!-- NAV -->
@@ -2674,7 +2680,7 @@ body{
 <section class="wm-kids" id="kids" aria-labelledby="wmKidsTitle">
   <div class="wm-kids-inner">
     <div>
-      <div class="wm-kids-label">WORLDMEALS KIDS · FOR LITTLE EXPLORERS</div>
+      <div class="wm-kids-label"><span class="wm-kids-brand-world">WorldMeals</span> <span class="wm-kids-brand-kids">Kids</span><span class="wm-kids-brand-tag"> · For little explorers</span></div>
       <h2 id="wmKidsTitle">Big flavors.<br><em>Little explorers.</em></h2>
       <p class="wm-kids-copy"><b>400 kids dishes from 154 countries</b>, sorted by age from <b>6 months to 12 years</b>. Breakfast, lunch, dinner and snacks your child will actually eat.</p>
       <ul class="wm-kids-points">
@@ -4089,6 +4095,8 @@ if ('serviceWorker' in navigator) {
   const slides = Array.from(track.querySelectorAll('.wm-kids-screen'));
   const pause = document.getElementById('kidsPause');
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+  let keyboardInput = false;
   let paused = reduce.matches, hovering = false, focused = false, touching = false;
   let visible = false, timer;
   const index = () => slides.reduce((best, slide, i) =>
@@ -4112,18 +4120,23 @@ if ('serviceWorker' in navigator) {
   document.getElementById('kidsPrev').addEventListener('click', () => { move(-1); schedule(); });
   document.getElementById('kidsNext').addEventListener('click', () => { move(1); schedule(); });
   const demo = track.closest('.wm-kids-demo');
-  demo.addEventListener('mouseenter', () => { hovering = true; schedule(); });
+  demo.addEventListener('mouseenter', () => { if(canHover.matches){ hovering = true; schedule(); } });
   demo.addEventListener('mouseleave', () => { hovering = false; schedule(); });
-  demo.addEventListener('focusin', () => { focused = true; schedule(); });
-  demo.addEventListener('focusout', () => { setTimeout(() => { focused = demo.contains(document.activeElement); schedule(); }, 0); });
+  document.addEventListener('keydown', () => { keyboardInput = true; });
+  document.addEventListener('pointerdown', () => { keyboardInput = false; focused = false; schedule(); }, {passive:true});
+  demo.addEventListener('focusin', () => { focused = keyboardInput; schedule(); });
+  demo.addEventListener('focusout', () => { setTimeout(() => { focused = keyboardInput && demo.contains(document.activeElement); schedule(); }, 0); });
   track.addEventListener('pointerdown', () => { touching = true; schedule(); }, {passive:true});
-  window.addEventListener('pointerup', () => { if (touching) { touching = false; schedule(); } }, {passive:true});
+  function releaseTouch(){ if(touching){ touching = false; schedule(); } }
+  window.addEventListener('pointerup', releaseTouch, {passive:true});
+  window.addEventListener('pointercancel', releaseTouch, {passive:true});
+  track.addEventListener('lostpointercapture', releaseTouch, {passive:true});
   track.addEventListener('scroll', schedule, {passive:true});
   document.addEventListener('visibilitychange', schedule);
   reduce.addEventListener('change', () => { paused = reduce.matches; label(); schedule(); });
   if ('IntersectionObserver' in window) new IntersectionObserver(entries => {
     visible = entries[0].isIntersecting; schedule();
-  }, {threshold:0.25}).observe(track);
+  }, {threshold:0.05}).observe(track);
   else { visible = true; }
   label(); schedule();
 })();
