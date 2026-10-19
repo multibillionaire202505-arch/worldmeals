@@ -2909,6 +2909,36 @@ sec.classList.add("wm-ai-anim");new IntersectionObserver(function(es,o){es.forEa
 @media(max-width:1000px){.wm-plan{padding:72px 20px}.wm-plan-inner{grid-template-columns:minmax(0,1fr);gap:40px}}
 @media(max-width:640px){.wm-plan-cards{grid-template-columns:minmax(0,1fr)}.wm-gr-card{margin-top:0}}
 </style>
+<style id="wm-readable-small">
+/* Readability floor: supporting sentences 13.5px+, labels 12px+ */
+#pricing .plan-disclosure{font-size:13px!important;line-height:1.55!important}
+#pricing .price-period{font-size:13px!important}
+#pricing .plan-saving,#pricing .plan-badge{font-size:12px!important}
+#pricing .billing-save{font-size:11px!important}
+#kids .wm-kids-note{font-size:14.5px!important;line-height:1.65!important}
+#kids .wm-kids-brand-tag{font-size:11.5px!important}
+#kids .wm-kids-demo-label,#kids .wm-kids-swipe{font-size:12px!important}
+.wm-hero2-foot{font-size:13px!important}
+.wm-hero2-eyebrow{font-size:12px!important}
+.wm-sw-tip{font-size:13.5px!important}
+.wm-goals-fine,.wm-plan-disclaim{font-size:13.5px!important}
+.wm-plan-disclaim{margin:14px 6px 0;font-style:italic;font-family:Inter,system-ui,sans-serif;line-height:1.5;color:#7D6E5E}
+.wm-gr-name i{font-size:12.5px!important}
+.wm-wk-dish i{font-size:13px!important}
+.wm-plan-settings small,.wm-card-h small,.wm-gr-money small{font-size:11px!important}
+.map-hint{font-size:14px!important}
+.chef-status{font-size:12px!important}
+.wm-ai-dish small{font-size:13px!important}
+.wm-pp-label,#how .section-eyebrow,#pricing .section-eyebrow{font-size:12px!important}
+#discover .discovery-chip{font-size:13px!important}
+#discover .wm-disc-country{font-size:12px!important}
+.wm-tour .passport-id{font-size:11.5px!important}
+.wm-footer-copy{font-size:13.5px!important}
+.wm-footer-trust{font-size:12px!important}
+.wm-ai-try span{font-size:14px!important}
+.wm-gr-more{font-size:13px!important}
+@media(max-width:700px){.wm-editorial-benefits a{font-size:13.5px!important}}
+</style>
 <style id="wm-closing-premium">
 /* Promise */
 .wm-promise{padding:112px 24px!important;background:radial-gradient(ellipse at 50% 0%,rgba(201,165,90,.22),transparent 55%),#123B2B!important;text-align:center}
@@ -3019,6 +3049,66 @@ a:focus-visible,button:focus-visible{outline:3px solid #CF7B28;outline-offset:4p
 body[data-daypart="morning"] .wm-hero2 #timeGreeting{border-left-color:#df7b2c!important}
 body[data-daypart="afternoon"] .wm-hero2 #timeGreeting{border-left-color:#bf941e!important}
 body[data-daypart="evening"] .wm-hero2 #timeGreeting{border-left-color:#8454ad!important}
+</style>
+<style id="wm-cam-premium">
+.wm-cam{background:#FBF7EE;padding:104px 24px;border-top:1px solid #EFE5D3}
+.wm-cam-inner{max-width:1080px;margin:0 auto}
+.wm-cam-head{text-align:center;max-width:980px;margin:0 auto 48px}.wm-cam-sub{max-width:720px}.wm-nowrap{white-space:nowrap}
+.wm-cam-eyebrow{font:600 12px/1.4 Inter,system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#6B5232;margin-bottom:14px}
+.wm-cam-title{margin:0;font:400 clamp(36px,4.2vw,58px)/1.06 "DM Serif Display",Georgia,serif;letter-spacing:-.02em;color:#14261B}
+.wm-cam-title em{font-style:normal;color:#1E5B2C}.wm-cam-title span{color:#E97622}
+.wm-cam-sub{margin:18px auto 0;font:400 18px/1.65 Inter,system-ui,sans-serif;color:#3F362D}
+.wm-cam-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.wm-cam-card{display:grid;grid-template-columns:200px minmax(0,1fr);gap:26px;align-items:center;background:#FFFDF8;border:1px solid #EADFCB;border-radius:26px;padding:26px;box-shadow:0 26px 50px -34px rgba(60,40,10,.4)}
+.wm-cam-phone{padding:7px;border-radius:34px;background:linear-gradient(145deg,#F4F4F2,#C9C9C6 45%,#EDEDEA);box-shadow:0 22px 40px -18px rgba(20,30,20,.45)}
+.wm-cam-bezel{position:relative;border-radius:28px;background:#0E0E0E;padding:6px;overflow:hidden}
+.wm-cam-island{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:34%;height:15px;border-radius:999px;background:#000;z-index:2}
+.wm-cam-bezel img{display:block;width:100%;height:auto!important;aspect-ratio:540/1050;object-fit:cover;object-position:top;border-radius:22px}
+.wm-cam-tag{margin:0 0 6px;font:600 12px/1.4 Inter,system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#6B5232}
+.wm-cam-body h3{margin:0 0 10px;font:400 26px/1.15 "DM Serif Display",Georgia,serif;color:#14261B}
+.wm-cam-body p:last-child{margin:0;font:400 17px/1.65 Inter,system-ui,sans-serif!important;color:#3F362D!important}
+.wm-cam-cta{display:flex;flex-direction:column;align-items:center;margin-top:40px;text-align:center}
+.wm-cam-start{margin:0!important}
+.wm-cam-plan{margin:14px 0 0;font:400 15px/1.5 Inter,system-ui,sans-serif;color:#4A3F34}.wm-cam-plan b{color:#1E5B2C}
+@media(max-width:980px){.wm-cam-grid{grid-template-columns:minmax(0,1fr)}.wm-cam-card{grid-template-columns:170px minmax(0,1fr)}}
+@media(max-width:600px){.wm-cam{padding:72px 18px}.wm-cam-card{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center;padding:24px 20px}.wm-cam-phone{width:min(230px,70%)}.wm-cam-sub{font-size:17px}}
+</style>
+<style id="wm-eye4">
+.wm-goals-cards{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+@media(max-width:1000px){.wm-goals-cards{grid-template-columns:minmax(0,1fr)!important}}
+.wm-smoothie-band{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);align-items:center;background:#FFFDF8;border:1px solid #EADFCB;border-radius:24px;overflow:hidden;box-shadow:0 26px 50px -34px rgba(60,40,10,.4)}
+.wm-smoothie-img{height:280px}.wm-smoothie-img img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.wm-smoothie-body{padding:28px 34px}
+.wm-smoothie-eyebrow{margin:0 0 8px;font:600 12px/1.4 Inter,system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#7A5C1F}
+.wm-smoothie-body h3{margin:0;font:400 28px/1.15 "DM Serif Display",Georgia,serif;color:#14261B}
+.wm-smoothie-body p:last-child{margin:0;font:400 16px/1.6 Inter,system-ui,sans-serif;color:#4A3F34}
+.wm-smoothie-body b{color:#1E5B2C;font-weight:600}
+@media(max-width:700px){.wm-smoothie-band{grid-template-columns:minmax(0,1fr)}.wm-smoothie-img{height:auto;aspect-ratio:16/10}.wm-smoothie-body{padding:22px 22px 26px}.wm-smoothie-body h3{font-size:24px}}
+#discover .discovery-control.wm-disc-pause{width:auto!important;padding:0 18px!important;border-radius:999px!important;font:600 14px/1 Inter,system-ui,sans-serif;color:#14402c}
+#discover .discovery-control.wm-disc-pause:hover{color:#FFFAF1}
+#discover .discovery-controls{display:flex!important;justify-content:flex-end;gap:10px}
+/* Contrast: supporting text 4.5:1 or better */
+#pricing .plan-disclosure{color:#5F5245!important}
+#pricing .featured .plan-disclosure{color:#C4D3C8!important}
+#pricing .price-period{color:#5F5245!important}
+.wm-goal-dish span,.wm-gr-price,.wm-wk-cost{color:#7A5C1F!important}
+.wm-goals-fine,.wm-plan-disclaim,.wm-gr-name i,.wm-wk-dish i,.wm-final p.wm-final-fine,.wm-footer-copy{color:#5F5245!important}
+.wm-card-h small,.wm-plan-example,.wm-goals-eyebrow,.wm-plan-eyebrow{color:#6B5232!important}
+</style>
+<style id="wm-type-scale">
+/* Type scale: main 18px (17px phone) · cards 16px · captions 14-15px · disclosures 14px */
+.wm-swap-lead,#how .section-sub,.v3-section .v3-sub,.wm-goals-sub,.wm-plan-sub,.wm-kids-copy,.pricing-lead,.wm-promise p,.wm-final p{font-size:18px!important;line-height:1.65!important}
+.wm-editorial-kids p{font-size:17px!important;line-height:1.6!important}
+#discover .discovery-copy,.wm-goal-body p:last-child,.wm-plan-steps p,.wm-kids-points li,.wm-kids-category p,#pricing .plan-tagline,.map-country-note,.chef-bubble{font-size:16px!important;line-height:1.6!important}
+.wm-hero2-foot,.wm-sw-tip,.wm-goals-fine,.wm-goal-dish,.wm-plan-note,.wm-plan-disclaim,.map-hint,.wm-footer-copy,.wm-gr-name i{font-size:14px!important}
+.wm-kids-note,.wm-kids-screen figcaption{font-size:15px!important}
+#kids .wm-kids-screen figcaption{font-size:14px!important}
+html body #kids .wm-kids-categories .wm-kids-category p{font-size:16px!important;line-height:1.6!important}
+html body #world-map .map-hint{font-size:14px!important}
+#pricing .wm-pf-text{font-style:normal}
+html body #world-map .map-country-note{font-size:16px!important;line-height:1.6!important}
+#pricing .plan-disclosure,.wm-final p.wm-final-fine{font-size:14px!important;line-height:1.55!important}
+@media(max-width:700px){.wm-swap-lead,#how .section-sub,.v3-section .v3-sub,.wm-goals-sub,.wm-plan-sub,.wm-kids-copy,.pricing-lead,.wm-promise p,.wm-final p,.wm-hero2 .hero-sub{font-size:17px!important}}
 </style>
 </head>
 <body>
@@ -3292,6 +3382,7 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
 
     <div class="discovery-controls" aria-label="Global discovery controls">
       <button class="discovery-control" id="discoveryPrev" aria-label="Previous countries"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="discovery-control wm-disc-pause" id="discoveryPause" type="button" aria-pressed="false" aria-label="Pause automatic scrolling">Pause</button>
       <button class="discovery-control" id="discoveryNext" aria-label="Next countries"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
     </div>
   </div>
@@ -3314,7 +3405,15 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
       <article class="wm-goal-card "><div class="wm-goal-img"><img src="/images/dishes/Salade-Nicoise.jpg" alt="Salade Niçoise with tuna, eggs, green beans and olives" width="800" height="600" loading="lazy" decoding="async"></div><div class="wm-goal-body"><h3>Lose weight</h3><p class="wm-goal-dish">Salade Niçoise <span>480 kcal · 30g protein</span></p><p>Lighter dishes up to 550 calories, with enough protein to keep you full.</p></div></article>
       <article class="wm-goal-card "><div class="wm-goal-img"><img src="/images/dishes/Lasagna.jpg" alt="Baked lasagna with melted cheese" width="800" height="600" loading="lazy" decoding="async"></div><div class="wm-goal-body"><h3>Gain weight</h3><p class="wm-goal-dish">Lasagna <span>720 kcal · 38g protein</span></p><p>Hearty, energy-rich dishes that bring calories and protein together.</p></div></article>
       <article class="wm-goal-card "><div class="wm-goal-img"><img src="/images/dishes/Chimichurri-Steak.jpg" alt="Sliced steak with chimichurri sauce" width="800" height="600" loading="lazy" decoding="async"></div><div class="wm-goal-body"><h3>Build muscle</h3><p class="wm-goal-dish">Chimichurri Steak <span>680 kcal · 48g protein</span></p><p>Dishes with 25g+ protein per serving, in a practical calorie range.</p></div></article>
-      <article class="wm-goal-card wm-goal-smoothie"><div class="wm-goal-img"><img src="/images/dishes/Mexican-Chocolate-Banana-Protein-Smoothie.jpg" alt="Chocolate banana protein smoothie topped with banana slices" width="800" height="600" loading="lazy" decoding="async"></div><div class="wm-goal-body"><h3>Smoothies, too</h3><p class="wm-goal-dish">Mexican Chocolate Banana Protein Smoothie <span>340 kcal · 30g protein</span></p><p>A quick option that fits two goals: lose weight and build muscle.</p></div></article>
+    </div>
+    <div class="wm-smoothie-band">
+      <div class="wm-smoothie-img"><img src="/images/dishes/Mexican-Chocolate-Banana-Protein-Smoothie.jpg" alt="Chocolate banana protein smoothie topped with banana slices" width="800" height="600" loading="lazy" decoding="async"></div>
+      <div class="wm-smoothie-body">
+        <p class="wm-smoothie-eyebrow">Smoothies, too</p>
+        <h3>Mexican Chocolate Banana Protein Smoothie</h3>
+        <p class="wm-goal-dish"><span>340 kcal · 30g protein</span></p>
+        <p>A quick option that fits two goals at once: <b>lose weight</b> and <b>build muscle</b>. Find more smoothies in Browse.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -3328,15 +3427,15 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
       <h2 class="wm-plan-title" id="wmPlanTitle">Plan your week<span>.</span><br><em>Stay on budget</em><span>.</span></h2>
       <p class="wm-plan-sub">Tell WorldMeals what you want to spend, and it plans seven dinners that fit, then turns it into a Smart Grocery list for the whole week.</p>
       <ol class="wm-plan-steps">
-        <li><span class="wm-step-n">1</span><div><strong>Set your budget</strong><p>Enter your weekly budget and how many people you're feeding. Add a diet, a spice level and a goal: a balanced week or high protein.</p></div></li>
-        <li><span class="wm-step-n">2</span><div><strong>Get your 7-day plan</strong><p>WorldMeals picks seven dinners from seven countries that fit inside your budget, and shows the week's total before you buy anything.</p></div></li>
-        <li><span class="wm-step-n">3</span><div><strong>Smart Grocery: shop once and save</strong><p>One tap turns your plan into a shopping list sorted by aisle. Every item shows which dishes use it and its estimated cost. Check items off as you shop, mark what you already have, or copy the list to share.</p></div></li>
+        <li><span class="wm-step-n">1</span><div><strong>Set your budget</strong><p>Choose your weekly budget, household size and food preferences.</p></div></li>
+        <li><span class="wm-step-n">2</span><div><strong>Build your week</strong><p>Get seven dinners from seven countries, with estimated calories and costs.</p></div></li>
+        <li><span class="wm-step-n">3</span><div><strong>Shop with Smart Grocery</strong><p>See ingredients grouped by aisle and check off what you already have.</p></div></li>
       </ol>
-      <a class="v3-cta wm-tour-start wm-plan-start" href="app.html"><span class="wm-start-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><span>Plan my week →</span></a>
+      <a class="v3-cta wm-tour-start wm-plan-start" href="app.html?open=planner"><span class="wm-start-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><span>Plan my week →</span></a>
       <p class="wm-plan-note"><b>Included with Chef · try it free for 3 days.</b></p>
     </div>
     <div class="wm-plan-stage">
-      <p class="wm-plan-example">A real example: $60 for 2 people</p>
+      <p class="wm-plan-example">Example weekly plan: $60 for 2 people</p>
       <div class="wm-plan-settings" aria-label="Example planner settings"><span><small>Weekly budget</small>$60</span><span><small>People</small>2</span><span><small>Goal</small>Balanced week</span></div>
       <div class="wm-plan-cards">
         <div class="wm-wk-card">
@@ -3356,6 +3455,41 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
           <div class="wm-gr-actions" aria-hidden="true"><span class="on">✓ Mark all purchased</span><span>Copy list</span></div>
         </div>
       </div>
+      <p class="wm-plan-disclaim">Built by the WorldMeals planner. Prices are estimates and vary by store and location.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- CAMERA: FRIDGE SCAN + FOOD RESCUE -->
+<section class="wm-cam" id="scan" aria-labelledby="wmCamTitle">
+  <div class="wm-cam-inner">
+    <div class="wm-cam-head">
+      <div class="wm-cam-eyebrow">Fridge Scan · Food Rescue</div>
+      <h2 class="wm-cam-title" id="wmCamTitle">Cook what you have<span>.</span><br><em class="wm-nowrap">Waste less<span>.</span></em></h2>
+      <p class="wm-cam-sub">Two camera tools, one goal: turn the food already in your kitchen into a meal.</p>
+    </div>
+    <div class="wm-cam-grid">
+      <article class="wm-cam-card">
+        <div class="wm-cam-phone"><div class="wm-cam-bezel"><div class="wm-cam-island"></div><img src="/images/app-screen-fridge.jpg" alt="WorldMeals Fridge Scan screen: scan your fridge and confirm ingredients" loading="lazy" width="540" height="1050"></div></div>
+        <div class="wm-cam-body">
+          <p class="wm-cam-tag">Fridge Scan</p>
+          <h3>Use what you already have</h3>
+          <p>Take or upload a fridge photo, confirm the ingredients WorldMeals finds, and get dishes you can make with them.</p>
+        </div>
+      </article>
+      <article class="wm-cam-card">
+        <div class="wm-cam-phone"><div class="wm-cam-bezel"><div class="wm-cam-island"></div><img src="/images/app-screen-rescue.jpg" alt="WorldMeals Food Rescue screen: ingredients to rescue first" loading="lazy" width="540" height="1050"></div></div>
+        <div class="wm-cam-body">
+          <p class="wm-cam-tag">Food Rescue</p>
+          <h3>Rescue food before it goes to waste</h3>
+          <p>Snap wilting veggies, ripe fruit or leftovers. WorldMeals flags what to use first and puts the dishes that use it at the top, for grown-ups or kids.</p>
+        </div>
+      </article>
+    </div>
+    <div class="wm-cam-cta">
+      <a class="v3-cta wm-tour-start wm-cam-start" href="app.html?open=scan"><span class="wm-start-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><span>Scan my fridge →</span></a>
+      <p class="wm-cam-plan"><b>Included with Passport.</b> Photos are analyzed on your device.</p>
     </div>
   </div>
 </section>
@@ -3373,7 +3507,7 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
         <li>Toddler-friendly textures, hidden-veggie and picky-eater dishes.</li>
         <li>Introduce a new country, one little bite at a time.</li>
       </ul>
-      <a href="app.html" class="v3-cta wm-tour-start wm-kids-start"><span class="wm-start-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><span>Explore WorldMeals Kids →</span></a>
+      <a href="app.html?open=kids" class="v3-cta wm-tour-start wm-kids-start"><span class="wm-start-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><span>Explore WorldMeals Kids →</span></a>
       <p class="wm-kids-note"><b>Included with Chef · try it free for 3 days.</b> Find the Kids collection inside WorldMeals. Choose dishes and textures suited to your child's age, needs, and allergies.</p>
     </div>
     <div class="wm-kids-demo"><p class="wm-kids-demo-label">Take a look inside WorldMeals Kids</p><div class="wm-kids-screens" tabindex="0" role="region" aria-label="Five actual Kids app screenshots. Scroll horizontally or use arrow keys to explore."><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-1.jpg" loading="lazy" decoding="async" alt="Welcome to WorldMeals Kids — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>1 / 5 · Welcome to WorldMeals Kids</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-2.jpg" loading="lazy" decoding="async" alt="Choices that work for your child — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>2 / 5 · Choices that work for your child</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-3.jpg" loading="lazy" decoding="async" alt="Find meals from around the world — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>3 / 5 · Find meals from around the world</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-4.jpg" loading="lazy" decoding="async" alt="Choose an age and meal type — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>4 / 5 · Choose an age and meal type</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-5.jpg" loading="lazy" decoding="async" alt="Explore dishes and view recipes — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>5 / 5 · Explore dishes and view recipes</figcaption></figure></div><div class="wm-kids-controls" aria-label="Kids preview controls"><button type="button" id="kidsPrev" aria-label="Previous Kids screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" id="kidsPause" aria-label="Pause automatic screen changes">Pause</button><button type="button" id="kidsNext" aria-label="Next Kids screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div><p class="wm-kids-swipe">Swipe to explore all 5 screens</p></div>
@@ -3565,7 +3699,7 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
         <div class="price-amount">Free</div>
         <div class="price-period" style="color:#888">Forever</div>
         <div class="price-feature" style="color:#666"><span>✓</span>Browse 1000+ dishes</div>
-        <div class="price-feature" style="color:#666"><span>✓</span><b>5 AI recipes total</b> on the free tier</div>
+        <div class="price-feature" style="color:#666"><span>✓</span><em class="wm-pf-text"><b>5 AI recipes total</b> on the free tier</em></div>
         <div class="price-feature" style="color:#666"><span>✓</span>Country &amp; region filters</div>
         <a href="app.html" class="plan-cta plan-cta-light">Continue with Explorer — Free</a>
         <div class="plan-disclosure">Explorer includes 5 AI recipes for the lifetime of the free tier. After 5, upgrade for more AI generations.</div>
@@ -3597,7 +3731,7 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
         <div class="price-period" id="passportPeriod" style="color:#888">/year · $8.33/mo equivalent</div>
         <div class="plan-saving" id="passportSaving" style="display:inline-block">SAVE 44%</div>
         <div class="price-feature" style="color:#666"><span>✓</span>Everything in Chef</div>
-        <div class="price-feature" style="color:#666"><span>✓</span>Camera Dish ID</div>
+        <div class="price-feature" style="color:#666"><span>✓</span>Food Rescue</div>
         <div class="price-feature" style="color:#666"><span>✓</span>Fridge Scan</div>
         <button type="button" class="plan-cta plan-cta-light" id="passportCta" data-product-id="app.worldmeals.passport.annual">Choose Passport → $99.99/yr</button>
         <div class="plan-disclosure" id="passportDisclosure">$99.99/year. Cancel anytime. Subscription renews automatically unless canceled.</div>
@@ -3648,7 +3782,7 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
     <img src="/images/dishes/Gumbo.jpg" alt="Gumbo">
     <img src="/images/dishes/Cheese-Fondue.jpg" alt="Cheese Fondue">
   </div>
-  <h2 class="wm-final-title">The world is waiting<span>.</span><br><em>Start exploring it tonight</em><span>.</span></h2>
+  <h2 class="wm-final-title">The world is waiting<span>.</span><br><em>Your next discovery starts here</em><span>.</span></h2>
   <p>Discover authentic cuisine, cook with confidence, and connect with the world — one dish at a time.</p>
   <a href="app.html" class="v3-cta wm-tour-start wm-final-start"><span class="wm-start-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><span>Start cooking the world →</span></a>
   <p class="wm-final-fine">Explorer is free · 5 AI recipes included · Chef includes a 3-day trial · Cancel anytime</p>
@@ -3877,12 +4011,24 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
   row.scrollLeft = 0;
   let dragMoved = false;
   row.addEventListener('click', (e) => { if (dragMoved) { e.preventDefault(); e.stopPropagation(); } }, true);
-  let autoplay = setInterval(() => move(1), 5200);
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let userPaused = reduceMotion;
+  let autoplay = userPaused ? null : setInterval(() => move(1), 5200);
   const pause = () => clearInterval(autoplay);
   const resume = () => {
     clearInterval(autoplay);
+    if (userPaused) return;
     autoplay = setInterval(() => move(1), 5200);
   };
+  const pauseBtn = document.getElementById('discoveryPause');
+  const syncPause = () => {
+    if (!pauseBtn) return;
+    pauseBtn.textContent = userPaused ? 'Play' : 'Pause';
+    pauseBtn.setAttribute('aria-pressed', String(userPaused));
+    pauseBtn.setAttribute('aria-label', userPaused ? 'Resume automatic scrolling' : 'Pause automatic scrolling');
+  };
+  syncPause();
+  pauseBtn?.addEventListener('click', () => { userPaused = !userPaused; syncPause(); resume(); });
 
   row.addEventListener('mouseenter', pause);
   row.addEventListener('mouseleave', resume);
