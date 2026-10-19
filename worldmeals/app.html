@@ -1843,6 +1843,427 @@ html.wm-unlocking .wm-upgrade-progress{display:grid}
 @media(max-width:380px){.wm-upgrade-progress-card{padding:32px 20px}.wm-upgrade-progress h2{font-size:23px}}
 </style>
 <script>/* after a purchase from a locked feature, hide Browse until the plan is verified, then open the feature */(function(){try{var r=JSON.parse(localStorage.getItem("wm_return_page")||"null"),h=JSON.parse(localStorage.getItem("worldmeals.subscription.justPurchased")||"null"),n=Date.now();if(r&&h&&n-Number(r.at||0)<1800000&&n-Number(h.createdAt||0)<900000){document.documentElement.classList.add("wm-unlocking");setTimeout(function(){document.documentElement.classList.remove("wm-unlocking")},8000);}}catch(e){}})();</script>
+<!-- styles moved into <head> so the page paints in its final look (no flash of the old design) -->
+<style>
+/* WORLDMEALS KIDS — scoped to #page-kids only */
+#page-kids .wk-head{text-align:center;margin:2px 0 12px}
+#page-kids .wk-title{font:900 28px/1.1 Inter,system-ui,sans-serif;color:#66A83B;letter-spacing:-.02em}
+#page-kids .wk-title span{color:#E07B24}
+#page-kids .wk-tag{font-size:13px;color:#6B5A4A;margin-top:4px}
+#page-kids .wk-hero{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:801/280;margin-bottom:14px;background:linear-gradient(135deg,#FFE7B8,#FFD38A 55%,#F6B26B);box-shadow:0 10px 24px rgba(120,70,20,.14)}
+#page-kids .wk-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+#page-kids .wk-hero-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;font:900 20px/1.25 Inter,system-ui,sans-serif;color:#5A3510}
+#page-kids .wk-card{background:#FFFCF7;border:1px solid #F3E6D6;border-radius:22px;padding:14px 12px 12px;margin-bottom:12px;box-shadow:0 6px 16px rgba(120,70,20,.06)}
+#page-kids .wk-step{display:flex;align-items:center;gap:10px;margin:0 2px 12px;font:850 17px/1.2 Inter,system-ui,sans-serif;color:#2B1D12}
+#page-kids .wk-num{width:34px;height:34px;flex:0 0 34px;border-radius:50%;background:linear-gradient(180deg,#F08A2C,#D96A12);color:#fff;font:900 16px/34px Inter,system-ui,sans-serif;text-align:center;box-shadow:0 4px 10px rgba(217,106,18,.3)}
+#page-kids .wk-grid{display:grid;gap:8px}
+#page-kids .wk-ages{grid-template-columns:repeat(5,1fr)}
+#page-kids .wk-meals{grid-template-columns:repeat(4,1fr)}
+#page-kids .wk-chips{grid-template-columns:repeat(3,1fr)}
+#page-kids .wk-sub{font-size:13px;color:#6B5A4A;margin:0 2px 12px 46px}
+#page-kids .wk-search{display:flex;align-items:center;gap:8px;border:1.5px solid #E9DCCB;background:#fff;border-radius:16px;padding:0 10px 0 14px;height:50px}
+#page-kids .wk-search:focus-within{border-color:#E9893A;box-shadow:0 0 0 3px rgba(233,137,58,.12)}
+#page-kids .wk-search input{flex:1;border:0;outline:0;background:transparent;font:500 15px Inter,system-ui,sans-serif;color:#2B1D12;min-width:0}
+#page-kids .wk-search-ic{font-size:17px;opacity:.75}
+#page-kids .wk-search-chev{border:0;background:none;color:#C4651A;font:900 20px/1 Inter,system-ui,sans-serif;cursor:pointer;padding:4px 6px}
+#page-kids .wk-clist{margin-top:8px;border:1px solid #F0E3D2;border-radius:16px;background:#fff;max-height:260px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+#page-kids .wk-crow{display:flex;align-items:center;gap:12px;width:100%;border:0;border-bottom:1px solid #F6EEE3;background:none;padding:12px 14px;text-align:left;font:700 14px Inter,system-ui,sans-serif;color:#2B1D12;cursor:pointer}
+#page-kids .wk-crow:last-child{border-bottom:0}
+#page-kids .wk-crow span{font-size:20px}
+#page-kids .wk-crow small{margin-left:auto;color:#9A8572;font-weight:600}
+#page-kids .wk-csel{display:flex;align-items:center;gap:12px;margin-top:10px;padding:12px 14px;border-radius:16px;background:#EAF4FD;border:1px solid #CFE3F6}
+#page-kids .wk-csel .fl{font-size:28px;line-height:1}
+#page-kids .wk-csel b{display:block;font:800 15px Inter,system-ui,sans-serif;color:#2B1D12}
+#page-kids .wk-csel small{color:#5E6B78;font-size:12.5px}
+#page-kids .wk-csel .rd{margin-left:auto;width:20px;height:20px;border-radius:50%;border:2px solid #2F80ED;position:relative;flex:0 0 20px}
+#page-kids .wk-csel .rd::after{content:"";position:absolute;inset:3px;border-radius:50%;background:#2F80ED}
+#page-kids .wk-opt{appearance:none;border:1px solid rgba(255,255,255,.9);background:linear-gradient(180deg,#FFFDF8 0%,#FBF3E8 72%,#F3E4D1 100%);border-radius:16px;padding:10px 4px;font:700 12.5px/1.2 Inter,system-ui,sans-serif;color:#3A2A1A;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:5px;-webkit-tap-highlight-color:transparent;box-shadow:0 9px 14px rgba(120,70,20,.18),0 3px 4px rgba(120,70,20,.10),inset 0 2px 1px rgba(255,255,255,.95),inset 0 -2px 3px rgba(120,70,20,.08);transform:translateY(-2px);transition:background .15s,border-color .15s,transform .12s,box-shadow .12s}
+#page-kids .wk-opt:active{transform:scale(.97)}
+#page-kids .wk-opt .ic{font-size:26px;line-height:1}
+#page-kids .wk-opt small{font-weight:600;color:#6B5A4A;font-size:12px}
+#page-kids .wk-chips .wk-opt{flex-direction:row;justify-content:center;gap:6px;padding:10px 6px;border-radius:999px;font-size:12px}
+#page-kids .wk-chips .wk-opt .ic{font-size:17px}
+#page-kids .wk-opt.diet{background:#EEF6EC}
+#page-kids .wk-opt.avoid{background:#FCEDEE}
+#page-kids .wk-opt.on{background:#FFF1E2;border-color:#E9893A;color:#9A4A0C;box-shadow:0 4px 12px rgba(233,137,58,.18)}
+#page-kids .wk-opt.on small{color:#B4601A}
+#page-kids .wk-find{width:100%;border:0;border-radius:20px;padding:17px 16px;margin:4px 0 16px;background:linear-gradient(180deg,#EE8A30,#D4680F);color:#fff;font:850 18px/1 Inter,system-ui,sans-serif;cursor:pointer;box-shadow:0 10px 22px rgba(212,104,15,.28)}
+#page-kids #kidsResults{scroll-margin-top:96px}
+#page-kids .wk-dish-search{position:relative;margin:0 0 16px;height:58px;border-radius:22px;border:1px solid rgba(255,255,255,.95);background:linear-gradient(180deg,#F3E7D9 0%,#F9F1E7 45%,#FFFBF6 100%);box-shadow:inset 0 4px 9px rgba(110,60,15,.17),inset 0 2px 3px rgba(110,60,15,.12),inset 0 -3px 4px rgba(255,255,255,.95),0 1px 0 rgba(255,255,255,.95),0 -1px 0 rgba(120,70,20,.10)}
+#page-kids .wk-dish-search::after{content:"";position:absolute;inset:1px;border-radius:21px;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.22) 46%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%)}
+#page-kids .wk-dish-search>*{position:relative;z-index:0}
+#page-kids .wk-dish-search:focus-within{border-color:#E9B27A;box-shadow:inset 0 5px 10px rgba(120,70,20,.24),inset 0 2px 3px rgba(120,70,20,.18),inset 0 -2px 3px rgba(255,255,255,.95),0 0 0 3px rgba(233,137,58,.18)}
+#page-kids .wk-dish-search input{font:800 15.5px Inter,system-ui,sans-serif;color:#5A3E25;text-shadow:0 1px 0 rgba(255,255,255,.85),0 -1px 0 rgba(90,50,20,.18)}
+#page-kids .wk-dish-search input::placeholder{color:#8A6A4C;text-shadow:0 1px 0 rgba(255,255,255,.9)}
+#page-kids .wk-dish-search .wk-search-ic{filter:drop-shadow(0 1px 0 rgba(255,255,255,.9));opacity:.7}
+#page-kids #kidsSearchResults{margin:0 0 16px}
+#page-kids .wk-snote{font:600 12.5px Inter,system-ui,sans-serif;color:#7A6552;margin:-6px 2px 10px}
+#page-kids .wk-results-head{display:flex;justify-content:space-between;align-items:center;margin:4px 2px 10px;font:800 15px Inter,system-ui,sans-serif;color:#2B1D12}
+#page-kids .wk-results-head button{border:0;background:none;color:#C4651A;font:800 13px Inter,system-ui,sans-serif;cursor:pointer}
+@media(max-width:380px){#page-kids .wk-opt{font-size:11.5px}#page-kids .wk-chips .wk-opt{font-size:11px;padding:9px 4px}#page-kids .wk-title{font-size:25px}}
+</style>
+<style>
+.wm-nav-actions{display:flex;align-items:center;gap:7px}
+.wm-plan-chip{display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:6px 10px;border-radius:999px;background:#FFF7EA;border:1px solid #E8D3B8;color:#8A4B18;font-size:10px;font-weight:900;white-space:nowrap}
+.wm-menu-wrap{position:relative;z-index:130}
+.wm-menu-button{list-style:none;position:relative;z-index:1002;pointer-events:auto;touch-action:manipulation;-webkit-tap-highlight-color:transparent;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1px solid #E8DDD0;background:#fff;border-radius:12px;color:#F28C28;font:900 17px Inter,system-ui,sans-serif;cursor:pointer;box-shadow:0 7px 16px rgba(83,55,29,.07);user-select:none}
+.wm-menu-button:focus-visible{outline:2px solid #F28C28;outline-offset:2px}
+.wm-menu-panel{display:none;position:absolute;right:0;top:42px;z-index:1003;min-width:205px;padding:7px;background:#FFFDF9;border:1px solid #E8DDD0;border-radius:16px;box-shadow:0 18px 45px rgba(45,33,23,.18)}.wm-menu-panel.open{display:block}
+.wm-menu-item{width:100%;border:0;background:transparent;border-radius:11px;padding:11px 12px;text-align:left;color:#3F3025;font:850 12px Inter,system-ui,sans-serif;cursor:pointer}.wm-menu-item:hover{background:#FFF5E8}
+.wm-trial-title{font-size:15px;font-weight:900;color:#6E430F;margin-bottom:7px;text-align:center}.wm-trial-text{font-size:12px;color:#7B6650;line-height:1.6;text-align:center}
+.wm-layer{display:none;position:fixed;inset:0;z-index:950;align-items:center;justify-content:center;padding:18px;background:rgba(31,22,14,.70);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.wm-layer.open{display:flex;animation:wmLayerFade .2s ease both}.wm-dialog{width:min(520px,100%);max-height:90vh;overflow:auto;position:relative;border-radius:30px;padding:26px 21px;background:radial-gradient(circle at 50% 0,rgba(245,166,35,.18),transparent 36%),linear-gradient(155deg,#FFFDF8,#FFF4E2);border:1px solid #EDD6B5;box-shadow:0 34px 90px rgba(0,0,0,.28)}.wm-dialog.wide{width:min(620px,100%)}
+.wm-close{position:absolute;right:14px;top:14px;width:34px;height:34px;border:0;border-radius:50%;background:rgba(31,26,20,.07);color:#46372B;font-weight:900;cursor:pointer}
+.wm-dialog-icon{text-align:center;font-size:48px;margin-bottom:8px}.wm-dialog h2{text-align:center;font-size:27px;line-height:1.08;letter-spacing:-.7px;color:#2D2117;margin-bottom:9px}.wm-dialog-copy{text-align:center;font-size:13px;line-height:1.68;color:#665648;margin-bottom:14px}
+.wm-highlight{padding:12px 13px;border:1px solid #EBCB93;border-radius:17px;background:#FFF8E9;color:#6C4A20;font-size:12px;line-height:1.58;margin:13px 0}
+.wm-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.wm-primary,.wm-secondary{border-radius:15px;padding:13px;border:none;cursor:pointer;font:900 13px Inter,system-ui,sans-serif}.wm-primary{background:linear-gradient(135deg,#C47A2C,#E2A35A);color:#fff;box-shadow:0 10px 22px rgba(196,122,44,.20)}.wm-secondary{background:#fff;color:#6B4B2C;border:1px solid #E5D4C0}
+.wm-feedback-form label{display:block;font-size:10px;font-weight:900;color:#77685A;text-transform:uppercase;letter-spacing:.07em;margin:10px 0 5px}.wm-feedback-form select,.wm-feedback-form textarea{width:100%;max-width:100%;border:1px solid #E6D7C7;border-radius:14px;padding:12px;background:#fff;color:#2E241B;font:500 13px Inter,system-ui,sans-serif;outline:none}.wm-feedback-form textarea{min-height:120px;resize:vertical}.wm-feedback-status{min-height:18px;margin-top:8px;text-align:center;font-size:11px;color:#2F8F5B;line-height:1.4}
+
+.wm-feedback-status[data-state="success"]{color:#167A5A}
+.wm-feedback-status[data-state="error"]{color:#A33A2A}
+.wm-feedback-status[data-state="pending"]{color:#6F6257}
+.wm-feedback-status[data-state="saved"]{color:#8A5B13}
+
+.wm-plan-compare{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}.wm-plan-mini{background:#fff;border:1px solid #E8DDD0;border-radius:18px;padding:14px}.wm-plan-mini strong{display:block;font-size:15px;color:#2D2117;margin-bottom:5px}.wm-plan-mini span{display:block;font-size:11px;color:#77685A;line-height:1.5}.wm-ai-meter{text-align:center;font-size:11px;color:#7A6B5D;margin:8px 0 0;font-weight:800}
+.wm-quick-feedback{display:none;position:fixed;left:50%;bottom:106px;transform:translateX(-50%);z-index:780;width:min(390px,calc(100% - 24px));padding:12px 13px;border-radius:18px;background:#251B13;color:#fff;box-shadow:0 18px 44px rgba(31,22,14,.30);align-items:center;gap:10px}.wm-quick-feedback.show{display:flex;animation:wmQuickUp .22s ease both}.wm-quick-copy{flex:1;font-size:11px;line-height:1.45;font-weight:750}.wm-quick-btn{width:36px;height:36px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(255,255,255,.09);font-size:17px;cursor:pointer}
+@keyframes wmLayerFade{from{opacity:0}to{opacity:1}}@keyframes wmQuickUp{from{opacity:0;transform:translate(-50%,10px)}to{opacity:1;transform:translate(-50%,0)}}
+.wm-actions.single{grid-template-columns:1fr}
+@media(max-width:620px){.wm-plan-chip{display:none}.wm-actions,.wm-plan-compare{grid-template-columns:1fr}.wm-layer{padding:12px;overflow-x:hidden}.wm-dialog,.wm-dialog.wide{width:100%;max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);padding:24px 18px;overflow-x:hidden}.wm-feedback-form select,.wm-feedback-form textarea{font-size:16px;line-height:1.35}.wm-feedback-form textarea{resize:none}}
+
+/* WORLDMEALS MOBILE FEEDBACK DIALOG — lock to viewport and prevent side clipping */
+@media(max-width:620px){
+  .search-wrap .search{font-size:16px!important}
+  #wmFeedback{
+    position:fixed!important;inset:0!important;width:100vw!important;max-width:100vw!important;min-width:0!important;
+    padding:10px!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;
+  }
+  #wmFeedback .wm-dialog{
+    width:calc(100vw - 20px)!important;max-width:420px!important;min-width:0!important;
+    max-height:calc(100dvh - 20px)!important;margin:0 auto!important;padding:22px 16px 18px!important;
+    border-radius:24px!important;overflow-y:auto!important;overflow-x:hidden!important;box-sizing:border-box!important;transform:none!important;
+  }
+  #wmFeedback .wm-close{right:10px!important;top:10px!important;z-index:5!important}
+  #wmFeedback .wm-dialog-icon{font-size:40px!important;margin-bottom:6px!important}
+  #wmFeedback .wm-dialog h2{font-size:24px!important;line-height:1.12!important;padding:0 28px!important;margin-bottom:8px!important}
+  #wmFeedback .wm-dialog-copy{font-size:12.5px!important;line-height:1.55!important;margin-bottom:12px!important;overflow-wrap:anywhere!important}
+  #wmFeedback .wm-feedback-form{width:100%!important;min-width:0!important}
+  #wmFeedback .wm-feedback-form select,#wmFeedback .wm-feedback-form textarea{
+    display:block!important;width:100%!important;max-width:100%!important;min-width:0!important;
+    box-sizing:border-box!important;font-size:16px!important;line-height:1.35!important;
+  }
+  #wmFeedback .wm-feedback-form textarea{min-height:110px!important;resize:none!important}
+  #wmFeedback .wm-actions{width:100%!important;min-width:0!important;grid-template-columns:1fr!important}
+  #wmFeedback .wm-primary,#wmFeedback .wm-secondary{width:100%!important;box-sizing:border-box!important}
+
+  /* iOS/WKWebView: keep the feedback header inside the visible viewport while the keyboard is active. */
+  #wmFeedback.wm-keyboard-open{
+    top:var(--wm-vv-top,0px)!important;bottom:auto!important;height:var(--wm-vv-height,100dvh)!important;min-height:0!important;
+    align-items:flex-start!important;overflow-y:auto!important;overscroll-behavior:contain!important;
+    padding-top:max(10px,env(safe-area-inset-top))!important;padding-bottom:max(10px,env(safe-area-inset-bottom))!important;
+  }
+  #wmFeedback.wm-keyboard-open .wm-dialog{
+    max-height:calc(var(--wm-vv-height,100dvh) - 20px)!important;margin:0 auto!important;
+  }
+}
+</style>
+<style>
+/* WORLDMEALS PREMIUM SELECTORS — presentation only; existing select values/events stay unchanged */
+.wmp-backdrop{position:fixed;inset:0;background:rgba(42,29,18,.46);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;z-index:5000;padding:18px;animation:wmpFade .16s ease}
+.wmp-sheet{position:relative;background:linear-gradient(180deg,#FFFDF8 0%,#FFF8EE 100%);border:1px solid rgba(243,217,184,.95);border-radius:28px;width:100%;max-width:460px;max-height:min(82vh,720px);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 28px 80px rgba(60,30,0,.30),inset 0 1px 0 rgba(255,255,255,.95);font-family:'Inter',system-ui,sans-serif;animation:wmpPop .20s cubic-bezier(.2,.8,.2,1)}
+.wmp-sheet::before{content:"";width:42px;height:5px;border-radius:999px;background:#E6C9A7;align-self:center;margin:10px 0 2px;flex:0 0 auto}
+.wmp-title{font-size:19px;font-weight:800;letter-spacing:-.35px;color:#2B2118;padding:10px 20px 8px}
+.wmp-search{margin:2px 16px 8px;padding:13px 15px;border:1px solid #EED3B2;border-radius:16px;background:#fff;font:inherit;font-size:15px;color:#2B2118;outline:none;box-shadow:0 5px 14px rgba(83,55,29,.05)}
+.wmp-search::placeholder{color:#A08C78}.wmp-search:focus{border-color:#F28C28;box-shadow:0 0 0 4px rgba(242,140,40,.12)}
+.wmp-list{overflow-y:auto;padding:4px 14px 18px;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#E2C6A7 transparent}
+.wmp-group{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8B6B4C;padding:16px 8px 5px}
+.wmp-opt{display:flex;align-items:center;gap:13px;width:100%;min-height:58px;text-align:left;background:rgba(255,255,255,.72);border:1px solid #F0E2D2;border-radius:17px;padding:13px 14px;margin:7px 0;font:inherit;font-size:16px;font-weight:600;color:#3A2A1A;cursor:pointer;box-shadow:0 5px 14px rgba(83,55,29,.045);transition:transform .16s ease,background .16s ease,border-color .16s ease,box-shadow .16s ease;-webkit-tap-highlight-color:transparent}
+.wmp-opt:hover,.wmp-opt:focus-visible{background:#FFF3E3;border-color:#F0C58F;outline:none;transform:translateY(-1px);box-shadow:0 9px 20px rgba(83,55,29,.08)}
+.wmp-opt:active{transform:scale(.99)}
+.wmp-opt.sel{background:linear-gradient(135deg,#FFF0DC,#FDE3C4);border-color:#F2B66E;color:#7E3E08;box-shadow:0 8px 20px rgba(242,140,40,.13)}
+.wmp-opt:disabled{opacity:.45;cursor:default;transform:none}
+.wmp-ico{width:30px;height:30px;flex:0 0 30px;display:grid;place-items:center;text-align:center;font-size:21px;line-height:1;background:#FFF7EC;border-radius:10px}
+.wmp-opt.sel .wmp-ico{background:rgba(255,255,255,.58)}
+.wmp-txt{flex:1;line-height:1.25}.wmp-radio{width:23px;height:23px;flex:0 0 23px;border:2px solid #9A8877;border-radius:50%;position:relative;background:#FFFDF8;transition:border-color .16s ease,box-shadow .16s ease}
+.wmp-opt.sel .wmp-radio{border-color:#F28C28;box-shadow:0 0 0 3px rgba(242,140,40,.10)}
+.wmp-opt.sel .wmp-radio::after{content:"";position:absolute;inset:4px;border-radius:50%;background:#F28C28;box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+.wmp-empty{padding:28px 20px;text-align:center;color:#9A816A;font-size:14px;font-weight:600}
+@keyframes wmpFade{from{opacity:0}to{opacity:1}}@keyframes wmpPop{from{transform:translateY(10px) scale(.98);opacity:0}to{transform:none;opacity:1}}
+@media(max-width:600px){.wmp-backdrop{align-items:flex-end;padding:0}.wmp-sheet{max-width:none;max-height:86dvh;border-radius:28px 28px 0 0;border-bottom:0;animation:wmpSlide .24s cubic-bezier(.2,.8,.2,1)}.wmp-title{font-size:20px;padding-left:18px}.wmp-list{padding-left:12px;padding-right:12px;padding-bottom:max(18px,env(safe-area-inset-bottom))}.wmp-opt{min-height:60px;border-radius:16px;margin:6px 0}@keyframes wmpSlide{from{transform:translateY(100%)}to{transform:none}}}
+@media(prefers-reduced-motion:reduce){.wmp-backdrop,.wmp-sheet{animation:none}.wmp-opt{transition:none}}
+
+/* WORLDMEALS PREMIUM SELECTORS — V2 MICRO POLISH
+   Presentation only: spacing, scrolling, touch comfort and visual consistency. */
+.wmp-sheet{isolation:isolate}
+.wmp-title{
+  position:sticky;top:0;z-index:3;
+  background:linear-gradient(180deg,rgba(255,253,248,.98),rgba(255,253,248,.94));
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+}
+.wmp-list{scroll-padding-top:10px;scroll-padding-bottom:18px}
+.wmp-list::-webkit-scrollbar{width:5px}
+.wmp-list::-webkit-scrollbar-thumb{background:#E2C6A7;border-radius:999px}
+.wmp-group{position:relative;color:#765638}
+.wmp-group::after{content:"";position:absolute;left:8px;right:8px;bottom:0;height:1px;background:linear-gradient(90deg,#EED7BC,transparent)}
+.wmp-opt{will-change:transform}
+.wmp-opt.sel{font-weight:700}
+.wmp-radio{box-shadow:inset 0 0 0 1px rgba(255,255,255,.65)}
+.wmp-opt.sel .wmp-radio::after{inset:4px}
+
+@media(max-width:600px){
+  .wmp-sheet{max-height:min(88dvh,760px);border-radius:30px 30px 0 0}
+  .wmp-sheet::before{width:44px;height:5px;margin-top:9px;background:#DDBD98}
+  .wmp-title{padding:9px 18px 10px;font-size:19px}
+  .wmp-search{margin:2px 12px 7px;min-height:48px;border-radius:15px}
+  .wmp-list{padding:2px 12px max(20px,env(safe-area-inset-bottom))}
+  .wmp-group{padding:14px 7px 5px;font-size:10px}
+  .wmp-opt{min-height:56px;padding:11px 12px;border-radius:16px;gap:11px;margin:6px 0;font-size:15px}
+  .wmp-ico{width:29px;height:29px;flex-basis:29px;font-size:20px}
+  .wmp-radio{width:22px;height:22px;flex-basis:22px}
+}
+
+@media(max-width:380px){
+  .wmp-sheet{max-height:90dvh}
+  .wmp-opt{min-height:53px;padding-top:9px;padding-bottom:9px}
+  .wmp-title{font-size:18px}
+}
+
+
+/* WORLDMEALS V17 — AI credit bubble CSS lives in one block near the top (search "wm-ai-credit-popover"); no !important needed. */
+
+</style>
+<style>
+/* WORLDMEALS SIGNATURE DEPTH — stronger raised controls (visual only) */
+#page-kids .wk-opt{
+  border:1px solid rgba(255,255,255,.98) !important;
+  box-shadow:0 16px 22px rgba(120,70,20,.24),0 6px 8px rgba(120,70,20,.13),inset 0 3px 2px rgba(255,255,255,1),inset 0 -4px 6px rgba(120,70,20,.11) !important;
+  transform:translateY(-5px);
+  transition:background .15s,border-color .15s,transform .12s,box-shadow .12s !important;
+}
+#page-kids .wk-opt:active{
+  transform:translateY(1px) scale(.98);
+  box-shadow:0 5px 8px rgba(120,70,20,.18),0 2px 3px rgba(120,70,20,.10),inset 0 2px 4px rgba(120,70,20,.10) !important;
+}
+#page-kids .wk-opt.on{
+  box-shadow:0 15px 22px rgba(233,137,58,.28),0 5px 7px rgba(120,70,20,.12),inset 0 3px 2px rgba(255,255,255,.92),inset 0 -4px 6px rgba(217,106,18,.10) !important;
+  transform:translateY(-5px);
+}
+.filter-group{
+  box-shadow:0 18px 26px rgba(120,70,20,.23),0 7px 9px rgba(120,70,20,.12),inset 0 3px 2px rgba(255,255,255,1),inset 0 -4px 7px rgba(120,70,20,.10) !important;
+  transform:translateY(-5px) !important;
+}
+.filter-group:hover,.filter-group:focus-within{
+  transform:translateY(-8px) !important;
+  box-shadow:0 25px 34px rgba(120,70,20,.25),0 9px 12px rgba(120,70,20,.13),0 0 0 4px rgba(245,166,35,.09),inset 0 3px 2px rgba(255,255,255,1),inset 0 -4px 7px rgba(120,70,20,.10) !important;
+}
+.adv-body:not(.collapsed) .mixer,.mixer{
+  box-shadow:0 19px 27px rgba(120,70,20,.23),0 7px 9px rgba(120,70,20,.12),inset 0 3px 2px rgba(255,255,255,1),inset 0 -4px 7px rgba(120,70,20,.10) !important;
+  transform:translateY(-5px) !important;
+}
+.mixer:hover,.mixer:focus-within{
+  transform:translateY(-8px) !important;
+  box-shadow:0 26px 36px rgba(120,70,20,.25),0 9px 12px rgba(120,70,20,.13),0 0 0 4px rgba(245,166,35,.09),inset 0 3px 2px rgba(255,255,255,1),inset 0 -4px 7px rgba(120,70,20,.10) !important;
+}
+.mixer-fader::-webkit-slider-runnable-track{box-shadow:inset 0 5px 8px rgba(83,55,29,.34),inset 0 -1px 2px rgba(255,255,255,.55),0 2px 1px rgba(255,255,255,.95),0 0 0 1px rgba(120,70,20,.10) !important}
+.mixer-fader::-webkit-slider-thumb{box-shadow:0 13px 18px rgba(31,26,20,.38),0 5px 6px rgba(31,26,20,.22),inset 0 3px 2px rgba(255,255,255,.28),inset 0 -3px 4px rgba(0,0,0,.28) !important}
+.mixer-fader::-moz-range-track{box-shadow:inset 0 5px 8px rgba(83,55,29,.34),0 2px 1px rgba(255,255,255,.95) !important}
+.mixer-fader::-moz-range-thumb{box-shadow:0 13px 18px rgba(31,26,20,.38),0 5px 6px rgba(31,26,20,.22),inset 0 3px 2px rgba(255,255,255,.28),inset 0 -3px 4px rgba(0,0,0,.28) !important}
+/* PHONE: two compact filter boxes per row */
+@media(max-width:420px){
+  .filter-group{padding:10px 10px 8px 38px !important;min-height:64px;}
+  .filter-group::before{left:11px;font-size:18px !important;}
+  .filter-group::after{right:9px;font-size:15px;}
+  .filter-group select{font-size:13px !important;padding-right:16px !important;text-overflow:ellipsis;}
+}
+</style>
+<style>
+/* The phone only draws the dish cards that are on screen; cards further down are drawn as you scroll. */
+#grid .card{content-visibility:auto;contain-intrinsic-size:auto 380px}
+</style>
+<style id="wm-browse-premium">
+/* WORLDMEALS BROWSE — premium first screen (presentation only; every filter keeps working) */
+#page-browse .brand-hero{display:none!important}
+#page-browse .premium-top{margin-top:6px!important;display:block!important;grid-template-columns:none!important}
+#page-browse .premium-top .search-wrap{width:100%!important;max-width:none!important;margin-left:0!important}
+/* One way to filter: Region · Country · Diet here, the rest lives in the meal mixer */
+#page-browse .filter-row .f-protein,#page-browse .filter-row .f-time,#page-browse .filter-row .f-spice,#page-browse .filter-row .f-calories,#page-browse .filter-row .f-budget{display:none!important}
+#page-browse .filter-row{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:8px!important}
+@media(max-width:900px){#page-browse .filter-row{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+/* Line icons instead of emojis */
+.wm-ico{width:23px;height:23px;fill:none;stroke:#5C4E40;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s ease,transform .2s ease}
+#page-browse .filter-group.f-region::before{content:""!important;width:22px;height:22px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%231E5B2C%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%228.5%22%2F%3E%3Cpath%20d%3D%22M3.5%2012h17M12%203.5c2.6%202.4%203.8%205.2%203.8%208.5S14.6%2018.1%2012%2020.5M12%203.5C9.4%205.9%208.2%208.7%208.2%2012s1.2%206.1%203.8%208.5%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat}
+#page-browse .filter-group.f-country::before{content:""!important;width:22px;height:22px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%231E5B2C%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M5.5%2021V4M5.5%204.5c4-2%206.5%202%2011%200v8.5c-4.5%202-7-2-11%200%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat}
+#page-browse .filter-group.f-diet::before{content:""!important;width:22px;height:22px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%231E5B2C%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M3.5%2011.5h17a8.5%208.5%200%200%201-17%200z%22%2F%3E%3Cpath%20d%3D%22M8%2011.5c-.6-2.6%201-4.8%203.6-5M12.5%2011.5c.2-2.8%202.2-4.6%205-4.4M9.5%208.5C9%206%2010%204%2012%203%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat}
+#page-browse .filter-group.f-collection::before{content:""!important;width:22px;height:22px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%231E5B2C%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%2020%2020%204M7%2013.5l3.5%203.5M9.5%2011l3.5%203.5M12%208.5l3.5%203.5%22%2F%3E%3Ccircle%20cx%3D%2217.5%22%20cy%3D%226.5%22%20r%3D%221%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat}
+/* Premium navigation: one icon family, brand colors */
+.bottom-nav .nav-btn .ic{display:grid;place-items:center;height:24px}
+.wm-ico{width:23px;height:23px;fill:none;stroke:#6B5A48;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s ease,fill .2s ease}
+.bottom-nav .nav-btn .lb{color:#6B5A48!important;font-weight:600!important}
+.bottom-nav .nav-btn.active .wm-ico{stroke:#14402c;fill:rgba(201,165,90,.28)}
+.bottom-nav .nav-btn.active .lb{color:#14402c!important;font-weight:700!important}
+.bottom-nav .nav-btn.active::before{background:rgba(20,64,44,.07)!important;box-shadow:inset 0 0 0 1px rgba(201,165,90,.45)!important}
+.nav-btn.active .ic{filter:none!important}
+.bottom-nav .nav-btn .lb{font-size:11px!important;letter-spacing:0!important;white-space:nowrap}
+@media(max-width:480px){.bottom-nav .nav-btn{padding-left:0!important;padding-right:0!important;min-width:0!important}.bottom-nav .nav-btn .lb{letter-spacing:-.01em!important}}
+@media(max-width:380px){.bottom-nav .nav-btn .lb{font-size:10.5px!important}}
+.bottom-nav .nav-btn .ic{position:relative}
+.bottom-nav .nav-btn:has(.lb.wm-locked) .ic::after{content:"";position:absolute;top:-3px;right:-7px;width:13px;height:13px;border-radius:50%;background:#FFFAF1 url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%239A7A35%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%225%22%20y%3D%2210.5%22%20width%3D%2214%22%20height%3D%2210%22%20rx%3D%222.5%22%2F%3E%3Cpath%20d%3D%22M8.5%2010.5V8a3.5%203.5%200%200%201%207%200v2.5%22%2F%3E%3C%2Fsvg%3E") center/9px no-repeat;box-shadow:0 0 0 1px rgba(201,165,90,.6)}
+/* Step 1 — welcome + green & gold contours */
+.wm-welcome{padding:10px 4px 16px}
+.wm-welcome-eyebrow{margin:0 0 8px;font:600 12px/1.4 Inter,system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#6B5232}
+.wm-welcome-title{margin:0;font:400 clamp(30px,4vw,46px)/1.08 "DM Serif Display",Georgia,serif;letter-spacing:-.015em;color:#14261B}
+.wm-welcome-title span{color:#E97622}
+.wm-welcome-sub{margin:8px 0 0;font:400 16px/1.5 Inter,system-ui,sans-serif;color:#4A3F34}
+#page-browse .search{border:1px solid rgba(201,165,90,.55)!important;box-shadow:0 0 0 1px rgba(20,64,44,.06),0 10px 24px -18px rgba(20,64,44,.45)!important;background:#FFFDF8!important}
+#page-browse .search:focus{border-color:#14402c!important;box-shadow:0 0 0 3px rgba(201,165,90,.35)!important}
+#page-browse .filter-row .filter-group{border:1px solid rgba(201,165,90,.55)!important;box-shadow:0 0 0 1px rgba(20,64,44,.05),0 10px 22px -18px rgba(20,64,44,.45)!important;background:#FFFDF8!important;border-radius:999px!important;min-height:0!important;padding-top:8px!important;padding-bottom:8px!important}
+#page-browse .filter-row .filter-group label{color:#6B5232!important;letter-spacing:.12em!important}
+#page-browse .filter-row .filter-group select{color:#14261B!important;font-weight:600!important;border:0!important;background:transparent!important}
+#page-browse .filter-row .filter-group:focus-within{border-color:#14402c!important;box-shadow:0 0 0 3px rgba(201,165,90,.3)!important}
+#page-browse .adv-filters{border:1px solid rgba(201,165,90,.55)!important;box-shadow:0 0 0 1px rgba(20,64,44,.05),0 14px 30px -22px rgba(20,64,44,.5)!important;background:#FFFDF8!important}
+#page-browse .results-toolbar{border:1px solid rgba(201,165,90,.4)!important;background:#FFFDF8!important}
+#page-browse .card{border:1px solid rgba(201,165,90,.45)!important;box-shadow:0 0 0 1px rgba(20,64,44,.04),0 22px 40px -30px rgba(20,64,44,.5)!important}
+/* Step 2 — A world of flavor + banners */
+.wm-home{margin:6px 0 22px}
+.wm-home[hidden]{display:none!important}
+.wm-home-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:6px 4px 12px}
+.wm-home-title{position:relative;margin:0;padding-bottom:8px;font:400 clamp(26px,3vw,34px)/1.1 "DM Serif Display",Georgia,serif;color:#14261B}
+.wm-home-title::after{content:"";position:absolute;left:0;bottom:0;width:28px;height:3px;border-radius:3px;background:#E97622}
+.wm-home-all{font:600 14px/1.2 Inter,system-ui,sans-serif;color:#14402c;text-decoration:none;white-space:nowrap}
+.wm-flavor-row{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 14px;margin:0 -4px;scrollbar-width:none}
+.wm-flavor-row::-webkit-scrollbar{display:none}
+.wm-flavor-card{flex:0 0 min(260px,74%);scroll-snap-align:start}
+.wm-flavor-open{display:flex;flex-direction:column;width:100%;height:100%;padding:0;text-align:left;cursor:pointer;background:#FFFDF8;border:1px solid rgba(201,165,90,.5);border-radius:22px;overflow:hidden;box-shadow:0 0 0 1px rgba(20,64,44,.04),0 18px 34px -26px rgba(20,64,44,.55);font:inherit;color:inherit;transition:transform .2s ease,box-shadow .2s ease}
+.wm-flavor-open:hover{transform:translateY(-2px)}
+.wm-flavor-open:focus-visible{outline:3px solid #E58A3D;outline-offset:3px}
+.wm-flavor-img{display:block;aspect-ratio:4/3;overflow:hidden;background:#EFE6D6}
+.wm-flavor-img img{display:block;width:100%;height:100%;object-fit:cover}
+.wm-flavor-body{display:flex;flex-direction:column;gap:4px;padding:14px 16px 16px;flex:1}
+.wm-flavor-body b{font:400 21px/1.2 "DM Serif Display",Georgia,serif;color:#14261B}
+.wm-flavor-country{font:500 14px/1.3 Inter,system-ui,sans-serif;color:#4A3F34}
+.wm-flavor-facts{font:500 13px/1.3 Inter,system-ui,sans-serif;color:#6B5232}
+.wm-flavor-btn{margin-top:10px;display:flex;align-items:center;justify-content:center;gap:6px;padding:11px 14px;border-radius:12px;background:#14402c;color:#FFFAF1;font:600 14px/1 Inter,system-ui,sans-serif;box-shadow:inset 0 0 0 1px rgba(201,165,90,.45)}
+.wm-banners{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:8px}
+.wm-banner{position:relative;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);align-items:stretch;min-height:150px;padding:0;text-align:left;cursor:pointer;border-radius:22px;overflow:hidden;border:1px solid rgba(201,165,90,.5);box-shadow:0 0 0 1px rgba(20,64,44,.04),0 18px 34px -26px rgba(20,64,44,.5);font:inherit;color:inherit}
+.wm-banner-scan{background:linear-gradient(120deg,#EEF4EC,#E3EDE0)}
+.wm-banner-kids{background:linear-gradient(120deg,#FBF1E4,#F6E4CF)}
+.wm-banner:focus-visible{outline:3px solid #E58A3D;outline-offset:3px}
+.wm-banner-text{display:flex;flex-direction:column;gap:6px;padding:18px 16px 16px 20px}
+.wm-banner-text b{font:400 21px/1.15 "DM Serif Display",Georgia,serif;color:#14261B}
+.wm-banner-text b i{font-style:normal;color:#E97622}
+.wm-banner-text>span:not(.wm-banner-cta){font:400 14px/1.5 Inter,system-ui,sans-serif;color:#3F362D}
+.wm-banner-cta{display:inline-flex;align-items:center;gap:9px;margin-top:6px;font:700 14px/1 Inter,system-ui,sans-serif;color:#14261B}
+.wm-banner-cta .wm-mix-disc{width:34px;height:34px}
+.wm-banner-cta .wm-mix-disc svg{width:12px;height:12px}
+.wm-banner-cta em{font-style:normal;border-bottom:1px solid rgba(20,38,27,.25);padding-bottom:2px}
+.wm-banner img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:760px){.wm-banners{grid-template-columns:minmax(0,1fr)}}
+@media(min-width:900px){.wm-flavor-card{flex-basis:calc((100% - 28px)/3)}}
+/* Premium BACK: green disc, gold ring — always returns to the landing page */
+nav .wm-back{display:grid;place-items:center;width:44px;height:44px;flex:0 0 44px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#2E7D52,#14402c 70%);box-shadow:0 0 0 2px #C9A55A,0 0 0 4px rgba(201,165,90,.22),0 8px 18px rgba(18,59,43,.28);text-decoration:none;transition:transform .2s ease}
+nav .wm-back svg{width:20px;height:20px;fill:none;stroke:#FFFAF1;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;margin-left:-1px}
+nav .wm-back:hover{transform:scale(1.05)}
+nav .wm-back:focus-visible{outline:3px solid #E58A3D;outline-offset:4px}
+@media(max-width:480px){nav .wm-back{width:40px;height:40px;flex-basis:40px}}
+/* Depth — gentle press, hover lift, embossed passport stamps */
+@media(prefers-reduced-motion:no-preference){
+  .card,.wm-flavor-open,.wm-banner,.view-recipe-btn,.wm-flavor-btn,#advToggleBtn,.wm-back,.bottom-nav .nav-btn,.adv-btn,.fav-btn,.country-badge-card{transition:transform .18s cubic-bezier(.2,.8,.2,1),box-shadow .2s ease!important}
+  .card:active,.wm-flavor-open:active,.wm-banner:active{transform:scale(.985)!important}
+  .view-recipe-btn:active,.wm-flavor-btn:active,.adv-btn:active,.fav-btn:active{transform:scale(.97)!important}
+  #advToggleBtn:active .wm-mix-disc,.wm-banner:active .wm-mix-disc,.wm-back:active{transform:scale(.93)!important}
+  @media(hover:hover){
+    #page-browse .card:hover,.wm-banner:hover{transform:translateY(-3px)!important;box-shadow:0 0 0 1px rgba(20,64,44,.05),0 28px 46px -28px rgba(20,64,44,.55)!important}
+    .country-badge-card:hover{transform:translateY(-2px) rotate(-.6deg)!important}
+  }
+}
+.country-badge-card{border:1.5px dashed rgba(154,122,53,.55)!important;background:radial-gradient(circle at 30% 20%,#FFFDF6,#F7ECD6 75%)!important;box-shadow:inset 0 2px 3px rgba(255,255,255,.9),inset 0 -3px 8px rgba(122,77,23,.12),0 10px 22px -14px rgba(122,77,23,.45)!important}
+.country-badge-flag{filter:drop-shadow(0 1px 0 rgba(255,255,255,.9)) drop-shadow(0 -1px 0 rgba(122,77,23,.25))!important}
+.country-badge-name{font:400 17px/1.2 'DM Serif Display',Georgia,serif!important;color:#14261B!important;text-shadow:0 1px 0 rgba(255,255,255,.85)}
+/* Protein is a minimum: highlight the range of protein you will see (handle up to the top) */
+#proteinSlider::-webkit-slider-runnable-track{background:linear-gradient(to top,var(--wm-track,#E9DED0) 0%,var(--wm-track,#E9DED0) var(--fill),var(--wm-gold,#D4892B) var(--fill),var(--wm-gold-2,#E8A84E) 100%)!important}
+#proteinSlider::-moz-range-track{background:linear-gradient(to top,#E9DED0 var(--fill),#D4892B var(--fill))!important}
+/* Premium screens — same language as Browse (titles, contours, green buttons) */
+.page:not(#page-browse):not(#page-kids) .page-title,.chef-title,.scan-title{font:400 clamp(28px,3.6vw,40px)/1.1 "DM Serif Display",Georgia,serif!important;letter-spacing:-.01em!important;color:#14261B!important}
+.page:not(#page-browse) .page-sub,.chef-sub,.scan-sub{font:400 16px/1.55 Inter,system-ui,sans-serif!important;color:#4A3F34!important}
+.chef-kicker,.scan-kicker{font:600 12px/1.4 Inter,system-ui,sans-serif!important;letter-spacing:.22em!important;text-transform:uppercase!important;color:#6B5232!important}
+.planner-box,.chef-input-card,.scan-card,.chef-hero,.scan-hero,.tour-hero,.grocery-box,.saved-empty{border:1px solid rgba(201,165,90,.55)!important;background:#FFFDF8!important;box-shadow:0 0 0 1px rgba(20,64,44,.04),0 18px 34px -28px rgba(20,64,44,.5)!important}
+.chef-hero,.scan-hero{background:linear-gradient(135deg,#FFFDF8,#F6EEDD)!important}
+.planner-box input,.planner-box select,.chef-input-card textarea,.scan-card textarea,#page-scan textarea{border:1px solid rgba(201,165,90,.55)!important;background:#FFFDF8!important;border-radius:14px!important}
+.planner-box input:focus,.planner-box select:focus,.chef-input-card textarea:focus,#page-scan textarea:focus{outline:none!important;border-color:#14402c!important;box-shadow:0 0 0 3px rgba(201,165,90,.3)!important}
+.planner-box label,.chef-input-label{color:#6B5232!important;letter-spacing:.14em!important}
+.btn-chef,.scan-btn.primary,#page-planner .btn-recipe,.btn-cook,#recipeBtn,.grocery-action.primary,.saved-empty button,.saved-empty a{background:#14402c!important;color:#FFFAF1!important;border:1px solid #14402c!important;box-shadow:inset 0 0 0 1px rgba(201,165,90,.45),0 12px 24px -14px rgba(20,64,44,.55)!important;background-image:none!important}
+.btn-chef:hover,.scan-btn.primary:hover,#page-planner .btn-recipe:hover,.btn-cook:hover,#recipeBtn:hover{background:#1E5B2C!important}
+.btn-plan,.scan-btn.secondary,.btn-plan-secondary,.grocery-action:not(.primary){background:#FFFDF8!important;color:#14402c!important;border:1px solid rgba(201,165,90,.55)!important}
+.modal-name{font:400 30px/1.15 "DM Serif Display",Georgia,serif!important;letter-spacing:0!important;color:#14261B!important}
+.tour-bar{background:linear-gradient(90deg,#1E5B2C,#C9A55A)!important}
+.tour-badges-title{font:400 22px/1.2 "DM Serif Display",Georgia,serif!important;letter-spacing:0!important;color:#14261B!important}
+.tour-badges-sub{font-size:14px!important;color:#4A3F34!important}
+.tour-num{font-family:"DM Serif Display",Georgia,serif!important;font-weight:400!important;color:#14261B!important}
+#page-scan .scan-mode-btn.active,#page-scan [aria-pressed="true"].scan-tab{background:#14402c!important}
+/* Dialogs + upgrading screen in WorldMeals green & gold */
+.wm-dialog{background:linear-gradient(160deg,#FFFDF8,#F7F0E2)!important;border:1px solid rgba(201,165,90,.55)!important;box-shadow:0 30px 80px -20px rgba(20,38,27,.45)!important}
+.wm-dialog h2{font:400 clamp(26px,6vw,32px)/1.15 "DM Serif Display",Georgia,serif!important;letter-spacing:0!important;color:#14261B!important}
+.wm-dialog-copy{color:#4A3F34!important;font-size:16px!important}
+.wm-dialog-icon{font-size:0!important;width:58px;height:58px;margin:0 auto 14px!important;border-radius:50%;background:radial-gradient(circle at 35% 30%,#2E7D52,#14402c 70%) !important;box-shadow:0 0 0 2px #C9A55A,0 0 0 5px rgba(201,165,90,.22),0 12px 24px -10px rgba(20,64,44,.55);position:relative}
+.wm-dialog-icon::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23FFFAF1%22%20stroke-width%3D%221.7%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%203.5l2.3%205.2%205.7.5-4.3%203.8%201.3%205.6L12%2015.7%207%2018.6l1.3-5.6L4%209.2l5.7-.5z%22%2F%3E%3C%2Fsvg%3E") center/26px no-repeat}
+.wm-plan-mini{background:#FFFDF8!important;border:1px solid rgba(201,165,90,.55)!important}
+.wm-plan-mini strong{font:400 21px/1.2 "DM Serif Display",Georgia,serif!important;color:#14261B!important}
+.wm-primary{background:#14402c!important;background-image:none!important;color:#FFFAF1!important;border:1px solid #14402c!important;box-shadow:inset 0 0 0 1px rgba(201,165,90,.45),0 14px 26px -14px rgba(20,64,44,.6)!important}
+.wm-primary:hover{background:#1E5B2C!important}
+.wm-plan-mini span{font-size:15px!important;line-height:1.6!important;color:#3F362D!important}
+.wm-ai-meter{font-size:14px!important;color:#3F362D!important;font-weight:600!important}
+.wm-dialog-copy{color:#3F362D!important}
+.wm-upgrade-progress p,.wm-upgrade-progress-note{color:#4A3F34!important}
+.wm-upgrade-progress-note{font-size:14px!important}
+.wm-secondary{background:#FFFDF8!important;color:#14402c!important;border:1px solid rgba(201,165,90,.55)!important}
+.wm-close{background:#F1EADB!important;color:#14261B!important}
+.wm-upgrade-progress{background:radial-gradient(ellipse at 20% 10%,#E6EFE4 0,transparent 50%),radial-gradient(ellipse at 90% 90%,#F3E8CF 0,transparent 50%),#FBF7EE!important}
+.wm-upgrade-progress-card{border:1px solid rgba(201,165,90,.55)!important}
+.wm-upgrade-progress-orbit::before{border-right-color:#C9A55A!important;border-top-color:#14402c!important}
+.wm-upgrade-progress h2{font:400 30px/1.15 "DM Serif Display",Georgia,serif!important;letter-spacing:0!important;color:#14261B!important}
+.wm-upgrade-progress-kicker{color:#6B5232!important}
+/* Header harmony: plan chip, AI credits, menu */
+.wm-plan-chip{background:#FFFDF8!important;border:1px solid rgba(201,165,90,.55)!important;color:#14402c!important;font-weight:700!important}
+.wm-plan-chip::before{content:"";width:7px;height:7px;border-radius:50%;background:#C9A55A;margin-right:7px;box-shadow:0 0 0 2px rgba(201,165,90,.25)}
+.wm-ai-credit-popover{background:linear-gradient(170deg,#FFFDF8,#F7F0E2)!important;border:1px solid rgba(201,165,90,.55)!important;box-shadow:0 22px 48px -20px rgba(20,38,27,.45)!important}
+.wm-ai-credit-popover::after{background:#FFFDF8!important;border-color:rgba(201,165,90,.55)!important}
+.wm-ai-credit-popover h3{font:400 20px/1.2 "DM Serif Display",Georgia,serif!important;color:#14261B!important;letter-spacing:0!important}
+.wm-ai-credit-popover p{font-size:14px!important;color:#3F362D!important}
+.wm-ai-credit-popover p.wm-ai-credit-remaining{color:#14402c!important;background:#EEF5EC!important;border-color:rgba(20,64,44,.18)!important}
+.wm-ai-credit-upgrade,.wm-ai-chat-upgrade{background:#14402c!important;background-image:none!important;color:#FFFAF1!important;border:1px solid #14402c!important;box-shadow:inset 0 0 0 1px rgba(201,165,90,.45)!important;font-weight:600!important}
+.wm-ai-chat-credit{background:linear-gradient(145deg,#FFFDF8,#F7F0E2)!important;border:1px solid rgba(201,165,90,.55)!important}
+.wm-ai-chat-credit-title{font:400 19px/1.2 "DM Serif Display",Georgia,serif!important;color:#14261B!important}
+.wm-ai-chat-credit-copy{font-size:14px!important;color:#3F362D!important}
+.wm-menu-button{background:#FFFDF8!important;border:1px solid rgba(201,165,90,.55)!important;color:#14402c!important}
+.wm-menu-panel{background:#FFFDF8!important;border:1px solid rgba(201,165,90,.55)!important}
+.wm-menu-item{color:#14261B!important;font:600 14px Inter,system-ui,sans-serif!important}
+.wm-menu-item:hover{background:#EEF5EC!important;color:#14402c!important}
+/* Collapsed mixer: one compact row */
+.adv-filters:has(.adv-body.collapsed){padding-top:14px!important;padding-bottom:14px!important}
+.adv-filters:has(.adv-body.collapsed) .adv-filters-head{margin-bottom:0!important}
+.adv-filters:has(.adv-body.collapsed) .adv-filters-head::before{display:none!important}
+.adv-filters:has(.adv-body.collapsed) .wm-mix-label::after{content:" · Calories, budget, time, spice, protein";font-weight:500;color:#6B5A48;border:0}
+@media(max-width:620px){.adv-filters:has(.adv-body.collapsed) .wm-mix-label::after{content:""}}
+/* Meal mixer header */
+.adv-filters-head::before{content:"Meal mixer"!important;font:400 20px/1.2 "DM Serif Display",Georgia,serif!important;color:#14261B!important;letter-spacing:0!important}
+#advToggleBtn.wm-mix-btn{display:inline-flex!important;align-items:center;gap:10px;background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;color:#14261B!important;font:700 15px/1 Inter,system-ui,sans-serif!important;cursor:pointer}
+.wm-mix-disc{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#2E7D52,#14402c 70%);box-shadow:0 0 0 2px #C9A55A,0 0 0 4px rgba(201,165,90,.25),0 8px 18px rgba(18,59,43,.3);transition:transform .2s ease}
+.wm-mix-disc svg{width:15px;height:15px;fill:#FFFAF1;margin-left:2px}
+#advToggleBtn.is-open .wm-mix-disc svg{transform:rotate(90deg)}
+#advToggleBtn:hover .wm-mix-disc{transform:scale(1.06)}
+.wm-mix-label{border-bottom:1px solid rgba(20,38,27,.25);padding-bottom:3px}
+#advToggleBtn:focus-visible{outline:3px solid #E58A3D;outline-offset:4px;border-radius:999px}
+/* Honest cards: no star ratings until real people rate dishes */
+.card-rating{display:none!important}
+.card-name{font:400 20px/1.2 "DM Serif Display",Georgia,serif!important;letter-spacing:0!important;color:#14261B!important}
+.view-recipe-btn{background:#14402c!important;color:#FFFAF1!important;border:1px solid #14402c!important;box-shadow:inset 0 0 0 1px rgba(201,165,90,.45)!important;font-weight:600!important}
+.view-recipe-btn::after{content:" →"}
+.view-recipe-btn:hover{background:#1E5B2C!important;border-color:#1E5B2C!important}
+/* Bottom menu stays clean cream over food photos */
+.bottom-nav{background:rgba(255,250,241,.86)!important;-webkit-backdrop-filter:blur(18px) saturate(120%)!important;backdrop-filter:blur(18px) saturate(120%)!important;border:1px solid rgba(255,255,255,.45)!important;box-shadow:0 12px 30px rgba(43,31,20,.10),inset 0 1px 0 rgba(255,255,255,.55)!important}
+.bottom-nav .nav-btn .lb{text-shadow:0 0 6px rgba(255,250,241,.95),0 0 2px rgba(255,250,241,.9)}
+.bottom-nav .nav-btn .ic{filter:drop-shadow(0 0 5px rgba(255,250,241,.85))}
+#page-browse{padding-bottom:calc(120px + env(safe-area-inset-bottom))!important}
+</style>
 </head>
 <body>
 <div class="wm-upgrade-progress" role="status" aria-live="polite" aria-atomic="true">
@@ -1863,24 +2284,24 @@ html.wm-unlocking .wm-upgrade-progress{display:grid}
     <img src="/images/worldmeals-logo-horizontal.png" alt="WorldMeals" class="top-brand-logo">
   </a>
   <div class="wm-nav-actions">
-    <span class="wm-plan-chip" id="wmPlanChip" role="button" tabindex="0" aria-expanded="false" aria-controls="wmAICreditPopover">🌱 Explorer · 5/5 AI</span>
+    <span class="wm-plan-chip" id="wmPlanChip" role="button" tabindex="0" aria-expanded="false" aria-controls="wmAICreditPopover">Explorer · 5/5 AI</span>
     <div class="wm-ai-credit-popover" id="wmAICreditPopover" role="dialog" aria-label="AI Credits">
-      <h3>✨ AI Credits</h3>
+      <h3>AI Credits</h3>
       <p class="wm-ai-credit-status" id="wmAICreditStatus" hidden>Your AI recipe is ready.</p>
       <p>Explorer includes <strong>5 AI recipes total.</strong></p>
       <p>Each AI recipe uses <strong>1 credit.</strong></p>
       <p class="wm-ai-credit-remaining" id="wmAICreditRemaining">You have&nbsp;<strong>5 of 5 remaining.</strong></p>
       <p class="wm-ai-credit-chef-line">Want unlimited AI recipes? Upgrade to <strong>Chef</strong>.</p>
-      <button type="button" class="wm-ai-credit-upgrade" onclick="wmCloseAICredits();wmOpenUpgrade('Unlimited AI recipes','chef')">Upgrade to Chef ✨</button>
+      <button type="button" class="wm-ai-credit-upgrade" onclick="wmCloseAICredits();wmOpenUpgrade('Unlimited AI recipes','chef')">Upgrade to Chef →</button>
     </div>
     <div class="fav-count" id="favCount">❤️ 0</div>
     <div class="wm-menu-wrap" id="wmMenu">
       <button type="button" class="wm-menu-button" id="wmMenuButton" aria-label="WorldMeals menu" aria-expanded="false" >☰</button>
       <div class="wm-menu-panel" id="wmMenuPanel">
-        <button type="button" class="wm-menu-item" id="wmKidsMenuBtn" onclick="wmCloseMenu();showPage('kids')">🧒 Kids Meals</button>
-        <button type="button" class="wm-menu-item" id="wmUpgradeMenuBtn" onclick="wmCloseMenu();wmOpenUpgrade('WorldMeals Premium','chef')">✨ Upgrade</button>
-        <button type="button" class="wm-menu-item" id="wmManageMenuBtn" onclick="wmCloseMenu();wmManageSubscription()">⚙️ Manage Subscription</button>
-        <button type="button" class="wm-menu-item" id="wmFeedbackMenuBtn" onclick="wmCloseMenu();openWorldMealsFeedback('general')">💬 Share Feedback</button>
+        <button type="button" class="wm-menu-item" id="wmKidsMenuBtn" onclick="wmCloseMenu();showPage('kids')">Kids Meals</button>
+        <button type="button" class="wm-menu-item" id="wmUpgradeMenuBtn" onclick="wmCloseMenu();wmOpenUpgrade('WorldMeals Premium','chef')">Upgrade</button>
+        <button type="button" class="wm-menu-item" id="wmManageMenuBtn" onclick="wmCloseMenu();wmManageSubscription()">Manage Subscription</button>
+        <button type="button" class="wm-menu-item" id="wmFeedbackMenuBtn" onclick="wmCloseMenu();openWorldMealsFeedback('general')">Share Feedback</button>
       </div>
     </div>
   </div>
@@ -2209,64 +2630,7 @@ html.wm-unlocking .wm-upgrade-progress{display:grid}
 </div>
 
 <!-- KIDS MEALS PAGE (Chef and above) -->
-<style>
-/* WORLDMEALS KIDS — scoped to #page-kids only */
-#page-kids .wk-head{text-align:center;margin:2px 0 12px}
-#page-kids .wk-title{font:900 28px/1.1 Inter,system-ui,sans-serif;color:#66A83B;letter-spacing:-.02em}
-#page-kids .wk-title span{color:#E07B24}
-#page-kids .wk-tag{font-size:13px;color:#6B5A4A;margin-top:4px}
-#page-kids .wk-hero{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:801/280;margin-bottom:14px;background:linear-gradient(135deg,#FFE7B8,#FFD38A 55%,#F6B26B);box-shadow:0 10px 24px rgba(120,70,20,.14)}
-#page-kids .wk-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-#page-kids .wk-hero-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;font:900 20px/1.25 Inter,system-ui,sans-serif;color:#5A3510}
-#page-kids .wk-card{background:#FFFCF7;border:1px solid #F3E6D6;border-radius:22px;padding:14px 12px 12px;margin-bottom:12px;box-shadow:0 6px 16px rgba(120,70,20,.06)}
-#page-kids .wk-step{display:flex;align-items:center;gap:10px;margin:0 2px 12px;font:850 17px/1.2 Inter,system-ui,sans-serif;color:#2B1D12}
-#page-kids .wk-num{width:34px;height:34px;flex:0 0 34px;border-radius:50%;background:linear-gradient(180deg,#F08A2C,#D96A12);color:#fff;font:900 16px/34px Inter,system-ui,sans-serif;text-align:center;box-shadow:0 4px 10px rgba(217,106,18,.3)}
-#page-kids .wk-grid{display:grid;gap:8px}
-#page-kids .wk-ages{grid-template-columns:repeat(5,1fr)}
-#page-kids .wk-meals{grid-template-columns:repeat(4,1fr)}
-#page-kids .wk-chips{grid-template-columns:repeat(3,1fr)}
-#page-kids .wk-sub{font-size:13px;color:#6B5A4A;margin:0 2px 12px 46px}
-#page-kids .wk-search{display:flex;align-items:center;gap:8px;border:1.5px solid #E9DCCB;background:#fff;border-radius:16px;padding:0 10px 0 14px;height:50px}
-#page-kids .wk-search:focus-within{border-color:#E9893A;box-shadow:0 0 0 3px rgba(233,137,58,.12)}
-#page-kids .wk-search input{flex:1;border:0;outline:0;background:transparent;font:500 15px Inter,system-ui,sans-serif;color:#2B1D12;min-width:0}
-#page-kids .wk-search-ic{font-size:17px;opacity:.75}
-#page-kids .wk-search-chev{border:0;background:none;color:#C4651A;font:900 20px/1 Inter,system-ui,sans-serif;cursor:pointer;padding:4px 6px}
-#page-kids .wk-clist{margin-top:8px;border:1px solid #F0E3D2;border-radius:16px;background:#fff;max-height:260px;overflow-y:auto;-webkit-overflow-scrolling:touch}
-#page-kids .wk-crow{display:flex;align-items:center;gap:12px;width:100%;border:0;border-bottom:1px solid #F6EEE3;background:none;padding:12px 14px;text-align:left;font:700 14px Inter,system-ui,sans-serif;color:#2B1D12;cursor:pointer}
-#page-kids .wk-crow:last-child{border-bottom:0}
-#page-kids .wk-crow span{font-size:20px}
-#page-kids .wk-crow small{margin-left:auto;color:#9A8572;font-weight:600}
-#page-kids .wk-csel{display:flex;align-items:center;gap:12px;margin-top:10px;padding:12px 14px;border-radius:16px;background:#EAF4FD;border:1px solid #CFE3F6}
-#page-kids .wk-csel .fl{font-size:28px;line-height:1}
-#page-kids .wk-csel b{display:block;font:800 15px Inter,system-ui,sans-serif;color:#2B1D12}
-#page-kids .wk-csel small{color:#5E6B78;font-size:12.5px}
-#page-kids .wk-csel .rd{margin-left:auto;width:20px;height:20px;border-radius:50%;border:2px solid #2F80ED;position:relative;flex:0 0 20px}
-#page-kids .wk-csel .rd::after{content:"";position:absolute;inset:3px;border-radius:50%;background:#2F80ED}
-#page-kids .wk-opt{appearance:none;border:1px solid rgba(255,255,255,.9);background:linear-gradient(180deg,#FFFDF8 0%,#FBF3E8 72%,#F3E4D1 100%);border-radius:16px;padding:10px 4px;font:700 12.5px/1.2 Inter,system-ui,sans-serif;color:#3A2A1A;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:5px;-webkit-tap-highlight-color:transparent;box-shadow:0 9px 14px rgba(120,70,20,.18),0 3px 4px rgba(120,70,20,.10),inset 0 2px 1px rgba(255,255,255,.95),inset 0 -2px 3px rgba(120,70,20,.08);transform:translateY(-2px);transition:background .15s,border-color .15s,transform .12s,box-shadow .12s}
-#page-kids .wk-opt:active{transform:scale(.97)}
-#page-kids .wk-opt .ic{font-size:26px;line-height:1}
-#page-kids .wk-opt small{font-weight:600;color:#6B5A4A;font-size:12px}
-#page-kids .wk-chips .wk-opt{flex-direction:row;justify-content:center;gap:6px;padding:10px 6px;border-radius:999px;font-size:12px}
-#page-kids .wk-chips .wk-opt .ic{font-size:17px}
-#page-kids .wk-opt.diet{background:#EEF6EC}
-#page-kids .wk-opt.avoid{background:#FCEDEE}
-#page-kids .wk-opt.on{background:#FFF1E2;border-color:#E9893A;color:#9A4A0C;box-shadow:0 4px 12px rgba(233,137,58,.18)}
-#page-kids .wk-opt.on small{color:#B4601A}
-#page-kids .wk-find{width:100%;border:0;border-radius:20px;padding:17px 16px;margin:4px 0 16px;background:linear-gradient(180deg,#EE8A30,#D4680F);color:#fff;font:850 18px/1 Inter,system-ui,sans-serif;cursor:pointer;box-shadow:0 10px 22px rgba(212,104,15,.28)}
-#page-kids #kidsResults{scroll-margin-top:96px}
-#page-kids .wk-dish-search{position:relative;margin:0 0 16px;height:58px;border-radius:22px;border:1px solid rgba(255,255,255,.95);background:linear-gradient(180deg,#F3E7D9 0%,#F9F1E7 45%,#FFFBF6 100%);box-shadow:inset 0 4px 9px rgba(110,60,15,.17),inset 0 2px 3px rgba(110,60,15,.12),inset 0 -3px 4px rgba(255,255,255,.95),0 1px 0 rgba(255,255,255,.95),0 -1px 0 rgba(120,70,20,.10)}
-#page-kids .wk-dish-search::after{content:"";position:absolute;inset:1px;border-radius:21px;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.22) 46%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%)}
-#page-kids .wk-dish-search>*{position:relative;z-index:0}
-#page-kids .wk-dish-search:focus-within{border-color:#E9B27A;box-shadow:inset 0 5px 10px rgba(120,70,20,.24),inset 0 2px 3px rgba(120,70,20,.18),inset 0 -2px 3px rgba(255,255,255,.95),0 0 0 3px rgba(233,137,58,.18)}
-#page-kids .wk-dish-search input{font:800 15.5px Inter,system-ui,sans-serif;color:#5A3E25;text-shadow:0 1px 0 rgba(255,255,255,.85),0 -1px 0 rgba(90,50,20,.18)}
-#page-kids .wk-dish-search input::placeholder{color:#8A6A4C;text-shadow:0 1px 0 rgba(255,255,255,.9)}
-#page-kids .wk-dish-search .wk-search-ic{filter:drop-shadow(0 1px 0 rgba(255,255,255,.9));opacity:.7}
-#page-kids #kidsSearchResults{margin:0 0 16px}
-#page-kids .wk-snote{font:600 12.5px Inter,system-ui,sans-serif;color:#7A6552;margin:-6px 2px 10px}
-#page-kids .wk-results-head{display:flex;justify-content:space-between;align-items:center;margin:4px 2px 10px;font:800 15px Inter,system-ui,sans-serif;color:#2B1D12}
-#page-kids .wk-results-head button{border:0;background:none;color:#C4651A;font:800 13px Inter,system-ui,sans-serif;cursor:pointer}
-@media(max-width:380px){#page-kids .wk-opt{font-size:11.5px}#page-kids .wk-chips .wk-opt{font-size:11px;padding:9px 4px}#page-kids .wk-title{font-size:25px}}
-</style>
+
 <div class="page" id="page-kids">
   <div class="wk-head">
     <div class="wk-title"> WorldMeals <span>Kids</span></div>
@@ -4830,70 +5194,7 @@ if ('serviceWorker' in navigator) {
      WORLDMEALS FINAL MEMBER EXPERIENCE
      Welcome • Entitlements • Trial reminder • Feedback • Gating
      ========================================================= -->
-<style>
-.wm-nav-actions{display:flex;align-items:center;gap:7px}
-.wm-plan-chip{display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:6px 10px;border-radius:999px;background:#FFF7EA;border:1px solid #E8D3B8;color:#8A4B18;font-size:10px;font-weight:900;white-space:nowrap}
-.wm-menu-wrap{position:relative;z-index:130}
-.wm-menu-button{list-style:none;position:relative;z-index:1002;pointer-events:auto;touch-action:manipulation;-webkit-tap-highlight-color:transparent;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1px solid #E8DDD0;background:#fff;border-radius:12px;color:#F28C28;font:900 17px Inter,system-ui,sans-serif;cursor:pointer;box-shadow:0 7px 16px rgba(83,55,29,.07);user-select:none}
-.wm-menu-button:focus-visible{outline:2px solid #F28C28;outline-offset:2px}
-.wm-menu-panel{display:none;position:absolute;right:0;top:42px;z-index:1003;min-width:205px;padding:7px;background:#FFFDF9;border:1px solid #E8DDD0;border-radius:16px;box-shadow:0 18px 45px rgba(45,33,23,.18)}.wm-menu-panel.open{display:block}
-.wm-menu-item{width:100%;border:0;background:transparent;border-radius:11px;padding:11px 12px;text-align:left;color:#3F3025;font:850 12px Inter,system-ui,sans-serif;cursor:pointer}.wm-menu-item:hover{background:#FFF5E8}
-.wm-trial-title{font-size:15px;font-weight:900;color:#6E430F;margin-bottom:7px;text-align:center}.wm-trial-text{font-size:12px;color:#7B6650;line-height:1.6;text-align:center}
-.wm-layer{display:none;position:fixed;inset:0;z-index:950;align-items:center;justify-content:center;padding:18px;background:rgba(31,22,14,.70);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
-.wm-layer.open{display:flex;animation:wmLayerFade .2s ease both}.wm-dialog{width:min(520px,100%);max-height:90vh;overflow:auto;position:relative;border-radius:30px;padding:26px 21px;background:radial-gradient(circle at 50% 0,rgba(245,166,35,.18),transparent 36%),linear-gradient(155deg,#FFFDF8,#FFF4E2);border:1px solid #EDD6B5;box-shadow:0 34px 90px rgba(0,0,0,.28)}.wm-dialog.wide{width:min(620px,100%)}
-.wm-close{position:absolute;right:14px;top:14px;width:34px;height:34px;border:0;border-radius:50%;background:rgba(31,26,20,.07);color:#46372B;font-weight:900;cursor:pointer}
-.wm-dialog-icon{text-align:center;font-size:48px;margin-bottom:8px}.wm-dialog h2{text-align:center;font-size:27px;line-height:1.08;letter-spacing:-.7px;color:#2D2117;margin-bottom:9px}.wm-dialog-copy{text-align:center;font-size:13px;line-height:1.68;color:#665648;margin-bottom:14px}
-.wm-highlight{padding:12px 13px;border:1px solid #EBCB93;border-radius:17px;background:#FFF8E9;color:#6C4A20;font-size:12px;line-height:1.58;margin:13px 0}
-.wm-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.wm-primary,.wm-secondary{border-radius:15px;padding:13px;border:none;cursor:pointer;font:900 13px Inter,system-ui,sans-serif}.wm-primary{background:linear-gradient(135deg,#C47A2C,#E2A35A);color:#fff;box-shadow:0 10px 22px rgba(196,122,44,.20)}.wm-secondary{background:#fff;color:#6B4B2C;border:1px solid #E5D4C0}
-.wm-feedback-form label{display:block;font-size:10px;font-weight:900;color:#77685A;text-transform:uppercase;letter-spacing:.07em;margin:10px 0 5px}.wm-feedback-form select,.wm-feedback-form textarea{width:100%;max-width:100%;border:1px solid #E6D7C7;border-radius:14px;padding:12px;background:#fff;color:#2E241B;font:500 13px Inter,system-ui,sans-serif;outline:none}.wm-feedback-form textarea{min-height:120px;resize:vertical}.wm-feedback-status{min-height:18px;margin-top:8px;text-align:center;font-size:11px;color:#2F8F5B;line-height:1.4}
 
-.wm-feedback-status[data-state="success"]{color:#167A5A}
-.wm-feedback-status[data-state="error"]{color:#A33A2A}
-.wm-feedback-status[data-state="pending"]{color:#6F6257}
-.wm-feedback-status[data-state="saved"]{color:#8A5B13}
-
-.wm-plan-compare{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}.wm-plan-mini{background:#fff;border:1px solid #E8DDD0;border-radius:18px;padding:14px}.wm-plan-mini strong{display:block;font-size:15px;color:#2D2117;margin-bottom:5px}.wm-plan-mini span{display:block;font-size:11px;color:#77685A;line-height:1.5}.wm-ai-meter{text-align:center;font-size:11px;color:#7A6B5D;margin:8px 0 0;font-weight:800}
-.wm-quick-feedback{display:none;position:fixed;left:50%;bottom:106px;transform:translateX(-50%);z-index:780;width:min(390px,calc(100% - 24px));padding:12px 13px;border-radius:18px;background:#251B13;color:#fff;box-shadow:0 18px 44px rgba(31,22,14,.30);align-items:center;gap:10px}.wm-quick-feedback.show{display:flex;animation:wmQuickUp .22s ease both}.wm-quick-copy{flex:1;font-size:11px;line-height:1.45;font-weight:750}.wm-quick-btn{width:36px;height:36px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(255,255,255,.09);font-size:17px;cursor:pointer}
-@keyframes wmLayerFade{from{opacity:0}to{opacity:1}}@keyframes wmQuickUp{from{opacity:0;transform:translate(-50%,10px)}to{opacity:1;transform:translate(-50%,0)}}
-.wm-actions.single{grid-template-columns:1fr}
-@media(max-width:620px){.wm-plan-chip{display:none}.wm-actions,.wm-plan-compare{grid-template-columns:1fr}.wm-layer{padding:12px;overflow-x:hidden}.wm-dialog,.wm-dialog.wide{width:100%;max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);padding:24px 18px;overflow-x:hidden}.wm-feedback-form select,.wm-feedback-form textarea{font-size:16px;line-height:1.35}.wm-feedback-form textarea{resize:none}}
-
-/* WORLDMEALS MOBILE FEEDBACK DIALOG — lock to viewport and prevent side clipping */
-@media(max-width:620px){
-  .search-wrap .search{font-size:16px!important}
-  #wmFeedback{
-    position:fixed!important;inset:0!important;width:100vw!important;max-width:100vw!important;min-width:0!important;
-    padding:10px!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;
-  }
-  #wmFeedback .wm-dialog{
-    width:calc(100vw - 20px)!important;max-width:420px!important;min-width:0!important;
-    max-height:calc(100dvh - 20px)!important;margin:0 auto!important;padding:22px 16px 18px!important;
-    border-radius:24px!important;overflow-y:auto!important;overflow-x:hidden!important;box-sizing:border-box!important;transform:none!important;
-  }
-  #wmFeedback .wm-close{right:10px!important;top:10px!important;z-index:5!important}
-  #wmFeedback .wm-dialog-icon{font-size:40px!important;margin-bottom:6px!important}
-  #wmFeedback .wm-dialog h2{font-size:24px!important;line-height:1.12!important;padding:0 28px!important;margin-bottom:8px!important}
-  #wmFeedback .wm-dialog-copy{font-size:12.5px!important;line-height:1.55!important;margin-bottom:12px!important;overflow-wrap:anywhere!important}
-  #wmFeedback .wm-feedback-form{width:100%!important;min-width:0!important}
-  #wmFeedback .wm-feedback-form select,#wmFeedback .wm-feedback-form textarea{
-    display:block!important;width:100%!important;max-width:100%!important;min-width:0!important;
-    box-sizing:border-box!important;font-size:16px!important;line-height:1.35!important;
-  }
-  #wmFeedback .wm-feedback-form textarea{min-height:110px!important;resize:none!important}
-  #wmFeedback .wm-actions{width:100%!important;min-width:0!important;grid-template-columns:1fr!important}
-  #wmFeedback .wm-primary,#wmFeedback .wm-secondary{width:100%!important;box-sizing:border-box!important}
-
-  /* iOS/WKWebView: keep the feedback header inside the visible viewport while the keyboard is active. */
-  #wmFeedback.wm-keyboard-open{
-    top:var(--wm-vv-top,0px)!important;bottom:auto!important;height:var(--wm-vv-height,100dvh)!important;min-height:0!important;
-    align-items:flex-start!important;overflow-y:auto!important;overscroll-behavior:contain!important;
-    padding-top:max(10px,env(safe-area-inset-top))!important;padding-bottom:max(10px,env(safe-area-inset-bottom))!important;
-  }
-  #wmFeedback.wm-keyboard-open .wm-dialog{
-    max-height:calc(var(--wm-vv-height,100dvh) - 20px)!important;margin:0 auto!important;
-  }
-}
-</style>
 
 <div class="wm-layer" id="wmTrialReminder" role="dialog" aria-modal="true" aria-labelledby="wmTrialReminderTitle">
   <div class="wm-dialog">
@@ -4949,7 +5250,7 @@ function wmConfirmAIUse(container,featureName){
       box.innerHTML=`<div class="wm-ai-chat-credit-title">✨ AI Credits</div>
         <div class="wm-ai-chat-credit-copy">You have used all <strong>5 of 5</strong> Explorer AI recipes.</div>
         <div class="wm-ai-chat-credit-copy">Upgrade to Chef for unlimited AI recipes.</div>
-        <div class="wm-ai-chat-credit-actions"><button type="button" class="wm-ai-chat-upgrade">Upgrade to Chef ✨</button></div>`;
+        <div class="wm-ai-chat-credit-actions"><button type="button" class="wm-ai-chat-upgrade">Upgrade to Chef →</button></div>`;
       container.appendChild(box);
       box.scrollIntoView({behavior:"smooth",block:"nearest"});
       box.querySelector(".wm-ai-chat-upgrade")?.addEventListener("click",()=>wmOpenUpgrade(featureName||"Unlimited AI recipes","chef"));
@@ -4964,7 +5265,7 @@ function wmConfirmAIUse(container,featureName){
       <div class="wm-ai-chat-credit-copy">This request uses <strong>1 AI credit</strong>. After it is created, you will have <strong>${after} of 5</strong> remaining.</div>
       <div class="wm-ai-chat-credit-actions">
         <button type="button" class="wm-ai-chat-continue">Continue with AI</button>
-        <button type="button" class="wm-ai-chat-upgrade">Upgrade to Chef ✨</button>
+        <button type="button" class="wm-ai-chat-upgrade">Upgrade to Chef →</button>
       </div>`;
     container.appendChild(box);
     box.scrollIntoView({behavior:"smooth",block:"nearest"});
@@ -4975,7 +5276,7 @@ function wmConfirmAIUse(container,featureName){
   });
 }
 function wmRequirePlan(required,featureName){if(wmHasPlan(required))return true;wmOpenUpgrade(featureName||"Premium feature",required);return false}
-function wmOpenUpgrade(featureName,requiredPlan="chef"){window.wmUpgradeFeature=featureName||"";const title=document.getElementById("wmUpgradeTitle"),copy=document.getElementById("wmUpgradeCopy"),meter=document.getElementById("wmUpgradeAIMeter");if(title)title.textContent=`Unlock ${featureName||"more of WorldMeals"} ✨`;if(copy)copy.textContent=requiredPlan==="passport"?"This experience is included with WorldMeals Passport.":"This experience is included with WorldMeals Chef and Passport.";if(meter)meter.textContent=wmPlan()==="explorer"?`Explorer AI recipes remaining: ${wmExplorerAIRemaining()} of 5`:"";document.getElementById("wmUpgrade")?.classList.add("open")}
+function wmOpenUpgrade(featureName,requiredPlan="chef"){window.wmUpgradeFeature=featureName||"";const title=document.getElementById("wmUpgradeTitle"),copy=document.getElementById("wmUpgradeCopy"),meter=document.getElementById("wmUpgradeAIMeter");if(title)title.textContent=`Unlock ${featureName||"more of WorldMeals"}`;if(copy)copy.textContent=requiredPlan==="passport"?"This experience is included with WorldMeals Passport.":"This experience is included with WorldMeals Chef and Passport.";if(meter)meter.textContent=wmPlan()==="explorer"?`Explorer AI recipes remaining: ${wmExplorerAIRemaining()} of 5`:"";document.getElementById("wmUpgrade")?.classList.add("open")}
 function wmCloseUpgrade(){document.getElementById("wmUpgrade")?.classList.remove("open")}function wmGoToPricing(){const p={"Camera & Fridge Scan":"scan","Weekly Meal Planner":"planner","World Tour Challenge":"tour","Kids meals":"kids"}[window.wmUpgradeFeature];try{if(p)localStorage.setItem("wm_return_page",JSON.stringify({page:p,at:Date.now()}));else localStorage.removeItem("wm_return_page")}catch(e){}window.location.href="index.html?stay=1#pricing"}
 function wmReturnToWantedPage(){
   // Keep the destination until a verified membership actually unlocks it.
@@ -5055,7 +5356,7 @@ window.addEventListener("worldmeals:plan-changed",event=>wmApplyIAPDetail(event?
 
 function wmRefreshMembershipUI(){
   const plan=wmPlan(),chip=document.getElementById("wmPlanChip"),upgrade=document.getElementById("wmUpgradeMenuBtn"),manage=document.getElementById("wmManageMenuBtn");
-  if(chip)chip.textContent=plan==="passport"?"🌍 Passport":plan==="chef"?"👨‍🍳 Chef":`🌱 Explorer · ${wmExplorerAIRemaining()}/5 AI`;
+  if(chip)chip.textContent=plan==="passport"?"Passport":plan==="chef"?"Chef":`Explorer · ${wmExplorerAIRemaining()}/5 AI`;
   const aiRemaining=document.getElementById("wmAICreditRemaining");
   if(aiRemaining)aiRemaining.innerHTML=`You have&nbsp;<strong>${wmExplorerAIRemaining()} of 5 remaining.</strong>`;
   {const wmLeft=wmExplorerAIRemaining(),wmLow=plan!=="passport"&&plan!=="chef"&&wmLeft<=1;
@@ -5089,7 +5390,7 @@ function wmShowAICreditNote(container,usedBefore){
     }else if(used){
       note.innerHTML=`<div class="wm-ai-chat-credit-title">✅ AI recipe created</div>
         <div class="wm-ai-chat-credit-copy">That was your last free AI recipe. You have used all <strong>5 of 5</strong>.</div>
-        <div class="wm-ai-chat-credit-actions"><button type="button" class="wm-ai-chat-upgrade">Upgrade to Chef ✨</button></div>`;
+        <div class="wm-ai-chat-credit-actions"><button type="button" class="wm-ai-chat-upgrade">Upgrade to Chef →</button></div>`;
       note.querySelector(".wm-ai-chat-upgrade")?.addEventListener("click",()=>wmOpenUpgrade("Unlimited AI recipes","chef"));
     }else{
       note.innerHTML=`<div class="wm-ai-chat-credit-title">No credit used</div>
@@ -5337,71 +5638,7 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 <!-- WORLDMEALS STYLED DROPDOWNS: every <select> opens a cream/orange panel instead of the plain browser list.
      Your existing onchange handlers (renderGrid, syncTimeSelect, ...) keep working unchanged.
      Add data-native to any <select> you want to keep as a normal browser dropdown. -->
-<style>
-/* WORLDMEALS PREMIUM SELECTORS — presentation only; existing select values/events stay unchanged */
-.wmp-backdrop{position:fixed;inset:0;background:rgba(42,29,18,.46);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;z-index:5000;padding:18px;animation:wmpFade .16s ease}
-.wmp-sheet{position:relative;background:linear-gradient(180deg,#FFFDF8 0%,#FFF8EE 100%);border:1px solid rgba(243,217,184,.95);border-radius:28px;width:100%;max-width:460px;max-height:min(82vh,720px);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 28px 80px rgba(60,30,0,.30),inset 0 1px 0 rgba(255,255,255,.95);font-family:'Inter',system-ui,sans-serif;animation:wmpPop .20s cubic-bezier(.2,.8,.2,1)}
-.wmp-sheet::before{content:"";width:42px;height:5px;border-radius:999px;background:#E6C9A7;align-self:center;margin:10px 0 2px;flex:0 0 auto}
-.wmp-title{font-size:19px;font-weight:800;letter-spacing:-.35px;color:#2B2118;padding:10px 20px 8px}
-.wmp-search{margin:2px 16px 8px;padding:13px 15px;border:1px solid #EED3B2;border-radius:16px;background:#fff;font:inherit;font-size:15px;color:#2B2118;outline:none;box-shadow:0 5px 14px rgba(83,55,29,.05)}
-.wmp-search::placeholder{color:#A08C78}.wmp-search:focus{border-color:#F28C28;box-shadow:0 0 0 4px rgba(242,140,40,.12)}
-.wmp-list{overflow-y:auto;padding:4px 14px 18px;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#E2C6A7 transparent}
-.wmp-group{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8B6B4C;padding:16px 8px 5px}
-.wmp-opt{display:flex;align-items:center;gap:13px;width:100%;min-height:58px;text-align:left;background:rgba(255,255,255,.72);border:1px solid #F0E2D2;border-radius:17px;padding:13px 14px;margin:7px 0;font:inherit;font-size:16px;font-weight:600;color:#3A2A1A;cursor:pointer;box-shadow:0 5px 14px rgba(83,55,29,.045);transition:transform .16s ease,background .16s ease,border-color .16s ease,box-shadow .16s ease;-webkit-tap-highlight-color:transparent}
-.wmp-opt:hover,.wmp-opt:focus-visible{background:#FFF3E3;border-color:#F0C58F;outline:none;transform:translateY(-1px);box-shadow:0 9px 20px rgba(83,55,29,.08)}
-.wmp-opt:active{transform:scale(.99)}
-.wmp-opt.sel{background:linear-gradient(135deg,#FFF0DC,#FDE3C4);border-color:#F2B66E;color:#7E3E08;box-shadow:0 8px 20px rgba(242,140,40,.13)}
-.wmp-opt:disabled{opacity:.45;cursor:default;transform:none}
-.wmp-ico{width:30px;height:30px;flex:0 0 30px;display:grid;place-items:center;text-align:center;font-size:21px;line-height:1;background:#FFF7EC;border-radius:10px}
-.wmp-opt.sel .wmp-ico{background:rgba(255,255,255,.58)}
-.wmp-txt{flex:1;line-height:1.25}.wmp-radio{width:23px;height:23px;flex:0 0 23px;border:2px solid #9A8877;border-radius:50%;position:relative;background:#FFFDF8;transition:border-color .16s ease,box-shadow .16s ease}
-.wmp-opt.sel .wmp-radio{border-color:#F28C28;box-shadow:0 0 0 3px rgba(242,140,40,.10)}
-.wmp-opt.sel .wmp-radio::after{content:"";position:absolute;inset:4px;border-radius:50%;background:#F28C28;box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
-.wmp-empty{padding:28px 20px;text-align:center;color:#9A816A;font-size:14px;font-weight:600}
-@keyframes wmpFade{from{opacity:0}to{opacity:1}}@keyframes wmpPop{from{transform:translateY(10px) scale(.98);opacity:0}to{transform:none;opacity:1}}
-@media(max-width:600px){.wmp-backdrop{align-items:flex-end;padding:0}.wmp-sheet{max-width:none;max-height:86dvh;border-radius:28px 28px 0 0;border-bottom:0;animation:wmpSlide .24s cubic-bezier(.2,.8,.2,1)}.wmp-title{font-size:20px;padding-left:18px}.wmp-list{padding-left:12px;padding-right:12px;padding-bottom:max(18px,env(safe-area-inset-bottom))}.wmp-opt{min-height:60px;border-radius:16px;margin:6px 0}@keyframes wmpSlide{from{transform:translateY(100%)}to{transform:none}}}
-@media(prefers-reduced-motion:reduce){.wmp-backdrop,.wmp-sheet{animation:none}.wmp-opt{transition:none}}
 
-/* WORLDMEALS PREMIUM SELECTORS — V2 MICRO POLISH
-   Presentation only: spacing, scrolling, touch comfort and visual consistency. */
-.wmp-sheet{isolation:isolate}
-.wmp-title{
-  position:sticky;top:0;z-index:3;
-  background:linear-gradient(180deg,rgba(255,253,248,.98),rgba(255,253,248,.94));
-  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-}
-.wmp-list{scroll-padding-top:10px;scroll-padding-bottom:18px}
-.wmp-list::-webkit-scrollbar{width:5px}
-.wmp-list::-webkit-scrollbar-thumb{background:#E2C6A7;border-radius:999px}
-.wmp-group{position:relative;color:#765638}
-.wmp-group::after{content:"";position:absolute;left:8px;right:8px;bottom:0;height:1px;background:linear-gradient(90deg,#EED7BC,transparent)}
-.wmp-opt{will-change:transform}
-.wmp-opt.sel{font-weight:700}
-.wmp-radio{box-shadow:inset 0 0 0 1px rgba(255,255,255,.65)}
-.wmp-opt.sel .wmp-radio::after{inset:4px}
-
-@media(max-width:600px){
-  .wmp-sheet{max-height:min(88dvh,760px);border-radius:30px 30px 0 0}
-  .wmp-sheet::before{width:44px;height:5px;margin-top:9px;background:#DDBD98}
-  .wmp-title{padding:9px 18px 10px;font-size:19px}
-  .wmp-search{margin:2px 12px 7px;min-height:48px;border-radius:15px}
-  .wmp-list{padding:2px 12px max(20px,env(safe-area-inset-bottom))}
-  .wmp-group{padding:14px 7px 5px;font-size:10px}
-  .wmp-opt{min-height:56px;padding:11px 12px;border-radius:16px;gap:11px;margin:6px 0;font-size:15px}
-  .wmp-ico{width:29px;height:29px;flex-basis:29px;font-size:20px}
-  .wmp-radio{width:22px;height:22px;flex-basis:22px}
-}
-
-@media(max-width:380px){
-  .wmp-sheet{max-height:90dvh}
-  .wmp-opt{min-height:53px;padding-top:9px;padding-bottom:9px}
-  .wmp-title{font-size:18px}
-}
-
-
-/* WORLDMEALS V17 — AI credit bubble CSS lives in one block near the top (search "wm-ai-credit-popover"); no !important needed. */
-
-</style>
 <script>
 (function(){
   // Icon per dropdown (filter boxes also fall back to their CSS ::before emoji).
@@ -5678,55 +5915,9 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 <!-- Food Rescue for iPhone (does nothing on Android) -->
 <script src="/ios-food-rescue.js" defer></script>
 
-<style>
-/* WORLDMEALS SIGNATURE DEPTH — stronger raised controls (visual only) */
-#page-kids .wk-opt{
-  border:1px solid rgba(255,255,255,.98) !important;
-  box-shadow:0 16px 22px rgba(120,70,20,.24),0 6px 8px rgba(120,70,20,.13),inset 0 3px 2px rgba(255,255,255,1),inset 0 -4px 6px rgba(120,70,20,.11) !important;
-  transform:translateY(-5px);
-  transition:background .15s,border-color .15s,transform .12s,box-shadow .12s !important;
-}
-#page-kids .wk-opt:active{
-  transform:translateY(1px) scale(.98);
-  box-shadow:0 5px 8px rgba(120,70,20,.18),0 2px 3px rgba(120,70,20,.10),inset 0 2px 4px rgba(120,70,20,.10) !important;
-}
-#page-kids .wk-opt.on{
-  box-shadow:0 15px 22px rgba(233,137,58,.28),0 5px 7px rgba(120,70,20,.12),inset 0 3px 2px rgba(255,255,255,.92),inset 0 -4px 6px rgba(217,106,18,.10) !important;
-  transform:translateY(-5px);
-}
-.filter-group{
-  box-shadow:0 18px 26px rgba(120,70,20,.23),0 7px 9px rgba(120,70,20,.12),inset 0 3px 2px rgba(255,255,255,1),inset 0 -4px 7px rgba(120,70,20,.10) !important;
-  transform:translateY(-5px) !important;
-}
-.filter-group:hover,.filter-group:focus-within{
-  transform:translateY(-8px) !important;
-  box-shadow:0 25px 34px rgba(120,70,20,.25),0 9px 12px rgba(120,70,20,.13),0 0 0 4px rgba(245,166,35,.09),inset 0 3px 2px rgba(255,255,255,1),inset 0 -4px 7px rgba(120,70,20,.10) !important;
-}
-.adv-body:not(.collapsed) .mixer,.mixer{
-  box-shadow:0 19px 27px rgba(120,70,20,.23),0 7px 9px rgba(120,70,20,.12),inset 0 3px 2px rgba(255,255,255,1),inset 0 -4px 7px rgba(120,70,20,.10) !important;
-  transform:translateY(-5px) !important;
-}
-.mixer:hover,.mixer:focus-within{
-  transform:translateY(-8px) !important;
-  box-shadow:0 26px 36px rgba(120,70,20,.25),0 9px 12px rgba(120,70,20,.13),0 0 0 4px rgba(245,166,35,.09),inset 0 3px 2px rgba(255,255,255,1),inset 0 -4px 7px rgba(120,70,20,.10) !important;
-}
-.mixer-fader::-webkit-slider-runnable-track{box-shadow:inset 0 5px 8px rgba(83,55,29,.34),inset 0 -1px 2px rgba(255,255,255,.55),0 2px 1px rgba(255,255,255,.95),0 0 0 1px rgba(120,70,20,.10) !important}
-.mixer-fader::-webkit-slider-thumb{box-shadow:0 13px 18px rgba(31,26,20,.38),0 5px 6px rgba(31,26,20,.22),inset 0 3px 2px rgba(255,255,255,.28),inset 0 -3px 4px rgba(0,0,0,.28) !important}
-.mixer-fader::-moz-range-track{box-shadow:inset 0 5px 8px rgba(83,55,29,.34),0 2px 1px rgba(255,255,255,.95) !important}
-.mixer-fader::-moz-range-thumb{box-shadow:0 13px 18px rgba(31,26,20,.38),0 5px 6px rgba(31,26,20,.22),inset 0 3px 2px rgba(255,255,255,.28),inset 0 -3px 4px rgba(0,0,0,.28) !important}
-/* PHONE: two compact filter boxes per row */
-@media(max-width:420px){
-  .filter-group{padding:10px 10px 8px 38px !important;min-height:64px;}
-  .filter-group::before{left:11px;font-size:18px !important;}
-  .filter-group::after{right:9px;font-size:15px;}
-  .filter-group select{font-size:13px !important;padding-right:16px !important;text-overflow:ellipsis;}
-}
-</style>
+
 <!-- FASTER BROWSE: smoother filter sliders and search (no change to what the filters do) -->
-<style>
-/* The phone only draws the dish cards that are on screen; cards further down are drawn as you scroll. */
-#grid .card{content-visibility:auto;contain-intrinsic-size:auto 380px}
-</style>
+
 <script>
 (function(){
   if(typeof window.renderGrid!=="function") return;
@@ -5745,153 +5936,7 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
   };
 })();
 </script>
-<style id="wm-browse-premium">
-/* WORLDMEALS BROWSE — premium first screen (presentation only; every filter keeps working) */
-#page-browse .brand-hero{display:none!important}
-#page-browse .premium-top{margin-top:6px!important;display:block!important;grid-template-columns:none!important}
-#page-browse .premium-top .search-wrap{width:100%!important;max-width:none!important;margin-left:0!important}
-/* One way to filter: Region · Country · Diet here, the rest lives in the meal mixer */
-#page-browse .filter-row .f-protein,#page-browse .filter-row .f-time,#page-browse .filter-row .f-spice,#page-browse .filter-row .f-calories,#page-browse .filter-row .f-budget{display:none!important}
-#page-browse .filter-row{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:8px!important}
-@media(max-width:900px){#page-browse .filter-row{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
-/* Line icons instead of emojis */
-.wm-ico{width:23px;height:23px;fill:none;stroke:#5C4E40;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s ease,transform .2s ease}
-#page-browse .filter-group.f-region::before{content:""!important;width:22px;height:22px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%231E5B2C%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%228.5%22%2F%3E%3Cpath%20d%3D%22M3.5%2012h17M12%203.5c2.6%202.4%203.8%205.2%203.8%208.5S14.6%2018.1%2012%2020.5M12%203.5C9.4%205.9%208.2%208.7%208.2%2012s1.2%206.1%203.8%208.5%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat}
-#page-browse .filter-group.f-country::before{content:""!important;width:22px;height:22px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%231E5B2C%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M5.5%2021V4M5.5%204.5c4-2%206.5%202%2011%200v8.5c-4.5%202-7-2-11%200%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat}
-#page-browse .filter-group.f-diet::before{content:""!important;width:22px;height:22px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%231E5B2C%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M3.5%2011.5h17a8.5%208.5%200%200%201-17%200z%22%2F%3E%3Cpath%20d%3D%22M8%2011.5c-.6-2.6%201-4.8%203.6-5M12.5%2011.5c.2-2.8%202.2-4.6%205-4.4M9.5%208.5C9%206%2010%204%2012%203%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat}
-#page-browse .filter-group.f-collection::before{content:""!important;width:22px;height:22px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%231E5B2C%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%2020%2020%204M7%2013.5l3.5%203.5M9.5%2011l3.5%203.5M12%208.5l3.5%203.5%22%2F%3E%3Ccircle%20cx%3D%2217.5%22%20cy%3D%226.5%22%20r%3D%221%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat}
-/* Premium navigation: one icon family, brand colors */
-.bottom-nav .nav-btn .ic{display:grid;place-items:center;height:24px}
-.wm-ico{width:23px;height:23px;fill:none;stroke:#6B5A48;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s ease,fill .2s ease}
-.bottom-nav .nav-btn .lb{color:#6B5A48!important;font-weight:600!important}
-.bottom-nav .nav-btn.active .wm-ico{stroke:#14402c;fill:rgba(201,165,90,.28)}
-.bottom-nav .nav-btn.active .lb{color:#14402c!important;font-weight:700!important}
-.bottom-nav .nav-btn.active::before{background:rgba(20,64,44,.07)!important;box-shadow:inset 0 0 0 1px rgba(201,165,90,.45)!important}
-.nav-btn.active .ic{filter:none!important}
-.bottom-nav .nav-btn .lb{font-size:11px!important;letter-spacing:0!important;white-space:nowrap}
-@media(max-width:480px){.bottom-nav .nav-btn{padding-left:0!important;padding-right:0!important;min-width:0!important}.bottom-nav .nav-btn .lb{letter-spacing:-.01em!important}}
-@media(max-width:380px){.bottom-nav .nav-btn .lb{font-size:10.5px!important}}
-.bottom-nav .nav-btn .ic{position:relative}
-.bottom-nav .nav-btn:has(.lb.wm-locked) .ic::after{content:"";position:absolute;top:-3px;right:-7px;width:13px;height:13px;border-radius:50%;background:#FFFAF1 url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%239A7A35%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%225%22%20y%3D%2210.5%22%20width%3D%2214%22%20height%3D%2210%22%20rx%3D%222.5%22%2F%3E%3Cpath%20d%3D%22M8.5%2010.5V8a3.5%203.5%200%200%201%207%200v2.5%22%2F%3E%3C%2Fsvg%3E") center/9px no-repeat;box-shadow:0 0 0 1px rgba(201,165,90,.6)}
-/* Step 1 — welcome + green & gold contours */
-.wm-welcome{padding:10px 4px 16px}
-.wm-welcome-eyebrow{margin:0 0 8px;font:600 12px/1.4 Inter,system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#6B5232}
-.wm-welcome-title{margin:0;font:400 clamp(30px,4vw,46px)/1.08 "DM Serif Display",Georgia,serif;letter-spacing:-.015em;color:#14261B}
-.wm-welcome-title span{color:#E97622}
-.wm-welcome-sub{margin:8px 0 0;font:400 16px/1.5 Inter,system-ui,sans-serif;color:#4A3F34}
-#page-browse .search{border:1px solid rgba(201,165,90,.55)!important;box-shadow:0 0 0 1px rgba(20,64,44,.06),0 10px 24px -18px rgba(20,64,44,.45)!important;background:#FFFDF8!important}
-#page-browse .search:focus{border-color:#14402c!important;box-shadow:0 0 0 3px rgba(201,165,90,.35)!important}
-#page-browse .filter-row .filter-group{border:1px solid rgba(201,165,90,.55)!important;box-shadow:0 0 0 1px rgba(20,64,44,.05),0 10px 22px -18px rgba(20,64,44,.45)!important;background:#FFFDF8!important;border-radius:999px!important;min-height:0!important;padding-top:8px!important;padding-bottom:8px!important}
-#page-browse .filter-row .filter-group label{color:#6B5232!important;letter-spacing:.12em!important}
-#page-browse .filter-row .filter-group select{color:#14261B!important;font-weight:600!important;border:0!important;background:transparent!important}
-#page-browse .filter-row .filter-group:focus-within{border-color:#14402c!important;box-shadow:0 0 0 3px rgba(201,165,90,.3)!important}
-#page-browse .adv-filters{border:1px solid rgba(201,165,90,.55)!important;box-shadow:0 0 0 1px rgba(20,64,44,.05),0 14px 30px -22px rgba(20,64,44,.5)!important;background:#FFFDF8!important}
-#page-browse .results-toolbar{border:1px solid rgba(201,165,90,.4)!important;background:#FFFDF8!important}
-#page-browse .card{border:1px solid rgba(201,165,90,.45)!important;box-shadow:0 0 0 1px rgba(20,64,44,.04),0 22px 40px -30px rgba(20,64,44,.5)!important}
-/* Step 2 — A world of flavor + banners */
-.wm-home{margin:6px 0 22px}
-.wm-home[hidden]{display:none!important}
-.wm-home-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:6px 4px 12px}
-.wm-home-title{position:relative;margin:0;padding-bottom:8px;font:400 clamp(26px,3vw,34px)/1.1 "DM Serif Display",Georgia,serif;color:#14261B}
-.wm-home-title::after{content:"";position:absolute;left:0;bottom:0;width:28px;height:3px;border-radius:3px;background:#E97622}
-.wm-home-all{font:600 14px/1.2 Inter,system-ui,sans-serif;color:#14402c;text-decoration:none;white-space:nowrap}
-.wm-flavor-row{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 14px;margin:0 -4px;scrollbar-width:none}
-.wm-flavor-row::-webkit-scrollbar{display:none}
-.wm-flavor-card{flex:0 0 min(260px,74%);scroll-snap-align:start}
-.wm-flavor-open{display:flex;flex-direction:column;width:100%;height:100%;padding:0;text-align:left;cursor:pointer;background:#FFFDF8;border:1px solid rgba(201,165,90,.5);border-radius:22px;overflow:hidden;box-shadow:0 0 0 1px rgba(20,64,44,.04),0 18px 34px -26px rgba(20,64,44,.55);font:inherit;color:inherit;transition:transform .2s ease,box-shadow .2s ease}
-.wm-flavor-open:hover{transform:translateY(-2px)}
-.wm-flavor-open:focus-visible{outline:3px solid #E58A3D;outline-offset:3px}
-.wm-flavor-img{display:block;aspect-ratio:4/3;overflow:hidden;background:#EFE6D6}
-.wm-flavor-img img{display:block;width:100%;height:100%;object-fit:cover}
-.wm-flavor-body{display:flex;flex-direction:column;gap:4px;padding:14px 16px 16px;flex:1}
-.wm-flavor-body b{font:400 21px/1.2 "DM Serif Display",Georgia,serif;color:#14261B}
-.wm-flavor-country{font:500 14px/1.3 Inter,system-ui,sans-serif;color:#4A3F34}
-.wm-flavor-facts{font:500 13px/1.3 Inter,system-ui,sans-serif;color:#6B5232}
-.wm-flavor-btn{margin-top:10px;display:flex;align-items:center;justify-content:center;gap:6px;padding:11px 14px;border-radius:12px;background:#14402c;color:#FFFAF1;font:600 14px/1 Inter,system-ui,sans-serif;box-shadow:inset 0 0 0 1px rgba(201,165,90,.45)}
-.wm-banners{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:8px}
-.wm-banner{position:relative;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);align-items:stretch;min-height:150px;padding:0;text-align:left;cursor:pointer;border-radius:22px;overflow:hidden;border:1px solid rgba(201,165,90,.5);box-shadow:0 0 0 1px rgba(20,64,44,.04),0 18px 34px -26px rgba(20,64,44,.5);font:inherit;color:inherit}
-.wm-banner-scan{background:linear-gradient(120deg,#EEF4EC,#E3EDE0)}
-.wm-banner-kids{background:linear-gradient(120deg,#FBF1E4,#F6E4CF)}
-.wm-banner:focus-visible{outline:3px solid #E58A3D;outline-offset:3px}
-.wm-banner-text{display:flex;flex-direction:column;gap:6px;padding:18px 16px 16px 20px}
-.wm-banner-text b{font:400 21px/1.15 "DM Serif Display",Georgia,serif;color:#14261B}
-.wm-banner-text b i{font-style:normal;color:#E97622}
-.wm-banner-text>span:not(.wm-banner-cta){font:400 14px/1.5 Inter,system-ui,sans-serif;color:#3F362D}
-.wm-banner-cta{display:inline-flex;align-items:center;gap:9px;margin-top:6px;font:700 14px/1 Inter,system-ui,sans-serif;color:#14261B}
-.wm-banner-cta .wm-mix-disc{width:34px;height:34px}
-.wm-banner-cta .wm-mix-disc svg{width:12px;height:12px}
-.wm-banner-cta em{font-style:normal;border-bottom:1px solid rgba(20,38,27,.25);padding-bottom:2px}
-.wm-banner img{width:100%;height:100%;object-fit:cover;display:block}
-@media(max-width:760px){.wm-banners{grid-template-columns:minmax(0,1fr)}}
-@media(min-width:900px){.wm-flavor-card{flex-basis:calc((100% - 28px)/3)}}
-/* Premium BACK: green disc, gold ring — always returns to the landing page */
-nav .wm-back{display:grid;place-items:center;width:44px;height:44px;flex:0 0 44px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#2E7D52,#14402c 70%);box-shadow:0 0 0 2px #C9A55A,0 0 0 4px rgba(201,165,90,.22),0 8px 18px rgba(18,59,43,.28);text-decoration:none;transition:transform .2s ease}
-nav .wm-back svg{width:20px;height:20px;fill:none;stroke:#FFFAF1;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;margin-left:-1px}
-nav .wm-back:hover{transform:scale(1.05)}
-nav .wm-back:focus-visible{outline:3px solid #E58A3D;outline-offset:4px}
-@media(max-width:480px){nav .wm-back{width:40px;height:40px;flex-basis:40px}}
-/* Depth — gentle press, hover lift, embossed passport stamps */
-@media(prefers-reduced-motion:no-preference){
-  .card,.wm-flavor-open,.wm-banner,.view-recipe-btn,.wm-flavor-btn,#advToggleBtn,.wm-back,.bottom-nav .nav-btn,.adv-btn,.fav-btn,.country-badge-card{transition:transform .18s cubic-bezier(.2,.8,.2,1),box-shadow .2s ease!important}
-  .card:active,.wm-flavor-open:active,.wm-banner:active{transform:scale(.985)!important}
-  .view-recipe-btn:active,.wm-flavor-btn:active,.adv-btn:active,.fav-btn:active{transform:scale(.97)!important}
-  #advToggleBtn:active .wm-mix-disc,.wm-banner:active .wm-mix-disc,.wm-back:active{transform:scale(.93)!important}
-  @media(hover:hover){
-    #page-browse .card:hover,.wm-banner:hover{transform:translateY(-3px)!important;box-shadow:0 0 0 1px rgba(20,64,44,.05),0 28px 46px -28px rgba(20,64,44,.55)!important}
-    .country-badge-card:hover{transform:translateY(-2px) rotate(-.6deg)!important}
-  }
-}
-.country-badge-card{border:1.5px dashed rgba(154,122,53,.55)!important;background:radial-gradient(circle at 30% 20%,#FFFDF6,#F7ECD6 75%)!important;box-shadow:inset 0 2px 3px rgba(255,255,255,.9),inset 0 -3px 8px rgba(122,77,23,.12),0 10px 22px -14px rgba(122,77,23,.45)!important}
-.country-badge-flag{filter:drop-shadow(0 1px 0 rgba(255,255,255,.9)) drop-shadow(0 -1px 0 rgba(122,77,23,.25))!important}
-.country-badge-name{font:400 17px/1.2 'DM Serif Display',Georgia,serif!important;color:#14261B!important;text-shadow:0 1px 0 rgba(255,255,255,.85)}
-/* Protein is a minimum: highlight the range of protein you will see (handle up to the top) */
-#proteinSlider::-webkit-slider-runnable-track{background:linear-gradient(to top,var(--wm-track,#E9DED0) 0%,var(--wm-track,#E9DED0) var(--fill),var(--wm-gold,#D4892B) var(--fill),var(--wm-gold-2,#E8A84E) 100%)!important}
-#proteinSlider::-moz-range-track{background:linear-gradient(to top,#E9DED0 var(--fill),#D4892B var(--fill))!important}
-/* Premium screens — same language as Browse (titles, contours, green buttons) */
-.page:not(#page-browse):not(#page-kids) .page-title,.chef-title,.scan-title{font:400 clamp(28px,3.6vw,40px)/1.1 "DM Serif Display",Georgia,serif!important;letter-spacing:-.01em!important;color:#14261B!important}
-.page:not(#page-browse) .page-sub,.chef-sub,.scan-sub{font:400 16px/1.55 Inter,system-ui,sans-serif!important;color:#4A3F34!important}
-.chef-kicker,.scan-kicker{font:600 12px/1.4 Inter,system-ui,sans-serif!important;letter-spacing:.22em!important;text-transform:uppercase!important;color:#6B5232!important}
-.planner-box,.chef-input-card,.scan-card,.chef-hero,.scan-hero,.tour-hero,.grocery-box,.saved-empty{border:1px solid rgba(201,165,90,.55)!important;background:#FFFDF8!important;box-shadow:0 0 0 1px rgba(20,64,44,.04),0 18px 34px -28px rgba(20,64,44,.5)!important}
-.chef-hero,.scan-hero{background:linear-gradient(135deg,#FFFDF8,#F6EEDD)!important}
-.planner-box input,.planner-box select,.chef-input-card textarea,.scan-card textarea,#page-scan textarea{border:1px solid rgba(201,165,90,.55)!important;background:#FFFDF8!important;border-radius:14px!important}
-.planner-box input:focus,.planner-box select:focus,.chef-input-card textarea:focus,#page-scan textarea:focus{outline:none!important;border-color:#14402c!important;box-shadow:0 0 0 3px rgba(201,165,90,.3)!important}
-.planner-box label,.chef-input-label{color:#6B5232!important;letter-spacing:.14em!important}
-.btn-chef,.scan-btn.primary,#page-planner .btn-recipe,.btn-cook,#recipeBtn,.grocery-action.primary,.saved-empty button,.saved-empty a{background:#14402c!important;color:#FFFAF1!important;border:1px solid #14402c!important;box-shadow:inset 0 0 0 1px rgba(201,165,90,.45),0 12px 24px -14px rgba(20,64,44,.55)!important;background-image:none!important}
-.btn-chef:hover,.scan-btn.primary:hover,#page-planner .btn-recipe:hover,.btn-cook:hover,#recipeBtn:hover{background:#1E5B2C!important}
-.btn-plan,.scan-btn.secondary,.btn-plan-secondary,.grocery-action:not(.primary){background:#FFFDF8!important;color:#14402c!important;border:1px solid rgba(201,165,90,.55)!important}
-.modal-name{font:400 30px/1.15 "DM Serif Display",Georgia,serif!important;letter-spacing:0!important;color:#14261B!important}
-.tour-bar{background:linear-gradient(90deg,#1E5B2C,#C9A55A)!important}
-.tour-badges-title{font:400 22px/1.2 "DM Serif Display",Georgia,serif!important;letter-spacing:0!important;color:#14261B!important}
-.tour-badges-sub{font-size:14px!important;color:#4A3F34!important}
-.tour-num{font-family:"DM Serif Display",Georgia,serif!important;font-weight:400!important;color:#14261B!important}
-#page-scan .scan-mode-btn.active,#page-scan [aria-pressed="true"].scan-tab{background:#14402c!important}
-/* Collapsed mixer: one compact row */
-.adv-filters:has(.adv-body.collapsed){padding-top:14px!important;padding-bottom:14px!important}
-.adv-filters:has(.adv-body.collapsed) .adv-filters-head{margin-bottom:0!important}
-.adv-filters:has(.adv-body.collapsed) .adv-filters-head::before{display:none!important}
-.adv-filters:has(.adv-body.collapsed) .wm-mix-label::after{content:" · Calories, budget, time, spice, protein";font-weight:500;color:#6B5A48;border:0}
-@media(max-width:620px){.adv-filters:has(.adv-body.collapsed) .wm-mix-label::after{content:""}}
-/* Meal mixer header */
-.adv-filters-head::before{content:"Meal mixer"!important;font:400 20px/1.2 "DM Serif Display",Georgia,serif!important;color:#14261B!important;letter-spacing:0!important}
-#advToggleBtn.wm-mix-btn{display:inline-flex!important;align-items:center;gap:10px;background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;color:#14261B!important;font:700 15px/1 Inter,system-ui,sans-serif!important;cursor:pointer}
-.wm-mix-disc{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#2E7D52,#14402c 70%);box-shadow:0 0 0 2px #C9A55A,0 0 0 4px rgba(201,165,90,.25),0 8px 18px rgba(18,59,43,.3);transition:transform .2s ease}
-.wm-mix-disc svg{width:15px;height:15px;fill:#FFFAF1;margin-left:2px}
-#advToggleBtn.is-open .wm-mix-disc svg{transform:rotate(90deg)}
-#advToggleBtn:hover .wm-mix-disc{transform:scale(1.06)}
-.wm-mix-label{border-bottom:1px solid rgba(20,38,27,.25);padding-bottom:3px}
-#advToggleBtn:focus-visible{outline:3px solid #E58A3D;outline-offset:4px;border-radius:999px}
-/* Honest cards: no star ratings until real people rate dishes */
-.card-rating{display:none!important}
-.card-name{font:400 20px/1.2 "DM Serif Display",Georgia,serif!important;letter-spacing:0!important;color:#14261B!important}
-.view-recipe-btn{background:#14402c!important;color:#FFFAF1!important;border:1px solid #14402c!important;box-shadow:inset 0 0 0 1px rgba(201,165,90,.45)!important;font-weight:600!important}
-.view-recipe-btn::after{content:" →"}
-.view-recipe-btn:hover{background:#1E5B2C!important;border-color:#1E5B2C!important}
-/* Bottom menu stays clean cream over food photos */
-.bottom-nav{background:rgba(255,250,241,.86)!important;-webkit-backdrop-filter:blur(18px) saturate(120%)!important;backdrop-filter:blur(18px) saturate(120%)!important;border:1px solid rgba(255,255,255,.45)!important;box-shadow:0 12px 30px rgba(43,31,20,.10),inset 0 1px 0 rgba(255,255,255,.55)!important}
-.bottom-nav .nav-btn .lb{text-shadow:0 0 6px rgba(255,250,241,.95),0 0 2px rgba(255,250,241,.9)}
-.bottom-nav .nav-btn .ic{filter:drop-shadow(0 0 5px rgba(255,250,241,.85))}
-#page-browse{padding-bottom:calc(120px + env(safe-area-inset-bottom))!important}
-</style>
+
 <script>
 /* WORLDMEALS HOME — "A world of flavor" row; hidden while searching or filtering */
 (function(){
