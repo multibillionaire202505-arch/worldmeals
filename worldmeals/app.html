@@ -2016,7 +2016,7 @@ html.wm-unlocking .wm-upgrade-progress{display:grid}
         <div class="mixer-label">💪 Protein</div>
         <div class="mixer-pill" id="proteinPill">Any protein</div>
         <div class="mixer-track-wrap">
-          <div class="mixer-ticks"><span>High (30g+)</span><span>Medium (15-30g)</span><span>Low (5-15g)</span><span>Very Low (0-5g)</span></div>
+          <div class="mixer-ticks"><span>40g+</span><span>30g+</span><span>20g+</span><span>10g+</span><span>Any</span></div>
           <input class="mixer-fader" type="range" id="proteinSlider" min="0" max="40" step="5" value="0" oninput="onProteinSlider(this.value)">
         </div>
       </div>
@@ -2064,7 +2064,7 @@ html.wm-unlocking .wm-upgrade-progress{display:grid}
 
 <!-- PLANNER -->
 <div class="page" id="page-planner">
-  <div class="page-title">💰 Smart Weekly Planner</div>
+  <div class="page-title">Smart Weekly Planner</div>
   <div class="page-sub">Enter your budget and WorldMeals will build your week automatically.</div>
 
   <div class="planner-box">
@@ -2127,14 +2127,14 @@ html.wm-unlocking .wm-upgrade-progress{display:grid}
 
 <!-- TOUR -->
 <div class="page" id="page-tour">
-  <div class="page-title">🏆 World Tour Challenge</div>
+  <div class="page-title">World Tour Challenge</div>
   <div class="page-sub">Cook a dish from every country. Conquer the culinary world.</div>
   <div class="tour-hero">
     <div style="display:flex;justify-content:space-between;align-items:flex-end">
       <div><div class="tour-num" id="tourNum">0<span style="font-size:14px;font-weight:400;color:#888">/16</span></div><div style="font-size:12px;color:#888">countries conquered</div></div>
       <div style="font-size:32px;font-weight:700;color:#888" id="tourPct">0%</div>
     </div>
-    <div class="tour-bar-bg"><div class="tour-bar" id="tourBar" style="width:0%;background:#3B82F6"></div></div>
+    <div class="tour-bar-bg"><div class="tour-bar" id="tourBar" style="width:0%"></div></div>
     <div style="font-size:11px;color:#666;margin-top:4px" id="tourMsg">Cook your first dish to start! 🌍</div>
   </div>
   <div id="tourList"></div>
@@ -2143,7 +2143,7 @@ html.wm-unlocking .wm-upgrade-progress{display:grid}
 <!-- CHEF -->
 <div class="page" id="page-chef">
   <div class="chef-hero chef-hero-premium">
-    <div class="chef-kicker">🤖 WORLDMEALS CHEF AI</div>
+    <div class="chef-kicker">WorldMeals Chef AI</div>
     <div class="chef-title">What can we cook today?</div>
     <div class="chef-sub">Type ingredients you already have. WorldMeals will match real dishes first, then Chef AI can generate a custom cooking plan.</div>
   </div>
@@ -2166,7 +2166,7 @@ html.wm-unlocking .wm-upgrade-progress{display:grid}
 <!-- FRIDGE SCAN -->
 <div class="page" id="page-scan">
   <div class="scan-hero">
-    <div class="scan-kicker">📷 FRIDGE SCAN</div>
+    <div class="scan-kicker">Fridge Scan</div>
     <div class="scan-title">Use what you already have</div>
     <div class="scan-sub">Take or upload a fridge photo, confirm the ingredients, then WorldMeals will find meals and help reduce food waste.</div>
   </div>
@@ -2203,7 +2203,7 @@ html.wm-unlocking .wm-upgrade-progress{display:grid}
 
 <!-- SAVED -->
 <div class="page" id="page-saved">
-  <div class="page-title">❤️ Saved Dishes</div>
+  <div class="page-title">Saved Dishes</div>
   <div class="page-sub">Your personal world cookbook</div>
   <div id="savedContent"></div>
 </div>
@@ -4368,6 +4368,32 @@ Schema:
   btn.textContent="✨ Find meals I can cook";
 }
 
+/* WORLDMEALS PLANNER — dinner-worthy dishes + real variety */
+const WM_NOT_DINNER=/\b(cakes?|pudding|ice cream|gelato|cookies?|brownies?|torte|strudel|pastry|pastries|tarts?|flan|churros|baklava|waffles?|pancakes?|crepes|doughnuts?|donuts?|biscuits?|fudge|pavlova|lamington|brigadeiro|profiteroles|meringue|sorbet|smoothie|horchata|agua de|lassi|champurrado|dessert)\b/i;
+function wmIsDinner(m,diet){
+  const name=String(m.name||"");
+  if((m.tags||[]).includes("smoothie")) return false;
+  if(WM_NOT_DINNER.test(name)&&!/\b(fish|crab|salmon|rice|potato) cakes?\b|chicken and waffles/i.test(name)) return false;
+  if(/\bdessert\b/i.test(m.desc||"")) return false;
+  const minProtein=(diet==="vegan"||diet==="vegan-option")?8:12;
+  return mealProtein(m)>=minProtein && (Number(m.cal)||0)>=350;
+}
+function wmMainProtein(m){
+  const t=(String(m.name||"")+" "+(m.ingredients||[]).join(" ")).toLowerCase();
+  if(/chicken|duck|turkey|poultry/.test(t)) return "poultry";
+  if(/beef|steak|brisket|veal|oxtail/.test(t)) return "beef";
+  if(/pork|bacon|ham\b|sausage|chorizo|lechon/.test(t)) return "pork";
+  if(/lamb|goat|mutton/.test(t)) return "lamb";
+  if(/shrimp|prawn|crab|lobster|mussel|clam|squid|octopus|calamari|scallop|conch/.test(t)) return "seafood";
+  if(/fish|salmon|tuna|cod|tilapia|mackerel|sardine|snapper|halibut|trout|anchov|catfish|barramundi|hilsa/.test(t)) return "fish";
+  return "veg";
+}
+function wmMealFamily(m){
+  const n=String(m.name||"");
+  if(/protein bowl/i.test(n)) return "protein-bowl";
+  if(/weight[- ]loss/i.test(n)) return "weight-loss-bowl";
+  return "";
+}
 function generateSmartPlan(){
   const budget = Number(document.getElementById("weeklyBudget")?.value || 0);
   const people = Math.max(1,Number(document.getElementById("peopleCount")?.value || 1));
@@ -4386,11 +4412,12 @@ function generateSmartPlan(){
     if(diet!=="all" && !(m.tags||[]).includes(diet)) return false;
     if(Number(m.spice||0)>maxSpice) return false;
     if(goal==="high-protein" && mealProtein(m)<20) return false;
+    if(!wmIsDinner(m,diet)) return false;
     return Number(m.budget||0)*people<=budget;
   });
 
   if(pool.length<7){
-    pool=MEALS.filter(m=>Number(m.spice||0)<=maxSpice && (goal!=="high-protein" || mealProtein(m)>=20));
+    pool=MEALS.filter(m=>Number(m.spice||0)<=maxSpice && (goal!=="high-protein" || mealProtein(m)>=20) && wmIsDinner(m,diet));
   }
 
   const cheapestSeven=[...pool]
@@ -4405,14 +4432,17 @@ function generateSmartPlan(){
 
   const targetUse=goal==="budget" ? Math.min(budget,minimumCost) : budget*0.88;
   const targetPerMeal=targetUse/7;
-  const selected=[];
-  const usedCountries=new Set();
-  const usedRegions=new Map();
+  let selected=[];
+  let usedCountries=new Set();
+  let usedRegions=new Map();
+  let usedProteins=new Map();
+  let usedFamilies=new Set();
   let total=0;
-
+  for(const strict of [true,false]){
+  selected=[];usedCountries=new Set();usedRegions=new Map();usedProteins=new Map();usedFamilies=new Set();total=0;
   for(let slot=0;slot<7;slot++){
     const remainingSlots=7-slot-1;
-    const candidates=pool.filter(m=>!selected.some(x=>x.id===m.id));
+    const candidates=pool.filter(m=>!selected.some(x=>x.id===m.id||x.name===m.name));
     let best=null;
     let bestScore=-Infinity;
 
@@ -4424,6 +4454,9 @@ function generateSmartPlan(){
       const cheapestRest=remainingPool.slice(0,remainingSlots).reduce((s,v)=>s+v,0);
       if(total+cost+cheapestRest>budget) continue;
 
+      const pKey=wmMainProtein(meal),fam=wmMealFamily(meal),pCount=usedProteins.get(pKey)||0;
+      if(strict && (pCount>=2 || (fam && usedFamilies.has(fam)))) continue;
+      const varietyScore=-pCount*14-(fam&&usedFamilies.has(fam)?30:0);
       const regionCount=usedRegions.get(meal.region)||0;
       const countryBonus=usedCountries.has(meal.country)?-24:18;
       const regionBonus=regionCount===0?10:regionCount===1?2:-8;
@@ -4432,7 +4465,7 @@ function generateSmartPlan(){
       const budgetScore=goal==="budget"?-(cost*5):0;
       const calorieBalance=goal==="balanced"?-Math.abs((Number(meal.cal)||500)-550)/45:0;
       const seededTie=((Number(meal.id)||0)*31 + Math.round(budget)*17 + people*13 + slot*7)%19/100;
-      const score=countryBonus+regionBonus+costCloseness+proteinScore+budgetScore+calorieBalance+seededTie;
+      const score=countryBonus+regionBonus+costCloseness+proteinScore+budgetScore+calorieBalance+seededTie+varietyScore;
 
       if(score>bestScore){bestScore=score;best=meal;}
     }
@@ -4441,7 +4474,11 @@ function generateSmartPlan(){
     selected.push(best);
     usedCountries.add(best.country);
     usedRegions.set(best.region,(usedRegions.get(best.region)||0)+1);
+    usedProteins.set(wmMainProtein(best),(usedProteins.get(wmMainProtein(best))||0)+1);
+    if(wmMealFamily(best)) usedFamilies.add(wmMealFamily(best));
     total+=(Number(best.budget)||0)*people;
+  }
+  if(selected.length===7) break;
   }
 
   if(selected.length<7){
@@ -4458,8 +4495,15 @@ function generateSmartPlan(){
         const current=selected[i];
         const currentCost=(Number(current.budget)||0)*people;
         const alternatives=pool
-          .filter(m=>!selected.some((x,index)=>index!==i && x.id===m.id))
+          .filter(m=>!selected.some((x,index)=>index!==i && (x.id===m.id||x.name===m.name)))
           .filter(m=>usedCountries.has(m.country) ? m.country===current.country : true)
+          .filter(m=>{
+            const others=selected.filter((x,index)=>index!==i);
+            const pk=wmMainProtein(m),fam=wmMealFamily(m);
+            if(others.filter(x=>wmMainProtein(x)===pk).length>=2) return false;
+            if(fam && others.some(x=>wmMealFamily(x)===fam)) return false;
+            return true;
+          })
           .map(m=>({meal:m,cost:(Number(m.budget)||0)*people}))
           .filter(x=>x.cost>currentCost && total-currentCost+x.cost<=budget)
           .sort((a,b)=>{
@@ -4524,6 +4568,12 @@ function groceryKey(item){
 
 function ingredientCategory(item){
   const x=String(item||"").toLowerCase();
+  if(/black pepper|white pepper|peppercorn/.test(x)) return "🧂 Herbs & Spices";
+  if(/peanut butter|\boil\b|cornmeal|\bmeal\b|flour|vinegar|stock|broth|bouillon|attiéké|attieke|\bpap\b|fufu|garri|semolina|couscous|bulgur|quinoa|oats|masa/.test(x)) return "🌾 Pantry";
+  if(/halloumi|queso|paneer|ricotta|crema|datshi|labneh|kefir|sour cream|cottage cheese|cream cheese/.test(x)) return "🥛 Dairy & Eggs";
+  if(/\bmint\b|\bdill\b|celery|chives|scallion|spring onion|leek/.test(x)) return "🥬 Produce";
+  if(/\bham\b|prosciutto|salami|pancetta|chorizo/.test(x)) return "🥩 Meat & Seafood";
+  if(/baguette|vermicelli|ketchup|mayonnaise|mustard|breadcrumbs|crackers/.test(x)) return "🌾 Pantry";
   if(/chicken|beef|lamb|pork|turkey|fish|salmon|tuna|shrimp|cod|duck|veal|sausage|bacon|seafood|mussel|prawn|pork belly|ground/.test(x)) return "🥩 Meat & Seafood";
   if(/milk|cream|butter|cheese|parmesan|pecorino|mozzarella|yogurt|egg|mascarpone|feta|cheddar|ghee/.test(x)) return "🥛 Dairy & Eggs";
   if(/tomato|onion|garlic|ginger|spinach|pepper|cucumber|carrot|eggplant|zucchini|mushroom|cabbage|lettuce|lemon|lime|avocado|basil|cilantro|parsley|scallion|potato|sweet potato|broccoli|cauliflower|corn|herb|daikon|coconut|mango|pineapple|beet|olive|beansprout|bean sprout/.test(x)) return "🥬 Produce";
@@ -5794,6 +5844,27 @@ nav .wm-back:focus-visible{outline:3px solid #E58A3D;outline-offset:4px}
 .country-badge-card{border:1.5px dashed rgba(154,122,53,.55)!important;background:radial-gradient(circle at 30% 20%,#FFFDF6,#F7ECD6 75%)!important;box-shadow:inset 0 2px 3px rgba(255,255,255,.9),inset 0 -3px 8px rgba(122,77,23,.12),0 10px 22px -14px rgba(122,77,23,.45)!important}
 .country-badge-flag{filter:drop-shadow(0 1px 0 rgba(255,255,255,.9)) drop-shadow(0 -1px 0 rgba(122,77,23,.25))!important}
 .country-badge-name{font:400 17px/1.2 'DM Serif Display',Georgia,serif!important;color:#14261B!important;text-shadow:0 1px 0 rgba(255,255,255,.85)}
+/* Protein is a minimum: highlight the range of protein you will see (handle up to the top) */
+#proteinSlider::-webkit-slider-runnable-track{background:linear-gradient(to top,var(--wm-track,#E9DED0) 0%,var(--wm-track,#E9DED0) var(--fill),var(--wm-gold,#D4892B) var(--fill),var(--wm-gold-2,#E8A84E) 100%)!important}
+#proteinSlider::-moz-range-track{background:linear-gradient(to top,#E9DED0 var(--fill),#D4892B var(--fill))!important}
+/* Premium screens — same language as Browse (titles, contours, green buttons) */
+.page:not(#page-browse):not(#page-kids) .page-title,.chef-title,.scan-title{font:400 clamp(28px,3.6vw,40px)/1.1 "DM Serif Display",Georgia,serif!important;letter-spacing:-.01em!important;color:#14261B!important}
+.page:not(#page-browse) .page-sub,.chef-sub,.scan-sub{font:400 16px/1.55 Inter,system-ui,sans-serif!important;color:#4A3F34!important}
+.chef-kicker,.scan-kicker{font:600 12px/1.4 Inter,system-ui,sans-serif!important;letter-spacing:.22em!important;text-transform:uppercase!important;color:#6B5232!important}
+.planner-box,.chef-input-card,.scan-card,.chef-hero,.scan-hero,.tour-hero,.grocery-box,.saved-empty{border:1px solid rgba(201,165,90,.55)!important;background:#FFFDF8!important;box-shadow:0 0 0 1px rgba(20,64,44,.04),0 18px 34px -28px rgba(20,64,44,.5)!important}
+.chef-hero,.scan-hero{background:linear-gradient(135deg,#FFFDF8,#F6EEDD)!important}
+.planner-box input,.planner-box select,.chef-input-card textarea,.scan-card textarea,#page-scan textarea{border:1px solid rgba(201,165,90,.55)!important;background:#FFFDF8!important;border-radius:14px!important}
+.planner-box input:focus,.planner-box select:focus,.chef-input-card textarea:focus,#page-scan textarea:focus{outline:none!important;border-color:#14402c!important;box-shadow:0 0 0 3px rgba(201,165,90,.3)!important}
+.planner-box label,.chef-input-label{color:#6B5232!important;letter-spacing:.14em!important}
+.btn-chef,.scan-btn.primary,#page-planner .btn-recipe,.btn-cook,#recipeBtn,.grocery-action.primary,.saved-empty button,.saved-empty a{background:#14402c!important;color:#FFFAF1!important;border:1px solid #14402c!important;box-shadow:inset 0 0 0 1px rgba(201,165,90,.45),0 12px 24px -14px rgba(20,64,44,.55)!important;background-image:none!important}
+.btn-chef:hover,.scan-btn.primary:hover,#page-planner .btn-recipe:hover,.btn-cook:hover,#recipeBtn:hover{background:#1E5B2C!important}
+.btn-plan,.scan-btn.secondary,.btn-plan-secondary,.grocery-action:not(.primary){background:#FFFDF8!important;color:#14402c!important;border:1px solid rgba(201,165,90,.55)!important}
+.modal-name{font:400 30px/1.15 "DM Serif Display",Georgia,serif!important;letter-spacing:0!important;color:#14261B!important}
+.tour-bar{background:linear-gradient(90deg,#1E5B2C,#C9A55A)!important}
+.tour-badges-title{font:400 22px/1.2 "DM Serif Display",Georgia,serif!important;letter-spacing:0!important;color:#14261B!important}
+.tour-badges-sub{font-size:14px!important;color:#4A3F34!important}
+.tour-num{font-family:"DM Serif Display",Georgia,serif!important;font-weight:400!important;color:#14261B!important}
+#page-scan .scan-mode-btn.active,#page-scan [aria-pressed="true"].scan-tab{background:#14402c!important}
 /* Collapsed mixer: one compact row */
 .adv-filters:has(.adv-body.collapsed){padding-top:14px!important;padding-bottom:14px!important}
 .adv-filters:has(.adv-body.collapsed) .adv-filters-head{margin-bottom:0!important}
@@ -5842,6 +5913,10 @@ nav .wm-back:focus-visible{outline:3px solid #E58A3D;outline-offset:4px}
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",update);else update();
   setTimeout(update,600);
 })();
+</script>
+<script>
+/* WORLDMEALS FLAGS ON WINDOWS — Windows has no flag emojis; load a tiny flag-only font there */
+(function(){try{if(!/Windows/i.test(navigator.userAgent))return;var st=document.createElement("style");st.textContent="@font-face{font-family:\"Twemoji Country Flags\";unicode-range:U+1F1E6-1F1FF,U+1F3F4,U+E0062-E0063,U+E0065,U+E0067,U+E006C,U+E006E,U+E0073-E0074,U+E0077,U+E007F;src:url(https://cdn.jsdelivr.net/npm/country-flag-emoji-polyfill@0.1.8/dist/TwemojiCountryFlags.woff2) format(\"woff2\");font-display:swap}body,.card-country,.wm-flavor-country,select{font-family:\"Twemoji Country Flags\",Inter,system-ui,sans-serif}";document.head.appendChild(st);}catch(e){}})();
 </script>
 </body>
 </html>
