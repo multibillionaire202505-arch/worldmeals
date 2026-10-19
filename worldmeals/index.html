@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Discover authentic dishes from Countries around the world, plan meals, explore global cuisines, and explore family-friendly dishes with WorldMeals Kids.">
+<meta name="description" content="Global cooking for adults and kids. Discover dishes from around the world, swap ingredients, eat for your goals, plan your week on a budget and shop with a smart grocery list. On iOS, Android and the web.">
 <title>World Meals — Every Dish. Every Country.</title>
 <link rel="manifest" href="/manifest.webmanifest">
 <style>
@@ -2486,7 +2486,7 @@ body{
 .final-cta .wm-stores{justify-content:center;margin-top:22px}
 html.wm-in-app .wm-stores,html.wm-in-app .wm-store-link{display:none!important}
 </style>
-<script>/* hide store buttons when this page is opened inside the iPhone or Android app */(function(){try{var a=window.webkit&&window.webkit.messageHandlers&&window.webkit.messageHandlers.worldMealsIAP,b=false,c=document.referrer.indexOf("android-app://")===0,d=window.matchMedia&&matchMedia("(display-mode: standalone)").matches;if(a||b||c||d)sessionStorage.setItem("wm_in_app2","1");if(sessionStorage.getItem("wm_in_app2")==="1")document.documentElement.classList.add("wm-in-app");}catch(e){}})();</script>
+<script>/* hide store buttons when this page is opened inside the iPhone or Android app */(function(){try{var a=window.webkit&&window.webkit.messageHandlers&&window.webkit.messageHandlers.worldMealsIAP,b=false,c=document.referrer.indexOf("android-app://")===0,d=window.matchMedia&&matchMedia("(display-mode: standalone)").matches;if(a||b||c||d)document.documentElement.classList.add("wm-in-app");}catch(e){}})();</script>
 
 <style id="wm-editorial-corrections">
 /* Isolated entrance styling; original app assets and lower sections retained. */
@@ -2727,7 +2727,7 @@ nav .nav-link:hover::after,nav .nav-link:focus-visible::after{transform:scaleX(1
 .wm-ai .chef-avatar{box-shadow:0 0 0 2px #C9A55A}
 .wm-ai .chef-name{font:400 22px/1.1 "DM Serif Display",Georgia,serif!important;color:#FFFAF1!important}
 .wm-ai .chef-status{display:flex;align-items:center;gap:7px;color:#B7C9BC!important}
-.wm-ai-live{width:7px;height:7px;border-radius:50%;background:#7BD389;box-shadow:0 0 0 3px rgba(123,211,137,.18)}
+.wm-ai-live{width:7px;height:7px;border-radius:50%;background:#C9A55A;box-shadow:0 0 0 3px rgba(201,165,90,.2)}
 .wm-ai .chef-bubble{background:#FFFAF1!important;color:#2E241B!important;border-radius:18px 18px 18px 6px!important;font:400 14.5px/1.55 Inter,system-ui,sans-serif!important}
 .wm-ai .wm-ai-me{background:#2C6A47!important;color:#FFFAF1!important;border-radius:18px 18px 6px 18px!important;margin-left:auto!important;max-width:78%;width:fit-content}
 .wm-ai-typing{display:flex;gap:5px;padding:14px 16px;width:fit-content;border-radius:18px 18px 18px 6px;background:rgba(255,250,241,.12);margin:10px 0}
@@ -2742,6 +2742,7 @@ nav .nav-link:hover::after,nav .nav-link:focus-visible::after{transform:scaleX(1
 .wm-ai-dish small{font:500 12px/1.3 Inter,system-ui,sans-serif;color:#7d7266}
 .wm-ai .chef-input{background:rgba(255,250,241,.08)!important;border:1px solid rgba(255,250,241,.18)!important;color:#B7C9BC!important}
 .wm-ai .chef-button{background:#C9A55A!important;color:#123B2B!important;display:grid!important;place-items:center}
+.wm-ai-try{text-decoration:none;cursor:pointer;transition:border-color .2s ease,background .2s ease}.wm-ai-try:hover{border-color:#C9A55A!important;background:rgba(255,250,241,.14)!important}.wm-ai-try span:first-child{color:#FFFAF1;font-weight:500}
 .wm-ai .chef-button svg{width:18px;height:18px;fill:none;stroke:#123B2B;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 /* chat plays in order when it comes into view */
 .wm-ai.wm-ai-anim .wm-ai-step{opacity:0;transform:translateY(8px)}
@@ -2754,6 +2755,18 @@ nav .nav-link:hover::after,nav .nav-link:focus-visible::after{transform:scaleX(1
 @media(prefers-reduced-motion:reduce){.wm-ai .wm-ai-step{opacity:1!important;transform:none!important;animation:none!important}.wm-ai .wm-ai-typing{display:none}}
 </style>
 <script>
+document.addEventListener("DOMContentLoaded",function(){var h=document.querySelector(".wm-hero2");if(!h)return;var track=h.querySelector(".wm-scr-track"),phone=h.querySelector(".wm-hero2-phone"),dots=[].slice.call(h.querySelectorAll(".wm-sl-dot")),N=dots.length,i=0,timer=null,startT=null,userTook=false,reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;if(!track||!N)return;
+function go(n,user){i=(n+N)%N;track.style.transform="translateX(-"+(i*100/N)+"%)";dots.forEach(function(d,k){d.classList.toggle("on",k===i);d.setAttribute("aria-current",k===i?"true":"false")});if(user)stop();}
+function stop(){userTook=true;if(timer){clearTimeout(timer);timer=null;}if(startT){clearTimeout(startT);startT=null;}}
+function auto(){if(userTook)return;timer=setTimeout(function(){if(userTook){timer=null;return;}if(i<N-1){go(i+1);auto();}else{timer=null;}},3600);}
+h.querySelector(".wm-sl-prev").addEventListener("click",function(){go(i-1,true)});h.querySelector(".wm-sl-next").addEventListener("click",function(){go(i+1,true)});
+dots.forEach(function(d,k){d.addEventListener("click",function(){go(k,true)})});
+var x0=null,w=1,dx=0;phone.addEventListener("pointerdown",function(e){stop();x0=e.clientX;dx=0;w=track.parentNode.getBoundingClientRect().width||1;track.classList.add("wm-dragging");});
+phone.addEventListener("pointermove",function(e){if(x0===null)return;dx=e.clientX-x0;if(Math.abs(dx)>4){track.style.transform="translateX(calc(-"+(i*100/N)+"% + "+dx+"px))";}});
+function end(){if(x0===null)return;track.classList.remove("wm-dragging");var t=dx;x0=null;if(Math.abs(t)>w*.18){go(i+(t<0?1:-1),true);}else{go(i);}}
+phone.addEventListener("pointerup",end);phone.addEventListener("pointercancel",end);phone.addEventListener("pointerleave",end);
+go(0);if(!reduce){var started=false;var start=function(){if(started||userTook)return;started=true;startT=setTimeout(function(){startT=null;auto();},600);};if("IntersectionObserver" in window){new IntersectionObserver(function(es,o){if(es[0].isIntersecting){start();o.disconnect();}},{threshold:.4}).observe(phone);}else start();}
+});
 document.addEventListener("DOMContentLoaded",function(){var sec=document.querySelector(".wm-ai");if(!sec||!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
 sec.classList.add("wm-ai-anim");new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){sec.classList.add("wm-ai-play");o.disconnect();}})},{threshold:.35}).observe(sec.querySelector(".chef-panel"));});
 </script>
@@ -2771,12 +2784,231 @@ sec.classList.add("wm-ai-anim");new IntersectionObserver(function(es,o){es.forEa
 #world-map .map-hint{font:400 12.5px/1.5 Inter,system-ui,sans-serif!important;color:#8a7c6d!important}
 </style>
 <style id="wm-hero-slides">
-/* hero phone: app home screen first, then slides through how the app works */
+/* hero phone: plays through every screen once, stops, then visitors browse by swipe, arrows or dots */
 .wm-hero2-screen{padding-top:9cqw!important}
-.wm-hero2-screen>.wm-scr-track{display:flex;width:600%!important;height:100%;flex:1 1 auto;background:none!important;animation:wmScrSlides 23.4s cubic-bezier(.65,0,.35,1) infinite 1.5s}
-.wm-scr-track img{width:16.6667%;height:100%;object-fit:cover;object-position:top center;display:block;flex:0 0 auto}
-@keyframes wmScrSlides{0.00%,13.68%{transform:translateX(-0.0000%)}16.67%,30.34%{transform:translateX(-16.6667%)}33.33%,47.01%{transform:translateX(-33.3333%)}50.00%,63.68%{transform:translateX(-50.0000%)}66.67%,80.34%{transform:translateX(-66.6667%)}83.33%,97.01%{transform:translateX(-83.3333%)}100%{transform:translateX(0)}}
-@media(prefers-reduced-motion:reduce){.wm-scr-track{animation:none}}
+.wm-hero2-screen>.wm-scr-track{display:flex;width:600%!important;height:100%;flex:1 1 auto;background:none!important;transition:transform .75s cubic-bezier(.65,0,.35,1);will-change:transform}
+.wm-hero2-screen>.wm-scr-track.wm-dragging{transition:none}
+.wm-hero2-screen>.wm-scr-track img{width:16.6667%;height:100%;object-fit:cover;object-position:top center;display:block;flex:0 0 auto;-webkit-user-drag:none;user-select:none}
+.wm-hero2-phone{touch-action:pan-y;cursor:grab}
+.wm-slides-ctl{position:absolute;z-index:5;left:58.7%;bottom:calc(45.5% - 62px);transform:translateX(-50%);display:flex;align-items:center;gap:6px;padding:5px;border-radius:999px;background:none;border:0;box-shadow:none;filter:drop-shadow(0 1px 3px rgba(255,250,241,.9)) drop-shadow(0 0 6px rgba(255,250,241,.6))}
+.wm-slides-ctl>button{width:34px;height:34px;border-radius:50%;border:0;background:none;display:grid;place-items:center;cursor:pointer}
+.wm-slides-ctl>button svg{width:18px;height:18px;fill:none;stroke:#14402c;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.wm-slides-ctl>button:hover{background:rgba(255,255,255,.25)}
+.wm-sl-dots{display:flex;gap:2px}
+.wm-sl-dot{width:22px;height:34px;border:0;background:none;cursor:pointer;display:grid;place-items:center;padding:0}
+.wm-sl-dot::before{content:"";width:7px;height:7px;border-radius:999px;background:rgba(20,64,44,.38);transition:width .3s ease,background .3s ease}
+.wm-sl-dot.on::before{width:18px;background:#14402c}
+.wm-slides-ctl button:focus-visible{outline:3px solid #E58A3D;outline-offset:1px}
+@media(max-width:900px){.wm-hero2 .wm-slides-ctl{left:50%;bottom:16px;transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.wm-hero2-screen>.wm-scr-track{transition:none}}
+</style>
+<style id="wm-price-premium">
+#pricing{background:#FBF7EE!important}
+#pricing .section-eyebrow{font:600 12px/1.4 Inter,system-ui,sans-serif!important;letter-spacing:.22em!important;color:#6B5A48!important}
+.wm-price-title{font:400 clamp(36px,4.2vw,58px)/1.06 "DM Serif Display",Georgia,serif!important;letter-spacing:-.02em!important;color:#14261B!important}
+.wm-price-title em{font-style:normal;color:#1E5B2C}.wm-price-title span{color:#E97622}
+#pricing .pricing-lead{font:400 17px/1.65 Inter,system-ui,sans-serif!important;color:#3F362D!important;max-width:560px;margin-left:auto;margin-right:auto}
+#pricing .billing-toggle{background:#F1E9DA!important;border:1px solid #E6DCC9!important;box-shadow:none!important}
+#pricing .billing-option{font:600 14px Inter,system-ui,sans-serif!important;color:#6B5A48!important}
+#pricing .billing-option.active{background:#14402c!important;color:#FFFAF1!important;box-shadow:0 8px 18px -8px rgba(20,64,44,.5)!important}
+#pricing .billing-option.active .billing-save{color:#E8C77F!important}
+#pricing .price-card{background:#fff!important;border:1px solid #EDE4D3!important;border-radius:26px!important;box-shadow:0 26px 60px -30px rgba(70,40,15,.28)!important}
+#pricing .price-card.featured{background:radial-gradient(ellipse at 80% 0%,rgba(201,165,90,.18),transparent 55%),#123B2B!important;border:1px solid rgba(201,165,90,.55)!important;box-shadow:0 34px 70px -28px rgba(18,59,43,.6)!important}
+#pricing .plan-badge{background:#C9A55A!important;color:#123B2B!important;font:700 11px/1 Inter,system-ui,sans-serif!important;letter-spacing:.18em!important;padding:8px 14px!important;border-radius:999px!important;box-shadow:0 8px 18px -8px rgba(0,0,0,.4)!important}
+#pricing .plan-icon,#pricing .plan-icon.wm-plan-chef{width:64px!important;height:64px!important;border-radius:50%!important;overflow:hidden!important;box-shadow:0 0 0 2px #fff,0 0 0 3px #E6DCC9!important;margin-bottom:18px!important;aspect-ratio:1!important;max-width:64px!important}
+#pricing .featured .plan-icon{box-shadow:0 0 0 2px #123B2B,0 0 0 3.5px #C9A55A!important}
+#pricing .plan-icon img{width:100%!important;height:100%!important;object-fit:cover!important;border-radius:50%!important}
+#pricing .price-name{font:400 30px/1.1 "DM Serif Display",Georgia,serif!important;color:#14261B!important;letter-spacing:-.01em}
+#pricing .featured .price-name{color:#FFFAF1!important}
+#pricing .plan-tagline{font:400 14px/1.5 Inter,system-ui,sans-serif!important;color:#6B5A48!important}
+#pricing .featured .plan-tagline{color:#C9D6CC!important}
+#pricing .price-amount{font:400 48px/1 "DM Serif Display",Georgia,serif!important;letter-spacing:-.01em;color:#14261B!important}
+#pricing .featured .price-amount{color:#FFFAF1!important}
+#pricing .featured .price-period{color:#B7C9BC!important}
+#pricing .plan-saving{background:#F3EBDD!important;color:#7A5A2A!important;font:700 11px/1 Inter,system-ui,sans-serif!important;letter-spacing:.12em!important;border-radius:999px!important}
+#pricing .featured .plan-saving{background:rgba(201,165,90,.2)!important;color:#E8C77F!important}
+#pricing .price-feature{font:400 14px/1.55 Inter,system-ui,sans-serif!important;color:#3F362D!important}
+#pricing .featured .price-feature{color:#E3ECE5!important}
+#pricing .price-feature span{color:#C9A55A!important;font-weight:700}
+#pricing .plan-cta{border-radius:14px!important;font:600 15px/1.25 Inter,system-ui,sans-serif!important;min-height:52px}
+#pricing .plan-cta-featured{background:#C9A55A!important;color:#123B2B!important;border:0!important;box-shadow:0 14px 28px -12px rgba(0,0,0,.5)!important}
+#pricing .plan-cta-featured:hover{background:#D8B66A!important}
+#pricing .price-card:not(.featured) .plan-cta-light{background:#FFFCF6!important;color:#14402c!important;border:1.5px solid #14402c!important;box-shadow:none!important}
+#pricing [data-plan="passport"] .plan-cta-light{background:#14402c!important;color:#FFFAF1!important}
+#pricing .price-card:not(.featured) .plan-cta-light:hover{background:#14402c!important;color:#FFFAF1!important}
+#pricing .plan-disclosure{color:#8a7c6d!important}
+#pricing .featured .plan-disclosure{color:#9FB3A5!important}
+#pricing .pricing-trust{background:none!important;border:0!important;box-shadow:none!important;gap:8px 26px!important}
+#pricing .pricing-trust span{font:500 13px/1.4 Inter,system-ui,sans-serif!important;color:#6B5A48!important;display:inline-flex;align-items:center;gap:8px}
+#pricing .pricing-trust span::before{content:"";width:6px;height:6px;border-radius:50%;background:#C9A55A}
+</style>
+<style id="wm-plan-premium">
+.wm-plan{background:#FFFAF1;padding:104px 24px;border-top:1px solid #EFE5D3}
+.wm-plan-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:center}
+.wm-plan-eyebrow{font:600 12px/1.4 Inter,system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#6B5A48;margin-bottom:14px}
+.wm-plan-title{margin:0;font:400 clamp(36px,4.2vw,58px)/1.06 "DM Serif Display",Georgia,serif;letter-spacing:-.02em;color:#14261B}
+.wm-plan-title em{font-style:normal;color:#1E5B2C}.wm-plan-title span{color:#E97622}
+.wm-plan-sub{margin:20px 0 0;max-width:480px;font:400 17px/1.65 Inter,system-ui,sans-serif;color:#3F362D}
+.wm-plan-points{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-direction:column;gap:11px}
+.wm-plan-points li{position:relative;padding-left:20px;font:500 15px/1.5 Inter,system-ui,sans-serif;color:#3F362D}
+.wm-plan-points li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:50%;background:#C9A55A}
+.wm-plan-steps{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-direction:column;gap:18px;max-width:500px}
+.wm-plan-steps li{display:flex;gap:16px;align-items:flex-start}
+.wm-step-n{flex:0 0 34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#14402c;color:#FFFAF1;font:400 17px/1 "DM Serif Display",Georgia,serif;box-shadow:0 0 0 2px #FFFAF1,0 0 0 3px rgba(201,165,90,.7)}
+.wm-plan-steps strong{display:block;font:400 21px/1.2 "DM Serif Display",Georgia,serif;color:#14261B}
+.wm-plan-steps p{margin:4px 0 0;font:400 15px/1.55 Inter,system-ui,sans-serif;color:#4A3F34}
+.wm-plan-settings{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 16px}
+.wm-plan-settings span{display:flex;flex-direction:column;gap:3px;padding:10px 16px;border-radius:16px;background:#14402c;color:#FFFAF1;font:400 20px/1.1 "DM Serif Display",Georgia,serif;box-shadow:0 0 0 1px rgba(201,165,90,.55)}
+.wm-plan-settings small{font:600 10px/1 Inter,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#C9A55A}
+.wm-wk-cost{margin-left:auto;font:700 13px/1 Inter,system-ui,sans-serif;color:#9A7A35}
+.wm-wk-budget{margin:12px 4px 2px;padding-top:12px;border-top:1px solid #EFE6D6}
+.wm-wk-budget-top{display:flex;justify-content:space-between;align-items:baseline;font:500 13px/1.3 Inter,system-ui,sans-serif;color:#4A3F34;margin-bottom:8px}
+.wm-wk-budget-top b{color:#14261B}.wm-wk-budget-top em{font-style:normal;font-weight:700;color:#1E5B2C;background:#EEF5EC;padding:3px 9px;border-radius:999px}
+.wm-wk-budget-bar{height:8px;border-radius:999px;background:#EFE6D6;overflow:hidden}
+.wm-wk-budget-bar i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#1E5B2C,#C9A55A)}
+.wm-gr-money{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 2px 12px}
+.wm-gr-money div{padding:10px 12px;border-radius:14px;background:#FBF1DF;border:1px solid #EFDDBC}
+.wm-gr-money div.good{background:#EEF5EC;border-color:#D3E6D0}
+.wm-gr-money b{display:block;font:400 22px/1.1 "DM Serif Display",Georgia,serif;color:#14261B}
+.wm-gr-money small{font:600 10px/1.3 Inter,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#7D6E5E}
+.wm-gr-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 2px 0}.wm-gr-actions span{padding:10px 8px;border-radius:12px;border:1px solid #E2D7C4;background:#FFFCF6;text-align:center;font:600 12px/1.2 Inter,system-ui,sans-serif;color:#4B4036}.wm-gr-actions span.on{background:#14402c;border-color:#14402c;color:#FFFAF1}
+.wm-gr-more{margin:10px 4px 0;font:500 12px/1.4 Inter,system-ui,sans-serif;color:#9A8B7A;text-align:center}
+.wm-gr-card{margin-top:0!important}
+.wm-plan-start{margin-top:30px}
+.wm-plan-note{margin:14px 0 0;font:400 13px/1.5 Inter,system-ui,sans-serif;color:#1E5B2C}
+.wm-plan-example{margin:0 0 14px 6px;font:italic 400 17px/1.3 "DM Serif Display",Georgia,serif;color:#6B5A48}
+.wm-plan-example::before{content:"";display:inline-block;width:22px;height:1px;background:#C9A55A;vertical-align:middle;margin-right:10px}
+.wm-plan-cards{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:18px;align-items:start}
+.wm-wk-card,.wm-gr-card{background:#FFFDF8;border:1px solid #EADFCB;border-radius:24px;padding:18px;box-shadow:0 30px 60px -34px rgba(60,40,10,.38)}
+.wm-gr-card{margin-top:34px}
+.wm-card-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin:2px 4px 12px}
+.wm-card-h span{white-space:nowrap;font:400 20px/1.2 "DM Serif Display",Georgia,serif;color:#14261B}
+.wm-card-h small{font:600 10.5px/1.3 Inter,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#9A7A35;white-space:nowrap}
+.wm-wk-list{list-style:none;margin:0;padding:0}
+.wm-wk-list li{display:flex;align-items:center;gap:11px;padding:7px 4px;border-top:1px solid #F3ECDF}
+.wm-wk-list li:first-child{border-top:0}
+.wm-wk-day{flex:0 0 32px;font:700 11px/1 Inter,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#9A8B7A}
+.wm-wk-list img{flex:0 0 40px;width:40px;height:40px;border-radius:12px;object-fit:cover;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+.wm-wk-dish{display:flex;flex-direction:column;min-width:0}
+.wm-wk-dish b{font:600 14px/1.25 Inter,system-ui,sans-serif;color:#14261B}
+.wm-wk-dish i{font:400 12px/1.3 Inter,system-ui,sans-serif;font-style:normal;color:#8A7A69}
+.wm-gr-bar{height:6px;border-radius:999px;background:#EFE6D6;overflow:hidden;margin:0 4px 12px}
+.wm-gr-bar i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#1E5B2C,#C9A55A)}
+.wm-gr-cat{border:1px solid #F0E7D7;border-radius:16px;overflow:hidden;margin-top:9px}
+.wm-gr-cat-h{display:flex;justify-content:space-between;padding:8px 12px;background:#FBF6EC;font:700 12px/1.3 Inter,system-ui,sans-serif;color:#14261B}
+.wm-gr-cat-h span{font-weight:600;color:#9A8B7A}
+.wm-gr-item{display:flex;align-items:flex-start;gap:10px;padding:9px 12px;border-top:1px solid #F3ECDF}
+.wm-gr-box{flex:0 0 18px;height:18px;border-radius:6px;border:1.5px solid #CDBFA8;display:grid;place-items:center;margin-top:1px}
+.wm-gr-item.done .wm-gr-box{background:#1E5B2C;border-color:#1E5B2C}
+.wm-gr-box svg{width:12px;height:12px;fill:none;stroke:#FFFAF1;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.wm-gr-name{flex:1;min-width:0;display:flex;flex-direction:column}
+.wm-gr-name b{font:600 13px/1.3 Inter,system-ui,sans-serif;color:#2B2118}
+.wm-gr-name i{font:400 11.5px/1.4 Inter,system-ui,sans-serif;font-style:normal;color:#8A7A69}
+.wm-gr-item.done b{color:#A0907E;text-decoration:line-through;text-decoration-color:#C9A55A}
+.wm-gr-price{font:700 12px/1.3 Inter,system-ui,sans-serif;color:#9A7A35}
+@media(max-width:1000px){.wm-plan{padding:72px 20px}.wm-plan-inner{grid-template-columns:minmax(0,1fr);gap:40px}}
+@media(max-width:640px){.wm-plan-cards{grid-template-columns:minmax(0,1fr)}.wm-gr-card{margin-top:0}}
+</style>
+<style id="wm-closing-premium">
+/* Promise */
+.wm-promise{padding:112px 24px!important;background:radial-gradient(ellipse at 50% 0%,rgba(201,165,90,.22),transparent 55%),#123B2B!important;text-align:center}
+.wm-promise .v3-kicker{font:600 12px/1.4 Inter,system-ui,sans-serif!important;letter-spacing:.22em!important;color:#C9A55A!important;text-transform:uppercase}
+.wm-promise-title{margin:14px auto 0!important;font:400 clamp(38px,4.6vw,64px)/1.06 "DM Serif Display",Georgia,serif!important;letter-spacing:-.02em!important;color:#FFFAF1!important}
+.wm-promise-title em{font-style:normal!important;color:#E3C88A!important;background:none!important;-webkit-text-fill-color:#E3C88A!important}
+.wm-promise-title span{color:#E97622}
+.wm-promise p{font:400 17px/1.75 Inter,system-ui,sans-serif!important;color:#CBD8CE!important;max-width:680px;margin:22px auto 28px!important}
+.wm-promise .promise-line{font:600 13px/1.4 Inter,system-ui,sans-serif!important;letter-spacing:.04em;color:#FFFAF1!important;gap:14px!important}
+.wm-promise .promise-dot{background:#C9A55A!important;width:5px;height:5px}
+/* Final message */
+.wm-final{background:#FBF7EE!important;padding:104px 24px 96px!important;text-align:center;border-top:1px solid #EFE5D3}
+.wm-final .final-dishes{background:#FFFDF8!important;border:1px solid #EADFCB!important;box-shadow:0 30px 60px -38px rgba(60,40,10,.4)!important}
+.wm-final .final-dishes img,.wm-final .final-dishes img:nth-child(1),.wm-final .final-dishes img:nth-child(6){aspect-ratio:1.18/1!important}
+.wm-final .final-dishes img{border:1px solid rgba(60,40,10,.08)!important;box-shadow:0 10px 22px -12px rgba(60,40,10,.35)!important}
+.wm-final-title{margin:0 auto 18px!important;font:400 clamp(38px,4.8vw,66px)/1.06 "DM Serif Display",Georgia,serif!important;letter-spacing:-.02em!important;color:#14261B!important}
+.wm-final-title em{font-style:normal;color:#1E5B2C}.wm-final-title span{color:#E97622}
+.wm-final p{font:400 17px/1.65 Inter,system-ui,sans-serif!important;color:#3F362D!important;max-width:620px;margin:0 auto 30px!important}
+.wm-final .wm-final-start{margin:0 auto!important}
+.wm-final p.wm-final-fine{font:400 13px/1.5 Inter,system-ui,sans-serif!important;color:#7D6E5E!important;margin:22px auto 0!important}
+.wm-final .wm-stores{margin-top:22px!important}
+/* Footer */
+.wm-footer{background:#F3ECDF!important;border-top:1px solid #E3D7C2;padding:44px 24px 34px!important;display:flex!important;flex-direction:column!important;align-items:center!important;gap:20px!important;text-align:center}
+.wm-footer .footer-brand-image{height:34px!important;max-width:220px!important}
+.wm-footer .footer-links{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;gap:10px 26px!important}
+.wm-footer .footer-link{font:500 14px/1.4 Inter,system-ui,sans-serif!important;color:#3F362D!important;text-decoration:none!important;background:none!important;border:0!important;padding:4px 0!important;cursor:pointer}
+.wm-footer .footer-link:hover{color:#1E5B2C!important;text-decoration:underline!important;text-underline-offset:4px}
+.wm-footer-trust{display:flex!important;align-items:center;gap:12px!important;font:600 12px/1.4 Inter,system-ui,sans-serif!important;letter-spacing:.08em;text-transform:uppercase;color:#6B5A48!important}
+.wm-footer-trust i{width:4px;height:4px;border-radius:50%;background:#C9A55A}
+.wm-footer-copy{margin:0;font:400 12.5px/1.5 Inter,system-ui,sans-serif;color:#8A7A69}
+a:focus-visible,button:focus-visible{outline:3px solid #CF7B28;outline-offset:4px}
+@media(max-width:600px){.wm-promise{padding:80px 20px!important}.wm-final{padding:76px 18px 72px!important}.wm-footer-trust{flex-wrap:wrap;justify-content:center;gap:8px!important;font-size:11px!important}.wm-footer .footer-links{gap:6px 20px!important}}
+</style>
+<style id="wm-goals-cards">
+.wm-goals .wm-goals-inner{grid-template-columns:minmax(0,1fr)!important;gap:40px!important;align-items:start}
+.wm-goals-copy{max-width:720px}
+.wm-goals-fine{margin:10px 0 0;font:400 12.5px/1.5 Inter,system-ui,sans-serif;color:#8A7A69;font-style:italic}
+.wm-goals-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.wm-goal-body h3{font-size:26px!important}
+@media(max-width:1100px){.wm-goals-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.wm-goal-card{background:#FFFDF8;border:1px solid #EADFCB;border-radius:24px;overflow:hidden;box-shadow:0 26px 50px -34px rgba(60,40,10,.4);transition:transform .25s ease,box-shadow .25s ease}
+.wm-goal-card:hover{transform:translateY(-3px);box-shadow:0 32px 60px -34px rgba(60,40,10,.5)}
+.wm-goal-img{aspect-ratio:4/3;overflow:hidden;background:#EFE6D6}
+.wm-goal-img img{display:block;width:100%;height:100%;object-fit:cover}
+.wm-goal-body{padding:22px 24px 26px}
+.wm-goal-body h3{margin:0;font:400 28px/1.15 "DM Serif Display",Georgia,serif;color:#14261B}
+.wm-goal-dish{margin:8px 0 12px;font:600 13.5px/1.4 Inter,system-ui,sans-serif;color:#1E5B2C}
+.wm-goal-dish span{display:block;margin-top:2px;font-weight:500;color:#9A7A35}
+.wm-goal-body p:last-child{margin:0;font:400 14.5px/1.6 Inter,system-ui,sans-serif;color:#5C4E40}
+@media(max-width:640px){.wm-goals-cards{grid-template-columns:minmax(0,1fr);gap:18px}.wm-goal-img{aspect-ratio:16/10}}
+@media(prefers-reduced-motion:reduce){.wm-goal-card{transition:none}.wm-goal-card:hover{transform:none}}
+</style>
+<style id="wm-goals-premium">
+.wm-goals{background:#FBF7EE;padding:104px 24px;border-top:1px solid #EFE5D3}
+.wm-goals-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:64px;align-items:center}
+.wm-goals-eyebrow{font:600 12px/1.4 Inter,system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#6B5A48;margin-bottom:14px}
+.wm-goals-title{margin:0;font:400 clamp(36px,4.2vw,60px)/1.04 "DM Serif Display",Georgia,serif;letter-spacing:-.02em;color:#14261B}
+.wm-goals-title em{font-style:normal;color:#1E5B2C}.wm-goals-title span{color:#E97622}
+.wm-goals-sub{margin:20px 0 0;max-width:470px;font:400 17px/1.65 Inter,system-ui,sans-serif;color:#3F362D}
+.wm-goals-diets{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.wm-goals-diets span{padding:7px 13px;border-radius:999px;border:1px solid #E2D7C4;background:#FFFCF6;font:600 13px/1.2 Inter,system-ui,sans-serif;color:#4B4036}
+.wm-goals-start,.wm-kids-start{margin-top:30px}
+.wm-kids-start{margin-bottom:6px}
+.wm-goals-cta{display:inline-flex;align-items:center;gap:8px;margin-top:30px;padding:15px 26px;border-radius:999px;background:#14402c;color:#FFFAF1;font:600 15px/1 Inter,system-ui,sans-serif;text-decoration:none;box-shadow:0 0 0 1px rgba(201,165,90,.55),0 14px 30px -12px rgba(18,59,43,.55);transition:transform .2s ease,background .2s ease}
+.wm-goals-cta:hover{background:#1E5B2C;transform:translateY(-1px)}
+.wm-goals-cta:focus-visible{outline:3px solid #E58A3D;outline-offset:3px}
+.wm-goals-panel{background:#FFFDF8;border:1px solid #EADFCB;border-radius:26px;padding:10px 26px;box-shadow:0 30px 60px -34px rgba(60,40,10,.35)}
+.wm-goal{display:flex;gap:18px;align-items:flex-start;padding:20px 0;border-bottom:1px solid #F1E8D8}
+.wm-goal:last-child{border-bottom:0}
+.wm-goal-ic{flex:0 0 46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#EEF5EC;box-shadow:inset 0 0 0 1px rgba(201,165,90,.45)}
+.wm-goal-ic svg{width:22px;height:22px;fill:none;stroke:#1E5B2C;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.wm-goal strong{display:block;font:400 22px/1.2 "DM Serif Display",Georgia,serif;color:#14261B}
+.wm-goal p{margin:5px 0 0;font:400 14.5px/1.55 Inter,system-ui,sans-serif;color:#5C4E40}
+.wm-goal-plan .wm-goal-ic{background:#FBF1DF}
+.wm-goal-plan .wm-goal-ic svg{stroke:#9A7A35}
+@media(max-width:900px){.wm-goals{padding:72px 20px}.wm-goals-inner{grid-template-columns:minmax(0,1fr);gap:36px}.wm-goals-panel{padding:4px 20px}.wm-goal{gap:14px;padding:18px 0}.wm-goal strong{font-size:20px}}
+</style>
+<style id="wm-tour-premium">
+.wm-passport-wrap{display:flex;flex-direction:column;gap:14px;min-width:0}
+.wm-passport-note{margin:0 0 0 6px;font:italic 400 17px/1.3 "DM Serif Display",Georgia,serif;color:#6B5A48;letter-spacing:.005em}
+.wm-passport-note::before{content:"";display:inline-block;width:22px;height:1px;background:#C9A55A;vertical-align:middle;margin-right:10px}
+.wm-tour .passport-card{position:relative}
+@media(max-width:850px){.wm-passport-wrap{max-width:560px;width:100%;margin:0 auto}}
+.wm-tour{background:#FFFAF1!important}
+.wm-tour .v3-kicker{font:600 12px/1.4 Inter,system-ui,sans-serif!important;letter-spacing:.22em!important;color:#6B5A48!important;text-transform:uppercase}
+.wm-tour-title{font:400 clamp(36px,4.2vw,60px)/1.04 "DM Serif Display",Georgia,serif!important;letter-spacing:-.02em!important;color:#14261B!important}
+.wm-tour-title em{font-style:normal!important;color:#1E5B2C!important;background:none!important;-webkit-text-fill-color:#1E5B2C!important}
+.wm-tour-title span{color:#E97622}
+.wm-tour .v3-sub{font:400 17px/1.65 Inter,system-ui,sans-serif!important;color:#3F362D!important}
+.wm-tour .passport-card{background:radial-gradient(ellipse at 85% 0%,rgba(201,165,90,.18),transparent 55%),#123B2B!important;border:1px solid rgba(201,165,90,.5)!important;border-radius:26px!important;box-shadow:0 34px 70px -28px rgba(18,59,43,.55)!important}
+.wm-tour .passport-brand{font:400 22px/1.2 "DM Serif Display",Georgia,serif!important;color:#FFFAF1!important;letter-spacing:0!important}
+.wm-tour .passport-id{font:600 10.5px/1.4 Inter,system-ui,sans-serif!important;letter-spacing:.2em!important;color:#C9A55A!important}
+.wm-tour .passport-progress{font:400 54px/1 "DM Serif Display",Georgia,serif!important;color:#FFFAF1!important;letter-spacing:-.01em!important}
+.wm-tour .passport-label{color:#B7C9BC!important;font:500 13px/1.4 Inter,system-ui,sans-serif!important}
+.wm-tour .passport-bar{background:rgba(255,250,241,.14)!important}
+.wm-tour .passport-fill{background:linear-gradient(90deg,#B7D995,#C9A55A)!important}
+.wm-tour .stamp-photo{border:1px solid rgba(201,165,90,.45)!important;border-radius:14px!important}
+.wm-tour .stamp-photo span{font:700 11.5px/1 Inter,system-ui,sans-serif!important;letter-spacing:.14em!important;padding:0 6px 12px!important}
+.wm-tour .stamp-photo span small{display:block;margin-top:5px;font:500 12px/1.25 Inter,system-ui,sans-serif;letter-spacing:0;text-transform:none;color:rgba(255,250,241,.88)}
+.wm-tour .passport-progress{font-size:64px!important}
 </style>
 <style id="wm-strip-icons">
 .wm-editorial-benefits span{display:inline-flex;vertical-align:middle;margin-right:12px}
@@ -2811,7 +3043,7 @@ body[data-daypart="evening"] .wm-hero2 #timeGreeting{border-left-color:#8454ad!i
 <!-- HERO -->
 <section class="wm-hero2" aria-label="WorldMeals">
   <div class="wm-hero2-stage">
-    <div class="wm-hero2-visual"><div class="wm-hero2-scene">
+    <div class="wm-hero2-visual"><div class="wm-slides-ctl" role="group" aria-label="App preview screens"><button type="button" class="wm-sl-prev" aria-label="Previous screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><span class="wm-sl-dots"><button type="button" class="wm-sl-dot" aria-label="Screen 1 of 6"></button><button type="button" class="wm-sl-dot" aria-label="Screen 2 of 6"></button><button type="button" class="wm-sl-dot" aria-label="Screen 3 of 6"></button><button type="button" class="wm-sl-dot" aria-label="Screen 4 of 6"></button><button type="button" class="wm-sl-dot" aria-label="Screen 5 of 6"></button><button type="button" class="wm-sl-dot" aria-label="Screen 6 of 6"></button></span><button type="button" class="wm-sl-next" aria-label="Next screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div><div class="wm-hero2-scene">
     <img class="wm-hero2-photo" src="/images/hero-table.jpg" alt="Butter chicken, sushi rolls, street tacos and naan on a warm stone table" width="1672" height="940" fetchpriority="high" decoding="async">
     <div class="wm-hero2-phone" aria-hidden="true">
       <div class="wm-hero2-frame"><div class="wm-hero2-bezel"><div class="wm-hero2-status"><b>9:41</b><span class="wm-st-ic"><i></i><i></i><i></i><i></i></span></div><div class="wm-hero2-island"></div><div class="wm-hero2-screen"><div class="wm-scr-track"><img src="/images/app-screen-home.jpg" alt="" decoding="async"><img src="/images/app-screen-browse.jpg" alt="" loading="lazy" decoding="async"><img src="/images/app-screen-sushi.jpg" alt="" loading="lazy" decoding="async"><img src="/images/app-screen-sushi-swaps.jpg" alt="" loading="lazy" decoding="async"><img src="/images/app-screen-scan.jpg" alt="" loading="lazy" decoding="async"><img src="/images/app-screen-kids.jpg" alt="" loading="lazy" decoding="async"></div></div></div></div>
@@ -2930,78 +3162,6 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
 @media(prefers-reduced-motion:reduce){.wm-sw-changed{animation:none}}
 </style>
 
-
-<section class="hero-visual reveal" aria-label="WorldMeals food photography">
-  <div class="hero-photo-main">
-    <img id="heroSlide" src="/images/dishes/Pizza-Margherita.jpg" alt="Featured Dish">
-    <div class="photo-label" id="heroLabel">🌍 Discover the World</div>
-  </div>
-  <div class="hero-photo-stack">
-    <div class="hero-photo-small">
-      <img id="sideImageOne" src="/images/dishes/Sushi.jpg" alt="Sushi">
-      <div class="photo-label" id="sideLabelOne">🇯🇵 Sushi · Japan</div>
-    </div>
-    <div class="hero-photo-small">
-      <img id="sideImageTwo" src="/images/dishes/Tacos-al-Pastor.jpg" alt="Tacos al Pastor">
-      <div class="photo-label" id="sideLabelTwo">🇲🇽 Tacos al Pastor · Mexico</div>
-    </div>
-  </div>
-</section>
-
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <div class="marquee-item">🌍 Cuisines from around the world</div>
-    <div class="marquee-item">🍽️ 1000+ authentic dishes</div>
-    <div class="marquee-item">🤖 AI-powered cooking</div>
-    <div class="marquee-item">📸 Beautiful dish previews</div>
-    <div class="marquee-item">❤️ Connecting people through food</div>
-    <div class="marquee-item">🇺🇸 Built in America</div>
-    <div class="marquee-item">🌍 Cuisines from around the world</div>
-    <div class="marquee-item">🍽️ 1000+ authentic dishes</div>
-    <div class="marquee-item">🤖 AI-powered cooking</div>
-    <div class="marquee-item">📸 Beautiful dish previews</div>
-    <div class="marquee-item">❤️ Connecting people through food</div>
-    <div class="marquee-item">🇺🇸 Built in America</div>
-  </div>
-</div>
-
-<!-- PERSONAS -->
-<section class="personas reveal">
-  <div class="personas-label">Built for every kind of cook</div>
-  <div class="personas-row">
-    <div class="persona">
-      <div class="persona-photo"><img src="/images/busy-professional.jpg" alt="Busy professional planning meals while working"></div>
-      <div class="persona-name">The Busy Professional</div>
-      <div class="persona-desc">Plan your whole week in 5 minutes. Know exactly what it costs before you shop.</div>
-    </div>
-    <div class="persona">
-      <div class="persona-photo"><img src="/images/food-adventurer.jpg" alt="Colorful table featuring dishes from around the world"></div>
-      <div class="persona-name">The Food Adventurer</div>
-      <div class="persona-desc">Cook a dish from a new country every week. Earn your World Tour badge.</div>
-    </div>
-    <div class="persona">
-      <div class="persona-photo"><img src="/images/health-conscious-cook.jpg" alt="Healthy salmon, quinoa, vegetables and fresh ingredients"></div>
-      <div class="persona-name">The Health-Conscious Cook</div>
-      <div class="persona-desc">Filter by calories, macros, and diet. Get global cuisine that fits your goals.</div>
-    </div>
-  </div>
-</section>
-
-
-<section class="story-strip">
-  <div class="story-copy reveal">
-    <div class="section-eyebrow">More than recipes</div>
-    <div class="section-title">A world of culture,<br><em>served beautifully.</em></div>
-    <div class="section-sub">Every dish carries a story, a place, and a tradition. WorldMeals helps people discover those stories through authentic food, smart cooking tools, and a premium experience designed for everyone.</div>
-  </div>
-  <div class="story-photo reveal reveal-delay-1">
-    <img src="/images/dishes/Jollof-Rice.jpg" alt="Jollof Rice">
-    <div class="story-badge">
-      <strong>One world. Many cultures. One table.</strong>
-      <span>Explore authentic dishes and connect with people through the food they love.</span>
-    </div>
-  </div>
-</section>
 
 <!-- APP PREVIEW -->
 <section class="preview reveal wm-pocket" id="how">
@@ -3137,53 +3297,68 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
   </div>
 </section>
 
-<!-- FEATURES -->
-<section class="features reveal" id="features">
-  <div class="features-inner">
-    <div class="section-eyebrow">Everything included</div>
-    <div class="section-title">Thoughtful tools for<br/>a better cooking experience</div>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-photo"><img src="/images/smart-substitution-engine.jpg" alt="Smart ingredient substitutions arranged with fresh foods"></div>
-        <div class="feature-title">Smart Substitution Engine</div>
-        <div class="feature-desc">Scared of spicy food? Can't do dairy? We swap every ingredient in any dish to match your needs — without losing the authentic flavor.</div>
-        <span class="feature-badge" style="background:#FEF3C7;color:#92400E">Authentic flavor preserved</span>
+<!-- DIET GOALS -->
+<section class="wm-goals" id="goals" aria-labelledby="wmGoalsTitle">
+  <div class="wm-goals-inner">
+    <div class="wm-goals-copy">
+      <div class="wm-goals-eyebrow">Diet goals</div>
+      <h2 class="wm-goals-title" id="wmGoalsTitle">Eat for your <em>goals</em><span>.</span></h2>
+      <p class="wm-goals-sub">Choose a goal and WorldMeals shows dishes from every cuisine that fit it. Calories and protein are on every recipe, so you always know what you're eating.</p>
+      <p class="wm-goals-fine">Examples from WorldMeals. Calories and protein are estimates per serving.</p>
+      <div class="wm-goals-diets" aria-label="Dietary preferences">
+        <span>Dairy-free</span><span>Gluten-free</span><span>Vegan</span><span>20g+ · 30g+ · 40g+ protein</span>
       </div>
-      <div class="feature-card">
-        <div class="feature-photo"><img src="/images/chef-ai.jpg" alt="Home cook using Chef AI while preparing a meal"></div>
-        <div class="feature-title">AI Chef</div>
-        <div class="feature-desc">Get personalized cooking guidance, ingredient substitutions, and recipe ideas based on what you already have at home.</div>
-        <span class="feature-badge" style="background:#EEEDFE;color:#3C3489">AI-powered guidance</span>
-      </div>
-      <div class="feature-card">
-        <div class="feature-photo"><img src="/images/world-map-explorer.jpg" alt="Exploring world cuisines with an interactive food map"></div>
-        <div class="feature-title">World Map Explorer</div>
-        <div class="feature-desc">Tap a featured country on the map and instantly see its dishes, flavor profiles, and cultural stories. Explore food like a traveler, not a searcher.</div>
-        <span class="feature-badge" style="background:#E1F5EE;color:#085041">Countries around the world</span>
-      </div>
-      <div class="feature-card">
-        <div class="feature-photo"><img src="/images/weekly-meal-planner.jpg" alt="Weekly meal planning with prepared meals and a tablet"></div>
-        <div class="feature-title">Weekly Meal Planner</div>
-        <div class="feature-desc">Plan your entire week of world meals in minutes. See the total calories and budget before you shop. No guessing. No waste.</div>
-        <span class="feature-badge" style="background:#E6F1FB;color:#0C447C">Budget tracking built in</span>
-      </div>
-      <div class="feature-card">
-        <div class="feature-photo"><img src="/images/world-tour-challenge.jpg" alt="World food tour challenge with dishes and travel objects"></div>
-        <div class="feature-title">World Tour Challenge</div>
-        <div class="feature-desc">Cook dishes from around the world and grow your journey as a global chef. Track your progress, collect badges, and share your tour with the world.</div>
-        <span class="feature-badge" style="background:#FAEEDA;color:#633806">Countries around the world to conquer</span>
-      </div>
-      <div class="feature-card">
-        <div class="feature-photo"><img src="/images/budget-calorie-filters.jpg" alt="Budget and calorie meal planning with fresh ingredients"></div>
-        <div class="feature-title">Budget & Calorie Filters</div>
-        <div class="feature-desc">Search by budget, calories, and dietary preferences. Set your limits, discover what fits, and cook with confidence.</div>
-        <span class="feature-badge" style="background:#DCFCE7;color:#166534">Budget-friendly discovery</span>
-      </div>
+      <a class="v3-cta wm-tour-start wm-goals-start" href="app.html"><span class="wm-start-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><span>Find meals for my goal →</span></a>
+    </div>
+    <div class="wm-goals-cards">
+      <article class="wm-goal-card "><div class="wm-goal-img"><img src="/images/dishes/Salade-Nicoise.jpg" alt="Salade Niçoise with tuna, eggs, green beans and olives" width="800" height="600" loading="lazy" decoding="async"></div><div class="wm-goal-body"><h3>Lose weight</h3><p class="wm-goal-dish">Salade Niçoise <span>480 kcal · 30g protein</span></p><p>Lighter dishes up to 550 calories, with enough protein to keep you full.</p></div></article>
+      <article class="wm-goal-card "><div class="wm-goal-img"><img src="/images/dishes/Lasagna.jpg" alt="Baked lasagna with melted cheese" width="800" height="600" loading="lazy" decoding="async"></div><div class="wm-goal-body"><h3>Gain weight</h3><p class="wm-goal-dish">Lasagna <span>720 kcal · 38g protein</span></p><p>Hearty, energy-rich dishes that bring calories and protein together.</p></div></article>
+      <article class="wm-goal-card "><div class="wm-goal-img"><img src="/images/dishes/Chimichurri-Steak.jpg" alt="Sliced steak with chimichurri sauce" width="800" height="600" loading="lazy" decoding="async"></div><div class="wm-goal-body"><h3>Build muscle</h3><p class="wm-goal-dish">Chimichurri Steak <span>680 kcal · 48g protein</span></p><p>Dishes with 25g+ protein per serving, in a practical calorie range.</p></div></article>
+      <article class="wm-goal-card wm-goal-smoothie"><div class="wm-goal-img"><img src="/images/dishes/Mexican-Chocolate-Banana-Protein-Smoothie.jpg" alt="Chocolate banana protein smoothie topped with banana slices" width="800" height="600" loading="lazy" decoding="async"></div><div class="wm-goal-body"><h3>Smoothies, too</h3><p class="wm-goal-dish">Mexican Chocolate Banana Protein Smoothie <span>340 kcal · 30g protein</span></p><p>A quick option that fits two goals: lose weight and build muscle.</p></div></article>
     </div>
   </div>
 </section>
 
 
+<!-- WEEKLY PLANNER + BUDGET + SMART GROCERY -->
+<section class="wm-plan" id="planner" aria-labelledby="wmPlanTitle">
+  <div class="wm-plan-inner">
+    <div class="wm-plan-copy">
+      <div class="wm-plan-eyebrow">Weekly planner · Budget · Smart Grocery</div>
+      <h2 class="wm-plan-title" id="wmPlanTitle">Plan your week<span>.</span><br><em>Stay on budget</em><span>.</span></h2>
+      <p class="wm-plan-sub">Tell WorldMeals what you want to spend, and it plans seven dinners that fit, then turns it into a Smart Grocery list for the whole week.</p>
+      <ol class="wm-plan-steps">
+        <li><span class="wm-step-n">1</span><div><strong>Set your budget</strong><p>Enter your weekly budget and how many people you're feeding. Add a diet, a spice level and a goal: a balanced week or high protein.</p></div></li>
+        <li><span class="wm-step-n">2</span><div><strong>Get your 7-day plan</strong><p>WorldMeals picks seven dinners from seven countries that fit inside your budget, and shows the week's total before you buy anything.</p></div></li>
+        <li><span class="wm-step-n">3</span><div><strong>Smart Grocery: shop once and save</strong><p>One tap turns your plan into a shopping list sorted by aisle. Every item shows which dishes use it and its estimated cost. Check items off as you shop, mark what you already have, or copy the list to share.</p></div></li>
+      </ol>
+      <a class="v3-cta wm-tour-start wm-plan-start" href="app.html"><span class="wm-start-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><span>Plan my week →</span></a>
+      <p class="wm-plan-note"><b>Included with Chef · try it free for 3 days.</b></p>
+    </div>
+    <div class="wm-plan-stage">
+      <p class="wm-plan-example">A real example: $60 for 2 people</p>
+      <div class="wm-plan-settings" aria-label="Example planner settings"><span><small>Weekly budget</small>$60</span><span><small>People</small>2</span><span><small>Goal</small>Balanced week</span></div>
+      <div class="wm-plan-cards">
+        <div class="wm-wk-card">
+          <div class="wm-card-h"><span>Your week</span><small>For 2 people</small></div>
+          <ul class="wm-wk-list"><li><span class="wm-wk-day">Mon</span><img src="/images/dishes/Red-Rice-Bowl.jpg" alt="" loading="lazy" width="40" height="40"><span class="wm-wk-dish"><b>Red Rice Bowl</b><i>Bhutan</i></span><span class="wm-wk-cost">$8</span></li><li><span class="wm-wk-day">Tue</span><img src="/images/dishes/Atti%C3%A9k%C3%A9.jpg" alt="" loading="lazy" width="40" height="40"><span class="wm-wk-dish"><b>Attiéké</b><i>Ivory Coast</i></span><span class="wm-wk-cost">$8</span></li><li><span class="wm-wk-day">Wed</span><img src="/images/dishes/Arepas.jpg" alt="" loading="lazy" width="40" height="40"><span class="wm-wk-dish"><b>Arepas</b><i>Venezuela</i></span><span class="wm-wk-cost">$8</span></li><li><span class="wm-wk-day">Thu</span><img src="/images/dishes/Halloumi-Souvla.jpg" alt="" loading="lazy" width="40" height="40"><span class="wm-wk-dish"><b>Halloumi Souvla</b><i>Cyprus</i></span><span class="wm-wk-cost">$8</span></li><li><span class="wm-wk-day">Fri</span><img src="/images/dishes/Fatteh.jpg" alt="" loading="lazy" width="40" height="40"><span class="wm-wk-dish"><b>Fatteh</b><i>Syria</i></span><span class="wm-wk-cost">$8</span></li><li><span class="wm-wk-day">Sat</span><img src="/images/dishes/Morogo.jpg" alt="" loading="lazy" width="40" height="40"><span class="wm-wk-dish"><b>Morogo</b><i>Botswana</i></span><span class="wm-wk-cost">$8</span></li><li><span class="wm-wk-day">Sun</span><img src="/images/dishes/Baleadas.jpg" alt="" loading="lazy" width="40" height="40"><span class="wm-wk-dish"><b>Baleadas</b><i>Honduras</i></span><span class="wm-wk-cost">$8</span></li></ul>
+          <div class="wm-wk-budget">
+            <div class="wm-wk-budget-top"><span>Planned <b>$56</b> of $60</span><em>$4 left</em></div>
+            <div class="wm-wk-budget-bar"><i style="width:93%"></i></div>
+          </div>
+        </div>
+        <div class="wm-gr-card">
+          <div class="wm-card-h"><span>Smart Grocery</span><small>2 / 39 in cart</small></div>
+          <div class="wm-gr-money"><div><b>$56</b><small>Estimated grocery</small></div><div class="good"><b>$4</b><small>Budget remaining</small></div></div>
+          <div class="wm-gr-bar"><i style="width:5%"></i></div>
+          <div class="wm-gr-cat"><div class="wm-gr-cat-h">Produce</div><div class="wm-gr-item done"><span class="wm-gr-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="wm-gr-name"><b>Onion</b><i>Used in Red Rice Bowl, Attiéké, Halloumi Souvla +1 more</i></span><span class="wm-gr-price">~$1</span></div><div class="wm-gr-item done"><span class="wm-gr-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span class="wm-gr-name"><b>Tomatoes</b><i>Used in Red Rice Bowl, Attiéké, Morogo</i></span><span class="wm-gr-price">~$1</span></div><div class="wm-gr-item"><span class="wm-gr-box" aria-hidden="true"></span><span class="wm-gr-name"><b>Avocado</b><i>Used in Arepas, Baleadas</i></span><span class="wm-gr-price">~$2</span></div></div><div class="wm-gr-cat"><div class="wm-gr-cat-h">Meat &amp; Seafood</div><div class="wm-gr-item"><span class="wm-gr-box" aria-hidden="true"></span><span class="wm-gr-name"><b>Grilled fish</b><i>Used in Attiéké</i></span><span class="wm-gr-price">~$3</span></div><div class="wm-gr-item"><span class="wm-gr-box" aria-hidden="true"></span><span class="wm-gr-name"><b>Shredded beef</b><i>Used in Arepas</i></span><span class="wm-gr-price">~$3</span></div></div><div class="wm-gr-cat"><div class="wm-gr-cat-h">Dairy &amp; Eggs</div><div class="wm-gr-item"><span class="wm-gr-box" aria-hidden="true"></span><span class="wm-gr-name"><b>Butter</b><i>Used in Arepas, Fatteh</i></span><span class="wm-gr-price">~$2</span></div><div class="wm-gr-item"><span class="wm-gr-box" aria-hidden="true"></span><span class="wm-gr-name"><b>Eggs</b><i>Used in Baleadas</i></span><span class="wm-gr-price">~$1</span></div></div>
+          <p class="wm-gr-more">+ 32 more items for the week</p>
+          <div class="wm-gr-actions" aria-hidden="true"><span class="on">✓ Mark all purchased</span><span>Copy list</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- WORLDMEALS KIDS -->
@@ -3198,7 +3373,7 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
         <li>Toddler-friendly textures, hidden-veggie and picky-eater dishes.</li>
         <li>Introduce a new country, one little bite at a time.</li>
       </ul>
-      <a href="app.html" class="btn-primary wm-kids-button">Explore WorldMeals Kids <span aria-hidden="true">→</span></a>
+      <a href="app.html" class="v3-cta wm-tour-start wm-kids-start"><span class="wm-start-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><span>Explore WorldMeals Kids →</span></a>
       <p class="wm-kids-note"><b>Included with Chef · try it free for 3 days.</b> Find the Kids collection inside WorldMeals. Choose dishes and textures suited to your child's age, needs, and allergies.</p>
     </div>
     <div class="wm-kids-demo"><p class="wm-kids-demo-label">Take a look inside WorldMeals Kids</p><div class="wm-kids-screens" tabindex="0" role="region" aria-label="Five actual Kids app screenshots. Scroll horizontally or use arrow keys to explore."><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-1.jpg" loading="lazy" decoding="async" alt="Welcome to WorldMeals Kids — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>1 / 5 · Welcome to WorldMeals Kids</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-2.jpg" loading="lazy" decoding="async" alt="Choices that work for your child — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>2 / 5 · Choices that work for your child</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-3.jpg" loading="lazy" decoding="async" alt="Find meals from around the world — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>3 / 5 · Find meals from around the world</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-4.jpg" loading="lazy" decoding="async" alt="Choose an age and meal type — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>4 / 5 · Choose an age and meal type</figcaption></figure><figure class="wm-kids-screen"><div class="wm-kids-phone"><img src="/images/kids-screen-5.jpg" loading="lazy" decoding="async" alt="Explore dishes and view recipes — actual WorldMeals Kids app screen" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>5 / 5 · Explore dishes and view recipes</figcaption></figure></div><div class="wm-kids-controls" aria-label="Kids preview controls"><button type="button" id="kidsPrev" aria-label="Previous Kids screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" id="kidsPause" aria-label="Pause automatic screen changes">Pause</button><button type="button" id="kidsNext" aria-label="Next Kids screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div><p class="wm-kids-swipe">Swipe to explore all 5 screens</p></div>
@@ -3292,7 +3467,7 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
         <div class="chef-avatar wm-chef-avatar"><img src="/images/chef-ai.png" alt=""></div>
         <div>
           <div class="chef-name">Chef AI</div>
-          <div class="chef-status"><i class="wm-ai-live"></i>Ready to cook</div>
+          <div class="chef-status"><i class="wm-ai-live"></i>Example conversation</div>
         </div>
       </div>
 
@@ -3303,14 +3478,14 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
         <div class="wm-ai-dishes">
           <a class="wm-ai-dish" href="app.html?open=chef"><img src="/images/dishes/Senegalese-Chicken-Rice-Protein-Bowl.jpg" alt="" loading="lazy"><span><b>Senegalese Chicken Rice Bowl</b><small>Senegal · 30 min</small></span></a>
           <a class="wm-ai-dish" href="app.html?open=chef"><img src="/images/dishes/Indian-Tandoori-Chicken-Protein-Bowl.jpg" alt="" loading="lazy"><span><b>Tandoori Chicken Bowl</b><small>India · 30 min</small></span></a>
-          <a class="wm-ai-dish" href="app.html?open=chef"><img src="/images/dishes/Spanish-Chicken-Rice-Protein-Bowl.jpg" alt="" loading="lazy"><span><b>Spanish Chicken Rice Bowl</b><small>Spain · 35 min</small></span></a>
+          <a class="wm-ai-dish" href="app.html?open=chef"><img src="/images/dishes/Ivorian-Chicken-Rice-and-Beans-Protein-Bowl.jpg" alt="" loading="lazy"><span><b>Ivorian Chicken, Rice &amp; Beans</b><small>Ivory Coast · 30 min</small></span></a>
         </div>
       </div>
 
-      <div class="chef-input">
-        <span>Type your ingredients...</span>
-        <button class="chef-button" aria-label="Send message" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
-      </div>
+      <a class="chef-input wm-ai-try" href="app.html?open=chef">
+        <span>Try it with your own ingredients</span>
+        <span class="chef-button" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
     </div>
   </div>
 </section>
@@ -3320,15 +3495,17 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
 
 
 <!-- WORLD TOUR -->
-<section class="v3-section passport">
+<section class="v3-section passport wm-tour" id="tour">
   <div class="v3-inner passport-grid">
-    <div class="passport-card">
+    <div class="wm-passport-wrap">
+    <p class="wm-passport-note">Your journey could look like this</p>
+    <div class="passport-card" aria-label="Sample passport">
       <div class="passport-top">
-        <div class="passport-brand">🌍 WorldMeals Passport</div>
+        <div class="passport-brand">WorldMeals Passport</div>
         <div class="passport-id">CULINARY EXPLORER</div>
       </div>
 
-      <div class="passport-progress">67 explored</div>
+      <div class="passport-progress">67</div>
       <div class="passport-label">Countries explored</div>
 
       <div class="passport-bar">
@@ -3338,105 +3515,42 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
       <div class="passport-stamps">
         <div class="stamp stamp-photo">
           <img src="/images/dishes/Sushi.jpg" alt="Sushi from Japan">
-          <span>JAPAN</span>
+          <span>JAPAN<small>Sushi</small></span>
         </div>
         <div class="stamp stamp-photo">
           <img src="/images/dishes/Tacos-al-Pastor.jpg" alt="Tacos al Pastor from Mexico">
-          <span>MEXICO</span>
+          <span>MEXICO<small>Tacos al Pastor</small></span>
         </div>
         <div class="stamp stamp-photo">
           <img src="/images/dishes/Jollof-Rice.jpg" alt="Jollof Rice from Ghana">
-          <span>GHANA</span>
+          <span>GHANA<small>Jollof Rice</small></span>
         </div>
         <div class="stamp stamp-photo">
           <img src="/images/dishes/New-York-Pizza.jpg" alt="New York Pizza from the United States">
-          <span>USA</span>
+          <span>USA<small>New York Pizza</small></span>
         </div>
       </div>
+    </div>
     </div>
 
     <div>
       <div class="v3-kicker">World Tour</div>
-      <div class="v3-title">Cook your way<br><em>around the world.</em></div>
-      <div class="v3-sub">Every dish becomes a new destination. Track the countries you explore, collect culinary stamps, and build a personal journey through world cuisine.</div>
-      <a class="v3-cta wm-tour-start" href="app.html?open=tour"><span class="wm-start-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><span>Your World Tour →</span></a>
+      <div class="v3-title wm-tour-title">Cook your way<br><em>around the world</em><span>.</span></div>
+      <div class="v3-sub">Every dish becomes a new destination. Collect a stamp for each country you cook and watch your journey grow.</div>
+      <a class="v3-cta wm-tour-start" href="app.html?open=tour"><span class="wm-start-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><span>Start your World Tour →</span></a>
     </div>
   </div>
 </section>
 
 <!-- STATS -->
-<section class="stats reveal">
-  <div class="stats-inner">
-    <div>
-      <div class="stat-num">1000+</div>
-      <div class="stat-label">Authentic dishes</div>
-    </div>
-    <div>
-      <div class="stat-num">Global</div>
-      <div class="stat-label">Cuisines represented</div>
-    </div>
-    <div>
-      <div class="stat-num">∞</div>
-      <div class="stat-label">AI-generated recipes</div>
-    </div>
-    <div>
-      <div class="stat-num">0</div>
-      <div class="stat-label">Card data we ever see</div>
-    </div>
-  </div>
-</section>
 
-<!-- WHY WORLDMEALS -->
-<section class="testimonials reveal">
-  <div class="testimonials-inner">
-    <div class="section-eyebrow">Why WorldMeals?</div>
-    <div class="section-title">Built on trust.<br/>Built for everyone.</div>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="feature-icon wm-photo-icon"><img src="/images/worldmeals-food-globe.png" alt=""></div>
-        <div class="feature-title">Global Cuisine</div>
-        <div class="feature-desc">Discover authentic cuisines from around the world and explore new cultures through food.</div>
-      </div>
-
-      <div class="testi-card">
-        <div class="feature-icon wm-photo-icon"><img src="/images/real-food-photography.png" alt=""></div>
-        <div class="feature-title">Beautiful Dish Previews</div>
-        <div class="feature-desc">Beautiful dish previews give you an idea of what you're about to cook.</div>
-      </div>
-
-      <div class="testi-card">
-        <div class="feature-icon wm-photo-icon"><img src="/images/chef-ai.png" alt=""></div>
-        <div class="feature-title">AI Chef</div>
-        <div class="feature-desc">Get personalized cooking guidance, ingredient substitutions, and recipe ideas based on what you have at home.</div>
-      </div>
-
-      <div class="testi-card">
-        <div class="feature-icon wm-photo-icon"><img src="/images/worldmeals-cookbook.png" alt=""></div>
-        <div class="feature-title">1000+ Authentic Dishes</div>
-        <div class="feature-desc">From everyday family meals to traditional specialties, WorldMeals keeps growing one country at a time.</div>
-      </div>
-
-      <div class="testi-card">
-        <div class="feature-icon wm-photo-icon"><img src="/images/our-mission.png" alt=""></div>
-        <div class="feature-title">Our Mission</div>
-        <div class="feature-desc">Proudly built in America to connect people through the world's cuisines.</div>
-      </div>
-
-      <div class="testi-card">
-        <div class="feature-icon wm-photo-icon"><img src="/images/real-community-stories.png" alt=""></div>
-        <div class="feature-title">Real Community Stories</div>
-        <div class="feature-desc">As our community grows, this section will feature genuine experiences shared by real WorldMeals users.</div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- PRICING PREVIEW -->
 <section class="pricing-preview reveal" id="pricing">
   <div class="pricing-inner">
     <div class="section-eyebrow">Choose your WorldMeals experience</div>
-    <div class="section-title">Start free. Upgrade when you're ready for more.</div>
-    <p class="pricing-lead">Explore the world through food for free. When you want unlimited AI, smarter planning, and the complete WorldMeals experience, choose the plan that fits you.</p>
+    <div class="section-title wm-price-title">Start free.<br><em>Upgrade when you’re ready</em><span>.</span></div>
+    <p class="pricing-lead">Explore for free. Upgrade for unlimited Chef AI, smarter planning, Kids Meals and the complete WorldMeals experience.</p>
 
     <div class="billing-toggle" role="group" aria-label="Billing period">
       <button type="button" class="billing-option" id="billingMonthly" data-billing="monthly">Monthly</button>
@@ -3458,7 +3572,7 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
       </div>
 
       <div class="price-card featured" data-plan="chef">
-        <div class="plan-badge">⭐ MOST POPULAR</div>
+        <div class="plan-badge">MOST POPULAR</div>
         <div class="plan-icon wm-plan-chef"><img src="/images/chef-ai.png" alt=""></div>
         <div class="price-name" style="color:#fff">Chef</div>
         <div class="plan-tagline">Unlimited AI. Less planning. Better meals.</div>
@@ -3484,17 +3598,17 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
         <div class="plan-saving" id="passportSaving" style="display:inline-block">SAVE 44%</div>
         <div class="price-feature" style="color:#666"><span>✓</span>Everything in Chef</div>
         <div class="price-feature" style="color:#666"><span>✓</span>Camera Dish ID</div>
-        <div class="price-feature" style="color:#666"><span>✓</span>Premium WorldMeals tools</div>
+        <div class="price-feature" style="color:#666"><span>✓</span>Fridge Scan</div>
         <button type="button" class="plan-cta plan-cta-light" id="passportCta" data-product-id="app.worldmeals.passport.annual">Choose Passport → $99.99/yr</button>
         <div class="plan-disclosure" id="passportDisclosure">$99.99/year. Cancel anytime. Subscription renews automatically unless canceled.</div>
       </div>
     </div>
 
     <div class="pricing-trust">
-      <span>🔒 Secure checkout</span>
-      <span>↩️ Cancel anytime</span>
-      <span>🌱 Explorer · 5 AI recipes lifetime</span>
-      <span>✨ Clear pricing before purchase</span>
+      <span>Secure checkout</span>
+      <span>Cancel anytime</span>
+      <span>Explorer · 5 AI recipes lifetime</span>
+      <span>Clear pricing before purchase</span>
     </div>
     <div class="iap-actions">
       <button type="button" class="restore-purchases" id="restorePurchases">Restore Purchases</button>
@@ -3504,10 +3618,10 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
 </section>
 
 <!-- WORLDMEALS PROMISE -->
-<section class="promise">
+<section class="promise wm-promise">
   <div class="promise-inner">
     <div class="v3-kicker">The WorldMeals promise</div>
-    <div class="v3-title">Every culture deserves<br><em>a place at the table.</em></div>
+    <h2 class="v3-title wm-promise-title">Every culture deserves<br><em>a place at the table</em><span>.</span></h2>
     <p>WorldMeals was built with one mission: to help people discover, respect, and enjoy the world's cuisines. Every country matters. Every dish tells a story. Every shared meal can bring people closer.</p>
 
     <div class="promise-line">
@@ -3521,7 +3635,7 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
 </section>
 
 <!-- FINAL CTA -->
-<section class="final-cta reveal">
+<section class="final-cta reveal wm-final">
   <div class="final-dishes">
     <img src="/images/dishes/Sushi.jpg" alt="Sushi">
     <img src="/images/dishes/Tacos-al-Pastor.jpg" alt="Tacos al Pastor">
@@ -3534,13 +3648,10 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
     <img src="/images/dishes/Gumbo.jpg" alt="Gumbo">
     <img src="/images/dishes/Cheese-Fondue.jpg" alt="Cheese Fondue">
   </div>
-  <h2>The world is waiting.<br/>Start exploring it tonight.</h2>
+  <h2 class="wm-final-title">The world is waiting<span>.</span><br><em>Start exploring it tonight</em><span>.</span></h2>
   <p>Discover authentic cuisine, cook with confidence, and connect with the world — one dish at a time.</p>
-  <a href="app.html" class="btn-primary wm-world-cta" style="font-size:16px;padding:16px 32px;border-radius:16px">
-    <span class="wm-cta-globe-wrap" aria-hidden="true"><img class="wm-cta-globe" src="/images/worldmeals-food-globe.png" alt=""></span>
-    <span>Start cooking the world</span>
-  </a>
-  <div style="margin-top:16px;font-size:12px;color:#444">Explorer · 5 AI recipes lifetime · Chef includes a 3-day trial · Cancel anytime</div>
+  <a href="app.html" class="v3-cta wm-tour-start wm-final-start"><span class="wm-start-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><span>Start cooking the world →</span></a>
+  <p class="wm-final-fine">Explorer is free · 5 AI recipes included · Chef includes a 3-day trial · Cancel anytime</p>
   <div class="wm-stores">
     <a class="wm-store wm-store-badge" href="https://apps.apple.com/app/worldmeals/id6797013060" target="_blank" rel="noopener" aria-label="Download WorldMeals on the App Store"><img class="wm-badge-img" src="/images/badge-app-store.png" alt="" onerror="this.remove()"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
     <a class="wm-store wm-store-badge" href="https://play.google.com/store/apps/details?id=app.worldmeals.android" target="_blank" rel="noopener" aria-label="Get WorldMeals on Google Play"><img class="wm-badge-img" src="/images/badge-google-play.png" alt="" onerror="this.remove()"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg><span><small>GET IT ON</small><b>Google Play</b></span></a>
@@ -3681,7 +3792,7 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
 </style>
 
 <!-- FOOTER -->
-<footer>
+<footer class="wm-footer">
   <div class="footer-logo">
     <img
       src="/images/worldmeals-logo-horizontal.png"
@@ -3698,7 +3809,8 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
     <a href="/terms.html" class="footer-link">Terms</a>
     <a href="/contact.html" class="footer-link">Contact</a>
   </div>
-  <div class="footer-stripe">🔒 Secure payments · Clear pricing · Cancel anytime</div>
+  <div class="footer-stripe wm-footer-trust"><span>Secure payments</span><i></i><span>Clear pricing</span><i></i><span>Cancel anytime</span></div>
+  <p class="wm-footer-copy">© 2026 WorldMeals · Connecting people through food</p>
 </footer>
 
  
@@ -4055,6 +4167,7 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
   const fallback = "/images/dishes/Pizza-Margherita.jpg";
 
   const updateImage = (img, label, data) => {
+    if (!img || !label) return;
     img.style.opacity = "0";
     window.setTimeout(() => {
       img.onerror = () => {
@@ -4073,7 +4186,7 @@ tabs.forEach(function(b){b.addEventListener("click",function(){show(b.dataset.k)
   updateImage(sideImageTwo, sideLabelTwo, experience.sides[1]);
 
   let index = 0;
-  window.setInterval(() => {
+  if (heroImage) window.setInterval(() => {
     index = (index + 1) % experience.slides.length;
     updateImage(heroImage, heroLabel, experience.slides[index]);
   }, 6000);
