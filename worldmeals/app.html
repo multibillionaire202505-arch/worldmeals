@@ -2251,6 +2251,20 @@ nav .wm-back:focus-visible{outline:3px solid #E58A3D;outline-offset:4px}
 #advBody .mixer-fader::-webkit-slider-runnable-track{box-shadow:inset 0 1px 2px rgba(20,38,27,.18)!important}
 #advBody .mixer-ticks span{font-size:12px!important;font-weight:600!important;color:#3F362D!important}
 @media(max-width:620px){#advBody .mixer-ticks span{font-size:11.5px!important}#advBody .mixer-ticks{min-width:52px!important}}
+/* Kids — keep the playful 3D look, harmonize accents to green & gold */
+#page-kids .wk-num{background:radial-gradient(circle at 35% 30%,#2E7D52,#14402c 72%)!important;box-shadow:0 0 0 2px #C9A55A,0 5px 12px rgba(20,64,44,.32),inset 0 1px 0 rgba(255,255,255,.25)!important;font-family:"DM Serif Display",Georgia,serif!important;font-weight:400!important}
+#page-kids .wk-find{background:linear-gradient(180deg,#1E5B2C,#14402c)!important;box-shadow:inset 0 0 0 1px rgba(201,165,90,.55),inset 0 1px 0 rgba(255,255,255,.18),0 10px 22px -6px rgba(20,64,44,.45)!important;font:700 18px/1 Inter,system-ui,sans-serif!important}
+#page-kids .wk-find:active{transform:translateY(1px) scale(.99)}
+.wk-baby-note{display:none;margin:12px 2px 0;padding:10px 12px;border-radius:14px;background:#EEF5EC;border:1px solid rgba(20,64,44,.15);font:500 14px/1.5 Inter,system-ui,sans-serif;color:#24402F}
+.wk-ages:has(.wk-opt.on[data-v="6-12m"]) + .wk-baby-note{display:block}
+.wk-age-badge{display:inline-flex;align-self:flex-start;margin:6px 0 8px;padding:4px 11px;border-radius:999px;background:#FBF1DF;border:1px solid rgba(201,165,90,.6);font:700 12.5px/1.2 Inter,system-ui,sans-serif;color:#6B5232}
+.wk-age-modal{margin:6px 0 4px}
+.wk-age-modal[hidden]{display:none!important}
+.wk-metrics{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+#dishOverlay.wm-kids-dish #modalSpice{display:none!important}
+.wk-more-wrap{grid-column:1/-1;display:flex;justify-content:center;padding:6px 0 18px}
+.wk-more{padding:14px 26px;border-radius:999px;background:#FFFDF8;color:#14402c;border:1px solid rgba(201,165,90,.6);font:700 15px/1 Inter,system-ui,sans-serif;cursor:pointer;box-shadow:0 8px 18px -12px rgba(20,64,44,.45)}
+.wk-more span{font-weight:500;color:#6B5232}
 /* Collapsed mixer: one compact row */
 .adv-filters:has(.adv-body.collapsed){padding-top:14px!important;padding-bottom:14px!important}
 .adv-filters:has(.adv-body.collapsed) .adv-filters-head{margin-bottom:0!important}
@@ -2673,6 +2687,7 @@ nav .wm-back:focus-visible{outline:3px solid #E58A3D;outline-offset:4px}
       <button type="button" class="wk-opt" data-v="6-8y"><span class="ic">👦</span>6–8<small>years</small></button>
       <button type="button" class="wk-opt" data-v="9-12y"><span class="ic">🧑</span>9–12<small>years</small></button>
     </div>
+    <p class="wk-baby-note">Introduce one new food at a time, and check with your pediatrician before first allergens like egg, peanut, dairy or sesame.</p>
   </div>
 
   <div class="wk-card">
@@ -2727,7 +2742,7 @@ nav .wm-back:focus-visible{outline:3px solid #E58A3D;outline-offset:4px}
     <div class="wk-csel" id="kidsCountrySel"></div>
   </div>
 
-  <button type="button" class="wk-find" onclick="renderKids(true)">🔍 Find meals for my child</button>
+  <button type="button" class="wk-find" onclick="renderKids(true)">Find meals for my child →</button>
 
   <div id="kidsResults" hidden>
     <div class="wk-results-head"><span id="kidsCountLbl"></span><button type="button" onclick="wmKidsClear()">↻ Start over</button></div>
@@ -2997,11 +3012,22 @@ function renderKids(scroll){
   if(!list.length){
     g.innerHTML='<div class="empty">🧒 More kids dishes for these choices are coming soon.<br><br>Try another age or remove a choice.</div>';
   }else{
-  g.innerHTML=note+list.map(wmKidsCardHTML).join("");
+  if(scroll) g.dataset.shown=String(WM_KIDS_PAGE);
+  g.innerHTML=note+wmKidsPaged(list,"kidsGrid");
   }
   if(scroll) res.scrollIntoView({behavior:"smooth",block:"start"});
 }
-function wmKidsCardHTML(m){ return `
+const WM_KIDS_AGE_LABELS={"kids-6-12m":"6–12 months","kids-1-2y":"1–2 years","kids-3-5y":"3–5 years","kids-6-8y":"6–8 years","kids-9-12y":"9–12 years"};
+function wmKidsAgeLabel(m){const t=(m.tags||[]).find(x=>WM_KIDS_AGE_LABELS[x]);return t?WM_KIDS_AGE_LABELS[t]:"";}
+const WM_KIDS_PAGE=24;
+function wmKidsPaged(list,gridId){
+  const shown=Number(document.getElementById(gridId)?.dataset.shown||WM_KIDS_PAGE);
+  const html=list.slice(0,shown).map(wmKidsCardHTML).join("");
+  const more=list.length>shown?'<div class="wk-more-wrap"><button type="button" class="wk-more" onclick="wmKidsMore(\''+gridId+'\')">Show more dishes <span>('+(list.length-shown)+' more)</span></button></div>':"";
+  return html+more;
+}
+function wmKidsMore(gridId){const g=document.getElementById(gridId);if(!g)return;g.dataset.shown=String(Number(g.dataset.shown||WM_KIDS_PAGE)+WM_KIDS_PAGE);if(gridId==="kidsGrid")renderKids(false);else wmKidsRenderSearch();}
+function wmKidsCardHTML(m){ const age=wmKidsAgeLabel(m); return `
     <div class="card" onclick="openModal(${m.id})">
       <div class="card-img">${foodImageHTML(m)}</div>
       <button class="fav-btn" onclick="event.stopPropagation();toggleFav(${m.id})">${favs.includes(m.id)?"❤️":"🤍"}</button>
@@ -3009,13 +3035,12 @@ function wmKidsCardHTML(m){ return `
         <div class="card-name">${m.name}</div>
         <div class="card-country">
           <span>${wmKidsFlag(m.country)} ${m.country}</span>
-          <span class="card-rating">⭐ ${mealRating(m)}</span>
         </div>
-        <div class="metric-row">
-          <div class="metric"><b>💪 ${mealProtein(m)}g</b>Protein</div>
-          <div class="metric"><b>🔥 ${m.cal}</b>Calories</div>
+        ${age?'<div class="wk-age-badge">'+age+'</div>':''}
+        <div class="metric-row wk-metrics">
           <div class="metric"><b>⏱ ${m.time}</b>Cook Time</div>
-          <div class="metric"><b>💵 $${m.budget}</b>Budget</div>
+          <div class="metric"><b>🔥 ${m.cal}</b>Calories</div>
+          <div class="metric"><b>💪 ${mealProtein(m)}g</b>Protein</div>
         </div>
         <button class="view-recipe-btn" onclick="event.stopPropagation();openModal(${m.id})">View Recipe</button>
       </div>
@@ -3059,7 +3084,8 @@ function wmKidsRenderSearch(){
   box.hidden=false;
   document.getElementById("kidsSearchNote").hidden=!wmKidsHasChoices();
   document.getElementById("kidsSearchLbl").textContent=`${list.length} ${list.length===1?"dish":"dishes"} found`;
-  g.innerHTML=list.length?list.map(wmKidsCardHTML).join("")
+  if(g.dataset.q!==q){g.dataset.q=q;g.dataset.shown=String(WM_KIDS_PAGE);}
+  g.innerHTML=list.length?wmKidsPaged(list,"kidsSearchGrid")
     :'<div class="empty">🔍 No kids dish matches that yet.<br><br>Try another word, like a country or an ingredient.</div>';
 }
 function wmKidsSearchClear(){
@@ -3699,6 +3725,9 @@ function openModal(id){
   modalImg.onerror=function(){handleMealImgError(modalImg);};
   document.getElementById("modalFavBtn").textContent=favs.includes(m.id)?"❤️":"🤍";
   document.getElementById("modalName").textContent=m.name;
+  try{const isKid=(m.tags||[]).includes("kids");const mb=document.getElementById("dishOverlay");if(mb)mb.classList.toggle("wm-kids-dish",isKid);
+    let ab=document.getElementById("wmModalAge");if(!ab){ab=document.createElement("div");ab.id="wmModalAge";ab.className="wk-age-badge wk-age-modal";document.getElementById("modalName").insertAdjacentElement("afterend",ab);}
+    const al=isKid&&typeof wmKidsAgeLabel==="function"?wmKidsAgeLabel(m):"";ab.textContent=al?"For "+al:"";ab.hidden=!al;}catch(e){}
   document.getElementById("modalMeta").textContent="📍 "+m.country+" · "+m.region;
   document.getElementById("modalStats").innerHTML=[["🔥",m.cal,"kcal"],["💪",mealProtein(m)+"g","protein"],["💰","$"+m.budget,"per serving"],["⏱",m.time,"cook time"]].map(([i,v,l])=>`<div class="stat"><div style="font-size:12px">${i}</div><div class="stat-v">${v}</div><div class="stat-l">${l}</div></div>`).join("");
   document.getElementById("modalSpice").innerHTML=`<div style="font-size:11px;color:#888">Spice:</div><div class="spice-dots">${[1,2,3,4,5].map(i=>`<div style="width:8px;height:8px;border-radius:50%;background:${i<=m.spice?sc(m.spice):"#E5E5E0"}"></div>`).join("")}</div><div style="font-size:12px;font-weight:500">${SPICE[m.spice]}</div>`;
