@@ -6,7 +6,7 @@
 <title>World Meals — Browse Dishes</title>
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#C47A2C">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#FAF7F0;
@@ -314,6 +314,7 @@ textarea{min-height:96px;resize:none;margin-bottom:10px}textarea::placeholder{co
 }
 .filter-group.f-region::before{content:"🌍"}
 .filter-group.f-diet::before{content:"🥗"}
+.filter-group.f-collection::before{content:"🍢"}
 .filter-group.f-country::before{content:"🏳️"}
 .filter-group.f-time::before{content:"⏱️"}
 .filter-group.f-protein::before{content:"💪"}
@@ -1857,7 +1858,7 @@ html.wm-unlocking .wm-upgrade-progress{display:grid}
 
 
 <nav>
-  <a href="index.html?stay=1" class="back" aria-label="Back to WorldMeals home"><img src="/images/worldmeals-back-button.png" alt="Back"></a>
+  <a href="index.html?stay=1" class="back wm-back" aria-label="Back to WorldMeals home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6 8.5 12l6 6"/></svg></a>
   <a href="index.html" class="logo" aria-label="WorldMeals home">
     <img src="/images/worldmeals-logo-horizontal.png" alt="WorldMeals" class="top-brand-logo">
   </a>
@@ -1895,6 +1896,11 @@ html.wm-unlocking .wm-upgrade-progress{display:grid}
            alt="WorldMeals — Connecting People Through Food"
            class="main-brand-logo">
     </div>
+    <div class="wm-welcome">
+      <p class="wm-welcome-eyebrow">Your global kitchen</p>
+      <h1 class="wm-welcome-title">What would you like to cook<span>?</span></h1>
+      <p class="wm-welcome-sub">Find a new favorite. Make it your own.</p>
+    </div>
     <div class="search-wrap">
       <input class="search" id="searchInput" placeholder="Search a dish, food or country" oninput="updateSearchClear();clearTimeout(window.wmSearchT);window.wmSearchT=setTimeout(renderGrid,160)" onfocus="updateSearchClear()" onblur="setTimeout(updateSearchClear,120)">
       <button type="button" class="search-clear" id="searchClearBtn" aria-label="Clear search" onpointerdown="event.preventDefault();clearSearch()" onclick="clearSearch()">✕</button>
@@ -1925,6 +1931,17 @@ html.wm-unlocking .wm-upgrade-progress{display:grid}
           <option value="gluten-free-option">GF option</option>
           <option value="vegan-option">Vegan option</option>
         </optgroup>
+      </select>
+    </div>
+    <div class="filter-group f-collection"><label>Collection</label>
+      <select id="collectionFilter" onchange="renderGrid()">
+        <option value="all">All collections</option>
+        <option value="bbq">BBQ &amp; Grill</option>
+        <option value="drinks">Drinks · alcohol-free</option>
+        <option value="smoothies">Smoothies</option>
+        <option value="salads">Salads</option>
+        <option value="bowls">Bowls</option>
+        <option value="meal-prep">Meal prep</option>
       </select>
     </div>
     <div class="filter-group f-protein"><label>Protein</label>
@@ -1959,10 +1976,10 @@ html.wm-unlocking .wm-upgrade-progress{display:grid}
 
   <div class="adv-filters">
     <div class="adv-filters-head">
-      <button class="adv-btn hide" id="advToggleBtn" onclick="toggleAdvFilters()">▾ Hide filters</button>
+      <button type="button" class="adv-btn wm-mix-btn" id="advToggleBtn" aria-expanded="false" aria-controls="advBody" onclick="toggleAdvFilters()"><span class="wm-mix-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><span class="wm-mix-label">Mix your meal</span></button>
       <button class="adv-btn" onclick="resetBrowseFilters()">↻ Reset</button>
     </div>
-    <div class="adv-body" id="advBody">
+    <div class="adv-body collapsed" id="advBody">
       <div class="mixer">
         <div class="mixer-label">🔥 Calories</div>
         <div class="mixer-pill" id="calPill">0 - 1000+</div>
@@ -2006,13 +2023,30 @@ html.wm-unlocking .wm-upgrade-progress{display:grid}
     </div>
   </div>
 
+  <section class="wm-home" id="wmHome" aria-labelledby="wmFlavorTitle">
+    <div class="wm-home-head">
+      <h2 class="wm-home-title" id="wmFlavorTitle">A world of flavor</h2>
+      <a class="wm-home-all" href="#grid" onclick="event.preventDefault();document.getElementById('countLbl')?.scrollIntoView({behavior:'smooth',block:'start'})">See all dishes <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="wm-flavor-row" id="wmFlavorRow" role="list"></div>
+    <div class="wm-banners">
+      <button type="button" class="wm-banner wm-banner-scan" onclick="document.getElementById('nb-scan')?.click()">
+        <span class="wm-banner-text"><b>Cook with what you have<i>.</i></b><span>Scan your fridge, rescue food before it goes to waste, and find dishes you can make.</span><span class="wm-banner-cta"><span class="wm-mix-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><em>Scan my fridge</em></span></span>
+        <img src="/images/dishes/Shakshuka.jpg" alt="" loading="lazy">
+      </button>
+      <button type="button" class="wm-banner wm-banner-kids" onclick="document.getElementById('nb-kids')?.click()">
+        <span class="wm-banner-text"><b>Little bites. Big discoveries<i>.</i></b><span>Meals from around the world for ages 6 months to 12 years.</span><span class="wm-banner-cta"><span class="wm-mix-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z"/></svg></span><em>Explore WorldMeals Kids</em></span></span>
+        <img src="/images/dishes/Kids/mini-pita-pizza-faces.jpg" alt="" loading="lazy">
+      </button>
+    </div>
+  </section>
+
   <div class="results-toolbar">
     <div class="count" id="countLbl"></div>
     <div class="toolbar-right">
       <div class="sort-wrap">Sort by
         <select id="sortFilter" onchange="renderGrid()">
           <option value="popularity">Popularity</option>
-          <option value="rating">Rating</option>
           <option value="time">Cook Time</option>
           <option value="cal">Calories</option>
           <option value="price">Price</option>
@@ -2389,13 +2423,13 @@ html.wm-unlocking .wm-upgrade-progress{display:grid}
 
 <!-- BOTTOM NAV -->
 <div class="bottom-nav" role="navigation" aria-label="WorldMeals app">
-  <button type="button" class="nav-btn active" id="nb-browse" aria-label="Browse dishes" aria-current="page" onclick="showPage('browse')"><span class="ic" aria-hidden="true">🍽️</span><span class="lb">Browse</span></button>
-  <button type="button" class="nav-btn" id="nb-planner" aria-label="Meal and budget planner" onclick="showPage('planner')"><span class="ic" aria-hidden="true">📅</span><span class="lb">Planner</span></button>
-  <button type="button" class="nav-btn" id="nb-tour" aria-label="World food tour" onclick="showPage('tour')"><span class="ic" aria-hidden="true">🏆</span><span class="lb">Tour</span></button>
-  <button type="button" class="nav-btn" id="nb-chef" aria-label="Chef AI" onclick="showPage('chef')"><span class="ic" aria-hidden="true">👨‍🍳</span><span class="lb">Chef</span></button>
-  <button type="button" class="nav-btn" id="nb-scan" aria-label="Scan your fridge" onclick="showPage('scan')"><span class="ic" aria-hidden="true">📷</span><span class="lb">Scan</span></button>
-  <button type="button" class="nav-btn" id="nb-kids" aria-label="Kids meals" onclick="showPage('kids')"><span class="ic" aria-hidden="true">🧒</span><span class="lb">Kids</span></button>
-  <button type="button" class="nav-btn" id="nb-saved" aria-label="Saved dishes" onclick="showPage('saved')"><span class="ic" aria-hidden="true">❤️</span><span class="lb">Saved</span></button>
+  <button type="button" class="nav-btn active" id="nb-browse" aria-label="Browse dishes" aria-current="page" onclick="showPage('browse')"><span class="ic" aria-hidden="true"><svg class="wm-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5.2"/><path d="M3.6 3.5v4.2a1.4 1.4 0 0 0 2.8 0V3.5M5 9.1v11.4M20.4 3.5c-1.3.9-1.9 2.7-1.9 5.6h1.9M20.4 3.5v17"/></svg></span><span class="lb">Browse</span></button>
+  <button type="button" class="nav-btn" id="nb-planner" aria-label="Meal and budget planner" onclick="showPage('planner')"><span class="ic" aria-hidden="true"><svg class="wm-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4M8 14h2M14 14h2M8 17h2"/></svg></span><span class="lb">Planner</span></button>
+  <button type="button" class="nav-btn" id="nb-tour" aria-label="World food tour" onclick="showPage('tour')"><span class="ic" aria-hidden="true"><svg class="wm-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 4h9v5a4.5 4.5 0 0 1-9 0z"/><path d="M7.5 6H4.5a3 3 0 0 0 3 4M16.5 6h3a3 3 0 0 1-3 4M12 13.5V17M8.5 20.5h7M9.5 17h5"/></svg></span><span class="lb">Tour</span></button>
+  <button type="button" class="nav-btn" id="nb-chef" aria-label="Chef AI" onclick="showPage('chef')"><span class="ic" aria-hidden="true"><svg class="wm-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 13.5a3.5 3.5 0 0 1-.6-6.95A4.5 4.5 0 0 1 12 3.5a4.5 4.5 0 0 1 5.6 3.05A3.5 3.5 0 0 1 17 13.5z"/><path d="M7 13.5V19a1.5 1.5 0 0 0 1.5 1.5h7A1.5 1.5 0 0 0 17 19v-5.5M7 17h10"/></svg></span><span class="lb">Chef</span></button>
+  <button type="button" class="nav-btn" id="nb-scan" aria-label="Scan your fridge" onclick="showPage('scan')"><span class="ic" aria-hidden="true"><svg class="wm-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8.5A2.5 2.5 0 0 1 6.5 6H8l1.5-2h5L16 6h1.5A2.5 2.5 0 0 1 20 8.5v9a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 17.5z"/><circle cx="12" cy="13" r="3.6"/></svg></span><span class="lb">Scan</span></button>
+  <button type="button" class="nav-btn" id="nb-kids" aria-label="Kids meals" onclick="showPage('kids')"><span class="ic" aria-hidden="true"><svg class="wm-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12.5" r="8"/><path d="M9 11.2v.6M15 11.2v.6M8.8 15c1.8 1.8 4.6 1.8 6.4 0M9.5 4.9c.8 1.6 2.6 2.1 4.3 1.3"/></svg></span><span class="lb">Kids</span></button>
+  <button type="button" class="nav-btn" id="nb-saved" aria-label="Saved dishes" onclick="showPage('saved')"><span class="ic" aria-hidden="true"><svg class="wm-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.6-7.5 10-7.5 10z"/></svg></span><span class="lb">Saved</span></button>
 </div>
 
 <script src="meals.js"></script>
@@ -3098,8 +3132,10 @@ function toggleAdvFilters(){
   const body=document.getElementById("advBody");
   const btn=document.getElementById("advToggleBtn");
   const collapsed=body.classList.toggle("collapsed");
-  btn.textContent = collapsed ? "▸ Show filters" : "▾ Hide filters";
-  btn.classList.toggle("hide", !collapsed);
+  const lbl=btn.querySelector(".wm-mix-label");
+  if(lbl) lbl.textContent = collapsed ? "Mix your meal" : "Close mixer"; else btn.textContent = collapsed ? "Mix your meal" : "Close mixer";
+  btn.setAttribute("aria-expanded", String(!collapsed));
+  btn.classList.toggle("is-open", !collapsed);
 }
 
 let currentViewMode="grid";
@@ -3110,8 +3146,19 @@ function setViewMode(mode){
   document.getElementById("grid").classList.toggle("list-view", mode==="list");
 }
 
+/* WORLDMEALS COLLECTIONS — curated groups from existing dish names and tags */
+const WM_COLLECTION_RULES={
+  bbq:m=>/\b(bbq|barbecue|barbeque|grill|grilled|kebabs?|kabob|satay|suya|churrasco|asado|braai|yakitori|ribs|brisket|skewers?|tandoori|souvlaki|jerk|nyama choma|samgyeopsal|bulgogi|cevapi|seekh|mashwi|bakar|nuong|choma)\b/i.test(m.name||"")&&!/\b(bowl|salad)\b/i.test(m.name||""),
+  smoothies:m=>(m.tags||[]).includes("smoothie")||/\bsmoothie\b/i.test(m.name||""),
+  drinks:m=>!((m.tags||[]).includes("smoothie")||/\bsmoothie\b/i.test(m.name||""))&&(/\b(drink|beverage)\b/i.test(m.desc||"")||/\b(lassi|horchata|agua de|juice|lemonade|milkshake|chai|latte|bissap|sobolo|champurrado|atole|punch)\b/i.test(m.name||"")),
+  salads:m=>(m.tags||[]).includes("salad")||/\bsalad\b/i.test(m.name||""),
+  bowls:m=>(m.tags||[]).includes("bowl")||/\bbowl\b/i.test(m.name||""),
+  "meal-prep":m=>(m.tags||[]).includes("meal-prep")
+};
+function mealInCollection(m,c){const rule=WM_COLLECTION_RULES[c];return rule?rule(m):true}
 function resetBrowseFilters(){
   document.getElementById("searchInput").value="";
+  const wmColl=document.getElementById("collectionFilter");if(wmColl)wmColl.value="all";
   document.getElementById("regionFilter").value="All regions";
   document.getElementById("dietFilter").value="all";
   document.getElementById("countryFilter").value="all";
@@ -3149,6 +3196,7 @@ function renderGrid(){
   const q=document.getElementById("searchInput").value.toLowerCase();
   const reg=document.getElementById("regionFilter").value;
   const diet=document.getElementById("dietFilter").value;
+  const collection=document.getElementById("collectionFilter")?.value||"all";
   const country=document.getElementById("countryFilter")?.value||"all";
   const maxTime=parseInt(document.getElementById("timeSlider")?.value||"180");
   const proteinMin=parseInt(document.getElementById("proteinSlider")?.value||"0");
@@ -3170,6 +3218,7 @@ function renderGrid(){
       }
     }
     if(country!=="all"&&m.country!==country)return false;
+    if(collection!=="all"&&!mealInCollection(m,collection))return false;
     if(maxTime<180&&parseMealMinutes(m.time)>maxTime)return false;
     if(proteinMin>0&&mealProtein(m)<proteinMin)return false;
     if(m.cal>cal||m.budget>bud||m.spice>sp)return false;
@@ -4968,7 +5017,7 @@ function wmRefreshMembershipUI(){
   if(manage)manage.style.display=plan==="explorer"?"none":"block";
   [["planner","Planner","Planner 🔒","chef"],["tour","Tour","Tour 🔒","chef"],["scan","Scan","Scan 🔒","passport"],["kids","Kids","Kids 🔒","chef"]].forEach(([name,on,off,need])=>{
     const lb=document.getElementById("nb-"+name)?.querySelector(".lb");
-    if(lb)lb.textContent=wmHasPlan(need)?on:off;
+    if(lb){lb.textContent=on;lb.classList.toggle("wm-locked",!wmHasPlan(need));}
   });
   const chefLb=document.getElementById("nb-chef")?.querySelector(".lb");
   if(chefLb)chefLb.textContent=wmHasPlan("chef")?"Chef":wmExplorerAIRemaining()>0?`Chef ${wmExplorerAIRemaining()}/5`:"Chef 🔒";
@@ -5644,6 +5693,154 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
     if(timer){ clearTimeout(timer); timer=null; }
     return realRenderGrid.apply(this,arguments);
   };
+})();
+</script>
+<style id="wm-browse-premium">
+/* WORLDMEALS BROWSE — premium first screen (presentation only; every filter keeps working) */
+#page-browse .brand-hero{display:none!important}
+#page-browse .premium-top{margin-top:6px!important;display:block!important;grid-template-columns:none!important}
+#page-browse .premium-top .search-wrap{width:100%!important;max-width:none!important;margin-left:0!important}
+/* One way to filter: Region · Country · Diet here, the rest lives in the meal mixer */
+#page-browse .filter-row .f-protein,#page-browse .filter-row .f-time,#page-browse .filter-row .f-spice,#page-browse .filter-row .f-calories,#page-browse .filter-row .f-budget{display:none!important}
+#page-browse .filter-row{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:8px!important}
+@media(max-width:900px){#page-browse .filter-row{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+/* Line icons instead of emojis */
+.wm-ico{width:23px;height:23px;fill:none;stroke:#5C4E40;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s ease,transform .2s ease}
+#page-browse .filter-group.f-region::before{content:""!important;width:22px;height:22px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%231E5B2C%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%228.5%22%2F%3E%3Cpath%20d%3D%22M3.5%2012h17M12%203.5c2.6%202.4%203.8%205.2%203.8%208.5S14.6%2018.1%2012%2020.5M12%203.5C9.4%205.9%208.2%208.7%208.2%2012s1.2%206.1%203.8%208.5%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat}
+#page-browse .filter-group.f-country::before{content:""!important;width:22px;height:22px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%231E5B2C%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M5.5%2021V4M5.5%204.5c4-2%206.5%202%2011%200v8.5c-4.5%202-7-2-11%200%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat}
+#page-browse .filter-group.f-diet::before{content:""!important;width:22px;height:22px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%231E5B2C%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M3.5%2011.5h17a8.5%208.5%200%200%201-17%200z%22%2F%3E%3Cpath%20d%3D%22M8%2011.5c-.6-2.6%201-4.8%203.6-5M12.5%2011.5c.2-2.8%202.2-4.6%205-4.4M9.5%208.5C9%206%2010%204%2012%203%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat}
+#page-browse .filter-group.f-collection::before{content:""!important;width:22px;height:22px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%231E5B2C%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%2020%2020%204M7%2013.5l3.5%203.5M9.5%2011l3.5%203.5M12%208.5l3.5%203.5%22%2F%3E%3Ccircle%20cx%3D%2217.5%22%20cy%3D%226.5%22%20r%3D%221%22%2F%3E%3C%2Fsvg%3E") center/contain no-repeat}
+/* Premium navigation: one icon family, brand colors */
+.bottom-nav .nav-btn .ic{display:grid;place-items:center;height:24px}
+.wm-ico{width:23px;height:23px;fill:none;stroke:#6B5A48;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s ease,fill .2s ease}
+.bottom-nav .nav-btn .lb{color:#6B5A48!important;font-weight:600!important}
+.bottom-nav .nav-btn.active .wm-ico{stroke:#14402c;fill:rgba(201,165,90,.28)}
+.bottom-nav .nav-btn.active .lb{color:#14402c!important;font-weight:700!important}
+.bottom-nav .nav-btn.active::before{background:rgba(20,64,44,.07)!important;box-shadow:inset 0 0 0 1px rgba(201,165,90,.45)!important}
+.nav-btn.active .ic{filter:none!important}
+.bottom-nav .nav-btn .lb{font-size:11px!important;letter-spacing:0!important;white-space:nowrap}
+@media(max-width:480px){.bottom-nav .nav-btn{padding-left:0!important;padding-right:0!important;min-width:0!important}.bottom-nav .nav-btn .lb{letter-spacing:-.01em!important}}
+@media(max-width:380px){.bottom-nav .nav-btn .lb{font-size:10.5px!important}}
+.bottom-nav .nav-btn .ic{position:relative}
+.bottom-nav .nav-btn:has(.lb.wm-locked) .ic::after{content:"";position:absolute;top:-3px;right:-7px;width:13px;height:13px;border-radius:50%;background:#FFFAF1 url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%239A7A35%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%225%22%20y%3D%2210.5%22%20width%3D%2214%22%20height%3D%2210%22%20rx%3D%222.5%22%2F%3E%3Cpath%20d%3D%22M8.5%2010.5V8a3.5%203.5%200%200%201%207%200v2.5%22%2F%3E%3C%2Fsvg%3E") center/9px no-repeat;box-shadow:0 0 0 1px rgba(201,165,90,.6)}
+/* Step 1 — welcome + green & gold contours */
+.wm-welcome{padding:10px 4px 16px}
+.wm-welcome-eyebrow{margin:0 0 8px;font:600 12px/1.4 Inter,system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#6B5232}
+.wm-welcome-title{margin:0;font:400 clamp(30px,4vw,46px)/1.08 "DM Serif Display",Georgia,serif;letter-spacing:-.015em;color:#14261B}
+.wm-welcome-title span{color:#E97622}
+.wm-welcome-sub{margin:8px 0 0;font:400 16px/1.5 Inter,system-ui,sans-serif;color:#4A3F34}
+#page-browse .search{border:1px solid rgba(201,165,90,.55)!important;box-shadow:0 0 0 1px rgba(20,64,44,.06),0 10px 24px -18px rgba(20,64,44,.45)!important;background:#FFFDF8!important}
+#page-browse .search:focus{border-color:#14402c!important;box-shadow:0 0 0 3px rgba(201,165,90,.35)!important}
+#page-browse .filter-row .filter-group{border:1px solid rgba(201,165,90,.55)!important;box-shadow:0 0 0 1px rgba(20,64,44,.05),0 10px 22px -18px rgba(20,64,44,.45)!important;background:#FFFDF8!important;border-radius:999px!important;min-height:0!important;padding-top:8px!important;padding-bottom:8px!important}
+#page-browse .filter-row .filter-group label{color:#6B5232!important;letter-spacing:.12em!important}
+#page-browse .filter-row .filter-group select{color:#14261B!important;font-weight:600!important;border:0!important;background:transparent!important}
+#page-browse .filter-row .filter-group:focus-within{border-color:#14402c!important;box-shadow:0 0 0 3px rgba(201,165,90,.3)!important}
+#page-browse .adv-filters{border:1px solid rgba(201,165,90,.55)!important;box-shadow:0 0 0 1px rgba(20,64,44,.05),0 14px 30px -22px rgba(20,64,44,.5)!important;background:#FFFDF8!important}
+#page-browse .results-toolbar{border:1px solid rgba(201,165,90,.4)!important;background:#FFFDF8!important}
+#page-browse .card{border:1px solid rgba(201,165,90,.45)!important;box-shadow:0 0 0 1px rgba(20,64,44,.04),0 22px 40px -30px rgba(20,64,44,.5)!important}
+/* Step 2 — A world of flavor + banners */
+.wm-home{margin:6px 0 22px}
+.wm-home[hidden]{display:none!important}
+.wm-home-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:6px 4px 12px}
+.wm-home-title{position:relative;margin:0;padding-bottom:8px;font:400 clamp(26px,3vw,34px)/1.1 "DM Serif Display",Georgia,serif;color:#14261B}
+.wm-home-title::after{content:"";position:absolute;left:0;bottom:0;width:28px;height:3px;border-radius:3px;background:#E97622}
+.wm-home-all{font:600 14px/1.2 Inter,system-ui,sans-serif;color:#14402c;text-decoration:none;white-space:nowrap}
+.wm-flavor-row{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 14px;margin:0 -4px;scrollbar-width:none}
+.wm-flavor-row::-webkit-scrollbar{display:none}
+.wm-flavor-card{flex:0 0 min(260px,74%);scroll-snap-align:start}
+.wm-flavor-open{display:flex;flex-direction:column;width:100%;height:100%;padding:0;text-align:left;cursor:pointer;background:#FFFDF8;border:1px solid rgba(201,165,90,.5);border-radius:22px;overflow:hidden;box-shadow:0 0 0 1px rgba(20,64,44,.04),0 18px 34px -26px rgba(20,64,44,.55);font:inherit;color:inherit;transition:transform .2s ease,box-shadow .2s ease}
+.wm-flavor-open:hover{transform:translateY(-2px)}
+.wm-flavor-open:focus-visible{outline:3px solid #E58A3D;outline-offset:3px}
+.wm-flavor-img{display:block;aspect-ratio:4/3;overflow:hidden;background:#EFE6D6}
+.wm-flavor-img img{display:block;width:100%;height:100%;object-fit:cover}
+.wm-flavor-body{display:flex;flex-direction:column;gap:4px;padding:14px 16px 16px;flex:1}
+.wm-flavor-body b{font:400 21px/1.2 "DM Serif Display",Georgia,serif;color:#14261B}
+.wm-flavor-country{font:500 14px/1.3 Inter,system-ui,sans-serif;color:#4A3F34}
+.wm-flavor-facts{font:500 13px/1.3 Inter,system-ui,sans-serif;color:#6B5232}
+.wm-flavor-btn{margin-top:10px;display:flex;align-items:center;justify-content:center;gap:6px;padding:11px 14px;border-radius:12px;background:#14402c;color:#FFFAF1;font:600 14px/1 Inter,system-ui,sans-serif;box-shadow:inset 0 0 0 1px rgba(201,165,90,.45)}
+.wm-banners{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:8px}
+.wm-banner{position:relative;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);align-items:stretch;min-height:150px;padding:0;text-align:left;cursor:pointer;border-radius:22px;overflow:hidden;border:1px solid rgba(201,165,90,.5);box-shadow:0 0 0 1px rgba(20,64,44,.04),0 18px 34px -26px rgba(20,64,44,.5);font:inherit;color:inherit}
+.wm-banner-scan{background:linear-gradient(120deg,#EEF4EC,#E3EDE0)}
+.wm-banner-kids{background:linear-gradient(120deg,#FBF1E4,#F6E4CF)}
+.wm-banner:focus-visible{outline:3px solid #E58A3D;outline-offset:3px}
+.wm-banner-text{display:flex;flex-direction:column;gap:6px;padding:18px 16px 16px 20px}
+.wm-banner-text b{font:400 21px/1.15 "DM Serif Display",Georgia,serif;color:#14261B}
+.wm-banner-text b i{font-style:normal;color:#E97622}
+.wm-banner-text>span:not(.wm-banner-cta){font:400 14px/1.5 Inter,system-ui,sans-serif;color:#3F362D}
+.wm-banner-cta{display:inline-flex;align-items:center;gap:9px;margin-top:6px;font:700 14px/1 Inter,system-ui,sans-serif;color:#14261B}
+.wm-banner-cta .wm-mix-disc{width:34px;height:34px}
+.wm-banner-cta .wm-mix-disc svg{width:12px;height:12px}
+.wm-banner-cta em{font-style:normal;border-bottom:1px solid rgba(20,38,27,.25);padding-bottom:2px}
+.wm-banner img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:760px){.wm-banners{grid-template-columns:minmax(0,1fr)}}
+@media(min-width:900px){.wm-flavor-card{flex-basis:calc((100% - 28px)/3)}}
+/* Premium BACK: green disc, gold ring — always returns to the landing page */
+nav .wm-back{display:grid;place-items:center;width:44px;height:44px;flex:0 0 44px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#2E7D52,#14402c 70%);box-shadow:0 0 0 2px #C9A55A,0 0 0 4px rgba(201,165,90,.22),0 8px 18px rgba(18,59,43,.28);text-decoration:none;transition:transform .2s ease}
+nav .wm-back svg{width:20px;height:20px;fill:none;stroke:#FFFAF1;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;margin-left:-1px}
+nav .wm-back:hover{transform:scale(1.05)}
+nav .wm-back:focus-visible{outline:3px solid #E58A3D;outline-offset:4px}
+@media(max-width:480px){nav .wm-back{width:40px;height:40px;flex-basis:40px}}
+/* Depth — gentle press, hover lift, embossed passport stamps */
+@media(prefers-reduced-motion:no-preference){
+  .card,.wm-flavor-open,.wm-banner,.view-recipe-btn,.wm-flavor-btn,#advToggleBtn,.wm-back,.bottom-nav .nav-btn,.adv-btn,.fav-btn,.country-badge-card{transition:transform .18s cubic-bezier(.2,.8,.2,1),box-shadow .2s ease!important}
+  .card:active,.wm-flavor-open:active,.wm-banner:active{transform:scale(.985)!important}
+  .view-recipe-btn:active,.wm-flavor-btn:active,.adv-btn:active,.fav-btn:active{transform:scale(.97)!important}
+  #advToggleBtn:active .wm-mix-disc,.wm-banner:active .wm-mix-disc,.wm-back:active{transform:scale(.93)!important}
+  @media(hover:hover){
+    #page-browse .card:hover,.wm-banner:hover{transform:translateY(-3px)!important;box-shadow:0 0 0 1px rgba(20,64,44,.05),0 28px 46px -28px rgba(20,64,44,.55)!important}
+    .country-badge-card:hover{transform:translateY(-2px) rotate(-.6deg)!important}
+  }
+}
+.country-badge-card{border:1.5px dashed rgba(154,122,53,.55)!important;background:radial-gradient(circle at 30% 20%,#FFFDF6,#F7ECD6 75%)!important;box-shadow:inset 0 2px 3px rgba(255,255,255,.9),inset 0 -3px 8px rgba(122,77,23,.12),0 10px 22px -14px rgba(122,77,23,.45)!important}
+.country-badge-flag{filter:drop-shadow(0 1px 0 rgba(255,255,255,.9)) drop-shadow(0 -1px 0 rgba(122,77,23,.25))!important}
+.country-badge-name{font:400 17px/1.2 'DM Serif Display',Georgia,serif!important;color:#14261B!important;text-shadow:0 1px 0 rgba(255,255,255,.85)}
+/* Collapsed mixer: one compact row */
+.adv-filters:has(.adv-body.collapsed){padding-top:14px!important;padding-bottom:14px!important}
+.adv-filters:has(.adv-body.collapsed) .adv-filters-head{margin-bottom:0!important}
+.adv-filters:has(.adv-body.collapsed) .adv-filters-head::before{display:none!important}
+.adv-filters:has(.adv-body.collapsed) .wm-mix-label::after{content:" · Calories, budget, time, spice, protein";font-weight:500;color:#6B5A48;border:0}
+@media(max-width:620px){.adv-filters:has(.adv-body.collapsed) .wm-mix-label::after{content:""}}
+/* Meal mixer header */
+.adv-filters-head::before{content:"Meal mixer"!important;font:400 20px/1.2 "DM Serif Display",Georgia,serif!important;color:#14261B!important;letter-spacing:0!important}
+#advToggleBtn.wm-mix-btn{display:inline-flex!important;align-items:center;gap:10px;background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;color:#14261B!important;font:700 15px/1 Inter,system-ui,sans-serif!important;cursor:pointer}
+.wm-mix-disc{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#2E7D52,#14402c 70%);box-shadow:0 0 0 2px #C9A55A,0 0 0 4px rgba(201,165,90,.25),0 8px 18px rgba(18,59,43,.3);transition:transform .2s ease}
+.wm-mix-disc svg{width:15px;height:15px;fill:#FFFAF1;margin-left:2px}
+#advToggleBtn.is-open .wm-mix-disc svg{transform:rotate(90deg)}
+#advToggleBtn:hover .wm-mix-disc{transform:scale(1.06)}
+.wm-mix-label{border-bottom:1px solid rgba(20,38,27,.25);padding-bottom:3px}
+#advToggleBtn:focus-visible{outline:3px solid #E58A3D;outline-offset:4px;border-radius:999px}
+/* Honest cards: no star ratings until real people rate dishes */
+.card-rating{display:none!important}
+.card-name{font:400 20px/1.2 "DM Serif Display",Georgia,serif!important;letter-spacing:0!important;color:#14261B!important}
+.view-recipe-btn{background:#14402c!important;color:#FFFAF1!important;border:1px solid #14402c!important;box-shadow:inset 0 0 0 1px rgba(201,165,90,.45)!important;font-weight:600!important}
+.view-recipe-btn::after{content:" →"}
+.view-recipe-btn:hover{background:#1E5B2C!important;border-color:#1E5B2C!important}
+/* Bottom menu stays clean cream over food photos */
+.bottom-nav{background:rgba(255,250,241,.86)!important;-webkit-backdrop-filter:blur(18px) saturate(120%)!important;backdrop-filter:blur(18px) saturate(120%)!important;border:1px solid rgba(255,255,255,.45)!important;box-shadow:0 12px 30px rgba(43,31,20,.10),inset 0 1px 0 rgba(255,255,255,.55)!important}
+.bottom-nav .nav-btn .lb{text-shadow:0 0 6px rgba(255,250,241,.95),0 0 2px rgba(255,250,241,.9)}
+.bottom-nav .nav-btn .ic{filter:drop-shadow(0 0 5px rgba(255,250,241,.85))}
+#page-browse{padding-bottom:calc(120px + env(safe-area-inset-bottom))!important}
+</style>
+<script>
+/* WORLDMEALS HOME — "A world of flavor" row; hidden while searching or filtering */
+(function(){
+  const PICKS=["BBQ Ribs","Jollof Rice","Butter Chicken","Sushi","Tacos al Pastor","Pad Thai","Ramen","Feijoada","Chicken Adobo"];
+  function esc(s){return String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+  function build(){
+    const row=document.getElementById("wmFlavorRow");if(!row||row.dataset.ready||typeof MEALS==="undefined"||!MEALS.length)return;
+    const list=PICKS.map(n=>MEALS.find(m=>m.name===n)).filter(Boolean);
+    row.innerHTML=list.map(m=>'<article class="wm-flavor-card" role="listitem"><button type="button" class="wm-flavor-open" onclick="openModal('+Number(m.id)+')" aria-label="View recipe: '+esc(m.name)+'"><span class="wm-flavor-img">'+(typeof foodImageHTML==="function"?foodImageHTML(m):'<img src="'+esc(m.image)+'" alt="">')+'</span><span class="wm-flavor-body"><b>'+esc(m.name)+'</b><span class="wm-flavor-country">'+(typeof countryFlag==="function"?countryFlag(m.country):"")+' '+esc(m.country)+'</span><span class="wm-flavor-facts">'+esc(m.time)+' · '+esc(m.cal)+' kcal</span><span class="wm-flavor-btn">View recipe <span aria-hidden="true">→</span></span></span></button></article>').join("");
+    row.dataset.ready="1";
+  }
+  function isDefault(){
+    const v=id=>document.getElementById(id)?.value;
+    return !(v("searchInput")||"").trim()&&v("regionFilter")==="All regions"&&v("countryFilter")==="all"&&v("dietFilter")==="all"&&(v("collectionFilter")||"all")==="all"
+      &&v("calSlider")==="1000"&&v("budSlider")==="40"&&v("timeSlider")==="180"&&v("spSlider")==="5"&&(v("proteinSlider")||"0")==="0";
+  }
+  function update(){build();const s=document.getElementById("wmHome");if(s)s.hidden=!isDefault();}
+  if(typeof renderGrid==="function"){const orig=renderGrid;window.renderGrid=renderGrid=function(){const out=orig.apply(this,arguments);try{update()}catch(e){}return out};}
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",update);else update();
+  setTimeout(update,600);
 })();
 </script>
 </body>
