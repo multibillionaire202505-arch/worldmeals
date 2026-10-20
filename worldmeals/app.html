@@ -3551,10 +3551,12 @@ function setViewMode(mode){
 }
 
 /* WORLDMEALS COLLECTIONS — curated groups from existing dish names and tags */
+const WM_BBQ_IDS=new Set([5,14,60,65,135,168,170,255,293,404,406,437,483,515,540,619,620,627,636,644,724,725,756,767,836,896,929,945,959,1010,8011,8059,8060,8087,8125,8138,8140,8161,8183]);
+const WM_DRINK_IDS=new Set([8058]);
 const WM_COLLECTION_RULES={
-  bbq:m=>/\b(bbq|barbecue|barbeque|grill|grilled|kebabs?|kabob|satay|suya|churrasco|asado|braai|yakitori|ribs|brisket|skewers?|tandoori|souvlaki|jerk|nyama choma|samgyeopsal|bulgogi|cevapi|seekh|mashwi|bakar|nuong|choma)\b/i.test(m.name||"")&&!/\b(bowl|salad)\b/i.test(m.name||""),
+  bbq:m=>WM_BBQ_IDS.has(m.id)||(m.tags||[]).includes("bbq")||/\b(bbq|barbecue|barbeque|grill|grilled|kebabs?|kabob|satay|suya|churrasco|asado|braai|yakitori|ribs|brisket|skewers?|tandoori|souvlaki|jerk|nyama choma|samgyeopsal|bulgogi|cevapi|seekh|mashwi|bakar|nuong|choma)\b/i.test(m.name||"")&&!/\b(bowl|salad)\b/i.test(m.name||""),
   smoothies:m=>(m.tags||[]).includes("smoothie")||/\bsmoothie\b/i.test(m.name||""),
-  drinks:m=>!((m.tags||[]).includes("smoothie")||/\bsmoothie\b/i.test(m.name||""))&&(/\b(drink|beverage)\b/i.test(m.desc||"")||/\b(lassi|horchata|agua de|juice|lemonade|milkshake|chai|latte|bissap|sobolo|champurrado|atole|punch)\b/i.test(m.name||"")),
+  drinks:m=>WM_DRINK_IDS.has(m.id)||(m.tags||[]).includes("drink")||!((m.tags||[]).includes("smoothie")||/\bsmoothie\b/i.test(m.name||""))&&(/\b(drink|beverage)\b/i.test(m.desc||"")||/\b(lassi|horchata|agua de|juice|lemonade|milkshake|chai|latte|bissap|sobolo|champurrado|atole|punch)\b/i.test(m.name||"")),
   salads:m=>(m.tags||[]).includes("salad")||/\bsalad\b/i.test(m.name||""),
   bowls:m=>(m.tags||[]).includes("bowl")||/\bbowl\b/i.test(m.name||""),
   "meal-prep":m=>(m.tags||[]).includes("meal-prep")
