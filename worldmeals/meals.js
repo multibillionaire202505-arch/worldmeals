@@ -1,4 +1,5 @@
 // WorldMeals database — reviewed 2026-10-17
+// 2026-10-19: added 23 dishes (ids 8184–8206): 11 alcohol-free drinks (tag "drink") and 12 barbecue dishes (tag "bbq"). Their nutrition, cost and time are estimates.
 // All photos use existing /images/dishes/*.jpg paths; upload the matching assets.
 // Compatibility: existing IDs, names, order, image paths and meal field names retained.
 // Content pass: 767 dishes updated; 1710 repeated substitution entries corrected, plus dish-specific edits.
@@ -81063,5 +81064,1158 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 40,
     "fiber": 2,
     "image": "/images/dishes/Kabab-Koobideh.jpg"
+  },
+  {
+    "id": 8184,
+    "name": "Kunu",
+    "country": "Nigeria",
+    "region": "Africa",
+    "emoji": "🥛",
+    "cal": 180,
+    "budget": 1,
+    "time": "12 hrs",
+    "spice": 1,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Northern Nigerian alcohol-free millet drink, smooth and lightly spiced with ginger and cloves, served chilled.",
+    "ingredients": [
+      "Millet",
+      "Fresh ginger",
+      "Cloves",
+      "Dates or sugar",
+      "Water"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Millet",
+          "to": "Sorghum | Brown rice",
+          "note": "Soak the same way; the taste is a little milder"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 38,
+    "fat": 1,
+    "fiber": 2,
+    "image": "/images/dishes/Kunu.jpg"
+  },
+  {
+    "id": 8185,
+    "name": "Moroccan Mint Tea",
+    "country": "Morocco",
+    "region": "Africa",
+    "emoji": "🍵",
+    "cal": 60,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Alcohol-free Moroccan green tea brewed with fresh spearmint and sugar, poured from high above into small glasses.",
+    "ingredients": [
+      "Chinese gunpowder green tea",
+      "Fresh spearmint",
+      "Sugar",
+      "Boiling water"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Fresh spearmint",
+          "to": "Any fresh mint",
+          "note": "Peppermint is stronger; use a little less"
+        }
+      ]
+    },
+    "protein": 0,
+    "carbs": 15,
+    "fat": 0,
+    "fiber": 0,
+    "image": "/images/dishes/Moroccan-Mint-Tea.jpg"
+  },
+  {
+    "id": 8186,
+    "name": "Masala Chai",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "☕",
+    "cal": 120,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 1,
+    "tags": [
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Alcohol-free Indian spiced milk tea simmered with black tea, ginger, cardamom and cinnamon.",
+    "ingredients": [
+      "Black tea",
+      "Milk",
+      "Water",
+      "Fresh ginger",
+      "Green cardamom",
+      "Cinnamon stick",
+      "Sugar"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Oat milk keeps it creamy"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk | Almond milk",
+          "note": "Add at the end so it doesn't split"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 18,
+    "fat": 4,
+    "fiber": 0,
+    "image": "/images/dishes/Masala-Chai.jpg"
+  },
+  {
+    "id": 8187,
+    "name": "Teh Tarik",
+    "country": "Malaysia",
+    "region": "Asia",
+    "emoji": "☕",
+    "cal": 160,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Alcohol-free Malaysian pulled milk tea, poured back and forth between cups until thick and frothy.",
+    "ingredients": [
+      "Strong black tea",
+      "Sweetened condensed milk",
+      "Evaporated milk",
+      "Hot water"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Sweetened condensed milk",
+          "to": "Coconut condensed milk",
+          "note": "Gives a light coconut note"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Evaporated milk",
+          "to": "Oat milk | Coconut milk",
+          "note": "Pull it well to build foam"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 26,
+    "fat": 5,
+    "fiber": 0,
+    "image": "/images/dishes/Teh-Tarik.jpg"
+  },
+  {
+    "id": 8188,
+    "name": "Thai Iced Tea",
+    "country": "Thailand",
+    "region": "Asia",
+    "emoji": "🥤",
+    "cal": 190,
+    "budget": 1,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Alcohol-free Thai black tea spiced with star anise, sweetened and poured over ice with a swirl of milk.",
+    "ingredients": [
+      "Thai tea leaves or black tea",
+      "Star anise",
+      "Sugar",
+      "Sweetened condensed milk",
+      "Evaporated milk",
+      "Ice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Sweetened condensed milk",
+          "to": "Coconut condensed milk",
+          "note": "Keeps the creamy swirl"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Evaporated milk",
+          "to": "Coconut milk | Oat milk",
+          "note": "Coconut milk suits the Thai flavor"
+        }
+      ]
+    },
+    "protein": 3,
+    "carbs": 34,
+    "fat": 5,
+    "fiber": 0,
+    "image": "/images/dishes/Thai-Iced-Tea.jpg"
+  },
+  {
+    "id": 8189,
+    "name": "Cà Phê Sữa Đá",
+    "country": "Vietnam",
+    "region": "Asia",
+    "emoji": "☕",
+    "cal": 150,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Alcohol-free Vietnamese iced coffee: strong drip coffee over sweetened condensed milk and ice.",
+    "ingredients": [
+      "Dark-roast ground coffee",
+      "Sweetened condensed milk",
+      "Hot water",
+      "Ice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Sweetened condensed milk",
+          "to": "Coconut condensed milk",
+          "note": "Same sweetness, light coconut taste"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Sweetened condensed milk",
+          "to": "Coconut condensed milk | Oat milk + sugar",
+          "note": "Stir well before adding ice"
+        }
+      ]
+    },
+    "protein": 3,
+    "carbs": 24,
+    "fat": 4,
+    "fiber": 0,
+    "image": "/images/dishes/Ca-Phe-Sua-Da.jpg"
+  },
+  {
+    "id": 8190,
+    "name": "Ayran",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "🥛",
+    "cal": 90,
+    "budget": 1,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegetarian",
+      "dairy",
+      "gluten-free"
+    ],
+    "desc": "Alcohol-free Turkish yogurt drink, whisked with cold water and a pinch of salt until frothy.",
+    "ingredients": [
+      "Plain yogurt",
+      "Cold water",
+      "Salt",
+      "Fresh mint (optional)"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Plain yogurt",
+          "to": "Kefir | Greek yogurt thinned with water",
+          "note": "Kefir is a little more sour"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 8,
+    "fat": 4,
+    "fiber": 0,
+    "image": "/images/dishes/Ayran.jpg"
+  },
+  {
+    "id": 8191,
+    "name": "Limonana",
+    "country": "Israel",
+    "region": "Middle East",
+    "emoji": "🥤",
+    "cal": 110,
+    "budget": 1,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Alcohol-free frozen lemonade blended with lots of fresh mint, bright green and very refreshing.",
+    "ingredients": [
+      "Fresh lemons",
+      "Fresh mint",
+      "Sugar or honey",
+      "Ice",
+      "Water"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Fresh lemons",
+          "to": "Limes",
+          "note": "Slightly more tart; add a little extra sugar"
+        }
+      ]
+    },
+    "protein": 0,
+    "carbs": 28,
+    "fat": 0,
+    "fiber": 1,
+    "image": "/images/dishes/Limonana.jpg"
+  },
+  {
+    "id": 8192,
+    "name": "Jallab",
+    "country": "Lebanon",
+    "region": "Middle East",
+    "emoji": "🥤",
+    "cal": 210,
+    "budget": 2,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Alcohol-free Lebanese drink of date and grape molasses with rose water, served over crushed ice with pine nuts and raisins.",
+    "ingredients": [
+      "Jallab syrup (date and grape molasses)",
+      "Rose water",
+      "Crushed ice",
+      "Pine nuts",
+      "Golden raisins"
+    ],
+    "swaps": {
+      "nuts": [
+        {
+          "from": "Pine nuts",
+          "to": "Toasted pumpkin seeds | Leave out",
+          "note": "Keeps the crunch without nuts"
+        }
+      ],
+      "local": [
+        {
+          "from": "Jallab syrup (date and grape molasses)",
+          "to": "Date syrup + a little grape juice",
+          "note": "A close homemade version"
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 44,
+    "fat": 4,
+    "fiber": 1,
+    "image": "/images/dishes/Jallab.jpg"
+  },
+  {
+    "id": 8193,
+    "name": "Sikhye",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🥤",
+    "cal": 130,
+    "budget": 1,
+    "time": "6 hrs",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten"
+    ],
+    "desc": "Alcohol-free Korean sweet rice drink made with malted barley, served cold with soft rice grains floating on top.",
+    "ingredients": [
+      "Malted barley powder",
+      "Cooked short-grain rice",
+      "Sugar",
+      "Water",
+      "Pine nuts (optional)"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Malted barley powder",
+          "to": "Store-bought sikhye",
+          "note": "Barley malt has no gluten-free swap; buy ready-made if needed"
+        }
+      ]
+    },
+    "protein": 1,
+    "carbs": 32,
+    "fat": 0,
+    "fiber": 0,
+    "image": "/images/dishes/Sikhye.jpg"
+  },
+  {
+    "id": 8194,
+    "name": "Chicha Morada",
+    "country": "Peru",
+    "region": "Americas",
+    "emoji": "🥤",
+    "cal": 120,
+    "budget": 1,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Alcohol-free Peruvian purple corn drink simmered with pineapple, cinnamon and cloves, finished with lime.",
+    "ingredients": [
+      "Dried purple corn",
+      "Pineapple peel and pieces",
+      "Apple",
+      "Cinnamon stick",
+      "Cloves",
+      "Lime",
+      "Sugar"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Dried purple corn",
+          "to": "Purple corn powder | Blueberry + blackberry juice",
+          "note": "The berry version is close in color, not in taste"
+        }
+      ]
+    },
+    "protein": 1,
+    "carbs": 30,
+    "fat": 0,
+    "fiber": 1,
+    "image": "/images/dishes/Chicha-Morada.jpg"
+  },
+  {
+    "id": 8195,
+    "name": "Galbi",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🍖",
+    "cal": 620,
+    "budget": 12,
+    "time": "45 min",
+    "spice": 1,
+    "tags": [
+      "bbq",
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Korean grilled beef short ribs in a sweet soy, pear and garlic marinade, eaten wrapped in lettuce.",
+    "ingredients": [
+      "Beef short ribs (flanken cut)",
+      "Soy sauce",
+      "Asian pear",
+      "Garlic",
+      "Sesame oil",
+      "Brown sugar",
+      "Scallions",
+      "Lettuce leaves"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Beef short ribs (flanken cut)",
+          "to": "King oyster mushrooms | Firm tofu",
+          "note": "Score and marinate the same way"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Choose one labeled gluten-free"
+        }
+      ],
+      "local": [
+        {
+          "from": "Asian pear",
+          "to": "Ripe pear | Kiwi",
+          "note": "Kiwi tenderizes fast; marinate under 1 hour"
+        }
+      ]
+    },
+    "protein": 38,
+    "carbs": 22,
+    "fat": 42,
+    "fiber": 1,
+    "image": "/images/dishes/Galbi.jpg"
+  },
+  {
+    "id": 8196,
+    "name": "Chuanr",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🍢",
+    "cal": 480,
+    "budget": 9,
+    "time": "30 min",
+    "spice": 3,
+    "tags": [
+      "bbq",
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Xinjiang-style lamb skewers grilled over high heat and coated in cumin, chili flakes and salt.",
+    "ingredients": [
+      "Lamb shoulder",
+      "Ground cumin",
+      "Chili flakes",
+      "Sichuan pepper",
+      "Salt",
+      "Vegetable oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lamb shoulder",
+          "to": "Firm tofu | Seitan | King oyster mushrooms",
+          "note": "Seitan contains gluten"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Chili flakes",
+          "to": "Sweet paprika",
+          "note": "Same color, no heat"
+        }
+      ],
+      "local": [
+        {
+          "from": "Lamb shoulder",
+          "to": "Beef chuck | Chicken thigh",
+          "note": "Cook chicken all the way through"
+        }
+      ]
+    },
+    "protein": 34,
+    "carbs": 4,
+    "fat": 36,
+    "fiber": 1,
+    "image": "/images/dishes/Chuanr.jpg"
+  },
+  {
+    "id": 8197,
+    "name": "Shish Tawook",
+    "country": "Lebanon",
+    "region": "Middle East",
+    "emoji": "🍢",
+    "cal": 520,
+    "budget": 8,
+    "time": "40 min",
+    "spice": 1,
+    "tags": [
+      "bbq",
+      "high-protein",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Lebanese grilled chicken skewers marinated in yogurt, lemon and garlic, served with pita and garlic sauce.",
+    "ingredients": [
+      "Chicken breast",
+      "Plain yogurt",
+      "Lemon",
+      "Garlic",
+      "Paprika",
+      "Olive oil",
+      "Pita bread",
+      "Toum (garlic sauce)"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken breast",
+          "to": "Firm tofu | Seitan",
+          "note": "Seitan contains gluten"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Plain yogurt",
+          "to": "Coconut yogurt | Extra olive oil + lemon",
+          "note": "Keeps the meat juicy"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Pita bread",
+          "to": "Gluten-free flatbread | Lettuce wraps",
+          "note": "Warm the flatbread before serving"
+        }
+      ]
+    },
+    "protein": 42,
+    "carbs": 34,
+    "fat": 22,
+    "fiber": 2,
+    "image": "/images/dishes/Shish-Tawook.jpg"
+  },
+  {
+    "id": 8198,
+    "name": "Sosaties",
+    "country": "South Africa",
+    "region": "Africa",
+    "emoji": "🍢",
+    "cal": 560,
+    "budget": 9,
+    "time": "1 hr",
+    "spice": 2,
+    "tags": [
+      "bbq",
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "South African braai skewers of lamb, dried apricots and onion in a sweet curry marinade.",
+    "ingredients": [
+      "Lamb leg",
+      "Dried apricots",
+      "Onion",
+      "Bell pepper",
+      "Curry powder",
+      "Apricot jam",
+      "Vinegar",
+      "Garlic"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lamb leg",
+          "to": "Firm tofu | Halloumi-style vegan cheese | Chickpea patties",
+          "note": "Grill until golden"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Curry powder",
+          "to": "Mild curry powder",
+          "note": "Same flavor, less heat"
+        }
+      ],
+      "local": [
+        {
+          "from": "Lamb leg",
+          "to": "Chicken thigh | Pork shoulder",
+          "note": "Cook chicken all the way through"
+        }
+      ]
+    },
+    "protein": 36,
+    "carbs": 34,
+    "fat": 30,
+    "fiber": 3,
+    "image": "/images/dishes/Sosaties.jpg"
+  },
+  {
+    "id": 8199,
+    "name": "Pinchos Morunos",
+    "country": "Spain",
+    "region": "Europe",
+    "emoji": "🍢",
+    "cal": 470,
+    "budget": 7,
+    "time": "40 min",
+    "spice": 1,
+    "tags": [
+      "bbq",
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Andalusian pork skewers marinated in smoked paprika, cumin, garlic and lemon, grilled until charred.",
+    "ingredients": [
+      "Pork shoulder",
+      "Smoked paprika",
+      "Ground cumin",
+      "Garlic",
+      "Lemon",
+      "Olive oil",
+      "Fresh parsley"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pork shoulder",
+          "to": "Firm tofu | Seitan | Mushrooms",
+          "note": "Seitan contains gluten"
+        }
+      ],
+      "local": [
+        {
+          "from": "Pork shoulder",
+          "to": "Chicken thigh | Lamb",
+          "note": "Chicken is the most common swap in Spain"
+        }
+      ]
+    },
+    "protein": 36,
+    "carbs": 4,
+    "fat": 34,
+    "fiber": 1,
+    "image": "/images/dishes/Pinchos-Morunos.jpg"
+  },
+  {
+    "id": 8200,
+    "name": "Inihaw na Liempo",
+    "country": "Philippines",
+    "region": "Asia",
+    "emoji": "🥓",
+    "cal": 720,
+    "budget": 8,
+    "time": "45 min",
+    "spice": 1,
+    "tags": [
+      "bbq",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Filipino grilled pork belly marinated in soy, calamansi and garlic, served with rice and a vinegar dip.",
+    "ingredients": [
+      "Pork belly",
+      "Soy sauce",
+      "Calamansi",
+      "Garlic",
+      "Brown sugar",
+      "Cane vinegar",
+      "Steamed rice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pork belly",
+          "to": "Firm tofu | Eggplant",
+          "note": "Grill until well charred"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Choose one labeled gluten-free"
+        }
+      ],
+      "local": [
+        {
+          "from": "Calamansi",
+          "to": "Lime + a little orange juice",
+          "note": "Close to calamansi's sweet-sour taste"
+        }
+      ]
+    },
+    "protein": 28,
+    "carbs": 48,
+    "fat": 46,
+    "fiber": 1,
+    "image": "/images/dishes/Inihaw-na-Liempo.jpg"
+  },
+  {
+    "id": 8201,
+    "name": "Moo Ping",
+    "country": "Thailand",
+    "region": "Asia",
+    "emoji": "🍢",
+    "cal": 540,
+    "budget": 6,
+    "time": "40 min",
+    "spice": 1,
+    "tags": [
+      "bbq",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Thai street-food pork skewers in a coconut, garlic and palm sugar marinade, grilled and served with sticky rice.",
+    "ingredients": [
+      "Pork shoulder",
+      "Coconut milk",
+      "Garlic",
+      "Palm sugar",
+      "Fish sauce",
+      "Oyster sauce",
+      "White pepper",
+      "Sticky rice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pork shoulder",
+          "to": "Firm tofu | Seitan",
+          "note": "Seitan contains gluten"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Oyster sauce",
+          "to": "Gluten-free oyster sauce",
+          "note": "Many brands contain wheat; check the label"
+        }
+      ],
+      "local": [
+        {
+          "from": "Palm sugar",
+          "to": "Brown sugar",
+          "note": "Slightly less caramel flavor"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 52,
+    "fat": 22,
+    "fiber": 1,
+    "image": "/images/dishes/Moo-Ping.jpg"
+  },
+  {
+    "id": 8202,
+    "name": "Tsukune",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🍢",
+    "cal": 430,
+    "budget": 6,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "bbq",
+      "high-protein",
+      "eggs",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Japanese grilled chicken meatball skewers glazed with sweet soy tare, often dipped in egg yolk.",
+    "ingredients": [
+      "Ground chicken",
+      "Scallions",
+      "Fresh ginger",
+      "Panko",
+      "Egg",
+      "Soy sauce",
+      "Mirin",
+      "Sugar"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Ground chicken",
+          "to": "Firm tofu + mushrooms",
+          "note": "Press the tofu well so the balls hold"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Leave out the dipping yolk | 1 tbsp cornstarch in the mix",
+          "note": "Cornstarch helps them hold together"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Choose one labeled gluten-free"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 22,
+    "fat": 24,
+    "fiber": 1,
+    "image": "/images/dishes/Tsukune.jpg"
+  },
+  {
+    "id": 8203,
+    "name": "Tandoori Chicken",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍗",
+    "cal": 480,
+    "budget": 7,
+    "time": "1 hr",
+    "spice": 3,
+    "tags": [
+      "bbq",
+      "high-protein",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Indian chicken marinated in yogurt and tandoori spices, roasted over high heat until charred, with lemon and onion.",
+    "ingredients": [
+      "Chicken legs",
+      "Plain yogurt",
+      "Tandoori masala",
+      "Kashmiri chili powder",
+      "Garlic",
+      "Fresh ginger",
+      "Lemon",
+      "Red onion"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken legs",
+          "to": "Cauliflower | Firm tofu | Paneer-style tofu",
+          "note": "Roast until the edges char"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Plain yogurt",
+          "to": "Coconut yogurt",
+          "note": "Keeps the marinade thick"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Kashmiri chili powder",
+          "to": "Sweet paprika",
+          "note": "Keeps the red color, less heat"
+        }
+      ]
+    },
+    "protein": 44,
+    "carbs": 10,
+    "fat": 28,
+    "fiber": 2,
+    "image": "/images/dishes/Tandoori-Chicken.jpg"
+  },
+  {
+    "id": 8204,
+    "name": "Carne Asada",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🥩",
+    "cal": 580,
+    "budget": 10,
+    "time": "45 min",
+    "spice": 2,
+    "tags": [
+      "bbq",
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Mexican grilled skirt steak marinated in citrus, garlic and chili, sliced thin for tacos with salsa verde.",
+    "ingredients": [
+      "Skirt steak",
+      "Orange juice",
+      "Lime",
+      "Garlic",
+      "Jalapeño",
+      "Cilantro",
+      "Corn tortillas",
+      "Salsa verde"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Skirt steak",
+          "to": "Portobello mushrooms | Seitan",
+          "note": "Seitan contains gluten"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Jalapeño",
+          "to": "Green bell pepper",
+          "note": "Same freshness, no heat"
+        }
+      ],
+      "local": [
+        {
+          "from": "Skirt steak",
+          "to": "Flank steak | Sirloin",
+          "note": "Slice thin against the grain"
+        }
+      ]
+    },
+    "protein": 40,
+    "carbs": 36,
+    "fat": 30,
+    "fiber": 5,
+    "image": "/images/dishes/Carne-Asada.jpg"
+  },
+  {
+    "id": 8205,
+    "name": "Chichinga",
+    "country": "Ghana",
+    "region": "Africa",
+    "emoji": "🍢",
+    "cal": 510,
+    "budget": 6,
+    "time": "40 min",
+    "spice": 3,
+    "tags": [
+      "bbq",
+      "high-protein",
+      "nuts",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Ghanaian street kebabs of beef coated in a spicy roasted peanut rub, grilled and served with onion and tomato.",
+    "ingredients": [
+      "Beef sirloin",
+      "Ground roasted peanuts",
+      "Cayenne pepper",
+      "Ginger powder",
+      "Garlic powder",
+      "Onion",
+      "Tomato"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Beef sirloin",
+          "to": "Firm tofu | Seitan",
+          "note": "Seitan contains gluten"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Ground roasted peanuts",
+          "to": "Toasted sunflower seed flour | Toasted sesame seeds",
+          "note": "Keeps the nutty coating"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Cayenne pepper",
+          "to": "Sweet paprika",
+          "note": "Same color, mild"
+        }
+      ]
+    },
+    "protein": 38,
+    "carbs": 12,
+    "fat": 34,
+    "fiber": 3,
+    "image": "/images/dishes/Chichinga.jpg"
+  },
+  {
+    "id": 8206,
+    "name": "Jerk Pork",
+    "country": "Jamaica",
+    "region": "Americas",
+    "emoji": "🐖",
+    "cal": 640,
+    "budget": 8,
+    "time": "2 hrs",
+    "spice": 4,
+    "tags": [
+      "bbq",
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Jamaican pork marinated in scotch bonnet, allspice and thyme, slow-grilled until smoky, with rice and peas.",
+    "ingredients": [
+      "Pork shoulder",
+      "Scotch bonnet pepper",
+      "Allspice",
+      "Fresh thyme",
+      "Scallions",
+      "Garlic",
+      "Lime",
+      "Rice and peas"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pork shoulder",
+          "to": "Jackfruit | Firm tofu | Cauliflower",
+          "note": "Grill until charred"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Scotch bonnet pepper",
+          "to": "Half a scotch bonnet, seeds removed | Bell pepper",
+          "note": "Bell pepper keeps the flavor with no heat"
+        }
+      ],
+      "local": [
+        {
+          "from": "Pork shoulder",
+          "to": "Chicken thigh",
+          "note": "Jerk chicken uses the same marinade"
+        }
+      ]
+    },
+    "protein": 40,
+    "carbs": 42,
+    "fat": 34,
+    "fiber": 4,
+    "image": "/images/dishes/Jerk-Pork.jpg"
   }
 ];
