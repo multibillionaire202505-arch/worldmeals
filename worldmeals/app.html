@@ -2311,9 +2311,6 @@ html body .celebration-badge{background:#F7F3E8!important;background-image:none!
 html body .celebration-badge strong{color:#14402c!important}
 html body .celebration-btn{background:#14402c!important;background-image:none!important;color:#FFFAF1!important;border:1px solid #14402c!important;box-shadow:inset 0 0 0 1px rgba(201,165,90,.45),0 14px 26px -14px rgba(20,64,44,.6)!important}
 html body .country-badge-card::before{background:radial-gradient(circle,rgba(201,165,90,.22),transparent 68%)!important}
-/* Celebration confetti falls behind the card so the words stay readable */
-html body .tour-celebration .confetti-piece{z-index:0!important}
-html body .tour-celebration-card{z-index:1!important}
 /* Quick "How was …?" bar: cream, gold edge, line-icon thumbs */
 html body .wm-quick-feedback{background:#FFFDF8!important;color:#14261B!important;border:1px solid rgba(201,165,90,.55)!important;box-shadow:0 14px 34px rgba(20,38,27,.18)!important}
 html body .wm-quick-copy{font-size:14px!important;font-weight:700!important;color:#14261B!important}
@@ -4148,7 +4145,7 @@ function launchCountryConfetti(){
     piece.style.animationDelay=(Math.random()*.55)+"s";
     piece.style.width=(6+Math.random()*7)+"px";
     piece.style.height=(9+Math.random()*11)+"px";
-    (document.getElementById("tourCelebration")||document.body).appendChild(piece);
+    document.body.appendChild(piece);
     window.setTimeout(()=>piece.remove(),4300);
   }
 }
