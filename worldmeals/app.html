@@ -2286,6 +2286,11 @@ html body .wmp-ico.wmp-ico-line{background:#F7F3E8!important;border:1px solid rg
 html body .wmp-ico-line svg{width:19px;height:19px;fill:none;stroke:#14402c;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 html body .wmp-opt.sel .wmp-ico.wmp-ico-line{background:#14402c!important;border-color:rgba(201,165,90,.8)!important}
 html body .wmp-opt.sel .wmp-ico-line svg{stroke:#F3E3BC}
+/* Results bar: green and gold, no emoji */
+html body .count::before{content:""!important;background:#14402c url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23F3E3BC%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M7%203v5a2%202%200%200%200%204%200V3M9%2010v11M17%203c-1.6%201-2.4%203-2.4%206.2h2.4M17%203v18%22%2F%3E%3C%2Fsvg%3E") center/15px no-repeat!important;box-shadow:0 0 0 2px rgba(201,165,90,.55),0 4px 10px rgba(20,38,27,.15)!important}
+html body .view-toggle{background:#F7F3E8!important;border:1px solid rgba(201,165,90,.45)!important}
+html body .view-toggle button{color:#6B5232!important;background:transparent!important}
+html body .view-toggle button.active{background:#14402c!important;color:#F3E3BC!important;box-shadow:0 0 0 1px rgba(201,165,90,.7)!important}
 /* Collapsed mixer: one compact row */
 .adv-filters:has(.adv-body.collapsed){padding-top:14px!important;padding-bottom:14px!important}
 .adv-filters:has(.adv-body.collapsed) .adv-filters-head{margin-bottom:0!important}
@@ -2390,9 +2395,9 @@ html body .wmp-opt.sel .wmp-ico-line svg{stroke:#F3E3BC}
       <select id="dietFilter" onchange="renderGrid()">
         <option value="all">All diets</option>
         <optgroup label="Goals">
-          <option value="lose-weight">🔥 Lose Weight</option>
-          <option value="gain-weight">⚖️ Gain Weight</option>
-          <option value="build-muscle">💪 Build Muscle</option>
+          <option value="lose-weight">Lose Weight</option>
+          <option value="gain-weight">Gain Weight</option>
+          <option value="build-muscle">Build Muscle</option>
         </optgroup>
         <optgroup label="Dietary Preferences">
           <option value="dairy-free">Dairy-free</option>
@@ -5765,7 +5770,8 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
         const dietIcons={
           "dairy-free":"🥛", "dairy-free-option":"🥛",
           "gluten-free":"🌾", "gluten-free-option":"🌾",
-          "vegan":"🌱", "vegan-option":"🌱"
+          "vegan":"🌱", "vegan-option":"🌱",
+          "lose-weight":"🔥", "gain-weight":"⚖️", "build-muscle":"💪"
         };
         if(dietIcons[o.value]) rowIcon=dietIcons[o.value];
       }
