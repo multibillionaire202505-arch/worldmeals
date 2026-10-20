@@ -1,5 +1,6 @@
 // WorldMeals database — reviewed 2026-10-17
 // 2026-10-19: added 23 dishes (ids 8184–8206): 11 alcohol-free drinks (tag "drink") and 12 barbecue dishes (tag "bbq"). Their nutrition, cost and time are estimates.
+// 2026-10-20: added 25 dishes (ids 8207–8231), batch 1 of "The most desirable dishes in the world" (Italy, France, Spain, Portugal). Their nutrition, cost and time are estimates.
 // All photos use existing /images/dishes/*.jpg paths; upload the matching assets.
 // Compatibility: existing IDs, names, order, image paths and meal field names retained.
 // Content pass: 767 dishes updated; 1710 repeated substitution entries corrected, plus dish-specific edits.
@@ -82217,5 +82218,1635 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 34,
     "fiber": 4,
     "image": "/images/dishes/Jerk-Pork.jpg"
+  },
+  {
+    "id": 8207,
+    "name": "Fettuccine Alfredo",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "🍝",
+    "cal": 780,
+    "budget": 8,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Roman fettuccine tossed with butter and Parmigiano-Reggiano until silky; the original version uses no cream.",
+    "ingredients": [
+      "Fresh egg fettuccine",
+      "Butter",
+      "Parmigiano-Reggiano",
+      "Black pepper",
+      "Salt"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter | Olive oil",
+          "note": "Add pasta water slowly to make the sauce glossy"
+        },
+        {
+          "from": "Parmigiano-Reggiano",
+          "to": "Nutritional yeast | Blended cashews",
+          "note": "Cashews give the creamiest result"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter | Olive oil",
+          "note": "Keep the pasta water for silkiness"
+        },
+        {
+          "from": "Parmigiano-Reggiano",
+          "to": "Nutritional yeast | Dairy-free parmesan",
+          "note": "Add salt to taste"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Fresh egg fettuccine",
+          "to": "Gluten-free fettuccine",
+          "note": "Cook 1 minute less; it softens in the sauce"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Fresh egg fettuccine",
+          "to": "Dried durum wheat fettuccine",
+          "note": "Most dried pasta has no egg; check the label"
+        }
+      ]
+    },
+    "protein": 24,
+    "carbs": 82,
+    "fat": 38,
+    "fiber": 3,
+    "image": "/images/dishes/Fettuccine-Alfredo.jpg"
+  },
+  {
+    "id": 8208,
+    "name": "Spaghetti alle Vongole",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "🍝",
+    "cal": 560,
+    "budget": 14,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "shellfish",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Neapolitan spaghetti tossed with fresh clams, garlic, olive oil, white wine, chili and parsley.",
+    "ingredients": [
+      "Spaghetti",
+      "Fresh clams",
+      "Garlic",
+      "Olive oil",
+      "Dry white wine",
+      "Chili flakes",
+      "Flat-leaf parsley"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Fresh clams",
+          "to": "Oyster mushrooms | Chickpeas with a piece of kombu",
+          "note": "Simmer kombu in the pan for a taste of the sea"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Spaghetti",
+          "to": "Gluten-free spaghetti",
+          "note": "Finish cooking it in the clam juices"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Chili flakes",
+          "to": "Leave out | A pinch of black pepper",
+          "note": "The dish is still full of flavor without heat"
+        }
+      ],
+      "local": [
+        {
+          "from": "Fresh clams",
+          "to": "Mussels | Canned clams with their juice",
+          "note": "Add canned clams at the very end"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 74,
+    "fat": 16,
+    "fiber": 3,
+    "image": "/images/dishes/Spaghetti-alle-Vongole.jpg"
+  },
+  {
+    "id": 8209,
+    "name": "Bistecca alla Fiorentina",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "🥩",
+    "cal": 720,
+    "budget": 30,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "bbq",
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Florentine T-bone steak cut very thick, grilled rare over hot coals, then sliced and finished with olive oil and sea salt.",
+    "ingredients": [
+      "Thick T-bone steak",
+      "Coarse sea salt",
+      "Black pepper",
+      "Extra-virgin olive oil",
+      "Rosemary",
+      "Lemon wedges"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Thick T-bone steak",
+          "to": "Thick cauliflower steak | Seitan steak",
+          "note": "Grill hard for a deep char"
+        }
+      ],
+      "local": [
+        {
+          "from": "Thick T-bone steak",
+          "to": "Porterhouse | Ribeye",
+          "note": "Choose a cut at least 4 cm thick"
+        }
+      ]
+    },
+    "protein": 62,
+    "carbs": 1,
+    "fat": 50,
+    "fiber": 0,
+    "image": "/images/dishes/Bistecca-alla-Fiorentina.jpg"
+  },
+  {
+    "id": 8210,
+    "name": "Vitello Tonnato",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "🥩",
+    "cal": 520,
+    "budget": 18,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "fish",
+      "eggs",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Piedmontese chilled slices of poached veal covered in a creamy tuna, caper and anchovy sauce.",
+    "ingredients": [
+      "Veal eye of round",
+      "Canned tuna in olive oil",
+      "Mayonnaise",
+      "Capers",
+      "Anchovy fillets",
+      "Lemon",
+      "Celery",
+      "Carrot",
+      "Onion"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Veal eye of round",
+          "to": "Roasted celeriac slices | Seared firm tofu",
+          "note": "Slice thin and chill before saucing"
+        },
+        {
+          "from": "Canned tuna in olive oil",
+          "to": "Chickpeas blended with capers and nori",
+          "note": "Nori gives the sea flavor"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Mayonnaise",
+          "to": "Egg-free mayonnaise",
+          "note": "Blend with the tuna the same way"
+        }
+      ],
+      "local": [
+        {
+          "from": "Veal eye of round",
+          "to": "Turkey breast | Pork loin",
+          "note": "Poach gently so it stays juicy"
+        }
+      ]
+    },
+    "protein": 42,
+    "carbs": 4,
+    "fat": 36,
+    "fiber": 1,
+    "image": "/images/dishes/Vitello-Tonnato.jpg"
+  },
+  {
+    "id": 8211,
+    "name": "Panna Cotta",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "🍮",
+    "cal": 380,
+    "budget": 5,
+    "time": "4 hrs",
+    "spice": 0,
+    "tags": [
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Piedmontese dessert of sweet vanilla cream set with a little gelatin, served chilled with berry sauce.",
+    "ingredients": [
+      "Heavy cream",
+      "Milk",
+      "Sugar",
+      "Vanilla bean",
+      "Gelatin",
+      "Mixed berries"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Gelatin",
+          "to": "Agar-agar",
+          "note": "About 1 tsp agar powder per 500 ml; boil it for 2 minutes"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Coconut cream",
+          "note": "Full-fat sets best"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Heavy cream",
+          "to": "Coconut cream | Oat cream",
+          "note": "Full-fat sets best"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Almond milk",
+          "note": "Use unsweetened"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 30,
+    "fat": 28,
+    "fiber": 1,
+    "image": "/images/dishes/Panna-Cotta.jpg"
+  },
+  {
+    "id": 8212,
+    "name": "Cannoli",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "🍰",
+    "cal": 420,
+    "budget": 8,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "nuts"
+    ],
+    "desc": "Sicilian dessert of crisp fried pastry tubes filled with sweet ricotta, chocolate chips and pistachios.",
+    "ingredients": [
+      "Flour",
+      "Marsala wine",
+      "Butter",
+      "Egg",
+      "Sugar",
+      "Ricotta",
+      "Chocolate chips",
+      "Pistachios",
+      "Oil for frying",
+      "Powdered sugar"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Ricotta",
+          "to": "Cashew ricotta | Blended firm tofu",
+          "note": "Sweeten and chill before filling"
+        },
+        {
+          "from": "Egg",
+          "to": "Flax egg",
+          "note": "Mix 1 tbsp ground flax with 3 tbsp water"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Ricotta",
+          "to": "Almond ricotta | Cashew ricotta",
+          "note": "Drain well so the filling is thick"
+        },
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Shells are more fragile; roll them small"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg | 1 tbsp water",
+          "note": "The dough only needs a little binding"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Pistachios",
+          "to": "Candied orange peel | Mini chocolate chips",
+          "note": "Press onto the ends of the filling"
+        }
+      ],
+      "local": [
+        {
+          "from": "Marsala wine",
+          "to": "White grape juice with a splash of vinegar",
+          "note": "Keeps the dough tender without wine"
+        }
+      ]
+    },
+    "protein": 10,
+    "carbs": 46,
+    "fat": 22,
+    "fiber": 1,
+    "image": "/images/dishes/Cannoli.jpg"
+  },
+  {
+    "id": 8213,
+    "name": "Carpaccio",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "🥩",
+    "cal": 340,
+    "budget": 16,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Venetian paper-thin slices of raw beef tenderloin with arugula, lemon, olive oil and shaved Parmigiano.",
+    "ingredients": [
+      "Beef tenderloin (very fresh)",
+      "Arugula",
+      "Parmigiano-Reggiano",
+      "Lemon",
+      "Extra-virgin olive oil",
+      "Capers",
+      "Sea salt",
+      "Black pepper"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Beef tenderloin (very fresh)",
+          "to": "Thin-sliced roasted beets | Thin-sliced king oyster mushrooms",
+          "note": "Slice as thin as possible"
+        },
+        {
+          "from": "Parmigiano-Reggiano",
+          "to": "Dairy-free parmesan | Toasted pine nuts",
+          "note": "Pine nuts add a rich crunch"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Parmigiano-Reggiano",
+          "to": "Leave out | Nutritional yeast flakes",
+          "note": "Add a little more salt and lemon"
+        }
+      ],
+      "local": [
+        {
+          "from": "Beef tenderloin (very fresh)",
+          "to": "Sushi-grade tuna",
+          "note": "Tuna carpaccio is a classic version"
+        }
+      ]
+    },
+    "protein": 26,
+    "carbs": 3,
+    "fat": 24,
+    "fiber": 1,
+    "image": "/images/dishes/Carpaccio.jpg"
+  },
+  {
+    "id": 8214,
+    "name": "Porchetta",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "🍖",
+    "cal": 690,
+    "budget": 20,
+    "time": "4 hrs",
+    "spice": 1,
+    "tags": [
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Central Italian rolled pork belly and loin stuffed with fennel, garlic and rosemary, slow-roasted until the skin crackles.",
+    "ingredients": [
+      "Pork belly with skin",
+      "Pork loin",
+      "Fennel seeds",
+      "Garlic",
+      "Rosemary",
+      "Lemon zest",
+      "Chili flakes",
+      "Black pepper",
+      "Sea salt"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pork belly with skin",
+          "to": "Seitan roast",
+          "note": "Roll it with the same herb paste"
+        },
+        {
+          "from": "Pork loin",
+          "to": "Seitan roast",
+          "note": "Roll it with the same herb paste"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Chili flakes",
+          "to": "Leave out",
+          "note": "Fennel and garlic carry the flavor"
+        }
+      ],
+      "local": [
+        {
+          "from": "Pork belly with skin",
+          "to": "Boneless pork shoulder",
+          "note": "Score the fat and roast hot at the end"
+        }
+      ]
+    },
+    "protein": 46,
+    "carbs": 2,
+    "fat": 54,
+    "fiber": 1,
+    "image": "/images/dishes/Porchetta.jpg"
+  },
+  {
+    "id": 8215,
+    "name": "Parmigiana di Melanzane",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "🍆",
+    "cal": 540,
+    "budget": 9,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Southern Italian baked layers of fried eggplant, tomato sauce, basil, mozzarella and Parmigiano.",
+    "ingredients": [
+      "Eggplants",
+      "Tomato passata",
+      "Mozzarella",
+      "Parmigiano-Reggiano",
+      "Fresh basil",
+      "Garlic",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Mozzarella",
+          "to": "Vegan mozzarella",
+          "note": "Choose one that melts"
+        },
+        {
+          "from": "Parmigiano-Reggiano",
+          "to": "Nutritional yeast | Dairy-free parmesan",
+          "note": "Sprinkle between the layers"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Mozzarella",
+          "to": "Dairy-free mozzarella",
+          "note": "Choose one that melts"
+        },
+        {
+          "from": "Parmigiano-Reggiano",
+          "to": "Nutritional yeast",
+          "note": "Sprinkle between the layers"
+        }
+      ]
+    },
+    "protein": 20,
+    "carbs": 30,
+    "fat": 38,
+    "fiber": 9,
+    "image": "/images/dishes/Parmigiana-di-Melanzane.jpg"
+  },
+  {
+    "id": 8216,
+    "name": "Crème Brûlée",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🍮",
+    "cal": 430,
+    "budget": 6,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "eggs"
+    ],
+    "desc": "French dessert of baked vanilla custard under a thin layer of sugar caramelized until it cracks.",
+    "ingredients": [
+      "Heavy cream",
+      "Egg yolks",
+      "Sugar",
+      "Vanilla bean"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Egg yolks",
+          "to": "Cornstarch",
+          "note": "Cook the custard on the stove, then chill to set"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Coconut cream",
+          "note": "Full-fat sets best"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Heavy cream",
+          "to": "Coconut cream | Oat cream",
+          "note": "Full-fat sets best"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg yolks",
+          "to": "Cornstarch",
+          "note": "Cook the custard on the stove, then chill to set"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 30,
+    "fat": 33,
+    "fiber": 0,
+    "image": "/images/dishes/Creme-Brulee.jpg"
+  },
+  {
+    "id": 8217,
+    "name": "Macarons",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🍪",
+    "cal": 280,
+    "budget": 7,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "eggs",
+      "nuts"
+    ],
+    "desc": "Parisian dessert of crisp, chewy almond meringue shells sandwiched with buttercream or ganache.",
+    "ingredients": [
+      "Almond flour",
+      "Powdered sugar",
+      "Egg whites",
+      "Granulated sugar",
+      "Butter",
+      "Vanilla",
+      "Food coloring"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Egg whites",
+          "to": "Aquafaba",
+          "note": "Whip chickpea water the same way"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter | Coconut cream ganache",
+          "note": "Chill the filling before piping"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg whites",
+          "to": "Aquafaba",
+          "note": "Whip chickpea water the same way"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Almond flour",
+          "to": "Sunflower seed flour | Pumpkin seed flour",
+          "note": "Add a few drops of lemon juice so sunflower shells stay pale"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 34,
+    "fat": 14,
+    "fiber": 1,
+    "image": "/images/dishes/Macarons.jpg"
+  },
+  {
+    "id": 8218,
+    "name": "Tartiflette",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🥔",
+    "cal": 820,
+    "budget": 12,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Alpine bake of potatoes, smoked bacon, onions and white wine under a whole melted Reblochon cheese.",
+    "ingredients": [
+      "Waxy potatoes",
+      "Reblochon cheese",
+      "Smoked bacon lardons",
+      "Onion",
+      "Dry white wine",
+      "Crème fraîche",
+      "Garlic"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Smoked bacon lardons",
+          "to": "Smoked tempeh | Smoked mushrooms",
+          "note": "Fry until crisp"
+        },
+        {
+          "from": "Reblochon cheese",
+          "to": "Vegan camembert-style cheese",
+          "note": "Lay it on top to melt"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Reblochon cheese",
+          "to": "Dairy-free melting cheese",
+          "note": "Lay it on top to melt"
+        },
+        {
+          "from": "Crème fraîche",
+          "to": "Oat cream",
+          "note": "Use the same amount"
+        }
+      ],
+      "local": [
+        {
+          "from": "Reblochon cheese",
+          "to": "Brie | Camembert | Taleggio",
+          "note": "Any soft washed or bloomy cheese works"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 48,
+    "fat": 56,
+    "fiber": 4,
+    "image": "/images/dishes/Tartiflette.jpg"
+  },
+  {
+    "id": 8219,
+    "name": "Steak Tartare",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🥩",
+    "cal": 480,
+    "budget": 16,
+    "time": "20 min",
+    "spice": 1,
+    "tags": [
+      "high-protein",
+      "eggs",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "French raw minced beef seasoned with shallot, capers, mustard and cornichons, topped with an egg yolk.",
+    "ingredients": [
+      "Beef tenderloin (very fresh)",
+      "Egg yolk",
+      "Shallot",
+      "Capers",
+      "Cornichons",
+      "Dijon mustard",
+      "Worcestershire sauce",
+      "Hot sauce",
+      "Parsley"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Beef tenderloin (very fresh)",
+          "to": "Finely diced roasted beets | Mushroom and walnut tartare",
+          "note": "Season boldly with the same mix"
+        },
+        {
+          "from": "Egg yolk",
+          "to": "A spoon of vegan mayonnaise",
+          "note": "Adds the same richness"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg yolk",
+          "to": "Leave out | Extra mustard",
+          "note": "Still rich and well seasoned"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Hot sauce",
+          "to": "Leave out",
+          "note": "Mustard gives enough kick"
+        }
+      ]
+    },
+    "protein": 36,
+    "carbs": 4,
+    "fat": 32,
+    "fiber": 1,
+    "image": "/images/dishes/Steak-Tartare.jpg"
+  },
+  {
+    "id": 8220,
+    "name": "Pain au Chocolat",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🥐",
+    "cal": 300,
+    "budget": 4,
+    "time": "4 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "French breakfast pastry of buttery laminated croissant dough rolled around two bars of dark chocolate.",
+    "ingredients": [
+      "Flour",
+      "Butter",
+      "Milk",
+      "Sugar",
+      "Yeast",
+      "Salt",
+      "Dark chocolate batons",
+      "Egg for glazing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan block butter",
+          "note": "Keep it cold for flaky layers"
+        },
+        {
+          "from": "Egg for glazing",
+          "to": "Plant milk with a little maple syrup",
+          "note": "Brush just before baking"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free block butter",
+          "note": "Keep it cold for flaky layers"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend with psyllium",
+          "note": "Layers are softer but still flaky"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg for glazing",
+          "to": "Milk wash",
+          "note": "Brush just before baking"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 32,
+    "fat": 17,
+    "fiber": 2,
+    "image": "/images/dishes/Pain-au-Chocolat.jpg"
+  },
+  {
+    "id": 8221,
+    "name": "Mille-Feuille",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🍰",
+    "cal": 450,
+    "budget": 8,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "French dessert of three layers of crisp puff pastry filled with vanilla pastry cream, topped with icing.",
+    "ingredients": [
+      "Puff pastry",
+      "Milk",
+      "Egg yolks",
+      "Sugar",
+      "Cornstarch",
+      "Vanilla",
+      "Butter",
+      "Powdered sugar"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Puff pastry",
+          "to": "Vegan puff pastry",
+          "note": "Many store-bought brands are vegan; check the label"
+        },
+        {
+          "from": "Egg yolks",
+          "to": "Extra cornstarch with plant milk",
+          "note": "Add a pinch of turmeric for color"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Puff pastry",
+          "to": "Gluten-free puff pastry",
+          "note": "Bake until deep golden"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg yolks",
+          "to": "Extra cornstarch",
+          "note": "Add a pinch of turmeric for color"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 52,
+    "fat": 24,
+    "fiber": 1,
+    "image": "/images/dishes/Mille-Feuille.jpg"
+  },
+  {
+    "id": 8222,
+    "name": "Duck à l'Orange",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🦆",
+    "cal": 680,
+    "budget": 22,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "French roast duck breast with a glossy bittersweet sauce of orange, caramel and stock.",
+    "ingredients": [
+      "Duck breasts",
+      "Oranges",
+      "Sugar",
+      "Red wine vinegar",
+      "Chicken stock",
+      "Butter",
+      "Salt",
+      "Black pepper"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Duck breasts",
+          "to": "Seared seitan | Thick king oyster mushrooms",
+          "note": "Sear hard, then glaze with the sauce"
+        },
+        {
+          "from": "Chicken stock",
+          "to": "Vegetable stock",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Olive oil | Leave out",
+          "note": "Reduce the sauce a little longer"
+        }
+      ],
+      "local": [
+        {
+          "from": "Duck breasts",
+          "to": "Skin-on chicken thighs | Pork tenderloin",
+          "note": "Cook through before glazing"
+        }
+      ]
+    },
+    "protein": 40,
+    "carbs": 22,
+    "fat": 44,
+    "fiber": 1,
+    "image": "/images/dishes/Duck-a-l-Orange.jpg"
+  },
+  {
+    "id": 8223,
+    "name": "Pot-au-Feu",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🍲",
+    "cal": 560,
+    "budget": 18,
+    "time": "4 hrs",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "French slow-simmered beef with marrow bones, leeks, carrots and turnips; the broth is served first, then the meat with mustard.",
+    "ingredients": [
+      "Beef chuck",
+      "Beef shank",
+      "Marrow bones",
+      "Leeks",
+      "Carrots",
+      "Turnips",
+      "Onion studded with cloves",
+      "Bouquet garni",
+      "Dijon mustard",
+      "Cornichons"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Beef chuck",
+          "to": "Seitan chunks | Smoked tofu",
+          "note": "Add in the last 30 minutes"
+        },
+        {
+          "from": "Marrow bones",
+          "to": "Kombu and dried mushrooms",
+          "note": "Gives the broth depth"
+        }
+      ],
+      "local": [
+        {
+          "from": "Turnips",
+          "to": "Parsnips | Potatoes",
+          "note": "Cut into large pieces"
+        }
+      ]
+    },
+    "protein": 48,
+    "carbs": 22,
+    "fat": 30,
+    "fiber": 5,
+    "image": "/images/dishes/Pot-au-Feu.jpg"
+  },
+  {
+    "id": 8224,
+    "name": "Lobster Thermidor",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🦞",
+    "cal": 640,
+    "budget": 40,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "shellfish",
+      "eggs",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Parisian lobster meat in a rich mustard, wine and cream sauce, returned to the shell and browned with Gruyère.",
+    "ingredients": [
+      "Lobsters",
+      "Butter",
+      "Shallot",
+      "Dry white wine",
+      "Fish stock",
+      "Heavy cream",
+      "Egg yolk",
+      "Dijon mustard",
+      "Gruyère cheese",
+      "Tarragon"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lobsters",
+          "to": "King oyster mushrooms | Hearts of palm",
+          "note": "Bake in a scallop shell or small dish"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Coconut cream | Oat cream",
+          "note": "Use unsweetened"
+        },
+        {
+          "from": "Gruyère cheese",
+          "to": "Dairy-free melting cheese",
+          "note": "Grill until golden"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Heavy cream",
+          "to": "Oat cream",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        },
+        {
+          "from": "Gruyère cheese",
+          "to": "Dairy-free melting cheese",
+          "note": "Grill until golden"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg yolk",
+          "to": "A little cornstarch slurry",
+          "note": "Thickens the sauce the same way"
+        }
+      ],
+      "local": [
+        {
+          "from": "Lobsters",
+          "to": "Large shrimp | Langoustines | Monkfish",
+          "note": "Bake in a small dish"
+        }
+      ]
+    },
+    "protein": 46,
+    "carbs": 8,
+    "fat": 44,
+    "fiber": 0,
+    "image": "/images/dishes/Lobster-Thermidor.jpg"
+  },
+  {
+    "id": 8225,
+    "name": "Éclairs",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🍰",
+    "cal": 330,
+    "budget": 6,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "French dessert of long choux pastry shells piped with vanilla pastry cream and glazed with chocolate.",
+    "ingredients": [
+      "Flour",
+      "Butter",
+      "Water",
+      "Eggs",
+      "Milk",
+      "Egg yolks",
+      "Sugar",
+      "Cornstarch",
+      "Dark chocolate",
+      "Heavy cream"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Aquafaba choux recipe",
+          "note": "Vegan choux needs its own tested recipe; shells are softer"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Coconut cream",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Coconut cream",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Pipe slightly thicker"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg yolks",
+          "to": "Extra cornstarch",
+          "note": "Add a pinch of turmeric for color"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 36,
+    "fat": 18,
+    "fiber": 1,
+    "image": "/images/dishes/Eclairs.jpg"
+  },
+  {
+    "id": 8226,
+    "name": "Pan con Tomate",
+    "country": "Spain",
+    "region": "Europe",
+    "emoji": "🍅",
+    "cal": 260,
+    "budget": 3,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "vegan",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Catalan toasted rustic bread rubbed with garlic and ripe tomato, finished with olive oil and salt.",
+    "ingredients": [
+      "Rustic bread",
+      "Ripe tomatoes",
+      "Garlic",
+      "Extra-virgin olive oil",
+      "Flaky salt"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Rustic bread",
+          "to": "Gluten-free rustic bread",
+          "note": "Toast well so it holds the tomato"
+        }
+      ],
+      "local": [
+        {
+          "from": "Rustic bread",
+          "to": "Sourdough | Ciabatta",
+          "note": "Any crusty bread works"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 34,
+    "fat": 12,
+    "fiber": 3,
+    "image": "/images/dishes/Pan-con-Tomate.jpg"
+  },
+  {
+    "id": 8227,
+    "name": "Salmorejo",
+    "country": "Spain",
+    "region": "Europe",
+    "emoji": "🍅",
+    "cal": 340,
+    "budget": 4,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "eggs",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Cordoban chilled tomato, bread, garlic and olive oil soup blended thick and creamy, topped with egg and jamón.",
+    "ingredients": [
+      "Ripe tomatoes",
+      "Day-old bread",
+      "Garlic",
+      "Extra-virgin olive oil",
+      "Sherry vinegar",
+      "Hard-boiled egg",
+      "Jamón serrano"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Hard-boiled egg",
+          "to": "Toasted chickpeas | Diced avocado",
+          "note": "Scatter on top"
+        },
+        {
+          "from": "Jamón serrano",
+          "to": "Smoked almonds | Crispy chickpeas",
+          "note": "Adds a salty crunch"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Day-old bread",
+          "to": "Gluten-free bread",
+          "note": "Use the same weight"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Hard-boiled egg",
+          "to": "Leave out | Croutons",
+          "note": "Scatter on top"
+        }
+      ],
+      "local": [
+        {
+          "from": "Jamón serrano",
+          "to": "Prosciutto | Crispy bacon",
+          "note": "Chop finely"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 26,
+    "fat": 22,
+    "fiber": 3,
+    "image": "/images/dishes/Salmorejo.jpg"
+  },
+  {
+    "id": 8228,
+    "name": "Cochinillo Asado",
+    "country": "Spain",
+    "region": "Europe",
+    "emoji": "🍖",
+    "cal": 780,
+    "budget": 35,
+    "time": "4 hrs",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Segovian roast suckling pig with glass-crisp skin and very tender meat, roasted with only water, salt and bay.",
+    "ingredients": [
+      "Suckling pig quarter",
+      "Sea salt",
+      "Bay leaves",
+      "Garlic",
+      "Lard",
+      "Water",
+      "Thyme"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Suckling pig quarter",
+          "to": "Seitan roast | Whole roasted cauliflower",
+          "note": "Roast with the same herbs"
+        }
+      ],
+      "local": [
+        {
+          "from": "Suckling pig quarter",
+          "to": "Pork belly with skin",
+          "note": "Score the skin and roast hot at the end"
+        }
+      ]
+    },
+    "protein": 48,
+    "carbs": 0,
+    "fat": 64,
+    "fiber": 0,
+    "image": "/images/dishes/Cochinillo-Asado.jpg"
+  },
+  {
+    "id": 8229,
+    "name": "Crema Catalana",
+    "country": "Spain",
+    "region": "Europe",
+    "emoji": "🍮",
+    "cal": 360,
+    "budget": 4,
+    "time": "4 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "eggs"
+    ],
+    "desc": "Catalan dessert of lemon- and cinnamon-scented custard with a crackling burnt-sugar top.",
+    "ingredients": [
+      "Milk",
+      "Egg yolks",
+      "Sugar",
+      "Cornstarch",
+      "Lemon peel",
+      "Cinnamon stick"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Egg yolks",
+          "to": "Extra cornstarch",
+          "note": "Add a pinch of turmeric for color"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Almond milk",
+          "note": "Use unsweetened"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg yolks",
+          "to": "Extra cornstarch",
+          "note": "Add a pinch of turmeric for color"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 42,
+    "fat": 17,
+    "fiber": 0,
+    "image": "/images/dishes/Crema-Catalana.jpg"
+  },
+  {
+    "id": 8230,
+    "name": "Bifana",
+    "country": "Portugal",
+    "region": "Europe",
+    "emoji": "🥪",
+    "cal": 560,
+    "budget": 6,
+    "time": "40 min",
+    "spice": 1,
+    "tags": [
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Portuguese sandwich of thin pork steaks simmered in garlic, white wine and paprika, served in a crusty roll with mustard.",
+    "ingredients": [
+      "Thin pork loin steaks",
+      "Garlic",
+      "Dry white wine",
+      "Sweet paprika",
+      "Bay leaf",
+      "Lard",
+      "Papo-seco rolls",
+      "Yellow mustard",
+      "Piri piri sauce"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Thin pork loin steaks",
+          "to": "Thin seitan cutlets | Pressed tofu slices",
+          "note": "Simmer in the same sauce"
+        },
+        {
+          "from": "Lard",
+          "to": "Olive oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Papo-seco rolls",
+          "to": "Gluten-free rolls",
+          "note": "Warm them before filling"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Piri piri sauce",
+          "to": "Leave out | Extra sweet paprika",
+          "note": "Mustard still gives a kick"
+        }
+      ],
+      "local": [
+        {
+          "from": "Papo-seco rolls",
+          "to": "Crusty white rolls",
+          "note": "Soft inside, crisp outside"
+        }
+      ]
+    },
+    "protein": 34,
+    "carbs": 46,
+    "fat": 20,
+    "fiber": 2,
+    "image": "/images/dishes/Bifana.jpg"
+  },
+  {
+    "id": 8231,
+    "name": "Sardinhas Assadas",
+    "country": "Portugal",
+    "region": "Europe",
+    "emoji": "🐟",
+    "cal": 480,
+    "budget": 8,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "bbq",
+      "high-protein",
+      "fish",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Lisbon grilled whole sardines with coarse salt, served with boiled potatoes, roasted peppers and onion.",
+    "ingredients": [
+      "Fresh whole sardines",
+      "Coarse sea salt",
+      "Boiled potatoes",
+      "Roasted red peppers",
+      "Onion",
+      "Olive oil",
+      "Lemon"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Fresh whole sardines",
+          "to": "Grilled eggplant wrapped in nori | Grilled tofu",
+          "note": "Brush with olive oil and lemon"
+        }
+      ],
+      "local": [
+        {
+          "from": "Fresh whole sardines",
+          "to": "Mackerel | Herring | Anchovies",
+          "note": "Grill over high heat"
+        }
+      ]
+    },
+    "protein": 36,
+    "carbs": 30,
+    "fat": 24,
+    "fiber": 4,
+    "image": "/images/dishes/Sardinhas-Assadas.jpg"
   }
 ];
