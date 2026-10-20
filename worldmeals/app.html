@@ -2295,6 +2295,33 @@ html body .view-toggle button.active{background:#14402c!important;color:#F3E3BC!
 html body .wm-plan-mini strong{display:flex!important;align-items:center;gap:10px}
 html body .wm-plan-ico{width:32px;height:32px;flex:0 0 32px;display:grid;place-items:center;background:#F7F3E8;border:1px solid rgba(201,165,90,.45);border-radius:10px}
 html body .wm-plan-ico svg{width:19px;height:19px;fill:none;stroke:#14402c;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+/* World Tour: green and gold, same "Conquered" look everywhere */
+html body .country-badge-status,html body .badge-done{background:#EEF5EF!important;background-image:none!important;color:#14402c!important;border:1px solid rgba(46,125,82,.55)!important;box-shadow:0 0 0 2px rgba(201,165,90,.25)!important;text-shadow:none!important}
+html body .country-badge-status{font-size:10px!important;padding:4px 9px!important}
+html body .btn-explore{background:#14402c!important;background-image:none!important;color:#FFFAF1!important;border:1px solid #14402c!important;box-shadow:inset 0 0 0 1px rgba(201,165,90,.45),0 8px 16px -10px rgba(20,64,44,.55)!important}
+html body .tour-celebration-card{background:linear-gradient(180deg,#FFFDF8 0%,#FBF7EE 100%)!important;border:1px solid rgba(201,165,90,.55)!important}
+html body .tour-celebration-card::after{background:radial-gradient(circle,rgba(201,165,90,.18),transparent 68%)!important}
+html body .celebration-kicker{color:#7A5C1F!important}
+html body .celebration-title{font-family:'DM Serif Display',Georgia,serif!important;font-weight:400!important;color:#14261B!important;letter-spacing:0!important}
+html body .celebration-country{color:#14402c!important}
+html body .celebration-stat{border-color:rgba(201,165,90,.45)!important}
+html body .celebration-stat b{color:#14261B!important}
+html body .celebration-stat span{color:#6B5232!important}
+html body .celebration-badge{background:#F7F3E8!important;background-image:none!important;border:1px solid rgba(201,165,90,.55)!important;color:#3F362D!important}
+html body .celebration-badge strong{color:#14402c!important}
+html body .celebration-btn{background:#14402c!important;background-image:none!important;color:#FFFAF1!important;border:1px solid #14402c!important;box-shadow:inset 0 0 0 1px rgba(201,165,90,.45),0 14px 26px -14px rgba(20,64,44,.6)!important}
+html body .country-badge-card::before{background:radial-gradient(circle,rgba(201,165,90,.22),transparent 68%)!important}
+/* Celebration confetti falls behind the card so the words stay readable */
+html body .tour-celebration .confetti-piece{z-index:0!important}
+html body .tour-celebration-card{z-index:1!important}
+/* Quick "How was …?" bar: cream, gold edge, line-icon thumbs */
+html body .wm-quick-feedback{background:#FFFDF8!important;color:#14261B!important;border:1px solid rgba(201,165,90,.55)!important;box-shadow:0 14px 34px rgba(20,38,27,.18)!important}
+html body .wm-quick-copy{font-size:14px!important;font-weight:700!important;color:#14261B!important}
+html body .wm-quick-btn{display:grid;place-items:center;background:#F7F3E8!important;border:1px solid rgba(201,165,90,.5)!important;padding:0}
+html body .wm-quick-btn svg{width:19px;height:19px;fill:none;stroke:#14402c;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+html body .wm-quick-btn:active{background:#14402c!important}
+html body .wm-quick-btn:active svg{stroke:#F3E3BC}
+html body .wm-quick-close{width:28px;height:28px;border:0;background:transparent;color:#6B5232;font-size:14px;cursor:pointer;margin-left:-4px}
 /* Collapsed mixer: one compact row */
 .adv-filters:has(.adv-body.collapsed){padding-top:14px!important;padding-bottom:14px!important}
 .adv-filters:has(.adv-body.collapsed) .adv-filters-head{margin-bottom:0!important}
@@ -2822,7 +2849,7 @@ html body .wm-plan-ico svg{width:19px;height:19px;fill:none;stroke:#14402c;strok
 <!-- WORLD TOUR COUNTRY CELEBRATION -->
 <div class="tour-celebration" id="tourCelebration" role="dialog" aria-modal="true" aria-labelledby="celebrationTitle">
   <div class="tour-celebration-card">
-    <div class="celebration-kicker">🏆 World Tour Achievement</div>
+    <div class="celebration-kicker">World Tour Achievement</div>
     <div class="celebration-flag" id="celebrationFlag">🌍</div>
     <div class="celebration-title" id="celebrationTitle">Country Conquered!</div>
     <div class="celebration-country" id="celebrationCountry"></div>
@@ -2831,7 +2858,7 @@ html body .wm-plan-ico svg{width:19px;height:19px;fill:none;stroke:#14402c;strok
     <div class="celebration-progress">
       <div class="celebration-stat">
         <b id="celebrationCount">1 / 195</b>
-        <span>Countries explored</span>
+        <span>Countries conquered</span>
       </div>
       <div class="celebration-stat">
         <b id="celebrationPercent">1%</b>
@@ -2986,7 +3013,7 @@ function wmKidsCountryList(open){
   const counts={}; KIDS_MEALS.forEach(m=>counts[m.country]=(counts[m.country]||0)+1);
   const rows=wmKidsCountries().filter(c=>!q||c.toLowerCase().includes(q));
   list.innerHTML=(q?"":'<button type="button" class="wk-crow" data-c="all"><span>🌍</span>Any country</button>')
-    +rows.map(c=>`<button type="button" class="wk-crow" data-c="${escapeAttr(c)}"><span>${wmKidsFlag(c)}</span>${escapeAttr(c)}<small>${counts[c]} ${counts[c]===1?"dish":"dishes"}</small></button>`).join("")
+    +rows.map(c=>`<button type="button" class="wk-crow" data-c="${escapeAttr(c)}"><span>${wmKidsFlag(c)}</span>${escapeAttr(c)}</button>`).join("")
     +(rows.length||!q?"":'<div class="wk-crow" style="cursor:default;color:#9A8572">No kids dishes from that country yet</div>');
   list.hidden=false;
 }
@@ -4107,7 +4134,7 @@ function launchCountryConfetti(){
 
   document.querySelectorAll(".confetti-piece").forEach(el=>el.remove());
 
-  const colors=["#F5A623","#D9630B","#2F8F5B","#FFD36A","#FFFFFF","#E85D75"];
+  const colors=["#14402c","#2E7D52","#C9A55A","#E3C98A","#FFFDF8","#7FB08F"];
   const total = window.innerWidth < 520 ? 52 : 78;
 
   for(let i=0;i<total;i++){
@@ -4121,7 +4148,7 @@ function launchCountryConfetti(){
     piece.style.animationDelay=(Math.random()*.55)+"s";
     piece.style.width=(6+Math.random()*7)+"px";
     piece.style.height=(9+Math.random()*11)+"px";
-    document.body.appendChild(piece);
+    (document.getElementById("tourCelebration")||document.body).appendChild(piece);
     window.setTimeout(()=>piece.remove(),4300);
   }
 }
@@ -4135,14 +4162,14 @@ function showCountryCelebration(meal){
   const badge=countryBadges[meal.country];
 
   document.getElementById("celebrationFlag").textContent=countryFlag(meal.country);
-  document.getElementById("celebrationCountry").textContent=meal.country+" Conquered";
+  document.getElementById("celebrationCountry").textContent=meal.country;
   document.getElementById("celebrationCopy").textContent=
     "You completed your first dish from "+meal.country+" and unlocked a permanent World Tour badge.";
   document.getElementById("celebrationCount").textContent=
     conquered.length+" / "+countries.length;
   document.getElementById("celebrationPercent").textContent=pct+"%";
   document.getElementById("celebrationBadge").innerHTML=
-    "🏅 <strong>"+escapeAttr(meal.country)+" Badge Unlocked</strong><br>"+
+    "<strong>"+escapeAttr(meal.country)+" badge unlocked</strong><br>"+
     "First dish: "+escapeAttr(badge?.mealName||meal.name)+" · "+
     formatBadgeDate(badge?.earnedAt);
 
@@ -4170,7 +4197,7 @@ function renderBadgeGallery(){
     return `
       <div class="tour-badges-head">
         <div>
-          <div class="tour-badges-title">🏅 My Country Badges</div>
+          <div class="tour-badges-title">My Country Badges</div>
           <div class="tour-badges-sub">Your conquered countries will appear here.</div>
         </div>
       </div>
@@ -4202,7 +4229,7 @@ function renderBadgeGallery(){
   return `
     <div class="tour-badges-head">
       <div>
-        <div class="tour-badges-title">🏅 My Country Badges</div>
+        <div class="tour-badges-title">My Country Badges</div>
         <div class="tour-badges-sub">${countries.length} collectible badge${countries.length===1?"":"s"} unlocked</div>
       </div>
     </div>
@@ -4258,18 +4285,16 @@ function renderTour(){
 
   document.getElementById("tourBar").style.width = pct + "%";
   document.getElementById("tourBar").style.background =
-    pct >= 100 ? "#FFD700" :
-    pct >= 50 ? "#22C55E" :
-    "#3B82F6";
+    pct >= 100 ? "#C9A55A" : "#2E7D52";
 
   document.getElementById("tourMsg").textContent =
     pct === 0
-      ? "Cook your first dish to start! 🌍"
+      ? "Cook your first dish to start!"
       : pct >= 100
-        ? "🎉 WORLD TOUR COMPLETE!"
+        ? "World Tour complete!"
         : pct >= 50
-          ? "Over halfway! 🌟"
-          : "Keep exploring! 🗺";
+          ? "Over halfway!"
+          : "Keep exploring!";
 
   const countryRows = countries.map(country => {
     const dishes = MEALS.filter(m => m.country === country);
@@ -4285,7 +4310,7 @@ function renderTour(){
             ${escapeAttr(country)}
           </div>
           <div style="font-size:11px;color:#888">
-            ${dishes.length} dish${dishes.length === 1 ? "" : "es"}
+            ${escapeAttr((dishes[0]&&dishes[0].region)||"")}
           </div>
         </div>
 
@@ -5295,7 +5320,7 @@ if ('serviceWorker' in navigator) {
   <div class="wm-dialog"><button type="button" class="wm-close" onclick="closeWorldMealsFeedback()" aria-label="Close">✕</button><div class="wm-dialog-icon">💬</div><h2 id="wmFeedbackTitle">Help us improve WorldMeals</h2><div class="wm-dialog-copy">No account, email, or payment information is needed. Just tell us what would make WorldMeals better.</div><div class="wm-feedback-form"><label for="wmFeedbackType">About</label><select id="wmFeedbackType"><option value="recipe">🍽️ Recipe or dish</option><option value="chef">👨‍🍳 Chef AI</option><option value="scan">📷 Camera / Fridge Scan</option><option value="planner">📅 Planner</option><option value="tour">🏆 World Tour</option><option value="bug">⚠️ Something is not working</option><option value="idea">💡 Feature idea</option><option value="love">❤️ Something I love</option><option value="other">💬 Other</option></select><label for="wmFeedbackRating">Rating (optional)</label><select id="wmFeedbackRating"><option value="">No rating</option><option value="5">⭐⭐⭐⭐⭐ Excellent</option><option value="4">⭐⭐⭐⭐ Very good</option><option value="3">⭐⭐⭐ Okay</option><option value="2">⭐⭐ Needs work</option><option value="1">⭐ Poor</option></select><label for="wmFeedbackMessage">Your feedback</label><textarea id="wmFeedbackMessage" placeholder="Tell us what happened, what you loved, or what you want us to improve..."></textarea></div><div class="wm-actions"><button type="button" class="wm-primary" onclick="submitWorldMealsFeedback()">Send feedback →</button><button type="button" class="wm-secondary" onclick="closeWorldMealsFeedback()">Maybe later</button></div><div class="wm-feedback-status" id="wmFeedbackStatus"></div></div>
 </div>
 
-<div class="wm-quick-feedback" id="wmQuickFeedback"><div class="wm-quick-copy" id="wmQuickFeedbackCopy">How was this recipe?</div><button type="button" class="wm-quick-btn" onclick="wmQuickFeedback(true)" aria-label="Helpful">👍</button><button type="button" class="wm-quick-btn" onclick="wmQuickFeedback(false)" aria-label="Needs improvement">👎</button></div>
+<div class="wm-quick-feedback" id="wmQuickFeedback"><div class="wm-quick-copy" id="wmQuickFeedbackCopy">How was this recipe?</div><button type="button" class="wm-quick-btn" onclick="wmQuickFeedback(true)" aria-label="Helpful"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10.5v9.5H4.5a1 1 0 0 1-1-1v-7.5a1 1 0 0 1 1-1zM7 10.5l3.6-6.6a1.8 1.8 0 0 1 3.3 1.3l-.8 3.8h5.2a2 2 0 0 1 2 2.4l-1.4 7a2 2 0 0 1-2 1.6H7"/></svg></button><button type="button" class="wm-quick-btn" onclick="wmQuickFeedback(false)" aria-label="Needs improvement"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 13.5V4h2.5a1 1 0 0 1 1 1v7.5a1 1 0 0 1-1 1zM17 13.5l-3.6 6.6a1.8 1.8 0 0 1-3.3-1.3l.8-3.8H5.7a2 2 0 0 1-2-2.4l1.4-7A2 2 0 0 1 7.1 4H17"/></svg></button><button type="button" class="wm-quick-close" onclick="document.getElementById('wmQuickFeedback').classList.remove('show')" aria-label="Not now">✕</button></div>
 
 <script>
 const WM_KEYS={plan:"worldmeals.subscription.plan",productId:"worldmeals.subscription.productId",activeProducts:"worldmeals.subscription.activeProductIds",status:"worldmeals.subscription.status",trialEnd:"worldmeals.subscription.trialEndDate",introductory:"worldmeals.subscription.isIntroductoryOffer",purchaseHandoff:"worldmeals.subscription.justPurchased",explorerAI:"wm_explorer_ai_used"};
