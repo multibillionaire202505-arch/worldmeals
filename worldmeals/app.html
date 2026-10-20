@@ -2265,6 +2265,23 @@ nav .wm-back:focus-visible{outline:3px solid #E58A3D;outline-offset:4px}
 .wk-more-wrap{grid-column:1/-1;display:flex;justify-content:center;padding:6px 0 18px}
 .wk-more{padding:14px 26px;border-radius:999px;background:#FFFDF8;color:#14402c;border:1px solid rgba(201,165,90,.6);font:700 15px/1 Inter,system-ui,sans-serif;cursor:pointer;box-shadow:0 8px 18px -12px rgba(20,64,44,.45)}
 .wk-more span{font-weight:500;color:#6B5232}
+/* Picker sheets (collection, region, country, diet…): green and gold like the rest of the app */
+html body .wmp-sheet{border:1px solid rgba(201,165,90,.55)!important;background:linear-gradient(180deg,#FFFDF8 0%,#FBF7EE 100%)!important;box-shadow:0 -10px 40px rgba(20,38,27,.18)!important}
+html body .wmp-sheet::before{background:rgba(201,165,90,.7)!important}
+html body .wmp-title{font-family:'DM Serif Display',Georgia,serif!important;font-weight:400!important;font-size:22px!important;letter-spacing:0!important;color:#14261B!important}
+html body .wmp-search:focus{border-color:#2E7D52!important;box-shadow:0 0 0 4px rgba(46,125,82,.12)!important}
+html body .wmp-group{color:#6B5232!important}
+html body .wmp-group::after{background:linear-gradient(90deg,rgba(201,165,90,.55),transparent)!important}
+html body .wmp-opt{border-color:rgba(201,165,90,.28)!important;color:#14261B!important;background:#FFFDF8!important}
+html body .wmp-opt:hover,html body .wmp-opt:focus-visible{background:#F7F3E8!important;border-color:rgba(201,165,90,.55)!important;box-shadow:0 8px 18px rgba(20,38,27,.07)!important}
+html body .wmp-opt.sel{background:#EEF5EF!important;border-color:#2E7D52!important;color:#14402c!important;box-shadow:0 0 0 1px rgba(201,165,90,.55),0 8px 18px rgba(20,64,44,.10)!important}
+html body .wmp-ico{background:#F7F3E8!important}
+html body .wmp-opt.sel .wmp-ico{background:#fff!important}
+html body .wmp-radio{border-color:#A89880!important}
+html body .wmp-opt.sel .wmp-radio{border-color:#14402c!important;box-shadow:0 0 0 3px rgba(201,165,90,.35)!important}
+html body .wmp-opt.sel .wmp-radio::after{background:#14402c!important}
+html body .wmp-list{scrollbar-color:rgba(201,165,90,.6) transparent!important}
+html body .wmp-list::-webkit-scrollbar-thumb{background:rgba(201,165,90,.6)!important}
 /* Collapsed mixer: one compact row */
 .adv-filters:has(.adv-body.collapsed){padding-top:14px!important;padding-bottom:14px!important}
 .adv-filters:has(.adv-body.collapsed) .adv-filters-head{margin-bottom:0!important}
