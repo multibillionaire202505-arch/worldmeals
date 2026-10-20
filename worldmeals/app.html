@@ -2291,6 +2291,10 @@ html body .count::before{content:""!important;background:#14402c url("data:image
 html body .view-toggle{background:#F7F3E8!important;border:1px solid rgba(201,165,90,.45)!important}
 html body .view-toggle button{color:#6B5232!important;background:transparent!important}
 html body .view-toggle button.active{background:#14402c!important;color:#F3E3BC!important;box-shadow:0 0 0 1px rgba(201,165,90,.7)!important}
+/* Upgrade dialog plan cards: line icons instead of emoji */
+html body .wm-plan-mini strong{display:flex!important;align-items:center;gap:10px}
+html body .wm-plan-ico{width:32px;height:32px;flex:0 0 32px;display:grid;place-items:center;background:#F7F3E8;border:1px solid rgba(201,165,90,.45);border-radius:10px}
+html body .wm-plan-ico svg{width:19px;height:19px;fill:none;stroke:#14402c;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 /* Collapsed mixer: one compact row */
 .adv-filters:has(.adv-body.collapsed){padding-top:14px!important;padding-bottom:14px!important}
 .adv-filters:has(.adv-body.collapsed) .adv-filters-head{margin-bottom:0!important}
@@ -5284,7 +5288,7 @@ if ('serviceWorker' in navigator) {
 </div>
 
 <div class="wm-layer" id="wmUpgrade" role="dialog" aria-modal="true" aria-labelledby="wmUpgradeTitle">
-  <div class="wm-dialog wide"><button type="button" class="wm-close" onclick="wmCloseUpgrade()" aria-label="Close">✕</button><div class="wm-dialog-icon">✨</div><h2 id="wmUpgradeTitle">Unlock more of WorldMeals</h2><div class="wm-dialog-copy" id="wmUpgradeCopy">Choose the experience that fits your kitchen.</div><div class="wm-plan-compare"><div class="wm-plan-mini"><strong>👨‍🍳 Chef</strong><span>$7.99/month or $59.99/year · eligible new subscribers can receive a 3-day introductory trial · unlimited AI, smart substitutions, planner and World Tour.</span></div><div class="wm-plan-mini"><strong>🌍 Passport</strong><span>$14.99/month or $99.99/year · everything in Chef plus Camera & Fridge Scan and premium experiences.</span></div></div><div class="wm-ai-meter" id="wmUpgradeAIMeter"></div><div class="wm-actions"><button type="button" class="wm-primary" onclick="wmGoToPricing()">See plans →</button><button type="button" class="wm-secondary" onclick="wmCloseUpgrade()">Maybe later</button></div></div>
+  <div class="wm-dialog wide"><button type="button" class="wm-close" onclick="wmCloseUpgrade()" aria-label="Close">✕</button><div class="wm-dialog-icon">✨</div><h2 id="wmUpgradeTitle">Unlock more of WorldMeals</h2><div class="wm-dialog-copy" id="wmUpgradeCopy">Choose the experience that fits your kitchen.</div><div class="wm-plan-compare"><div class="wm-plan-mini"><strong><span class="wm-plan-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 13.5a3.5 3.5 0 0 1-.6-6.95A4.5 4.5 0 0 1 12 3.5a4.5 4.5 0 0 1 5.6 3.05A3.5 3.5 0 0 1 17 13.5z"/><path d="M7 13.5V19a1.5 1.5 0 0 0 1.5 1.5h7A1.5 1.5 0 0 0 17 19v-5.5M7 17h10"/></svg></span>Chef</strong><span>$7.99/month or $59.99/year · eligible new subscribers can receive a 3-day introductory trial · unlimited AI, smart substitutions, planner and World Tour.</span></div><div class="wm-plan-mini"><strong><span class="wm-plan-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.3 3.6 5.1 3.6 8.5s-1.2 6.2-3.6 8.5c-2.4-2.3-3.6-5.1-3.6-8.5s1.2-6.2 3.6-8.5z"/></svg></span>Passport</strong><span>$14.99/month or $99.99/year · everything in Chef plus Camera & Fridge Scan and premium experiences.</span></div></div><div class="wm-ai-meter" id="wmUpgradeAIMeter"></div><div class="wm-actions"><button type="button" class="wm-primary" onclick="wmGoToPricing()">See plans →</button><button type="button" class="wm-secondary" onclick="wmCloseUpgrade()">Maybe later</button></div></div>
 </div>
 
 <div class="wm-layer" id="wmFeedback" role="dialog" aria-modal="true" aria-labelledby="wmFeedbackTitle">
