@@ -2,7 +2,7 @@
 // 2026-10-19: added 23 dishes (ids 8184–8206): 11 alcohol-free drinks (tag "drink") and 12 barbecue dishes (tag "bbq"). Their nutrition, cost and time are estimates.
 // 2026-10-20: added 25 dishes (ids 8207–8231), batch 1 of "The most desirable dishes in the world" (Italy, France, Spain, Portugal). Their nutrition, cost and time are estimates.
 // 2026-10-21: added 25 dishes (ids 8232–8256), batch 2 of "The most desirable dishes in the world" (Greece, Turkey, Middle East, India, China). Their nutrition, cost and time are estimates.
-// 2026-10-21: added 22 dishes (ids 8257–8278), batch 3 of "The most desirable dishes in the world" (China, Japan, Korea, Southeast Asia). Their nutrition, cost and time are estimates.
+// 2026-10-21: added 25 dishes (ids 8257–8281), batch 3 of "The most desirable dishes in the world" (China, Japan, Korea, Southeast Asia, USA). Their nutrition, cost and time are estimates.
 // All photos use existing /images/dishes/*.jpg paths; upload the matching assets.
 // Compatibility: existing IDs, names, order, image paths and meal field names retained.
 // Content pass: 767 dishes updated; 1710 repeated substitution entries corrected, plus dish-specific edits.
@@ -87287,5 +87287,254 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 26,
     "fiber": 2,
     "image": "/images/dishes/Martabak-Manis.jpg"
+  },
+  {
+    "id": 8279,
+    "name": "Eggs Benedict",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍳",
+    "cal": 720,
+    "budget": 9,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "eggs",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "New York brunch of toasted English muffins topped with Canadian bacon, poached eggs and buttery hollandaise sauce.",
+    "ingredients": [
+      "English muffins",
+      "Canadian bacon",
+      "Eggs",
+      "Egg yolks",
+      "Butter",
+      "Lemon",
+      "White vinegar",
+      "Cayenne"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Canadian bacon",
+          "to": "Smoked tofu slices",
+          "note": "Sear until golden"
+        },
+        {
+          "from": "Eggs",
+          "to": "Seared silken tofu rounds",
+          "note": "Season with black salt for an eggy taste"
+        },
+        {
+          "from": "Egg yolks",
+          "to": "Silken tofu hollandaise",
+          "note": "Blend tofu, lemon, turmeric and vegan butter"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "The hollandaise still emulsifies"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "English muffins",
+          "to": "Gluten-free English muffins",
+          "note": "Toast well"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Seared silken tofu rounds",
+          "note": "Season with black salt for an eggy taste"
+        },
+        {
+          "from": "Egg yolks",
+          "to": "Silken tofu hollandaise",
+          "note": "Blend tofu, lemon, turmeric and butter"
+        }
+      ]
+    },
+    "protein": 32,
+    "carbs": 30,
+    "fat": 52,
+    "fiber": 2,
+    "image": "/images/dishes/Eggs-Benedict.jpg"
+  },
+  {
+    "id": 8280,
+    "name": "Beignets",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍩",
+    "cal": 420,
+    "budget": 3,
+    "time": "2.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "New Orleans dessert of square yeast doughnuts fried until puffy and buried under powdered sugar.",
+    "ingredients": [
+      "Flour",
+      "Yeast",
+      "Evaporated milk",
+      "Egg",
+      "Sugar",
+      "Butter",
+      "Salt",
+      "Oil for frying",
+      "Powdered sugar"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Evaporated milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Egg",
+          "to": "Flax egg",
+          "note": "Mix 1 tbsp ground flax with 3 tbsp water"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Evaporated milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend with psyllium",
+          "note": "Dough is softer; chill before cutting"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg | Extra milk",
+          "note": "The dough only needs a little binding"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 58,
+    "fat": 17,
+    "fiber": 2,
+    "image": "/images/dishes/Beignets.jpg"
+  },
+  {
+    "id": 8281,
+    "name": "Crawfish Boil",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🦞",
+    "cal": 640,
+    "budget": 22,
+    "time": "1 hr",
+    "spice": 3,
+    "tags": [
+      "high-protein",
+      "shellfish",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Louisiana feast of crawfish boiled with Cajun spices, corn, potatoes and sausage, poured out on the table to share.",
+    "ingredients": [
+      "Live crawfish",
+      "Cajun seafood boil seasoning",
+      "Cayenne pepper",
+      "Corn on the cob",
+      "Red potatoes",
+      "Andouille sausage",
+      "Garlic heads",
+      "Lemons",
+      "Onions",
+      "Butter"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Live crawfish",
+          "to": "King oyster mushrooms | Hearts of palm",
+          "note": "Boil briefly in the spiced water"
+        },
+        {
+          "from": "Andouille sausage",
+          "to": "Plant-based sausage",
+          "note": "Add in the last 10 minutes"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Toss with garlic at the end"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Olive oil | Leave out",
+          "note": "Toss with garlic at the end"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Cayenne pepper",
+          "to": "Leave out",
+          "note": "Serve hot sauce on the side"
+        },
+        {
+          "from": "Cajun seafood boil seasoning",
+          "to": "Mild seafood seasoning",
+          "note": "Lemon and garlic keep the flavor"
+        }
+      ],
+      "local": [
+        {
+          "from": "Live crawfish",
+          "to": "Shrimp in the shell | Crab legs",
+          "note": "Shrimp need only 2–3 minutes"
+        }
+      ]
+    },
+    "protein": 42,
+    "carbs": 52,
+    "fat": 28,
+    "fiber": 5,
+    "image": "/images/dishes/Crawfish-Boil.jpg"
   }
 ];
