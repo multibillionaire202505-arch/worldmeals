@@ -2,6 +2,7 @@
 // 2026-10-19: added 23 dishes (ids 8184–8206): 11 alcohol-free drinks (tag "drink") and 12 barbecue dishes (tag "bbq"). Their nutrition, cost and time are estimates.
 // 2026-10-20: added 25 dishes (ids 8207–8231), batch 1 of "The most desirable dishes in the world" (Italy, France, Spain, Portugal). Their nutrition, cost and time are estimates.
 // 2026-10-21: added 25 dishes (ids 8232–8256), batch 2 of "The most desirable dishes in the world" (Greece, Turkey, Middle East, India, China). Their nutrition, cost and time are estimates.
+// 2026-10-21: added 22 dishes (ids 8257–8278), batch 3 of "The most desirable dishes in the world" (China, Japan, Korea, Southeast Asia). Their nutrition, cost and time are estimates.
 // All photos use existing /images/dishes/*.jpg paths; upload the matching assets.
 // Compatibility: existing IDs, names, order, image paths and meal field names retained.
 // Content pass: 767 dishes updated; 1710 repeated substitution entries corrected, plus dish-specific edits.
@@ -85717,5 +85718,1574 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 13,
     "fiber": 0,
     "image": "/images/dishes/Egg-Tarts.jpg"
+  },
+  {
+    "id": 8257,
+    "name": "Lanzhou Beef Noodles",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🍜",
+    "cal": 560,
+    "budget": 8,
+    "time": "3 hrs",
+    "spice": 2,
+    "tags": [
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Lanzhou hand-pulled wheat noodles in clear, spiced beef broth with sliced beef, radish, cilantro and chili oil.",
+    "ingredients": [
+      "Hand-pulled wheat noodles",
+      "Beef shank",
+      "Beef bones",
+      "Daikon radish",
+      "Star anise",
+      "Sichuan peppercorns",
+      "Cilantro",
+      "Scallions",
+      "Chili oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Beef shank",
+          "to": "Seared firm tofu | Shiitake mushrooms",
+          "note": "Slice and add at the end"
+        },
+        {
+          "from": "Beef bones",
+          "to": "Kombu and dried shiitake",
+          "note": "Simmer for a deep, clear broth"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Hand-pulled wheat noodles",
+          "to": "Rice noodles",
+          "note": "Cook separately, then add to the bowl"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Chili oil",
+          "to": "Leave out | Toasted sesame oil",
+          "note": "The broth is full of flavor without heat"
+        }
+      ]
+    },
+    "protein": 34,
+    "carbs": 70,
+    "fat": 14,
+    "fiber": 4,
+    "image": "/images/dishes/Lanzhou-Beef-Noodles.jpg"
+  },
+  {
+    "id": 8258,
+    "name": "Sashimi",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🐟",
+    "cal": 260,
+    "budget": 22,
+    "time": "20 min",
+    "spice": 1,
+    "tags": [
+      "high-protein",
+      "fish",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Japanese slices of the freshest raw fish, such as tuna, salmon and yellowtail, served with soy sauce, wasabi and shredded daikon.",
+    "ingredients": [
+      "Sushi-grade tuna",
+      "Sushi-grade salmon",
+      "Sushi-grade yellowtail",
+      "Daikon radish",
+      "Shiso leaves",
+      "Soy sauce",
+      "Wasabi",
+      "Pickled ginger"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Sushi-grade tuna",
+          "to": "Marinated tomato | Konjac sashimi",
+          "note": "Slice thin and chill"
+        },
+        {
+          "from": "Sushi-grade salmon",
+          "to": "Carrot lox | Konjac sashimi",
+          "note": "Slice thin and chill"
+        },
+        {
+          "from": "Sushi-grade yellowtail",
+          "to": "Thin-sliced avocado",
+          "note": "Add a squeeze of lemon"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Wasabi",
+          "to": "Leave out | Grated ginger",
+          "note": "Ginger keeps a fresh bite"
+        }
+      ],
+      "local": [
+        {
+          "from": "Sushi-grade yellowtail",
+          "to": "Sea bream | Cured mackerel",
+          "note": "Buy only fish sold for eating raw"
+        }
+      ]
+    },
+    "protein": 36,
+    "carbs": 6,
+    "fat": 10,
+    "fiber": 1,
+    "image": "/images/dishes/Sashimi.jpg"
+  },
+  {
+    "id": 8259,
+    "name": "Unadon",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🍚",
+    "cal": 650,
+    "budget": 25,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "fish",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Japanese bowl of steamed rice topped with grilled freshwater eel glazed in sweet soy tare, sprinkled with sansho pepper.",
+    "ingredients": [
+      "Freshwater eel (unagi)",
+      "Short-grain rice",
+      "Soy sauce",
+      "Mirin",
+      "Sugar",
+      "Sake",
+      "Sansho pepper"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Freshwater eel (unagi)",
+          "to": "Glazed eggplant",
+          "note": "Steam, flatten and glaze the same way"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        }
+      ],
+      "local": [
+        {
+          "from": "Freshwater eel (unagi)",
+          "to": "Mackerel | Salmon",
+          "note": "Grill and glaze the same way"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 84,
+    "fat": 18,
+    "fiber": 1,
+    "image": "/images/dishes/Unadon.jpg"
+  },
+  {
+    "id": 8260,
+    "name": "Sukiyaki",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🍲",
+    "cal": 680,
+    "budget": 20,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "eggs",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Japanese hot pot of thin-sliced beef simmered at the table in sweet soy broth with tofu, vegetables and noodles, dipped in beaten egg.",
+    "ingredients": [
+      "Thin-sliced beef ribeye",
+      "Firm tofu",
+      "Napa cabbage",
+      "Shiitake mushrooms",
+      "Enoki mushrooms",
+      "Scallions",
+      "Shirataki noodles",
+      "Soy sauce",
+      "Mirin",
+      "Sugar",
+      "Eggs"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Thin-sliced beef ribeye",
+          "to": "Thin-sliced king oyster mushrooms | Extra tofu",
+          "note": "Simmer briefly"
+        },
+        {
+          "from": "Eggs",
+          "to": "Grated daikon dip",
+          "note": "Adds a fresh, light finish"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Leave out | Grated daikon dip",
+          "note": "Dip straight from the pot"
+        }
+      ]
+    },
+    "protein": 40,
+    "carbs": 36,
+    "fat": 40,
+    "fiber": 5,
+    "image": "/images/dishes/Sukiyaki.jpg"
+  },
+  {
+    "id": 8261,
+    "name": "Shabu-Shabu",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🍲",
+    "cal": 520,
+    "budget": 22,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Japanese hot pot where paper-thin beef is swished in simmering kombu broth with vegetables and tofu, then dipped in sesame and ponzu sauces.",
+    "ingredients": [
+      "Paper-thin beef",
+      "Kombu",
+      "Firm tofu",
+      "Napa cabbage",
+      "Shiitake mushrooms",
+      "Carrot",
+      "Udon noodles",
+      "Ponzu sauce",
+      "Sesame sauce"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Paper-thin beef",
+          "to": "Thin-sliced king oyster mushrooms | Tofu skin (yuba)",
+          "note": "Swish just until tender"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Udon noodles",
+          "to": "Rice noodles",
+          "note": "Add at the end"
+        },
+        {
+          "from": "Ponzu sauce",
+          "to": "Gluten-free ponzu made with tamari",
+          "note": "Mix tamari, citrus juice and rice vinegar"
+        }
+      ]
+    },
+    "protein": 38,
+    "carbs": 38,
+    "fat": 22,
+    "fiber": 5,
+    "image": "/images/dishes/Shabu-Shabu.jpg"
+  },
+  {
+    "id": 8262,
+    "name": "Karaage",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🍗",
+    "cal": 520,
+    "budget": 7,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "eggs",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Japanese bite-size chicken thigh marinated in soy, ginger and garlic, coated in potato starch and fried twice until crisp.",
+    "ingredients": [
+      "Boneless chicken thighs",
+      "Soy sauce",
+      "Sake",
+      "Ginger",
+      "Garlic",
+      "Potato starch",
+      "Oil for frying",
+      "Lemon",
+      "Japanese mayonnaise"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Boneless chicken thighs",
+          "to": "Soy curls | Pressed firm tofu",
+          "note": "Marinate and fry the same way"
+        },
+        {
+          "from": "Japanese mayonnaise",
+          "to": "Egg-free mayonnaise",
+          "note": "Add a dash of rice vinegar"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Japanese mayonnaise",
+          "to": "Egg-free mayonnaise",
+          "note": "Add a dash of rice vinegar"
+        }
+      ]
+    },
+    "protein": 32,
+    "carbs": 20,
+    "fat": 34,
+    "fiber": 0,
+    "image": "/images/dishes/Karaage.jpg"
+  },
+  {
+    "id": 8263,
+    "name": "Oyakodon",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🍚",
+    "cal": 620,
+    "budget": 6,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "eggs",
+      "fish",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Japanese rice bowl of chicken and onion simmered in sweet dashi and soy, bound with softly set egg; the name means \"parent and child\".",
+    "ingredients": [
+      "Chicken thighs",
+      "Eggs",
+      "Onion",
+      "Dashi (kombu and bonito)",
+      "Soy sauce",
+      "Mirin",
+      "Short-grain rice",
+      "Scallions"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken thighs",
+          "to": "Firm tofu",
+          "note": "Cut into bite-size pieces"
+        },
+        {
+          "from": "Eggs",
+          "to": "Plant-based liquid egg",
+          "note": "Pour over and cover until just set"
+        },
+        {
+          "from": "Dashi (kombu and bonito)",
+          "to": "Kombu and shiitake dashi",
+          "note": "Fully plant-based"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Plant-based liquid egg",
+          "note": "Pour over and cover until just set"
+        }
+      ]
+    },
+    "protein": 34,
+    "carbs": 78,
+    "fat": 16,
+    "fiber": 2,
+    "image": "/images/dishes/Oyakodon.jpg"
+  },
+  {
+    "id": 8264,
+    "name": "Katsudon",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🍚",
+    "cal": 820,
+    "budget": 8,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "eggs",
+      "fish",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Japanese rice bowl of crisp panko pork cutlet simmered with onion in sweet dashi and soy, finished with softly set egg.",
+    "ingredients": [
+      "Pork loin cutlets",
+      "Panko breadcrumbs",
+      "Flour",
+      "Eggs",
+      "Onion",
+      "Dashi (kombu and bonito)",
+      "Soy sauce",
+      "Mirin",
+      "Short-grain rice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pork loin cutlets",
+          "to": "Firm tofu cutlets",
+          "note": "Press well before coating"
+        },
+        {
+          "from": "Eggs",
+          "to": "Plant-based liquid egg",
+          "note": "For the coating, use flour mixed with water"
+        },
+        {
+          "from": "Dashi (kombu and bonito)",
+          "to": "Kombu and shiitake dashi",
+          "note": "Fully plant-based"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Panko breadcrumbs",
+          "to": "Gluten-free panko",
+          "note": "Fry until deep golden"
+        },
+        {
+          "from": "Flour",
+          "to": "Rice flour",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Plant-based liquid egg",
+          "note": "For the coating, use flour mixed with water"
+        }
+      ]
+    },
+    "protein": 40,
+    "carbs": 96,
+    "fat": 26,
+    "fiber": 2,
+    "image": "/images/dishes/Katsudon.jpg"
+  },
+  {
+    "id": 8265,
+    "name": "Tamagoyaki",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🍳",
+    "cal": 220,
+    "budget": 2,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "eggs",
+      "fish",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Japanese rolled omelette made from thin layers of sweet-savory egg and dashi, sliced into neat blocks.",
+    "ingredients": [
+      "Eggs",
+      "Dashi (kombu and bonito)",
+      "Sugar",
+      "Soy sauce",
+      "Mirin",
+      "Neutral oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Chickpea flour and silken tofu batter",
+          "note": "Roll gently; it is softer"
+        },
+        {
+          "from": "Dashi (kombu and bonito)",
+          "to": "Kombu dashi",
+          "note": "Fully plant-based"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Chickpea flour and silken tofu batter",
+          "note": "Roll gently; it is softer"
+        }
+      ],
+      "local": [
+        {
+          "from": "Dashi (kombu and bonito)",
+          "to": "Water with a pinch of salt",
+          "note": "Simpler but still tender"
+        }
+      ]
+    },
+    "protein": 13,
+    "carbs": 8,
+    "fat": 15,
+    "fiber": 0,
+    "image": "/images/dishes/Tamagoyaki.jpg"
+  },
+  {
+    "id": 8266,
+    "name": "Omurice",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🍳",
+    "cal": 700,
+    "budget": 5,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "eggs",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Japanese ketchup-fried chicken rice wrapped in a soft omelette and topped with more ketchup.",
+    "ingredients": [
+      "Cooked rice",
+      "Chicken thigh",
+      "Onion",
+      "Ketchup",
+      "Butter",
+      "Eggs",
+      "Milk",
+      "Green peas"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken thigh",
+          "to": "Diced firm tofu",
+          "note": "Fry until golden"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Eggs",
+          "to": "Plant-based liquid egg",
+          "note": "Cook as a thin omelette"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use unsweetened"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Neutral oil",
+          "note": "Use a little less"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use unsweetened"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Plant-based liquid egg",
+          "note": "Cook as a thin omelette"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 84,
+    "fat": 26,
+    "fiber": 3,
+    "image": "/images/dishes/Omurice.jpg"
+  },
+  {
+    "id": 8267,
+    "name": "Korean Fried Chicken",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🍗",
+    "cal": 780,
+    "budget": 10,
+    "time": "1 hr",
+    "spice": 2,
+    "tags": [
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Korean double-fried chicken with a thin, glass-crisp crust, glazed in sweet and spicy gochujang sauce with sesame seeds.",
+    "ingredients": [
+      "Chicken wings and drumettes",
+      "Potato starch",
+      "Flour",
+      "Gochujang",
+      "Soy sauce",
+      "Honey",
+      "Garlic",
+      "Rice vinegar",
+      "Sesame seeds",
+      "Oil for frying"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken wings and drumettes",
+          "to": "Cauliflower florets",
+          "note": "Double-fry for the same crunch"
+        },
+        {
+          "from": "Honey",
+          "to": "Rice syrup | Maple syrup",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Extra potato starch",
+          "note": "Even crispier"
+        },
+        {
+          "from": "Gochujang",
+          "to": "Gluten-free gochujang",
+          "note": "Many brands contain wheat; check the label"
+        },
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Gochujang",
+          "to": "Soy-garlic glaze",
+          "note": "The classic non-spicy version"
+        }
+      ]
+    },
+    "protein": 42,
+    "carbs": 52,
+    "fat": 44,
+    "fiber": 1,
+    "image": "/images/dishes/Korean-Fried-Chicken.jpg"
+  },
+  {
+    "id": 8268,
+    "name": "Samgyetang",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🍲",
+    "cal": 620,
+    "budget": 12,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "nuts",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Korean summer soup of a whole young chicken stuffed with sweet rice, ginseng, garlic and jujubes, simmered until tender.",
+    "ingredients": [
+      "Cornish hen",
+      "Glutinous rice",
+      "Fresh ginseng",
+      "Garlic",
+      "Jujubes",
+      "Chestnuts",
+      "Ginger",
+      "Scallions",
+      "Salt"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Cornish hen",
+          "to": "Mushrooms and tofu in the same broth",
+          "note": "Simmer the rice and ginseng in a cloth bag"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Chestnuts",
+          "to": "Leave out | Extra jujubes",
+          "note": "The soup stays sweet and rich"
+        }
+      ],
+      "local": [
+        {
+          "from": "Fresh ginseng",
+          "to": "Extra ginger",
+          "note": "Ginseng is the classic flavor; ginger adds warmth"
+        },
+        {
+          "from": "Cornish hen",
+          "to": "Small whole chicken",
+          "note": "Simmer a little longer"
+        }
+      ]
+    },
+    "protein": 48,
+    "carbs": 46,
+    "fat": 20,
+    "fiber": 2,
+    "image": "/images/dishes/Samgyetang.jpg"
+  },
+  {
+    "id": 8269,
+    "name": "Jjajangmyeon",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🍜",
+    "cal": 720,
+    "budget": 7,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Korean-Chinese noodles covered in a glossy black bean sauce with pork, onion and zucchini, topped with fresh cucumber.",
+    "ingredients": [
+      "Wheat noodles",
+      "Chunjang (black bean paste)",
+      "Pork belly",
+      "Onion",
+      "Zucchini",
+      "Potato",
+      "Potato starch",
+      "Sugar",
+      "Cucumber"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pork belly",
+          "to": "Diced firm tofu | Mushrooms",
+          "note": "Fry until golden first"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat noodles",
+          "to": "Rice noodles",
+          "note": "Cook separately"
+        },
+        {
+          "from": "Chunjang (black bean paste)",
+          "to": "Gluten-free fermented black bean paste",
+          "note": "Most chunjang contains wheat; check the label"
+        }
+      ]
+    },
+    "protein": 24,
+    "carbs": 104,
+    "fat": 22,
+    "fiber": 5,
+    "image": "/images/dishes/Jjajangmyeon.jpg"
+  },
+  {
+    "id": 8270,
+    "name": "Haemul Pajeon",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🥞",
+    "cal": 520,
+    "budget": 9,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "shellfish",
+      "eggs",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Korean savory pancake packed with scallions, squid, shrimp and mussels, fried crisp and served with soy dipping sauce.",
+    "ingredients": [
+      "Scallions",
+      "Squid",
+      "Shrimp",
+      "Mussels",
+      "Flour",
+      "Rice flour",
+      "Egg",
+      "Ice water",
+      "Soy sauce",
+      "Rice vinegar",
+      "Gochugaru"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Squid",
+          "to": "Oyster mushrooms",
+          "note": "Tear into strips"
+        },
+        {
+          "from": "Shrimp",
+          "to": "Extra mushrooms | Zucchini",
+          "note": "Slice thin"
+        },
+        {
+          "from": "Mussels",
+          "to": "Leave out | Extra mushrooms",
+          "note": "Scatter on top before flipping"
+        },
+        {
+          "from": "Egg",
+          "to": "Extra ice water",
+          "note": "The batter stays crisp"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Extra rice flour with potato starch",
+          "note": "Use the same total amount"
+        },
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Extra ice water",
+          "note": "The batter stays crisp"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Gochugaru",
+          "to": "Leave out",
+          "note": "The dip is still tangy"
+        }
+      ]
+    },
+    "protein": 28,
+    "carbs": 62,
+    "fat": 18,
+    "fiber": 3,
+    "image": "/images/dishes/Haemul-Pajeon.jpg"
+  },
+  {
+    "id": 8271,
+    "name": "Patbingsu",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🍧",
+    "cal": 420,
+    "budget": 5,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Korean dessert of fluffy shaved milk ice topped with sweet red beans, chewy rice cakes and condensed milk.",
+    "ingredients": [
+      "Milk",
+      "Sweetened condensed milk",
+      "Red beans (adzuki)",
+      "Sugar",
+      "Injeolmi rice cakes",
+      "Roasted soybean powder"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Freeze it in a thin layer"
+        },
+        {
+          "from": "Sweetened condensed milk",
+          "to": "Sweetened condensed coconut milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Freeze it in a thin layer"
+        },
+        {
+          "from": "Sweetened condensed milk",
+          "to": "Sweetened condensed coconut milk",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 11,
+    "carbs": 82,
+    "fat": 6,
+    "fiber": 5,
+    "image": "/images/dishes/Patbingsu.jpg"
+  },
+  {
+    "id": 8272,
+    "name": "Gai Yang",
+    "country": "Thailand",
+    "region": "Asia",
+    "emoji": "🍗",
+    "cal": 560,
+    "budget": 8,
+    "time": "1 hr",
+    "spice": 2,
+    "tags": [
+      "bbq",
+      "high-protein",
+      "fish",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Isan grilled chicken marinated in garlic, coriander root, pepper and fish sauce, served with sticky rice and a tangy chili dip.",
+    "ingredients": [
+      "Chicken leg quarters",
+      "Garlic",
+      "Coriander roots",
+      "White pepper",
+      "Fish sauce",
+      "Soy sauce",
+      "Lemongrass",
+      "Sticky rice",
+      "Dried chili flakes",
+      "Lime"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken leg quarters",
+          "to": "Pressed firm tofu | King oyster mushrooms",
+          "note": "Grill until charred"
+        },
+        {
+          "from": "Fish sauce",
+          "to": "Vegan fish sauce | Soy sauce",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Dried chili flakes",
+          "to": "Leave out",
+          "note": "The lime and garlic still shine"
+        }
+      ],
+      "local": [
+        {
+          "from": "Coriander roots",
+          "to": "Cilantro stems",
+          "note": "Use twice as much"
+        }
+      ]
+    },
+    "protein": 42,
+    "carbs": 40,
+    "fat": 20,
+    "fiber": 1,
+    "image": "/images/dishes/Gai-Yang.jpg"
+  },
+  {
+    "id": 8273,
+    "name": "Boat Noodles",
+    "country": "Thailand",
+    "region": "Asia",
+    "emoji": "🍜",
+    "cal": 480,
+    "budget": 6,
+    "time": "2 hrs",
+    "spice": 3,
+    "tags": [
+      "fish",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Bangkok small bowls of rice noodles in a dark, rich spiced beef broth with sliced beef, meatballs, greens and chili.",
+    "ingredients": [
+      "Rice noodles",
+      "Beef",
+      "Beef meatballs",
+      "Beef broth",
+      "Star anise",
+      "Cinnamon",
+      "Soy sauce",
+      "Fish sauce",
+      "Morning glory",
+      "Bean sprouts",
+      "Dried chili flakes",
+      "Fried garlic"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Beef",
+          "to": "Fried tofu",
+          "note": "Slice thin"
+        },
+        {
+          "from": "Beef meatballs",
+          "to": "Mushroom balls | Extra tofu",
+          "note": "Add at the end"
+        },
+        {
+          "from": "Beef broth",
+          "to": "Mushroom broth",
+          "note": "Simmer with the same spices"
+        },
+        {
+          "from": "Fish sauce",
+          "to": "Vegan fish sauce",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Beef meatballs",
+          "to": "Extra sliced beef",
+          "note": "Many meatballs contain wheat flour"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Dried chili flakes",
+          "to": "Leave out",
+          "note": "Serve chili on the side"
+        }
+      ],
+      "local": [
+        {
+          "from": "Morning glory",
+          "to": "Spinach | Water spinach",
+          "note": "Blanch for a few seconds"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 58,
+    "fat": 14,
+    "fiber": 3,
+    "image": "/images/dishes/Boat-Noodles.jpg"
+  },
+  {
+    "id": 8274,
+    "name": "Sisig",
+    "country": "Philippines",
+    "region": "Asia",
+    "emoji": "🍖",
+    "cal": 650,
+    "budget": 8,
+    "time": "1.5 hrs",
+    "spice": 2,
+    "tags": [
+      "eggs",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Pampanga sizzling plate of chopped grilled pork with onion, chili and calamansi, often topped with an egg that cooks on the hot plate.",
+    "ingredients": [
+      "Pork belly",
+      "Pork ears and jowl",
+      "Red onion",
+      "Calamansi",
+      "Soy sauce",
+      "Bird's eye chilies",
+      "Chicken liver",
+      "Egg"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pork belly",
+          "to": "Chopped crispy tofu",
+          "note": "Fry until very crisp"
+        },
+        {
+          "from": "Pork ears and jowl",
+          "to": "King oyster mushrooms",
+          "note": "Chop and fry until crisp"
+        },
+        {
+          "from": "Chicken liver",
+          "to": "Leave out",
+          "note": "Add a little extra soy sauce"
+        },
+        {
+          "from": "Egg",
+          "to": "Leave out",
+          "note": "Serve with a lime wedge"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Leave out",
+          "note": "Still rich and sizzling"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Bird's eye chilies",
+          "to": "Leave out | Mild green chili",
+          "note": "Calamansi keeps it bright"
+        }
+      ],
+      "local": [
+        {
+          "from": "Calamansi",
+          "to": "Lime with a little orange juice",
+          "note": "Gives the same sweet-sour taste"
+        },
+        {
+          "from": "Pork ears and jowl",
+          "to": "Extra pork belly",
+          "note": "Chop it the same way"
+        }
+      ]
+    },
+    "protein": 34,
+    "carbs": 8,
+    "fat": 56,
+    "fiber": 1,
+    "image": "/images/dishes/Sisig.jpg"
+  },
+  {
+    "id": 8275,
+    "name": "Halo-Halo",
+    "country": "Philippines",
+    "region": "Asia",
+    "emoji": "🍧",
+    "cal": 480,
+    "budget": 6,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "eggs",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Filipino dessert of shaved ice and evaporated milk layered with sweet beans, jellies, fruit, leche flan and ube ice cream.",
+    "ingredients": [
+      "Shaved ice",
+      "Evaporated milk",
+      "Sweetened red beans",
+      "Nata de coco",
+      "Sweetened jackfruit",
+      "Sweet plantain",
+      "Leche flan",
+      "Ube ice cream",
+      "Pinipig (toasted rice flakes)"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Evaporated milk",
+          "to": "Coconut milk",
+          "note": "Pour over just before eating"
+        },
+        {
+          "from": "Leche flan",
+          "to": "Leave out | Extra ube halaya",
+          "note": "Keeps the creamy layer"
+        },
+        {
+          "from": "Ube ice cream",
+          "to": "Dairy-free ube ice cream",
+          "note": "Or coconut ice cream"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Evaporated milk",
+          "to": "Coconut milk",
+          "note": "Pour over just before eating"
+        },
+        {
+          "from": "Ube ice cream",
+          "to": "Dairy-free ube ice cream",
+          "note": "Or coconut ice cream"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Leche flan",
+          "to": "Leave out | Extra ube halaya",
+          "note": "Keeps the creamy layer"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 88,
+    "fat": 11,
+    "fiber": 4,
+    "image": "/images/dishes/Halo-Halo.jpg"
+  },
+  {
+    "id": 8276,
+    "name": "Banh Cuon",
+    "country": "Vietnam",
+    "region": "Asia",
+    "emoji": "🥟",
+    "cal": 420,
+    "budget": 6,
+    "time": "1 hr",
+    "spice": 1,
+    "tags": [
+      "fish",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Northern Vietnamese steamed rice sheets rolled around pork and wood ear mushrooms, topped with fried shallots and served with nuoc cham.",
+    "ingredients": [
+      "Rice flour",
+      "Tapioca starch",
+      "Ground pork",
+      "Wood ear mushrooms",
+      "Shallots",
+      "Fish sauce",
+      "Lime",
+      "Sugar",
+      "Bird's eye chilies",
+      "Fresh herbs",
+      "Cha lua (Vietnamese pork sausage)"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Ground pork",
+          "to": "Crumbled firm tofu",
+          "note": "Cook with the mushrooms"
+        },
+        {
+          "from": "Cha lua (Vietnamese pork sausage)",
+          "to": "Fried tofu slices",
+          "note": "Serve on the side"
+        },
+        {
+          "from": "Fish sauce",
+          "to": "Vegan fish sauce",
+          "note": "Use the same amount"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Bird's eye chilies",
+          "to": "Leave out",
+          "note": "The dip stays sweet and tangy"
+        }
+      ]
+    },
+    "protein": 20,
+    "carbs": 58,
+    "fat": 12,
+    "fiber": 2,
+    "image": "/images/dishes/Banh-Cuon.jpg"
+  },
+  {
+    "id": 8277,
+    "name": "Babi Guling",
+    "country": "Indonesia",
+    "region": "Asia",
+    "emoji": "🍖",
+    "cal": 780,
+    "budget": 14,
+    "time": "4 hrs",
+    "spice": 3,
+    "tags": [
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Balinese roast suckling pig rubbed and stuffed with a turmeric, chili and lemongrass spice paste, served with rice, crackling, sambal and lawar (long beans with grated coconut).",
+    "ingredients": [
+      "Pork belly with skin",
+      "Turmeric",
+      "Galangal",
+      "Lemongrass",
+      "Shallots",
+      "Garlic",
+      "Bird's eye chilies",
+      "Kaffir lime leaves",
+      "Coriander seeds",
+      "Steamed rice",
+      "Lawar (long beans with grated coconut)",
+      "Sambal"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pork belly with skin",
+          "to": "Young jackfruit | Tempeh",
+          "note": "Roast in the same spice paste"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Bird's eye chilies",
+          "to": "Half the chilies | Leave out",
+          "note": "Turmeric and lemongrass carry the flavor"
+        }
+      ],
+      "local": [
+        {
+          "from": "Galangal",
+          "to": "Ginger",
+          "note": "Use a little less"
+        }
+      ]
+    },
+    "protein": 42,
+    "carbs": 40,
+    "fat": 50,
+    "fiber": 2,
+    "image": "/images/dishes/Babi-Guling.jpg"
+  },
+  {
+    "id": 8278,
+    "name": "Martabak Manis",
+    "country": "Indonesia",
+    "region": "Asia",
+    "emoji": "🥞",
+    "cal": 560,
+    "budget": 4,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "nuts"
+    ],
+    "desc": "Indonesian dessert of a thick, fluffy griddle pancake folded over butter, chocolate sprinkles, crushed peanuts, cheese and condensed milk.",
+    "ingredients": [
+      "Flour",
+      "Eggs",
+      "Milk",
+      "Sugar",
+      "Yeast",
+      "Baking soda",
+      "Butter",
+      "Chocolate sprinkles",
+      "Crushed peanuts",
+      "Grated cheese",
+      "Sweetened condensed milk"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Extra plant milk with 1 tsp baking powder",
+          "note": "Rest the batter so it bubbles"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Spread while hot"
+        },
+        {
+          "from": "Grated cheese",
+          "to": "Leave out",
+          "note": "Chocolate and peanuts are enough"
+        },
+        {
+          "from": "Sweetened condensed milk",
+          "to": "Sweetened condensed coconut milk",
+          "note": "Drizzle the same way"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Spread while hot"
+        },
+        {
+          "from": "Grated cheese",
+          "to": "Leave out",
+          "note": "Chocolate and peanuts are enough"
+        },
+        {
+          "from": "Sweetened condensed milk",
+          "to": "Sweetened condensed coconut milk",
+          "note": "Drizzle the same way"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Rest the batter 30 minutes"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Extra milk with 1 tsp baking powder",
+          "note": "Rest the batter so it bubbles"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Crushed peanuts",
+          "to": "Toasted coconut | Sesame seeds",
+          "note": "Sprinkle the same way"
+        }
+      ]
+    },
+    "protein": 13,
+    "carbs": 70,
+    "fat": 26,
+    "fiber": 2,
+    "image": "/images/dishes/Martabak-Manis.jpg"
   }
 ];
