@@ -1,6 +1,7 @@
 // WorldMeals database — reviewed 2026-10-17
 // 2026-10-19: added 23 dishes (ids 8184–8206): 11 alcohol-free drinks (tag "drink") and 12 barbecue dishes (tag "bbq"). Their nutrition, cost and time are estimates.
 // 2026-10-20: added 25 dishes (ids 8207–8231), batch 1 of "The most desirable dishes in the world" (Italy, France, Spain, Portugal). Their nutrition, cost and time are estimates.
+// 2026-10-21: added 25 dishes (ids 8232–8256), batch 2 of "The most desirable dishes in the world" (Greece, Turkey, Middle East, India, China). Their nutrition, cost and time are estimates.
 // All photos use existing /images/dishes/*.jpg paths; upload the matching assets.
 // Compatibility: existing IDs, names, order, image paths and meal field names retained.
 // Content pass: 767 dishes updated; 1710 repeated substitution entries corrected, plus dish-specific edits.
@@ -83848,5 +83849,1873 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 24,
     "fiber": 4,
     "image": "/images/dishes/Sardinhas-Assadas.jpg"
+  },
+  {
+    "id": 8232,
+    "name": "Saganaki",
+    "country": "Greece",
+    "region": "Europe",
+    "emoji": "🧀",
+    "cal": 380,
+    "budget": 7,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Greek pan-fried slab of firm cheese with a golden crust, finished with lemon and oregano and eaten hot with bread.",
+    "ingredients": [
+      "Kefalograviera cheese",
+      "Flour",
+      "Olive oil",
+      "Lemon",
+      "Dried oregano",
+      "Crusty bread"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Kefalograviera cheese",
+          "to": "Vegan halloumi-style cheese | Extra-firm tofu",
+          "note": "Dust with flour and fry until golden"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Kefalograviera cheese",
+          "to": "Dairy-free halloumi-style cheese",
+          "note": "Dust with flour and fry until golden"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Rice flour | Cornstarch",
+          "note": "Gives the same crisp crust"
+        },
+        {
+          "from": "Crusty bread",
+          "to": "Gluten-free bread",
+          "note": "Warm it before serving"
+        }
+      ],
+      "local": [
+        {
+          "from": "Kefalograviera cheese",
+          "to": "Halloumi | Kefalotyri | Pecorino",
+          "note": "Halloumi needs no flour"
+        }
+      ]
+    },
+    "protein": 22,
+    "carbs": 18,
+    "fat": 25,
+    "fiber": 1,
+    "image": "/images/dishes/Saganaki.jpg"
+  },
+  {
+    "id": 8233,
+    "name": "Galaktoboureko",
+    "country": "Greece",
+    "region": "Europe",
+    "emoji": "🍰",
+    "cal": 480,
+    "budget": 7,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Greek dessert of semolina custard baked between crisp layers of buttered filo, soaked in lemon syrup.",
+    "ingredients": [
+      "Filo pastry",
+      "Milk",
+      "Fine semolina",
+      "Eggs",
+      "Sugar",
+      "Butter",
+      "Lemon peel",
+      "Vanilla"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Cornstarch",
+          "note": "About 2 tbsp per egg; the custard is softer"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter | Olive oil",
+          "note": "Brush every filo sheet"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Almond milk",
+          "note": "Use unsweetened"
+        },
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Brush every filo sheet"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Filo pastry",
+          "to": "Gluten-free filo",
+          "note": "Handle gently; keep it covered"
+        },
+        {
+          "from": "Fine semolina",
+          "to": "Fine cornmeal | Rice flour",
+          "note": "Whisk constantly as it thickens"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Cornstarch",
+          "note": "About 2 tbsp per egg; the custard is softer"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 64,
+    "fat": 21,
+    "fiber": 1,
+    "image": "/images/dishes/Galaktoboureko.jpg"
+  },
+  {
+    "id": 8234,
+    "name": "Adana Kebab",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "🍢",
+    "cal": 620,
+    "budget": 11,
+    "time": "40 min",
+    "spice": 2,
+    "tags": [
+      "bbq",
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Spicy minced lamb kebab from Adana, hand-pressed onto wide skewers and grilled over charcoal, served with lavash and sumac onions.",
+    "ingredients": [
+      "Minced lamb with fat",
+      "Red pepper flakes (pul biber)",
+      "Red bell pepper",
+      "Garlic",
+      "Salt",
+      "Lavash bread",
+      "Red onion",
+      "Sumac",
+      "Flat-leaf parsley",
+      "Grilled tomatoes"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Minced lamb with fat",
+          "to": "Seasoned seitan mince | Plant-based mince",
+          "note": "Chill before shaping so it holds on the skewer"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Lavash bread",
+          "to": "Gluten-free flatbread | Rice",
+          "note": "Warm the bread on the grill"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Red pepper flakes (pul biber)",
+          "to": "Sweet paprika",
+          "note": "Same color, no heat"
+        }
+      ],
+      "local": [
+        {
+          "from": "Minced lamb with fat",
+          "to": "Minced beef with about 20% fat",
+          "note": "Fat keeps it juicy on the grill"
+        }
+      ]
+    },
+    "protein": 38,
+    "carbs": 32,
+    "fat": 38,
+    "fiber": 3,
+    "image": "/images/dishes/Adana-Kebab.jpg"
+  },
+  {
+    "id": 8235,
+    "name": "Hünkar Beğendi",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "🍆",
+    "cal": 640,
+    "budget": 13,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Ottoman lamb stew in tomato sauce served on a creamy smoked eggplant and cheese purée; the name means \"the sultan liked it\".",
+    "ingredients": [
+      "Lamb shoulder",
+      "Tomatoes",
+      "Onion",
+      "Garlic",
+      "Eggplants",
+      "Butter",
+      "Flour",
+      "Milk",
+      "Kasar cheese",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lamb shoulder",
+          "to": "Chickpeas | Seitan chunks",
+          "note": "Simmer in the tomato sauce"
+        },
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use unsweetened"
+        },
+        {
+          "from": "Kasar cheese",
+          "to": "Vegan melting cheese",
+          "note": "Stir in off the heat"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use unsweetened"
+        },
+        {
+          "from": "Kasar cheese",
+          "to": "Dairy-free melting cheese",
+          "note": "Stir in off the heat"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Rice flour | Cornstarch",
+          "note": "Thickens the purée the same way"
+        }
+      ],
+      "local": [
+        {
+          "from": "Kasar cheese",
+          "to": "Mozzarella | Mild cheddar",
+          "note": "Any mild melting cheese works"
+        }
+      ]
+    },
+    "protein": 36,
+    "carbs": 30,
+    "fat": 42,
+    "fiber": 8,
+    "image": "/images/dishes/Hunkar-Begendi.jpg"
+  },
+  {
+    "id": 8236,
+    "name": "Kumpir",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "🥔",
+    "cal": 920,
+    "budget": 6,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "eggs",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Istanbul street-food baked potato mashed inside its skin with butter and cheese, then loaded with sucuk sausage, Russian salad, corn, olives, pickles and red cabbage.",
+    "ingredients": [
+      "Large baking potatoes",
+      "Butter",
+      "Kasar cheese",
+      "Sucuk (Turkish sausage)",
+      "Russian salad",
+      "Sweetcorn",
+      "Olives",
+      "Pickled red cabbage",
+      "Pickles",
+      "Ketchup",
+      "Mayonnaise"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Mash it into the hot potato"
+        },
+        {
+          "from": "Kasar cheese",
+          "to": "Vegan melting cheese",
+          "note": "Mash it into the hot potato"
+        },
+        {
+          "from": "Sucuk (Turkish sausage)",
+          "to": "Plant-based sausage | Spiced chickpeas",
+          "note": "Fry until crisp"
+        },
+        {
+          "from": "Russian salad",
+          "to": "Russian salad made with egg-free mayonnaise",
+          "note": "Same vegetables, egg-free dressing"
+        },
+        {
+          "from": "Mayonnaise",
+          "to": "Egg-free mayonnaise",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Russian salad",
+          "to": "Russian salad made with egg-free mayonnaise",
+          "note": "Same vegetables, egg-free dressing"
+        },
+        {
+          "from": "Mayonnaise",
+          "to": "Egg-free mayonnaise",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter | Olive oil",
+          "note": "Mash it into the hot potato"
+        },
+        {
+          "from": "Kasar cheese",
+          "to": "Dairy-free melting cheese",
+          "note": "Mash it into the hot potato"
+        }
+      ],
+      "local": [
+        {
+          "from": "Kasar cheese",
+          "to": "Mozzarella | Cheddar",
+          "note": "Any melting cheese works"
+        },
+        {
+          "from": "Sucuk (Turkish sausage)",
+          "to": "Chorizo | Smoked beef sausage",
+          "note": "Slice and fry until crisp"
+        }
+      ]
+    },
+    "protein": 28,
+    "carbs": 96,
+    "fat": 48,
+    "fiber": 10,
+    "image": "/images/dishes/Kumpir.jpg"
+  },
+  {
+    "id": 8237,
+    "name": "Baba Ganoush",
+    "country": "Lebanon",
+    "region": "Middle East",
+    "emoji": "🍆",
+    "cal": 260,
+    "budget": 4,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Levantine dip of smoky charred eggplant mashed with tahini, lemon and garlic, finished with olive oil and pomegranate.",
+    "ingredients": [
+      "Eggplants",
+      "Tahini",
+      "Lemon",
+      "Garlic",
+      "Extra-virgin olive oil",
+      "Pomegranate seeds",
+      "Parsley",
+      "Salt"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Pomegranate seeds",
+          "to": "Chopped tomato | Leave out",
+          "note": "Adds color and freshness"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 18,
+    "fat": 19,
+    "fiber": 8,
+    "image": "/images/dishes/Baba-Ganoush.jpg"
+  },
+  {
+    "id": 8238,
+    "name": "Ma'amoul",
+    "country": "Lebanon",
+    "region": "Middle East",
+    "emoji": "🍪",
+    "cal": 360,
+    "budget": 6,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "nuts"
+    ],
+    "desc": "Levantine dessert of semolina butter cookies pressed in wooden molds and filled with dates or walnuts, made for Eid and Easter.",
+    "ingredients": [
+      "Semolina",
+      "Flour",
+      "Butter",
+      "Sugar",
+      "Orange blossom water",
+      "Rose water",
+      "Dates",
+      "Walnuts",
+      "Powdered sugar"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter | Coconut oil",
+          "note": "Rest the dough so the semolina softens"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter | Coconut oil",
+          "note": "Rest the dough so the semolina softens"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Semolina",
+          "to": "Fine cornmeal with rice flour",
+          "note": "Crumblier; press gently"
+        },
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Use the same amount"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Walnuts",
+          "to": "Extra dates | Toasted sesame seeds",
+          "note": "Date filling is the classic nut-free choice"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 48,
+    "fat": 17,
+    "fiber": 3,
+    "image": "/images/dishes/Maamoul.jpg"
+  },
+  {
+    "id": 8239,
+    "name": "Tahchin",
+    "country": "Iran",
+    "region": "Middle East",
+    "emoji": "🍚",
+    "cal": 680,
+    "budget": 10,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "eggs",
+      "nuts",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Persian baked saffron rice cake set with yogurt and egg, layered with chicken, with a golden crispy crust, topped with barberries and pistachios.",
+    "ingredients": [
+      "Basmati rice",
+      "Chicken thighs",
+      "Plain yogurt",
+      "Egg yolks",
+      "Saffron",
+      "Butter",
+      "Onion",
+      "Barberries",
+      "Slivered pistachios"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken thighs",
+          "to": "Fried eggplant | Chickpeas",
+          "note": "Layer in the middle of the rice"
+        },
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Egg yolks",
+          "to": "Extra soy yogurt with 1 tbsp cornstarch",
+          "note": "Helps the crust set"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter | Oil",
+          "note": "Use plenty for the crust"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened dairy-free yogurt",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Oil",
+          "note": "Use plenty for the crust"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg yolks",
+          "to": "Extra yogurt with 1 tbsp cornstarch",
+          "note": "Helps the crust set"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Slivered pistachios",
+          "to": "Toasted pumpkin seeds | Leave out",
+          "note": "Keeps the green color on top"
+        }
+      ],
+      "local": [
+        {
+          "from": "Barberries",
+          "to": "Dried cranberries",
+          "note": "Chop them and use less sugar"
+        }
+      ]
+    },
+    "protein": 37,
+    "carbs": 79,
+    "fat": 27,
+    "fiber": 3,
+    "image": "/images/dishes/Tahchin.jpg"
+  },
+  {
+    "id": 8240,
+    "name": "Umm Ali",
+    "country": "Egypt",
+    "region": "Africa",
+    "emoji": "🍮",
+    "cal": 520,
+    "budget": 6,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "nuts"
+    ],
+    "desc": "Egyptian dessert of baked puff pastry soaked in sweet hot milk and cream with nuts, raisins and coconut, served warm.",
+    "ingredients": [
+      "Puff pastry",
+      "Milk",
+      "Heavy cream",
+      "Sugar",
+      "Raisins",
+      "Shredded coconut",
+      "Pistachios",
+      "Almonds",
+      "Vanilla"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Puff pastry",
+          "to": "Vegan puff pastry",
+          "note": "Many store-bought brands are vegan; check the label"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Coconut cream",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Coconut cream",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Puff pastry",
+          "to": "Gluten-free puff pastry",
+          "note": "Bake until crisp before soaking"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Pistachios",
+          "to": "Toasted pumpkin seeds",
+          "note": "Scatter on top"
+        },
+        {
+          "from": "Almonds",
+          "to": "Extra coconut",
+          "note": "Toast it first"
+        }
+      ]
+    },
+    "protein": 10,
+    "carbs": 56,
+    "fat": 29,
+    "fiber": 2,
+    "image": "/images/dishes/Umm-Ali.jpg"
+  },
+  {
+    "id": 8241,
+    "name": "Dal Makhani",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍛",
+    "cal": 480,
+    "budget": 4,
+    "time": "3 hrs",
+    "spice": 1,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Punjabi whole black lentils and kidney beans slow-cooked in a buttery tomato sauce and finished with cream.",
+    "ingredients": [
+      "Whole black lentils (urad dal)",
+      "Kidney beans",
+      "Butter",
+      "Heavy cream",
+      "Tomato purée",
+      "Ginger",
+      "Garlic",
+      "Kashmiri chili powder",
+      "Garam masala",
+      "Dried fenugreek leaves"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter | Oil",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Cashew cream | Coconut cream",
+          "note": "Stir in at the end"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter | Oil",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Coconut cream",
+          "note": "Stir in at the end"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Kashmiri chili powder",
+          "to": "Sweet paprika",
+          "note": "Same color, no heat"
+        }
+      ]
+    },
+    "protein": 18,
+    "carbs": 50,
+    "fat": 22,
+    "fiber": 14,
+    "image": "/images/dishes/Dal-Makhani.jpg"
+  },
+  {
+    "id": 8242,
+    "name": "Paneer Tikka",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍢",
+    "cal": 450,
+    "budget": 8,
+    "time": "1 hr",
+    "spice": 2,
+    "tags": [
+      "bbq",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "North Indian cubes of paneer, peppers and onion marinated in spiced yogurt and charred on skewers in a tandoor or on a grill.",
+    "ingredients": [
+      "Paneer",
+      "Plain yogurt",
+      "Bell peppers",
+      "Red onion",
+      "Ginger-garlic paste",
+      "Kashmiri chili powder",
+      "Garam masala",
+      "Chickpea flour",
+      "Lemon",
+      "Mustard oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Paneer",
+          "to": "Extra-firm tofu",
+          "note": "Press it well first"
+        },
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Use thick yogurt so the marinade clings"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Paneer",
+          "to": "Extra-firm tofu",
+          "note": "Press it well first"
+        },
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened dairy-free yogurt",
+          "note": "Use thick yogurt so the marinade clings"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Kashmiri chili powder",
+          "to": "Sweet paprika",
+          "note": "Same color, no heat"
+        }
+      ]
+    },
+    "protein": 26,
+    "carbs": 16,
+    "fat": 31,
+    "fiber": 3,
+    "image": "/images/dishes/Paneer-Tikka.jpg"
+  },
+  {
+    "id": 8243,
+    "name": "Malai Kofta",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍛",
+    "cal": 620,
+    "budget": 9,
+    "time": "1 hr",
+    "spice": 1,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "North Indian fried potato and paneer dumplings in a rich, mildly spiced tomato, cashew and cream sauce.",
+    "ingredients": [
+      "Potatoes",
+      "Paneer",
+      "Cornstarch",
+      "Cashews",
+      "Tomatoes",
+      "Onion",
+      "Heavy cream",
+      "Butter",
+      "Ginger",
+      "Garam masala",
+      "Kashmiri chili powder"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Paneer",
+          "to": "Crumbled firm tofu",
+          "note": "Squeeze out the water first"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Coconut cream",
+          "note": "Stir in at the end"
+        },
+        {
+          "from": "Butter",
+          "to": "Oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Paneer",
+          "to": "Crumbled firm tofu",
+          "note": "Squeeze out the water first"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Coconut cream",
+          "note": "Stir in at the end"
+        },
+        {
+          "from": "Butter",
+          "to": "Oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Cashews",
+          "to": "Sunflower seeds | Melon seeds",
+          "note": "Soak, then blend smooth"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Kashmiri chili powder",
+          "to": "Sweet paprika",
+          "note": "Same color, no heat"
+        }
+      ]
+    },
+    "protein": 16,
+    "carbs": 46,
+    "fat": 42,
+    "fiber": 6,
+    "image": "/images/dishes/Malai-Kofta.jpg"
+  },
+  {
+    "id": 8244,
+    "name": "Gulab Jamun",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍮",
+    "cal": 380,
+    "budget": 4,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Indian dessert of soft fried milk dumplings soaked in warm cardamom and rose syrup.",
+    "ingredients": [
+      "Milk powder",
+      "Flour",
+      "Ghee",
+      "Milk",
+      "Baking soda",
+      "Sugar",
+      "Cardamom",
+      "Rose water",
+      "Oil for frying"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk powder",
+          "to": "Coconut milk powder",
+          "note": "Dough is softer; fry on low heat"
+        },
+        {
+          "from": "Ghee",
+          "to": "Coconut oil",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Add slowly"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk powder",
+          "to": "Coconut milk powder",
+          "note": "Dough is softer; fry on low heat"
+        },
+        {
+          "from": "Ghee",
+          "to": "Coconut oil",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Add slowly"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Rice flour",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 56,
+    "fat": 15,
+    "fiber": 0,
+    "image": "/images/dishes/Gulab-Jamun.jpg"
+  },
+  {
+    "id": 8245,
+    "name": "Pork Vindaloo",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍛",
+    "cal": 560,
+    "budget": 9,
+    "time": "2 hrs",
+    "spice": 4,
+    "tags": [
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Goan pork curry in a hot, tangy sauce of dried red chilies, vinegar, garlic and warm spices.",
+    "ingredients": [
+      "Pork shoulder",
+      "Dried Kashmiri chilies",
+      "Vinegar",
+      "Garlic",
+      "Ginger",
+      "Onion",
+      "Cumin",
+      "Cinnamon",
+      "Cloves",
+      "Black pepper"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pork shoulder",
+          "to": "Potatoes and chickpeas | Seitan",
+          "note": "Simmer in the same paste"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Dried Kashmiri chilies",
+          "to": "Half the chilies plus sweet paprika",
+          "note": "Keeps the deep red color with less heat"
+        }
+      ],
+      "local": [
+        {
+          "from": "Pork shoulder",
+          "to": "Chicken thighs | Lamb shoulder",
+          "note": "Chicken needs less cooking time"
+        }
+      ]
+    },
+    "protein": 38,
+    "carbs": 16,
+    "fat": 36,
+    "fiber": 3,
+    "image": "/images/dishes/Pork-Vindaloo.jpg"
+  },
+  {
+    "id": 8246,
+    "name": "Chicken 65",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍗",
+    "cal": 520,
+    "budget": 7,
+    "time": "45 min",
+    "spice": 3,
+    "tags": [
+      "high-protein",
+      "eggs",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Chennai spicy fried chicken bites marinated in chili, ginger and garlic, tossed with curry leaves and green chilies.",
+    "ingredients": [
+      "Boneless chicken thighs",
+      "Plain yogurt",
+      "Egg",
+      "Rice flour",
+      "Cornstarch",
+      "Kashmiri chili powder",
+      "Ginger-garlic paste",
+      "Curry leaves",
+      "Green chilies",
+      "Oil for frying"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Boneless chicken thighs",
+          "to": "Cauliflower florets | Soy chunks",
+          "note": "Fry until crisp"
+        },
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Egg",
+          "to": "Cornstarch slurry",
+          "note": "1 tbsp cornstarch with 2 tbsp water"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt | Lemon juice",
+          "note": "Lemon gives the same tang"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Cornstarch slurry",
+          "note": "1 tbsp cornstarch with 2 tbsp water"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Kashmiri chili powder",
+          "to": "Sweet paprika",
+          "note": "Same color, no heat"
+        },
+        {
+          "from": "Green chilies",
+          "to": "Leave out",
+          "note": "Curry leaves keep the flavor"
+        }
+      ]
+    },
+    "protein": 36,
+    "carbs": 24,
+    "fat": 31,
+    "fiber": 1,
+    "image": "/images/dishes/Chicken-65.jpg"
+  },
+  {
+    "id": 8247,
+    "name": "Aloo Paratha",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🫓",
+    "cal": 420,
+    "budget": 3,
+    "time": "45 min",
+    "spice": 1,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Punjabi whole-wheat flatbread stuffed with spiced mashed potato, cooked on a griddle with ghee and served with yogurt and pickle.",
+    "ingredients": [
+      "Whole wheat flour",
+      "Potatoes",
+      "Green chilies",
+      "Cilantro",
+      "Cumin",
+      "Amchur (dry mango powder)",
+      "Ghee",
+      "Plain yogurt"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Ghee",
+          "to": "Oil",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Serve on the side"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Ghee",
+          "to": "Oil",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened dairy-free yogurt",
+          "note": "Serve on the side"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Whole wheat flour",
+          "to": "Gluten-free atta blend",
+          "note": "Roll between sheets of baking paper"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Green chilies",
+          "to": "Leave out",
+          "note": "Cumin and amchur keep the flavor"
+        }
+      ]
+    },
+    "protein": 10,
+    "carbs": 60,
+    "fat": 15,
+    "fiber": 7,
+    "image": "/images/dishes/Aloo-Paratha.jpg"
+  },
+  {
+    "id": 8248,
+    "name": "Kerala Fish Curry",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🐟",
+    "cal": 430,
+    "budget": 10,
+    "time": "40 min",
+    "spice": 3,
+    "tags": [
+      "high-protein",
+      "fish",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "South Indian fish simmered in a tangy red sauce of chili, tamarind and coconut milk with curry leaves.",
+    "ingredients": [
+      "Firm white fish",
+      "Coconut milk",
+      "Kashmiri chili powder",
+      "Tamarind",
+      "Shallots",
+      "Ginger",
+      "Garlic",
+      "Curry leaves",
+      "Mustard seeds",
+      "Turmeric",
+      "Coconut oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Firm white fish",
+          "to": "Firm tofu | Eggplant | Okra",
+          "note": "Simmer gently in the sauce"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Kashmiri chili powder",
+          "to": "Sweet paprika",
+          "note": "Same color, no heat"
+        }
+      ],
+      "local": [
+        {
+          "from": "Tamarind",
+          "to": "Lime juice",
+          "note": "Add at the end"
+        },
+        {
+          "from": "Firm white fish",
+          "to": "Kingfish | Tilapia | Salmon",
+          "note": "Any firm fish holds its shape"
+        }
+      ]
+    },
+    "protein": 35,
+    "carbs": 12,
+    "fat": 27,
+    "fiber": 2,
+    "image": "/images/dishes/Kerala-Fish-Curry.jpg"
+  },
+  {
+    "id": 8249,
+    "name": "Sweet and Sour Pork",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🍖",
+    "cal": 640,
+    "budget": 8,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "eggs",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Cantonese crisp fried pork pieces tossed with pineapple and peppers in a glossy sweet and tangy sauce.",
+    "ingredients": [
+      "Pork shoulder",
+      "Egg",
+      "Cornstarch",
+      "Soy sauce",
+      "Pineapple chunks",
+      "Bell peppers",
+      "Onion",
+      "Rice vinegar",
+      "Ketchup",
+      "Sugar",
+      "Oil for frying"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pork shoulder",
+          "to": "Firm tofu | Cauliflower",
+          "note": "Coat and fry until crisp"
+        },
+        {
+          "from": "Egg",
+          "to": "Cold water",
+          "note": "Mix with the cornstarch for the coating"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Cold water",
+          "note": "Mix with the cornstarch for the coating"
+        }
+      ]
+    },
+    "protein": 28,
+    "carbs": 64,
+    "fat": 30,
+    "fiber": 2,
+    "image": "/images/dishes/Sweet-and-Sour-Pork.jpg"
+  },
+  {
+    "id": 8250,
+    "name": "Har Gow",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🥟",
+    "cal": 280,
+    "budget": 9,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "shellfish",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Cantonese dim sum of whole shrimp wrapped in translucent, pleated wheat-starch dough and steamed.",
+    "ingredients": [
+      "Shrimp",
+      "Bamboo shoots",
+      "Wheat starch",
+      "Tapioca starch",
+      "Sesame oil",
+      "Sugar",
+      "Salt",
+      "White pepper"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Shrimp",
+          "to": "Diced king oyster mushroom | Water chestnut",
+          "note": "Season with a little seaweed salt"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wheat starch",
+          "to": "Extra tapioca starch with potato starch",
+          "note": "Dough is a little softer"
+        }
+      ]
+    },
+    "protein": 16,
+    "carbs": 36,
+    "fat": 8,
+    "fiber": 1,
+    "image": "/images/dishes/Har-Gow.jpg"
+  },
+  {
+    "id": 8251,
+    "name": "Siu Mai",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🥟",
+    "cal": 320,
+    "budget": 9,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "shellfish",
+      "fish",
+      "eggs",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Cantonese open-topped steamed dumplings of pork and shrimp in thin yellow wrappers, topped with orange fish roe.",
+    "ingredients": [
+      "Ground pork",
+      "Shrimp",
+      "Shiitake mushrooms",
+      "Wonton wrappers",
+      "Soy sauce",
+      "Sesame oil",
+      "Shaoxing wine",
+      "Cornstarch",
+      "Fish roe (tobiko)"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Ground pork",
+          "to": "Crumbled firm tofu",
+          "note": "Mix with extra shiitake"
+        },
+        {
+          "from": "Shrimp",
+          "to": "Extra shiitake mushrooms",
+          "note": "Chop finely"
+        },
+        {
+          "from": "Fish roe (tobiko)",
+          "to": "Finely diced carrot",
+          "note": "Gives the same orange dot on top"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wonton wrappers",
+          "to": "Gluten-free dumpling wrappers",
+          "note": "Keep them covered so they don't dry out"
+        },
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Wonton wrappers",
+          "to": "Egg-free dumpling wrappers",
+          "note": "Check the label"
+        }
+      ],
+      "local": [
+        {
+          "from": "Shaoxing wine",
+          "to": "Dry sherry",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Fish roe (tobiko)",
+          "to": "Finely diced carrot",
+          "note": "The common home-style topping"
+        }
+      ]
+    },
+    "protein": 21,
+    "carbs": 26,
+    "fat": 15,
+    "fiber": 1,
+    "image": "/images/dishes/Siu-Mai.jpg"
+  },
+  {
+    "id": 8252,
+    "name": "Wonton Noodle Soup",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🍜",
+    "cal": 480,
+    "budget": 7,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "shellfish",
+      "eggs",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Hong Kong bowl of shrimp wontons and thin springy egg noodles in clear, savory broth with greens.",
+    "ingredients": [
+      "Shrimp",
+      "Ground pork",
+      "Wonton wrappers",
+      "Thin egg noodles",
+      "Chicken stock",
+      "Soy sauce",
+      "Sesame oil",
+      "Bok choy",
+      "Scallions"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Shrimp",
+          "to": "Shiitake mushrooms",
+          "note": "Chop finely"
+        },
+        {
+          "from": "Ground pork",
+          "to": "Crumbled firm tofu",
+          "note": "Season well"
+        },
+        {
+          "from": "Chicken stock",
+          "to": "Mushroom stock",
+          "note": "Add a strip of kombu"
+        },
+        {
+          "from": "Thin egg noodles",
+          "to": "Egg-free wheat noodles",
+          "note": "Cook separately, then add to the bowl"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Wonton wrappers",
+          "to": "Gluten-free dumpling wrappers",
+          "note": "Keep them covered"
+        },
+        {
+          "from": "Thin egg noodles",
+          "to": "Rice vermicelli",
+          "note": "Soak instead of boiling"
+        },
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Thin egg noodles",
+          "to": "Egg-free wheat noodles",
+          "note": "Cook separately"
+        },
+        {
+          "from": "Wonton wrappers",
+          "to": "Egg-free dumpling wrappers",
+          "note": "Check the label"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 56,
+    "fat": 12,
+    "fiber": 3,
+    "image": "/images/dishes/Wonton-Noodle-Soup.jpg"
+  },
+  {
+    "id": 8253,
+    "name": "Dongpo Pork",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🍖",
+    "cal": 720,
+    "budget": 10,
+    "time": "3 hrs",
+    "spice": 0,
+    "tags": [
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Hangzhou squares of pork belly braised slowly in soy sauce, Shaoxing wine and rock sugar until meltingly tender.",
+    "ingredients": [
+      "Pork belly",
+      "Soy sauce",
+      "Dark soy sauce",
+      "Shaoxing wine",
+      "Rock sugar",
+      "Ginger",
+      "Scallions"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pork belly",
+          "to": "Thick-cut eggplant | Layered tofu skin",
+          "note": "Braise for 30 minutes only"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Dark soy sauce",
+          "to": "Gluten-free tamari with a little molasses",
+          "note": "Gives the same deep color"
+        }
+      ],
+      "local": [
+        {
+          "from": "Shaoxing wine",
+          "to": "Dry sherry",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 22,
+    "carbs": 20,
+    "fat": 61,
+    "fiber": 1,
+    "image": "/images/dishes/Dongpo-Pork.jpg"
+  },
+  {
+    "id": 8254,
+    "name": "Spring Rolls",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🥢",
+    "cal": 360,
+    "budget": 4,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Cantonese crisp fried rolls of thin wheat pastry filled with pork, cabbage, carrot and mushrooms.",
+    "ingredients": [
+      "Spring roll wrappers",
+      "Ground pork",
+      "Cabbage",
+      "Carrot",
+      "Shiitake mushrooms",
+      "Bean sprouts",
+      "Soy sauce",
+      "Oyster sauce",
+      "Oil for frying"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Ground pork",
+          "to": "Crumbled firm tofu | Extra mushrooms",
+          "note": "Cook until dry before rolling"
+        },
+        {
+          "from": "Oyster sauce",
+          "to": "Mushroom oyster sauce",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Spring roll wrappers",
+          "to": "Rice paper",
+          "note": "Fry in small batches; they crisp differently"
+        },
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Oyster sauce",
+          "to": "Gluten-free oyster sauce",
+          "note": "Check the label"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 36,
+    "fat": 19,
+    "fiber": 3,
+    "image": "/images/dishes/Spring-Rolls.jpg"
+  },
+  {
+    "id": 8255,
+    "name": "Yangzhou Fried Rice",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🍚",
+    "cal": 560,
+    "budget": 6,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "shellfish",
+      "eggs",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Classic Chinese fried rice with egg, shrimp, char siu pork, peas and scallions, every grain separate.",
+    "ingredients": [
+      "Day-old jasmine rice",
+      "Eggs",
+      "Shrimp",
+      "Char siu pork",
+      "Green peas",
+      "Scallions",
+      "Neutral oil",
+      "Salt",
+      "White pepper"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Crumbled firm tofu with turmeric",
+          "note": "Scramble first, then add back"
+        },
+        {
+          "from": "Shrimp",
+          "to": "Edamame",
+          "note": "Add with the peas"
+        },
+        {
+          "from": "Char siu pork",
+          "to": "Smoked tofu",
+          "note": "Dice small"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Char siu pork",
+          "to": "Diced ham",
+          "note": "Char siu marinade usually contains soy sauce"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Crumbled firm tofu with turmeric",
+          "note": "Scramble first, then add back"
+        }
+      ],
+      "local": [
+        {
+          "from": "Char siu pork",
+          "to": "Diced ham | Cooked chicken",
+          "note": "Dice small"
+        }
+      ]
+    },
+    "protein": 24,
+    "carbs": 72,
+    "fat": 18,
+    "fiber": 3,
+    "image": "/images/dishes/Yangzhou-Fried-Rice.jpg"
+  },
+  {
+    "id": 8256,
+    "name": "Egg Tarts",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🥧",
+    "cal": 260,
+    "budget": 3,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Hong Kong dessert of smooth, glossy egg custard baked in buttery shortcrust tart shells.",
+    "ingredients": [
+      "Flour",
+      "Butter",
+      "Powdered sugar",
+      "Eggs",
+      "Evaporated milk",
+      "Sugar",
+      "Hot water",
+      "Vanilla"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Cornstarch custard with plant milk",
+          "note": "Cook on the stove, then fill baked shells"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Keep it cold"
+        },
+        {
+          "from": "Evaporated milk",
+          "to": "Coconut milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Keep it cold"
+        },
+        {
+          "from": "Evaporated milk",
+          "to": "Oat milk | Coconut milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Chill the dough before shaping"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Cornstarch custard",
+          "note": "Cook on the stove, then fill baked shells"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 30,
+    "fat": 13,
+    "fiber": 0,
+    "image": "/images/dishes/Egg-Tarts.jpg"
   }
 ];
