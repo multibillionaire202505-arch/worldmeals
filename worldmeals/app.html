@@ -3681,7 +3681,7 @@ function renderGrid(){
     if(collection!=="all"&&!mealInCollection(m,collection))return false;
     if(maxTime<180&&parseMealMinutes(m.time)>maxTime)return false;
     if(proteinMin>0&&mealProtein(m)<proteinMin)return false;
-    if(m.cal>cal||m.budget>bud||m.spice>sp)return false;
+    if((cal<1000&&m.cal>cal)||m.budget>bud||m.spice>sp)return false;
     return true;
   });
 
