@@ -2395,7 +2395,7 @@ html body .wm-quick-close{width:28px;height:28px;border:0;background:transparent
 <div class="page active" id="page-browse">
   <div class="premium-top">
     <div class="brand-hero">
-      <img src="/images/worldmeals-logo-full.png"
+      <img src="/images/worldmeals-logo-full.png" loading="lazy"
            alt="WorldMeals — Connecting People Through Food"
            class="main-brand-logo">
     </div>
@@ -3242,6 +3242,9 @@ function uniquePush(arr, value){
 function mealImageFallbacks(m){
   const slug = mealLocalSlug(m);
   const list = [];
+
+  // Real photo path from meals.js first: avoids failed guesses before every photo.
+  if(isLocalDishImage(m?.image)) uniquePush(list, m.image);
 
   if(slug){
     uniquePush(list, `/images/dishes/${slug}.jpg`);
