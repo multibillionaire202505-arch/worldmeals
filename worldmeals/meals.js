@@ -3,6 +3,7 @@
 // 2026-10-20: added 25 dishes (ids 8207–8231), batch 1 of "The most desirable dishes in the world" (Italy, France, Spain, Portugal). Their nutrition, cost and time are estimates.
 // 2026-10-21: added 25 dishes (ids 8232–8256), batch 2 of "The most desirable dishes in the world" (Greece, Turkey, Middle East, India, China). Their nutrition, cost and time are estimates.
 // 2026-10-21: added 25 dishes (ids 8257–8281), batch 3 of "The most desirable dishes in the world" (China, Japan, Korea, Southeast Asia, USA). Their nutrition, cost and time are estimates.
+// 2026-10-21: added 25 dishes (ids 8282–8306), batch 4 of "The most desirable dishes in the world" (USA, Latin America, Caribbean, UK, Europe, Africa). Their nutrition, cost and time are estimates.
 // All photos use existing /images/dishes/*.jpg paths; upload the matching assets.
 // Compatibility: existing IDs, names, order, image paths and meal field names retained.
 // Content pass: 767 dishes updated; 1710 repeated substitution entries corrected, plus dish-specific edits.
@@ -87536,5 +87537,1902 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 28,
     "fiber": 5,
     "image": "/images/dishes/Crawfish-Boil.jpg"
+  },
+  {
+    "id": 8282,
+    "name": "Bagel and Lox",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥯",
+    "cal": 480,
+    "budget": 9,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "fish",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "New York deli bagel spread with cream cheese and topped with silky cured salmon, capers, red onion, tomato and dill.",
+    "ingredients": [
+      "Bagels",
+      "Lox (cured salmon)",
+      "Cream cheese",
+      "Capers",
+      "Red onion",
+      "Tomato",
+      "Fresh dill"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lox (cured salmon)",
+          "to": "Carrot lox",
+          "note": "Thin ribbons of roasted carrot marinated with smoked salt"
+        },
+        {
+          "from": "Cream cheese",
+          "to": "Vegan cream cheese",
+          "note": "Spread thick"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Cream cheese",
+          "to": "Dairy-free cream cheese",
+          "note": "Spread thick"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Bagels",
+          "to": "Gluten-free bagels",
+          "note": "Toast them lightly"
+        }
+      ],
+      "local": [
+        {
+          "from": "Lox (cured salmon)",
+          "to": "Smoked salmon",
+          "note": "Smoked is firmer and smokier"
+        }
+      ]
+    },
+    "protein": 26,
+    "carbs": 56,
+    "fat": 17,
+    "fiber": 3,
+    "image": "/images/dishes/Bagel-and-Lox.jpg"
+  },
+  {
+    "id": 8283,
+    "name": "Pastrami on Rye",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥪",
+    "cal": 720,
+    "budget": 14,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "New York deli sandwich piled high with hot, peppery smoked pastrami on rye bread with spicy brown mustard and a dill pickle.",
+    "ingredients": [
+      "Pastrami (thick-sliced)",
+      "Rye bread",
+      "Spicy brown mustard",
+      "Dill pickles"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pastrami (thick-sliced)",
+          "to": "Seitan pastrami | Beet pastrami",
+          "note": "Steam briefly so it stays tender"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Rye bread",
+          "to": "Gluten-free rye-style bread",
+          "note": "Toast it lightly"
+        }
+      ]
+    },
+    "protein": 44,
+    "carbs": 50,
+    "fat": 36,
+    "fiber": 5,
+    "image": "/images/dishes/Pastrami-on-Rye.jpg"
+  },
+  {
+    "id": 8284,
+    "name": "Red Velvet Cake",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍰",
+    "cal": 520,
+    "budget": 6,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "American dessert of soft, cocoa-red buttermilk layer cake covered in tangy cream cheese frosting.",
+    "ingredients": [
+      "Flour",
+      "Cocoa powder",
+      "Buttermilk",
+      "Eggs",
+      "Sugar",
+      "Vegetable oil",
+      "Red food coloring",
+      "White vinegar",
+      "Baking soda",
+      "Cream cheese",
+      "Butter",
+      "Powdered sugar"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs",
+          "note": "1 tbsp ground flax plus 3 tbsp water per egg"
+        },
+        {
+          "from": "Buttermilk",
+          "to": "Plant milk with 1 tbsp vinegar",
+          "note": "Rest 5 minutes before using"
+        },
+        {
+          "from": "Cream cheese",
+          "to": "Vegan cream cheese",
+          "note": "Chill the frosting before spreading"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Buttermilk",
+          "to": "Oat milk with 1 tbsp vinegar",
+          "note": "Rest 5 minutes before using"
+        },
+        {
+          "from": "Cream cheese",
+          "to": "Dairy-free cream cheese",
+          "note": "Chill the frosting before spreading"
+        },
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add 1/2 tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs | Unsweetened applesauce",
+          "note": "1/4 cup applesauce per egg"
+        }
+      ],
+      "local": [
+        {
+          "from": "Red food coloring",
+          "to": "Beet powder",
+          "note": "Natural color with a slightly earthier taste"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 66,
+    "fat": 26,
+    "fiber": 2,
+    "image": "/images/dishes/Red-Velvet-Cake.jpg"
+  },
+  {
+    "id": 8285,
+    "name": "Spam Musubi",
+    "country": "Hawaii",
+    "region": "Americas",
+    "emoji": "🍙",
+    "cal": 380,
+    "budget": 4,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Hawaiian snack of grilled Spam glazed in sweet soy sauce, pressed onto a block of rice and wrapped with a strip of nori.",
+    "ingredients": [
+      "Spam",
+      "Short-grain rice",
+      "Nori",
+      "Soy sauce",
+      "Sugar",
+      "Mirin"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Spam",
+          "to": "Teriyaki firm tofu slices",
+          "note": "Press and pan-fry until crisp"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 44,
+    "fat": 16,
+    "fiber": 1,
+    "image": "/images/dishes/Spam-Musubi.jpg"
+  },
+  {
+    "id": 8286,
+    "name": "Tres Leches Cake",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🍰",
+    "cal": 480,
+    "budget": 6,
+    "time": "4 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Latin American dessert of light sponge cake soaked in three milks, topped with whipped cream and a dusting of cinnamon.",
+    "ingredients": [
+      "Flour",
+      "Eggs",
+      "Sugar",
+      "Baking powder",
+      "Evaporated milk",
+      "Sweetened condensed milk",
+      "Whole milk",
+      "Heavy cream",
+      "Vanilla",
+      "Cinnamon"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs with extra baking powder",
+          "note": "The sponge is denser but still soaks well"
+        },
+        {
+          "from": "Evaporated milk",
+          "to": "Coconut milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Sweetened condensed milk",
+          "to": "Sweetened condensed coconut milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Whole milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Whipped coconut cream",
+          "note": "Chill the can overnight first"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Evaporated milk",
+          "to": "Coconut milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Sweetened condensed milk",
+          "to": "Sweetened condensed coconut milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Whole milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Whipped coconut cream",
+          "note": "Chill the can overnight first"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Sift twice for a light sponge"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs with extra baking powder",
+          "note": "The sponge is denser but still soaks well"
+        }
+      ]
+    },
+    "protein": 10,
+    "carbs": 64,
+    "fat": 20,
+    "fiber": 0,
+    "image": "/images/dishes/Tres-Leches-Cake.jpg"
+  },
+  {
+    "id": 8287,
+    "name": "Tlayudas",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🌮",
+    "cal": 780,
+    "budget": 8,
+    "time": "30 min",
+    "spice": 2,
+    "tags": [
+      "high-protein",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Oaxacan giant crisp corn tortilla spread with pork lard and black beans, topped with Oaxaca cheese, cabbage, avocado and grilled beef.",
+    "ingredients": [
+      "Large corn tortillas",
+      "Asiento (pork lard)",
+      "Refried black beans",
+      "Oaxaca cheese",
+      "Tasajo (dried beef)",
+      "Cabbage",
+      "Avocado",
+      "Salsa roja"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Asiento (pork lard)",
+          "to": "Olive oil",
+          "note": "Brush thinly over the tortilla"
+        },
+        {
+          "from": "Oaxaca cheese",
+          "to": "Vegan melting cheese",
+          "note": "Melt on the grill"
+        },
+        {
+          "from": "Tasajo (dried beef)",
+          "to": "Grilled mushrooms",
+          "note": "Season with lime and salt"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Oaxaca cheese",
+          "to": "Dairy-free melting cheese",
+          "note": "Melt on the grill"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Salsa roja",
+          "to": "Mild tomato salsa | Leave out",
+          "note": "Serve chili on the side"
+        }
+      ],
+      "local": [
+        {
+          "from": "Tasajo (dried beef)",
+          "to": "Thin grilled steak",
+          "note": "Slice thin after grilling"
+        },
+        {
+          "from": "Oaxaca cheese",
+          "to": "Mozzarella",
+          "note": "Tear it into strings"
+        }
+      ]
+    },
+    "protein": 38,
+    "carbs": 70,
+    "fat": 38,
+    "fiber": 14,
+    "image": "/images/dishes/Tlayudas.jpg"
+  },
+  {
+    "id": 8288,
+    "name": "Barbacoa",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🍖",
+    "cal": 560,
+    "budget": 14,
+    "time": "4 hrs",
+    "spice": 2,
+    "tags": [
+      "bbq",
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Mexican beef cheek slow-cooked in banana leaves with dried chilies until it falls apart, served in corn tortillas with onion, cilantro and lime.",
+    "ingredients": [
+      "Beef cheeks",
+      "Guajillo chilies",
+      "Ancho chilies",
+      "Garlic",
+      "Cumin",
+      "Cloves",
+      "Banana leaves",
+      "Corn tortillas",
+      "White onion",
+      "Cilantro",
+      "Lime"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Beef cheeks",
+          "to": "Young jackfruit | Oyster mushrooms",
+          "note": "Braise for 45 minutes in the same sauce"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Guajillo chilies",
+          "to": "Extra ancho chilies with seeds removed",
+          "note": "Mild and still deeply flavored"
+        }
+      ],
+      "local": [
+        {
+          "from": "Beef cheeks",
+          "to": "Beef chuck | Lamb shoulder",
+          "note": "Lamb is the classic in central Mexico"
+        },
+        {
+          "from": "Banana leaves",
+          "to": "Foil-covered pot",
+          "note": "Seal tightly to keep the steam in"
+        }
+      ]
+    },
+    "protein": 44,
+    "carbs": 34,
+    "fat": 24,
+    "fiber": 5,
+    "image": "/images/dishes/Barbacoa.jpg"
+  },
+  {
+    "id": 8289,
+    "name": "Rocoto Relleno",
+    "country": "Peru",
+    "region": "Americas",
+    "emoji": "🫑",
+    "cal": 520,
+    "budget": 9,
+    "time": "1.5 hrs",
+    "spice": 4,
+    "tags": [
+      "eggs",
+      "nuts",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Arequipa red rocoto peppers stuffed with spiced beef, peanuts, raisins, olives and egg, baked under melted queso fresco and served with pastel de papa (layered potato gratin).",
+    "ingredients": [
+      "Rocoto peppers",
+      "Ground beef",
+      "Onion",
+      "Ají panca paste",
+      "Roasted peanuts",
+      "Raisins",
+      "Black olives",
+      "Hard-boiled eggs",
+      "Queso fresco",
+      "Milk",
+      "Potatoes"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Ground beef",
+          "to": "Brown lentils | Chopped mushrooms",
+          "note": "Cook with the same spices"
+        },
+        {
+          "from": "Hard-boiled eggs",
+          "to": "Leave out",
+          "note": "Add extra olives"
+        },
+        {
+          "from": "Queso fresco",
+          "to": "Vegan melting cheese",
+          "note": "Lay on top before baking"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Queso fresco",
+          "to": "Dairy-free melting cheese",
+          "note": "Lay on top before baking"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Hard-boiled eggs",
+          "to": "Leave out",
+          "note": "Add extra olives"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Roasted peanuts",
+          "to": "Toasted sunflower seeds",
+          "note": "Keeps the crunch"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Rocoto peppers",
+          "to": "Red bell peppers",
+          "note": "Same look with no heat"
+        }
+      ],
+      "local": [
+        {
+          "from": "Rocoto peppers",
+          "to": "Red bell peppers with a pinch of chili flakes",
+          "note": "Rocotos are very hot; boil them twice in salted water to tame them"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 28,
+    "fat": 32,
+    "fiber": 5,
+    "image": "/images/dishes/Rocoto-Relleno.jpg"
+  },
+  {
+    "id": 8290,
+    "name": "Alfajores",
+    "country": "Argentina",
+    "region": "Americas",
+    "emoji": "🍪",
+    "cal": 320,
+    "budget": 4,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Argentine dessert of two melt-in-the-mouth cornstarch cookies sandwiched with dulce de leche and rolled in coconut.",
+    "ingredients": [
+      "Cornstarch",
+      "Flour",
+      "Butter",
+      "Sugar",
+      "Egg yolks",
+      "Dulce de leche",
+      "Shredded coconut",
+      "Lemon zest"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Keep it soft"
+        },
+        {
+          "from": "Egg yolks",
+          "to": "1 tbsp plant milk per yolk",
+          "note": "The dough is still tender"
+        },
+        {
+          "from": "Dulce de leche",
+          "to": "Coconut dulce de leche",
+          "note": "Simmer coconut milk and sugar until thick"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Keep it soft"
+        },
+        {
+          "from": "Dulce de leche",
+          "to": "Coconut dulce de leche",
+          "note": "Simmer coconut milk and sugar until thick"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Extra cornstarch with rice flour",
+          "note": "Cornstarch is already gluten-free"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg yolks",
+          "to": "1 tbsp milk per yolk",
+          "note": "The dough is still tender"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 46,
+    "fat": 14,
+    "fiber": 1,
+    "image": "/images/dishes/Alfajores.jpg"
+  },
+  {
+    "id": 8291,
+    "name": "Quindim",
+    "country": "Brazil",
+    "region": "Americas",
+    "emoji": "🍮",
+    "cal": 330,
+    "budget": 3,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "eggs",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Brazilian dessert of glossy golden egg-yolk custard baked over a chewy coconut base.",
+    "ingredients": [
+      "Egg yolks",
+      "Sugar",
+      "Grated coconut",
+      "Butter",
+      "Coconut milk"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Coconut oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg yolks",
+          "to": "Coconut milk set with agar and a pinch of turmeric",
+          "note": "A different texture; the classic needs yolks"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 40,
+    "fat": 17,
+    "fiber": 2,
+    "image": "/images/dishes/Quindim.jpg"
+  },
+  {
+    "id": 8292,
+    "name": "Trinidad Roti",
+    "country": "Trinidad and Tobago",
+    "region": "Americas",
+    "emoji": "🫓",
+    "cal": 760,
+    "budget": 8,
+    "time": "1.5 hrs",
+    "spice": 3,
+    "tags": [
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Trinidadian dhalpuri flatbread filled with ground split peas, wrapped around curried chicken and potato.",
+    "ingredients": [
+      "Flour",
+      "Yellow split peas",
+      "Baking powder",
+      "Chicken thighs",
+      "Potatoes",
+      "Trinidad curry powder",
+      "Green seasoning",
+      "Scotch bonnet pepper",
+      "Garlic",
+      "Cumin"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken thighs",
+          "to": "Chickpeas and pumpkin",
+          "note": "Curry channa and pumpkin is a classic Trinidad filling"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free atta blend",
+          "note": "Roll between sheets of baking paper"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Scotch bonnet pepper",
+          "to": "Leave out | Add it whole and remove before serving",
+          "note": "Keeps the fruity flavor with less heat"
+        }
+      ]
+    },
+    "protein": 38,
+    "carbs": 92,
+    "fat": 24,
+    "fiber": 10,
+    "image": "/images/dishes/Trinidad-Roti.jpg"
+  },
+  {
+    "id": 8293,
+    "name": "Sunday Roast",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🍖",
+    "cal": 860,
+    "budget": 22,
+    "time": "2.5 hrs",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "eggs",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "British roast beef with crisp roast potatoes, Yorkshire puddings, seasonal vegetables and rich gravy.",
+    "ingredients": [
+      "Beef topside",
+      "Potatoes",
+      "Carrots",
+      "Seasonal greens",
+      "Flour",
+      "Eggs",
+      "Milk",
+      "Beef stock",
+      "Beef dripping",
+      "Horseradish sauce"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Beef topside",
+          "to": "Mushroom and lentil roast",
+          "note": "Slice thick and serve with the gravy"
+        },
+        {
+          "from": "Eggs",
+          "to": "Aquafaba",
+          "note": "Vegan Yorkshire puddings rise less"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Beef stock",
+          "to": "Vegetable stock",
+          "note": "Add soy sauce for depth"
+        },
+        {
+          "from": "Beef dripping",
+          "to": "Vegetable oil",
+          "note": "Heat until very hot"
+        },
+        {
+          "from": "Horseradish sauce",
+          "to": "Dairy-free horseradish sauce",
+          "note": "Mix horseradish with vegan cream"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Horseradish sauce",
+          "to": "Dairy-free horseradish sauce",
+          "note": "Mix horseradish with dairy-free cream"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Works for the Yorkshires and the gravy"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Aquafaba",
+          "note": "Yorkshire puddings rise less"
+        }
+      ],
+      "local": [
+        {
+          "from": "Beef topside",
+          "to": "Roast chicken | Leg of lamb",
+          "note": "Both are classic Sunday roasts"
+        }
+      ]
+    },
+    "protein": 52,
+    "carbs": 70,
+    "fat": 40,
+    "fiber": 8,
+    "image": "/images/dishes/Sunday-Roast.jpg"
+  },
+  {
+    "id": 8294,
+    "name": "Eton Mess",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🍓",
+    "cal": 420,
+    "budget": 6,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "eggs"
+    ],
+    "desc": "English summer dessert of crushed meringue, whipped cream and fresh strawberries folded together.",
+    "ingredients": [
+      "Meringues",
+      "Heavy cream",
+      "Strawberries",
+      "Sugar",
+      "Vanilla"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Meringues",
+          "to": "Aquafaba meringues",
+          "note": "Whip chickpea water with sugar"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Whipped coconut cream",
+          "note": "Chill the can overnight first"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Heavy cream",
+          "to": "Whipped coconut cream",
+          "note": "Chill the can overnight first"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Meringues",
+          "to": "Aquafaba meringues",
+          "note": "Whip chickpea water with sugar"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 40,
+    "fat": 27,
+    "fiber": 2,
+    "image": "/images/dishes/Eton-Mess.jpg"
+  },
+  {
+    "id": 8295,
+    "name": "Scones with Clotted Cream",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🧁",
+    "cal": 480,
+    "budget": 5,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "English teatime treat of warm scones split and topped with clotted cream and strawberry jam; a classic dessert.",
+    "ingredients": [
+      "Flour",
+      "Baking powder",
+      "Butter",
+      "Milk",
+      "Egg",
+      "Sugar",
+      "Clotted cream",
+      "Strawberry jam"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan block butter",
+          "note": "Keep it cold"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Egg",
+          "to": "Plant milk for brushing",
+          "note": "Brush the tops before baking"
+        },
+        {
+          "from": "Clotted cream",
+          "to": "Whipped coconut cream",
+          "note": "Whip until very thick"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free block butter",
+          "note": "Keep it cold"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Clotted cream",
+          "to": "Whipped coconut cream",
+          "note": "Whip until very thick"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free self-raising flour blend",
+          "note": "Handle the dough gently"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Milk for brushing",
+          "note": "Brush the tops before baking"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 58,
+    "fat": 24,
+    "fiber": 2,
+    "image": "/images/dishes/Scones-with-Clotted-Cream.jpg"
+  },
+  {
+    "id": 8296,
+    "name": "Sausage Roll",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🥐",
+    "cal": 450,
+    "budget": 4,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "eggs",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "British bakery favorite of seasoned pork sausage meat wrapped in flaky golden puff pastry.",
+    "ingredients": [
+      "Puff pastry",
+      "Pork sausage meat",
+      "Onion",
+      "Sage",
+      "Breadcrumbs",
+      "Egg"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pork sausage meat",
+          "to": "Plant-based sausage meat",
+          "note": "Season with the same sage and onion"
+        },
+        {
+          "from": "Puff pastry",
+          "to": "Vegan puff pastry",
+          "note": "Many store-bought brands are vegan; check the label"
+        },
+        {
+          "from": "Egg",
+          "to": "Plant milk for brushing",
+          "note": "Brush before baking"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Puff pastry",
+          "to": "Dairy-free puff pastry",
+          "note": "Many store-bought brands use oil; check the label"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Puff pastry",
+          "to": "Gluten-free puff pastry",
+          "note": "Keep it cold while rolling"
+        },
+        {
+          "from": "Breadcrumbs",
+          "to": "Gluten-free breadcrumbs",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Milk for brushing",
+          "note": "Brush before baking"
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 30,
+    "fat": 30,
+    "fiber": 1,
+    "image": "/images/dishes/Sausage-Roll.jpg"
+  },
+  {
+    "id": 8297,
+    "name": "Schweinshaxe",
+    "country": "Germany",
+    "region": "Europe",
+    "emoji": "🍖",
+    "cal": 980,
+    "budget": 12,
+    "time": "3 hrs",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Bavarian roasted pork knuckle with shatteringly crisp crackling, served with dark beer gravy, potato dumplings and sauerkraut.",
+    "ingredients": [
+      "Pork knuckle",
+      "Dark beer",
+      "Onion",
+      "Carrot",
+      "Caraway seeds",
+      "Garlic",
+      "Potato dumplings",
+      "Sauerkraut"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pork knuckle",
+          "to": "Seitan roast",
+          "note": "Roast with the same caraway and garlic"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Dark beer",
+          "to": "Gluten-free beer | Beef stock",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Potato dumplings",
+          "to": "Gluten-free potato dumplings",
+          "note": "Skip the bread cubes inside"
+        }
+      ],
+      "local": [
+        {
+          "from": "Dark beer",
+          "to": "Beef stock with a spoon of molasses",
+          "note": "Alcohol-free and still dark and rich"
+        }
+      ]
+    },
+    "protein": 62,
+    "carbs": 40,
+    "fat": 62,
+    "fiber": 5,
+    "image": "/images/dishes/Schweinshaxe.jpg"
+  },
+  {
+    "id": 8298,
+    "name": "Stroopwafel",
+    "country": "Netherlands",
+    "region": "Europe",
+    "emoji": "🧇",
+    "cal": 320,
+    "budget": 3,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Dutch dessert of two thin, crisp waffles pressed together with gooey caramel syrup, best warmed over a cup of coffee.",
+    "ingredients": [
+      "Flour",
+      "Butter",
+      "Yeast",
+      "Milk",
+      "Egg",
+      "Sugar",
+      "Brown sugar",
+      "Cinnamon",
+      "Golden syrup"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Egg",
+          "to": "Flax egg",
+          "note": "Mix 1 tbsp ground flax with 3 tbsp water"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Cook a little longer until crisp"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg",
+          "note": "Mix 1 tbsp ground flax with 3 tbsp water"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 46,
+    "fat": 14,
+    "fiber": 1,
+    "image": "/images/dishes/Stroopwafel.jpg"
+  },
+  {
+    "id": 8299,
+    "name": "Prinsesstårta",
+    "country": "Sweden",
+    "region": "Europe",
+    "emoji": "🍰",
+    "cal": 480,
+    "budget": 9,
+    "time": "3 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "nuts"
+    ],
+    "desc": "Swedish dessert of sponge cake layered with raspberry jam, vanilla custard and whipped cream under a dome of green marzipan.",
+    "ingredients": [
+      "Eggs",
+      "Sugar",
+      "Flour",
+      "Potato starch",
+      "Raspberry jam",
+      "Milk",
+      "Egg yolks",
+      "Heavy cream",
+      "Green marzipan"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Aquafaba sponge",
+          "note": "Whip chickpea water with sugar until stiff"
+        },
+        {
+          "from": "Egg yolks",
+          "to": "Cornstarch custard",
+          "note": "Add a pinch of turmeric for color"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Whipped coconut cream",
+          "note": "Chill the can overnight first"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Whipped coconut cream",
+          "note": "Chill the can overnight first"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Extra potato starch",
+          "note": "Swedish sponges often use plenty of potato starch"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Aquafaba sponge",
+          "note": "Whip chickpea water with sugar until stiff"
+        },
+        {
+          "from": "Egg yolks",
+          "to": "Cornstarch custard",
+          "note": "Add a pinch of turmeric for color"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Green marzipan",
+          "to": "Green fondant",
+          "note": "Same look with no almonds"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 62,
+    "fat": 22,
+    "fiber": 1,
+    "image": "/images/dishes/Prinsesstarta.jpg"
+  },
+  {
+    "id": 8300,
+    "name": "Medovik",
+    "country": "Russia",
+    "region": "Europe",
+    "emoji": "🍰",
+    "cal": 450,
+    "budget": 6,
+    "time": "6 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Russian dessert of many thin honey-caramel cake layers with tangy sour cream frosting, rested overnight until soft.",
+    "ingredients": [
+      "Flour",
+      "Honey",
+      "Eggs",
+      "Sugar",
+      "Butter",
+      "Baking soda",
+      "Sour cream",
+      "Heavy cream"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Honey",
+          "to": "Golden syrup | Maple syrup",
+          "note": "Keeps the caramel taste"
+        },
+        {
+          "from": "Eggs",
+          "to": "Flax eggs",
+          "note": "1 tbsp ground flax plus 3 tbsp water per egg"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Sour cream",
+          "to": "Vegan sour cream",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Whipped coconut cream",
+          "note": "Chill the can overnight first"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Sour cream",
+          "to": "Dairy-free sour cream",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Whipped coconut cream",
+          "note": "Chill the can overnight first"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Roll the layers between baking paper"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs",
+          "note": "1 tbsp ground flax plus 3 tbsp water per egg"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 56,
+    "fat": 22,
+    "fiber": 1,
+    "image": "/images/dishes/Medovik.jpg"
+  },
+  {
+    "id": 8301,
+    "name": "Puff Puff",
+    "country": "Nigeria",
+    "region": "Africa",
+    "emoji": "🍩",
+    "cal": 360,
+    "budget": 2,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegan",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "West African street snack of soft, fluffy deep-fried yeast dough balls, lightly sweet and spiced with nutmeg.",
+    "ingredients": [
+      "Flour",
+      "Instant yeast",
+      "Sugar",
+      "Warm water",
+      "Nutmeg",
+      "Salt",
+      "Oil for frying"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend with psyllium",
+          "note": "Rest the batter until bubbly"
+        }
+      ],
+      "local": [
+        {
+          "from": "Nutmeg",
+          "to": "Cinnamon",
+          "note": "Use a little less"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 56,
+    "fat": 12,
+    "fiber": 2,
+    "image": "/images/dishes/Puff-Puff.jpg"
+  },
+  {
+    "id": 8302,
+    "name": "Afang Soup",
+    "country": "Nigeria",
+    "region": "Africa",
+    "emoji": "🍲",
+    "cal": 620,
+    "budget": 12,
+    "time": "1.5 hrs",
+    "spice": 2,
+    "tags": [
+      "high-protein",
+      "fish",
+      "shellfish",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Efik and Ibibio soup from southern Nigeria of finely shredded afang leaves and waterleaf cooked in palm oil with beef, tripe, stockfish and crayfish, eaten with fufu or pounded yam.",
+    "ingredients": [
+      "Afang leaves (okazi)",
+      "Waterleaf",
+      "Beef",
+      "Beef tripe (shaki)",
+      "Cow skin (kpomo)",
+      "Stockfish",
+      "Dried crayfish",
+      "Periwinkles",
+      "Palm oil",
+      "Scotch bonnet pepper",
+      "Onion",
+      "Seasoning cubes"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Beef",
+          "to": "Mushrooms",
+          "note": "Add with the palm oil"
+        },
+        {
+          "from": "Beef tripe (shaki)",
+          "to": "Oyster mushrooms",
+          "note": "Tear into pieces"
+        },
+        {
+          "from": "Cow skin (kpomo)",
+          "to": "Leave out",
+          "note": "Add extra mushrooms"
+        },
+        {
+          "from": "Stockfish",
+          "to": "Smoked firm tofu",
+          "note": "Add near the end"
+        },
+        {
+          "from": "Dried crayfish",
+          "to": "Ground dried mushrooms with a little seaweed",
+          "note": "Gives the same deep savory taste"
+        },
+        {
+          "from": "Periwinkles",
+          "to": "Leave out",
+          "note": "Still rich and filling"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Scotch bonnet pepper",
+          "to": "Leave out | Use half",
+          "note": "Palm oil and crayfish carry the flavor"
+        }
+      ],
+      "local": [
+        {
+          "from": "Afang leaves (okazi)",
+          "to": "Dried okazi from African stores | Kale",
+          "note": "Shred very finely"
+        },
+        {
+          "from": "Waterleaf",
+          "to": "Spinach",
+          "note": "Add at the end so it stays green"
+        }
+      ]
+    },
+    "protein": 42,
+    "carbs": 14,
+    "fat": 44,
+    "fiber": 6,
+    "image": "/images/dishes/Afang-Soup.jpg"
+  },
+  {
+    "id": 8303,
+    "name": "Biltong",
+    "country": "South Africa",
+    "region": "Africa",
+    "emoji": "🥩",
+    "cal": 250,
+    "budget": 12,
+    "time": "4 days",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "South African air-dried beef cured with vinegar, toasted coriander, salt and pepper, sliced thin as a protein-rich snack.",
+    "ingredients": [
+      "Beef silverside",
+      "Apple cider vinegar",
+      "Coarse salt",
+      "Toasted coriander seeds",
+      "Black pepper",
+      "Brown sugar"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Beef silverside",
+          "to": "Mushroom jerky | Soy curls",
+          "note": "Marinate the same way and dry in a low oven"
+        }
+      ],
+      "local": [
+        {
+          "from": "Beef silverside",
+          "to": "Beef topside | Eye of round",
+          "note": "Choose a lean cut and slice with the grain"
+        }
+      ]
+    },
+    "protein": 52,
+    "carbs": 4,
+    "fat": 4,
+    "fiber": 0,
+    "image": "/images/dishes/Biltong.jpg"
+  },
+  {
+    "id": 8304,
+    "name": "Koeksisters",
+    "country": "South Africa",
+    "region": "Africa",
+    "emoji": "🍩",
+    "cal": 380,
+    "budget": 3,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "South African dessert of braided dough fried until crisp and plunged into ice-cold lemon and ginger syrup.",
+    "ingredients": [
+      "Flour",
+      "Baking powder",
+      "Butter",
+      "Milk",
+      "Egg",
+      "Sugar",
+      "Water",
+      "Lemon juice",
+      "Ground ginger",
+      "Cinnamon stick",
+      "Oil for frying"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Rub it into the flour"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Egg",
+          "to": "Flax egg",
+          "note": "Mix 1 tbsp ground flax with 3 tbsp water"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Rub it into the flour"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Chill the dough before braiding"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg | Extra milk",
+          "note": "The dough only needs a little binding"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 58,
+    "fat": 15,
+    "fiber": 1,
+    "image": "/images/dishes/Koeksisters.jpg"
+  },
+  {
+    "id": 8305,
+    "name": "Msemen",
+    "country": "Morocco",
+    "region": "Africa",
+    "emoji": "🫓",
+    "cal": 380,
+    "budget": 2,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Moroccan square, flaky griddle flatbread folded with butter and oil, eaten with honey and mint tea for breakfast.",
+    "ingredients": [
+      "Flour",
+      "Fine semolina",
+      "Yeast",
+      "Salt",
+      "Butter",
+      "Vegetable oil",
+      "Honey"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter | Extra oil",
+          "note": "Brush every fold"
+        },
+        {
+          "from": "Honey",
+          "to": "Date syrup",
+          "note": "Drizzle the same way"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Extra oil",
+          "note": "Brush every fold"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Fold gently; it tears more easily"
+        },
+        {
+          "from": "Fine semolina",
+          "to": "Fine cornmeal",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 54,
+    "fat": 15,
+    "fiber": 2,
+    "image": "/images/dishes/Msemen.jpg"
+  },
+  {
+    "id": 8306,
+    "name": "Chebakia",
+    "country": "Morocco",
+    "region": "Africa",
+    "emoji": "🍪",
+    "cal": 340,
+    "budget": 4,
+    "time": "2.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Moroccan dessert of flower-shaped sesame cookies scented with anise and orange blossom, fried and soaked in honey, made for Ramadan.",
+    "ingredients": [
+      "Flour",
+      "Toasted sesame seeds",
+      "Anise seeds",
+      "Saffron",
+      "Butter",
+      "Egg",
+      "White vinegar",
+      "Orange blossom water",
+      "Honey",
+      "Oil for frying"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Honey",
+          "to": "Date syrup",
+          "note": "Warm it before soaking"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegetable oil",
+          "note": "Use a little less"
+        },
+        {
+          "from": "Egg",
+          "to": "Flax egg",
+          "note": "Mix 1 tbsp ground flax with 3 tbsp water"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Vegetable oil",
+          "note": "Use a little less"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Roll the dough thinner"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg",
+          "note": "Mix 1 tbsp ground flax with 3 tbsp water"
+        }
+      ],
+      "local": [
+        {
+          "from": "Anise seeds",
+          "to": "Fennel seeds",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 44,
+    "fat": 16,
+    "fiber": 2,
+    "image": "/images/dishes/Chebakia.jpg"
   }
 ];
