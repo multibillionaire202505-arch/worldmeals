@@ -2439,6 +2439,7 @@ html body .wm-quick-close{width:28px;height:28px;border:0;background:transparent
     <div class="filter-group f-collection"><label>Collection</label>
       <select id="collectionFilter" onchange="renderGrid()">
         <option value="all">All collections</option>
+        <option value="thanksgiving">Thanksgiving</option>
         <option value="bbq">BBQ &amp; Grill</option>
         <option value="drinks">Drinks · alcohol-free</option>
         <option value="smoothies">Smoothies</option>
@@ -3616,7 +3617,8 @@ const WM_COLLECTION_RULES={
   drinks:m=>WM_DRINK_IDS.has(m.id)||(m.tags||[]).includes("drink")||!((m.tags||[]).includes("smoothie")||/\bsmoothie\b/i.test(m.name||""))&&(/\b(drink|beverage)\b/i.test(m.desc||"")||/\b(lassi|horchata|agua de|juice|lemonade|milkshake|chai|latte|bissap|sobolo|champurrado|atole|punch)\b/i.test(m.name||"")),
   salads:m=>(m.tags||[]).includes("salad")||/\bsalad\b/i.test(m.name||""),
   bowls:m=>(m.tags||[]).includes("bowl")||/\bbowl\b/i.test(m.name||""),
-  "meal-prep":m=>(m.tags||[]).includes("meal-prep")
+  "meal-prep":m=>(m.tags||[]).includes("meal-prep"),
+  thanksgiving:m=>(m.tags||[]).includes("thanksgiving")
 };
 function mealInCollection(m,c){const rule=WM_COLLECTION_RULES[c];return rule?rule(m):true}
 function resetBrowseFilters(){
