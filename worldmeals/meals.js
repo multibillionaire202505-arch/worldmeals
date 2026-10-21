@@ -4,6 +4,7 @@
 // 2026-10-21: added 25 dishes (ids 8232–8256), batch 2 of "The most desirable dishes in the world" (Greece, Turkey, Middle East, India, China). Their nutrition, cost and time are estimates.
 // 2026-10-21: added 25 dishes (ids 8257–8281), batch 3 of "The most desirable dishes in the world" (China, Japan, Korea, Southeast Asia, USA). Their nutrition, cost and time are estimates.
 // 2026-10-21: added 25 dishes (ids 8282–8306), batch 4 of "The most desirable dishes in the world" (USA, Latin America, Caribbean, UK, Europe, Africa). Their nutrition, cost and time are estimates.
+// 2026-10-21: added 25 dishes (ids 8307–8331), batch 5: Thanksgiving classics (tag "thanksgiving"). Their nutrition, cost and time are estimates.
 // All photos use existing /images/dishes/*.jpg paths; upload the matching assets.
 // Compatibility: existing IDs, names, order, image paths and meal field names retained.
 // Content pass: 767 dishes updated; 1710 repeated substitution entries corrected, plus dish-specific edits.
@@ -89434,5 +89435,1650 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 16,
     "fiber": 2,
     "image": "/images/dishes/Chebakia.jpg"
+  },
+  {
+    "id": 8307,
+    "name": "Roast Turkey",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🦃",
+    "cal": 420,
+    "budget": 30,
+    "time": "4 hrs",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "high-protein",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "The American Thanksgiving centerpiece: a whole turkey rubbed with herb butter and roasted golden, then carved at the table.",
+    "ingredients": [
+      "Whole turkey",
+      "Butter",
+      "Garlic",
+      "Fresh thyme",
+      "Fresh sage",
+      "Rosemary",
+      "Lemon",
+      "Onion",
+      "Chicken stock"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Whole turkey",
+          "to": "Seitan roast | Stuffed roasted squash",
+          "note": "Roast with the same herbs"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Rub under the herbs"
+        },
+        {
+          "from": "Chicken stock",
+          "to": "Vegetable stock",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Brush on often for golden skin"
+        }
+      ],
+      "local": [
+        {
+          "from": "Whole turkey",
+          "to": "Turkey breast | Whole chicken",
+          "note": "Roast for less time"
+        }
+      ]
+    },
+    "protein": 52,
+    "carbs": 2,
+    "fat": 22,
+    "fiber": 0,
+    "image": "/images/dishes/Roast-Turkey.jpg"
+  },
+  {
+    "id": 8308,
+    "name": "Cornbread Dressing",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍞",
+    "cal": 360,
+    "budget": 6,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "eggs",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Southern Thanksgiving side of crumbled cornbread baked with celery, onion, sage and stock until golden on top.",
+    "ingredients": [
+      "Cornbread",
+      "Celery",
+      "Onion",
+      "Butter",
+      "Eggs",
+      "Chicken stock",
+      "Fresh sage",
+      "Fresh thyme"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Cornbread",
+          "to": "Egg-free, dairy-free cornbread",
+          "note": "Bake it a day ahead"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Eggs",
+          "to": "Flax eggs",
+          "note": "1 tbsp ground flax plus 3 tbsp water per egg"
+        },
+        {
+          "from": "Chicken stock",
+          "to": "Vegetable stock",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Cornbread",
+          "to": "Dairy-free cornbread",
+          "note": "Bake it a day ahead"
+        },
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Cornbread",
+          "to": "100% cornmeal cornbread",
+          "note": "Many recipes add wheat flour; skip it"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs | Extra stock",
+          "note": "Keeps it moist and holds it together"
+        }
+      ]
+    },
+    "protein": 10,
+    "carbs": 40,
+    "fat": 18,
+    "fiber": 3,
+    "image": "/images/dishes/Cornbread-Dressing.jpg"
+  },
+  {
+    "id": 8309,
+    "name": "Herb Bread Stuffing",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍞",
+    "cal": 330,
+    "budget": 5,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Classic Thanksgiving side of toasted bread cubes baked with butter, celery, onion, sage and thyme until crisp on top and soft inside.",
+    "ingredients": [
+      "Day-old white bread",
+      "Butter",
+      "Celery",
+      "Onion",
+      "Chicken stock",
+      "Fresh sage",
+      "Fresh thyme",
+      "Parsley"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Chicken stock",
+          "to": "Vegetable stock",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Day-old white bread",
+          "to": "Gluten-free bread",
+          "note": "Toast the cubes well first"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 42,
+    "fat": 14,
+    "fiber": 3,
+    "image": "/images/dishes/Herb-Bread-Stuffing.jpg"
+  },
+  {
+    "id": 8310,
+    "name": "Cranberry Sauce",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🫐",
+    "cal": 160,
+    "budget": 3,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Thanksgiving sauce of fresh cranberries simmered with sugar and orange until they burst and turn glossy.",
+    "ingredients": [
+      "Fresh cranberries",
+      "Sugar",
+      "Orange juice",
+      "Orange zest",
+      "Water"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Fresh cranberries",
+          "to": "Frozen cranberries",
+          "note": "Cook a few minutes longer"
+        }
+      ]
+    },
+    "protein": 0,
+    "carbs": 40,
+    "fat": 0,
+    "fiber": 2,
+    "image": "/images/dishes/Cranberry-Sauce.jpg"
+  },
+  {
+    "id": 8311,
+    "name": "Mashed Potatoes and Gravy",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥔",
+    "cal": 390,
+    "budget": 4,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Fluffy buttery mashed potatoes topped with rich turkey gravy, on every Thanksgiving table.",
+    "ingredients": [
+      "Russet potatoes",
+      "Butter",
+      "Milk",
+      "Turkey drippings",
+      "Flour",
+      "Chicken stock",
+      "Salt",
+      "Black pepper"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use unsweetened"
+        },
+        {
+          "from": "Turkey drippings",
+          "to": "Olive oil with a little soy sauce",
+          "note": "Makes a rich mushroom-style gravy"
+        },
+        {
+          "from": "Chicken stock",
+          "to": "Mushroom stock",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter | Olive oil",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use unsweetened"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Cornstarch",
+          "note": "Use half the amount, mixed with cold water"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 46,
+    "fat": 20,
+    "fiber": 4,
+    "image": "/images/dishes/Mashed-Potatoes-and-Gravy.jpg"
+  },
+  {
+    "id": 8312,
+    "name": "Green Bean Casserole",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🫛",
+    "cal": 260,
+    "budget": 5,
+    "time": "50 min",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Thanksgiving bake of green beans in a creamy mushroom sauce, topped with crispy fried onions.",
+    "ingredients": [
+      "Green beans",
+      "Mushrooms",
+      "Butter",
+      "Flour",
+      "Milk",
+      "Garlic",
+      "Crispy fried onions"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use unsweetened"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use unsweetened"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Cornstarch",
+          "note": "Use half the amount"
+        },
+        {
+          "from": "Crispy fried onions",
+          "to": "Gluten-free fried onions",
+          "note": "Check the label"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 22,
+    "fat": 16,
+    "fiber": 4,
+    "image": "/images/dishes/Green-Bean-Casserole.jpg"
+  },
+  {
+    "id": 8313,
+    "name": "Sweet Potato Casserole",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍠",
+    "cal": 480,
+    "budget": 5,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "eggs",
+      "nuts",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Thanksgiving side of whipped sweet potatoes with butter, brown sugar and cinnamon, baked under toasted marshmallows and pecans.",
+    "ingredients": [
+      "Sweet potatoes",
+      "Butter",
+      "Brown sugar",
+      "Eggs",
+      "Vanilla",
+      "Cinnamon",
+      "Mini marshmallows",
+      "Pecans"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Eggs",
+          "to": "Flax eggs",
+          "note": "1 tbsp ground flax plus 3 tbsp water per egg"
+        },
+        {
+          "from": "Mini marshmallows",
+          "to": "Vegan marshmallows",
+          "note": "Regular marshmallows contain gelatin"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Coconut oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs | Leave out",
+          "note": "The mash still holds together"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Pecans",
+          "to": "Leave out | Toasted pumpkin seeds",
+          "note": "Marshmallows alone are the classic topping"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 63,
+    "fat": 23,
+    "fiber": 6,
+    "image": "/images/dishes/Sweet-Potato-Casserole.jpg"
+  },
+  {
+    "id": 8314,
+    "name": "Pumpkin Pie",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥧",
+    "cal": 360,
+    "budget": 5,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "American dessert of smooth spiced pumpkin custard baked in a flaky crust, the classic end to Thanksgiving dinner.",
+    "ingredients": [
+      "Pumpkin purée",
+      "Evaporated milk",
+      "Eggs",
+      "Brown sugar",
+      "Cinnamon",
+      "Ginger",
+      "Nutmeg",
+      "Cloves",
+      "Pie crust"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Evaporated milk",
+          "to": "Full-fat coconut milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Eggs",
+          "to": "Cornstarch",
+          "note": "2 tbsp cornstarch sets the filling"
+        },
+        {
+          "from": "Pie crust",
+          "to": "Vegan pie crust",
+          "note": "Many store-bought crusts are vegan"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Evaporated milk",
+          "to": "Full-fat coconut milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Pie crust",
+          "to": "Dairy-free pie crust",
+          "note": "Check the label"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Pie crust",
+          "to": "Gluten-free pie crust",
+          "note": "Chill before baking"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Cornstarch",
+          "note": "2 tbsp cornstarch sets the filling"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 46,
+    "fat": 17,
+    "fiber": 3,
+    "image": "/images/dishes/Pumpkin-Pie.jpg"
+  },
+  {
+    "id": 8315,
+    "name": "Sweet Potato Pie",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥧",
+    "cal": 380,
+    "budget": 5,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Southern dessert of silky spiced sweet potato custard in a flaky crust, a soul-food Thanksgiving favorite.",
+    "ingredients": [
+      "Sweet potatoes",
+      "Butter",
+      "Evaporated milk",
+      "Eggs",
+      "Sugar",
+      "Nutmeg",
+      "Cinnamon",
+      "Vanilla",
+      "Pie crust"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Evaporated milk",
+          "to": "Full-fat coconut milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Eggs",
+          "to": "Cornstarch",
+          "note": "2 tbsp cornstarch sets the filling"
+        },
+        {
+          "from": "Pie crust",
+          "to": "Vegan pie crust",
+          "note": "Many store-bought crusts are vegan"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Coconut oil",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Evaporated milk",
+          "to": "Full-fat coconut milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Pie crust",
+          "to": "Dairy-free pie crust",
+          "note": "Check the label"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Pie crust",
+          "to": "Gluten-free pie crust",
+          "note": "Chill before baking"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Cornstarch",
+          "note": "2 tbsp cornstarch sets the filling"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 50,
+    "fat": 18,
+    "fiber": 3,
+    "image": "/images/dishes/Sweet-Potato-Pie.jpg"
+  },
+  {
+    "id": 8316,
+    "name": "Parker House Rolls",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍞",
+    "cal": 190,
+    "budget": 3,
+    "time": "2.5 hrs",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Boston's soft, buttery folded dinner rolls brushed with melted butter, created at the Parker House hotel.",
+    "ingredients": [
+      "Flour",
+      "Milk",
+      "Butter",
+      "Egg",
+      "Sugar",
+      "Yeast",
+      "Salt",
+      "Flaky salt"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Warm it first"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Brush on after baking"
+        },
+        {
+          "from": "Egg",
+          "to": "Flax egg",
+          "note": "Mix 1 tbsp ground flax with 3 tbsp water"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Warm it first"
+        },
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Brush on after baking"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend with psyllium",
+          "note": "Rolls are softer and rise less"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Extra milk",
+          "note": "Add 3 tbsp"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 26,
+    "fat": 7,
+    "fiber": 1,
+    "image": "/images/dishes/Parker-House-Rolls.jpg"
+  },
+  {
+    "id": 8317,
+    "name": "Corn Pudding",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🌽",
+    "cal": 320,
+    "budget": 4,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "eggs"
+    ],
+    "desc": "Southern baked side of sweet corn set in a soft, creamy custard, golden on top.",
+    "ingredients": [
+      "Sweetcorn",
+      "Eggs",
+      "Milk",
+      "Heavy cream",
+      "Butter",
+      "Cornmeal",
+      "Sugar"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Blended silken tofu",
+          "note": "About 60 g per egg"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use unsweetened"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Coconut cream",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use unsweetened"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Coconut cream",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Blended silken tofu",
+          "note": "About 60 g per egg"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 34,
+    "fat": 16,
+    "fiber": 2,
+    "image": "/images/dishes/Corn-Pudding.jpg"
+  },
+  {
+    "id": 8318,
+    "name": "Honey Glazed Ham",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍖",
+    "cal": 390,
+    "budget": 20,
+    "time": "2.5 hrs",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "high-protein",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Holiday ham studded with cloves and baked with a sticky honey, brown sugar and mustard glaze.",
+    "ingredients": [
+      "Bone-in ham",
+      "Honey",
+      "Brown sugar",
+      "Dijon mustard",
+      "Cloves",
+      "Orange juice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Bone-in ham",
+          "to": "Smoked seitan roast | Glazed firm tofu",
+          "note": "Baste with the glaze often"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup",
+          "note": "Use the same amount"
+        }
+      ],
+      "local": [
+        {
+          "from": "Honey",
+          "to": "Maple syrup",
+          "note": "Gives a deeper caramel glaze"
+        }
+      ]
+    },
+    "protein": 36,
+    "carbs": 22,
+    "fat": 18,
+    "fiber": 0,
+    "image": "/images/dishes/Honey-Glazed-Ham.jpg"
+  },
+  {
+    "id": 8319,
+    "name": "Brussels Sprouts with Bacon",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥬",
+    "cal": 220,
+    "budget": 5,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Roasted Brussels sprouts with crispy bacon, garlic and a glaze of balsamic and maple.",
+    "ingredients": [
+      "Brussels sprouts",
+      "Bacon",
+      "Garlic",
+      "Olive oil",
+      "Balsamic vinegar",
+      "Maple syrup"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Bacon",
+          "to": "Smoked tempeh",
+          "note": "Fry until crisp"
+        }
+      ]
+    },
+    "protein": 10,
+    "carbs": 14,
+    "fat": 14,
+    "fiber": 5,
+    "image": "/images/dishes/Brussels-Sprouts-with-Bacon.jpg"
+  },
+  {
+    "id": 8320,
+    "name": "Butternut Squash Soup",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥣",
+    "cal": 240,
+    "budget": 4,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Velvety autumn soup of roasted butternut squash with a swirl of cream and toasted pumpkin seeds.",
+    "ingredients": [
+      "Butternut squash",
+      "Onion",
+      "Carrot",
+      "Garlic",
+      "Vegetable stock",
+      "Heavy cream",
+      "Nutmeg",
+      "Toasted pumpkin seeds"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Heavy cream",
+          "to": "Coconut milk",
+          "note": "Swirl on top"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Heavy cream",
+          "to": "Coconut milk | Oat cream",
+          "note": "Swirl on top"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 30,
+    "fat": 12,
+    "fiber": 6,
+    "image": "/images/dishes/Butternut-Squash-Soup.jpg"
+  },
+  {
+    "id": 8321,
+    "name": "Waldorf Salad",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥗",
+    "cal": 320,
+    "budget": 5,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "salad",
+      "vegetarian",
+      "eggs",
+      "nuts",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "New York salad of crisp apples, celery, grapes and walnuts in a light mayonnaise dressing, created at the Waldorf hotel.",
+    "ingredients": [
+      "Apples",
+      "Celery",
+      "Red grapes",
+      "Walnuts",
+      "Mayonnaise",
+      "Lemon juice",
+      "Lettuce leaves"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Mayonnaise",
+          "to": "Egg-free mayonnaise",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Mayonnaise",
+          "to": "Egg-free mayonnaise",
+          "note": "Use the same amount"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Walnuts",
+          "to": "Toasted sunflower seeds",
+          "note": "Keeps the crunch"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 22,
+    "fat": 24,
+    "fiber": 4,
+    "image": "/images/dishes/Waldorf-Salad.jpg"
+  },
+  {
+    "id": 8322,
+    "name": "Deviled Eggs",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥚",
+    "cal": 220,
+    "budget": 3,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "eggs",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "American party classic of hard-boiled egg halves filled with a creamy, tangy yolk filling and dusted with paprika.",
+    "ingredients": [
+      "Eggs",
+      "Mayonnaise",
+      "Dijon mustard",
+      "White vinegar",
+      "Paprika",
+      "Chives"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Halved baby potatoes",
+          "note": "Fill them the same way for 'deviled potatoes'"
+        },
+        {
+          "from": "Mayonnaise",
+          "to": "Egg-free mayonnaise",
+          "note": "Add a pinch of turmeric for color"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Halved baby potatoes",
+          "note": "Fill them the same way for 'deviled potatoes'"
+        },
+        {
+          "from": "Mayonnaise",
+          "to": "Egg-free mayonnaise",
+          "note": "Add a pinch of turmeric for color"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 1,
+    "fat": 18,
+    "fiber": 0,
+    "image": "/images/dishes/Deviled-Eggs.jpg"
+  },
+  {
+    "id": 8323,
+    "name": "Southern Collard Greens",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥬",
+    "cal": 210,
+    "budget": 5,
+    "time": "1.5 hrs",
+    "spice": 1,
+    "tags": [
+      "thanksgiving",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Soul-food collard greens slow-simmered with smoked turkey, onion, garlic and a splash of vinegar.",
+    "ingredients": [
+      "Collard greens",
+      "Smoked turkey wings",
+      "Onion",
+      "Garlic",
+      "Chicken stock",
+      "Apple cider vinegar",
+      "Red pepper flakes"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Smoked turkey wings",
+          "to": "Smoked paprika with a drop of liquid smoke",
+          "note": "Keeps the smoky taste"
+        },
+        {
+          "from": "Chicken stock",
+          "to": "Vegetable stock",
+          "note": "Use the same amount"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Red pepper flakes",
+          "to": "Leave out",
+          "note": "Serve hot sauce on the side"
+        }
+      ],
+      "local": [
+        {
+          "from": "Smoked turkey wings",
+          "to": "Smoked ham hock",
+          "note": "The other classic choice"
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 12,
+    "fat": 12,
+    "fiber": 6,
+    "image": "/images/dishes/Southern-Collard-Greens.jpg"
+  },
+  {
+    "id": 8324,
+    "name": "Succotash",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🌽",
+    "cal": 190,
+    "budget": 3,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Native American dish of sweet corn and lima beans, cooked with peppers and butter; a true harvest side.",
+    "ingredients": [
+      "Sweetcorn",
+      "Lima beans",
+      "Red bell pepper",
+      "Onion",
+      "Butter",
+      "Fresh thyme"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        }
+      ],
+      "local": [
+        {
+          "from": "Lima beans",
+          "to": "Edamame",
+          "note": "Same color and bite"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 26,
+    "fat": 6,
+    "fiber": 6,
+    "image": "/images/dishes/Succotash.jpg"
+  },
+  {
+    "id": 8325,
+    "name": "Wild Rice Stuffing",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍚",
+    "cal": 280,
+    "budget": 7,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "nuts",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Minnesota-style stuffing of nutty wild rice with mushrooms, cranberries and pecans; wild rice is native to the Great Lakes.",
+    "ingredients": [
+      "Wild rice",
+      "Mushrooms",
+      "Celery",
+      "Onion",
+      "Dried cranberries",
+      "Pecans",
+      "Butter",
+      "Chicken stock",
+      "Fresh sage"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        },
+        {
+          "from": "Chicken stock",
+          "to": "Vegetable stock",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Pecans",
+          "to": "Toasted pumpkin seeds",
+          "note": "Keeps the crunch"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 40,
+    "fat": 10,
+    "fiber": 4,
+    "image": "/images/dishes/Wild-Rice-Stuffing.jpg"
+  },
+  {
+    "id": 8326,
+    "name": "Three Sisters Stew",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍲",
+    "cal": 310,
+    "budget": 4,
+    "time": "1 hr",
+    "spice": 1,
+    "tags": [
+      "thanksgiving",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Native American stew of the \"three sisters\" (corn, beans and squash), which were grown together and shared at harvest.",
+    "ingredients": [
+      "Winter squash",
+      "Sweetcorn",
+      "Pinto beans",
+      "Tomatoes",
+      "Onion",
+      "Garlic",
+      "Vegetable stock",
+      "Green chili",
+      "Fresh sage"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Green chili",
+          "to": "Leave out",
+          "note": "Still hearty and warming"
+        }
+      ],
+      "local": [
+        {
+          "from": "Winter squash",
+          "to": "Butternut squash | Pumpkin",
+          "note": "Cut into chunks"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 52,
+    "fat": 6,
+    "fiber": 12,
+    "image": "/images/dishes/Three-Sisters-Stew.jpg"
+  },
+  {
+    "id": 8327,
+    "name": "Creamed Corn",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🌽",
+    "cal": 270,
+    "budget": 3,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Southern side of sweet corn simmered in butter and cream until thick and silky.",
+    "ingredients": [
+      "Sweetcorn",
+      "Butter",
+      "Heavy cream",
+      "Milk",
+      "Sugar",
+      "Salt",
+      "Black pepper"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Coconut cream",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use unsweetened"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Coconut cream",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use unsweetened"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 30,
+    "fat": 14,
+    "fiber": 3,
+    "image": "/images/dishes/Creamed-Corn.jpg"
+  },
+  {
+    "id": 8328,
+    "name": "Kentucky Hot Brown",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥪",
+    "cal": 620,
+    "budget": 9,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "high-protein",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Louisville open-faced sandwich of roast turkey and bacon on toast, covered in cheese sauce and broiled; perfect for Thanksgiving leftovers.",
+    "ingredients": [
+      "Thick white bread",
+      "Roast turkey",
+      "Bacon",
+      "Tomato",
+      "Butter",
+      "Flour",
+      "Milk",
+      "Pecorino Romano"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Roast turkey",
+          "to": "Smoked tofu slices",
+          "note": "Warm before layering"
+        },
+        {
+          "from": "Bacon",
+          "to": "Tempeh bacon",
+          "note": "Fry until crisp"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use unsweetened"
+        },
+        {
+          "from": "Pecorino Romano",
+          "to": "Nutritional yeast",
+          "note": "Stir into the sauce"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use unsweetened"
+        },
+        {
+          "from": "Pecorino Romano",
+          "to": "Nutritional yeast",
+          "note": "Stir into the sauce"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Thick white bread",
+          "to": "Gluten-free bread",
+          "note": "Toast well"
+        },
+        {
+          "from": "Flour",
+          "to": "Rice flour",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 42,
+    "carbs": 32,
+    "fat": 36,
+    "fiber": 2,
+    "image": "/images/dishes/Kentucky-Hot-Brown.jpg"
+  },
+  {
+    "id": 8329,
+    "name": "Pumpkin Bread",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍞",
+    "cal": 340,
+    "budget": 3,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "American sweet loaf of moist pumpkin and warm spices, sliced for breakfast or coffee time.",
+    "ingredients": [
+      "Flour",
+      "Pumpkin purée",
+      "Sugar",
+      "Eggs",
+      "Vegetable oil",
+      "Baking soda",
+      "Cinnamon",
+      "Nutmeg",
+      "Cloves"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs",
+          "note": "1 tbsp ground flax plus 3 tbsp water per egg"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add 1/2 tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs",
+          "note": "1 tbsp ground flax plus 3 tbsp water per egg"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 48,
+    "fat": 14,
+    "fiber": 2,
+    "image": "/images/dishes/Pumpkin-Bread.jpg"
+  },
+  {
+    "id": 8330,
+    "name": "Hot Apple Cider",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍎",
+    "cal": 120,
+    "budget": 3,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Alcohol-free American autumn drink of apple cider warmed with cinnamon, cloves, orange and star anise.",
+    "ingredients": [
+      "Apple cider",
+      "Cinnamon sticks",
+      "Cloves",
+      "Star anise",
+      "Orange slices",
+      "Maple syrup"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Apple cider",
+          "to": "Cloudy unfiltered apple juice",
+          "note": "Outside the US, 'cider' can mean alcohol; use juice"
+        }
+      ]
+    },
+    "protein": 0,
+    "carbs": 30,
+    "fat": 0,
+    "fiber": 0,
+    "image": "/images/dishes/Hot-Apple-Cider.jpg"
+  },
+  {
+    "id": 8331,
+    "name": "Apple Crisp",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍎",
+    "cal": 370,
+    "budget": 4,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "American dessert of warm baked cinnamon apples under a crunchy oat and brown sugar crumble.",
+    "ingredients": [
+      "Apples",
+      "Rolled oats",
+      "Flour",
+      "Brown sugar",
+      "Butter",
+      "Cinnamon",
+      "Lemon juice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter | Coconut oil",
+          "note": "Rub into the crumble"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Coconut oil",
+          "note": "Rub into the crumble"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Rolled oats",
+          "to": "Certified gluten-free oats",
+          "note": "Regular oats can contain gluten"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 58,
+    "fat": 14,
+    "fiber": 5,
+    "image": "/images/dishes/Apple-Crisp.jpg"
   }
 ];
