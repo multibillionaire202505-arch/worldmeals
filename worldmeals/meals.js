@@ -5,6 +5,7 @@
 // 2026-10-21: added 25 dishes (ids 8257–8281), batch 3 of "The most desirable dishes in the world" (China, Japan, Korea, Southeast Asia, USA). Their nutrition, cost and time are estimates.
 // 2026-10-21: added 25 dishes (ids 8282–8306), batch 4 of "The most desirable dishes in the world" (USA, Latin America, Caribbean, UK, Europe, Africa). Their nutrition, cost and time are estimates.
 // 2026-10-21: added 25 dishes (ids 8307–8331), batch 5: Thanksgiving classics (tag "thanksgiving"). Their nutrition, cost and time are estimates.
+// 2026-10-22: added 25 dishes (ids 8332–8356), batch 6: harvest feasts of the world (tag "thanksgiving"). Their nutrition, cost and time are estimates.
 // All photos use existing /images/dishes/*.jpg paths; upload the matching assets.
 // Compatibility: existing IDs, names, order, image paths and meal field names retained.
 // Content pass: 767 dishes updated; 1710 repeated substitution entries corrected, plus dish-specific edits.
@@ -91080,5 +91081,1600 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 14,
     "fiber": 5,
     "image": "/images/dishes/Apple-Crisp.jpg"
+  },
+  {
+    "id": 8332,
+    "name": "Songpyeon",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🍡",
+    "cal": 280,
+    "budget": 4,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Korean Chuseok (harvest festival) dessert of half-moon rice cakes filled with sweet toasted sesame, steamed on a bed of pine needles.",
+    "ingredients": [
+      "Glutinous rice flour",
+      "Non-glutinous rice flour",
+      "Toasted sesame seeds",
+      "Honey",
+      "Hot water",
+      "Sesame oil",
+      "Pine needles (for steaming)"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Honey",
+          "to": "Rice syrup | Maple syrup",
+          "note": "Mix with the sesame the same way"
+        }
+      ],
+      "local": [
+        {
+          "from": "Pine needles (for steaming)",
+          "to": "Parchment-lined steamer basket",
+          "note": "Pine needles add aroma, but parchment works too"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 52,
+    "fat": 6,
+    "fiber": 2,
+    "image": "/images/dishes/Songpyeon.jpg"
+  },
+  {
+    "id": 8333,
+    "name": "Sanjeok",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🍢",
+    "cal": 420,
+    "budget": 14,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Korean Chuseok skewers of marinated beef, scallion, carrot and king oyster mushroom threaded in neat colored rows and pan-fried.",
+    "ingredients": [
+      "Beef sirloin strips",
+      "Scallions",
+      "Carrot",
+      "King oyster mushrooms",
+      "Soy sauce",
+      "Asian pear",
+      "Garlic",
+      "Sesame oil",
+      "Wooden skewers"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Beef sirloin strips",
+          "to": "Firm tofu strips | Extra king oyster mushrooms",
+          "note": "Marinate the same way"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        }
+      ],
+      "local": [
+        {
+          "from": "Asian pear",
+          "to": "Ripe pear",
+          "note": "Grate it into the marinade"
+        }
+      ]
+    },
+    "protein": 32,
+    "carbs": 20,
+    "fat": 24,
+    "fiber": 3,
+    "image": "/images/dishes/Sanjeok.jpg"
+  },
+  {
+    "id": 8334,
+    "name": "Modeum-jeon",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🥞",
+    "cal": 420,
+    "budget": 12,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "fish",
+      "eggs",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Korean Chuseok platter of assorted pan-fried savory bites: fish, zucchini, small beef patties and a garlic chive pancake, dipped in flour and egg.",
+    "ingredients": [
+      "White fish fillets",
+      "Zucchini",
+      "Ground beef",
+      "Carrot",
+      "Garlic chives",
+      "Flour",
+      "Eggs",
+      "Soy sauce",
+      "Rice vinegar",
+      "Neutral oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "White fish fillets",
+          "to": "Eggplant slices",
+          "note": "Coat and fry the same way"
+        },
+        {
+          "from": "Ground beef",
+          "to": "Crumbled firm tofu",
+          "note": "Season well before shaping"
+        },
+        {
+          "from": "Eggs",
+          "to": "Chickpea flour batter",
+          "note": "Mix with water to a thin coating"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Rice flour",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use for the dipping sauce"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Chickpea flour batter",
+          "note": "Mix with water to a thin coating"
+        }
+      ]
+    },
+    "protein": 26,
+    "carbs": 22,
+    "fat": 25,
+    "fiber": 2,
+    "image": "/images/dishes/Modeum-jeon.jpg"
+  },
+  {
+    "id": 8335,
+    "name": "Toran-guk",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🍲",
+    "cal": 220,
+    "budget": 7,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Korean Chuseok soup of soft taro simmered in a clear beef and kelp broth with radish and scallions.",
+    "ingredients": [
+      "Taro",
+      "Beef brisket",
+      "Kelp (dashima)",
+      "Korean radish",
+      "Garlic",
+      "Soup soy sauce",
+      "Scallions"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Beef brisket",
+          "to": "Shiitake mushrooms",
+          "note": "Simmer with the kelp for a deep broth"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soup soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use a little less"
+        }
+      ],
+      "local": [
+        {
+          "from": "Taro",
+          "to": "Small potatoes",
+          "note": "Peel and cut into chunks"
+        }
+      ]
+    },
+    "protein": 16,
+    "carbs": 24,
+    "fat": 7,
+    "fiber": 4,
+    "image": "/images/dishes/Toran-guk.jpg"
+  },
+  {
+    "id": 8336,
+    "name": "Mooncakes",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🥮",
+    "cal": 440,
+    "budget": 6,
+    "time": "3 hrs",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Chinese Mid-Autumn Festival dessert of rich pastry with a stamped top, filled with sweet lotus seed paste and a salted egg yolk.",
+    "ingredients": [
+      "Flour",
+      "Golden syrup",
+      "Alkaline water (lye water)",
+      "Vegetable oil",
+      "Lotus seed paste",
+      "Salted egg yolks",
+      "Egg wash"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Salted egg yolks",
+          "to": "Leave out | A ball of red bean paste",
+          "note": "Keeps the classic look"
+        },
+        {
+          "from": "Egg wash",
+          "to": "Plant milk with a little syrup",
+          "note": "Brush before baking"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "The pastry is more fragile"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Salted egg yolks",
+          "to": "Leave out | A ball of red bean paste",
+          "note": "Keeps the classic look"
+        },
+        {
+          "from": "Egg wash",
+          "to": "Plant milk with a little syrup",
+          "note": "Brush before baking"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 62,
+    "fat": 18,
+    "fiber": 2,
+    "image": "/images/dishes/Mooncakes.jpg"
+  },
+  {
+    "id": 8337,
+    "name": "Tsukimi Dango",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🍡",
+    "cal": 240,
+    "budget": 3,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Japanese moon-viewing dessert of soft white rice dumplings stacked in a pyramid for the autumn full moon, served with sweet red bean paste.",
+    "ingredients": [
+      "Shiratamako (glutinous rice flour)",
+      "Silken tofu",
+      "Water",
+      "Sweet red bean paste"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Shiratamako (glutinous rice flour)",
+          "to": "Mochiko (sweet rice flour)",
+          "note": "Add water slowly until soft"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 50,
+    "fat": 2,
+    "fiber": 3,
+    "image": "/images/dishes/Tsukimi-Dango.jpg"
+  },
+  {
+    "id": 8338,
+    "name": "Kuri Gohan",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🌰",
+    "cal": 380,
+    "budget": 5,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegan",
+      "dairy-free",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Japanese autumn rice steamed with sweet chestnuts and kombu, sprinkled with black sesame and a little salt.",
+    "ingredients": [
+      "Short-grain rice",
+      "Glutinous rice",
+      "Peeled chestnuts",
+      "Kombu",
+      "Salt",
+      "Black sesame seeds"
+    ],
+    "swaps": {
+      "nuts": [
+        {
+          "from": "Peeled chestnuts",
+          "to": "Sweet potato cubes",
+          "note": "The same autumn sweetness"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 82,
+    "fat": 2,
+    "fiber": 3,
+    "image": "/images/dishes/Kuri-Gohan.jpg"
+  },
+  {
+    "id": 8339,
+    "name": "Pan de Muerto",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🍞",
+    "cal": 340,
+    "budget": 4,
+    "time": "4 hrs",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Mexican sweet bread for the Day of the Dead, scented with orange blossom and anise, topped with dough 'bones' and sugar.",
+    "ingredients": [
+      "Flour",
+      "Butter",
+      "Eggs",
+      "Milk",
+      "Sugar",
+      "Yeast",
+      "Orange zest",
+      "Orange blossom water",
+      "Anise seeds"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Eggs",
+          "to": "Flax eggs",
+          "note": "The bread is a little denser"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Warm it first"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Warm it first"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend with psyllium",
+          "note": "Shape the bones gently"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs",
+          "note": "The bread is a little denser"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 50,
+    "fat": 12,
+    "fiber": 2,
+    "image": "/images/dishes/Pan-de-Muerto.jpg"
+  },
+  {
+    "id": 8340,
+    "name": "Calabaza en Tacha",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🎃",
+    "cal": 260,
+    "budget": 4,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Mexican Day of the Dead dessert of pumpkin simmered in piloncillo syrup with cinnamon and orange until glossy.",
+    "ingredients": [
+      "Pumpkin",
+      "Piloncillo (unrefined cane sugar)",
+      "Cinnamon sticks",
+      "Orange peel",
+      "Cloves",
+      "Water"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Piloncillo (unrefined cane sugar)",
+          "to": "Panela | Dark brown sugar",
+          "note": "Use the same weight"
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 64,
+    "fat": 0,
+    "fiber": 4,
+    "image": "/images/dishes/Calabaza-en-Tacha.jpg"
+  },
+  {
+    "id": 8341,
+    "name": "Sakkarai Pongal",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍚",
+    "cal": 420,
+    "budget": 3,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "South Indian dessert for Pongal, the harvest festival: rice and moong dal cooked with jaggery, ghee, cardamom and cashews.",
+    "ingredients": [
+      "Rice",
+      "Yellow moong dal",
+      "Jaggery",
+      "Ghee",
+      "Cardamom",
+      "Cashews",
+      "Raisins",
+      "Milk"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Ghee",
+          "to": "Coconut oil",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Coconut milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Ghee",
+          "to": "Coconut oil",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Coconut milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Cashews",
+          "to": "Leave out | Toasted coconut chips",
+          "note": "Keeps a little crunch"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 68,
+    "fat": 13,
+    "fiber": 3,
+    "image": "/images/dishes/Sakkarai-Pongal.jpg"
+  },
+  {
+    "id": 8342,
+    "name": "Ven Pongal",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍚",
+    "cal": 380,
+    "budget": 3,
+    "time": "40 min",
+    "spice": 1,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Savory South Indian Pongal of rice and moong dal cooked soft with ghee, black pepper, cumin, ginger and curry leaves.",
+    "ingredients": [
+      "Rice",
+      "Yellow moong dal",
+      "Ghee",
+      "Black pepper",
+      "Cumin",
+      "Ginger",
+      "Curry leaves",
+      "Cashews"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Ghee",
+          "to": "Coconut oil | Sesame oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Ghee",
+          "to": "Coconut oil | Sesame oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Cashews",
+          "to": "Leave out",
+          "note": "Still rich and comforting"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Black pepper",
+          "to": "Use half",
+          "note": "Cumin and ginger keep the flavor"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 58,
+    "fat": 11,
+    "fiber": 4,
+    "image": "/images/dishes/Ven-Pongal.jpg"
+  },
+  {
+    "id": 8343,
+    "name": "Avial",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🥘",
+    "cal": 290,
+    "budget": 4,
+    "time": "40 min",
+    "spice": 1,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Kerala dish for Onam, the harvest festival: mixed vegetables in a coconut, green chili and cumin paste with yogurt and curry leaves.",
+    "ingredients": [
+      "Drumsticks (moringa pods)",
+      "Carrot",
+      "Green beans",
+      "Raw plantain",
+      "Pumpkin",
+      "Grated coconut",
+      "Green chilies",
+      "Cumin",
+      "Plain yogurt",
+      "Curry leaves",
+      "Coconut oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened coconut yogurt | Tamarind",
+          "note": "Adds the same tang"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened coconut yogurt | Tamarind",
+          "note": "Adds the same tang"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Green chilies",
+          "to": "Leave out",
+          "note": "Coconut and cumin carry the flavor"
+        }
+      ],
+      "local": [
+        {
+          "from": "Drumsticks (moringa pods)",
+          "to": "Zucchini | Asparagus",
+          "note": "Cut into finger-length pieces"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 26,
+    "fat": 18,
+    "fiber": 7,
+    "image": "/images/dishes/Avial.jpg"
+  },
+  {
+    "id": 8344,
+    "name": "Palada Payasam",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍮",
+    "cal": 360,
+    "budget": 4,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Kerala Onam dessert of rice flakes (ada) slow-cooked in milk until pink and creamy, scented with cardamom.",
+    "ingredients": [
+      "Rice ada (rice flakes)",
+      "Whole milk",
+      "Sugar",
+      "Ghee",
+      "Cardamom"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Whole milk",
+          "to": "Full-fat coconut milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Ghee",
+          "to": "Coconut oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Full-fat coconut milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Ghee",
+          "to": "Coconut oil",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 56,
+    "fat": 11,
+    "fiber": 1,
+    "image": "/images/dishes/Palada-Payasam.jpg"
+  },
+  {
+    "id": 8345,
+    "name": "Undhiyu",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🥘",
+    "cal": 430,
+    "budget": 6,
+    "time": "1.5 hrs",
+    "spice": 2,
+    "tags": [
+      "thanksgiving",
+      "vegan",
+      "dairy-free",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Gujarati winter-harvest dish of mixed vegetables and fenugreek dumplings slow-cooked with green garlic, coconut and peanuts.",
+    "ingredients": [
+      "Purple yam",
+      "Sweet potato",
+      "Baby potatoes",
+      "Small eggplants",
+      "Surti papdi beans",
+      "Fenugreek leaves",
+      "Chickpea flour",
+      "Grated coconut",
+      "Roasted peanuts",
+      "Green garlic",
+      "Green chilies",
+      "Peanut oil"
+    ],
+    "swaps": {
+      "nuts": [
+        {
+          "from": "Roasted peanuts",
+          "to": "Toasted sesame seeds",
+          "note": "Grind into the masala the same way"
+        },
+        {
+          "from": "Peanut oil",
+          "to": "Sunflower oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Green chilies",
+          "to": "Use half",
+          "note": "Green garlic keeps it fragrant"
+        }
+      ],
+      "local": [
+        {
+          "from": "Surti papdi beans",
+          "to": "Flat green beans",
+          "note": "Cut into pieces"
+        },
+        {
+          "from": "Purple yam",
+          "to": "Taro",
+          "note": "Cut into chunks"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 50,
+    "fat": 20,
+    "fiber": 11,
+    "image": "/images/dishes/Undhiyu.jpg"
+  },
+  {
+    "id": 8346,
+    "name": "Gajar ka Halwa",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🥕",
+    "cal": 380,
+    "budget": 4,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "North Indian winter dessert of grated red carrots slow-cooked in milk with ghee, sugar and cardamom, topped with pistachios and almonds.",
+    "ingredients": [
+      "Red carrots",
+      "Whole milk",
+      "Ghee",
+      "Sugar",
+      "Cardamom",
+      "Pistachios",
+      "Slivered almonds"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Whole milk",
+          "to": "Full-fat coconut milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Ghee",
+          "to": "Coconut oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Full-fat coconut milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Ghee",
+          "to": "Coconut oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Pistachios",
+          "to": "Toasted pumpkin seeds",
+          "note": "Keeps the green on top"
+        },
+        {
+          "from": "Slivered almonds",
+          "to": "Leave out | Toasted coconut flakes",
+          "note": "Keeps a little crunch"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 50,
+    "fat": 18,
+    "fiber": 4,
+    "image": "/images/dishes/Gajar-ka-Halwa.jpg"
+  },
+  {
+    "id": 8347,
+    "name": "Asaro",
+    "country": "Nigeria",
+    "region": "Africa",
+    "emoji": "🍠",
+    "cal": 480,
+    "budget": 4,
+    "time": "45 min",
+    "spice": 2,
+    "tags": [
+      "thanksgiving",
+      "fish",
+      "shellfish",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Yoruba yam pottage cooked soft in a tomato and pepper sauce with palm oil, crayfish and smoked fish, enjoyed at New Yam Festival time.",
+    "ingredients": [
+      "White yam",
+      "Palm oil",
+      "Tomatoes",
+      "Red bell pepper",
+      "Scotch bonnet pepper",
+      "Onion",
+      "Ground crayfish",
+      "Smoked fish",
+      "Spinach"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Ground crayfish",
+          "to": "Ground dried mushrooms with a little seaweed",
+          "note": "Gives the same deep savory taste"
+        },
+        {
+          "from": "Smoked fish",
+          "to": "Smoked tofu",
+          "note": "Crumble in near the end"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Scotch bonnet pepper",
+          "to": "Leave out | Use half",
+          "note": "Bell pepper keeps the color"
+        }
+      ],
+      "local": [
+        {
+          "from": "White yam",
+          "to": "Sweet potato | Potatoes",
+          "note": "Cook a little less"
+        }
+      ]
+    },
+    "protein": 15,
+    "carbs": 70,
+    "fat": 15,
+    "fiber": 9,
+    "image": "/images/dishes/Asaro.jpg"
+  },
+  {
+    "id": 8348,
+    "name": "Kpokpoi",
+    "country": "Ghana",
+    "region": "Africa",
+    "emoji": "🍲",
+    "cal": 560,
+    "budget": 8,
+    "time": "1.5 hrs",
+    "spice": 2,
+    "tags": [
+      "thanksgiving",
+      "fish",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Ga dish for Homowo, the harvest festival: steamed fermented corn meal mixed with palm oil and okra, served with palm nut soup and fish.",
+    "ingredients": [
+      "Fermented corn dough",
+      "Palm oil",
+      "Okra",
+      "Palm nut soup base",
+      "Smoked fish",
+      "Onion",
+      "Scotch bonnet pepper"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Smoked fish",
+          "to": "Smoked mushrooms",
+          "note": "Add to the soup the same way"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Scotch bonnet pepper",
+          "to": "Leave out | Use half",
+          "note": "Palm nut soup is rich without heat"
+        }
+      ],
+      "local": [
+        {
+          "from": "Fermented corn dough",
+          "to": "Fine cornmeal",
+          "note": "Less sour; add a squeeze of lemon"
+        }
+      ]
+    },
+    "protein": 22,
+    "carbs": 60,
+    "fat": 26,
+    "fiber": 8,
+    "image": "/images/dishes/Kpokpoi.jpg"
+  },
+  {
+    "id": 8349,
+    "name": "Liberian Potato Greens",
+    "country": "Liberia",
+    "region": "Africa",
+    "emoji": "🥬",
+    "cal": 610,
+    "budget": 8,
+    "time": "1.5 hrs",
+    "spice": 3,
+    "tags": [
+      "thanksgiving",
+      "fish",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Liberian Thanksgiving stew of finely chopped sweet potato leaves cooked in palm oil with beef, smoked fish and hot pepper, served over rice.",
+    "ingredients": [
+      "Sweet potato leaves",
+      "Palm oil",
+      "Beef",
+      "Smoked fish",
+      "Onion",
+      "Scotch bonnet pepper",
+      "Rice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Beef",
+          "to": "Chickpeas",
+          "note": "Add in the last 15 minutes"
+        },
+        {
+          "from": "Smoked fish",
+          "to": "Smoked tofu",
+          "note": "Crumble in near the end"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Scotch bonnet pepper",
+          "to": "Use half | Leave out",
+          "note": "Serve pepper on the side"
+        }
+      ],
+      "local": [
+        {
+          "from": "Sweet potato leaves",
+          "to": "Spinach | Collard greens",
+          "note": "Chop very finely"
+        }
+      ]
+    },
+    "protein": 32,
+    "carbs": 58,
+    "fat": 28,
+    "fiber": 6,
+    "image": "/images/dishes/Liberian-Potato-Greens.jpg"
+  },
+  {
+    "id": 8350,
+    "name": "Zwiebelkuchen",
+    "country": "Germany",
+    "region": "Europe",
+    "emoji": "🥧",
+    "cal": 440,
+    "budget": 6,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "eggs",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "German autumn onion tart with bacon, sour cream and caraway on a yeast dough, made at grape-harvest time.",
+    "ingredients": [
+      "Flour",
+      "Yeast",
+      "Onions",
+      "Bacon",
+      "Sour cream",
+      "Eggs",
+      "Caraway seeds",
+      "Butter"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Bacon",
+          "to": "Smoked tempeh",
+          "note": "Fry until crisp"
+        },
+        {
+          "from": "Sour cream",
+          "to": "Vegan sour cream",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Eggs",
+          "to": "Blended silken tofu",
+          "note": "About 60 g per egg"
+        },
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Sour cream",
+          "to": "Dairy-free sour cream",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Press the dough thin into the pan"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Blended silken tofu",
+          "note": "About 60 g per egg"
+        }
+      ]
+    },
+    "protein": 13,
+    "carbs": 38,
+    "fat": 26,
+    "fiber": 3,
+    "image": "/images/dishes/Zwiebelkuchen.jpg"
+  },
+  {
+    "id": 8351,
+    "name": "Zwetschgenkuchen",
+    "country": "Germany",
+    "region": "Europe",
+    "emoji": "🍰",
+    "cal": 310,
+    "budget": 4,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "German autumn dessert of yeast-dough sheet cake covered in rows of fresh plums with cinnamon sugar.",
+    "ingredients": [
+      "Flour",
+      "Yeast",
+      "Milk",
+      "Butter",
+      "Egg",
+      "Sugar",
+      "Italian plums",
+      "Cinnamon"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Warm it first"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Egg",
+          "to": "Flax egg",
+          "note": "Mix 1 tbsp ground flax with 3 tbsp water"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Warm it first"
+        },
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend with psyllium",
+          "note": "Rest the dough a little longer"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg",
+          "note": "Mix 1 tbsp ground flax with 3 tbsp water"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 52,
+    "fat": 9,
+    "fiber": 3,
+    "image": "/images/dishes/Zwetschgenkuchen.jpg"
+  },
+  {
+    "id": 8352,
+    "name": "Risotto alla Zucca",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "🎃",
+    "cal": 480,
+    "budget": 7,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Northern Italian autumn risotto of rice cooked slowly with roasted pumpkin, sage and Parmigiano.",
+    "ingredients": [
+      "Carnaroli rice",
+      "Pumpkin",
+      "Onion",
+      "Vegetable stock",
+      "Butter",
+      "Parmigiano-Reggiano",
+      "Fresh sage"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        },
+        {
+          "from": "Parmigiano-Reggiano",
+          "to": "Nutritional yeast",
+          "note": "Stir in at the end"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        },
+        {
+          "from": "Parmigiano-Reggiano",
+          "to": "Nutritional yeast",
+          "note": "Stir in at the end"
+        }
+      ],
+      "local": [
+        {
+          "from": "Carnaroli rice",
+          "to": "Arborio rice",
+          "note": "Cook a minute less"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 72,
+    "fat": 16,
+    "fiber": 4,
+    "image": "/images/dishes/Risotto-alla-Zucca.jpg"
+  },
+  {
+    "id": 8353,
+    "name": "Kolokithopita",
+    "country": "Greece",
+    "region": "Europe",
+    "emoji": "🥧",
+    "cal": 380,
+    "budget": 6,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Greek savory pumpkin pie of grated pumpkin, feta and mint baked between crisp layers of filo.",
+    "ingredients": [
+      "Pumpkin",
+      "Filo pastry",
+      "Feta",
+      "Eggs",
+      "Onion",
+      "Fresh mint",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Feta",
+          "to": "Vegan feta",
+          "note": "Crumble the same way"
+        },
+        {
+          "from": "Eggs",
+          "to": "Chickpea flour slurry",
+          "note": "2 tbsp chickpea flour plus water per egg"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Feta",
+          "to": "Dairy-free feta",
+          "note": "Crumble the same way"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Filo pastry",
+          "to": "Gluten-free filo",
+          "note": "Keep it covered while working"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Chickpea flour slurry",
+          "note": "2 tbsp chickpea flour plus water per egg"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 34,
+    "fat": 22,
+    "fiber": 4,
+    "image": "/images/dishes/Kolokithopita.jpg"
+  },
+  {
+    "id": 8354,
+    "name": "Kabak Tatlısı",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "🎃",
+    "cal": 320,
+    "budget": 3,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegan",
+      "dairy-free",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Turkish autumn dessert of pumpkin slices baked in their own sugar syrup, topped with tahini and crushed walnuts.",
+    "ingredients": [
+      "Pumpkin",
+      "Sugar",
+      "Tahini",
+      "Walnuts"
+    ],
+    "swaps": {
+      "nuts": [
+        {
+          "from": "Walnuts",
+          "to": "Toasted pumpkin seeds",
+          "note": "Sprinkle on top the same way"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 52,
+    "fat": 11,
+    "fiber": 3,
+    "image": "/images/dishes/Kabak-Tatlisi.jpg"
+  },
+  {
+    "id": 8355,
+    "name": "Ash Reshteh",
+    "country": "Iran",
+    "region": "Middle East",
+    "emoji": "🍲",
+    "cal": 420,
+    "budget": 5,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Persian festive soup of noodles, beans, lentils and fresh herbs, topped with kashk, fried mint and golden onions; shared at family gatherings through the cold months.",
+    "ingredients": [
+      "Reshteh noodles",
+      "Chickpeas",
+      "Kidney beans",
+      "Lentils",
+      "Spinach",
+      "Parsley",
+      "Cilantro",
+      "Dill",
+      "Onion",
+      "Dried mint",
+      "Kashk",
+      "Turmeric"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Kashk",
+          "to": "Unsweetened soy yogurt with lemon",
+          "note": "Swirl on top the same way"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Kashk",
+          "to": "Unsweetened soy yogurt with lemon",
+          "note": "Swirl on top the same way"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Reshteh noodles",
+          "to": "Rice noodles",
+          "note": "Add in the last few minutes"
+        }
+      ]
+    },
+    "protein": 18,
+    "carbs": 62,
+    "fat": 11,
+    "fiber": 14,
+    "image": "/images/dishes/Ash-Reshteh.jpg"
+  },
+  {
+    "id": 8356,
+    "name": "Pouding Chômeur",
+    "country": "Canada",
+    "region": "Americas",
+    "emoji": "🍮",
+    "cal": 520,
+    "budget": 5,
+    "time": "50 min",
+    "spice": 0,
+    "tags": [
+      "thanksgiving",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Québec dessert of soft cake baked over maple syrup sauce that turns into sticky caramel under the sponge; a cozy autumn classic.",
+    "ingredients": [
+      "Flour",
+      "Baking powder",
+      "Butter",
+      "Sugar",
+      "Egg",
+      "Milk",
+      "Maple syrup",
+      "Heavy cream"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Egg",
+          "to": "Flax egg",
+          "note": "Mix 1 tbsp ground flax with 3 tbsp water"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Coconut cream",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Coconut cream",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg",
+          "note": "Mix 1 tbsp ground flax with 3 tbsp water"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 76,
+    "fat": 22,
+    "fiber": 1,
+    "image": "/images/dishes/Pouding-Chomeur.jpg"
   }
 ];
