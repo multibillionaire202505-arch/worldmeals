@@ -1,6 +1,7 @@
 // WorldMeals kids dishes — same structure as meals.js. Shown only on the Kids page (Chef and above).
 // Photos: /images/dishes/Kids/<lowercase-name-with-dashes>.jpg — an emoji card shows until the photo is uploaded.
 // 2026-10-22: added 25 Kids Thanksgiving dishes (ids 9401–9425, tag "thanksgiving"), 5 per age group. Nutrition, cost and time are estimates.
+// 2026-10-22: added 25 Kids Christmas dishes (ids 9426–9450, tag "christmas"). Nutrition, cost and time are estimates.
 window.WORLD_KIDS_MEALS = [
   {
     "id": 9001,
@@ -22310,5 +22311,1546 @@ window.WORLD_KIDS_MEALS = [
     "fat": 13,
     "fiber": 3,
     "image": "/images/dishes/Kids/mini-apple-hand-pies.jpg"
+  },
+  {
+    "id": 9426,
+    "name": "Apple & Cinnamon Purée",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍎",
+    "cal": 60,
+    "budget": 1,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "snack",
+      "toddler-friendly",
+      "very-picky",
+      "sensory-friendly",
+      "christmas"
+    ],
+    "desc": "Smooth, cozy purée of cooked apples with a pinch of cinnamon, the smell of Christmas. No salt, sugar or honey. Sensory tip: one steady texture; serve on its own, the same way each time.",
+    "ingredients": [
+      "Sweet apples",
+      "Water",
+      "Cinnamon"
+    ],
+    "swaps": {},
+    "protein": 0,
+    "carbs": 15,
+    "fat": 0,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/apple-and-cinnamon-puree.jpg"
+  },
+  {
+    "id": 9427,
+    "name": "Parsnip & Pear Purée",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🍐",
+    "cal": 70,
+    "budget": 1,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "very-picky",
+      "hidden-veggies",
+      "sensory-friendly",
+      "christmas"
+    ],
+    "desc": "Naturally sweet winter purée of soft parsnip and ripe pear. No salt, sugar or honey. Sensory tip: one steady texture; serve on its own, the same way each time.",
+    "ingredients": [
+      "Parsnip",
+      "Ripe pear",
+      "Water"
+    ],
+    "swaps": {},
+    "protein": 1,
+    "carbs": 16,
+    "fat": 0,
+    "fiber": 4,
+    "image": "/images/dishes/Kids/parsnip-and-pear-puree.jpg"
+  },
+  {
+    "id": 9428,
+    "name": "Roast Chicken & Carrot Mash",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🥕",
+    "cal": 110,
+    "budget": 1,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "dairy-free",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "very-picky",
+      "hidden-veggies",
+      "sensory-friendly",
+      "christmas"
+    ],
+    "desc": "Tender roast chicken blended with soft carrot: a first taste of Christmas dinner. No salt, sugar or honey. Sensory tip: one steady texture; serve on its own, the same way each time.",
+    "ingredients": [
+      "Chicken thigh",
+      "Carrot",
+      "Water"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken thigh",
+          "to": "Red lentils",
+          "note": "Cook very soft; keeps it iron-rich"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 7,
+    "fat": 4,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/roast-chicken-and-carrot-mash.jpg"
+  },
+  {
+    "id": 9429,
+    "name": "Pear & Cranberry Oat Porridge",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥣",
+    "cal": 150,
+    "budget": 1,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "toddler-friendly",
+      "little-picky",
+      "christmas"
+    ],
+    "desc": "Creamy oat porridge with soft cooked pear and a few fresh cranberries, blended smooth. No salt, sugar or honey.",
+    "ingredients": [
+      "Rolled oats",
+      "Ripe pear",
+      "Fresh cranberries",
+      "Breast milk or formula"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Breast milk or formula",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick one made for babies; ask your pediatrician"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Breast milk or formula",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick one made for babies; ask your pediatrician"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Rolled oats",
+          "to": "Certified gluten-free oats",
+          "note": "Same texture"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 27,
+    "fat": 3,
+    "fiber": 4,
+    "image": "/images/dishes/Kids/pear-and-cranberry-oat-porridge.jpg"
+  },
+  {
+    "id": 9430,
+    "name": "Brussels Sprout & Potato Mash",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🥬",
+    "cal": 90,
+    "budget": 1,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "adventurous",
+      "hidden-veggies",
+      "christmas"
+    ],
+    "desc": "A gentle first Brussels sprout: cooked very soft and mashed into creamy potato. No salt, sugar or honey.",
+    "ingredients": [
+      "Brussels sprouts",
+      "Potato",
+      "Water",
+      "Olive oil"
+    ],
+    "swaps": {},
+    "protein": 3,
+    "carbs": 15,
+    "fat": 2,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/brussels-sprout-and-potato-mash.jpg"
+  },
+  {
+    "id": 9431,
+    "name": "Mini Gingerbread Pancakes",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥞",
+    "cal": 170,
+    "budget": 1,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "toddler-friendly",
+      "little-picky",
+      "christmas"
+    ],
+    "desc": "Small soft pancakes with gentle gingerbread spices, sweetened only with ripe banana. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Whole-wheat flour",
+      "Ripe banana",
+      "Egg",
+      "Whole milk",
+      "Ground ginger",
+      "Cinnamon",
+      "Baking powder"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        },
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Whole-wheat flour",
+          "to": "Gluten-free flour blend",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 26,
+    "fat": 5,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/mini-gingerbread-pancakes.jpg"
+  },
+  {
+    "id": 9432,
+    "name": "Soft Roast Chicken Bites",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🍗",
+    "cal": 170,
+    "budget": 2,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "dairy-free",
+      "no-dairy",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "little-picky",
+      "christmas"
+    ],
+    "desc": "Juicy roast chicken thigh with thyme, pulled into small soft bites for little hands. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Boneless chicken thighs",
+      "Olive oil",
+      "Fresh thyme",
+      "Garlic"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Boneless chicken thighs",
+          "to": "Soft roasted chickpeas, mashed",
+          "note": "Mash lightly so they don't roll"
+        }
+      ]
+    },
+    "protein": 18,
+    "carbs": 1,
+    "fat": 10,
+    "fiber": 0,
+    "image": "/images/dishes/Kids/soft-roast-chicken-bites.jpg"
+  },
+  {
+    "id": 9433,
+    "name": "Christmas Tree Veggie Sticks",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥦",
+    "cal": 70,
+    "budget": 1,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "snack",
+      "toddler-friendly",
+      "little-picky",
+      "christmas"
+    ],
+    "desc": "Soft-steamed carrot sticks with cucumber and sweet pepper strips laid out like a Christmas tree, with a yellow pepper star and a yogurt dip. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Carrot sticks (steamed soft)",
+      "Cucumber",
+      "Green bell pepper",
+      "Red bell pepper",
+      "Yellow bell pepper",
+      "Plain yogurt"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 3,
+    "carbs": 10,
+    "fat": 2,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/christmas-tree-veggie-sticks.jpg"
+  },
+  {
+    "id": 9434,
+    "name": "Mini Turkey & Apple Patties",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍖",
+    "cal": 190,
+    "budget": 2,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "dairy-free",
+      "no-dairy",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-fish",
+      "no-mushrooms",
+      "breakfast",
+      "lunch",
+      "toddler-friendly",
+      "little-picky",
+      "hidden-veggies",
+      "lunchbox",
+      "christmas"
+    ],
+    "desc": "Soft little turkey patties with grated apple and sage, no added sugar. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Ground turkey",
+      "Grated apple",
+      "Rolled oats",
+      "Egg",
+      "Fresh sage"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Ground turkey",
+          "to": "Mashed white beans",
+          "note": "Chill before shaping"
+        },
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Rolled oats",
+          "to": "Certified gluten-free oats",
+          "note": "Same texture"
+        }
+      ]
+    },
+    "protein": 16,
+    "carbs": 9,
+    "fat": 9,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/mini-turkey-and-apple-patties.jpg"
+  },
+  {
+    "id": 9435,
+    "name": "Cinnamon Baked Apple Slices",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍎",
+    "cal": 80,
+    "budget": 1,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "toddler-friendly",
+      "very-picky",
+      "christmas"
+    ],
+    "desc": "Apple slices baked until soft and sweet with a dusting of cinnamon, no sugar needed. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Apples",
+      "Cinnamon",
+      "Water"
+    ],
+    "swaps": {},
+    "protein": 0,
+    "carbs": 20,
+    "fat": 0,
+    "fiber": 4,
+    "image": "/images/dishes/Kids/cinnamon-baked-apple-slices.jpg"
+  },
+  {
+    "id": 9436,
+    "name": "Snowman Pancakes",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "⛄",
+    "cal": 260,
+    "budget": 1,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "little-picky",
+      "cook-together",
+      "christmas"
+    ],
+    "desc": "Three pancake circles make a snowman with chocolate-chip eyes and buttons, a carrot nose, a strawberry scarf and a light snow of powdered sugar. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt light.",
+    "ingredients": [
+      "Whole-wheat flour",
+      "Egg",
+      "Whole milk",
+      "Baking powder",
+      "Strawberries",
+      "Mini dark chocolate chips",
+      "Carrot",
+      "Raspberries",
+      "Blueberries",
+      "Powdered sugar (light dusting)"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        },
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Whole-wheat flour",
+          "to": "Gluten-free flour blend",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 40,
+    "fat": 7,
+    "fiber": 4,
+    "image": "/images/dishes/Kids/snowman-pancakes.jpg"
+  },
+  {
+    "id": 9437,
+    "name": "Christmas Tree Pizza",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍕",
+    "cal": 320,
+    "budget": 2,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "dinner",
+      "little-picky",
+      "hidden-veggies",
+      "cook-together",
+      "christmas"
+    ],
+    "desc": "A pizza cut into a Christmas tree, decorated with green pepper garlands, cherry tomato baubles and a yellow pepper star. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt light.",
+    "ingredients": [
+      "Whole-wheat pizza dough",
+      "Tomato sauce",
+      "Mozzarella",
+      "Green bell pepper",
+      "Cherry tomatoes (sliced)",
+      "Yellow bell pepper",
+      "Dried oregano"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Mozzarella",
+          "to": "Dairy-free cheese",
+          "note": "Melts the same way"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Mozzarella",
+          "to": "Dairy-free cheese",
+          "note": "Melts the same way"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Whole-wheat pizza dough",
+          "to": "Gluten-free pizza base",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 42,
+    "fat": 11,
+    "fiber": 4,
+    "image": "/images/dishes/Kids/christmas-tree-pizza.jpg"
+  },
+  {
+    "id": 9438,
+    "name": "Reindeer Toast",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🦌",
+    "cal": 240,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "snack",
+      "little-picky",
+      "cook-together",
+      "christmas"
+    ],
+    "desc": "Toast spread with cream cheese, with mini pretzel antlers, banana and blueberry eyes and a raspberry nose. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt light.",
+    "ingredients": [
+      "Whole-grain bread",
+      "Cream cheese",
+      "Mini pretzels",
+      "Banana slices",
+      "Blueberries",
+      "Raspberry"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cream cheese",
+          "to": "Dairy-free cream cheese",
+          "note": "Spread thin"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Whole-grain bread",
+          "to": "Gluten-free bread",
+          "note": "Check labels for hidden gluten"
+        },
+        {
+          "from": "Mini pretzels",
+          "to": "Gluten-free pretzels | Apple-slice antlers",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 34,
+    "fat": 9,
+    "fiber": 4,
+    "image": "/images/dishes/Kids/reindeer-toast.jpg"
+  },
+  {
+    "id": 9439,
+    "name": "Santa Hat Strawberry Bites",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍓",
+    "cal": 130,
+    "budget": 1,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "little-picky",
+      "cook-together",
+      "christmas"
+    ],
+    "desc": "Thick banana slices topped with yogurt and a strawberry Santa hat with a yogurt pom-pom. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt light.",
+    "ingredients": [
+      "Strawberries",
+      "Banana",
+      "Plain yogurt"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 3,
+    "carbs": 22,
+    "fat": 2,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/santa-hat-strawberry-bites.jpg"
+  },
+  {
+    "id": 9440,
+    "name": "Mini Gingerbread Muffins",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🧁",
+    "cal": 190,
+    "budget": 1,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "lunchbox",
+      "little-picky",
+      "christmas"
+    ],
+    "desc": "Soft gingerbread muffins with ginger and cinnamon, lightly sweetened with molasses and apple. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt light.",
+    "ingredients": [
+      "Whole-wheat flour",
+      "Molasses",
+      "Unsweetened applesauce",
+      "Egg",
+      "Whole milk",
+      "Ground ginger",
+      "Cinnamon",
+      "Baking soda"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        },
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Whole-wheat flour",
+          "to": "Gluten-free flour blend",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 32,
+    "fat": 5,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/mini-gingerbread-muffins.jpg"
+  },
+  {
+    "id": 9441,
+    "name": "Wreath Veggie Platter",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥗",
+    "cal": 160,
+    "budget": 2,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "snack",
+      "picky",
+      "cook-together",
+      "christmas"
+    ],
+    "desc": "Broccoli, cucumber, cherry tomatoes, carrot and peppers arranged in a Christmas wreath with a red pepper bow, around a yogurt-dill dip. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Broccoli florets",
+      "Cucumber",
+      "Cherry tomatoes (quartered)",
+      "Carrot",
+      "Green bell pepper",
+      "Red bell pepper",
+      "Plain yogurt",
+      "Fresh dill"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 16,
+    "fat": 6,
+    "fiber": 5,
+    "image": "/images/dishes/Kids/wreath-veggie-platter.jpg"
+  },
+  {
+    "id": 9442,
+    "name": "Kids' Christmas Rice Pudding",
+    "country": "Sweden",
+    "region": "Europe",
+    "emoji": "🍚",
+    "cal": 280,
+    "budget": 1,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "snack",
+      "little-picky",
+      "cook-together",
+      "christmas"
+    ],
+    "desc": "Swedish-style Christmas rice pudding cooked slowly in milk with cinnamon, topped with fresh strawberries and a cinnamon star. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Short-grain rice",
+      "Whole milk",
+      "Cinnamon stick",
+      "Maple syrup",
+      "Strawberries"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 46,
+    "fat": 6,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/kids-christmas-rice-pudding.jpg"
+  },
+  {
+    "id": 9443,
+    "name": "Snowflake Quesadillas",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "❄️",
+    "cal": 360,
+    "budget": 2,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-eggs",
+      "no-fish",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "picky",
+      "cook-together",
+      "christmas"
+    ],
+    "desc": "Chicken and cheese quesadillas cut into snowflake shapes with a cookie cutter, with a mild fresh tomato salsa. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Whole-wheat tortillas",
+      "Cooked chicken",
+      "Cheddar",
+      "Sweetcorn",
+      "Fresh tomato salsa"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Cooked chicken",
+          "to": "Black beans",
+          "note": "Mash lightly"
+        },
+        {
+          "from": "Cheddar",
+          "to": "Dairy-free cheese",
+          "note": "Melts the same way"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Cheddar",
+          "to": "Dairy-free cheese",
+          "note": "Melts the same way"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Whole-wheat tortillas",
+          "to": "Corn tortillas",
+          "note": "Warm them so they bend"
+        }
+      ]
+    },
+    "protein": 24,
+    "carbs": 32,
+    "fat": 15,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/snowflake-quesadillas.jpg"
+  },
+  {
+    "id": 9444,
+    "name": "Green Christmas Smoothie",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥤",
+    "cal": 180,
+    "budget": 2,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "breakfast",
+      "snack",
+      "picky",
+      "hidden-veggies",
+      "cook-together",
+      "christmas"
+    ],
+    "desc": "A bright green smoothie of spinach, banana, mango and yogurt with a strawberry Santa hat on the rim; kids press the button and name the color. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Baby spinach",
+      "Banana",
+      "Mango",
+      "Plain yogurt",
+      "Whole milk",
+      "Strawberry"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Pick plain, no-sugar versions"
+        },
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Pick plain, no-sugar versions"
+        },
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 32,
+    "fat": 3,
+    "fiber": 5,
+    "image": "/images/dishes/Kids/green-christmas-smoothie.jpg"
+  },
+  {
+    "id": 9445,
+    "name": "Gingerbread Cookies",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍪",
+    "cal": 150,
+    "budget": 1,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "picky",
+      "cook-together",
+      "christmas"
+    ],
+    "desc": "Classic gingerbread people kids roll out, cut and decorate: a Christmas treat to share. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Flour",
+      "Molasses",
+      "Unsalted butter",
+      "Egg",
+      "Ground ginger",
+      "Cinnamon",
+      "Baking soda"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Unsalted butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Unsalted butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Chill the dough before cutting"
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 22,
+    "fat": 6,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/gingerbread-cookies.jpg"
+  },
+  {
+    "id": 9446,
+    "name": "Mini Turkey Roast Dinner",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🦃",
+    "cal": 460,
+    "budget": 3,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "no-dairy",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "dinner",
+      "picky",
+      "cook-together",
+      "christmas"
+    ],
+    "desc": "A kid-sized Christmas dinner: roast turkey breast, crispy roast potatoes, carrots, peas and broccoli with gravy. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Turkey breast",
+      "Potatoes",
+      "Carrots",
+      "Green peas",
+      "Broccoli",
+      "Olive oil",
+      "Low-sodium stock",
+      "Cornstarch",
+      "Fresh thyme"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Turkey breast",
+          "to": "Roasted chickpea and lentil loaf",
+          "note": "Slice it like a roast"
+        }
+      ]
+    },
+    "protein": 34,
+    "carbs": 46,
+    "fat": 12,
+    "fiber": 6,
+    "image": "/images/dishes/Kids/mini-turkey-roast-dinner.jpg"
+  },
+  {
+    "id": 9447,
+    "name": "Maple Glazed Chicken Drumsticks",
+    "country": "Canada",
+    "region": "Americas",
+    "emoji": "🍗",
+    "cal": 380,
+    "budget": 2,
+    "time": "50 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "no-dairy",
+      "gluten",
+      "gluten-free-option",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "dinner",
+      "picky",
+      "cook-together",
+      "christmas"
+    ],
+    "desc": "Sticky oven-baked chicken drumsticks glazed with maple syrup, mustard and a little soy sauce. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Chicken drumsticks",
+      "Maple syrup",
+      "Dijon mustard",
+      "Soy sauce",
+      "Garlic"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken drumsticks",
+          "to": "Firm tofu slabs",
+          "note": "Bake until edges are crisp"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 16,
+    "fat": 22,
+    "fiber": 0,
+    "image": "/images/dishes/Kids/maple-glazed-chicken-drumsticks.jpg"
+  },
+  {
+    "id": 9448,
+    "name": "Christmas Cranberry Rice Salad",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥗",
+    "cal": 320,
+    "budget": 2,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "no-dairy",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "lunch",
+      "adventurous",
+      "cook-together",
+      "christmas"
+    ],
+    "desc": "Red and green rice salad of white and wild rice with dried cranberries, red pepper, cucumber and parsley in a lemon dressing. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "White rice",
+      "Wild rice",
+      "Dried cranberries",
+      "Red bell pepper",
+      "Cucumber",
+      "Parsley",
+      "Olive oil",
+      "Lemon"
+    ],
+    "swaps": {},
+    "protein": 5,
+    "carbs": 50,
+    "fat": 7,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/christmas-cranberry-rice-salad.jpg"
+  },
+  {
+    "id": 9449,
+    "name": "Homemade Gingerbread House",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🏠",
+    "cal": 210,
+    "budget": 3,
+    "time": "3 hrs",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "adventurous",
+      "cook-together",
+      "christmas"
+    ],
+    "desc": "Kids bake the walls, glue them with icing and decorate with icing and gumdrops: a Christmas project to share (per piece). Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Flour",
+      "Molasses",
+      "Unsalted butter",
+      "Egg",
+      "Ground ginger",
+      "Cinnamon",
+      "Powdered sugar",
+      "Egg white",
+      "Gumdrop candies"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Unsalted butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        },
+        {
+          "from": "Egg white",
+          "to": "Aquafaba",
+          "note": "Whip into stiff icing"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Unsalted butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        },
+        {
+          "from": "Egg white",
+          "to": "Aquafaba",
+          "note": "Whip into stiff icing"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Roll thicker so walls stay strong"
+        }
+      ],
+      "local": [
+        {
+          "from": "Gumdrop candies",
+          "to": "Dried cranberries | Apricot pieces",
+          "note": "No artificial colors; still festive"
+        }
+      ]
+    },
+    "protein": 3,
+    "carbs": 36,
+    "fat": 7,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/homemade-gingerbread-house.jpg"
+  },
+  {
+    "id": 9450,
+    "name": "Yule Log Roll",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🪵",
+    "cal": 300,
+    "budget": 2,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "adventurous",
+      "cook-together",
+      "christmas"
+    ],
+    "desc": "A chocolate sponge rolled around whipped cream, covered in chocolate frosting and decorated like a log: the French bûche de Noël, made with kids. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Eggs",
+      "Sugar",
+      "Flour",
+      "Cocoa powder",
+      "Heavy cream",
+      "Dark chocolate"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Heavy cream",
+          "to": "Whipped coconut cream",
+          "note": "Chill the can overnight first"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Aquafaba sponge",
+          "note": "Whip chickpea water with sugar until stiff"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Roll gently while warm"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 32,
+    "fat": 16,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/yule-log-roll.jpg"
   }
 ];
