@@ -1,5 +1,6 @@
 // WorldMeals kids dishes — same structure as meals.js. Shown only on the Kids page (Chef and above).
 // Photos: /images/dishes/Kids/<lowercase-name-with-dashes>.jpg — an emoji card shows until the photo is uploaded.
+// 2026-10-22: added 25 Kids Thanksgiving dishes (ids 9401–9425, tag "thanksgiving"), 5 per age group. Nutrition, cost and time are estimates.
 window.WORLD_KIDS_MEALS = [
   {
     "id": 9001,
@@ -20753,5 +20754,1561 @@ window.WORLD_KIDS_MEALS = [
     "fat": 10,
     "fiber": 5,
     "image": "/images/dishes/Kids/cazuela.jpg"
+  },
+  {
+    "id": 9401,
+    "name": "Turkey & Sweet Potato Purée",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍠",
+    "cal": 120,
+    "budget": 1,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "dairy-free",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "very-picky",
+      "hidden-veggies",
+      "sensory-friendly",
+      "thanksgiving"
+    ],
+    "desc": "Baby's first taste of Thanksgiving: soft turkey and sweet potato, cooked tender and blended smooth. No salt, sugar or honey. Sensory tip: one steady texture; serve on its own, the same way each time.",
+    "ingredients": [
+      "Ground turkey",
+      "Sweet potato",
+      "Water"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Ground turkey",
+          "to": "Red lentils",
+          "note": "Cook very soft; keeps it iron-rich"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 14,
+    "fat": 3,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/turkey-and-sweet-potato-puree.jpg"
+  },
+  {
+    "id": 9402,
+    "name": "Pumpkin & Pear Purée",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🎃",
+    "cal": 70,
+    "budget": 1,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "breakfast",
+      "snack",
+      "toddler-friendly",
+      "very-picky",
+      "sensory-friendly",
+      "thanksgiving"
+    ],
+    "desc": "Silky autumn purée of real pumpkin and ripe pear, naturally sweet. No salt, sugar or honey. Sensory tip: one steady texture; serve on its own, the same way each time.",
+    "ingredients": [
+      "Pumpkin",
+      "Ripe pear",
+      "Water",
+      "Cinnamon"
+    ],
+    "swaps": {},
+    "protein": 1,
+    "carbs": 17,
+    "fat": 0,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/pumpkin-and-pear-puree.jpg"
+  },
+  {
+    "id": 9403,
+    "name": "Green Bean & Potato Mash",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🫛",
+    "cal": 90,
+    "budget": 1,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "little-picky",
+      "hidden-veggies",
+      "thanksgiving"
+    ],
+    "desc": "Gentle first green: soft green beans mashed into creamy potato. No salt, sugar or honey.",
+    "ingredients": [
+      "Green beans",
+      "Potato",
+      "Water",
+      "Olive oil"
+    ],
+    "swaps": {},
+    "protein": 3,
+    "carbs": 16,
+    "fat": 2,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/green-bean-and-potato-mash.jpg"
+  },
+  {
+    "id": 9404,
+    "name": "Butternut & Red Lentil Mash",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥣",
+    "cal": 130,
+    "budget": 1,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "very-picky",
+      "sensory-friendly",
+      "thanksgiving"
+    ],
+    "desc": "Iron-rich red lentils cooked soft with sweet butternut squash. No salt, sugar or honey. Sensory tip: one steady texture; serve on its own, the same way each time.",
+    "ingredients": [
+      "Butternut squash",
+      "Red lentils",
+      "Water",
+      "Olive oil"
+    ],
+    "swaps": {},
+    "protein": 7,
+    "carbs": 20,
+    "fat": 3,
+    "fiber": 5,
+    "image": "/images/dishes/Kids/butternut-and-red-lentil-mash.jpg"
+  },
+  {
+    "id": 9405,
+    "name": "Pumpkin Oat Porridge",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥣",
+    "cal": 150,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "breakfast",
+      "toddler-friendly",
+      "very-picky",
+      "hidden-veggies",
+      "sensory-friendly",
+      "thanksgiving"
+    ],
+    "desc": "Warm, smooth oat porridge stirred with real pumpkin and a pinch of cinnamon. No salt, sugar or honey. Sensory tip: one steady texture; serve on its own, the same way each time.",
+    "ingredients": [
+      "Rolled oats",
+      "Pumpkin purée",
+      "Breast milk or formula",
+      "Cinnamon"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Breast milk or formula",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick one made for babies; ask your pediatrician"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Breast milk or formula",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick one made for babies; ask your pediatrician"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Rolled oats",
+          "to": "Certified gluten-free oats",
+          "note": "Same texture"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 26,
+    "fat": 3,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/pumpkin-oat-porridge.jpg"
+  },
+  {
+    "id": 9406,
+    "name": "Mini Turkey Meatballs",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍡",
+    "cal": 200,
+    "budget": 2,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "dairy-free",
+      "no-dairy",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-fish",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "little-picky",
+      "hidden-veggies",
+      "lunchbox",
+      "thanksgiving"
+    ],
+    "desc": "Soft little turkey meatballs with grated zucchini hidden inside, made with whole ingredients. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Ground turkey",
+      "Grated zucchini",
+      "Rolled oats",
+      "Egg",
+      "Grated onion",
+      "Dried thyme"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Ground turkey",
+          "to": "Mashed chickpeas",
+          "note": "Chill before shaping"
+        },
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Rolled oats",
+          "to": "Certified gluten-free oats",
+          "note": "Same texture"
+        }
+      ]
+    },
+    "protein": 16,
+    "carbs": 8,
+    "fat": 11,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/mini-turkey-meatballs.jpg"
+  },
+  {
+    "id": 9407,
+    "name": "Soft Corn Pudding Bites",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🌽",
+    "cal": 180,
+    "budget": 1,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "snack",
+      "lunch",
+      "toddler-friendly",
+      "little-picky",
+      "lunchbox",
+      "thanksgiving"
+    ],
+    "desc": "Soft, golden squares of sweet corn set in a gentle custard, with no added sugar. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Sweetcorn",
+      "Eggs",
+      "Whole milk",
+      "Cornmeal",
+      "Unsalted butter"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        },
+        {
+          "from": "Unsalted butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Blended silken tofu",
+          "note": "About 60 g per egg"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 22,
+    "fat": 7,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/soft-corn-pudding-bites.jpg"
+  },
+  {
+    "id": 9408,
+    "name": "Roasted Squash Fingers",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🎃",
+    "cal": 90,
+    "budget": 1,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "snack",
+      "lunch",
+      "toddler-friendly",
+      "very-picky",
+      "thanksgiving"
+    ],
+    "desc": "Soft roasted butternut squash fingers with a pinch of cinnamon, easy for little hands. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Butternut squash",
+      "Olive oil",
+      "Cinnamon"
+    ],
+    "swaps": {},
+    "protein": 1,
+    "carbs": 16,
+    "fat": 3,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/roasted-squash-fingers.jpg"
+  },
+  {
+    "id": 9409,
+    "name": "Mini Stuffing Muffins",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🧁",
+    "cal": 170,
+    "budget": 1,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "little-picky",
+      "hidden-veggies",
+      "lunchbox",
+      "thanksgiving"
+    ],
+    "desc": "Thanksgiving stuffing baked in mini muffin cups, soft inside, with celery and sage. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Whole-grain bread",
+      "Celery",
+      "Onion",
+      "Egg",
+      "Low-sodium vegetable stock",
+      "Unsalted butter",
+      "Fresh sage"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        },
+        {
+          "from": "Unsalted butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Unsalted butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Whole-grain bread",
+          "to": "Gluten-free bread",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 22,
+    "fat": 6,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/mini-stuffing-muffins.jpg"
+  },
+  {
+    "id": 9410,
+    "name": "Turkey Shepherd's Pie Cups",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥧",
+    "cal": 220,
+    "budget": 2,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-eggs",
+      "no-fish",
+      "no-mushrooms",
+      "dinner",
+      "toddler-friendly",
+      "little-picky",
+      "hidden-veggies",
+      "thanksgiving"
+    ],
+    "desc": "Mini shepherd's pies of soft turkey, carrot and peas under fluffy mashed potato. Toddler tip: cut into small, soft pieces; little or no added salt.",
+    "ingredients": [
+      "Ground turkey",
+      "Carrot",
+      "Green peas",
+      "Onion",
+      "Potato",
+      "Whole milk",
+      "Unsalted butter"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Ground turkey",
+          "to": "Red lentils",
+          "note": "Cook very soft; keeps it iron-rich"
+        },
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        },
+        {
+          "from": "Unsalted butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        },
+        {
+          "from": "Unsalted butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 22,
+    "fat": 8,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/turkey-shepherds-pie-cups.jpg"
+  },
+  {
+    "id": 9411,
+    "name": "Turkey & Cranberry Sliders",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍔",
+    "cal": 290,
+    "budget": 2,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-eggs",
+      "no-fish",
+      "no-mushrooms",
+      "lunch",
+      "lunchbox",
+      "picky",
+      "thanksgiving"
+    ],
+    "desc": "Little whole-wheat sliders with turkey, a spoon of homemade cranberry sauce and soft cream cheese. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt light.",
+    "ingredients": [
+      "Whole-wheat slider buns",
+      "Roast turkey",
+      "Homemade cranberry sauce",
+      "Cream cheese",
+      "Baby spinach"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cream cheese",
+          "to": "Dairy-free cream cheese",
+          "note": "Spread thin"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Whole-wheat slider buns",
+          "to": "Gluten-free buns",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 17,
+    "carbs": 34,
+    "fat": 9,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/turkey-and-cranberry-sliders.jpg"
+  },
+  {
+    "id": 9412,
+    "name": "Pumpkin Mac & Cheese",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🧀",
+    "cal": 340,
+    "budget": 2,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "little-picky",
+      "hidden-veggies",
+      "thanksgiving"
+    ],
+    "desc": "Creamy mac and cheese with real pumpkin hidden in the golden sauce. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt light.",
+    "ingredients": [
+      "Macaroni",
+      "Pumpkin purée",
+      "Cheddar",
+      "Whole milk",
+      "Unsalted butter"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Cheddar",
+          "to": "Dairy-free cheese",
+          "note": "Melts the same way"
+        },
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        },
+        {
+          "from": "Unsalted butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Cheddar",
+          "to": "Dairy-free cheese",
+          "note": "Melts the same way"
+        },
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        },
+        {
+          "from": "Unsalted butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Macaroni",
+          "to": "Gluten-free pasta",
+          "note": "Cook until extra soft"
+        }
+      ]
+    },
+    "protein": 13,
+    "carbs": 42,
+    "fat": 13,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/pumpkin-mac-and-cheese.jpg"
+  },
+  {
+    "id": 9413,
+    "name": "Gobble Gobble Fruit Turkey Plate",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍎",
+    "cal": 150,
+    "budget": 2,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "snack",
+      "little-picky",
+      "cook-together",
+      "thanksgiving"
+    ],
+    "desc": "A pear turkey with tail feathers of apple, kiwi, clementine and strawberry, plus a carrot beak and feet: a fun Thanksgiving snack kids help build. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt light.",
+    "ingredients": [
+      "Pear",
+      "Apple slices",
+      "Kiwi slices",
+      "Clementine segments",
+      "Strawberries",
+      "Carrot (beak and feet)",
+      "Raisins (eyes)"
+    ],
+    "swaps": {},
+    "protein": 2,
+    "carbs": 37,
+    "fat": 0,
+    "fiber": 6,
+    "image": "/images/dishes/Kids/gobble-gobble-fruit-turkey-plate.jpg"
+  },
+  {
+    "id": 9414,
+    "name": "Mini Cornbread Muffins",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🧁",
+    "cal": 190,
+    "budget": 1,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "snack",
+      "lunchbox",
+      "little-picky",
+      "thanksgiving"
+    ],
+    "desc": "Soft mini cornbread muffins with sweet corn, lightly sweetened with a little maple syrup. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt light.",
+    "ingredients": [
+      "Cornmeal",
+      "Whole-wheat flour",
+      "Egg",
+      "Whole milk",
+      "Olive oil",
+      "Maple syrup",
+      "Sweetcorn"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        },
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Whole-wheat flour",
+          "to": "Gluten-free flour blend",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 28,
+    "fat": 6,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/mini-cornbread-muffins.jpg"
+  },
+  {
+    "id": 9415,
+    "name": "Apple Crisp Cups",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍎",
+    "cal": 200,
+    "budget": 1,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "little-picky",
+      "thanksgiving"
+    ],
+    "desc": "Warm cinnamon apples under a crunchy oat crumble, baked in small cups and sweetened mostly by the fruit. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt light.",
+    "ingredients": [
+      "Apples",
+      "Rolled oats",
+      "Whole-wheat flour",
+      "Unsalted butter",
+      "Cinnamon",
+      "Maple syrup"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Unsalted butter",
+          "to": "Coconut oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Unsalted butter",
+          "to": "Coconut oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Whole-wheat flour",
+          "to": "Gluten-free flour blend",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Rolled oats",
+          "to": "Certified gluten-free oats",
+          "note": "Same texture"
+        }
+      ]
+    },
+    "protein": 3,
+    "carbs": 32,
+    "fat": 7,
+    "fiber": 4,
+    "image": "/images/dishes/Kids/apple-crisp-cups.jpg"
+  },
+  {
+    "id": 9416,
+    "name": "Leftover Turkey Quesadillas",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🌮",
+    "cal": 380,
+    "budget": 2,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-eggs",
+      "no-fish",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "picky",
+      "hidden-veggies",
+      "cook-together",
+      "thanksgiving"
+    ],
+    "desc": "The day after Thanksgiving: leftover turkey, corn and spinach melted into golden quesadillas. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Whole-wheat tortillas",
+      "Roast turkey",
+      "Cheddar",
+      "Sweetcorn",
+      "Baby spinach"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cheddar",
+          "to": "Dairy-free cheese",
+          "note": "Melts the same way"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Whole-wheat tortillas",
+          "to": "Corn tortillas",
+          "note": "Warm them so they fold"
+        }
+      ]
+    },
+    "protein": 25,
+    "carbs": 34,
+    "fat": 16,
+    "fiber": 4,
+    "image": "/images/dishes/Kids/leftover-turkey-quesadillas.jpg"
+  },
+  {
+    "id": 9417,
+    "name": "Pumpkin Pie Yogurt Parfait",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥛",
+    "cal": 260,
+    "budget": 2,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "breakfast",
+      "snack",
+      "little-picky",
+      "hidden-veggies",
+      "cook-together",
+      "thanksgiving"
+    ],
+    "desc": "Layers of yogurt, spiced real pumpkin and crunchy nut-free granola, tasting like pumpkin pie. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Plain yogurt",
+      "Pumpkin purée",
+      "Maple syrup",
+      "Cinnamon",
+      "Nut-free oat granola"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Nut-free oat granola",
+          "to": "Gluten-free granola",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 11,
+    "carbs": 38,
+    "fat": 7,
+    "fiber": 4,
+    "image": "/images/dishes/Kids/pumpkin-pie-yogurt-parfait.jpg"
+  },
+  {
+    "id": 9418,
+    "name": "Crispy Green Bean Fries",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🫛",
+    "cal": 210,
+    "budget": 2,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "snack",
+      "dinner",
+      "picky",
+      "cook-together",
+      "thanksgiving"
+    ],
+    "desc": "Green beans dipped in egg and crunchy breadcrumbs, then oven-baked like fries. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Green beans",
+      "Panko breadcrumbs",
+      "Egg",
+      "Parmesan",
+      "Olive oil"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Parmesan",
+          "to": "Nutritional yeast",
+          "note": "Sprinkle into the crumbs"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Plant milk",
+          "note": "Dip the beans in it before the crumbs"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Panko breadcrumbs",
+          "to": "Gluten-free breadcrumbs",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 20,
+    "fat": 10,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/crispy-green-bean-fries.jpg"
+  },
+  {
+    "id": 9419,
+    "name": "Mini Pumpkin Pies",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥧",
+    "cal": 230,
+    "budget": 2,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "snack",
+      "little-picky",
+      "cook-together",
+      "thanksgiving"
+    ],
+    "desc": "Small pumpkin pies kids fill themselves: a treat-size Thanksgiving dessert made with real pumpkin and a little maple syrup. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Pie crust",
+      "Pumpkin purée",
+      "Eggs",
+      "Whole milk",
+      "Maple syrup",
+      "Cinnamon",
+      "Ground ginger"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Full-fat coconut milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Cornstarch",
+          "note": "2 tbsp cornstarch sets the filling"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Pie crust",
+          "to": "Gluten-free pie crust",
+          "note": "Chill before baking"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 30,
+    "fat": 10,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/mini-pumpkin-pies.jpg"
+  },
+  {
+    "id": 9420,
+    "name": "Turkey & Veggie Pot Pie Puffs",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥧",
+    "cal": 420,
+    "budget": 3,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-eggs",
+      "no-fish",
+      "no-mushrooms",
+      "dinner",
+      "picky",
+      "hidden-veggies",
+      "cook-together",
+      "thanksgiving"
+    ],
+    "desc": "Creamy turkey, carrot, peas and potato tucked into golden puff pastry pockets. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Puff pastry",
+      "Roast turkey",
+      "Carrot",
+      "Green peas",
+      "Potato",
+      "Whole milk",
+      "Flour",
+      "Unsalted butter"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened oat milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Unsalted butter",
+          "to": "Olive oil",
+          "note": "Use a little less"
+        },
+        {
+          "from": "Puff pastry",
+          "to": "Dairy-free puff pastry",
+          "note": "Many store brands use oil; check the label"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Puff pastry",
+          "to": "Gluten-free puff pastry",
+          "note": "Keep it cold while shaping"
+        },
+        {
+          "from": "Flour",
+          "to": "Rice flour",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 20,
+    "carbs": 38,
+    "fat": 20,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/turkey-and-veggie-pot-pie-puffs.jpg"
+  },
+  {
+    "id": 9421,
+    "name": "Mini Turkey Meatloaves",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍖",
+    "cal": 330,
+    "budget": 2,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "no-dairy",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-fish",
+      "no-mushrooms",
+      "dinner",
+      "lunchbox",
+      "picky",
+      "hidden-veggies",
+      "cook-together",
+      "thanksgiving"
+    ],
+    "desc": "Turkey mini loaves with grated carrot inside and a tomato glaze, baked in a muffin tin. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Ground turkey",
+      "Rolled oats",
+      "Egg",
+      "Grated carrot",
+      "Onion",
+      "Tomato passata"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Ground turkey",
+          "to": "Cooked brown lentils",
+          "note": "Mash half for binding"
+        },
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Rolled oats",
+          "to": "Certified gluten-free oats",
+          "note": "Same texture"
+        }
+      ]
+    },
+    "protein": 28,
+    "carbs": 18,
+    "fat": 15,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/mini-turkey-meatloaves.jpg"
+  },
+  {
+    "id": 9422,
+    "name": "Homemade Cranberry Sauce",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🫐",
+    "cal": 110,
+    "budget": 1,
+    "time": "20 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-dairy",
+      "no-mushrooms",
+      "no-vegetables",
+      "dinner",
+      "adventurous",
+      "cook-together",
+      "thanksgiving"
+    ],
+    "desc": "Kids make the real thing: fresh cranberries simmered with orange juice and a little maple syrup until they pop. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Fresh cranberries",
+      "Orange juice",
+      "Maple syrup",
+      "Orange zest",
+      "Cinnamon stick"
+    ],
+    "swaps": {},
+    "protein": 0,
+    "carbs": 27,
+    "fat": 0,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/homemade-cranberry-sauce.jpg"
+  },
+  {
+    "id": 9423,
+    "name": "Stuffed Sweet Potato Boats",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍠",
+    "cal": 380,
+    "budget": 2,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "picky",
+      "cook-together",
+      "thanksgiving"
+    ],
+    "desc": "Baked sweet potatoes filled with black beans, corn, red pepper and melted cheese, topped with yogurt and scallions. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Sweet potatoes",
+      "Black beans",
+      "Sweetcorn",
+      "Red bell pepper",
+      "Cheddar",
+      "Plain yogurt",
+      "Scallions"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Cheddar",
+          "to": "Dairy-free cheese",
+          "note": "Melts the same way"
+        },
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Cheddar",
+          "to": "Dairy-free cheese",
+          "note": "Melts the same way"
+        },
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 58,
+    "fat": 10,
+    "fiber": 11,
+    "image": "/images/dishes/Kids/stuffed-sweet-potato-boats.jpg"
+  },
+  {
+    "id": 9424,
+    "name": "Thanksgiving Harvest Salad",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥗",
+    "cal": 300,
+    "budget": 3,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "lunch",
+      "adventurous",
+      "cook-together",
+      "thanksgiving"
+    ],
+    "desc": "Roasted squash, crisp apple, cranberries and pumpkin seeds over greens with a little feta. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Mixed greens",
+      "Butternut squash",
+      "Apple",
+      "Dried cranberries",
+      "Pumpkin seeds",
+      "Feta",
+      "Olive oil",
+      "Lemon"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Feta",
+          "to": "Diced avocado",
+          "note": "Adds the same creaminess"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Feta",
+          "to": "Diced avocado",
+          "note": "Adds the same creaminess"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 30,
+    "fat": 17,
+    "fiber": 6,
+    "image": "/images/dishes/Kids/thanksgiving-harvest-salad.jpg"
+  },
+  {
+    "id": 9425,
+    "name": "Mini Apple Hand Pies",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥧",
+    "cal": 280,
+    "budget": 2,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "little-picky",
+      "cook-together",
+      "thanksgiving"
+    ],
+    "desc": "Kids fold cinnamon apples into little pastry pockets and crimp the edges with a fork. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Pie crust",
+      "Apples",
+      "Cinnamon",
+      "Maple syrup",
+      "Lemon juice",
+      "Milk for brushing"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Pie crust",
+          "to": "Vegan pie crust",
+          "note": "Many store crusts are vegan; check the label"
+        },
+        {
+          "from": "Milk for brushing",
+          "to": "Plant milk",
+          "note": "Brush just before baking"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Pie crust",
+          "to": "Dairy-free pie crust",
+          "note": "Check the label"
+        },
+        {
+          "from": "Milk for brushing",
+          "to": "Plant milk",
+          "note": "Brush just before baking"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Pie crust",
+          "to": "Gluten-free pie crust",
+          "note": "Chill before baking"
+        }
+      ]
+    },
+    "protein": 3,
+    "carbs": 38,
+    "fat": 13,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/mini-apple-hand-pies.jpg"
   }
 ];
