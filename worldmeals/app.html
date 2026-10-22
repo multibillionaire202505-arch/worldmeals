@@ -2320,6 +2320,16 @@ html body .wm-quick-btn svg{width:19px;height:19px;fill:none;stroke:#14402c;stro
 html body .wm-quick-btn:active{background:#14402c!important}
 html body .wm-quick-btn:active svg{stroke:#F3E3BC}
 html body .wm-quick-close{width:28px;height:28px;border:0;background:transparent;color:#6B5232;font-size:14px;cursor:pointer;margin-left:-4px}
+/* Kids: Occasions (Thanksgiving, Christmas…). Lists only occasions that have kids dishes. */
+#page-kids .wk-occ-toggle{grid-column:1/-1;flex-direction:row!important;justify-content:center;gap:8px!important;font-size:14px!important;padding:12px 8px!important}
+#page-kids .wk-occ-toggle .ic{font-size:20px!important}
+#page-kids .wk-occ-toggle.on-occ{background:#FFF1E2!important;border-color:#E9893A!important;color:#9A4A0C!important}
+#page-kids .wk-occ-chev{font-size:12px;opacity:.7;transition:transform .2s}
+#page-kids .wk-occ-toggle[aria-expanded="true"] .wk-occ-chev{transform:rotate(180deg)}
+#page-kids .wk-occ-list{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding-top:4px}
+#page-kids .wk-occ-list[hidden]{display:none!important}
+#page-kids .wk-occ-list .wk-opt{flex-direction:row!important;justify-content:center;gap:6px!important;border-radius:999px!important;padding:10px 6px!important;font-size:13px!important}
+#page-kids .wk-occ-list .wk-opt .ic{font-size:18px!important}
 /* Collapsed mixer: one compact row */
 .adv-filters:has(.adv-body.collapsed){padding-top:14px!important;padding-bottom:14px!important}
 .adv-filters:has(.adv-body.collapsed) .adv-filters-head{margin-bottom:0!important}
@@ -2753,6 +2763,8 @@ html body .wm-quick-close{width:28px;height:28px;border:0;background:transparent
       <button type="button" class="wk-opt" data-v="lunch"><span class="ic">🥪</span>Lunch</button>
       <button type="button" class="wk-opt" data-v="dinner"><span class="ic">🍽️</span>Dinner</button>
       <button type="button" class="wk-opt" data-v="snack"><span class="ic">🍓</span>Snacks</button>
+      <button type="button" class="wk-opt wk-occ-toggle" aria-expanded="false" aria-controls="kidsOccList"><span class="ic">🎉</span><span class="wk-occ-lbl">Occasions</span><span class="wk-occ-chev" aria-hidden="true">▾</span></button>
+      <div class="wk-occ-list" id="kidsOccList" hidden></div>
     </div>
   </div>
 
@@ -6068,6 +6080,39 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 <script>
 /* WORLDMEALS FLAGS ON WINDOWS — Windows has no flag emojis; load a tiny flag-only font there */
 (function(){try{if(!/Windows/i.test(navigator.userAgent))return;var st=document.createElement("style");st.textContent="@font-face{font-family:\"Twemoji Country Flags\";unicode-range:U+1F1E6-1F1FF,U+1F3F4,U+E0062-E0063,U+E0065,U+E0067,U+E006C,U+E006E,U+E0073-E0074,U+E0077,U+E007F;src:url(https://cdn.jsdelivr.net/npm/country-flag-emoji-polyfill@0.1.8/dist/TwemojiCountryFlags.woff2) format(\"woff2\");font-display:swap}body,.card-country,.wm-flavor-country,select{font-family:\"Twemoji Country Flags\",Inter,system-ui,sans-serif}";document.head.appendChild(st);}catch(e){}})();
+</script>
+<script>
+/* WORLDMEALS KIDS — Occasions. An occasion shows only once kids dishes carry its tag. */
+(function(){
+  const OCC=[["thanksgiving","🦃","Thanksgiving"],["christmas","🎄","Christmas"],["new-year","🎆","New Year"],["halloween","🎃","Halloween"],["easter","🐣","Easter"],["birthday","🎂","Birthday party"],["lunar-new-year","🧧","Lunar New Year"],["eid","🌙","Eid"],["diwali","🪔","Diwali"],["hanukkah","🕎","Hanukkah"]];
+  const avail=()=>typeof KIDS_MEALS==="undefined"?[]:OCC.filter(o=>KIDS_MEALS.some(m=>(m.tags||[]).includes(o[0])));
+  function sync(){
+    const t=document.querySelector("#page-kids .wk-occ-toggle"),l=document.getElementById("kidsOccList");if(!t||!l)return;
+    const on=l.querySelector(".wk-opt.on"),o=on&&OCC.find(x=>x[0]===on.dataset.v);
+    t.querySelector(".wk-occ-lbl").textContent=o?"Occasions · "+o[2]:"Occasions";
+    t.querySelector(".ic").textContent=o?o[1]:"🎉";
+    t.classList.toggle("on-occ",!!o);
+  }
+  function build(){
+    const l=document.getElementById("kidsOccList");if(!l||l.dataset.ready)return;
+    l.innerHTML=avail().map(o=>'<button type="button" class="wk-opt" data-v="'+o[0]+'"><span class="ic">'+o[1]+'</span>'+o[2]+'</button>').join("");
+    l.dataset.ready="1";
+  }
+  function init(){const t=document.querySelector("#page-kids .wk-occ-toggle");if(t&&!avail().length)t.hidden=true;}
+  // Capture phase: the Occasions button only opens the list; it is not itself a filter.
+  document.addEventListener("click",e=>{
+    const t=e.target.closest&&e.target.closest("#page-kids .wk-occ-toggle");if(!t)return;
+    e.stopImmediatePropagation();
+    const l=document.getElementById("kidsOccList");build();
+    l.hidden=!l.hidden;t.setAttribute("aria-expanded",String(!l.hidden));
+  },true);
+  // After the normal kids handler: keep the button label in step with the choice.
+  document.addEventListener("click",e=>{if(!(e.target.closest&&e.target.closest("#page-kids .wk-meals .wk-opt")))return;
+    if(e.target.closest("#kidsOccList")){const l=document.getElementById("kidsOccList"),t=document.querySelector("#page-kids .wk-occ-toggle");l.hidden=true;t.setAttribute("aria-expanded","false");}
+    setTimeout(sync,0);});
+  if(typeof wmKidsClear==="function"){const orig=wmKidsClear;window.wmKidsClear=wmKidsClear=function(){const r=orig.apply(this,arguments);try{sync()}catch(e){}return r};}
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
+})();
 </script>
 </body>
 </html>
