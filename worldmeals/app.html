@@ -3685,10 +3685,21 @@ function renderGrid(){
   const sp=parseInt(document.getElementById("spSlider").value);
   const sortMode=document.getElementById("sortFilter")?.value||"popularity";
 
+  const qt=q.trim();
+  const qRe=qt?new RegExp("(^|[^a-z0-9])"+qt.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")):null;
+  const qScore=m=>{
+    if(!qRe)return 0;
+    const n=m.name.toLowerCase();
+    if(n===qt)return 5;
+    if(qRe.test(n))return 4;
+    if(qRe.test((m.country+" "+m.region).toLowerCase()))return 3;
+    if(qRe.test((m.desc||"").toLowerCase()))return 2;
+    return 1;
+  };
   let filtered=MEALS.filter(m=>{
-    const searchable=(m.name+" "+m.country+" "+m.region+" "+(m.ingredients||[]).join(" ")).toLowerCase();
+    const searchable=(m.name+" "+m.country+" "+m.region+" "+(m.desc||"")+" "+(m.ingredients||[]).join(" ")).toLowerCase();
     if(q && q.includes("high protein") && !isHighProtein(m))return false;
-    if(q&&!searchable.includes(q)&&!q.includes("high protein"))return false;
+    if(qRe&&!qRe.test(searchable)&&!q.includes("high protein"))return false;
     if(reg!=="All regions"&&m.region!==reg)return false;
     if(diet !== "all"){
       if(WM_GOAL_FILTERS.has(diet)){
@@ -3706,6 +3717,7 @@ function renderGrid(){
   });
 
   filtered=[...filtered].sort((a,b)=>{
+    if(qRe&&!q.includes("high protein")){const d=qScore(b)-qScore(a);if(d)return d;}
     if(sortMode==="rating") return mealRating(b)-mealRating(a);
     if(sortMode==="time") return parseMealMinutes(a.time)-parseMealMinutes(b.time);
     if(sortMode==="cal") return a.cal-b.cal;
