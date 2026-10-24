@@ -9,6 +9,7 @@
 // 2026-10-23: added 50 dishes (ids 8357–8406), batches 7 & 8 of "The most desirable dishes in the world" (Middle East, Africa, India, East and Southeast Asia, Europe, Americas). Their nutrition, cost and time are estimates. Also corrected allergy tags on 5 earlier dishes (8193, 8201, 8219, 8224, 8254).
 // 2026-10-24: added 50 dishes (ids 8407–8456), batch 9: 25 alcohol-free drinks and 25 cakes from around the world. Their nutrition, cost and time are estimates. Also: alcohol-free swaps (swaps.alcohol) on all 58 dishes that cook with alcohol; drink tag on 5 drinks; the word dessert added to 62 dessert descriptions.
 // 2026-10-24: added 30 dishes (ids 8457–8486), batch 10 part 1: 25 desserts and 5 breakfasts from around the world. Their nutrition, cost and time are estimates.
+// 2026-10-24: added 20 dishes (ids 8487–8506), batch 10 part 2: 20 breakfasts from around the world. Their nutrition, cost and time are estimates.
 // All photos use existing /images/dishes/*.jpg paths; upload the matching assets.
 // Compatibility: existing IDs, names, order, image paths and meal field names retained.
 // Content pass: 767 dishes updated; 1710 repeated substitution entries corrected, plus dish-specific edits.
@@ -100785,5 +100786,1071 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 6,
     "fiber": 9,
     "image": "/images/dishes/Pesarattu.jpg"
+  },
+  {
+    "id": 8487,
+    "name": "Youtiao and Soy Milk",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🥖",
+    "cal": 380,
+    "budget": 1,
+    "time": "3 hrs",
+    "spice": 0,
+    "tags": [
+      "breakfast",
+      "vegan",
+      "dairy-free",
+      "gluten"
+    ],
+    "desc": "Classic Chinese breakfast of golden fried dough sticks dipped into warm, lightly sweetened soy milk.",
+    "ingredients": [
+      "Flour",
+      "Baking powder",
+      "Baking soda",
+      "Salt",
+      "Oil for frying",
+      "Soy milk",
+      "Sugar"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Soy milk",
+          "to": "Oat milk",
+          "note": "Serve warm"
+        }
+      ]
+    },
+    "protein": 11,
+    "carbs": 48,
+    "fat": 16,
+    "fiber": 2,
+    "image": "/images/dishes/Youtiao-and-Soy-Milk.jpg"
+  },
+  {
+    "id": 8488,
+    "name": "Gyeran-ppang",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🍳",
+    "cal": 300,
+    "budget": 1,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "breakfast",
+      "vegetarian",
+      "dairy",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Korean street breakfast of a soft, sweet muffin baked with a whole egg and melted cheese on top, sprinkled with parsley.",
+    "ingredients": [
+      "Flour",
+      "Milk",
+      "Butter",
+      "Sugar",
+      "Baking powder",
+      "Eggs",
+      "Mozzarella",
+      "Parsley"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Flax egg in the batter + a cheese slice on top",
+          "note": "Keeps the same look"
+        }
+      ]
+    },
+    "protein": 11,
+    "carbs": 32,
+    "fat": 14,
+    "fiber": 1,
+    "image": "/images/dishes/Gyeran-ppang.jpg"
+  },
+  {
+    "id": 8489,
+    "name": "Trứng Ốp La",
+    "country": "Vietnam",
+    "region": "Asia",
+    "emoji": "🍳",
+    "cal": 370,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "breakfast",
+      "vegetarian",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Vietnamese breakfast of crispy-edged fried eggs with black pepper, fresh tomato and cucumber, a crusty baguette and soy sauce for dipping.",
+    "ingredients": [
+      "Eggs",
+      "Vegetable oil",
+      "Black pepper",
+      "Tomatoes",
+      "Cucumber",
+      "Baguette",
+      "Soy sauce"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Baguette",
+          "to": "Gluten-free baguette | Steamed rice",
+          "note": "Use for dipping"
+        },
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Firm tofu, sliced and seared",
+          "note": "Season with the soy sauce"
+        }
+      ]
+    },
+    "protein": 16,
+    "carbs": 40,
+    "fat": 16,
+    "fiber": 3,
+    "image": "/images/dishes/Trung-Op-La.jpg"
+  },
+  {
+    "id": 8490,
+    "name": "Tapsilog",
+    "country": "Philippines",
+    "region": "Asia",
+    "emoji": "🍳",
+    "cal": 600,
+    "budget": 3,
+    "time": "8 hrs",
+    "spice": 0,
+    "tags": [
+      "high-protein",
+      "breakfast",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Filipino breakfast of sweet-savory cured beef tapa with garlic fried rice and a fried egg, with spiced vinegar on the side.",
+    "ingredients": [
+      "Beef sirloin",
+      "Soy sauce",
+      "Garlic",
+      "Brown sugar",
+      "Black pepper",
+      "Cooked rice",
+      "Eggs",
+      "Cane vinegar"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Soy sauce",
+          "to": "Gluten-free tamari",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Sliced tomato and cucumber",
+          "note": "A fresh side instead"
+        }
+      ]
+    },
+    "protein": 38,
+    "carbs": 62,
+    "fat": 22,
+    "fiber": 1,
+    "image": "/images/dishes/Tapsilog.jpg"
+  },
+  {
+    "id": 8491,
+    "name": "Nasi Uduk",
+    "country": "Indonesia",
+    "region": "Asia",
+    "emoji": "🍚",
+    "cal": 710,
+    "budget": 3,
+    "time": "1 hr",
+    "spice": 2,
+    "tags": [
+      "high-protein",
+      "breakfast",
+      "vegan-option",
+      "dairy-free",
+      "gluten-free",
+      "eggs",
+      "fish",
+      "shellfish",
+      "nuts"
+    ],
+    "desc": "Betawi breakfast of fragrant coconut rice with fried chicken, shredded omelette, tempeh, fried anchovies with peanuts, prawn crackers, fried shallots and chili sambal.",
+    "ingredients": [
+      "Rice",
+      "Coconut milk",
+      "Lemongrass",
+      "Pandan leaf",
+      "Chicken",
+      "Eggs",
+      "Tempeh",
+      "Dried anchovies",
+      "Peanuts",
+      "Prawn crackers",
+      "Fried shallots",
+      "Chili sambal"
+    ],
+    "swaps": {
+      "nuts": [
+        {
+          "from": "Peanuts",
+          "to": "Leave out",
+          "note": "Fry the anchovies alone"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Dried anchovies",
+          "to": "Leave out",
+          "note": "Add extra fried shallots"
+        },
+        {
+          "from": "Prawn crackers",
+          "to": "Cassava crackers",
+          "note": "Plant-based crunch"
+        },
+        {
+          "from": "Chicken",
+          "to": "Extra tempeh | Fried tofu",
+          "note": "Fry until golden"
+        },
+        {
+          "from": "Eggs",
+          "to": "Fried tofu",
+          "note": "Season with salt and pepper"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Fried tofu",
+          "note": "Season with salt and pepper"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Chili sambal",
+          "to": "Serve on the side | Sweet soy sauce",
+          "note": "Add to taste"
+        }
+      ]
+    },
+    "protein": 36,
+    "carbs": 74,
+    "fat": 30,
+    "fiber": 5,
+    "image": "/images/dishes/Nasi-Uduk.jpg"
+  },
+  {
+    "id": 8492,
+    "name": "Hausa Koko",
+    "country": "Ghana",
+    "region": "Africa",
+    "emoji": "🥣",
+    "cal": 360,
+    "budget": 1,
+    "time": "12 hrs",
+    "spice": 1,
+    "tags": [
+      "breakfast",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Ghanaian breakfast porridge of fermented millet spiced with ginger, cloves and pepper, eaten with koose bean fritters.",
+    "ingredients": [
+      "Fermented millet dough",
+      "Fresh ginger",
+      "Cloves",
+      "Grains of selim",
+      "Hot pepper",
+      "Sugar",
+      "Koose (bean fritters)"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Hot pepper",
+          "to": "Leave out",
+          "note": "Ginger and cloves keep the warmth"
+        }
+      ],
+      "local": [
+        {
+          "from": "Grains of selim",
+          "to": "Black pepper",
+          "note": "Use a small pinch"
+        }
+      ]
+    },
+    "protein": 10,
+    "carbs": 58,
+    "fat": 10,
+    "fiber": 5,
+    "image": "/images/dishes/Hausa-Koko.jpg"
+  },
+  {
+    "id": 8493,
+    "name": "Baghrir",
+    "country": "Morocco",
+    "region": "Africa",
+    "emoji": "🥞",
+    "cal": 350,
+    "budget": 1,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "breakfast",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten"
+    ],
+    "desc": "Moroccan thousand-hole pancakes of semolina batter, cooked on one side and soaked in warm honey butter for breakfast.",
+    "ingredients": [
+      "Fine semolina",
+      "Flour",
+      "Yeast",
+      "Baking powder",
+      "Water",
+      "Honey",
+      "Butter"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Honey",
+          "to": "Date syrup",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 58,
+    "fat": 10,
+    "fiber": 2,
+    "image": "/images/dishes/Baghrir.jpg"
+  },
+  {
+    "id": 8494,
+    "name": "Harcha",
+    "country": "Morocco",
+    "region": "Africa",
+    "emoji": "🫓",
+    "cal": 360,
+    "budget": 1,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "breakfast",
+      "vegetarian",
+      "dairy",
+      "gluten"
+    ],
+    "desc": "Moroccan pan-fried semolina flatbread, crumbly and buttery, eaten warm for breakfast with honey, jam or soft cheese.",
+    "ingredients": [
+      "Fine semolina",
+      "Butter",
+      "Milk",
+      "Sugar",
+      "Baking powder",
+      "Honey"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Fine semolina",
+          "to": "Coarse semolina",
+          "note": "Rolls in the pan for a crunchy crust"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 48,
+    "fat": 16,
+    "fiber": 2,
+    "image": "/images/dishes/Harcha.jpg"
+  },
+  {
+    "id": 8495,
+    "name": "Sucuklu Yumurta",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "🍳",
+    "cal": 400,
+    "budget": 2,
+    "time": "10 min",
+    "spice": 1,
+    "tags": [
+      "breakfast",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "eggs"
+    ],
+    "desc": "Turkish breakfast of spicy beef sucuk sausage fried in a small copper pan with eggs cracked on top.",
+    "ingredients": [
+      "Sucuk (beef sausage)",
+      "Eggs",
+      "Butter",
+      "Red pepper flakes"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Olive oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Sliced tomatoes, cooked in the pan",
+          "note": "Cook until soft"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Red pepper flakes",
+          "to": "Sweet paprika",
+          "note": "Same color, no heat"
+        }
+      ]
+    },
+    "protein": 26,
+    "carbs": 2,
+    "fat": 32,
+    "fiber": 0,
+    "image": "/images/dishes/Sucuklu-Yumurta.jpg"
+  },
+  {
+    "id": 8496,
+    "name": "Huevos Divorciados",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🍳",
+    "cal": 420,
+    "budget": 2,
+    "time": "20 min",
+    "spice": 2,
+    "tags": [
+      "breakfast",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "eggs"
+    ],
+    "desc": "Mexican breakfast of two fried eggs on corn tortillas, one under red salsa and one under green salsa, with refried beans between them.",
+    "ingredients": [
+      "Eggs",
+      "Corn tortillas",
+      "Red salsa",
+      "Green salsa",
+      "Refried beans",
+      "Queso fresco"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Queso fresco",
+          "to": "Leave out | Avocado slices",
+          "note": "Adds the same creaminess"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Scrambled tofu",
+          "note": "Split between the two salsas"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Red salsa",
+          "to": "Mild tomato salsa",
+          "note": "No chili"
+        }
+      ]
+    },
+    "protein": 20,
+    "carbs": 40,
+    "fat": 20,
+    "fiber": 9,
+    "image": "/images/dishes/Huevos-Divorciados.jpg"
+  },
+  {
+    "id": 8497,
+    "name": "Huevos Pericos",
+    "country": "Colombia",
+    "region": "Americas",
+    "emoji": "🍳",
+    "cal": 330,
+    "budget": 1,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "breakfast",
+      "vegetarian",
+      "dairy-free",
+      "gluten-free",
+      "eggs"
+    ],
+    "desc": "Colombian breakfast of soft scrambled eggs with tomato and scallions, served with a warm corn arepa.",
+    "ingredients": [
+      "Eggs",
+      "Tomatoes",
+      "Scallions",
+      "Vegetable oil",
+      "Corn arepas"
+    ],
+    "swaps": {
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Scrambled tofu",
+          "note": "Cook with the tomato and scallions"
+        }
+      ]
+    },
+    "protein": 16,
+    "carbs": 30,
+    "fat": 16,
+    "fiber": 3,
+    "image": "/images/dishes/Huevos-Pericos.jpg"
+  },
+  {
+    "id": 8498,
+    "name": "Breakfast Burrito",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🌯",
+    "cal": 620,
+    "budget": 3,
+    "time": "30 min",
+    "spice": 1,
+    "tags": [
+      "breakfast",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "American Southwest breakfast of a flour tortilla rolled around scrambled eggs, crispy potatoes, breakfast sausage, bell peppers, cheddar and salsa.",
+    "ingredients": [
+      "Flour tortillas",
+      "Eggs",
+      "Potatoes",
+      "Breakfast sausage",
+      "Bell peppers",
+      "Cheddar",
+      "Salsa"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Cheddar",
+          "to": "Dairy-free cheese | Avocado",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour tortillas",
+          "to": "Gluten-free tortillas",
+          "note": "Warm before rolling"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Scrambled tofu",
+          "note": "Season with salt and pepper"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Salsa",
+          "to": "Mild pico de gallo",
+          "note": "No chili"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 48,
+    "fat": 34,
+    "fiber": 4,
+    "image": "/images/dishes/Breakfast-Burrito.jpg"
+  },
+  {
+    "id": 8499,
+    "name": "Croque Madame",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🥪",
+    "cal": 610,
+    "budget": 3,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "breakfast",
+      "dairy",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "French café sandwich of ham and Gruyère under creamy béchamel, baked until bubbling and crowned with a fried egg.",
+    "ingredients": [
+      "White bread",
+      "Ham",
+      "Gruyère",
+      "Butter",
+      "Flour",
+      "Milk",
+      "Nutmeg",
+      "Eggs"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "White bread",
+          "to": "Gluten-free bread",
+          "note": "Use thick slices"
+        },
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Leave off the egg",
+          "note": "It becomes a croque monsieur"
+        }
+      ]
+    },
+    "protein": 32,
+    "carbs": 40,
+    "fat": 36,
+    "fiber": 2,
+    "image": "/images/dishes/Croque-Madame.jpg"
+  },
+  {
+    "id": 8500,
+    "name": "Hagelslag Toast",
+    "country": "Netherlands",
+    "region": "Europe",
+    "emoji": "🍞",
+    "cal": 290,
+    "budget": 1,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "breakfast",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Dutch breakfast favorite of buttered bread covered with chocolate sprinkles.",
+    "ingredients": [
+      "Bread",
+      "Butter",
+      "Chocolate sprinkles"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Chocolate sprinkles",
+          "to": "Dark chocolate sprinkles (dairy-free)",
+          "note": "Check the label"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Chocolate sprinkles",
+          "to": "Dark chocolate sprinkles (dairy-free)",
+          "note": "Check the label"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Bread",
+          "to": "Gluten-free bread",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 40,
+    "fat": 12,
+    "fiber": 2,
+    "image": "/images/dishes/Hagelslag-Toast.jpg"
+  },
+  {
+    "id": 8501,
+    "name": "Bauernfrühstück",
+    "country": "Germany",
+    "region": "Europe",
+    "emoji": "🍳",
+    "cal": 480,
+    "budget": 2,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "breakfast",
+      "dairy-free",
+      "gluten-free",
+      "eggs"
+    ],
+    "desc": "German farmer's breakfast of fried potatoes, onions and bacon bound together with eggs and topped with chives, with pickled gherkins on the side.",
+    "ingredients": [
+      "Potatoes",
+      "Bacon",
+      "Onion",
+      "Eggs",
+      "Chives",
+      "Vegetable oil",
+      "Pickled gherkins"
+    ],
+    "swaps": {
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Leave out",
+          "note": "Serve the potatoes and bacon as a hash"
+        }
+      ]
+    },
+    "protein": 22,
+    "carbs": 36,
+    "fat": 28,
+    "fiber": 4,
+    "image": "/images/dishes/Bauernfruhstuck.jpg"
+  },
+  {
+    "id": 8502,
+    "name": "Kasha",
+    "country": "Russia",
+    "region": "Europe",
+    "emoji": "🥣",
+    "cal": 330,
+    "budget": 1,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "breakfast",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Russian breakfast porridge of toasted buckwheat cooked soft and served with butter and warm milk.",
+    "ingredients": [
+      "Buckwheat groats",
+      "Water",
+      "Salt",
+      "Butter",
+      "Whole milk"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Whole milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Whole milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 10,
+    "carbs": 50,
+    "fat": 10,
+    "fiber": 6,
+    "image": "/images/dishes/Kasha.jpg"
+  },
+  {
+    "id": 8503,
+    "name": "Pão na Chapa",
+    "country": "Brazil",
+    "region": "Americas",
+    "emoji": "🍞",
+    "cal": 310,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "breakfast",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Brazilian bakery breakfast of a split French roll, buttered and pressed on a hot griddle until crisp, served with milky coffee.",
+    "ingredients": [
+      "French roll",
+      "Butter",
+      "Coffee",
+      "Milk"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "French roll",
+          "to": "Gluten-free roll",
+          "note": "Toast the same way"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 38,
+    "fat": 14,
+    "fiber": 2,
+    "image": "/images/dishes/Pao-na-Chapa.jpg"
+  },
+  {
+    "id": 8504,
+    "name": "Bake and Saltfish",
+    "country": "Trinidad and Tobago",
+    "region": "Americas",
+    "emoji": "🐟",
+    "cal": 480,
+    "budget": 2,
+    "time": "1 hr",
+    "spice": 1,
+    "tags": [
+      "breakfast",
+      "fish",
+      "dairy-free",
+      "gluten"
+    ],
+    "desc": "Trinidadian breakfast of fried bake split open and filled with saltfish buljol of salt cod, tomato, onion, peppers and scotch bonnet.",
+    "ingredients": [
+      "Flour",
+      "Baking powder",
+      "Sugar",
+      "Salt cod",
+      "Tomatoes",
+      "Onion",
+      "Sweet peppers",
+      "Scotch bonnet pepper",
+      "Olive oil",
+      "Oil for frying"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Scotch bonnet pepper",
+          "to": "Leave out",
+          "note": "Sweet peppers keep the color"
+        }
+      ],
+      "local": [
+        {
+          "from": "Salt cod",
+          "to": "Smoked mackerel",
+          "note": "No soaking needed"
+        }
+      ]
+    },
+    "protein": 24,
+    "carbs": 52,
+    "fat": 20,
+    "fiber": 3,
+    "image": "/images/dishes/Bake-and-Saltfish.jpg"
+  },
+  {
+    "id": 8505,
+    "name": "Champorado",
+    "country": "Philippines",
+    "region": "Asia",
+    "emoji": "🍫",
+    "cal": 380,
+    "budget": 1,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "breakfast",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Filipino chocolate rice porridge of sticky rice cooked with cocoa and sugar, drizzled with evaporated milk for breakfast.",
+    "ingredients": [
+      "Glutinous rice",
+      "Cocoa powder",
+      "Tablea (pure cacao)",
+      "Sugar",
+      "Evaporated milk"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Evaporated milk",
+          "to": "Coconut milk",
+          "note": "Drizzle on top"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Evaporated milk",
+          "to": "Coconut milk",
+          "note": "Drizzle on top"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 70,
+    "fat": 8,
+    "fiber": 4,
+    "image": "/images/dishes/Champorado.jpg"
+  },
+  {
+    "id": 8506,
+    "name": "Baozi",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🥟",
+    "cal": 380,
+    "budget": 2,
+    "time": "2.5 hrs",
+    "spice": 0,
+    "tags": [
+      "breakfast",
+      "vegan-option",
+      "dairy-free",
+      "gluten"
+    ],
+    "desc": "Chinese breakfast of fluffy steamed buns filled with juicy pork, cabbage, ginger and scallions.",
+    "ingredients": [
+      "Flour",
+      "Yeast",
+      "Sugar",
+      "Ground pork",
+      "Napa cabbage",
+      "Ginger",
+      "Scallions",
+      "Soy sauce",
+      "Sesame oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Ground pork",
+          "to": "Chopped shiitake + tofu",
+          "note": "Season with the soy sauce"
+        }
+      ]
+    },
+    "protein": 16,
+    "carbs": 48,
+    "fat": 14,
+    "fiber": 2,
+    "image": "/images/dishes/Baozi.jpg"
   }
 ];
