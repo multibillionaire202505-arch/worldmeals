@@ -7,6 +7,7 @@
 // 2026-10-21: added 25 dishes (ids 8307–8331), batch 5: Thanksgiving classics (tag "thanksgiving"). Their nutrition, cost and time are estimates.
 // 2026-10-22: added 25 dishes (ids 8332–8356), batch 6: harvest feasts of the world (tag "thanksgiving"). Their nutrition, cost and time are estimates.
 // 2026-10-23: added 50 dishes (ids 8357–8406), batches 7 & 8 of "The most desirable dishes in the world" (Middle East, Africa, India, East and Southeast Asia, Europe, Americas). Their nutrition, cost and time are estimates. Also corrected allergy tags on 5 earlier dishes (8193, 8201, 8219, 8224, 8254).
+// 2026-10-24: added 50 dishes (ids 8407–8456), batch 9: 25 alcohol-free drinks and 25 cakes from around the world. Their nutrition, cost and time are estimates. Also: alcohol-free swaps (swaps.alcohol) on all 58 dishes that cook with alcohol; drink tag on 5 drinks; the word dessert added to 62 dessert descriptions.
 // All photos use existing /images/dishes/*.jpg paths; upload the matching assets.
 // Compatibility: existing IDs, names, order, image paths and meal field names retained.
 // Content pass: 767 dishes updated; 1710 repeated substitution entries corrected, plus dish-specific edits.
@@ -1104,6 +1105,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Tilapia | Any firm white fish",
           "note": "Any firm, mild white fish works"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Beer",
+          "to": "Ice-cold sparkling water",
+          "note": "Keeps the batter just as light and crisp"
+        }
       ]
     },
     "protein": 36,
@@ -1415,6 +1423,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Lardons",
           "to": "Vegetable shortening | Olive oil | Coconut oil",
           "note": "Same richness without animal fat"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Red Burgundy wine",
+          "to": "Beef or vegetable stock + a splash of red grape juice and red wine vinegar",
+          "note": "Keeps the deep color and gentle tang"
         }
       ]
     },
@@ -1869,6 +1884,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Saffron",
           "to": "A pinch of turmeric",
           "note": "Gives the golden color (not the same aroma)"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "White wine",
+          "to": "Chicken or vegetable stock + a squeeze of lemon",
+          "note": "Adds the same brightness"
         }
       ]
     },
@@ -3499,7 +3521,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten",
       "eggs"
     ],
-    "desc": "Italian layers of espresso-soaked ladyfingers and mascarpone cream, dusted with cocoa.",
+    "desc": "Italian layers of espresso-soaked ladyfingers and mascarpone cream, dusted with cocoa; served as a dessert.",
     "ingredients": [
       "Mascarpone",
       "Eggs",
@@ -3522,6 +3544,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Eggs",
           "to": "Flax egg (1 tbsp ground flax + 3 tbsp water) | Chickpea flour + water | Silken tofu",
           "note": "Flax for baking and binding; chickpea flour or tofu for omelettes"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Marsala wine",
+          "to": "Extra espresso | Grape juice",
+          "note": "Mix into the coffee for dipping"
         }
       ]
     },
@@ -3656,7 +3685,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "nuts"
     ],
-    "desc": "Layers of flaky phyllo and pistachios soaked in honey syrup.",
+    "desc": "Layers of flaky phyllo and pistachios soaked in honey syrup; served as a dessert.",
     "ingredients": [
       "Phyllo pastry",
       "Pistachios",
@@ -8013,7 +8042,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "nuts"
     ],
-    "desc": "Warm melted cheese under crisp kataifi, soaked in orange blossom syrup with pistachios.",
+    "desc": "Warm melted cheese under crisp kataifi, soaked in orange blossom syrup with pistachios; served as a dessert.",
     "ingredients": [
       "Kataifi pastry",
       "Nabulsi cheese",
@@ -8911,7 +8940,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten",
       "gluten-free-option"
     ],
-    "desc": "Emirati crispy dumplings scented with saffron and cardamom, drizzled with date syrup.",
+    "desc": "Emirati crispy dumplings scented with saffron and cardamom, drizzled with date syrup; served as a dessert.",
     "ingredients": [
       "Flour",
       "Yeast",
@@ -10959,6 +10988,18 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Gluten-free tamari | Gluten-free coconut aminos",
           "note": "Choose a product labeled gluten-free; adjust salt and sweetness to taste."
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Mirin",
+          "to": "Rice vinegar with a little sugar or honey",
+          "note": "1 tbsp vinegar + 1 tsp sugar per tbsp mirin"
+        },
+        {
+          "from": "Sake",
+          "to": "Water or stock + a splash of rice vinegar",
+          "note": "Use the same amount"
+        }
       ]
     },
     "protein": 32,
@@ -11038,6 +11079,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Dashi",
           "to": "Instant dashi granules | Light chicken stock + a pinch of seaweed",
           "note": "Most Asian groceries sell instant dashi"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Mirin",
+          "to": "Rice vinegar with a little sugar or honey",
+          "note": "1 tbsp vinegar + 1 tsp sugar per tbsp mirin"
         }
       ]
     },
@@ -13093,6 +13141,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Portobello mushrooms | Seitan | Jackfruit",
           "note": "Sear hard for a meaty, browned flavor"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "White wine",
+          "to": "Chicken or vegetable stock + a squeeze of lemon",
+          "note": "Adds the same brightness"
+        }
       ]
     },
     "protein": 48,
@@ -13388,6 +13443,18 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Dry sherry (for rice wine) | Cherry juice (for kirsch)",
           "note": "Or leave it out"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "White wine",
+          "to": "Unsweetened apple juice + a squeeze of lemon",
+          "note": "Helps the cheese melt smoothly"
+        },
+        {
+          "from": "Kirsch",
+          "to": "Leave out | A little cherry juice",
+          "note": "The fondue stays smooth without it"
+        }
       ]
     },
     "protein": 40,
@@ -13563,6 +13630,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Bacon",
           "to": "Smoked tofu | Coconut bacon | Smoky king oyster mushrooms",
           "note": "A little smoked paprika gives the smoky taste"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Red wine",
+          "to": "Beef or vegetable stock + a splash of red grape juice and red wine vinegar",
+          "note": "Keeps the deep color and gentle tang"
         }
       ]
     },
@@ -14029,7 +14103,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten",
       "gluten-free-option"
     ],
-    "desc": "Fried Spanish dough sticks rolled in cinnamon sugar, with thick hot chocolate.",
+    "desc": "Fried Spanish dough sticks rolled in cinnamon sugar, with thick hot chocolate; served as a dessert.",
     "ingredients": [
       "Flour",
       "Water",
@@ -14129,6 +14203,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Egg",
           "to": "Flax egg (1 tbsp ground flax + 3 tbsp water) | Chickpea flour + water | Silken tofu",
           "note": "Flax for baking and binding; chickpea flour or tofu for omelettes"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Beer sauce",
+          "to": "Beef stock + tomato and a splash of malt vinegar",
+          "note": "Simmer until thick"
         }
       ]
     },
@@ -14263,7 +14344,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Portuguese custard tarts with flaky pastry and caramelized tops.",
+    "desc": "Portuguese custard tarts with flaky pastry and caramelized tops; served as a dessert.",
     "ingredients": [
       "Puff pastry",
       "Egg yolks",
@@ -14350,6 +14431,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Beef roast",
           "to": "Portobello mushrooms | Seitan | Jackfruit",
           "note": "Sear hard for a meaty, browned flavor"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Red wine",
+          "to": "Beef or vegetable stock + a splash of red grape juice and red wine vinegar",
+          "note": "Keeps the deep color and gentle tang"
         }
       ]
     },
@@ -16160,7 +16248,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Polish honey gingerbread cake layered with plum jam.",
+    "desc": "Polish honey gingerbread cake layered with plum jam; served as a dessert.",
     "ingredients": [
       "Flour",
       "Honey",
@@ -17708,7 +17796,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Canadian small tarts with a gooey butter, brown sugar and raisin filling.",
+    "desc": "Canadian small tarts with a gooey butter, brown sugar and raisin filling; served as a dessert.",
     "ingredients": [
       "Pastry shells",
       "Butter",
@@ -17777,7 +17865,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten",
       "nuts"
     ],
-    "desc": "No-bake Canadian layered bars of chocolate crumb, custard cream and chocolate.",
+    "desc": "No-bake Canadian layered bars of chocolate crumb, custard cream and chocolate; served as a dessert.",
     "ingredients": [
       "Graham crumbs",
       "Cocoa",
@@ -19450,6 +19538,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Lamb | Beef chuck",
           "note": "Choose a cut suited to the same cooking method and adjust cooking time for tenderness."
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Beer",
+          "to": "Beef or chicken stock + a squeeze of lime",
+          "note": "Use the same amount"
+        }
       ]
     },
     "protein": 40,
@@ -20616,7 +20711,7 @@ window.WORLD_MEALS_DATABASE = [
       "dairy-free-option",
       "gluten-free"
     ],
-    "desc": "Brazilian chocolate fudge balls of condensed milk and cocoa, rolled in sprinkles.",
+    "desc": "Brazilian chocolate fudge balls of condensed milk and cocoa, rolled in sprinkles; served as a dessert.",
     "ingredients": [
       "Condensed milk",
       "Cocoa powder",
@@ -20986,7 +21081,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Australian sponge squares dipped in chocolate and rolled in coconut.",
+    "desc": "Australian sponge squares dipped in chocolate and rolled in coconut; served as a dessert.",
     "ingredients": [
       "Sponge cake",
       "Chocolate icing",
@@ -21101,7 +21196,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free",
       "eggs"
     ],
-    "desc": "New Zealand meringue cake with a crisp shell, soft center, cream and fruit.",
+    "desc": "New Zealand meringue cake with a crisp shell, soft center, cream and fruit; served as a dessert.",
     "ingredients": [
       "Egg whites",
       "Sugar",
@@ -22639,7 +22734,7 @@ window.WORLD_MEALS_DATABASE = [
       "dairy-free",
       "gluten"
     ],
-    "desc": "Filipino banana and jackfruit spring rolls fried in caramel.",
+    "desc": "Filipino banana and jackfruit spring rolls fried in caramel; served as a dessert.",
     "ingredients": [
       "Banana",
       "Jackfruit",
@@ -22931,6 +23026,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Shaoxing wine",
           "to": "Dry sherry (for rice wine) | Cherry juice (for kirsch)",
           "note": "Or leave it out"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Shaoxing wine",
+          "to": "Unsalted chicken stock + a splash of rice vinegar",
+          "note": "Use the same amount"
         }
       ]
     },
@@ -25813,7 +25915,7 @@ window.WORLD_MEALS_DATABASE = [
       "eggs",
       "nuts"
     ],
-    "desc": "Sri Lankan jaggery and coconut custard spiced with cardamom, cinnamon and nutmeg.",
+    "desc": "Sri Lankan jaggery and coconut custard spiced with cardamom, cinnamon and nutmeg; served as a dessert.",
     "ingredients": [
       "Coconut milk",
       "Jaggery",
@@ -28601,6 +28703,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Garam masala | Cumin + coriander + cinnamon + black pepper",
           "note": "An approximation of the warm spice profile; it will not reproduce every regional blend."
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Rice wine",
+          "to": "Unsalted chicken stock + a splash of rice vinegar",
+          "note": "Use the same amount"
+        }
       ]
     },
     "image": "/images/dishes/Lu-Rou-Fan.jpg"
@@ -28789,6 +28898,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Basil + a few mint leaves | Cilantro",
           "note": "Culantro and chadon beni: use cilantro; Thai basil: basil + mint"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Rice wine",
+          "to": "Unsalted chicken stock + a splash of rice vinegar",
+          "note": "Use the same amount"
+        }
       ]
     },
     "image": "/images/dishes/Three-Cup-Chicken.jpg"
@@ -28928,7 +29044,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Buttery shortbread pastry filled with sweet, tangy pineapple jam.",
+    "desc": "Buttery shortbread pastry filled with sweet, tangy pineapple jam; served as a dessert.",
     "ingredients": [
       "Wheat flour",
       "Butter",
@@ -30560,7 +30676,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "nuts"
     ],
-    "desc": "Festive vermicelli pudding cooked in milk with dates, cardamom and nuts.",
+    "desc": "Festive vermicelli pudding cooked in milk with dates, cardamom and nuts; served as a dessert.",
     "ingredients": [
       "Vermicelli",
       "Milk",
@@ -30910,6 +31026,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Gluten-free flour blend | Rice flour | Cassava flour",
           "note": "Add 1/2 tsp xanthan gum for doughs that need to stretch"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "White wine",
+          "to": "Chicken or vegetable stock + a squeeze of lemon",
+          "note": "Adds the same brightness"
+        }
       ]
     },
     "image": "/images/dishes/Saltimbocca.jpg"
@@ -31053,7 +31176,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten",
       "gluten-free-option"
     ],
-    "desc": "Upside-down caramelized apple tart on buttery pastry, served warm.",
+    "desc": "Upside-down caramelized apple tart on buttery pastry, served warm; served as a dessert.",
     "ingredients": [
       "Apples",
       "Sugar",
@@ -31511,6 +31634,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Calamari | Mussels",
           "note": "Use frozen seafood if fresh is hard to find"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "White wine",
+          "to": "Fish or vegetable stock + a squeeze of lemon",
+          "note": "Adds the same brightness"
+        }
       ]
     },
     "image": "/images/dishes/Cataplana.jpg"
@@ -31678,6 +31808,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Gluten-free flour blend | Rice flour | Cassava flour",
           "note": "Add 1/2 tsp xanthan gum for doughs that need to stretch"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Red wine",
+          "to": "Beef or vegetable stock + a splash of red grape juice and red wine vinegar",
+          "note": "Keeps the deep color and gentle tang"
+        }
       ]
     },
     "image": "/images/dishes/Rouladen.jpg"
@@ -31761,7 +31898,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Chocolate sponge layered with whipped cream, cherries and kirsch, topped with shavings.",
+    "desc": "Chocolate sponge layered with whipped cream, cherries and kirsch, topped with shavings; served as a dessert.",
     "ingredients": [
       "Flour",
       "Cocoa",
@@ -31811,6 +31948,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Kirsch",
           "to": "Dry sherry (for rice wine) | Cherry juice (for kirsch)",
           "note": "Or leave it out"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Kirsch",
+          "to": "Cherry juice or the cherry syrup from the jar",
+          "note": "Brush on the sponge the same way"
         }
       ]
     },
@@ -32932,7 +33076,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Rich Polish cheesecake made with twaróg curd cheese on a shortcrust base.",
+    "desc": "Rich Polish cheesecake made with twaróg curd cheese on a shortcrust base; served as a dessert.",
     "ingredients": [
       "Twaróg cheese",
       "Eggs",
@@ -33151,7 +33295,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Sponge layers with chocolate buttercream, topped with a crackling caramel layer.",
+    "desc": "Sponge layers with chocolate buttercream, topped with a crackling caramel layer; served as a dessert.",
     "ingredients": [
       "Eggs",
       "Sugar",
@@ -33570,7 +33714,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten",
       "gluten-free-option"
     ],
-    "desc": "Thin pastry rolled around cinnamon apples and raisins, baked golden and dusted with sugar.",
+    "desc": "Thin pastry rolled around cinnamon apples and raisins, baked golden and dusted with sugar; served as a dessert.",
     "ingredients": [
       "Apples",
       "Strudel pastry",
@@ -33633,7 +33777,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Dense Viennese chocolate cake with apricot jam and glossy chocolate glaze.",
+    "desc": "Dense Viennese chocolate cake with apricot jam and glossy chocolate glaze; served as a dessert.",
     "ingredients": [
       "Dark chocolate",
       "Butter",
@@ -34027,6 +34171,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Olive oil | Vegan butter | Coconut oil",
           "note": "Use vegan butter for pastry and baking; oil is fine for cooking."
         }
+      ],
+      "alcohol": [
+        {
+          "from": "White wine",
+          "to": "Chicken or vegetable stock + a squeeze of lemon",
+          "note": "Adds the same brightness"
+        }
       ]
     },
     "image": "/images/dishes/Zurcher-Geschnetzeltes.jpg"
@@ -34296,7 +34447,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "nuts"
     ],
-    "desc": "Spiced Basel honey cookies with almonds, candied peel and a sugar glaze.",
+    "desc": "Spiced Basel honey cookies with almonds, candied peel and a sugar glaze; served as a dessert.",
     "ingredients": [
       "Honey",
       "Flour",
@@ -34333,6 +34484,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Kirsch",
           "to": "Dry sherry (for rice wine) | Cherry juice (for kirsch)",
           "note": "Or leave it out"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Kirsch",
+          "to": "Orange juice",
+          "note": "Use the same amount"
         }
       ]
     },
@@ -34395,6 +34553,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Clams | Calamari",
           "note": "Use frozen seafood if fresh is hard to find"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "White wine",
+          "to": "Fish or vegetable stock + a squeeze of lemon",
+          "note": "Adds the same brightness"
+        }
       ]
     },
     "image": "/images/dishes/Moules-Frites.jpg"
@@ -34447,6 +34612,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Bread",
           "to": "Gluten-free bread or buns | Corn tortillas | Lettuce wraps",
           "note": "Toast gluten-free bread for the best texture"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Belgian dark beer",
+          "to": "Beef stock + a splash of malt vinegar and a pinch of brown sugar",
+          "note": "Gives the same malty depth"
         }
       ]
     },
@@ -34672,7 +34844,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten",
       "gluten-free-option"
     ],
-    "desc": "Thin, crunchy Belgian spiced biscuits with cinnamon and brown sugar.",
+    "desc": "Thin, crunchy Belgian spiced biscuits with cinnamon and brown sugar; served as a dessert.",
     "ingredients": [
       "Flour",
       "Brown sugar",
@@ -35314,7 +35486,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Deep Dutch apple pie with cinnamon, raisins and a lattice crust.",
+    "desc": "Deep Dutch apple pie with cinnamon, raisins and a lattice crust; served as a dessert.",
     "ingredients": [
       "Apples",
       "Flour",
@@ -36693,7 +36865,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Finnish blueberry pie with a buttery crust and sour cream filling.",
+    "desc": "Finnish blueberry pie with a buttery crust and sour cream filling; served as a dessert.",
     "ingredients": [
       "Blueberries",
       "Flour",
@@ -37005,7 +37177,7 @@ window.WORLD_MEALS_DATABASE = [
       "dairy-free-option",
       "gluten-free"
     ],
-    "desc": "Danish red berry pudding served with cream.",
+    "desc": "Danish red berry pudding served with cream; served as a dessert.",
     "ingredients": [
       "Red currants",
       "Strawberries",
@@ -37521,6 +37693,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Clams | Calamari | Mussels",
           "note": "Use frozen seafood if fresh is hard to find"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "White wine",
+          "to": "Fish or vegetable stock + a squeeze of lemon",
+          "note": "Adds the same brightness"
+        }
       ]
     },
     "image": "/images/dishes/Black-Risotto.jpg"
@@ -37689,7 +37868,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Small Croatian doughnuts flavored with citrus zest and rum, dusted with sugar.",
+    "desc": "Small Croatian doughnuts flavored with citrus zest and rum, dusted with sugar; served as a dessert.",
     "ingredients": [
       "Flour",
       "Eggs",
@@ -37739,6 +37918,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Greek yogurt | Plain yogurt",
           "note": "Use plain unsweetened yogurt; strain for a thicker consistency."
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Rum",
+          "to": "Orange juice + extra zest",
+          "note": "Keeps the citrus flavor"
+        }
       ]
     },
     "image": "/images/dishes/Fritule.jpg"
@@ -37786,6 +37972,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Mixed white fish",
           "to": "Tilapia | Cod | Any firm white fish",
           "note": "Any firm, mild white fish works"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "White wine",
+          "to": "Fish or vegetable stock + a squeeze of lemon",
+          "note": "Adds the same brightness"
         }
       ]
     },
@@ -37840,6 +38033,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Gnocchi",
           "to": "Gluten-free gnocchi | Roasted potato cubes",
           "note": "Most gnocchi contain wheat flour"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Prosecco wine",
+          "to": "Beef stock + a splash of white grape juice and vinegar",
+          "note": "Keeps the gentle sweet-sour taste"
         }
       ]
     },
@@ -38454,7 +38654,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Romanian fried cheese doughnuts topped with sour cream and berry jam.",
+    "desc": "Romanian fried cheese doughnuts topped with sour cream and berry jam; served as a dessert.",
     "ingredients": [
       "Cottage cheese",
       "Flour",
@@ -38660,7 +38860,7 @@ window.WORLD_MEALS_DATABASE = [
       "eggs",
       "nuts"
     ],
-    "desc": "Romanian sweet braided bread with walnut and cocoa swirls, made for holidays.",
+    "desc": "Romanian sweet braided bread with walnut and cocoa swirls, made for holidays; served as a dessert.",
     "ingredients": [
       "Flour",
       "Milk",
@@ -38720,6 +38920,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Walnuts",
           "to": "Toasted sunflower seeds | Pumpkin seeds | Toasted oats or coconut",
           "note": "For a crunchy garnish, use toasted seeds."
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Rum",
+          "to": "Orange juice",
+          "note": "Use the same amount"
         }
       ]
     },
@@ -38816,6 +39023,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Pork",
           "to": "Jackfruit | Smoked tofu | King oyster mushrooms",
           "note": "Young jackfruit shreds just like pulled pork"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "White wine",
+          "to": "Chicken or vegetable stock + a squeeze of lemon",
+          "note": "Adds the same brightness"
         }
       ]
     },
@@ -39288,6 +39502,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
           "note": "Start with less; chilies vary a lot in heat."
         }
+      ],
+      "alcohol": [
+        {
+          "from": "White wine",
+          "to": "Chicken or vegetable stock + a squeeze of lemon",
+          "note": "Adds the same brightness"
+        }
       ]
     },
     "image": "/images/dishes/Chakapuli.jpg"
@@ -39313,7 +39534,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "nuts"
     ],
-    "desc": "Georgian walnut strings dipped in thickened grape juice and dried into chewy candy.",
+    "desc": "Georgian walnut strings dipped in thickened grape juice and dried into chewy candy; served as a dessert.",
     "ingredients": [
       "Walnuts",
       "Grape juice",
@@ -40114,7 +40335,7 @@ window.WORLD_MEALS_DATABASE = [
       "eggs",
       "nuts"
     ],
-    "desc": "Rolled dough grilled on a spit and coated in sugar, cinnamon and walnuts.",
+    "desc": "Rolled dough grilled on a spit and coated in sugar, cinnamon and walnuts; served as a dessert.",
     "ingredients": [
       "Flour",
       "Milk",
@@ -40864,7 +41085,7 @@ window.WORLD_MEALS_DATABASE = [
       "eggs",
       "nuts"
     ],
-    "desc": "Slovenian rolled sweet bread with a rich walnut filling, baked for holidays.",
+    "desc": "Slovenian rolled sweet bread with a rich walnut filling, baked for holidays; served as a dessert.",
     "ingredients": [
       "Flour",
       "Milk",
@@ -41267,7 +41488,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "nuts"
     ],
-    "desc": "Layered Slovenian cake of poppy seeds, walnuts, apples and cottage cheese.",
+    "desc": "Layered Slovenian cake of poppy seeds, walnuts, apples and cottage cheese; served as a dessert.",
     "ingredients": [
       "Flour",
       "Poppy seeds",
@@ -41758,7 +41979,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Albanian three-milk cake soaked in milk and topped with caramel.",
+    "desc": "Albanian three-milk cake soaked in milk and topped with caramel; served as a dessert.",
     "ingredients": [
       "Eggs",
       "Flour",
@@ -43224,7 +43445,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten",
       "gluten-free-option"
     ],
-    "desc": "Estonian kama flour mixed with kefir, berries and honey.",
+    "desc": "Estonian kama flour mixed with kefir, berries and honey; served as a dessert.",
     "ingredients": [
       "Kama flour",
       "Kefir",
@@ -43877,7 +44098,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Creamy ice cream folded with caramelized Icelandic rye bread crumbs.",
+    "desc": "Creamy ice cream folded with caramelized Icelandic rye bread crumbs; served as a dessert.",
     "ingredients": [
       "Cream",
       "Milk",
@@ -44163,6 +44384,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Chicken thighs | Beef",
           "note": "Rabbit cooks like chicken; reindeer, venison and horse like lean beef"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Red wine",
+          "to": "Beef or vegetable stock + a splash of red grape juice and red wine vinegar",
+          "note": "Keeps the deep color and gentle tang"
+        }
       ]
     },
     "image": "/images/dishes/Rabbit-Stew.jpg"
@@ -44304,6 +44532,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Boiled egg",
           "to": "Avocado slices | Tofu scramble | Skip it",
           "note": "It is a topping, so the dish still works without it"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Red wine",
+          "to": "Beef or vegetable stock + a splash of red grape juice and red wine vinegar",
+          "note": "Keeps the deep color and gentle tang"
         }
       ]
     },
@@ -44790,6 +45025,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Jackfruit | Smoked tofu | King oyster mushrooms",
           "note": "Young jackfruit shreds just like pulled pork"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Red wine",
+          "to": "Beef or vegetable stock + a splash of red grape juice and red wine vinegar",
+          "note": "Keeps the deep color and gentle tang"
+        }
       ]
     },
     "image": "/images/dishes/Afelia.jpg"
@@ -44884,7 +45126,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten",
       "gluten-free-option"
     ],
-    "desc": "Golden Cypriot honey doughnuts soaked in syrup with cinnamon.",
+    "desc": "Golden Cypriot honey doughnuts soaked in syrup with cinnamon; served as a dessert.",
     "ingredients": [
       "Flour",
       "Yeast",
@@ -46699,7 +46941,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Spongy South African apricot pudding soaked in buttery cream sauce.",
+    "desc": "Spongy South African apricot pudding soaked in buttery cream sauce; served as a dessert.",
     "ingredients": [
       "Flour",
       "Sugar",
@@ -54825,6 +55067,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Clams | Calamari",
           "note": "Use frozen seafood if fresh is hard to find"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "White wine",
+          "to": "Fish or vegetable stock + a squeeze of lemon",
+          "note": "Adds the same brightness"
+        }
       ]
     },
     "image": "/images/dishes/Green-Lipped-Mussels.jpg"
@@ -58035,7 +58284,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten",
       "gluten-free-option"
     ],
-    "desc": "Tunisian semolina diamonds filled with dates, fried and soaked in honey syrup.",
+    "desc": "Tunisian semolina diamonds filled with dates, fried and soaked in honey syrup; served as a dessert.",
     "ingredients": [
       "Semolina",
       "Dates",
@@ -59260,7 +59509,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Hanukkah jam-filled doughnuts dusted with powdered sugar.",
+    "desc": "Hanukkah jam-filled doughnuts dusted with powdered sugar; served as a dessert.",
     "ingredients": [
       "Flour",
       "Yeast",
@@ -59606,7 +59855,7 @@ window.WORLD_MEALS_DATABASE = [
       "dairy-free",
       "gluten-free"
     ],
-    "desc": "Puerto Rican coconut pudding, silky and set, dusted with cinnamon.",
+    "desc": "Puerto Rican coconut pudding, silky and set, dusted with cinnamon; served as a dessert.",
     "ingredients": [
       "Coconut milk",
       "Sugar",
@@ -59731,7 +59980,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free",
       "eggs"
     ],
-    "desc": "Creamy Puerto Rican cheese flan under a layer of caramel.",
+    "desc": "Creamy Puerto Rican cheese flan under a layer of caramel; served as a dessert.",
     "ingredients": [
       "Cream cheese",
       "Eggs",
@@ -60348,7 +60597,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free",
       "eggs"
     ],
-    "desc": "Argentine caramel flan served with a spoon of dulce de leche.",
+    "desc": "Argentine caramel flan served with a spoon of dulce de leche; served as a dessert.",
     "ingredients": [
       "Eggs",
       "Milk",
@@ -60961,7 +61210,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "French baked batter custard studded with whole cherries.",
+    "desc": "French baked batter custard studded with whole cherries; served as a dessert.",
     "ingredients": [
       "Cherries",
       "Eggs",
@@ -61112,6 +61361,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Smoked pork",
           "to": "Jackfruit | Smoked tofu | King oyster mushrooms",
           "note": "Young jackfruit shreds just like pulled pork"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "White wine",
+          "to": "Chicken or vegetable stock + a squeeze of lemon",
+          "note": "Adds the same brightness"
         }
       ]
     },
@@ -61368,7 +61624,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Choux pastry puffs filled with cream and covered in warm chocolate sauce.",
+    "desc": "Choux pastry puffs filled with cream and covered in warm chocolate sauce; served as a dessert.",
     "ingredients": [
       "Flour",
       "Eggs",
@@ -62588,7 +62844,7 @@ window.WORLD_MEALS_DATABASE = [
       "eggs",
       "nuts"
     ],
-    "desc": "Southern pie of pecans in a rich, gooey caramel filling.",
+    "desc": "Southern pie of pecans in a rich, gooey caramel filling; served as a dessert.",
     "ingredients": [
       "Pecans",
       "Pie crust",
@@ -62729,7 +62985,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten",
       "eggs"
     ],
-    "desc": "Southern layers of vanilla pudding, bananas and wafers under whipped cream.",
+    "desc": "Southern layers of vanilla pudding, bananas and wafers under whipped cream; served as a dessert.",
     "ingredients": [
       "Bananas",
       "Vanilla wafers",
@@ -62800,7 +63056,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten",
       "eggs"
     ],
-    "desc": "Florida tart key lime custard in a graham cracker crust with whipped cream.",
+    "desc": "Florida tart key lime custard in a graham cracker crust with whipped cream; served as a dessert.",
     "ingredients": [
       "Key lime juice",
       "Condensed milk",
@@ -62870,7 +63126,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten",
       "eggs"
     ],
-    "desc": "Dense, creamy New York cheesecake on a graham cracker crust.",
+    "desc": "Dense, creamy New York cheesecake on a graham cracker crust; served as a dessert.",
     "ingredients": [
       "Cream cheese",
       "Sugar",
@@ -62948,7 +63204,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Chewy American cookies loaded with chocolate chips.",
+    "desc": "Chewy American cookies loaded with chocolate chips; served as a dessert.",
     "ingredients": [
       "Flour",
       "Butter",
@@ -63976,7 +64232,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten",
       "gluten-free-option"
     ],
-    "desc": "Mexican fried dough sticks in cinnamon sugar, with chocolate sauce.",
+    "desc": "Mexican fried dough sticks in cinnamon sugar, with chocolate sauce; served as a dessert.",
     "ingredients": [
       "Flour",
       "Water",
@@ -64033,7 +64289,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free",
       "eggs"
     ],
-    "desc": "Mexican creamy flan made with condensed milk and cream cheese.",
+    "desc": "Mexican creamy flan made with condensed milk and cream cheese; served as a dessert.",
     "ingredients": [
       "Eggs",
       "Sweetened condensed milk",
@@ -64167,7 +64423,8 @@ window.WORLD_MEALS_DATABASE = [
       "vegan-option",
       "dairy",
       "dairy-free-option",
-      "gluten-free"
+      "gluten-free",
+      "drink"
     ],
     "desc": "Sweet Mexican rice and cinnamon drink, served over ice.",
     "ingredients": [
@@ -64213,7 +64470,8 @@ window.WORLD_MEALS_DATABASE = [
     "tags": [
       "vegan",
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "drink"
     ],
     "desc": "Tart, ruby-red hibiscus iced drink with lime.",
     "ingredients": [
@@ -64242,7 +64500,8 @@ window.WORLD_MEALS_DATABASE = [
     "tags": [
       "vegan",
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "drink"
     ],
     "desc": "Sweet and tangy Mexican tamarind drink over ice.",
     "ingredients": [
@@ -64281,7 +64540,8 @@ window.WORLD_MEALS_DATABASE = [
       "vegan-option",
       "dairy",
       "dairy-free-option",
-      "gluten-free"
+      "gluten-free",
+      "drink"
     ],
     "desc": "Thick Mexican hot chocolate drink made with masa and piloncillo.",
     "ingredients": [
@@ -64327,7 +64587,8 @@ window.WORLD_MEALS_DATABASE = [
     "tags": [
       "vegan",
       "dairy-free",
-      "gluten-free"
+      "gluten-free",
+      "drink"
     ],
     "desc": "Mexican pot-brewed coffee with piloncillo, cinnamon and orange peel.",
     "ingredients": [
@@ -75630,6 +75891,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Certified gluten-free oats | Quinoa flakes",
           "note": "Regular oats are often cross-contaminated"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Whisky",
+          "to": "Honey + a splash of orange juice",
+          "note": "Stir into the oats"
+        }
       ]
     },
     "protein": 6,
@@ -75889,7 +76157,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Uruguayan cake of sponge, meringue, whipped cream and peaches.",
+    "desc": "Uruguayan cake of sponge, meringue, whipped cream and peaches; served as a dessert.",
     "ingredients": [
       "Sponge cake",
       "Meringue",
@@ -76901,7 +77169,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Moist British date sponge drenched in warm toffee sauce, served with cream.",
+    "desc": "Moist British date sponge drenched in warm toffee sauce, served with cream; served as a dessert.",
     "ingredients": [
       "Dates",
       "Flour",
@@ -77184,7 +77452,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten",
       "gluten-free-option"
     ],
-    "desc": "Prairie pie filled with sweet Saskatoon berries in a flaky crust.",
+    "desc": "Prairie pie filled with sweet Saskatoon berries in a flaky crust; served as a dessert.",
     "ingredients": [
       "Saskatoon berries",
       "Flour",
@@ -77247,7 +77515,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten",
       "gluten-free-option"
     ],
-    "desc": "Chewy Australian oat and coconut biscuits made with golden syrup.",
+    "desc": "Chewy Australian oat and coconut biscuits made with golden syrup; served as a dessert.",
     "ingredients": [
       "Rolled oats",
       "Flour",
@@ -77727,6 +77995,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Beer",
           "to": "Gluten-free beer | Stock + a splash of vinegar",
           "note": "Keeps the depth of flavor"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Beer",
+          "to": "Chicken stock",
+          "note": "Use the same amount"
         }
       ]
     },
@@ -78348,7 +78623,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free",
       "eggs"
     ],
-    "desc": "Smooth Brazilian caramel flan made with condensed milk.",
+    "desc": "Smooth Brazilian caramel flan made with condensed milk; served as a dessert.",
     "ingredients": [
       "Condensed milk",
       "Milk",
@@ -79149,6 +79424,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Chickpeas | Firm tofu | Seitan",
           "note": "Marinate the same way; seitan contains gluten"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "White wine",
+          "to": "Chicken or vegetable stock + a squeeze of lemon",
+          "note": "Adds the same brightness"
+        }
       ]
     },
     "protein": 38,
@@ -79488,6 +79770,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Brown sugar | Coconut sugar | Maple syrup",
           "note": "Same deep, caramel sweetness"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Red wine",
+          "to": "Beef or vegetable stock + a splash of red grape juice and red wine vinegar",
+          "note": "Keeps the deep color and gentle tang"
+        }
       ]
     },
     "protein": 44,
@@ -79711,7 +80000,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "nuts"
     ],
-    "desc": "Warm melted cheese under golden semolina crumbs, soaked in orange blossom syrup.",
+    "desc": "Warm melted cheese under golden semolina crumbs, soaked in orange blossom syrup; served as a dessert.",
     "ingredients": [
       "Akkawi cheese",
       "Semolina",
@@ -79832,6 +80121,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Gluten-free pasta | Rice pasta | Chickpea pasta",
           "note": "Cook 1–2 minutes less, then toss in the sauce"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Red wine",
+          "to": "Beef or vegetable stock + a splash of red grape juice and red wine vinegar",
+          "note": "Keeps the deep color and gentle tang"
+        }
       ]
     },
     "protein": 34,
@@ -79903,6 +80199,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Chili flakes",
           "to": "Another fresh chili of similar heat | Dried chili flakes (use less)",
           "note": "Start with less; chilies vary a lot in heat."
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "White wine",
+          "to": "Chicken or vegetable stock + a squeeze of lemon",
+          "note": "Adds the same brightness"
         }
       ]
     },
@@ -80047,7 +80350,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free",
       "eggs"
     ],
-    "desc": "Dense Italian ice cream, silky and intensely flavored.",
+    "desc": "Dense Italian ice cream, silky and intensely flavored; served as a dessert.",
     "ingredients": [
       "Milk",
       "Cream",
@@ -80387,7 +80690,7 @@ window.WORLD_MEALS_DATABASE = [
       "gluten-free-option",
       "eggs"
     ],
-    "desc": "Dense, fudgy chocolate brownies with a crackly top.",
+    "desc": "Dense, fudgy chocolate brownies with a crackly top; served as a dessert.",
     "ingredients": [
       "Dark chocolate",
       "Butter",
@@ -80645,6 +80948,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "White fish",
           "to": "Tilapia | Cod | Any firm white fish",
           "note": "Any firm, mild white fish works"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Beer",
+          "to": "Ice-cold sparkling water",
+          "note": "Keeps the batter just as light and crisp"
         }
       ]
     },
@@ -80979,7 +81289,7 @@ window.WORLD_MEALS_DATABASE = [
       "dairy-free",
       "gluten-free"
     ],
-    "desc": "Soft, chewy Japanese rice cakes filled with sweet red bean paste.",
+    "desc": "Soft, chewy Japanese rice cakes filled with sweet red bean paste; served as a dessert.",
     "ingredients": [
       "Glutinous rice flour",
       "Sugar",
@@ -81998,6 +82308,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Gluten-free tamari",
           "note": "Choose one labeled gluten-free"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Mirin",
+          "to": "Rice vinegar with a little sugar or honey",
+          "note": "1 tbsp vinegar + 1 tsp sugar per tbsp mirin"
+        }
       ]
     },
     "protein": 30,
@@ -82363,6 +82680,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Mussels | Canned clams with their juice",
           "note": "Add canned clams at the very end"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Dry white wine",
+          "to": "Fish or vegetable stock + a squeeze of lemon",
+          "note": "Adds the same brightness"
+        }
       ]
     },
     "protein": 30,
@@ -82629,6 +82953,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Marsala wine",
           "to": "White grape juice with a splash of vinegar",
           "note": "Keeps the dough tender without wine"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Marsala wine",
+          "to": "Orange juice",
+          "note": "Use the same amount in the dough"
         }
       ]
     },
@@ -83005,6 +83336,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Reblochon cheese",
           "to": "Brie | Camembert | Taleggio",
           "note": "Any soft washed or bloomy cheese works"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Dry white wine",
+          "to": "Chicken or vegetable stock + a squeeze of lemon",
+          "note": "Adds the same brightness"
         }
       ]
     },
@@ -83436,6 +83774,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Large shrimp | Langoustines | Monkfish",
           "note": "Bake in a small dish"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Dry white wine",
+          "to": "Fish or vegetable stock + a squeeze of lemon",
+          "note": "Adds the same brightness"
+        }
       ]
     },
     "protein": 46,
@@ -83815,6 +84160,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Papo-seco rolls",
           "to": "Crusty white rolls",
           "note": "Soft inside, crisp outside"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Dry white wine",
+          "to": "Chicken or vegetable stock + a squeeze of lemon",
+          "note": "Adds the same brightness"
         }
       ]
     },
@@ -85363,6 +85715,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Finely diced carrot",
           "note": "The common home-style topping"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Shaoxing wine",
+          "to": "Unsalted chicken stock + a splash of rice vinegar",
+          "note": "Use the same amount"
+        }
       ]
     },
     "protein": 21,
@@ -85510,6 +85869,13 @@ window.WORLD_MEALS_DATABASE = [
         {
           "from": "Shaoxing wine",
           "to": "Dry sherry",
+          "note": "Use the same amount"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Shaoxing wine",
+          "to": "Unsalted chicken stock + a splash of rice vinegar",
           "note": "Use the same amount"
         }
       ]
@@ -85928,6 +86294,18 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Mackerel | Salmon",
           "note": "Grill and glaze the same way"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Mirin",
+          "to": "Rice vinegar with a little sugar or honey",
+          "note": "1 tbsp vinegar + 1 tsp sugar per tbsp mirin"
+        },
+        {
+          "from": "Sake",
+          "to": "Water or stock + a splash of rice vinegar",
+          "note": "Use the same amount"
+        }
       ]
     },
     "protein": 30,
@@ -85993,6 +86371,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Eggs",
           "to": "Leave out | Grated daikon dip",
           "note": "Dip straight from the pot"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Mirin",
+          "to": "Rice vinegar with a little sugar or honey",
+          "note": "1 tbsp vinegar + 1 tsp sugar per tbsp mirin"
         }
       ]
     },
@@ -86113,6 +86498,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Egg-free mayonnaise",
           "note": "Add a dash of rice vinegar"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Sake",
+          "to": "Water or stock + a splash of rice vinegar",
+          "note": "Use the same amount"
+        }
       ]
     },
     "protein": 32,
@@ -86180,6 +86572,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Eggs",
           "to": "Plant-based liquid egg",
           "note": "Pour over and cover until just set"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Mirin",
+          "to": "Rice vinegar with a little sugar or honey",
+          "note": "1 tbsp vinegar + 1 tsp sugar per tbsp mirin"
         }
       ]
     },
@@ -86261,6 +86660,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Plant-based liquid egg",
           "note": "For the coating, use flour mixed with water"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Mirin",
+          "to": "Rice vinegar with a little sugar or honey",
+          "note": "1 tbsp vinegar + 1 tsp sugar per tbsp mirin"
+        }
       ]
     },
     "protein": 40,
@@ -86328,6 +86734,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Dashi (kombu and bonito)",
           "to": "Water with a pinch of salt",
           "note": "Simpler but still tender"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Mirin",
+          "to": "Rice vinegar with a little sugar or honey",
+          "note": "1 tbsp vinegar + 1 tsp sugar per tbsp mirin"
         }
       ]
     },
@@ -87817,6 +88230,13 @@ window.WORLD_MEALS_DATABASE = [
           "to": "Gluten-free tamari",
           "note": "Use the same amount"
         }
+      ],
+      "alcohol": [
+        {
+          "from": "Mirin",
+          "to": "Rice vinegar with a little sugar or honey",
+          "note": "1 tbsp vinegar + 1 tsp sugar per tbsp mirin"
+        }
       ]
     },
     "protein": 12,
@@ -88748,6 +89168,13 @@ window.WORLD_MEALS_DATABASE = [
           "from": "Dark beer",
           "to": "Beef stock with a spoon of molasses",
           "note": "Alcohol-free and still dark and rich"
+        }
+      ],
+      "alcohol": [
+        {
+          "from": "Dark beer",
+          "to": "Beef stock + a splash of malt vinegar and a pinch of brown sugar",
+          "note": "Gives the same malty depth"
         }
       ]
     },
@@ -96010,5 +96437,2898 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 14,
     "fiber": 2,
     "image": "/images/dishes/Conch-Fritters.jpg"
+  },
+  {
+    "id": 8407,
+    "name": "Chaas",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🥛",
+    "cal": 80,
+    "budget": 1,
+    "time": "5 min",
+    "spice": 1,
+    "tags": [
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Indian spiced buttermilk drink of whisked yogurt and water with roasted cumin, ginger, fresh cilantro and a pinch of salt; cooling after spicy meals.",
+    "ingredients": [
+      "Plain yogurt",
+      "Water",
+      "Roasted cumin",
+      "Ginger",
+      "Fresh cilantro",
+      "Green chili",
+      "Salt"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Whisk well with the water"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Whisk well with the water"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Green chili",
+          "to": "Leave out",
+          "note": "Cumin and ginger keep the flavor"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 7,
+    "fat": 3,
+    "fiber": 0,
+    "image": "/images/dishes/Chaas.jpg"
+  },
+  {
+    "id": 8408,
+    "name": "Golden Milk",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🥛",
+    "cal": 180,
+    "budget": 2,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Indian haldi doodh: warm milk simmered with turmeric, ginger, cinnamon and black pepper, sweetened with a little honey.",
+    "ingredients": [
+      "Whole milk",
+      "Turmeric",
+      "Fresh ginger",
+      "Cinnamon",
+      "Black pepper",
+      "Honey"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Whole milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 20,
+    "fat": 8,
+    "fiber": 0,
+    "image": "/images/dishes/Golden-Milk.jpg"
+  },
+  {
+    "id": 8409,
+    "name": "Zobo",
+    "country": "Nigeria",
+    "region": "Africa",
+    "emoji": "🧃",
+    "cal": 100,
+    "budget": 1,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Nigerian chilled hibiscus drink brewed with ginger, cloves and pineapple, ruby red and naturally tangy.",
+    "ingredients": [
+      "Dried hibiscus petals",
+      "Fresh ginger",
+      "Cloves",
+      "Pineapple",
+      "Sugar",
+      "Water"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Dried hibiscus petals",
+          "to": "Hibiscus tea bags",
+          "note": "Use 6–8 bags per liter"
+        }
+      ]
+    },
+    "protein": 0,
+    "carbs": 24,
+    "fat": 0,
+    "fiber": 1,
+    "image": "/images/dishes/Zobo.jpg"
+  },
+  {
+    "id": 8410,
+    "name": "Turkish Coffee",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "☕",
+    "cal": 20,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Strong unfiltered coffee simmered slowly in a small cezve with sugar, served in tiny cups with its thick foam on top, a glass of water and a piece of Turkish delight.",
+    "ingredients": [
+      "Finely ground coffee",
+      "Water",
+      "Sugar",
+      "Cardamom"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Finely ground coffee",
+          "to": "Espresso coffee ground extra-fine",
+          "note": "It should feel like powder"
+        }
+      ]
+    },
+    "protein": 0,
+    "carbs": 5,
+    "fat": 0,
+    "fiber": 0,
+    "image": "/images/dishes/Turkish-Coffee.jpg"
+  },
+  {
+    "id": 8411,
+    "name": "Salep",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "🥛",
+    "cal": 230,
+    "budget": 3,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Turkish winter drink of hot milk thickened with salep flour, lightly sweet and dusted with cinnamon.",
+    "ingredients": [
+      "Whole milk",
+      "Salep powder",
+      "Sugar",
+      "Cinnamon"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Whole milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "local": [
+        {
+          "from": "Salep powder",
+          "to": "Cornstarch + a drop of rose water",
+          "note": "Whisk into cold milk first"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 32,
+    "fat": 8,
+    "fiber": 0,
+    "image": "/images/dishes/Salep.jpg"
+  },
+  {
+    "id": 8412,
+    "name": "Sekanjabin",
+    "country": "Iran",
+    "region": "Middle East",
+    "emoji": "🧃",
+    "cal": 120,
+    "budget": 1,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Persian sweet-and-sour mint syrup of sugar and vinegar, mixed with cold water and grated cucumber on hot days.",
+    "ingredients": [
+      "Sugar",
+      "White vinegar",
+      "Fresh mint",
+      "Cucumber",
+      "Water",
+      "Ice"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "White vinegar",
+          "to": "Apple cider vinegar",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 0,
+    "carbs": 30,
+    "fat": 0,
+    "fiber": 0,
+    "image": "/images/dishes/Sekanjabin.jpg"
+  },
+  {
+    "id": 8413,
+    "name": "Qamar al-Din",
+    "country": "Syria",
+    "region": "Middle East",
+    "emoji": "🧃",
+    "cal": 160,
+    "budget": 2,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Syrian apricot drink made by soaking sheets of dried apricot paste in water, blended smooth and served chilled, loved during Ramadan.",
+    "ingredients": [
+      "Qamar al-Din apricot paste",
+      "Water",
+      "Sugar",
+      "Orange blossom water"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Qamar al-Din apricot paste",
+          "to": "Dried apricots, soaked and blended",
+          "note": "Soak overnight for the smoothest drink"
+        }
+      ]
+    },
+    "protein": 1,
+    "carbs": 40,
+    "fat": 0,
+    "fiber": 2,
+    "image": "/images/dishes/Qamar-al-Din.jpg"
+  },
+  {
+    "id": 8414,
+    "name": "Matcha Latte",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🍵",
+    "cal": 180,
+    "budget": 3,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Japanese green tea latte of bright whisked matcha poured into steamed milk, lightly sweetened.",
+    "ingredients": [
+      "Matcha powder",
+      "Hot water",
+      "Whole milk",
+      "Honey"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Whole milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Oat milk foams best"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Oat milk foams best"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 18,
+    "fat": 8,
+    "fiber": 0,
+    "image": "/images/dishes/Matcha-Latte.jpg"
+  },
+  {
+    "id": 8415,
+    "name": "Bubble Tea",
+    "country": "Taiwan",
+    "region": "Asia",
+    "emoji": "🧋",
+    "cal": 300,
+    "budget": 3,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Taiwanese black milk tea shaken with ice and chewy tapioca pearls soaked in brown sugar syrup.",
+    "ingredients": [
+      "Black tea",
+      "Whole milk",
+      "Tapioca pearls",
+      "Brown sugar",
+      "Ice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Whole milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 60,
+    "fat": 5,
+    "fiber": 0,
+    "image": "/images/dishes/Bubble-Tea.jpg"
+  },
+  {
+    "id": 8416,
+    "name": "Hong Kong Milk Tea",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🍵",
+    "cal": 120,
+    "budget": 1,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Silky Hong Kong milk tea of strong black tea strained through a cloth filter and mixed with evaporated milk.",
+    "ingredients": [
+      "Strong black tea",
+      "Evaporated milk",
+      "Sugar"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Evaporated milk",
+          "to": "Unsweetened soy milk | Oat milk",
+          "note": "Use a little more for creaminess"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Evaporated milk",
+          "to": "Unsweetened soy milk | Oat milk",
+          "note": "Use a little more for creaminess"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 16,
+    "fat": 4,
+    "fiber": 0,
+    "image": "/images/dishes/Hong-Kong-Milk-Tea.jpg"
+  },
+  {
+    "id": 8417,
+    "name": "Egg Coffee",
+    "country": "Vietnam",
+    "region": "Asia",
+    "emoji": "☕",
+    "cal": 230,
+    "budget": 2,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "eggs"
+    ],
+    "desc": "Hanoi coffee topped with a thick, fluffy cream of egg yolk whipped with condensed milk.",
+    "ingredients": [
+      "Vietnamese coffee",
+      "Egg yolks",
+      "Sweetened condensed milk",
+      "Sugar"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Egg yolks",
+          "to": "Whipped aquafaba",
+          "note": "Whip until stiff"
+        },
+        {
+          "from": "Sweetened condensed milk",
+          "to": "Coconut condensed milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Sweetened condensed milk",
+          "to": "Coconut condensed milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg yolks",
+          "to": "Whipped aquafaba",
+          "note": "Whip until stiff"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 30,
+    "fat": 10,
+    "fiber": 0,
+    "image": "/images/dishes/Egg-Coffee.jpg"
+  },
+  {
+    "id": 8418,
+    "name": "Dalgona Coffee",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "☕",
+    "cal": 220,
+    "budget": 2,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Korean whipped coffee: instant coffee, sugar and hot water beaten into a thick golden foam, spooned over cold milk.",
+    "ingredients": [
+      "Instant coffee",
+      "Sugar",
+      "Hot water",
+      "Whole milk",
+      "Ice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Whole milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 28,
+    "fat": 8,
+    "fiber": 0,
+    "image": "/images/dishes/Dalgona-Coffee.jpg"
+  },
+  {
+    "id": 8419,
+    "name": "Yuja-cha",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🍋",
+    "cal": 120,
+    "budget": 2,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Korean citron tea: spoonfuls of sweet yuja marmalade stirred into hot water, soothing on cold days.",
+    "ingredients": [
+      "Yuja (citron) marmalade",
+      "Hot water"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Yuja (citron) marmalade",
+          "to": "Yuzu or lemon marmalade",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 0,
+    "carbs": 30,
+    "fat": 0,
+    "fiber": 1,
+    "image": "/images/dishes/Yuja-cha.jpg"
+  },
+  {
+    "id": 8420,
+    "name": "Sujeonggwa",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🧃",
+    "cal": 130,
+    "budget": 2,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Korean cinnamon punch of ginger and cinnamon simmered with brown sugar, served chilled with soft dried persimmon and a few pine nuts.",
+    "ingredients": [
+      "Cinnamon sticks",
+      "Fresh ginger",
+      "Brown sugar",
+      "Dried persimmons",
+      "Pine nuts",
+      "Water"
+    ],
+    "swaps": {
+      "nuts": [
+        {
+          "from": "Pine nuts",
+          "to": "Leave out",
+          "note": "The punch tastes the same"
+        }
+      ],
+      "local": [
+        {
+          "from": "Dried persimmons",
+          "to": "Dried dates",
+          "note": "Soak them in the punch"
+        }
+      ]
+    },
+    "protein": 0,
+    "carbs": 32,
+    "fat": 0,
+    "fiber": 2,
+    "image": "/images/dishes/Sujeonggwa.jpg"
+  },
+  {
+    "id": 8421,
+    "name": "Mauby",
+    "country": "Trinidad and Tobago",
+    "region": "Americas",
+    "emoji": "🧃",
+    "cal": 110,
+    "budget": 1,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Caribbean bittersweet drink brewed from mauby tree bark with cinnamon, star anise and orange peel, served ice-cold.",
+    "ingredients": [
+      "Mauby bark",
+      "Cinnamon stick",
+      "Star anise",
+      "Orange peel",
+      "Brown sugar",
+      "Water"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Mauby bark",
+          "to": "Mauby concentrate",
+          "note": "Dilute to taste"
+        }
+      ]
+    },
+    "protein": 0,
+    "carbs": 28,
+    "fat": 0,
+    "fiber": 0,
+    "image": "/images/dishes/Mauby.jpg"
+  },
+  {
+    "id": 8422,
+    "name": "Brazilian Lemonade",
+    "country": "Brazil",
+    "region": "Americas",
+    "emoji": "🍋",
+    "cal": 200,
+    "budget": 2,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Creamy Brazilian limonada suíça of whole limes blended with sugar, ice and sweetened condensed milk.",
+    "ingredients": [
+      "Limes",
+      "Sugar",
+      "Sweetened condensed milk",
+      "Water",
+      "Ice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Sweetened condensed milk",
+          "to": "Coconut condensed milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Sweetened condensed milk",
+          "to": "Coconut condensed milk",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 3,
+    "carbs": 40,
+    "fat": 3,
+    "fiber": 1,
+    "image": "/images/dishes/Brazilian-Lemonade.jpg"
+  },
+  {
+    "id": 8423,
+    "name": "Mote con Huesillo",
+    "country": "Chile",
+    "region": "Americas",
+    "emoji": "🍑",
+    "cal": 270,
+    "budget": 2,
+    "time": "12 hrs",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Chilean summer drink of dried peaches stewed in sweet cinnamon syrup, served cold over cooked husked wheat.",
+    "ingredients": [
+      "Dried peaches (huesillos)",
+      "Husked wheat (mote)",
+      "Brown sugar",
+      "Cinnamon stick",
+      "Orange peel",
+      "Water"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Husked wheat (mote)",
+          "to": "Cooked hominy | Quinoa",
+          "note": "Cook until soft, then chill"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 62,
+    "fat": 1,
+    "fiber": 4,
+    "image": "/images/dishes/Mote-con-Huesillo.jpg"
+  },
+  {
+    "id": 8424,
+    "name": "Yerba Mate",
+    "country": "Argentina",
+    "region": "Americas",
+    "emoji": "🧉",
+    "cal": 20,
+    "budget": 1,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "South American herbal infusion of yerba mate leaves, sipped through a metal straw from a gourd and refilled with hot water.",
+    "ingredients": [
+      "Yerba mate",
+      "Hot water"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Yerba mate",
+          "to": "Yerba mate tea bags",
+          "note": "Steep 3–5 minutes"
+        }
+      ]
+    },
+    "protein": 0,
+    "carbs": 5,
+    "fat": 0,
+    "fiber": 0,
+    "image": "/images/dishes/Yerba-Mate.jpg"
+  },
+  {
+    "id": 8425,
+    "name": "Southern Sweet Tea",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥤",
+    "cal": 100,
+    "budget": 1,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "American Southern iced black tea, brewed strong, sweetened while hot and served over ice with lemon.",
+    "ingredients": [
+      "Black tea bags",
+      "Sugar",
+      "Water",
+      "Lemon",
+      "Ice"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Sugar",
+          "to": "Honey | Less sugar",
+          "note": "Stir in while the tea is hot"
+        }
+      ]
+    },
+    "protein": 0,
+    "carbs": 25,
+    "fat": 0,
+    "fiber": 0,
+    "image": "/images/dishes/Southern-Sweet-Tea.jpg"
+  },
+  {
+    "id": 8426,
+    "name": "Egg Cream",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥤",
+    "cal": 180,
+    "budget": 1,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "New York soda-fountain classic of chocolate syrup, cold milk and seltzer stirred into a foamy top; despite the name, it has no egg.",
+    "ingredients": [
+      "Chocolate syrup",
+      "Cold whole milk",
+      "Seltzer water"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Cold whole milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Cold whole milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 30,
+    "fat": 4,
+    "fiber": 1,
+    "image": "/images/dishes/Egg-Cream.jpg"
+  },
+  {
+    "id": 8427,
+    "name": "Mazagran",
+    "country": "Portugal",
+    "region": "Europe",
+    "emoji": "☕",
+    "cal": 40,
+    "budget": 2,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Portuguese iced coffee with lemon: strong espresso poured over ice with a slice of lemon, fresh mint and a little sugar.",
+    "ingredients": [
+      "Espresso",
+      "Lemon",
+      "Sugar",
+      "Ice",
+      "Fresh mint"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Espresso",
+          "to": "Strong brewed coffee",
+          "note": "Use double strength"
+        }
+      ]
+    },
+    "protein": 0,
+    "carbs": 10,
+    "fat": 0,
+    "fiber": 0,
+    "image": "/images/dishes/Mazagran.jpg"
+  },
+  {
+    "id": 8428,
+    "name": "Kompot",
+    "country": "Poland",
+    "region": "Europe",
+    "emoji": "🧃",
+    "cal": 90,
+    "budget": 1,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Eastern European homemade fruit drink of cherries, plums, apples and strawberries simmered in water with a little sugar, served warm or chilled.",
+    "ingredients": [
+      "Sour cherries",
+      "Plums",
+      "Apples",
+      "Strawberries",
+      "Sugar",
+      "Water"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Sour cherries",
+          "to": "Frozen mixed berries",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 0,
+    "carbs": 22,
+    "fat": 0,
+    "fiber": 1,
+    "image": "/images/dishes/Kompot.jpg"
+  },
+  {
+    "id": 8429,
+    "name": "Rose Lassi",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🥛",
+    "cal": 240,
+    "budget": 2,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Punjabi sweet yogurt drink blended with rose syrup and a pinch of cardamom, served chilled with dried rose petals and crushed pistachios.",
+    "ingredients": [
+      "Plain yogurt",
+      "Milk",
+      "Rose syrup",
+      "Sugar",
+      "Cardamom",
+      "Dried rose petals",
+      "Pistachios",
+      "Ice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Pistachios",
+          "to": "Leave out",
+          "note": "Rose petals still decorate the top"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 38,
+    "fat": 6,
+    "fiber": 0,
+    "image": "/images/dishes/Rose-Lassi.jpg"
+  },
+  {
+    "id": 8430,
+    "name": "Somali Shaah",
+    "country": "Somalia",
+    "region": "Africa",
+    "emoji": "🍵",
+    "cal": 60,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Somali spiced black tea simmered with cardamom, cinnamon, cloves and ginger, sweetened and served hot; add milk if you like.",
+    "ingredients": [
+      "Black tea",
+      "Cardamom",
+      "Cinnamon",
+      "Cloves",
+      "Fresh ginger",
+      "Sugar"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Black tea",
+          "to": "Strong black tea bags",
+          "note": "Simmer with the spices"
+        }
+      ]
+    },
+    "protein": 0,
+    "carbs": 16,
+    "fat": 0,
+    "fiber": 0,
+    "image": "/images/dishes/Somali-Shaah.jpg"
+  },
+  {
+    "id": 8431,
+    "name": "Cendol",
+    "country": "Malaysia",
+    "region": "Asia",
+    "emoji": "🍧",
+    "cal": 350,
+    "budget": 2,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "drink",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Malaysian iced dessert drink of green pandan rice-flour jelly, coconut milk and palm sugar syrup over shaved ice, with sweet red beans.",
+    "ingredients": [
+      "Pandan rice-flour jelly (cendol)",
+      "Coconut milk",
+      "Gula melaka (palm sugar)",
+      "Red beans",
+      "Shaved ice"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Gula melaka (palm sugar)",
+          "to": "Dark brown sugar syrup",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 3,
+    "carbs": 52,
+    "fat": 14,
+    "fiber": 3,
+    "image": "/images/dishes/Cendol.jpg"
+  },
+  {
+    "id": 8432,
+    "name": "Basque Burnt Cheesecake",
+    "country": "Spain",
+    "region": "Europe",
+    "emoji": "🍰",
+    "cal": 430,
+    "budget": 4,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "gluten-free",
+      "eggs"
+    ],
+    "desc": "Spanish crustless cheesecake from San Sebastián, baked very hot until the top is deeply caramelized and the center stays creamy; a modern classic dessert.",
+    "ingredients": [
+      "Cream cheese",
+      "Eggs",
+      "Sugar",
+      "Heavy cream",
+      "Cornstarch"
+    ],
+    "swaps": {
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Extra cornstarch + a little more cream",
+          "note": "Sets softer, like a custard"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 28,
+    "fat": 32,
+    "fiber": 0,
+    "image": "/images/dishes/Basque-Burnt-Cheesecake.jpg"
+  },
+  {
+    "id": 8433,
+    "name": "American Carrot Cake",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍰",
+    "cal": 490,
+    "budget": 3,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "nuts"
+    ],
+    "desc": "American spiced cake of grated carrots, cinnamon and walnuts under a thick cream cheese frosting; a classic dessert.",
+    "ingredients": [
+      "Grated carrots",
+      "Flour",
+      "Eggs",
+      "Brown sugar",
+      "Vegetable oil",
+      "Cinnamon",
+      "Walnuts",
+      "Cream cheese",
+      "Butter",
+      "Powdered sugar"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs (1 tbsp ground flax + 3 tbsp water each)",
+          "note": "Rest 5 minutes before using"
+        },
+        {
+          "from": "Cream cheese",
+          "to": "Vegan cream cheese",
+          "note": "Beat with the sugar"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Cream cheese",
+          "to": "Dairy-free cream cheese",
+          "note": "Beat with the sugar"
+        },
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs (1 tbsp ground flax + 3 tbsp water each)",
+          "note": "Rest 5 minutes before using"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Walnuts",
+          "to": "Raisins | Leave out",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 58,
+    "fat": 26,
+    "fiber": 2,
+    "image": "/images/dishes/American-Carrot-Cake.jpg"
+  },
+  {
+    "id": 8434,
+    "name": "Chocolate Layer Cake",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🎂",
+    "cal": 510,
+    "budget": 3,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "American tall chocolate cake of moist cocoa sponge layers filled and covered with rich chocolate frosting; the classic birthday dessert.",
+    "ingredients": [
+      "Flour",
+      "Cocoa powder",
+      "Sugar",
+      "Eggs",
+      "Buttermilk",
+      "Vegetable oil",
+      "Butter",
+      "Dark chocolate",
+      "Powdered sugar"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs (1 tbsp ground flax + 3 tbsp water each)",
+          "note": "Rest 5 minutes before using"
+        },
+        {
+          "from": "Buttermilk",
+          "to": "Oat milk + 1 tbsp vinegar",
+          "note": "Rest 5 minutes"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Dark chocolate",
+          "to": "Dairy-free dark chocolate",
+          "note": "Check the label"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Buttermilk",
+          "to": "Oat milk + 1 tbsp vinegar",
+          "note": "Rest 5 minutes"
+        },
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Dark chocolate",
+          "to": "Dairy-free dark chocolate",
+          "note": "Check the label"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs (1 tbsp ground flax + 3 tbsp water each)",
+          "note": "Rest 5 minutes before using"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 64,
+    "fat": 26,
+    "fiber": 3,
+    "image": "/images/dishes/Chocolate-Layer-Cake.jpg"
+  },
+  {
+    "id": 8435,
+    "name": "Victoria Sponge",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🍰",
+    "cal": 410,
+    "budget": 2,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "British teatime cake of two light butter sponges sandwiched with raspberry jam and whipped cream, dusted with sugar; a classic dessert.",
+    "ingredients": [
+      "Flour",
+      "Butter",
+      "Sugar",
+      "Eggs",
+      "Baking powder",
+      "Raspberry jam",
+      "Heavy cream",
+      "Powdered sugar"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Eggs",
+          "to": "Plant yogurt (¼ cup per egg)",
+          "note": "Add a little more baking powder"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Whipped coconut cream",
+          "note": "Chill the can overnight"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Whipped coconut cream",
+          "note": "Chill the can overnight"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Plant yogurt (¼ cup per egg)",
+          "note": "Add a little more baking powder"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 48,
+    "fat": 22,
+    "fiber": 1,
+    "image": "/images/dishes/Victoria-Sponge.jpg"
+  },
+  {
+    "id": 8436,
+    "name": "Banana Bread",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍌",
+    "cal": 310,
+    "budget": 1,
+    "time": "1.25 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "American moist loaf cake of very ripe bananas, brown sugar and cinnamon, sliced for dessert or with coffee.",
+    "ingredients": [
+      "Ripe bananas",
+      "Flour",
+      "Butter",
+      "Brown sugar",
+      "Eggs",
+      "Baking soda",
+      "Cinnamon"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Eggs",
+          "to": "Flax eggs (1 tbsp ground flax + 3 tbsp water each)",
+          "note": "Rest 5 minutes before using"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs (1 tbsp ground flax + 3 tbsp water each)",
+          "note": "Rest 5 minutes before using"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 46,
+    "fat": 12,
+    "fiber": 2,
+    "image": "/images/dishes/Banana-Bread.jpg"
+  },
+  {
+    "id": 8437,
+    "name": "Castella",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🍰",
+    "cal": 240,
+    "budget": 3,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Japanese honey sponge cake from Nagasaki, fine and bouncy with a dark golden top and bottom; a gentle dessert with green tea.",
+    "ingredients": [
+      "Eggs",
+      "Sugar",
+      "Bread flour",
+      "Honey",
+      "Water"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Bread flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Whipped aquafaba",
+          "note": "Lighter and less springy"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 44,
+    "fat": 4,
+    "fiber": 0,
+    "image": "/images/dishes/Castella.jpg"
+  },
+  {
+    "id": 8438,
+    "name": "Basbousa",
+    "country": "Egypt",
+    "region": "Africa",
+    "emoji": "🍰",
+    "cal": 410,
+    "budget": 2,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "nuts"
+    ],
+    "desc": "Egyptian semolina cake soaked in lemon sugar syrup, cut into diamonds and topped with almonds; a beloved dessert.",
+    "ingredients": [
+      "Semolina",
+      "Plain yogurt",
+      "Butter",
+      "Sugar",
+      "Unsweetened coconut",
+      "Baking powder",
+      "Almonds",
+      "Lemon"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Semolina",
+          "to": "Fine cornmeal",
+          "note": "Soak in the yogurt for 15 minutes"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Almonds",
+          "to": "Pumpkin seeds | Leave out",
+          "note": "Press on top before baking"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 62,
+    "fat": 16,
+    "fiber": 2,
+    "image": "/images/dishes/Basbousa.jpg"
+  },
+  {
+    "id": 8439,
+    "name": "Pound Cake",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍰",
+    "cal": 420,
+    "budget": 2,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "American dense, buttery loaf cake made from equal weights of butter, sugar, eggs and flour; a simple dessert.",
+    "ingredients": [
+      "Butter",
+      "Sugar",
+      "Eggs",
+      "Flour",
+      "Vanilla bean",
+      "Salt"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Eggs",
+          "to": "Plant yogurt (¼ cup per egg)",
+          "note": "Add 1 tsp baking powder"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Plant yogurt (¼ cup per egg)",
+          "note": "Add 1 tsp baking powder"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 46,
+    "fat": 24,
+    "fiber": 1,
+    "image": "/images/dishes/Pound-Cake.jpg"
+  },
+  {
+    "id": 8440,
+    "name": "Lemon Drizzle Cake",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🍋",
+    "cal": 380,
+    "budget": 2,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "British loaf cake full of lemon zest, soaked while warm with a crunchy lemon-sugar drizzle; a teatime dessert.",
+    "ingredients": [
+      "Butter",
+      "Sugar",
+      "Eggs",
+      "Self-raising flour",
+      "Lemons"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Eggs",
+          "to": "Plant yogurt (¼ cup per egg)",
+          "note": "Keeps the crumb soft"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Self-raising flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Plant yogurt (¼ cup per egg)",
+          "note": "Keeps the crumb soft"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 50,
+    "fat": 18,
+    "fiber": 1,
+    "image": "/images/dishes/Lemon-Drizzle-Cake.jpg"
+  },
+  {
+    "id": 8441,
+    "name": "Hummingbird Cake",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍍",
+    "cal": 540,
+    "budget": 3,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "nuts"
+    ],
+    "desc": "Southern American layer cake of banana, crushed pineapple and pecans with cream cheese frosting; a celebration dessert.",
+    "ingredients": [
+      "Flour",
+      "Ripe bananas",
+      "Crushed pineapple",
+      "Pecans",
+      "Eggs",
+      "Vegetable oil",
+      "Sugar",
+      "Cinnamon",
+      "Cream cheese",
+      "Butter",
+      "Powdered sugar"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs (1 tbsp ground flax + 3 tbsp water each)",
+          "note": "Rest 5 minutes before using"
+        },
+        {
+          "from": "Cream cheese",
+          "to": "Vegan cream cheese",
+          "note": "Beat with the sugar"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Cream cheese",
+          "to": "Dairy-free cream cheese",
+          "note": "Beat with the sugar"
+        },
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs (1 tbsp ground flax + 3 tbsp water each)",
+          "note": "Rest 5 minutes before using"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Pecans",
+          "to": "Toasted coconut | Leave out",
+          "note": "Adds the same crunch"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 66,
+    "fat": 28,
+    "fiber": 2,
+    "image": "/images/dishes/Hummingbird-Cake.jpg"
+  },
+  {
+    "id": 8442,
+    "name": "Fraisier",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🍓",
+    "cal": 400,
+    "budget": 5,
+    "time": "3 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "nuts"
+    ],
+    "desc": "French celebration cake of light sponge, halved fresh strawberries and vanilla cream, finished with a pink glaze, strawberries and chopped pistachios; an elegant dessert.",
+    "ingredients": [
+      "Eggs",
+      "Sugar",
+      "Flour",
+      "Butter",
+      "Milk",
+      "Vanilla bean",
+      "Fresh strawberries",
+      "Heavy cream",
+      "Pistachios"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Whipped coconut cream",
+          "note": "Chill the can overnight"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Whipped aquafaba",
+          "note": "The sponge will be less tall"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Pistachios",
+          "to": "Leave out",
+          "note": "Strawberries decorate the top"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 44,
+    "fat": 22,
+    "fiber": 2,
+    "image": "/images/dishes/Fraisier.jpg"
+  },
+  {
+    "id": 8443,
+    "name": "Kladdkaka",
+    "country": "Sweden",
+    "region": "Europe",
+    "emoji": "🍫",
+    "cal": 410,
+    "budget": 2,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Swedish sticky chocolate cake with a crisp top and gooey center, served with whipped cream; an easy dessert.",
+    "ingredients": [
+      "Butter",
+      "Sugar",
+      "Eggs",
+      "Flour",
+      "Cocoa powder",
+      "Salt",
+      "Whipped cream"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Eggs",
+          "to": "Flax eggs (1 tbsp ground flax + 3 tbsp water each)",
+          "note": "Rest 5 minutes before using"
+        },
+        {
+          "from": "Whipped cream",
+          "to": "Whipped coconut cream",
+          "note": "Chill the can overnight"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Whipped cream",
+          "to": "Whipped coconut cream",
+          "note": "Chill the can overnight"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs (1 tbsp ground flax + 3 tbsp water each)",
+          "note": "Rest 5 minutes before using"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 44,
+    "fat": 24,
+    "fiber": 2,
+    "image": "/images/dishes/Kladdkaka.jpg"
+  },
+  {
+    "id": 8444,
+    "name": "Babka",
+    "country": "Poland",
+    "region": "Europe",
+    "emoji": "🍫",
+    "cal": 430,
+    "budget": 3,
+    "time": "4 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Eastern European braided yeast cake swirled with rich chocolate filling and brushed with syrup; a festive dessert.",
+    "ingredients": [
+      "Flour",
+      "Yeast",
+      "Milk",
+      "Butter",
+      "Eggs",
+      "Sugar",
+      "Dark chocolate",
+      "Cocoa powder"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Eggs",
+          "to": "Plant yogurt (¼ cup per egg)",
+          "note": "Dough stays soft"
+        },
+        {
+          "from": "Dark chocolate",
+          "to": "Dairy-free dark chocolate",
+          "note": "Check the label"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Dark chocolate",
+          "to": "Dairy-free dark chocolate",
+          "note": "Check the label"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Plant yogurt (¼ cup per egg)",
+          "note": "Dough stays soft"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 56,
+    "fat": 20,
+    "fiber": 2,
+    "image": "/images/dishes/Babka.jpg"
+  },
+  {
+    "id": 8445,
+    "name": "Meskouta",
+    "country": "Morocco",
+    "region": "Africa",
+    "emoji": "🍊",
+    "cal": 360,
+    "budget": 2,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Moroccan orange cake made with fresh orange juice, zest and vegetable oil, light and fragrant; a simple dessert with mint tea.",
+    "ingredients": [
+      "Eggs",
+      "Sugar",
+      "Vegetable oil",
+      "Fresh orange juice",
+      "Orange zest",
+      "Flour",
+      "Baking powder"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Plant yogurt (¼ cup per egg)",
+          "note": "Add ½ tsp baking soda"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Plant yogurt (¼ cup per egg)",
+          "note": "Add ½ tsp baking soda"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 48,
+    "fat": 16,
+    "fiber": 1,
+    "image": "/images/dishes/Meskouta.jpg"
+  },
+  {
+    "id": 8446,
+    "name": "Mawa Cake",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍰",
+    "cal": 450,
+    "budget": 2,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "nuts"
+    ],
+    "desc": "Mumbai Irani café cake made with mawa (milk solids), cardamom, with cashews and sliced almonds on top; a rich dessert with chai.",
+    "ingredients": [
+      "Mawa (khoya)",
+      "Butter",
+      "Sugar",
+      "Eggs",
+      "Flour",
+      "Milk",
+      "Cardamom",
+      "Cashews",
+      "Sliced almonds"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Mawa (khoya)",
+          "to": "Coconut milk powder",
+          "note": "Mix with a little plant milk"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Eggs",
+          "to": "Flax eggs (1 tbsp ground flax + 3 tbsp water each)",
+          "note": "Rest 5 minutes before using"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Mawa (khoya)",
+          "to": "Coconut milk powder",
+          "note": "Mix with a little plant milk"
+        },
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs (1 tbsp ground flax + 3 tbsp water each)",
+          "note": "Rest 5 minutes before using"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Cashews",
+          "to": "Leave out | Pumpkin seeds",
+          "note": "Press on top before baking"
+        },
+        {
+          "from": "Sliced almonds",
+          "to": "Leave out | Sunflower seeds",
+          "note": "Sprinkle on top"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 50,
+    "fat": 24,
+    "fiber": 1,
+    "image": "/images/dishes/Mawa-Cake.jpg"
+  },
+  {
+    "id": 8447,
+    "name": "Sfouf",
+    "country": "Lebanon",
+    "region": "Middle East",
+    "emoji": "🍰",
+    "cal": 350,
+    "budget": 2,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegan",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "nuts"
+    ],
+    "desc": "Lebanese turmeric semolina cake, bright yellow and lightly sweet with anise, baked in a tahini-greased pan and topped with pine nuts; a simple dessert.",
+    "ingredients": [
+      "Semolina",
+      "Flour",
+      "Turmeric",
+      "Sugar",
+      "Vegetable oil",
+      "Plant milk",
+      "Anise seeds",
+      "Tahini",
+      "Pine nuts"
+    ],
+    "swaps": {
+      "nuts": [
+        {
+          "from": "Pine nuts",
+          "to": "Sesame seeds | Leave out",
+          "note": "Press on top before baking"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Semolina",
+          "to": "Fine cornmeal",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 52,
+    "fat": 14,
+    "fiber": 2,
+    "image": "/images/dishes/Sfouf.jpg"
+  },
+  {
+    "id": 8448,
+    "name": "Pan de Elote",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🌽",
+    "cal": 390,
+    "budget": 2,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Mexican moist sweet corn cake of fresh corn kernels blended with condensed milk, eggs and butter; a homey dessert.",
+    "ingredients": [
+      "Fresh corn kernels",
+      "Sweetened condensed milk",
+      "Eggs",
+      "Butter",
+      "Flour",
+      "Baking powder"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Sweetened condensed milk",
+          "to": "Coconut condensed milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Fine cornmeal",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs (1 tbsp ground flax + 3 tbsp water each)",
+          "note": "Rest 5 minutes before using"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 50,
+    "fat": 18,
+    "fiber": 2,
+    "image": "/images/dishes/Pan-de-Elote.jpg"
+  },
+  {
+    "id": 8449,
+    "name": "Ube Chiffon Cake",
+    "country": "Philippines",
+    "region": "Asia",
+    "emoji": "🍰",
+    "cal": 330,
+    "budget": 3,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Filipino light, airy purple yam chiffon cake flavored with ube halaya, layered and covered with ube whipped cream; a celebration dessert.",
+    "ingredients": [
+      "Ube halaya (purple yam jam)",
+      "Cake flour",
+      "Eggs",
+      "Sugar",
+      "Vegetable oil",
+      "Coconut milk",
+      "Baking powder",
+      "Cream of tartar",
+      "Heavy cream"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Ube halaya (purple yam jam)",
+          "to": "Mashed purple yam cooked with coconut milk",
+          "note": "Halaya is often made with milk"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Whipped coconut cream",
+          "note": "Chill the can overnight"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Cake flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Whipped aquafaba",
+          "note": "Lighter and less tall"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 46,
+    "fat": 14,
+    "fiber": 1,
+    "image": "/images/dishes/Ube-Chiffon-Cake.jpg"
+  },
+  {
+    "id": 8450,
+    "name": "Bolo de Rolo",
+    "country": "Brazil",
+    "region": "Americas",
+    "emoji": "🍰",
+    "cal": 430,
+    "budget": 3,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Brazilian roll cake from Pernambuco of paper-thin buttery sponge layers rolled tightly around guava paste; a festive dessert.",
+    "ingredients": [
+      "Butter",
+      "Sugar",
+      "Eggs",
+      "Flour",
+      "Guava paste"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Whipped aquafaba",
+          "note": "Layers will be softer"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 58,
+    "fat": 20,
+    "fiber": 1,
+    "image": "/images/dishes/Bolo-de-Rolo.jpg"
+  },
+  {
+    "id": 8451,
+    "name": "Revani",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "🍋",
+    "cal": 360,
+    "budget": 2,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "nuts"
+    ],
+    "desc": "Turkish semolina sponge cake soaked in lemon syrup, light and syrupy, cut into squares and topped with ground pistachios; a classic dessert.",
+    "ingredients": [
+      "Semolina",
+      "Flour",
+      "Eggs",
+      "Sugar",
+      "Plain yogurt",
+      "Vegetable oil",
+      "Lemon",
+      "Ground pistachios"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Eggs",
+          "to": "Plant yogurt (¼ cup per egg)",
+          "note": "Add ½ tsp baking soda"
+        },
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Plain yogurt",
+          "to": "Unsweetened soy yogurt",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Semolina",
+          "to": "Fine cornmeal",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Plant yogurt (¼ cup per egg)",
+          "note": "Add ½ tsp baking soda"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Ground pistachios",
+          "to": "Lemon zest | Leave out",
+          "note": "Sprinkle on top"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 58,
+    "fat": 12,
+    "fiber": 1,
+    "image": "/images/dishes/Revani.jpg"
+  },
+  {
+    "id": 8452,
+    "name": "Gâteau Basque",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🥧",
+    "cal": 450,
+    "budget": 3,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "nuts"
+    ],
+    "desc": "French Basque cake of buttery almond pastry filled with vanilla pastry cream or black cherry jam; a regional dessert.",
+    "ingredients": [
+      "Flour",
+      "Almond flour",
+      "Butter",
+      "Sugar",
+      "Eggs",
+      "Milk",
+      "Vanilla bean",
+      "Black cherry jam"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Eggless custard powder",
+          "note": "Cook the cream with it"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Almond flour",
+          "to": "Extra flour",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 52,
+    "fat": 24,
+    "fiber": 2,
+    "image": "/images/dishes/Gateau-Basque.jpg"
+  },
+  {
+    "id": 8453,
+    "name": "Japanese Cotton Cheesecake",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🍰",
+    "cal": 320,
+    "budget": 3,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Japanese jiggly soufflé cheesecake, light and airy like cotton, baked slowly in a water bath; a delicate dessert.",
+    "ingredients": [
+      "Cream cheese",
+      "Eggs",
+      "Milk",
+      "Butter",
+      "Sugar",
+      "Cake flour",
+      "Cornstarch",
+      "Lemon"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Cake flour",
+          "to": "Extra cornstarch",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Extra cream cheese + cornstarch",
+          "note": "Sets denser, not jiggly"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 26,
+    "fat": 20,
+    "fiber": 0,
+    "image": "/images/dishes/Japanese-Cotton-Cheesecake.jpg"
+  },
+  {
+    "id": 8454,
+    "name": "Kek Lapis",
+    "country": "Malaysia",
+    "region": "Asia",
+    "emoji": "🍰",
+    "cal": 480,
+    "budget": 4,
+    "time": "3 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Malaysian thousand-layer cake baked one thin layer at a time with butter, egg yolks and warm spices, some layers colored with pandan and cocoa; a festive dessert.",
+    "ingredients": [
+      "Butter",
+      "Egg yolks",
+      "Sugar",
+      "Sweetened condensed milk",
+      "Flour",
+      "Mixed spice (cinnamon, clove, nutmeg)",
+      "Pandan paste",
+      "Cocoa powder"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Sweetened condensed milk",
+          "to": "Coconut condensed milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg yolks",
+          "to": "Eggless custard powder + plant milk",
+          "note": "Layers will be thinner and softer"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 46,
+    "fat": 30,
+    "fiber": 0,
+    "image": "/images/dishes/Kek-Lapis.jpg"
+  },
+  {
+    "id": 8455,
+    "name": "Bánh Bò Nướng",
+    "country": "Vietnam",
+    "region": "Asia",
+    "emoji": "🍰",
+    "cal": 320,
+    "budget": 2,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy-free",
+      "gluten-free",
+      "eggs"
+    ],
+    "desc": "Vietnamese baked honeycomb cake of tapioca starch, coconut milk and pandan, chewy with a lacy inside; a sweet dessert.",
+    "ingredients": [
+      "Tapioca starch",
+      "Coconut milk",
+      "Eggs",
+      "Sugar",
+      "Pandan leaf juice",
+      "Baking powder"
+    ],
+    "swaps": {
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Whipped aquafaba",
+          "note": "The honeycomb will be smaller"
+        }
+      ]
+    },
+    "protein": 3,
+    "carbs": 50,
+    "fat": 12,
+    "fiber": 1,
+    "image": "/images/dishes/Banh-Bo-Nuong.jpg"
+  },
+  {
+    "id": 8456,
+    "name": "Bienenstich",
+    "country": "Germany",
+    "region": "Europe",
+    "emoji": "🍰",
+    "cal": 460,
+    "budget": 3,
+    "time": "3 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "nuts"
+    ],
+    "desc": "German bee sting cake of soft yeast dough with a crunchy honey-almond topping and vanilla cream filling; a café dessert.",
+    "ingredients": [
+      "Flour",
+      "Yeast",
+      "Milk",
+      "Butter",
+      "Eggs",
+      "Sugar",
+      "Honey",
+      "Sliced almonds",
+      "Heavy cream",
+      "Vanilla bean"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Whipped coconut cream",
+          "note": "Chill the can overnight"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Plant yogurt (¼ cup per egg)",
+          "note": "Dough stays soft"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Sliced almonds",
+          "to": "Sunflower seeds | Oat flakes",
+          "note": "Same crunch in the honey topping"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 54,
+    "fat": 24,
+    "fiber": 1,
+    "image": "/images/dishes/Bienenstich.jpg"
   }
 ];
