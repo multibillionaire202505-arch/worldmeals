@@ -3121,18 +3121,21 @@ function wmKidsQuery(){ return wmKidsNorm(document.getElementById("kidsDishSearc
 function wmKidsHasChoices(){ return Object.values(wmKids).some(s=>s.size)||wmKidsCountry!=="all"; }
 function wmKidsFilter(src,q,has,fitOk){
   const words=q?q.split(/\s+/).filter(Boolean):[];
-  return src.filter(m=>{
+  const wre=words.map(w=>new RegExp("(^|[^a-z0-9])"+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")));
+  const score=m=>{const n=wmKidsNorm(m.name);if(wre.every(r=>r.test(n)))return 3;if(wre.every(r=>r.test(wmKidsNorm(m.country+" "+m.region))))return 2;if(wre.every(r=>r.test(wmKidsNorm(m.desc))))return 1;return 0;};
+  const out=src.filter(m=>{
     for(const a of wmKids.age) if(!has(m,"kids-"+a)) return false;
     for(const t of wmKids.meal) if(!has(m,t)) return false;
     for(const f of wmKids.fit) if(!fitOk(m,f)) return false;
     for(const x of wmKids.avoid) if(!has(m,"no-"+x)) return false;
     if(wmKidsCountry!=="all"&&m.country!==wmKidsCountry) return false;
     if(words.length){
-      const hay=m._wmq||(m._wmq=wmKidsNorm([m.name,m.country,m.region,(m.ingredients||[]).join(" ")].join(" ")));
-      for(const w of words) if(!hay.includes(w)) return false;
+      const hay=m._wmq||(m._wmq=wmKidsNorm([m.name,m.country,m.region,m.desc,(m.ingredients||[]).join(" ")].join(" ")));
+      for(const r of wre) if(!r.test(hay)) return false;
     }
     return true;
   });
+  return words.length?out.map((m,i)=>[m,score(m),i]).sort((x,y)=>y[1]-x[1]||x[2]-y[2]).map(x=>x[0]):out;
 }
 let wmKidsSearchT=0;
 function wmKidsSearch(){ clearTimeout(wmKidsSearchT); wmKidsSearchT=setTimeout(wmKidsRenderSearch,150); }
