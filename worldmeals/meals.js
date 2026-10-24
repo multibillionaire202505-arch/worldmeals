@@ -8,6 +8,7 @@
 // 2026-10-22: added 25 dishes (ids 8332–8356), batch 6: harvest feasts of the world (tag "thanksgiving"). Their nutrition, cost and time are estimates.
 // 2026-10-23: added 50 dishes (ids 8357–8406), batches 7 & 8 of "The most desirable dishes in the world" (Middle East, Africa, India, East and Southeast Asia, Europe, Americas). Their nutrition, cost and time are estimates. Also corrected allergy tags on 5 earlier dishes (8193, 8201, 8219, 8224, 8254).
 // 2026-10-24: added 50 dishes (ids 8407–8456), batch 9: 25 alcohol-free drinks and 25 cakes from around the world. Their nutrition, cost and time are estimates. Also: alcohol-free swaps (swaps.alcohol) on all 58 dishes that cook with alcohol; drink tag on 5 drinks; the word dessert added to 62 dessert descriptions.
+// 2026-10-24: added 30 dishes (ids 8457–8486), batch 10 part 1: 25 desserts and 5 breakfasts from around the world. Their nutrition, cost and time are estimates.
 // All photos use existing /images/dishes/*.jpg paths; upload the matching assets.
 // Compatibility: existing IDs, names, order, image paths and meal field names retained.
 // Content pass: 767 dishes updated; 1710 repeated substitution entries corrected, plus dish-specific edits.
@@ -99330,5 +99331,1459 @@ window.WORLD_MEALS_DATABASE = [
     "fat": 24,
     "fiber": 1,
     "image": "/images/dishes/Bienenstich.jpg"
+  },
+  {
+    "id": 8457,
+    "name": "Kheer",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍚",
+    "cal": 330,
+    "budget": 2,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Indian rice pudding slowly simmered in milk with cardamom and saffron, finished with almonds and pistachios; a festive dessert.",
+    "ingredients": [
+      "Basmati rice",
+      "Whole milk",
+      "Sugar",
+      "Cardamom",
+      "Saffron",
+      "Almonds",
+      "Pistachios"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Whole milk",
+          "to": "Coconut milk + oat milk",
+          "note": "Half and half for creaminess"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Coconut milk + oat milk",
+          "note": "Half and half for creaminess"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Almonds",
+          "to": "Leave out",
+          "note": "Saffron keeps it festive"
+        },
+        {
+          "from": "Pistachios",
+          "to": "Leave out | Dried rose petals",
+          "note": "Same color on top"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 52,
+    "fat": 10,
+    "fiber": 1,
+    "image": "/images/dishes/Kheer.jpg"
+  },
+  {
+    "id": 8458,
+    "name": "Rasmalai",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍮",
+    "cal": 350,
+    "budget": 4,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Bengali dessert of soft cheese patties soaked in chilled saffron-cardamom milk, topped with pistachios and sliced almonds.",
+    "ingredients": [
+      "Whole milk",
+      "Lemon juice",
+      "Sugar",
+      "Saffron",
+      "Cardamom",
+      "Pistachios",
+      "Sliced almonds"
+    ],
+    "swaps": {
+      "nuts": [
+        {
+          "from": "Pistachios",
+          "to": "Leave out | Dried rose petals",
+          "note": "Same color on top"
+        },
+        {
+          "from": "Sliced almonds",
+          "to": "Leave out",
+          "note": "Saffron still decorates the top"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 44,
+    "fat": 14,
+    "fiber": 0,
+    "image": "/images/dishes/Rasmalai.jpg"
+  },
+  {
+    "id": 8459,
+    "name": "Jalebi",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🌀",
+    "cal": 370,
+    "budget": 2,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Indian dessert of crisp spirals of fermented batter fried until golden and soaked in saffron sugar syrup.",
+    "ingredients": [
+      "Flour",
+      "Plain yogurt",
+      "Sugar",
+      "Saffron",
+      "Cardamom",
+      "Oil for frying"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ]
+    },
+    "protein": 3,
+    "carbs": 62,
+    "fat": 12,
+    "fiber": 1,
+    "image": "/images/dishes/Jalebi.jpg"
+  },
+  {
+    "id": 8460,
+    "name": "Chè Ba Màu",
+    "country": "Vietnam",
+    "region": "Asia",
+    "emoji": "🍧",
+    "cal": 370,
+    "budget": 2,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Vietnamese three-color dessert of sweet red beans, mung bean paste and green pandan jelly under shaved ice and coconut milk.",
+    "ingredients": [
+      "Red beans",
+      "Mung beans",
+      "Pandan jelly",
+      "Coconut milk",
+      "Sugar",
+      "Shaved ice"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Pandan jelly",
+          "to": "Green agar jelly",
+          "note": "Cut into thin strips"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 58,
+    "fat": 12,
+    "fiber": 6,
+    "image": "/images/dishes/Che-Ba-Mau.jpg"
+  },
+  {
+    "id": 8461,
+    "name": "Dorayaki",
+    "country": "Japan",
+    "region": "Asia",
+    "emoji": "🥞",
+    "cal": 310,
+    "budget": 2,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy-free",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Japanese dessert of two fluffy honey pancakes sandwiched around sweet red bean paste.",
+    "ingredients": [
+      "Eggs",
+      "Sugar",
+      "Honey",
+      "Flour",
+      "Baking soda",
+      "Sweet red bean paste"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Plant yogurt (¼ cup per egg)",
+          "note": "Pancakes will be softer"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 62,
+    "fat": 4,
+    "fiber": 3,
+    "image": "/images/dishes/Dorayaki.jpg"
+  },
+  {
+    "id": 8462,
+    "name": "Tangyuan",
+    "country": "China",
+    "region": "Asia",
+    "emoji": "🍡",
+    "cal": 350,
+    "budget": 2,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Chinese dessert of soft glutinous rice balls filled with black sesame paste, served in warm ginger syrup with osmanthus flowers for Lantern Festival and family reunions.",
+    "ingredients": [
+      "Glutinous rice flour",
+      "Black sesame seeds",
+      "Sugar",
+      "Coconut oil",
+      "Fresh ginger",
+      "Brown sugar",
+      "Dried osmanthus flowers"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Black sesame seeds",
+          "to": "Sweet red bean paste",
+          "note": "Use as the filling"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 56,
+    "fat": 12,
+    "fiber": 3,
+    "image": "/images/dishes/Tangyuan.jpg"
+  },
+  {
+    "id": 8463,
+    "name": "Kazandibi",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "🍮",
+    "cal": 290,
+    "budget": 2,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Turkish milk pudding with a caramelized burnt bottom, rolled up and dusted with cinnamon; a classic dessert.",
+    "ingredients": [
+      "Whole milk",
+      "Rice flour",
+      "Cornstarch",
+      "Sugar",
+      "Butter",
+      "Cinnamon"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Whole milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 46,
+    "fat": 9,
+    "fiber": 0,
+    "image": "/images/dishes/Kazandibi.jpg"
+  },
+  {
+    "id": 8464,
+    "name": "Muhallebi",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "🍮",
+    "cal": 260,
+    "budget": 2,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Silky Middle Eastern milk pudding scented with rose water, chilled and topped with crushed pistachios and dried rose petals; a light dessert.",
+    "ingredients": [
+      "Whole milk",
+      "Cornstarch",
+      "Sugar",
+      "Rose water",
+      "Pistachios",
+      "Dried rose petals"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Whole milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Pistachios",
+          "to": "Dried rose petals | Leave out",
+          "note": "Same color on top"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 38,
+    "fat": 8,
+    "fiber": 1,
+    "image": "/images/dishes/Muhallebi.jpg"
+  },
+  {
+    "id": 8465,
+    "name": "Bougatsa",
+    "country": "Greece",
+    "region": "Europe",
+    "emoji": "🥧",
+    "cal": 390,
+    "budget": 3,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "gluten",
+      "eggs"
+    ],
+    "desc": "Greek dessert of warm semolina custard baked between crisp layers of phyllo, dusted with powdered sugar and cinnamon.",
+    "ingredients": [
+      "Phyllo pastry",
+      "Whole milk",
+      "Semolina",
+      "Eggs",
+      "Sugar",
+      "Butter",
+      "Powdered sugar",
+      "Cinnamon"
+    ],
+    "swaps": {
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Extra semolina + cornstarch",
+          "note": "Custard sets a little softer"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 48,
+    "fat": 18,
+    "fiber": 1,
+    "image": "/images/dishes/Bougatsa.jpg"
+  },
+  {
+    "id": 8466,
+    "name": "Tarte au Citron",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🍋",
+    "cal": 400,
+    "budget": 3,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "French lemon tart of bright, silky lemon curd in a crisp buttery pastry shell; an elegant dessert.",
+    "ingredients": [
+      "Flour",
+      "Butter",
+      "Sugar",
+      "Eggs",
+      "Lemons",
+      "Powdered sugar"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Cornstarch-set lemon cream",
+          "note": "Cook until thick before filling"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 44,
+    "fat": 22,
+    "fiber": 1,
+    "image": "/images/dishes/Tarte-au-Citron.jpg"
+  },
+  {
+    "id": 8467,
+    "name": "Paris-Brest",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🍩",
+    "cal": 500,
+    "budget": 4,
+    "time": "2.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "gluten",
+      "eggs",
+      "nuts"
+    ],
+    "desc": "French ring of choux pastry filled with hazelnut praline cream and topped with sliced almonds; a celebration dessert.",
+    "ingredients": [
+      "Flour",
+      "Butter",
+      "Eggs",
+      "Whole milk",
+      "Sugar",
+      "Hazelnut praline paste",
+      "Heavy cream",
+      "Sliced almonds",
+      "Powdered sugar"
+    ],
+    "swaps": {
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Ready-made eggless choux | Puff pastry ring",
+          "note": "The shape will be flatter"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Hazelnut praline paste",
+          "to": "Caramel and vanilla bean",
+          "note": "Whip into the cream"
+        },
+        {
+          "from": "Sliced almonds",
+          "to": "Pearl sugar",
+          "note": "Sprinkle on top"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 40,
+    "fat": 34,
+    "fiber": 1,
+    "image": "/images/dishes/Paris-Brest.jpg"
+  },
+  {
+    "id": 8468,
+    "name": "Far Breton",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🍮",
+    "cal": 310,
+    "budget": 2,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Breton custard flan cake of a dense, creamy batter baked with soft prunes; a homey dessert.",
+    "ingredients": [
+      "Eggs",
+      "Sugar",
+      "Flour",
+      "Whole milk",
+      "Butter",
+      "Prunes",
+      "Vanilla bean"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Oat milk | Soy milk",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Extra flour + cornstarch",
+          "note": "Bakes denser, like a pudding"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 46,
+    "fat": 10,
+    "fiber": 2,
+    "image": "/images/dishes/Far-Breton.jpg"
+  },
+  {
+    "id": 8469,
+    "name": "Cannelés",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🧁",
+    "cal": 250,
+    "budget": 3,
+    "time": "26 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "gluten",
+      "gluten-free-option",
+      "eggs"
+    ],
+    "desc": "Bordeaux dessert of small fluted cakes with a dark caramelized crust and a soft custard center; traditionally made with rum, here alcohol-free with vanilla bean and orange zest.",
+    "ingredients": [
+      "Whole milk",
+      "Butter",
+      "Vanilla bean",
+      "Orange zest",
+      "Sugar",
+      "Flour",
+      "Egg yolks",
+      "Eggs"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg yolks",
+          "to": "Extra flour + cornstarch",
+          "note": "The center will be firmer"
+        },
+        {
+          "from": "Eggs",
+          "to": "Extra milk",
+          "note": "Batter stays smooth"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 36,
+    "fat": 10,
+    "fiber": 0,
+    "image": "/images/dishes/Canneles.jpg"
+  },
+  {
+    "id": 8470,
+    "name": "Affogato",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "☕",
+    "cal": 200,
+    "budget": 2,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free"
+    ],
+    "desc": "Italian dessert of a scoop of vanilla gelato 'drowned' in a shot of hot espresso.",
+    "ingredients": [
+      "Vanilla gelato",
+      "Espresso"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Vanilla gelato",
+          "to": "Oat or coconut vanilla ice cream",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Vanilla gelato",
+          "to": "Oat or coconut vanilla ice cream",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 24,
+    "fat": 10,
+    "fiber": 0,
+    "image": "/images/dishes/Affogato.jpg"
+  },
+  {
+    "id": 8471,
+    "name": "Semifreddo",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "🍨",
+    "cal": 390,
+    "budget": 3,
+    "time": "6 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "gluten-free",
+      "eggs",
+      "nuts"
+    ],
+    "desc": "Italian half-frozen dessert of honey cream mousse, sliced and served with fresh raspberries and toasted sliced almonds.",
+    "ingredients": [
+      "Egg yolks",
+      "Sugar",
+      "Honey",
+      "Heavy cream",
+      "Raspberries",
+      "Sliced almonds"
+    ],
+    "swaps": {
+      "eggs": [
+        {
+          "from": "Egg yolks",
+          "to": "Sweetened condensed milk",
+          "note": "Fold into the whipped cream"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Sliced almonds",
+          "to": "Leave out | Toasted coconut flakes",
+          "note": "Sprinkle on top"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 34,
+    "fat": 26,
+    "fiber": 2,
+    "image": "/images/dishes/Semifreddo.jpg"
+  },
+  {
+    "id": 8472,
+    "name": "Sfogliatella",
+    "country": "Italy",
+    "region": "Europe",
+    "emoji": "🐚",
+    "cal": 430,
+    "budget": 4,
+    "time": "3 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "gluten",
+      "eggs"
+    ],
+    "desc": "Neapolitan shell-shaped pastry of thin crackling layers filled with ricotta, semolina and candied orange; a famous dessert.",
+    "ingredients": [
+      "Flour",
+      "Butter",
+      "Ricotta",
+      "Semolina",
+      "Eggs",
+      "Sugar",
+      "Candied orange peel",
+      "Cinnamon",
+      "Powdered sugar"
+    ],
+    "swaps": {
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Extra ricotta",
+          "note": "The filling stays creamy"
+        }
+      ]
+    },
+    "protein": 10,
+    "carbs": 48,
+    "fat": 22,
+    "fiber": 1,
+    "image": "/images/dishes/Sfogliatella.jpg"
+  },
+  {
+    "id": 8473,
+    "name": "Biko",
+    "country": "Philippines",
+    "region": "Asia",
+    "emoji": "🍚",
+    "cal": 410,
+    "budget": 2,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Filipino sticky rice cake cooked in coconut milk and brown sugar, topped with golden coconut caramel; a party dessert.",
+    "ingredients": [
+      "Glutinous rice",
+      "Coconut milk",
+      "Brown sugar",
+      "Salt"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Glutinous rice",
+          "to": "Sweet sushi rice",
+          "note": "Cook a little longer"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 68,
+    "fat": 14,
+    "fiber": 1,
+    "image": "/images/dishes/Biko.jpg"
+  },
+  {
+    "id": 8474,
+    "name": "American Apple Pie",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥧",
+    "cal": 410,
+    "budget": 3,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "Classic American double-crust pie of cinnamon apples in flaky butter pastry; the all-American dessert.",
+    "ingredients": [
+      "Flour",
+      "Butter",
+      "Apples",
+      "Sugar",
+      "Cinnamon",
+      "Lemon",
+      "Cornstarch"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Butter",
+          "to": "Vegan butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 58,
+    "fat": 18,
+    "fiber": 3,
+    "image": "/images/dishes/American-Apple-Pie.jpg"
+  },
+  {
+    "id": 8475,
+    "name": "Banoffee Pie",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🍌",
+    "cal": 540,
+    "budget": 3,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "British dessert of a biscuit crust filled with soft toffee, sliced bananas and whipped cream, with chocolate shavings.",
+    "ingredients": [
+      "Digestive biscuits",
+      "Butter",
+      "Sweetened condensed milk",
+      "Bananas",
+      "Heavy cream",
+      "Dark chocolate"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Digestive biscuits",
+          "to": "Gluten-free biscuits",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 62,
+    "fat": 30,
+    "fiber": 2,
+    "image": "/images/dishes/Banoffee-Pie.jpg"
+  },
+  {
+    "id": 8476,
+    "name": "Picarones",
+    "country": "Peru",
+    "region": "Americas",
+    "emoji": "🍩",
+    "cal": 380,
+    "budget": 2,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "vegan",
+      "dairy-free",
+      "gluten"
+    ],
+    "desc": "Peruvian ring doughnuts made from squash and sweet potato, fried crisp and drizzled with spiced chancaca syrup; a street dessert.",
+    "ingredients": [
+      "Butternut squash",
+      "Sweet potato",
+      "Flour",
+      "Yeast",
+      "Anise seeds",
+      "Chancaca (raw cane sugar)",
+      "Cinnamon",
+      "Cloves",
+      "Orange peel",
+      "Oil for frying"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Chancaca (raw cane sugar)",
+          "to": "Dark brown sugar | Molasses",
+          "note": "Simmer into syrup"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 64,
+    "fat": 12,
+    "fiber": 3,
+    "image": "/images/dishes/Picarones.jpg"
+  },
+  {
+    "id": 8477,
+    "name": "Suspiro a la Limeña",
+    "country": "Peru",
+    "region": "Americas",
+    "emoji": "🍮",
+    "cal": 390,
+    "budget": 3,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "gluten-free",
+      "eggs"
+    ],
+    "desc": "Peruvian dessert of creamy manjar blanco topped with cinnamon meringue; traditionally made with port wine, here alcohol-free.",
+    "ingredients": [
+      "Sweetened condensed milk",
+      "Evaporated milk",
+      "Egg yolks",
+      "Egg whites",
+      "Sugar",
+      "Cinnamon"
+    ],
+    "swaps": {
+      "eggs": [
+        {
+          "from": "Egg yolks",
+          "to": "Cornstarch",
+          "note": "Cook until thick"
+        },
+        {
+          "from": "Egg whites",
+          "to": "Whipped aquafaba",
+          "note": "Whip until stiff"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 62,
+    "fat": 12,
+    "fiber": 0,
+    "image": "/images/dishes/Suspiro-a-la-Limena.jpg"
+  },
+  {
+    "id": 8478,
+    "name": "Kulfi",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍦",
+    "cal": 320,
+    "budget": 3,
+    "time": "6 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Indian frozen dessert of slowly reduced milk with cardamom and saffron, set in molds and topped with pistachios.",
+    "ingredients": [
+      "Whole milk",
+      "Sweetened condensed milk",
+      "Cardamom",
+      "Saffron",
+      "Pistachios"
+    ],
+    "swaps": {
+      "nuts": [
+        {
+          "from": "Pistachios",
+          "to": "Leave out | Dried rose petals",
+          "note": "Same color on top"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 40,
+    "fat": 14,
+    "fiber": 0,
+    "image": "/images/dishes/Kulfi.jpg"
+  },
+  {
+    "id": 8479,
+    "name": "Île Flottante",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "☁️",
+    "cal": 280,
+    "budget": 3,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "gluten-free",
+      "eggs",
+      "nuts"
+    ],
+    "desc": "French floating island dessert of soft poached meringues on vanilla custard, drizzled with caramel and topped with toasted sliced almonds.",
+    "ingredients": [
+      "Eggs",
+      "Whole milk",
+      "Sugar",
+      "Vanilla bean",
+      "Sliced almonds"
+    ],
+    "swaps": {
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Whipped aquafaba + cornstarch custard",
+          "note": "Poach the aquafaba gently"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Sliced almonds",
+          "to": "Leave out",
+          "note": "The caramel still decorates the top"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 42,
+    "fat": 8,
+    "fiber": 0,
+    "image": "/images/dishes/Ile-Flottante.jpg"
+  },
+  {
+    "id": 8480,
+    "name": "Treacle Tart",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🥧",
+    "cal": 460,
+    "budget": 2,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option"
+    ],
+    "desc": "British tart of golden syrup, fine breadcrumbs and lemon in buttery pastry, served warm with cream; a teatime dessert.",
+    "ingredients": [
+      "Flour",
+      "Butter",
+      "Golden syrup",
+      "Breadcrumbs",
+      "Lemon",
+      "Heavy cream"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Butter",
+          "to": "Dairy-free butter",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Whipped coconut cream",
+          "note": "Chill the can overnight"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Add ½ tsp xanthan gum if the blend has none"
+        },
+        {
+          "from": "Breadcrumbs",
+          "to": "Gluten-free breadcrumbs",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 70,
+    "fat": 18,
+    "fiber": 1,
+    "image": "/images/dishes/Treacle-Tart.jpg"
+  },
+  {
+    "id": 8481,
+    "name": "Hotteok",
+    "country": "South Korea",
+    "region": "Asia",
+    "emoji": "🥞",
+    "cal": 310,
+    "budget": 1,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "vegan",
+      "dairy-free",
+      "gluten",
+      "nuts",
+      "sesame"
+    ],
+    "desc": "Korean street dessert of chewy pan-fried pancakes filled with melted brown sugar, cinnamon, chopped peanuts and sesame seeds.",
+    "ingredients": [
+      "Flour",
+      "Glutinous rice flour",
+      "Yeast",
+      "Sugar",
+      "Brown sugar",
+      "Cinnamon",
+      "Chopped peanuts",
+      "Sesame seeds",
+      "Vegetable oil"
+    ],
+    "swaps": {
+      "nuts": [
+        {
+          "from": "Chopped peanuts",
+          "to": "Sunflower seeds | Leave out",
+          "note": "Mix into the sugar filling"
+        }
+      ],
+      "local": [
+        {
+          "from": "Glutinous rice flour",
+          "to": "Extra flour",
+          "note": "Pancakes will be less chewy"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 56,
+    "fat": 8,
+    "fiber": 1,
+    "image": "/images/dishes/Hotteok.jpg"
+  },
+  {
+    "id": 8482,
+    "name": "Simit",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "🥯",
+    "cal": 320,
+    "budget": 1,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "breakfast",
+      "vegan",
+      "dairy-free",
+      "gluten"
+    ],
+    "desc": "Turkish breakfast bread ring dipped in grape molasses and covered in sesame seeds, eaten with tea, cheese, olives and tomatoes.",
+    "ingredients": [
+      "Flour",
+      "Yeast",
+      "Grape molasses",
+      "Sesame seeds",
+      "Salt",
+      "Water"
+    ],
+    "swaps": {
+      "local": [
+        {
+          "from": "Grape molasses",
+          "to": "Date syrup | Honey",
+          "note": "Mix with water for dipping"
+        }
+      ]
+    },
+    "protein": 10,
+    "carbs": 52,
+    "fat": 8,
+    "fiber": 3,
+    "image": "/images/dishes/Simit.jpg"
+  },
+  {
+    "id": 8483,
+    "name": "Poha",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍚",
+    "cal": 310,
+    "budget": 1,
+    "time": "20 min",
+    "spice": 1,
+    "tags": [
+      "breakfast",
+      "vegan",
+      "dairy-free",
+      "gluten-free",
+      "nuts"
+    ],
+    "desc": "Maharashtrian breakfast of flattened rice tossed with onions, turmeric, mustard seeds, curry leaves and peanuts, finished with lemon and cilantro.",
+    "ingredients": [
+      "Flattened rice (poha)",
+      "Onion",
+      "Turmeric",
+      "Mustard seeds",
+      "Curry leaves",
+      "Green chili",
+      "Peanuts",
+      "Lemon",
+      "Cilantro"
+    ],
+    "swaps": {
+      "nuts": [
+        {
+          "from": "Peanuts",
+          "to": "Roasted chickpeas | Pumpkin seeds",
+          "note": "Same crunch"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Green chili",
+          "to": "Leave out",
+          "note": "Turmeric and lemon keep the flavor"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 48,
+    "fat": 10,
+    "fiber": 3,
+    "image": "/images/dishes/Poha.jpg"
+  },
+  {
+    "id": 8484,
+    "name": "Upma",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🥣",
+    "cal": 300,
+    "budget": 1,
+    "time": "25 min",
+    "spice": 1,
+    "tags": [
+      "breakfast",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "nuts"
+    ],
+    "desc": "South Indian breakfast of roasted semolina cooked with mustard seeds, curry leaves, chana dal, ginger and onion into a soft, savory porridge, finished with cashews, cilantro and lemon.",
+    "ingredients": [
+      "Semolina (rava)",
+      "Ghee",
+      "Mustard seeds",
+      "Curry leaves",
+      "Onion",
+      "Chana dal",
+      "Cashews",
+      "Ginger",
+      "Green chili",
+      "Cilantro",
+      "Lemon"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Ghee",
+          "to": "Coconut oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Ghee",
+          "to": "Coconut oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Semolina (rava)",
+          "to": "Rice rava | Millet",
+          "note": "Cook a little longer"
+        }
+      ],
+      "nuts": [
+        {
+          "from": "Cashews",
+          "to": "Leave out | Roasted peanuts if no peanut allergy",
+          "note": "Toast in the ghee"
+        }
+      ],
+      "spice": [
+        {
+          "from": "Green chili",
+          "to": "Leave out",
+          "note": "Ginger keeps the warmth"
+        }
+      ]
+    },
+    "protein": 7,
+    "carbs": 46,
+    "fat": 10,
+    "fiber": 4,
+    "image": "/images/dishes/Upma.jpg"
+  },
+  {
+    "id": 8485,
+    "name": "Medu Vada",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍩",
+    "cal": 360,
+    "budget": 1,
+    "time": "8 hrs",
+    "spice": 1,
+    "tags": [
+      "breakfast",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "South Indian breakfast of crisp, fluffy lentil doughnuts made from urad dal, served with sambar and coconut chutney.",
+    "ingredients": [
+      "Urad dal",
+      "Green chili",
+      "Ginger",
+      "Curry leaves",
+      "Black pepper",
+      "Sambar",
+      "Coconut chutney",
+      "Oil for frying"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Green chili",
+          "to": "Leave out",
+          "note": "Black pepper keeps a little warmth"
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 40,
+    "fat": 16,
+    "fiber": 8,
+    "image": "/images/dishes/Medu-Vada.jpg"
+  },
+  {
+    "id": 8486,
+    "name": "Pesarattu",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🫓",
+    "cal": 280,
+    "budget": 1,
+    "time": "8 hrs",
+    "spice": 1,
+    "tags": [
+      "breakfast",
+      "vegan",
+      "dairy-free",
+      "gluten-free"
+    ],
+    "desc": "Andhra breakfast crepe made from whole green moong beans with ginger and chili, topped with onions and served with ginger chutney.",
+    "ingredients": [
+      "Green moong beans",
+      "Ginger",
+      "Green chili",
+      "Cumin",
+      "Onion",
+      "Ginger chutney"
+    ],
+    "swaps": {
+      "spice": [
+        {
+          "from": "Green chili",
+          "to": "Leave out",
+          "note": "Ginger keeps the warmth"
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 42,
+    "fat": 6,
+    "fiber": 9,
+    "image": "/images/dishes/Pesarattu.jpg"
   }
 ];
