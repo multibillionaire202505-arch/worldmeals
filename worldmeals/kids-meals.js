@@ -23852,5 +23852,2974 @@ window.WORLD_KIDS_MEALS = [
     "fat": 16,
     "fiber": 2,
     "image": "/images/dishes/Kids/yule-log-roll.jpg"
+  },
+  {
+    "id": 9451,
+    "name": "Date & Banana Purée",
+    "country": "Saudi Arabia",
+    "region": "Middle East",
+    "emoji": "🌙",
+    "cal": 100,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "no-dairy",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "gluten-free",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "snack",
+      "toddler-friendly",
+      "very-picky",
+      "sensory-friendly",
+      "eid"
+    ],
+    "desc": "Smooth, naturally sweet purée of ripe banana and soft soaked dates, a first taste of the Eid table. No salt, sugar or honey. Sensory tip: one steady texture; serve on its own, the same way each time.",
+    "ingredients": [
+      "Ripe banana",
+      "Soft dates, pitted and soaked",
+      "Water"
+    ],
+    "swaps": {},
+    "protein": 1,
+    "carbs": 24,
+    "fat": 0,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/date-and-banana-puree.jpg"
+  },
+  {
+    "id": 9452,
+    "name": "Lamb & Butternut Mash",
+    "country": "Morocco",
+    "region": "Africa",
+    "emoji": "🎃",
+    "cal": 110,
+    "budget": 2,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "dairy-free",
+      "no-dairy",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "very-picky",
+      "hidden-veggies",
+      "sensory-friendly",
+      "eid"
+    ],
+    "desc": "Tender lamb slow-cooked with sweet butternut squash and blended smooth; rich in iron for growing babies. Use halal meat if your family keeps halal. No salt, sugar or honey. Sensory tip: one steady texture; serve on its own, the same way each time.",
+    "ingredients": [
+      "Lamb shoulder",
+      "Butternut squash",
+      "Water",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Lamb shoulder",
+          "to": "Red lentils",
+          "note": "Cook very soft; keeps it iron-rich"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 8,
+    "fat": 5,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/lamb-and-butternut-mash.jpg"
+  },
+  {
+    "id": 9453,
+    "name": "Apricot & Oat Porridge",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "🥣",
+    "cal": 140,
+    "budget": 1,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "toddler-friendly",
+      "little-picky",
+      "eid"
+    ],
+    "desc": "Creamy oat porridge blended with soft stewed apricots, a gentle Eid-morning breakfast. No salt, sugar or honey.",
+    "ingredients": [
+      "Rolled oats",
+      "Dried apricots, soaked",
+      "Breast milk or formula"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Breast milk or formula",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick one made for babies; ask your pediatrician"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Breast milk or formula",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick one made for babies; ask your pediatrician"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Rolled oats",
+          "to": "Certified gluten-free oats",
+          "note": "Same texture"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 24,
+    "fat": 3,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/apricot-and-oat-porridge.jpg"
+  },
+  {
+    "id": 9454,
+    "name": "Chickpea & Carrot Mash",
+    "country": "Lebanon",
+    "region": "Middle East",
+    "emoji": "🥕",
+    "cal": 100,
+    "budget": 1,
+    "time": "25 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "no-dairy",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "gluten-free",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "little-picky",
+      "hidden-veggies",
+      "eid"
+    ],
+    "desc": "Soft cooked chickpeas mashed with sweet carrot and a drop of olive oil, a baby-friendly hummus. No salt, sugar or honey.",
+    "ingredients": [
+      "Cooked chickpeas",
+      "Carrot",
+      "Olive oil",
+      "Water"
+    ],
+    "swaps": {},
+    "protein": 4,
+    "carbs": 13,
+    "fat": 3,
+    "fiber": 4,
+    "image": "/images/dishes/Kids/chickpea-and-carrot-mash.jpg"
+  },
+  {
+    "id": 9455,
+    "name": "Semolina Milk Porridge",
+    "country": "Egypt",
+    "region": "Africa",
+    "emoji": "🥛",
+    "cal": 120,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "toddler-friendly",
+      "very-picky",
+      "sensory-friendly",
+      "eid"
+    ],
+    "desc": "Silky semolina cooked in milk with a hint of cardamom, smooth and comforting. No salt, sugar or honey. Sensory tip: one steady texture; serve on its own, the same way each time.",
+    "ingredients": [
+      "Fine semolina",
+      "Breast milk or formula",
+      "Cardamom"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Breast milk or formula",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick one made for babies; ask your pediatrician"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Breast milk or formula",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick one made for babies; ask your pediatrician"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Fine semolina",
+          "to": "Fine rice flour",
+          "note": "Whisk in slowly"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 20,
+    "fat": 3,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/semolina-milk-porridge.jpg"
+  },
+  {
+    "id": 9456,
+    "name": "Mini Lamb Kofta",
+    "country": "Lebanon",
+    "region": "Middle East",
+    "emoji": "🍢",
+    "cal": 150,
+    "budget": 2,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "toddler-friendly",
+      "little-picky",
+      "hidden-veggies",
+      "eid"
+    ],
+    "desc": "Small, soft lamb kofta with grated onion, parsley and a little cumin, baked until juicy, with a little plain yogurt for dipping. Use halal meat if your family keeps halal. Toddler tip: cut into small, soft pieces; no added salt or sugar.",
+    "ingredients": [
+      "Ground lamb",
+      "Grated onion",
+      "Fresh parsley",
+      "Cumin",
+      "Olive oil",
+      "Plain whole yogurt"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Plain whole yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Ground lamb",
+          "to": "Mashed chickpeas + oats",
+          "note": "Shape into small soft logs"
+        },
+        {
+          "from": "Plain whole yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 12,
+    "carbs": 3,
+    "fat": 10,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/mini-lamb-kofta.jpg"
+  },
+  {
+    "id": 9457,
+    "name": "Soft Date & Oat Bites",
+    "country": "Saudi Arabia",
+    "region": "Middle East",
+    "emoji": "🌙",
+    "cal": 100,
+    "budget": 1,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "no-dairy",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "gluten",
+      "gluten-free-option",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "lunchbox",
+      "toddler-friendly",
+      "picky",
+      "eid"
+    ],
+    "desc": "Soft no-bake bites of oats and dates, pressed flat so they are easy to chew; sweetened only by the dates. Toddler tip: cut into small, soft pieces; no added salt or sugar.",
+    "ingredients": [
+      "Rolled oats",
+      "Soft dates, pitted",
+      "Ground cinnamon",
+      "Water"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Rolled oats",
+          "to": "Certified gluten-free oats",
+          "note": "Same texture"
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 20,
+    "fat": 1,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/soft-date-and-oat-bites.jpg"
+  },
+  {
+    "id": 9458,
+    "name": "Chicken & Rice Pilaf Balls",
+    "country": "Turkey",
+    "region": "Middle East",
+    "emoji": "🍚",
+    "cal": 160,
+    "budget": 1,
+    "time": "35 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "lunch",
+      "dinner",
+      "lunchbox",
+      "toddler-friendly",
+      "picky",
+      "hidden-veggies",
+      "eid"
+    ],
+    "desc": "Soft balls of chicken and rice pilaf with finely grated carrot, easy for little hands. Use halal meat if your family keeps halal. Toddler tip: cut into small, soft pieces; no added salt or sugar.",
+    "ingredients": [
+      "Short-grain rice",
+      "Chicken breast",
+      "Grated carrot",
+      "Unsalted butter",
+      "Low-sodium chicken stock"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Unsalted butter",
+          "to": "Dairy-free butter | Coconut oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Chicken breast",
+          "to": "Red lentils",
+          "note": "Cook with the rice"
+        },
+        {
+          "from": "Low-sodium chicken stock",
+          "to": "Low-sodium vegetable stock",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Unsalted butter",
+          "to": "Dairy-free butter | Coconut oil",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 22,
+    "fat": 4,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/chicken-and-rice-pilaf-balls.jpg"
+  },
+  {
+    "id": 9459,
+    "name": "Eid Hummus Pita Stars",
+    "country": "Jordan",
+    "region": "Middle East",
+    "emoji": "⭐",
+    "cal": 180,
+    "budget": 1,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "no-dairy",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "gluten",
+      "gluten-free-option",
+      "sesame",
+      "no-mushrooms",
+      "snack",
+      "lunch",
+      "lunchbox",
+      "toddler-friendly",
+      "picky",
+      "eid"
+    ],
+    "desc": "Soft pita cut into star shapes around smooth hummus for dipping. Mash any whole chickpeas on top before serving to toddlers. Toddler tip: cut into small, soft pieces; no added salt or sugar.",
+    "ingredients": [
+      "Soft pita bread",
+      "Cooked chickpeas",
+      "Tahini",
+      "Lemon juice",
+      "Olive oil",
+      "Paprika"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Soft pita bread",
+          "to": "Gluten-free flatbread",
+          "note": "Cut into stars the same way"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 22,
+    "fat": 7,
+    "fiber": 4,
+    "image": "/images/dishes/Kids/eid-hummus-pita-stars.jpg"
+  },
+  {
+    "id": 9460,
+    "name": "Fruit Chaat",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🍉",
+    "cal": 90,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "no-dairy",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "gluten-free",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "breakfast",
+      "toddler-friendly",
+      "little-picky",
+      "eid"
+    ],
+    "desc": "A mild toddler fruit chaat of banana, mango, apple, orange and pomegranate seeds with lime, a little mint and a pinch of cumin and sumac; no chaat masala salt. Toddler tip: cut into small, soft pieces; no added salt or sugar.",
+    "ingredients": [
+      "Banana",
+      "Ripe mango",
+      "Apple",
+      "Orange",
+      "Pomegranate seeds",
+      "Lime juice",
+      "Fresh mint",
+      "Cumin",
+      "Sumac"
+    ],
+    "swaps": {},
+    "protein": 1,
+    "carbs": 22,
+    "fat": 0,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/fruit-chaat.jpg"
+  },
+  {
+    "id": 9461,
+    "name": "Mini Date Ma'amoul",
+    "country": "Syria",
+    "region": "Middle East",
+    "emoji": "🌙",
+    "cal": 150,
+    "budget": 1,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "picky",
+      "cook-together",
+      "eid"
+    ],
+    "desc": "Small, crumbly semolina cookies filled with soft date paste and pressed in a pattern; the classic Eid cookie, made nut-free. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt and sugar light.",
+    "ingredients": [
+      "Fine semolina",
+      "Flour",
+      "Unsalted butter",
+      "Date paste",
+      "Orange blossom water",
+      "Powdered sugar"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Unsalted butter",
+          "to": "Dairy-free butter | Coconut oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Unsalted butter",
+          "to": "Dairy-free butter | Coconut oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Use more semolina-style rice flour"
+        },
+        {
+          "from": "Fine semolina",
+          "to": "Fine rice flour",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 22,
+    "fat": 6,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/mini-date-maamoul.jpg"
+  },
+  {
+    "id": 9462,
+    "name": "Crescent Moon Cheese Sandwiches",
+    "country": "Egypt",
+    "region": "Africa",
+    "emoji": "🌙",
+    "cal": 230,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "lunch",
+      "lunchbox",
+      "picky",
+      "cook-together",
+      "eid"
+    ],
+    "desc": "Soft bread cut into crescent moons and stars with mild cheddar; fun for the Eid lunchbox. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt and sugar light.",
+    "ingredients": [
+      "Soft white bread",
+      "Mild cheddar",
+      "Unsalted butter"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Mild cheddar",
+          "to": "Hummus",
+          "note": "Spread thinly"
+        },
+        {
+          "from": "Unsalted butter",
+          "to": "Dairy-free butter | Coconut oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Soft white bread",
+          "to": "Gluten-free bread",
+          "note": "Cut the same shapes"
+        }
+      ]
+    },
+    "protein": 11,
+    "carbs": 26,
+    "fat": 9,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/crescent-moon-cheese-sandwiches.jpg"
+  },
+  {
+    "id": 9463,
+    "name": "Chicken Fattah Bowls",
+    "country": "Egypt",
+    "region": "Africa",
+    "emoji": "🍲",
+    "cal": 330,
+    "budget": 2,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "dinner",
+      "little-picky",
+      "eid"
+    ],
+    "desc": "A gentle kids' fattah, the Egyptian Eid dish: rice and toasted pita pieces with soft shredded chicken, a mild garlic-yogurt sauce and chopped parsley. Use halal meat if your family keeps halal. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt and sugar light.",
+    "ingredients": [
+      "Rice",
+      "Pita bread",
+      "Chicken breast",
+      "Garlic",
+      "Plain whole yogurt",
+      "Fresh parsley",
+      "Olive oil"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Plain whole yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Pita bread",
+          "to": "Gluten-free pita | More rice",
+          "note": "Toast until crisp"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Chicken breast",
+          "to": "Chickpeas",
+          "note": "Warm in the sauce"
+        },
+        {
+          "from": "Plain whole yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 18,
+    "carbs": 46,
+    "fat": 8,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/chicken-fattah-bowls.jpg"
+  },
+  {
+    "id": 9464,
+    "name": "Rose Rice Pudding",
+    "country": "Iran",
+    "region": "Middle East",
+    "emoji": "🌹",
+    "cal": 180,
+    "budget": 1,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "very-picky",
+      "sensory-friendly",
+      "eid"
+    ],
+    "desc": "Creamy rice pudding gently scented with rose water and cardamom, lightly sweet and smooth. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt and sugar light. Sensory tip: one steady texture; serve on its own, the same way each time.",
+    "ingredients": [
+      "Short-grain rice",
+      "Whole milk",
+      "Sugar",
+      "Rose water",
+      "Cardamom"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 30,
+    "fat": 4,
+    "fiber": 0,
+    "image": "/images/dishes/Kids/rose-rice-pudding.jpg"
+  },
+  {
+    "id": 9465,
+    "name": "Date & Tahini Energy Balls",
+    "country": "Saudi Arabia",
+    "region": "Middle East",
+    "emoji": "🟤",
+    "cal": 150,
+    "budget": 2,
+    "time": "15 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "no-dairy",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "gluten",
+      "gluten-free-option",
+      "sesame",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "lunchbox",
+      "picky",
+      "cook-together",
+      "eid"
+    ],
+    "desc": "No-bake balls of dates, oats and tahini some rolled in sesame seeds, made nut-free; little hands love rolling them. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt and sugar light.",
+    "ingredients": [
+      "Soft dates, pitted",
+      "Rolled oats",
+      "Tahini",
+      "Sesame seeds"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Rolled oats",
+          "to": "Certified gluten-free oats",
+          "note": "Same texture"
+        }
+      ]
+    },
+    "protein": 3,
+    "carbs": 20,
+    "fat": 6,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/date-and-tahini-energy-balls.jpg"
+  },
+  {
+    "id": 9466,
+    "name": "Mini Sambusa",
+    "country": "Somalia",
+    "region": "Africa",
+    "emoji": "🥟",
+    "cal": 230,
+    "budget": 2,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "dairy-free",
+      "no-dairy",
+      "gluten",
+      "gluten-free-option",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "snack",
+      "dinner",
+      "little-picky",
+      "cook-together",
+      "eid"
+    ],
+    "desc": "Little crispy triangles filled with mildly spiced beef, onion and cilantro, fried or baked; folding them is a perfect Eid job for kids. Use halal meat if your family keeps halal. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Spring roll wrappers",
+      "Ground beef",
+      "Onion",
+      "Fresh cilantro",
+      "Cumin",
+      "Vegetable oil"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Spring roll wrappers",
+          "to": "Rice paper",
+          "note": "Brush with oil and bake until crisp"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Ground beef",
+          "to": "Brown lentils",
+          "note": "Cook with the same spices"
+        }
+      ]
+    },
+    "protein": 14,
+    "carbs": 24,
+    "fat": 9,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/mini-sambusa.jpg"
+  },
+  {
+    "id": 9467,
+    "name": "Chicken Kabsa Bowls",
+    "country": "Saudi Arabia",
+    "region": "Middle East",
+    "emoji": "🍛",
+    "cal": 440,
+    "budget": 2,
+    "time": "50 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "dairy-free",
+      "no-dairy",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "dinner",
+      "little-picky",
+      "hidden-veggies",
+      "eid"
+    ],
+    "desc": "A mild kids' kabsa of fragrant rice cooked with chicken, tomato, grated carrot and a few raisins. Use halal meat if your family keeps halal. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Basmati rice",
+      "Chicken thighs",
+      "Tomato",
+      "Grated carrot",
+      "Onion",
+      "Raisins",
+      "Cinnamon",
+      "Low-sodium chicken stock",
+      "Olive oil"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Chicken thighs",
+          "to": "Chickpeas",
+          "note": "Add with the rice"
+        },
+        {
+          "from": "Low-sodium chicken stock",
+          "to": "Low-sodium vegetable stock",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 24,
+    "carbs": 58,
+    "fat": 12,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/chicken-kabsa-bowls.jpg"
+  },
+  {
+    "id": 9468,
+    "name": "Kunafa Cups",
+    "country": "Palestine",
+    "region": "Middle East",
+    "emoji": "🧁",
+    "cal": 300,
+    "budget": 3,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "vegetarian",
+      "dairy",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "picky",
+      "cook-together",
+      "eid"
+    ],
+    "desc": "Golden shredded-pastry cups filled with soft mild cheese and drizzled with orange blossom syrup; made nut-free for kids. A treat for special days, in a kid-sized portion. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Kataifi pastry",
+      "Unsalted butter",
+      "Mild white cheese",
+      "Ricotta",
+      "Sugar",
+      "Orange blossom water"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Kataifi pastry",
+          "to": "Gluten-free kataifi | Crushed rice cereal",
+          "note": "Press into the cups"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 36,
+    "fat": 14,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/kunafa-cups.jpg"
+  },
+  {
+    "id": 9469,
+    "name": "Homemade Pita Bread",
+    "country": "Lebanon",
+    "region": "Middle East",
+    "emoji": "🫓",
+    "cal": 190,
+    "budget": 1,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "no-dairy",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "gluten",
+      "no-mushrooms",
+      "no-vegetables",
+      "lunch",
+      "lunchbox",
+      "picky",
+      "cook-together",
+      "eid"
+    ],
+    "desc": "Soft pita that puffs up in the oven like a balloon, a magic moment for kids; perfect for the Eid table. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Flour",
+      "Yeast",
+      "Warm water",
+      "Olive oil",
+      "Salt"
+    ],
+    "swaps": {},
+    "protein": 6,
+    "carbs": 34,
+    "fat": 3,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/homemade-pita-bread.jpg"
+  },
+  {
+    "id": 9470,
+    "name": "Mango Yogurt Pops",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🥭",
+    "cal": 90,
+    "budget": 1,
+    "time": "6 hrs",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "very-picky",
+      "cook-together",
+      "eid"
+    ],
+    "desc": "Frozen pops of ripe mango blended with yogurt, a cool treat for warm Eid afternoons. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Ripe mango",
+      "Plain whole yogurt",
+      "Lime juice"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Plain whole yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Plain whole yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 3,
+    "carbs": 16,
+    "fat": 2,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/mango-yogurt-pops.jpg"
+  },
+  {
+    "id": 9471,
+    "name": "Kahk Eid Cookies",
+    "country": "Egypt",
+    "region": "Africa",
+    "emoji": "🍪",
+    "cal": 170,
+    "budget": 1,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "picky",
+      "cook-together",
+      "eid"
+    ],
+    "desc": "Egyptian Eid butter cookies, melt-in-the-mouth and dusted with powdered sugar, some filled with date paste; made nut-free. A treat for special days, in a kid-sized portion. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Flour",
+      "Unsalted butter",
+      "Powdered sugar",
+      "Date paste",
+      "Baking powder"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Unsalted butter",
+          "to": "Dairy-free butter | Coconut oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Unsalted butter",
+          "to": "Dairy-free butter | Coconut oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 20,
+    "fat": 9,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/kahk-eid-cookies.jpg"
+  },
+  {
+    "id": 9472,
+    "name": "Mini Qatayef Pancakes",
+    "country": "Lebanon",
+    "region": "Middle East",
+    "emoji": "🥞",
+    "cal": 300,
+    "budget": 2,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "dairy",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "little-picky",
+      "cook-together",
+      "eid"
+    ],
+    "desc": "Small Ramadan and Eid pancakes cooked on one side, folded around sweet cream and strawberries and drizzled with a little syrup; made nut-free. A treat for special days, in a kid-sized portion. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Flour",
+      "Fine semolina",
+      "Yeast",
+      "Whole milk",
+      "Ashta cream",
+      "Strawberries",
+      "Sugar syrup"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Check labels for hidden gluten"
+        },
+        {
+          "from": "Fine semolina",
+          "to": "Fine rice flour",
+          "note": "Use the same amount"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 44,
+    "fat": 10,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/mini-qatayef-pancakes.jpg"
+  },
+  {
+    "id": 9473,
+    "name": "Ghraybeh Shortbread Hearts",
+    "country": "Syria",
+    "region": "Middle East",
+    "emoji": "💛",
+    "cal": 160,
+    "budget": 1,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "picky",
+      "cook-together",
+      "eid"
+    ],
+    "desc": "Levantine melt-away butter shortbread cut into hearts, made nut-free with a dot of jam instead of the usual pistachio. A treat for special days, in a kid-sized portion. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Flour",
+      "Unsalted butter",
+      "Powdered sugar",
+      "Orange blossom water",
+      "Strawberry jam"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Unsalted butter",
+          "to": "Dairy-free butter | Coconut oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Unsalted butter",
+          "to": "Dairy-free butter | Coconut oil",
+          "note": "Use the same amount"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 18,
+    "fat": 9,
+    "fiber": 0,
+    "image": "/images/dishes/Kids/ghraybeh-shortbread-hearts.jpg"
+  },
+  {
+    "id": 9474,
+    "name": "Mini Lamb Biryani",
+    "country": "Pakistan",
+    "region": "Asia",
+    "emoji": "🍛",
+    "cal": 500,
+    "budget": 3,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "dinner",
+      "little-picky",
+      "cook-together",
+      "eid"
+    ],
+    "desc": "A mild kids' biryani of tender yogurt-marinated lamb layered with fragrant saffron basmati rice, golden fried onions and fresh mint. Use halal meat if your family keeps halal. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Lamb shoulder",
+      "Basmati rice",
+      "Plain whole yogurt",
+      "Onion",
+      "Fresh mint",
+      "Mild garam masala",
+      "Saffron",
+      "Olive oil"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Plain whole yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Lamb shoulder",
+          "to": "Chickpeas and potatoes",
+          "note": "Marinate the same way"
+        },
+        {
+          "from": "Plain whole yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 28,
+    "carbs": 62,
+    "fat": 16,
+    "fiber": 4,
+    "image": "/images/dishes/Kids/mini-lamb-biryani.jpg"
+  },
+  {
+    "id": 9475,
+    "name": "Lamb & Apricot Tagine",
+    "country": "Morocco",
+    "region": "Africa",
+    "emoji": "🍲",
+    "cal": 490,
+    "budget": 3,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "dairy-free",
+      "no-dairy",
+      "gluten",
+      "gluten-free-option",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "dinner",
+      "little-picky",
+      "cook-together",
+      "eid"
+    ],
+    "desc": "Slow-cooked Moroccan lamb with sweet apricots, onion and gentle spices, served over fluffy couscous. Use halal meat if your family keeps halal. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Lamb shoulder",
+      "Dried apricots",
+      "Onion",
+      "Cinnamon",
+      "Cumin",
+      "Ginger",
+      "Couscous",
+      "Olive oil",
+      "Low-sodium stock"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Couscous",
+          "to": "Rice | Quinoa",
+          "note": "Cook separately"
+        }
+      ],
+      "vegan": [
+        {
+          "from": "Lamb shoulder",
+          "to": "Chickpeas and butternut squash",
+          "note": "Simmer for 30 minutes"
+        }
+      ]
+    },
+    "protein": 30,
+    "carbs": 56,
+    "fat": 16,
+    "fiber": 5,
+    "image": "/images/dishes/Kids/lamb-and-apricot-tagine.jpg"
+  },
+  {
+    "id": 9476,
+    "name": "Pear & Oat Baby Muffins",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🧁",
+    "cal": 50,
+    "budget": 1,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "snack",
+      "toddler-friendly",
+      "picky"
+    ],
+    "desc": "Soft mini muffins of oats and ripe pear with no added sugar, easy for baby to hold and squish. No salt, sugar or honey.",
+    "ingredients": [
+      "Oat flour",
+      "Ripe pear",
+      "Egg",
+      "Breast milk or formula",
+      "Baking powder",
+      "Cinnamon"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        },
+        {
+          "from": "Breast milk or formula",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick one made for babies; ask your pediatrician"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Breast milk or formula",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick one made for babies; ask your pediatrician"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Oat flour",
+          "to": "Certified gluten-free oat flour",
+          "note": "Same texture"
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 9,
+    "fat": 1,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/pear-and-oat-baby-muffins.jpg"
+  },
+  {
+    "id": 9477,
+    "name": "Berry Yogurt Melts",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🫐",
+    "cal": 40,
+    "budget": 1,
+    "time": "4 hrs",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "toddler-friendly",
+      "very-picky",
+      "sensory-friendly"
+    ],
+    "desc": "Little frozen drops of plain yogurt blended with mashed strawberries or blueberries that melt in baby's mouth. No salt, sugar or honey. Sensory tip: one steady texture; serve on its own, the same way each time.",
+    "ingredients": [
+      "Plain whole yogurt",
+      "Mixed berries"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Plain whole yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Plain whole yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 4,
+    "fat": 2,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/berry-yogurt-melts.jpg"
+  },
+  {
+    "id": 9478,
+    "name": "Sweet Potato Teething Biscuits",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍠",
+    "cal": 60,
+    "budget": 1,
+    "time": "40 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "no-dairy",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "gluten-free",
+      "no-mushrooms",
+      "snack",
+      "toddler-friendly",
+      "picky",
+      "hidden-veggies"
+    ],
+    "desc": "Firm baked sticks of sweet potato and oat flour that soften as baby gums them. No salt, sugar or honey. Always stay with baby while they eat.",
+    "ingredients": [
+      "Sweet potato",
+      "Oat flour",
+      "Coconut oil",
+      "Cinnamon"
+    ],
+    "swaps": {},
+    "protein": 1,
+    "carbs": 10,
+    "fat": 2,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/sweet-potato-teething-biscuits.jpg"
+  },
+  {
+    "id": 9479,
+    "name": "Pumpkin Baby Bread Fingers",
+    "country": "Canada",
+    "region": "Americas",
+    "emoji": "🎃",
+    "cal": 100,
+    "budget": 1,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "vegetarian",
+      "vegan-option",
+      "dairy-free",
+      "no-dairy",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "breakfast",
+      "snack",
+      "toddler-friendly",
+      "picky",
+      "hidden-veggies"
+    ],
+    "desc": "Soft pumpkin and banana bread with cinnamon, no added sugar, cut into easy-grip fingers. No salt, sugar or honey.",
+    "ingredients": [
+      "Pumpkin purée",
+      "Ripe banana",
+      "Whole-wheat flour",
+      "Egg",
+      "Coconut oil",
+      "Cinnamon",
+      "Baking soda"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Whole-wheat flour",
+          "to": "Gluten-free flour blend",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 3,
+    "carbs": 14,
+    "fat": 3,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/pumpkin-baby-bread-fingers.jpg"
+  },
+  {
+    "id": 9480,
+    "name": "Mango Teething Ice Pops",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🥭",
+    "cal": 50,
+    "budget": 1,
+    "time": "3 hrs",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-12m",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "toddler-friendly",
+      "very-picky",
+      "sensory-friendly"
+    ],
+    "desc": "Smooth mango blended with breast milk or formula and frozen in small molds or a mesh feeder to soothe sore gums. No salt, sugar or honey. Sensory tip: one steady texture; serve on its own, the same way each time.",
+    "ingredients": [
+      "Ripe mango",
+      "Breast milk or formula"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Breast milk or formula",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick one made for babies; ask your pediatrician"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Breast milk or formula",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick one made for babies; ask your pediatrician"
+        }
+      ]
+    },
+    "protein": 1,
+    "carbs": 10,
+    "fat": 1,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/mango-teething-ice-pops.jpg"
+  },
+  {
+    "id": 9481,
+    "name": "First Birthday Smash Cake",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🎂",
+    "cal": 180,
+    "budget": 2,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "toddler-friendly",
+      "picky",
+      "birthday"
+    ],
+    "desc": "A small, soft first-birthday cake sweetened only with banana, frosted with thick yogurt and topped with sliced strawberries, ready to be smashed. Toddler tip: cut into small, soft pieces; no added salt or sugar.",
+    "ingredients": [
+      "Ripe banana",
+      "Whole-wheat flour",
+      "Eggs",
+      "Unsalted butter",
+      "Baking powder",
+      "Greek yogurt",
+      "Strawberries"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Unsalted butter",
+          "to": "Dairy-free butter | Coconut oil",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Greek yogurt",
+          "to": "Thick coconut yogurt",
+          "note": "Chill before frosting"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs (1 tbsp ground flax + 3 tbsp water each)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Whole-wheat flour",
+          "to": "Gluten-free flour blend",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 22,
+    "fat": 7,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/first-birthday-smash-cake.jpg"
+  },
+  {
+    "id": 9482,
+    "name": "Banana Date Milk",
+    "country": "Saudi Arabia",
+    "region": "Middle East",
+    "emoji": "🥛",
+    "cal": 150,
+    "budget": 1,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "snack",
+      "toddler-friendly",
+      "very-picky"
+    ],
+    "desc": "Creamy milk blended with ripe banana and one soft date; no added sugar. Serve in an open or straw cup. Toddler tip: cut into small, soft pieces; no added salt or sugar.",
+    "ingredients": [
+      "Whole milk",
+      "Ripe banana",
+      "Soft date, pitted"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 22,
+    "fat": 5,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/banana-date-milk.jpg"
+  },
+  {
+    "id": 9483,
+    "name": "Strawberry Banana Smoothie",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍓",
+    "cal": 140,
+    "budget": 1,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "snack",
+      "toddler-friendly",
+      "very-picky"
+    ],
+    "desc": "Thick, pink smoothie of strawberries, banana and yogurt with no added sugar. Toddler tip: cut into small, soft pieces; no added salt or sugar.",
+    "ingredients": [
+      "Strawberries",
+      "Ripe banana",
+      "Plain whole yogurt",
+      "Whole milk"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Plain whole yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        },
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Plain whole yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        },
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 20,
+    "fat": 4,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/strawberry-banana-smoothie.jpg"
+  },
+  {
+    "id": 9484,
+    "name": "Sugar-Free Carrot Cake Bites",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🥕",
+    "cal": 90,
+    "budget": 1,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "vegan-option",
+      "dairy-free",
+      "no-dairy",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "snack",
+      "lunchbox",
+      "toddler-friendly",
+      "picky",
+      "hidden-veggies"
+    ],
+    "desc": "Soft little carrot cake bites made with oats, banana and cinnamon, with no added sugar. Toddler tip: cut into small, soft pieces; no added salt or sugar.",
+    "ingredients": [
+      "Grated carrot",
+      "Rolled oats",
+      "Ripe banana",
+      "Egg",
+      "Cinnamon",
+      "Baking powder"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Rolled oats",
+          "to": "Certified gluten-free oats",
+          "note": "Same texture"
+        }
+      ]
+    },
+    "protein": 3,
+    "carbs": 14,
+    "fat": 2,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/sugar-free-carrot-cake-bites.jpg"
+  },
+  {
+    "id": 9485,
+    "name": "Blueberry Yogurt Bark",
+    "country": "Canada",
+    "region": "Americas",
+    "emoji": "🫐",
+    "cal": 80,
+    "budget": 1,
+    "time": "3 hrs",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-1-2y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "toddler-friendly",
+      "picky"
+    ],
+    "desc": "Thick yogurt spread on a tray with squashed blueberries and frozen, then broken into pieces. Squash the berries flat for toddlers. Toddler tip: cut into small, soft pieces; no added salt or sugar.",
+    "ingredients": [
+      "Greek yogurt",
+      "Blueberries"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Greek yogurt",
+          "to": "Thick coconut yogurt",
+          "note": "Spread a little thicker"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Greek yogurt",
+          "to": "Thick coconut yogurt",
+          "note": "Spread a little thicker"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 8,
+    "fat": 3,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/blueberry-yogurt-bark.jpg"
+  },
+  {
+    "id": 9486,
+    "name": "Mango Lassi Cups",
+    "country": "India",
+    "region": "Asia",
+    "emoji": "🥭",
+    "cal": 150,
+    "budget": 1,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "breakfast",
+      "snack",
+      "very-picky"
+    ],
+    "desc": "Kid-sized mango lassi of ripe mango blended with yogurt, milk and a pinch of cardamom. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt and sugar light.",
+    "ingredients": [
+      "Ripe mango",
+      "Plain whole yogurt",
+      "Whole milk",
+      "Cardamom"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Plain whole yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        },
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Plain whole yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        },
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 24,
+    "fat": 4,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/mango-lassi-cups.jpg"
+  },
+  {
+    "id": 9487,
+    "name": "Warm Vanilla Bedtime Milk",
+    "country": "France",
+    "region": "Europe",
+    "emoji": "🌙",
+    "cal": 130,
+    "budget": 1,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "very-picky",
+      "sensory-friendly"
+    ],
+    "desc": "Cozy warm milk with real vanilla bean, a pinch of cinnamon and a tiny drizzle of honey before bed. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt and sugar light. Sensory tip: one steady texture; serve on its own, the same way each time.",
+    "ingredients": [
+      "Whole milk",
+      "Vanilla bean",
+      "Cinnamon",
+      "Honey"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        },
+        {
+          "from": "Honey",
+          "to": "Maple syrup",
+          "note": "Just a few drops"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 14,
+    "fat": 6,
+    "fiber": 0,
+    "image": "/images/dishes/Kids/warm-vanilla-bedtime-milk.jpg"
+  },
+  {
+    "id": 9488,
+    "name": "Rainbow Birthday Cupcakes",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🧁",
+    "cal": 240,
+    "budget": 2,
+    "time": "1 hr",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "picky",
+      "cook-together",
+      "birthday"
+    ],
+    "desc": "Vanilla cupcakes topped with swirls of pastel cream cheese frosting colored with fruit and vegetable powders, and sprinkles. A treat for special days, in a kid-sized portion. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt and sugar light.",
+    "ingredients": [
+      "Flour",
+      "Unsalted butter",
+      "Sugar",
+      "Eggs",
+      "Whole milk",
+      "Vanilla bean",
+      "Beet powder",
+      "Spinach powder",
+      "Cream cheese",
+      "Powdered sugar",
+      "Sprinkles"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Unsalted butter",
+          "to": "Dairy-free butter | Coconut oil",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        },
+        {
+          "from": "Cream cheese",
+          "to": "Dairy-free cream cheese",
+          "note": "Beat with the sugar"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs (1 tbsp ground flax + 3 tbsp water each)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 30,
+    "fat": 12,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/rainbow-birthday-cupcakes.jpg"
+  },
+  {
+    "id": 9489,
+    "name": "Banana Nice Cream",
+    "country": "Australia",
+    "region": "Oceania",
+    "emoji": "🍌",
+    "cal": 140,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "no-dairy",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "gluten-free",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "very-picky",
+      "cook-together"
+    ],
+    "desc": "Frozen bananas blended into soft-serve 'ice cream', no added sugar. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt and sugar light.",
+    "ingredients": [
+      "Frozen ripe bananas",
+      "Oat milk"
+    ],
+    "swaps": {},
+    "protein": 2,
+    "carbs": 30,
+    "fat": 1,
+    "fiber": 4,
+    "image": "/images/dishes/Kids/banana-nice-cream.jpg"
+  },
+  {
+    "id": 9490,
+    "name": "Chocolate-Dipped Strawberries",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍓",
+    "cal": 140,
+    "budget": 2,
+    "time": "30 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-3-5y",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "picky",
+      "cook-together"
+    ],
+    "desc": "Fresh strawberries dipped in melted chocolate with a chocolate drizzle; kids do the dipping. Cut big berries in half for little ones. A treat for special days, in a kid-sized portion. Kids tip: cut round foods like grapes and cherry tomatoes into quarters; keep salt and sugar light.",
+    "ingredients": [
+      "Strawberries",
+      "Milk chocolate"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Milk chocolate",
+          "to": "Dairy-free dark chocolate",
+          "note": "Check the label"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Milk chocolate",
+          "to": "Dairy-free dark chocolate",
+          "note": "Check the label"
+        }
+      ]
+    },
+    "protein": 2,
+    "carbs": 20,
+    "fat": 6,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/chocolate-dipped-strawberries.jpg"
+  },
+  {
+    "id": 9491,
+    "name": "Homemade Pink Lemonade",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍋",
+    "cal": 80,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "drink",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "no-dairy",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "gluten-free",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "picky",
+      "cook-together"
+    ],
+    "desc": "Fresh lemonade turned pink with mashed raspberries and lightly sweetened with honey; kids squeeze the lemons. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Lemons",
+      "Raspberries",
+      "Honey",
+      "Cold water",
+      "Ice"
+    ],
+    "swaps": {},
+    "protein": 0,
+    "carbs": 20,
+    "fat": 0,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/homemade-pink-lemonade.jpg"
+  },
+  {
+    "id": 9492,
+    "name": "Chocolate Banana Milkshake",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🥤",
+    "cal": 210,
+    "budget": 1,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "very-picky"
+    ],
+    "desc": "Thick milkshake of frozen banana, cocoa and milk, sweet from the banana alone. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Whole milk",
+      "Frozen ripe banana",
+      "Unsweetened cocoa powder",
+      "Plain whole yogurt"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        },
+        {
+          "from": "Plain whole yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        },
+        {
+          "from": "Plain whole yogurt",
+          "to": "Unsweetened soy or coconut yogurt",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 8,
+    "carbs": 30,
+    "fat": 6,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/chocolate-banana-milkshake.jpg"
+  },
+  {
+    "id": 9493,
+    "name": "Birthday Sprinkle Sheet Cake",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🎂",
+    "cal": 320,
+    "budget": 2,
+    "time": "1.5 hrs",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "picky",
+      "cook-together",
+      "birthday"
+    ],
+    "desc": "Easy vanilla sheet cake with sprinkles baked inside and on top of a light buttercream; easy to cut for a party. A treat for special days, in a kid-sized portion. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Flour",
+      "Sugar",
+      "Unsalted butter",
+      "Eggs",
+      "Whole milk",
+      "Vanilla bean",
+      "Baking powder",
+      "Powdered sugar",
+      "Sprinkles"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Unsalted butter",
+          "to": "Dairy-free butter | Coconut oil",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs (1 tbsp ground flax + 3 tbsp water each)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 44,
+    "fat": 14,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/birthday-sprinkle-sheet-cake.jpg"
+  },
+  {
+    "id": 9494,
+    "name": "Fruit Pizza Cookie",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍕",
+    "cal": 260,
+    "budget": 2,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "picky",
+      "cook-together"
+    ],
+    "desc": "A big soft cookie 'pizza' spread with cream cheese frosting and topped with colorful fresh fruit that kids arrange. A treat for special days, in a kid-sized portion. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Flour",
+      "Unsalted butter",
+      "Sugar",
+      "Egg",
+      "Cream cheese",
+      "Kiwi",
+      "Strawberries",
+      "Blueberries",
+      "Mandarin oranges"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Unsalted butter",
+          "to": "Dairy-free butter | Coconut oil",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Cream cheese",
+          "to": "Dairy-free cream cheese",
+          "note": "Beat until smooth"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Flax egg (1 tbsp ground flax + 3 tbsp water)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 4,
+    "carbs": 34,
+    "fat": 12,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/fruit-pizza-cookie.jpg"
+  },
+  {
+    "id": 9495,
+    "name": "No-Bake Mini Cheesecake Cups",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🍰",
+    "cal": 270,
+    "budget": 2,
+    "time": "2 hrs",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-6-8y",
+      "vegetarian",
+      "dairy",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "picky",
+      "cook-together"
+    ],
+    "desc": "Little jars of crushed biscuit, creamy vanilla cream cheese filling and a fresh strawberry topping; no oven needed. A treat for special days, in a kid-sized portion. Kids tip: let them measure, stir and assemble; adults handle the stove, oven and knives.",
+    "ingredients": [
+      "Digestive biscuits",
+      "Unsalted butter",
+      "Cream cheese",
+      "Greek yogurt",
+      "Powdered sugar",
+      "Vanilla bean",
+      "Strawberries"
+    ],
+    "swaps": {
+      "gluten": [
+        {
+          "from": "Digestive biscuits",
+          "to": "Gluten-free biscuits",
+          "note": "Crush the same way"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 26,
+    "fat": 16,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/no-bake-mini-cheesecake-cups.jpg"
+  },
+  {
+    "id": 9496,
+    "name": "Hot Cocoa from Scratch",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "☕",
+    "cal": 210,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "drink",
+      "vegetarian",
+      "vegan-option",
+      "dairy",
+      "dairy-free-option",
+      "gluten-free",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "very-picky",
+      "cook-together"
+    ],
+    "desc": "Real hot cocoa whisked on the stove from cocoa powder, a little sugar and milk; kids can make it themselves. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Whole milk",
+      "Unsweetened cocoa powder",
+      "Sugar",
+      "Vanilla bean"
+    ],
+    "swaps": {
+      "vegan": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ],
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        }
+      ]
+    },
+    "protein": 9,
+    "carbs": 24,
+    "fat": 9,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/hot-cocoa-from-scratch.jpg"
+  },
+  {
+    "id": 9497,
+    "name": "Watermelon Agua Fresca",
+    "country": "Mexico",
+    "region": "Americas",
+    "emoji": "🍉",
+    "cal": 80,
+    "budget": 1,
+    "time": "10 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "drink",
+      "vegan",
+      "vegetarian",
+      "dairy-free",
+      "no-dairy",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "gluten-free",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "very-picky",
+      "cook-together"
+    ],
+    "desc": "Bright pink Mexican fresh-fruit drink of blended watermelon, lime and cold water, with a sprig of mint. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Watermelon",
+      "Lime juice",
+      "Cold water",
+      "Fresh mint",
+      "Ice"
+    ],
+    "swaps": {},
+    "protein": 1,
+    "carbs": 18,
+    "fat": 0,
+    "fiber": 1,
+    "image": "/images/dishes/Kids/watermelon-agua-fresca.jpg"
+  },
+  {
+    "id": 9498,
+    "name": "Birthday Chocolate Drip Cake",
+    "country": "United Kingdom",
+    "region": "Europe",
+    "emoji": "🎂",
+    "cal": 430,
+    "budget": 3,
+    "time": "3 hrs",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "picky",
+      "cook-together",
+      "birthday"
+    ],
+    "desc": "A tall chocolate birthday cake with a glossy chocolate drip down the sides, chocolate frosting swirls and sprinkles on top; a fun project for big kids. A treat for special days, in a kid-sized portion. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Flour",
+      "Unsweetened cocoa powder",
+      "Sugar",
+      "Eggs",
+      "Whole milk",
+      "Vegetable oil",
+      "Unsalted butter",
+      "Powdered sugar",
+      "Dark chocolate",
+      "Heavy cream",
+      "Sprinkles"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        },
+        {
+          "from": "Unsalted butter",
+          "to": "Dairy-free butter | Coconut oil",
+          "note": "Use the same amount"
+        },
+        {
+          "from": "Dark chocolate",
+          "to": "Dairy-free dark chocolate",
+          "note": "Check the label"
+        },
+        {
+          "from": "Heavy cream",
+          "to": "Coconut cream",
+          "note": "Use the same amount"
+        }
+      ],
+      "eggs": [
+        {
+          "from": "Eggs",
+          "to": "Flax eggs (1 tbsp ground flax + 3 tbsp water each)",
+          "note": "Binds just as well"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 52,
+    "fat": 22,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/birthday-chocolate-drip-cake.jpg"
+  },
+  {
+    "id": 9499,
+    "name": "Strawberry Shortcake Jars",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "🍓",
+    "cal": 330,
+    "budget": 2,
+    "time": "45 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "dairy",
+      "gluten",
+      "gluten-free-option",
+      "eggs",
+      "no-meat",
+      "no-fish",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "picky",
+      "cook-together"
+    ],
+    "desc": "Layers of crumbled homemade shortcake, juicy strawberries and whipped cream in jars. A treat for special days, in a kid-sized portion. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Flour",
+      "Unsalted butter",
+      "Sugar",
+      "Egg",
+      "Baking powder",
+      "Whole milk",
+      "Strawberries",
+      "Heavy cream"
+    ],
+    "swaps": {
+      "eggs": [
+        {
+          "from": "Egg",
+          "to": "Extra milk",
+          "note": "Shortcake stays tender"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 5,
+    "carbs": 36,
+    "fat": 18,
+    "fiber": 2,
+    "image": "/images/dishes/Kids/strawberry-shortcake-jars.jpg"
+  },
+  {
+    "id": 9500,
+    "name": "Chocolate Mug Cake",
+    "country": "United States",
+    "region": "Americas",
+    "emoji": "☕",
+    "cal": 360,
+    "budget": 1,
+    "time": "5 min",
+    "spice": 0,
+    "tags": [
+      "kids",
+      "kids-9-12y",
+      "vegetarian",
+      "dairy",
+      "dairy-free-option",
+      "gluten",
+      "gluten-free-option",
+      "no-meat",
+      "no-fish",
+      "no-eggs",
+      "no-mushrooms",
+      "no-vegetables",
+      "snack",
+      "very-picky",
+      "cook-together"
+    ],
+    "desc": "A one-person chocolate cake mixed in a mug and cooked in the microwave in one minute; kids can make it on their own. A treat for special days, in a kid-sized portion. Kids tip: at 9–12 many kids can follow the recipe themselves, chop soft foods with a kid-safe knife and cook at the stove with an adult nearby.",
+    "ingredients": [
+      "Flour",
+      "Unsweetened cocoa powder",
+      "Sugar",
+      "Baking powder",
+      "Whole milk",
+      "Vegetable oil",
+      "Chocolate chips"
+    ],
+    "swaps": {
+      "dairy": [
+        {
+          "from": "Whole milk",
+          "to": "Unsweetened fortified soy or oat milk",
+          "note": "Pick plain, no-sugar versions"
+        },
+        {
+          "from": "Chocolate chips",
+          "to": "Dairy-free chocolate chips",
+          "note": "Check the label"
+        }
+      ],
+      "gluten": [
+        {
+          "from": "Flour",
+          "to": "Gluten-free flour blend",
+          "note": "Check labels for hidden gluten"
+        }
+      ]
+    },
+    "protein": 6,
+    "carbs": 48,
+    "fat": 16,
+    "fiber": 3,
+    "image": "/images/dishes/Kids/chocolate-mug-cake.jpg"
   }
 ];
